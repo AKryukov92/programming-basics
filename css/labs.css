@@ -1,0 +1,30 @@
+.check_values {
+	border-collapse:collapse;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+}
+
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:10px;
+}
+
+.task_desc {
+	width:90%;
+	margin:5px;
+}

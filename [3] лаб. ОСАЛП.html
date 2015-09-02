@@ -1,0 +1,681 @@
+<html>
+	<head>
+		<title>3 Циклические алгоритмы</title>
+		<link rel="stylesheet" href="css/labs.css"/>
+	</head>
+	<body>
+	<h1>Циклические алгоритмы</h1>
+	<div class="nav">
+	<ul>
+		<li><a href="#task1">Задача 1</a></li>
+		<li><a href="#task2">Задача 2</a></li>
+		<li><a href="#task3">Задача 3</a></li>
+		<li><a href="#task4">Задача 4</a></li>
+		<li><a href="#task5">Задача 5</a></li>
+		<li><a href="#task6">Задача 6</a></li>
+		<li><a href="#task7">Задача 7</a></li>
+		<li><a href="#task8">Задача 8</a></li>
+		<li><a href="#task9">Задача 9</a></li>
+		<li><a href="#task10">Задача 10</a></li>
+		<li><a href="#task11">Задача 11</a></li>
+		<li><a href="#task12">Задача 12</a></li>
+		<li><a href="#task13">Задача 13</a></li>
+		<li><a href="#task14">Задача 14</a></li>
+		<li><a href="#task15">Задача 15</a></li>
+		<li><a href="#task16">Задача 16</a></li>
+		<!-- <li><a href="#task">Задача </a></li> -->
+	</ul>
+	</div>
+	
+	<a name="task1"/><h3>Задача 1</h3>
+	<div class="task_desc">Выведите на экран <i>в столбик</i> числа от А до В включительно (значение А и В вводится В&gt;=A).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>8<br/>9<br/>10<br/>11<br/>12<br/>13</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>691</td>
+			<td>702</td>
+			<td>691<br/>692<br/>693<br/>694<br/>695<br/>696<br/>697<br/>698<br/>699<br/>700<br/>701<br/>702</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task2"/><h3>Задача 2</h3>
+	<div class="task_desc">Выведите на экран <i>в строчку</i> числа от B до A включительно в обратном порядке (значение А и В вводится В&gt;=A). </div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>13 12 11 10 9 8</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>691</td>
+			<td>703</td>
+			<td>703 702 701 700 699 698 697 696 695 694 693 692 691</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task3"/><h3>Задача 3</h3>
+	<div class="task_desc">Вывести символ B несколько раз. Написать кавычки перед строкой символов и после нее. Количество символов равно числу А.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>#</td>
+			<td style="font-family:monospace;white-space:pre">"########"</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>15</td>
+			<td>пробел</td>
+			<td style="font-family:monospace;white-space:pre">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>0</td>
+			<td>?</td>
+			<td style="font-family:monospace;white-space:pre">""</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-1</td>
+			<td>*</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task4"/><h3>Задача 4</h3>
+	<div class="task_desc">Найти сумму всех целых чисел от 100 до 500.</div>
+	
+	<a name="task5"/><h3>Задача 5</h3>
+	<div class="task_desc">Найти сумму всех целых чисел от A до 500 включительно (значение А вводится -100&lt;=A&lt;=1000</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>-100</td>
+			<td>120200</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>7</td>
+			<td>123229</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>368</td>
+			<td>57722</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>501</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>99</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task6"/><h3>Задача 6</h3>
+	<div class="task_desc">Найти сумму всех целых чисел от -10 до B включительно (значение B вводится B&gt;-10</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>12</td>
+			<td>23</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>70</td>
+			<td>2430</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>368</td>
+			<td>67841</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-11</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task7"/><h3>Задача 7</h3>
+	<div class="task_desc">Найти сумму всех целых чисел от A до B включительно (значения А и В вводятся B&gt;=А).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>15</td>
+			<td>27</td>
+			<td>273</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>25</td>
+			<td>44</td>
+			<td>690</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>80</td>
+			<td>100</td>
+			<td>1890</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task8"/><h3>Задача 8</h3>
+	<div class="task_desc">Найти произведение всех целых чисел от А до B включительно (значение А и В вводится В&gt;=A).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>1235520</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>158.5</td>
+			<td>161.3</td>
+			<td>4095840</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>648</td>
+			<td>648</td>
+			<td>419904</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-2</td>
+			<td>600</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task9"/><h3>Задача 9</h3>
+	<div class="task_desc">Найти сумму целых чисел от A до B, кратных 7. (значение А и В вводится В&gt;=A)</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>25</td>
+			<td>44</td>
+			<td>105</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>80</td>
+			<td>100</td>
+			<td>273</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task10"/><h3>Задача 10</h3>
+	<div class="task_desc">Посчитать количество чисел, кратных 13, от 100 до 1000.</div>
+	
+	<a name="task11"/><h3>Задача 11</h3>
+	<div class="task_desc">Найти среднее арифметическое всех целых чисел от A до В включительно (значение A и В вводится В&gt;=A).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>10.5</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>158.5</td>
+			<td>161.3</td>
+			<td>160</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>648</td>
+			<td>648</td>
+			<td>648</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-2</td>
+			<td>600</td>
+			<td>299</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	
+	<a name="task12"/><h3>Задача 12</h3>
+	<div class="task_desc">Найти сумму кубов всех целых чисел от 20 до 40 включительно.</div>
+	
+	<a name="task13"/><h3>Задача 13</h3>
+	<div class="task_desc">Найти сумму квадратов всех целых чисел от A до B включительно (значение А и B вводится B&gt;=A).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>15</td>
+			<td>27</td>
+			<td>5915</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>25</td>
+			<td>44</td>
+			<td>24470</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>80</td>
+			<td>100</td>
+			<td>170870</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	
+	<a name="task14"/><h3>Задача 14</h3>
+	<div class="task_desc">Выведите на экран по диагонали нечетные целые числа от А до В включительно (значение А и В вводится В&gt;=A).</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td style="font-family:monospace;white-space:pre">9<br/>&nbsp;11<br/>&nbsp;&nbsp;13</br></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>691</td>
+			<td>703</td>
+			<td style="font-family:monospace;white-space:pre">691<br/>&nbsp;693<br/>&nbsp;&nbsp;695<br/>&nbsp;&nbsp;&nbsp;697<br/>&nbsp;&nbsp;&nbsp;&nbsp;699<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;701<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;703</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task15"/><h3>Задача 15</h3>
+	<div class="task_desc">Выведите на экран в строчку через запятую нечетные числа от А до В включительно (значение А и В вводится В&gt;=A). Перед первым и после последнего числа запятой быть не должно.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td>9, 11, 13</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>691</td>
+			<td>703</td>
+			<td>691, 693, 695, 697, 699, 701, 703</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	<a name="task16"/><h3>Задача 16</h3>
+	<div class="task_desc">Выведите на экран в рамочке числа кратные 3 от А до В включительно (значение А и В вводится В>=A, -10&lt;A&lt;100, -10&lt;B&lt;100). Перед первым числом, после последнего числа и между всеми числами находится пробел.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>8</td>
+			<td>13</td>
+			<td style="font-family:monospace;white-space:pre">+------------+<br/>| 9 12 15 18 |<br/>+------------+</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td></td>
+			<td></td>
+			<td style="font-family:monospace;white-space:pre">+-------------------------+<br/>| 72 75 78 81 84 87 90 93 |<br/>+-------------------------+</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>100</td>
+			<td>200</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>3000</td>
+			<td>24</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table>
+	
+	
+	<!-- <div class="task_desc">Найти произведение всех целых чисел от 1 до B включительно (значение B вводится 1&lt;=B&lt;=20).</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (B)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>5</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>9</td>
+			<td>362880</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-2</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>21</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table> -->
+	<!-- 
+	<div class="task_desc">Найти произведение всех целых чисел от А до 20 включительно (значение А вводится 1&lt;=A&lt;=20).</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>19</td>
+			<td>380</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>18</td>
+			<td>6840</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>14</td>
+			<td>390700800</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>-2</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>21</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table> -->
+	
+	<!-- <div class="task_desc">Найти среднее арифметическое всех целых чисел от 100 до В включительно (значение В вводится В&gt;=100).</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (B)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>130</td>
+			<td>115</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>319</td>
+			<td>209.5</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>99</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>21</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table> -->
+	<!-- <div class="task_desc">Найти среднее арифметическое всех целых чисел от A до 200 включительно (значение A вводится A&lt;=200).</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>130</td>
+			<td>165</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>21</td>
+			<td>110.5</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>200</td>
+			<td>200</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>201</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>319</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table> -->
+	<!-- <div class="task_desc">Найти сумму квадратов всех целых чисел от А до 50 включительно (значение А вводится 0<=A<=50).</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>30</td>
+			<td>34370</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>21</td>
+			<td>40055</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>46</td>
+			<td>11530</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>51</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>-1</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+	</table> -->
+	</body>
+</html>
