@@ -25,6 +25,10 @@
 }
 
 .task_desc {
-	width:89%;
+	width:75%;
 	margin:5px;
+}
+
+.example_image {
+	width:200px;
 }
