@@ -38,14 +38,3 @@
 	width:75%;
 	overflow:auto;
 }
-.heading h1 {
-	margin-bottom:0px;
-}
-.prev {
-	float:left;
-	margin:5px;
-}
-.next {
-	float:left;
-	margin:5px;
-}
