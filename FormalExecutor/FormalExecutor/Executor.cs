@@ -26,6 +26,8 @@ namespace FormalExecutor
             this.delay = delay;
             this.x = x;
             this.y = y;
+            Console.SetCursorPosition(this.x, this.y);
+            Console.Write(mark);
             SayMessage("Нажмите пробел чтобы начать работу");
             Console.ReadKey();
             ClearMessage();
@@ -51,13 +53,14 @@ namespace FormalExecutor
             Move(-1, 0);
         }
 
-        private void Move(int dx, int dy)
+        private Boolean Move(int dx, int dy)
         {
             if (grid.GetContent(this.x + dx, this.y + dy) == Grid.WALL)
             {
                 SayMessage("Не могу двигаться в данном направлении");
-                Thread.Sleep(this.delay);
-                return;
+                Console.ReadKey();
+                System.Environment.Exit(0);
+                return false;
             }
             Console.SetCursorPosition(this.x, this.y);
             grid.UpdateTile(this.x, this.y);
@@ -66,6 +69,7 @@ namespace FormalExecutor
             Console.SetCursorPosition(this.x, this.y);
             Console.Write(mark);
             Thread.Sleep(this.delay);
+            return true;
         }
         
         private void ClearMessage()

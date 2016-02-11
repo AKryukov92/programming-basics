@@ -43,9 +43,9 @@ namespace FormalExecutor
 
         public void Redraw()
         {
-            for(int i = 0; i < this.width; i++)
+            for (int j = 0; j < this.height; j++)
             {
-                for (int j = 0; j < this.height; j++)
+                for (int i = 0; i < this.width; i++)
                 {
                     UpdateTile(i, j);
                 }

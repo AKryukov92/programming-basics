@@ -10,11 +10,13 @@ namespace FormalExecutor
     {
         static void Main(string[] args)
         {
-            ExecutorScheme executor = new ExecutorScheme(1, 1, 1000, new RandomDottedGrid());
+            ExecutorScheme executor = new ExecutorScheme(1, 1, 1000, new RandomDottedBorderGrid());
             executor.StepRight();
             executor.StepRight();
-            executor.StepUp();
-            executor.Examine();
+            executor.StepRight();
+            executor.StepRight();
+            executor.StepRight();
+            executor.StepRight();
             Console.ReadKey();
         }
     }
