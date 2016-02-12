@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FormalExecutor
+namespace ExplorerJourney
 {
     class RandomDottedBorderGrid : Grid
     {
@@ -14,8 +14,6 @@ namespace FormalExecutor
             : base(width, height)
         {
             Random rnd = new Random();
-            int x;
-            int y;
             for (int i = 0; i < this.width; i++)
             {
                 if (rnd.Next() % 4 == 0)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FormalExecutor
+namespace ExplorerJourney
 {
     class Grid
     {
@@ -67,9 +67,13 @@ namespace FormalExecutor
             {
                 Console.Write('#');
             }
-            else
+            else if (grid[x, y] == 0)
             {
                 Console.Write(' ');
+            }
+            else
+            {
+                Console.Write(grid[x, y] % 10);
             }
         }
 

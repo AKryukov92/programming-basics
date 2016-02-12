@@ -5,21 +5,18 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FormalExecutor
+namespace ExplorerJourney
 {
-    class ExecutorScheme
+    class Explorer
     {
         private int x;
         private int y;
         private int delay;
         private char mark = 'O';
         private Grid grid;
+        private bool ignoreCommands = false;
 
-        public ExecutorScheme() : this(1, 1, 1000, new RandomDottedGrid()) { }
-
-        public ExecutorScheme(int x, int y, int delay) : this(x, y, delay, new Grid(10, 10)) { }
-
-        public ExecutorScheme(int x, int y, int delay, Grid grid)
+        private Explorer(int x, int y, int delay, Grid grid)
         {
             this.grid = grid;
             grid.Redraw();
@@ -55,11 +52,14 @@ namespace FormalExecutor
 
         private Boolean Move(int dx, int dy)
         {
+            if (ignoreCommands)
+            {
+                return false;
+            }
             if (grid.GetContent(this.x + dx, this.y + dy) == Grid.WALL)
             {
                 SayMessage("Не могу двигаться в данном направлении");
-                Console.ReadKey();
-                System.Environment.Exit(0);
+                ignoreCommands = true;
                 return false;
             }
             Console.SetCursorPosition(this.x, this.y);
@@ -68,6 +68,7 @@ namespace FormalExecutor
             this.y += dy;
             Console.SetCursorPosition(this.x, this.y);
             Console.Write(mark);
+            Console.SetCursorPosition(0, grid.Height + 2);
             Thread.Sleep(this.delay);
             return true;
         }
@@ -88,6 +89,10 @@ namespace FormalExecutor
         public int Examine()
         {
             int value = grid.GetContent(this.x, this.y);
+            if (ignoreCommands)
+            {
+                return value;
+            }
             if (value == 0)
             {
                 SayMessage("Поле с координатами (" + this.x + ":" + this.y + ") пустое");
@@ -98,6 +103,55 @@ namespace FormalExecutor
             }
             Thread.Sleep(this.delay);
             return value;
+        }
+
+        public static Builder builder()
+        {
+            return new Builder();
+        }
+
+        public class Builder
+        {
+            private int x;
+            private int y;
+            private Grid grid;
+
+            private int delay = 1000;
+            private char mark = 'O';
+
+            public Builder withPosition(int posX, int posY)
+            {
+                this.x = posX;
+                this.y = posY;
+                return this;
+            }
+
+            public Builder withDelay(int delay)
+            {
+                this.delay = delay;
+                return this;
+            }
+
+            public Builder withMark(char value)
+            {
+                this.mark = value;
+                return this;
+            }
+
+            public Builder withGrid(Grid value)
+            {
+                this.grid = value;
+                return this;
+            }
+
+            public Explorer build()
+            {
+                if (grid == null)
+                {
+                    grid = new Grid(10, 10);
+                }
+                return new Explorer(x, y, delay, grid);
+            }
         }
     }
 }

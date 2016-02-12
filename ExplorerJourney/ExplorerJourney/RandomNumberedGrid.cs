@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FormalExecutor
+namespace ExplorerJourney
 {
-    class RandomDottedGrid : Grid
+    class RandomNumberedGrid : Grid
     {
-        public RandomDottedGrid() : this(10, 10, 10) { }
+        public RandomNumberedGrid() : this(10, 10, 10) { }
 
-        public RandomDottedGrid(int width, int height, int count) : base(width, height) {
+        public RandomNumberedGrid(int width, int height, int count) : base(width, height)
+        {
             Random rnd = new Random();
             int i = 0;
             int x;
@@ -19,13 +20,12 @@ namespace FormalExecutor
             {
                 x = rnd.Next() % width;
                 y = rnd.Next() % height;
-                if (grid[x, y] == 0)
+                if (grid[x,y] == 0)
                 {
-                    grid[x, y] = Grid.WALL;
+                    grid[x, y] = rnd.Next() % 8 + 1;
                     i++;
                 }
             }
         }
-
     }
 }
