@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/lodash.js"></script>
+	</head>
+	<body>
+		Application loading script should be included at the end of body
+		<script scr="application.js">
+	</body>
+</html>

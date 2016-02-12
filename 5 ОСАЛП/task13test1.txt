@@ -1,0 +1,9 @@
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/jasmine.js"></script>
+	</head>
+	<body>
+		This file includes jquery and jasmine script
+	</body>
+</html>

@@ -1,0 +1,12 @@
+a {
+	color:red;
+}
+a:visited {
+	color:green;
+}
+a:hover {
+	font-size:30pt;
+}
+a[target="_blank"] {
+	background-color:aqua;
+}

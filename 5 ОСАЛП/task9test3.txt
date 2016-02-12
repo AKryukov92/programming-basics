@@ -1,25 +1,3 @@
-"zoHJUeywNWoIPgaDvQgs","lDhsdmtSJRYzTRNMtCIN
-ajGqJrWj","rcBFyhcyWuQLgmWeYdWhcmsplUzEzWrZ
-lDhwvOJVFtXJgbRSdyUJyzrMhBjLwrSgWvvJorDC",
-"elomjxzKheqViaxzaEvEfFcYcjizhpVTRjSEvpuS
-qrTWbqoSlzHJIZbDJkVwLZ","bZZTyASHXHOiw","DXoXk
-TsCPJdkeJv","NkLRxthwaaWZybRmbkDxXInMhwaydg
-aRdAGjqQLLCrGTeDwchdalVjziZGWZruZnJDykUB",
-"XtPTpagoyccPbaKTgBBXBxGOBRVerIodGflOyOLN
-xelwVnJuXiYTgqlAXm","bctVZIbyTULCRBUtIXBFYC
-udTgPcATifHDsKiVTuFSzcsATzSv","taeLMWZaQBez
-ejVFHsiXfAz","GteIxcmpLsjHZqFdlBNjIZFRv","Ukx","c",
-"nFaCsMiSzxDGVblTDihhlAZvqihePWBAcQxreXT","V
-j","jdHHcPbjHTsBQCTdhDCEpfRXcsKdOVOKsjGhqYG
-","zfANBKPXrbREbWcGykqXshO","bpDMlOscdOqSfOhPB
-PnbpmOwdwKWyBy","BBjlRjHsEpaPUFprUCswmyercf
-jqkHDQmPEFILDsFCUMUsWWGpzqEvck","laXuIgvzKw
-LQHQQI","OKfKWVuemuieTRfjPzUGBovMoIrUvbrO","ja
-pesKgiBtzjVVwaJaPqDzqwfAvQYVwCXZoKosipWI",
-"RDzFtjlIrMutJqtjmlgljKZKeFszVcHywWgzdZUJ",
-"SxPXPwTNOeYXvurxCxNvbXnJKmpLlloFwHeeoPso",
-"zWibYquWYYHsTsaLtSdRsymRfFnOGtZmhEAfCurq",
-"BoCrjKDfiUJBVqXyUXsEGaCLgKzhHbDhKxofmVQJ",
-"daKFvgtIYmnZWoCsQmxSjDSuqNSIPZoSJnMRCziW
-fBhdWYTDNPCLjkKjDsCWBxqVokOkDCkFOCrbNknD",
-"wOMilcDWnJqCKXDrpBdBvZLAVDDXyTJqaxnVEyZY"
+2
+C:\Program files\images\bing.ico
+C:\Program Files\Windows Media Player\Media Renderer\DMR_48.jpg

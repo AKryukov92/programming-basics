@@ -1,0 +1,11 @@
+.illustration {
+	width:200px;
+}
+.col-xs {
+	width:33%;
+	float:left;
+}
+.col-sm {
+	float:none;
+	width:100;
+}

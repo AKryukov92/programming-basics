@@ -1,0 +1,7 @@
+<html>
+	<head>
+	</head>
+	<body>
+		This file contains no scripts
+	</body>
+</html>

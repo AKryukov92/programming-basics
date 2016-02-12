@@ -24,7 +24,11 @@
 	display:block;
 	padding:7px;
 }
-
+@media print {
+	.nav {
+		display:none;
+	}
+}
 .task_desc {
 	width:75%;
 	margin:5px;

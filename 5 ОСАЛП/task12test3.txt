@@ -1,0 +1,16 @@
+table tr {
+	background-color:green;
+	border:none;
+}
+table tr td {
+	padding:5px;
+	background-color:red;
+}
+form div label {
+	font-weight:700;
+	margin-bottom:5px;
+}
+form div input {
+	border-radius:5px;
+	color:red;
+}
