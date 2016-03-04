@@ -14,7 +14,6 @@ namespace ExplorerJourney
         private int delay;
         private char mark = 'O';
         private Grid grid;
-        private bool ignoreCommands = false;
 
         private Explorer(int x, int y, int delay, Grid grid)
         {
@@ -52,14 +51,9 @@ namespace ExplorerJourney
 
         private Boolean Move(int dx, int dy)
         {
-            if (ignoreCommands)
-            {
-                return false;
-            }
             if (grid.GetContent(this.x + dx, this.y + dy) == Grid.WALL)
             {
                 SayMessage("Не могу двигаться в данном направлении");
-                ignoreCommands = true;
                 return false;
             }
             Console.SetCursorPosition(this.x, this.y);
@@ -89,10 +83,6 @@ namespace ExplorerJourney
         public int Examine()
         {
             int value = grid.GetContent(this.x, this.y);
-            if (ignoreCommands)
-            {
-                return value;
-            }
             if (value == 0)
             {
                 SayMessage("Поле с координатами (" + this.x + ":" + this.y + ") пустое");

@@ -11,10 +11,41 @@ namespace ExplorerJourney
         static void Main(string[] args)
         {
             Explorer explorer = Explorer.builder()
-                .withDelay(1000)
+                .withDelay(10)
                 .withPosition(6, 1)
-                .withGrid(new RandomNumberedGrid())
+                .withGrid(Grid.builder().buildFromStream("1.grid"))
                 .build();
+            //Commands for explorer
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
+            explorer.StepRight();
             explorer.StepRight();
             explorer.StepRight();
             explorer.StepRight();
