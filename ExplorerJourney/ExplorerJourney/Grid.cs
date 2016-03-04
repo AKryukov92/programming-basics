@@ -92,14 +92,16 @@ namespace ExplorerJourney
             }
         }
 
-        public void Mark(int x, int y, int mark)
+        public void Increment(int x, int y)
         {
-            if (mark >= WALL || mark < 0)
-            {
-                throw new ArgumentException("Illegal symbol");
-            }
             assertCoords(x, y);
-            grid[x, y] = mark;
+            grid[x, y] = (grid[x, y] + 1) % WALL;
+        }
+
+        public void Decrement(int x, int y)
+        {
+            assertCoords(x, y);
+            grid[x, y] = (grid[x, y] - 1) % WALL;
         }
 
         public bool Validate()
@@ -156,6 +158,7 @@ namespace ExplorerJourney
         {
             private int width = 0;
             private int height = 0;
+            Random rnd = new Random();
 
             public Grid buildFromStream(String filename)
             {
@@ -196,7 +199,12 @@ namespace ExplorerJourney
                     }
                     if (element >= 48 && element <= 57)
                     {
-                        grid[x, y] = element - 48;
+                        int value = element - 48;
+                        if (value == 3)
+                        {
+                            value = rnd.Next() % 2;
+                        }
+                        grid[x, y] = value;
                         x++;
                         continue;
                     }

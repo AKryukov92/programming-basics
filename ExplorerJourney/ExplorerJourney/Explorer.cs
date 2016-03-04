@@ -51,12 +51,12 @@ namespace ExplorerJourney
 
         public void Mark()
         {
-            grid.Mark(this.x, this.y, 1);
+            grid.Increment(this.x, this.y);
         }
 
         public void Unmark()
         {
-            grid.Mark(this.x, this.y, 1);
+            grid.Decrement(this.x, this.y);
         }
 
         private Boolean Move(int dx, int dy)
