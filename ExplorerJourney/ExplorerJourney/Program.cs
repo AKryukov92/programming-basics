@@ -10,48 +10,25 @@ namespace ExplorerJourney
     {
         static void Main(string[] args)
         {
+            Grid world = Grid.builder().buildFromStream("1.grid");
             Explorer explorer = Explorer.builder()
                 .withDelay(10)
                 .withPosition(6, 1)
-                .withGrid(Grid.builder().buildFromStream("1.grid"))
+                .withGrid(world)
                 .build();
             //Commands for explorer
             explorer.StepRight();
             explorer.StepRight();
             explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
-            explorer.StepRight();
+            explorer.Mark();
+            explorer.StepLeft();
+            explorer.StepDown();
+            explorer.StepUp();
+
+            if (world.Validate())
+            {
+                Console.WriteLine("Мир построен верно");
+            }
             Console.ReadKey();
         }
     }

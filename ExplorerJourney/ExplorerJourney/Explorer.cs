@@ -49,6 +49,16 @@ namespace ExplorerJourney
             Move(-1, 0);
         }
 
+        public void Mark()
+        {
+            grid.Mark(this.x, this.y, 1);
+        }
+
+        public void Unmark()
+        {
+            grid.Mark(this.x, this.y, 1);
+        }
+
         private Boolean Move(int dx, int dy)
         {
             if (grid.GetContent(this.x + dx, this.y + dy) == Grid.WALL)

@@ -12,39 +12,50 @@ namespace ExplorerJourney
         protected int width;
         protected int height;
         protected int[,] grid;
+        private int[,] expectedGrid;
         public static int WALL = 9;
 
         public Grid(int width, int height, bool empty)
         {
-            if (width <= 0)
-            {
-                throw new ArgumentException("Ширина должна быть положительной. width = " + width);
-            }
-            if (height <= 0)
-            {
-                throw new ArgumentException("Высота должна быть положительной. height = " + height);
-            }
+            assertSize(width, height);
+
             this.width = width;
             this.height = height;
             grid = new int[width, height];
+            expectedGrid = new int[width, height];
             if (!empty)
             {
-                for (int j = 0; j < this.height; j++)
-                {
-                    grid[0, j] = WALL;
-                    grid[this.width - 1, j] = WALL;
-                }
-                for (int i = 0; i < this.width; i++)
-                {
-                    grid[i, 0] = WALL;
-                    grid[i, this.height - 1] = WALL;
-                }
-
+                fillDefault();
             }
         }
 
         public Grid(int width, int height)
         {
+            assertSize(width, height);
+
+            this.width = width;
+            this.height = height;
+            grid = new int[width, height];
+            fillDefault();
+        }
+
+        public int Width { get { return this.width; } }
+        public int Height { get { return this.height; } }
+
+        private void assertCoords(int x, int y)
+        {
+            if (x < 0 || x >= this.width)
+            {
+                throw new ArgumentException("Указанная координата не существует х = " + x);
+            }
+            if (y < 0 || y >= this.height)
+            {
+                throw new ArgumentException("Указанная координата не существует y = " + y);
+            }
+        }
+
+        private void assertSize(int width, int height)
+        {
             if (width <= 0)
             {
                 throw new ArgumentException("Ширина должна быть положительной. width = " + width);
@@ -53,9 +64,10 @@ namespace ExplorerJourney
             {
                 throw new ArgumentException("Высота должна быть положительной. height = " + height);
             }
-            this.width = width;
-            this.height = height;
-            grid = new int[width, height];
+        }
+
+        private void fillDefault()
+        {
             for (int j = 0; j < this.height; j++)
             {
                 grid[0, j] = WALL;
@@ -67,9 +79,6 @@ namespace ExplorerJourney
                 grid[i, this.height - 1] = WALL;
             }
         }
-
-        public int Width { get { return this.width; } }
-        public int Height { get { return this.height; } }
 
         public void Redraw()
         {
@@ -83,16 +92,40 @@ namespace ExplorerJourney
             }
         }
 
+        public void Mark(int x, int y, int mark)
+        {
+            if (mark >= WALL || mark < 0)
+            {
+                throw new ArgumentException("Illegal symbol");
+            }
+            assertCoords(x, y);
+            grid[x, y] = mark;
+        }
+
+        public bool Validate()
+        {
+            if (expectedGrid == null)
+            {
+                return true;
+            }
+
+            for (int j = 0; j < this.height; j++)
+            {
+                for(int i = 0; i < this.width; i++)
+                {
+                    if (grid[i, j] != expectedGrid[i,j])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
         public void UpdateTile(int x, int y)
         {
-            if (x < 0 || x >= this.width)
-            {
-                throw new ArgumentException("Указанная координата не существует х = " + x);
-            }
-            if (y < 0 || y >= this.height)
-            {
-                throw new ArgumentException("Указанная координата не существует y = " + y);
-            }
+            assertCoords(x, y);
+
             if (grid[x, y] == WALL)
             {
                 Console.Write('#');
@@ -109,14 +142,8 @@ namespace ExplorerJourney
 
         public int GetContent(int x, int y)
         {
-            if (x < 0 || x >= this.width)
-            {
-                throw new ArgumentException("Указанная координата не существует х = " + x);
-            }
-            if (y < 0 || y >= this.height)
-            {
-                throw new ArgumentException("Указанная координата не существует y = " + y);
-            }
+            assertCoords(x, y);
+
             return this.grid[x, y];
         }
 
@@ -127,6 +154,9 @@ namespace ExplorerJourney
 
         public sealed class StreamBasedGridBuilder
         {
+            private int width = 0;
+            private int height = 0;
+
             public Grid buildFromStream(String filename)
             {
                 FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
@@ -136,16 +166,27 @@ namespace ExplorerJourney
 
             public Grid buildFromStream(StreamReader reader)
             {
-                int width;
-                int height;
                 width = Int32.Parse(reader.ReadLine());
                 height = Int32.Parse(reader.ReadLine());
                 Grid result = new Grid(width, height, true);
+
+                fillGridByReader(reader, result.grid);
+                reader.ReadLine();
+                fillGridByReader(reader, result.expectedGrid);
+                return result;
+            }
+
+            private void fillGridByReader(StreamReader reader, int[,] grid)
+            {
                 int x = 0;
                 int y = 0;
 
-                while(!reader.EndOfStream)
+                while (!reader.EndOfStream)
                 {
+                    if (y >= height)
+                    {
+                        break;
+                    }
                     int element = reader.Read();
                     if (element == 10)
                     {
@@ -155,7 +196,7 @@ namespace ExplorerJourney
                     }
                     if (element >= 48 && element <= 57)
                     {
-                        result.grid[x, y] = element - 48;
+                        grid[x, y] = element - 48;
                         x++;
                         continue;
                     }
@@ -165,9 +206,7 @@ namespace ExplorerJourney
                     }
                     throw new FileLoadException("Неожиданный символ " + element);
                 }
-                return result;
             }
-
         }
     }
 }
