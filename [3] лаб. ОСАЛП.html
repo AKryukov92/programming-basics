@@ -3,12 +3,60 @@
 	<head>
 		<meta charset="utf-8">
 		<title>3 Циклические алгоритмы</title>
-		<link rel="stylesheet" href="css/labs.css"/>
+		<style>
+.check_values {
+	border-collapse:collapse;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+}
+.task_desc {
+	width:75%;
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:75%;
+	overflow:auto;
+}
+.preformatted {
+	font-family:monospace;
+	white-space:pre;
+}
+		</style>
 	</head>
 	<body>
-		<div class="heading">
-			<a name="heading"/>
-			<h1>Циклические алгоритмы</h1>
+		<a name="heading"/><h1>Циклические алгоритмы</h1>
+		<div class="lab_nav">
 			Другие темы:
 			<ul>
 				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
@@ -126,19 +174,19 @@
 			<td>1</td>
 			<td>8</td>
 			<td>#</td>
-			<td style="font-family:monospace;white-space:pre">"########"</td>
+			<td class="preformatted">"########"</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>15</td>
 			<td>пробел</td>
-			<td style="font-family:monospace;white-space:pre">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</td>
+			<td class="preformatted">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</td>
 		</tr>
 		<tr>
 			<td>3</td>
 			<td>0</td>
 			<td>?</td>
-			<td style="font-family:monospace;white-space:pre">""</td>
+			<td class="preformatted">""</td>
 		</tr>
 		<tr>
 			<td>4</td>
@@ -398,7 +446,7 @@
 			<td>#</td>
 			<td>5</td>
 			<td>3</td>
-			<td style="font-family:monospace;white-space:pre">#####
+			<td class="preformatted">#####
 #####
 #####</td>
 		</tr>
@@ -407,7 +455,7 @@
 			<td>?</td>
 			<td>7</td>
 			<td>10</td>
-			<td style="font-family:monospace;white-space:pre">???????
+			<td class="preformatted">???????
 ???????
 ???????
 ???????
@@ -464,7 +512,7 @@
 			<td>1</td>
 			<td>#</td>
 			<td>6</td>
-			<td style="font-family:monospace;white-space:pre">#
+			<td class="preformatted">#
 ##
 ###
 ####
@@ -475,7 +523,7 @@
 			<td>2</td>
 			<td>\</td>
 			<td>3</td>
-			<td style="font-family:monospace;white-space:pre">\
+			<td class="preformatted">\
 \\
 \\\</td>
 		</tr>
@@ -509,13 +557,13 @@
 			<td>1</td>
 			<td>8</td>
 			<td>13</td>
-			<td style="font-family:monospace;white-space:pre">9<br/>.11<br/>..13</br></td>
+			<td class="preformatted">9<br/>.11<br/>..13</br></td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>691</td>
 			<td>703</td>
-			<td style="font-family:monospace;white-space:pre">691<br/>.693<br/>..695<br/>...697<br/>....699<br/>.....701<br/>......703</td>
+			<td class="preformatted">691<br/>.693<br/>..695<br/>...697<br/>....699<br/>.....701<br/>......703</td>
 		</tr>
 		<tr>
 			<td>3</td>
@@ -545,7 +593,7 @@
 			<td>0</td>
 			<td>5</td>
 			<td>3</td>
-			<td style="font-family:monospace;white-space:pre">#####
+			<td class="preformatted">#####
 00000
 #####</td>
 		</tr>
@@ -555,7 +603,7 @@
 			<td>-</td>
 			<td>7</td>
 			<td>10</td>
-			<td style="font-family:monospace;white-space:pre">???????
+			<td class="preformatted">???????
 -------
 ???????
 -------
@@ -643,14 +691,14 @@
 		<tr>
 			<td>1</td>
 			<td>5</td>
-			<td style="font-family:monospace;white-space:pre">+---+
+			<td class="preformatted">+---+
 |   |
 +---+</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>15</td>
-			<td style="font-family:monospace;white-space:pre">+-------------+
+			<td class="preformatted">+-------------+
 |             |
 +-------------+</td>
 		</tr>
@@ -687,13 +735,13 @@
 			<td>1</td>
 			<td>8</td>
 			<td>13</td>
-			<td style="font-family:monospace;white-space:pre">+------------+<br/>| 9 12 15 18 |<br/>+------------+</td>
+			<td class="preformatted">+------------+<br/>| 9 12 15 18 |<br/>+------------+</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td></td>
 			<td></td>
-			<td style="font-family:monospace;white-space:pre">+-------------------------+<br/>| 72 75 78 81 84 87 90 93 |<br/>+-------------------------+</td>
+			<td class="preformatted">+-------------------------+<br/>| 72 75 78 81 84 87 90 93 |<br/>+-------------------------+</td>
 		</tr>
 		<tr>
 			<td>3</td>
