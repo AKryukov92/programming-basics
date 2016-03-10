@@ -3,12 +3,61 @@
 	<head>
 		<meta charset="utf-8">
 		<title>1 Линейные алгоритмы</title>
-		<link rel="stylesheet" href="css/labs.css"/>
+		<style>
+.check_values {
+	border-collapse:collapse;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.heading {
+		display:none;
+	}
+}
+.task_desc {
+	width:75%;
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.heading {
+	width:75%;
+	overflow:auto;
+}
+.preformatted {
+	font-family:monospace;
+	white-space:pre;
+}
+		</style>
 	</head>
 	<body>
+	<h1>Линейные алгоритмы</h1>
 	<div class="heading">
 		<a name="heading"/>
-		<h1>Линейные алгоритмы</h1>
 			Другие темы:
 			<ul>
 				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
@@ -53,21 +102,21 @@
 		</tr>
 		<tr>
 			<td>1</td>
-			<td style="font-family:monospace;white-space:pre;">+---+
+			<td class="preformatted">+---+
 |   |
 |   |
 +---+</td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td style="font-family:monospace;white-space:pre;">#
+			<td class="preformatted">#
 ##
 ###
 ####</td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td style="font-family:monospace;white-space:pre;"> /\
+			<td class="preformatted"> /\
 //\\
 //\\
  ][
@@ -79,7 +128,7 @@
 		</tr>
 		<tr>
 			<td>5</td>
-			<td style="font-family:monospace;white-space:pre;">Три девицы под окном
+			<td class="preformatted">Три девицы под окном
 Пряли поздно вечерком.
 "Кабы я была царица, —
 Говорит одна девица, —
@@ -105,7 +154,7 @@
 		</tr>
 		<tr>
 			<td>6</td>
-			<td style="font-family:monospace;white-space:pre;">&lt;!DOCTYPE html&gt;
+			<td class="preformatted">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"/&gt;
