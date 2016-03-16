@@ -7,8 +7,8 @@
     <ProjectGuid>{2488F137-E772-41E8-A344-3051ADAE1F39}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FormalExecutor</RootNamespace>
-    <AssemblyName>FormalExecutor</AssemblyName>
+    <RootNamespace>ExplorerJourney</RootNamespace>
+    <AssemblyName>ExplorerJourney</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,9 +48,7 @@
     <Compile Include="Grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomDottedBorderGrid.cs" />
-    <Compile Include="RandomDottedGrid.cs" />
-    <Compile Include="RandomNumberedGrid.cs" />
+    <Compile Include="StreamBasedGridBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="1.grid">
