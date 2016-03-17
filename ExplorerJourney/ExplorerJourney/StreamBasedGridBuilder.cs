@@ -36,6 +36,9 @@ namespace ExplorerJourney
                 fillGridByReader(reader, result.grid);
                 reader.ReadLine();
                 fillGridByReader(reader, result.expectedGrid);
+                result.Redraw();
+                Console.Write("\nНажмите пробел чтобы начать работу");
+                Console.ReadKey();
                 return result;
             }
 

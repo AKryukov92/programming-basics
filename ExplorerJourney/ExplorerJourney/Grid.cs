@@ -8,12 +8,15 @@ namespace ExplorerJourney
 {
     partial class Grid
     {
+        #region Поля
         protected int width;
         protected int height;
         protected int[,] grid;
         private int[,] expectedGrid;
         public static int WALL = 9;
+        #endregion
 
+        #region Конструкторы
         public Grid(int width, int height, bool empty)
         {
             assertSize(width, height);
@@ -27,7 +30,7 @@ namespace ExplorerJourney
                 fillDefault();
             }
         }
-
+        
         public Grid(int width, int height)
         {
             assertSize(width, height);
@@ -37,10 +40,14 @@ namespace ExplorerJourney
             grid = new int[width, height];
             fillDefault();
         }
+        #endregion
 
+        #region Свойства
         public int Width { get { return this.width; } }
         public int Height { get { return this.height; } }
+        #endregion
 
+        #region Методы
         private void assertCoords(int x, int y)
         {
             if (x < 0 || x >= this.width)
@@ -81,6 +88,7 @@ namespace ExplorerJourney
 
         public void Redraw()
         {
+            Console.SetCursorPosition(0, 0);
             for (int j = 0; j < this.height; j++)
             {
                 for (int i = 0; i < this.width; i++)
@@ -147,5 +155,6 @@ namespace ExplorerJourney
 
             return this.grid[x, y];
         }
+        #endregion
     }
 }
