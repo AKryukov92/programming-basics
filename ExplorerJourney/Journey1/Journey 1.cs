@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Supplies;
 
-namespace ExplorerJourney
+namespace Journey1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Grid world = Grid.builder().buildFromStream("2.grid"); //Создание мира
+            /*
+                Задачи:
+                - Обойти комнату по периметру.
+                - Побывать в каждом поле комнаты один раз
+                - Пройти по диагонали
+                - Заполнить всю комнату метками
+            */
+            Grid world = Grid.builder().buildFromStream("1.grid"); //Создание мира
             Explorer explorer = Explorer.builder()
                 .withDelay(100)     //Время (в миллисекундах) между выполнениями команд
                 .withPosition(6, 1) //Координаты стартовой позиции
@@ -26,12 +34,8 @@ namespace ExplorerJourney
             explorer.StepUp();  //Шагнуть вверх
             explorer.StepUp();
 
-            //Проверка мира
-            if (world.Validate())
-            {
-                Console.WriteLine("Мир построен верно");
-            }
-            Console.ReadKey();
+            //В самом конце
+            Console.ReadKey(); //Ждем нажатия какой-нибудь клавиши
         }
     }
 }

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExplorerJourney
+namespace Supplies
 {
-    partial class Grid
+    public partial class Grid
     {
         public static StreamBasedGridBuilder builder()
         {

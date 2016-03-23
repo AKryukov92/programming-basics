@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ExplorerJourney
+namespace Supplies
 {
     /// <summary>
     /// Класс "Путешественник".
@@ -20,7 +20,7 @@ namespace ExplorerJourney
     ///  Снять отметку
     /// Об ошибках сообщает в консоль
     /// </summary>
-    class Explorer
+    public class Explorer
     {
         #region Поля
         private int x;
