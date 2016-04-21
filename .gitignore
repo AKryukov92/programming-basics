@@ -15,3 +15,9 @@
 /ExplorerJourney/Supplies/obj/*
 /ExplorerJourney/Supplies/bin/*
 *.suo
+/Сборник Златопольского/Zlatopolsky_Solution/TestResults
+/Сборник Златопольского/Zlatopolsky_Solution/.vs
+/Сборник Златопольского/Zlatopolsky_Solution/Unit1Tests/obj
+/Сборник Златопольского/Zlatopolsky_Solution/Unit1Tests/bin
+/Сборник Златопольского/Zlatopolsky_Solution/Unit1/obj
+/Сборник Златопольского/Zlatopolsky_Solution/Unit1/bin
