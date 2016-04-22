@@ -3,12 +3,56 @@
 	<head>
 		<meta charset="utf-8">
 		<title>4 Работа с массивами</title>
-		<link rel="stylesheet" href="css/labs.css"/>
+		<style>
+.check_values {
+	border-collapse:collapse;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+}
+.task_desc {
+	width:75%;
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:75%;
+	overflow:auto;
+}
+		</style>
 	</head>
 	<body>
-		<div class="heading">
-			<a name="heading"/>
-			<h1>Алгоритмы работы с массивами</h1>
+		<a name="heading"/><h1>Алгоритмы работы с массивами</h1>
+		<div class="lab_nav">
 			Другие темы:
 			<ul>
 				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
@@ -42,6 +86,7 @@
 			<li><a href="#task16">Задача 16</a></li>
 			<li><a href="#task17">Задача 17</a></li>
 			<li><a href="#task18">Задача 18</a></li>
+			<li><a href="#task19">Задача 19</a></li>
 		<!-- <li><a href="#task">Задача </a></li> -->
 		</ul>
 		</div>
@@ -589,7 +634,7 @@
 			</tr>
 		</table>
 		
-		<a name="task10"/><h3>Задача 11</h3>
+		<a name="task11"/><h3>Задача 11</h3>
 		<div class="task_desc">Пользователь вводит числа X и Y, объем данных - число N и данные - числа от 1 до 4 включительно. Заменить все элементы, равные X, на Y.</div>
 		<table class="check_values">
 			<tr>
@@ -629,7 +674,33 @@
 			</tr>
 		</table>
 		
-		<a name="task11"/><h3>Задача 12</h3>
+		<a name="task12"/><h3>Задача 12</h3>
+		<div class="task_desc">Пользователь вводит объем данных - число N и данные - числа от 1 до 4 включительно. Инвертировать массив - переставить элементы массива в обратном порядке.</div>
+		<table class="check_values">
+			<tr>
+				<th rowspan="2">Номер теста</th>
+				<th colspan="2">Вводимые данные</th>
+				<th rowspan="2">Результат</th>
+			</tr>
+			<tr>
+				<th>N</th>
+				<th>Данные</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>6</td>
+				<td>1 2 3 4 1 2</td>
+				<td>2 1 4 3 2 1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>11</td>
+				<td>1 2 3 4 1 2 3 4 1 2 3</td>
+				<td>3 2 1 4 3 2 1 4 3 2 1</td>
+			</tr>
+		</table>
+		
+		<a name="task13"/><h3>Задача 13</h3>
 		<div class="task_desc">Пользователь вводит объем данных - число N и данные - числа от 1 до 4 включительно. Отсортировать массив по возрастанию.</div>
 		<table class="check_values">
 			<tr>
@@ -655,7 +726,7 @@
 			</tr>
 		</table>
 		
-		<a name="task12"/><h3>Задача 13</h3>
+		<a name="task14"/><h3>Задача 14</h3>
 		<div class="task_desc">Пользователь вводит число K и объем данных - число N и данные - числа от 1 до 4 включительно. Посчитать сколько раз встречается переменная K в массиве.</div>
 		<table class="check_values">
 			<tr>
@@ -698,7 +769,7 @@
 			</tr>
 		</table>
 		
-		<a name="task13"/><h3>Задача 14</h3>
+		<a name="task15"/><h3>Задача 15</h3>
 		<div class="task_desc">Пользователь вводит объем данных - число N и данные - числа от 1 до 4 включительно. Создать новый массив и записать в него сколько раз встречается каждый из элементов.</div>
 		<table class="check_values">
 			<tr>
@@ -736,7 +807,7 @@
 			</tr>
 		</table>
 		
-		<a name="task14"/><h3>Задача 15</h3>
+		<a name="task16"/><h3>Задача 16</h3>
 		<div class="task_desc">Пользователь вводит объем данных - число N и данные - числа от 1 до 9 включительно. Посчитать количество различных чисел.</div>
 		<table class="check_values">
 			<tr>
@@ -768,7 +839,7 @@
 			</tr>
 		</table>
 		
-		<a name="task15"/><h3>Задача 16</h3>
+		<a name="task17"/><h3>Задача 17</h3>
 		<div class="task_desc">Пользователь вводит объем данных - число N и данные - числа от 1 до 4 включительно. Создать новый массив и записать в него элементы первого массива без дубликатов.</div>
 		<table class="check_values">
 			<tr>
@@ -794,10 +865,10 @@
 			</tr>
 		</table>
 		
-		<a name="task16"/><h3>Задача 17</h3>
+		<a name="task18"/><h3>Задача 18</h3>
 		<div class="task_desc">Заполнить массив случайным образом числами от 100 до 999 включительно и вывести на экран.</div>
 		
-		<a name="task17"/><h3>Задача 18</h3>
+		<a name="task19"/><h3>Задача 19</h3>
 		<div class="task_desc">Магазин обслужил за день X покупателей, каждый из которых потратил на покупки какую то сумму. Суммы расходов заполнить случайным образом в пределах от 100 до 999. Посчитать дневную прибыль магазина и сумму среднего потребительского чека.</div>
 		
 	</body>

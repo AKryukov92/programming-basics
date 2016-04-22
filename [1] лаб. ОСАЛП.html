@@ -3,12 +3,60 @@
 	<head>
 		<meta charset="utf-8">
 		<title>1 Линейные алгоритмы</title>
-		<link rel="stylesheet" href="css/labs.css"/>
+		<style>
+.check_values {
+	border-collapse:collapse;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+}
+.task_desc {
+	width:75%;
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:75%;
+	overflow:auto;
+}
+.preformatted {
+	font-family:monospace;
+	white-space:pre;
+}
+		</style>
 	</head>
 	<body>
-	<div class="heading">
-		<a name="heading"/>
-		<h1>Линейные алгоритмы</h1>
+	<a name="heading"/><h1>Линейные алгоритмы</h1>
+	<div class="lab_nav">
 			Другие темы:
 			<ul>
 				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
@@ -37,10 +85,155 @@
 		<li><a href="#task12">Задача 12</a></li>
 		<li><a href="#task13">Задача 13</a></li>
 		<li><a href="#task14">Задача 14</a></li>
+		<li><a href="#task15">Задача 15</a></li>
+		<li><a href="#task16">Задача 16</a></li>
+		<li><a href="#task17">Задача 17</a></li>
 		<!-- <li><a href="#task">Задача </a></li> -->
 	</ul>
 	</div>
+	
 	<a name="task1"/><h3>Задача 1</h3>
+	<div class="task_desc">Вывести на экран тексты:</div>
+	<table class="check_values">
+		<tr>
+			<th>Порядковый номер</th>
+			<th>Выводимый текст</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td class="preformatted">+---+
+|   |
+|   |
++---+</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td class="preformatted">#
+##
+###
+####</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td class="preformatted"> /\
+//\\
+//\\
+ ][
+</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>{ "x":15, "y": 28.7 }</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td class="preformatted">Три девицы под окном
+Пряли поздно вечерком.
+"Кабы я была царица, —
+Говорит одна девица, —
+То на весь крещеный мир
+Приготовила б я пир".
+"Кабы я была царица, —
+Говорит ее сестрица, —
+То на весь бы мир одна
+Наткала я полотна".
+"Кабы я была царица, —
+Третья молвила сестрица, —
+Я б для батюшки-царя
+Родила богатыря".
+
+Только вымолвить успела,
+Дверь тихонько заскрыпела,
+И в светлицу входит царь,
+Стороны той государь.
+Во всё время разговора
+Он стоял позадь забора;
+Речь последней по всему
+Полюбилася ему.</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td class="preformatted">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
+
+    &lt;svg width="800" height="600"&gt;
+        &lt;circle cx="50" cy="50" r="40" stroke="green"
+		stroke-width="4" fill="yellow"/&gt;
+    &lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;</td>
+		</tr>
+	</table>
+	
+	<a name="task2"/><h3>Задача 2</h3>
+	<div class="task_desc">Дана строка A. Нужно вывести ее на экран и дописать слова "Программирование это" перед началом и "!"(восклицательный знак) в конце этой строки. Задачу нужно решить тремя различными способами.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (A)</th>
+			<th>Результат (C)</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>просто</td>
+			<td>Программирование это просто!</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>интересно</td>
+			<td>Программирование это интересно!</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>перспективно</td>
+			<td>Программирование это перспективно!</td>
+		</tr>
+	</table>
+	
+	<a name="task3"/><h3>Задача 3</h3>
+	<div class="task_desc">Дано две строки A и B. Нужно составить из них третью строку C, которая должна начинаться строкой B и заканчиваться строкой A. Задачу нужно решить тремя различными способами.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат (C)</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>начало</td>
+			<td>конец</td>
+			<td>конец начало</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>сила</td>
+			<td>знание</td>
+			<td>знание сила</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>курица</td>
+			<td>яйцо</td>
+			<td>яйцо курица</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>шаг</td>
+			<td>шаг</td>
+			<td>шаг шаг</td>
+		</tr>
+	</table>
+	
+	<a name="task4"/><h3>Задача 4</h3>
 	<div class="task_desc">Вычислить длину окружности по формуле C=2&pi;R</div>
 	<table class="check_values">
 		<tr>
@@ -70,7 +263,7 @@
 		</tr>
 	</table>
 	
-	<a name="task2"/><h3>Задача 2</h3>
+	<a name="task5"/><h3>Задача 5</h3>
 	<div>Вычислить объём шара по формуле V=4&pi;R<sup>3</sup>/3</div>
 	<table class="check_values">
 		<tr>
@@ -100,7 +293,7 @@
 		</tr>
 	</table>
 	
-	<a name="task3"/><h3>Задача 3</h3>
+	<a name="task6"/><h3>Задача 6</h3>
 	<div class="task_desc">Вычислить площадь прямоугольного треугольника по формуле S=ah/2, где a - основание, h - высота.</div>
 	<table class="check_values">
 		<tr>
@@ -144,7 +337,7 @@
 		</tr>
 	</table>
 	
-	<a name="task4"/><h3>Задача 4</h3>
+	<a name="task7"/><h3>Задача 7</h3>
 	<div class="task_desc">Дано действительное число X. Нужно отбросить его дробную часть.</div>
 	<table class="check_values">
 		<tr>
@@ -184,7 +377,7 @@
 		</tr>
 	</table>
 	
-	<a name="task5"/><h3>Задача 5</h3>
+	<a name="task8"/><h3>Задача 8</h3>
 	<div class="task_desc">Перевести угол из градусов в радианы по формуле: B=A*&pi;/180, где A - угол в градусах, B - угол в радианах. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ).<!--radian = (360+angle)%360 * (Math.PI/180)--></div>
 	<table class="check_values">
 		<tr>
@@ -224,8 +417,8 @@
 		</tr>
 	</table>
 	
-	<a name="task6"/><h3>Задача 6</h3>
-	<div class="task_desc">Вычислить расстояние между двумя точками с координатами (X<sub>1</sub>, Y<sub>1</sub>) и (X<sub>2</sub>, Y<sub>2</sub>) по формуле &radic;<span style="border-top: 1px solid black">(X<sub>2</sub> - X<sub>1</sub>)<sup>2</sup> + (Y<sub>2</sub> - Y<sub>1</sub>)<sup>2</sup></span>
+	<a name="task9"/><h3>Задача 9</h3>
+	<div class="task_desc">Вычислить расстояние между двумя точками с координатами (X<sub>1</sub>, Y<sub>1</sub>) и (X<sub>2</sub>, Y<sub>2</sub>) по формуле <br/>&radic;<span style="border-top: 1px solid black">(X<sub>2</sub> - X<sub>1</sub>)<sup>2</sup> + (Y<sub>2</sub> - Y<sub>1</sub>)<sup>2</sup></span>
 	<table class="check_values">
 		<tr>
 			<th rowspan="2">Номер теста</th>
@@ -280,7 +473,7 @@
 		</tr>
 	</table>
 	
-	<a name="task7"/><h3>Задача 7</h3>
+	<a name="task10"/><h3>Задача 10</h3>
 	<div class="task_desc">Смешали V<sub>1</sub> литров воды с температурой T<sub>1</sub> градусов Цельсия с V<sub>2</sub> литрами воды с температурой T<sub>2</sub> градусов Цельсия. Вычислите объем V=V<sub>1</sub>+V<sub>2</sub> и температуру образовавшейся смеси по формуле</div>
 	<table style="text-align:center;">
 		<tr>
@@ -288,7 +481,7 @@
 			<td style="border-bottom:1px solid black;">(T<sub>1</sub>*V<sub>1</sub>+T<sub>2</sub>*V<sub>2</sub>)</td>
 		</tr>
 		<tr>
-			<td>V</td>
+			<td>V<sub>1</sub>+V<sub>2</sub></td>
 		</tr>
 	</table>
 	<table class="check_values">
@@ -349,7 +542,8 @@
 			<td>73.3333</td>
 		</tr>
 	</table>
-	<a name="task8"/><h3>Задача 8</h3>
+	
+	<a name="task11"/><h3>Задача 11</h3>
 	<div class="task_desc">Дана длина ребра куба. Найти объем куба по формуле V=a<sup>3</sup></div>
 	<table class="check_values">
 		<tr>
@@ -379,7 +573,7 @@
 		</tr>
 	</table>
 	
-	<a name="task9"/><h3>Задача 9</h3>
+	<a name="task12"/><h3>Задача 12</h3>
 	<div class="task_desc">Дана длина ребра куба. Найти площадь его боковой поверхности по формуле S=6a<sup>2</sup>.</div>
 	<table class="check_values">
 		<tr>
@@ -409,7 +603,7 @@
 		</tr>
 	</table>
 	
-	<a name="task10"/><h3>Задача 10</h3>
+	<a name="task13"/><h3>Задача 13</h3>
 	<div class="task_desc">Дан прямоугольник, у которого верхний левый угол находится в точке с экранными координатами (X<sub>1</sub>;Y<sub>1</sub>), высота равна H, ширина равна W. Определить координаты нижнего правого угла. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.
 	<table class="check_values">
 		<tr>
@@ -481,7 +675,7 @@
 		</tr>
 	</table>
 	
-	<a name="task11"/><h3>Задача 11</h3>
+	<a name="task14"/><h3>Задача 14</h3>
 	<div class="task_desc">На экране с шириной 800 и высотой 600 подготовлено пространство для графика функции. Центр осей координат (точка с математическими координатами (0;0)) располагается в точке с экранными координатами (X<sub>эц</sub>;Y<sub>эц</sub>). Требуется найти экранные координаты точки, математические координаты которой (X<sub>мт</sub>;Y<sub>мт</sub>). Масштаб экранных координат к математическим 1:1. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.</div>
 	<table class="check_values">
 		<tr>
@@ -521,7 +715,7 @@
 		</tr>
 	</table>
 	
-	<a name="task12"/><h3>Задача 12</h3>
+	<a name="task15"/><h3>Задача 15</h3>
 	<div class="task_desc">Найти координаты вершин равнобедренного треугольника. Пользователь вводит координаты одной точки (x;y), длину основания (A), длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис. 1). Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
 		<div style="text-align:center"><svg width="100" height="100">
 			<line x1="10" y1="10" x2="90" y2="10" stroke="black" stroke-width="1"/>
@@ -616,7 +810,7 @@
 		</tr>
 	</table>
 	
-	<a name="task13"/><h3>Задача 13</h3>
+	<a name="task16"/><h3>Задача 16</h3>
 	<div class="task_desc">Даны координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>). <strike>Нужно построить вектор, начинающийся в точке (0;0), коллинеарный и сонаправленный вектору AB, который будет иметь такую же длину.</strike> Нужно перенести вектор в начало координат, сохранив направление. Вывести координаты ненулевого конца полученного вектора. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
 	</div>
 	<table class="check_values">
@@ -705,7 +899,7 @@
 		</tr>
 	</table>
 	
-	<a name="task14"/><h3>Задача 14</h3>
+	<a name="task17"/><h3>Задача 17</h3>
 	<div class="task_desc">Даны экранные координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>), а также угол &alpha; в градусах. Найти координаты вектора, который получится в результате поворота вектора AB на угол &alpha; вокруг точки A. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>. Систему координат считать правосторонней с отрицательным направлением вращения по часовой стрелке.</div>
 	<!--x'=x*cos(a)+y*sin(a)-->
 	<!--y'=-x*sin(a)+y*cos(a)-->
