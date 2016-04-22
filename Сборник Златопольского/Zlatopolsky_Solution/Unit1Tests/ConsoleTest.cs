@@ -17,18 +17,28 @@ namespace Unit1Tests
         }
 
         protected StringWriter consoleOut;
+        protected StringBuilder inputBuilder;
 
         protected void FakeInput(String text)
         {
-            StringReader reader = new StringReader(text);
+            inputBuilder.Append(text);
+            inputBuilder.Append("\n");
+        }
+
+        protected void Begin()
+        {
+            StringReader reader = new StringReader(inputBuilder.ToString());
             Console.SetIn(reader);
         }
+
+        protected string Output { get { return consoleOut.ToString().Trim(); } }
 
         [TestInitialize()]
         public void startup()
         {
             consoleOut = new StringWriter();
             Console.SetOut(consoleOut);
+            inputBuilder = new StringBuilder();
         }
     }
 }

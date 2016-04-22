@@ -103,9 +103,12 @@ namespace Unit1.PlainArithmetics
             double a = double.Parse(temp);
             temp = Console.ReadLine();
             double b = double.Parse(temp);
+
+            a = Math.PI / 180 * a;
+            b = Math.PI / 180 * b;
             double result;
-            result = Math.Sin(Math.PI / 180 * a) * Math.Cos(Math.PI / 180 * b) + Math.Cos(Math.PI / 180 * a) * Math.Sin(Math.PI / 180 * b);
-            Console.WriteLine(result);
+            result = Math.Sin(a) * Math.Cos(b) + Math.Cos(a) * Math.Sin(b);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_14j()
@@ -117,11 +120,12 @@ namespace Unit1.PlainArithmetics
             double b = double.Parse(temp);
             if (b < 0)
             {
-                Console.WriteLine();
+                Console.WriteLine("При данных значениях, подкоренное выражение отрицательно");
+                return;
             }
             double result;
             result = a * Math.Sqrt(2 * b);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_14k()
@@ -133,7 +137,7 @@ namespace Unit1.PlainArithmetics
             double b = double.Parse(temp);
             double result;
             result = 3 * Math.Sin(2 * Math.PI / 180 * a) * Math.Cos(3 * Math.PI / 180 * b);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_14l()
@@ -155,7 +159,7 @@ namespace Unit1.PlainArithmetics
             }
             double result;
             result = -5 * Math.Sqrt(x + Math.Sqrt(y));
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
     }
 }
