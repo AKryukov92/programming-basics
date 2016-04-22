@@ -22,7 +22,7 @@ namespace Unit1.PlainArithmetics
                 return;
             }
             result = Math.Sqrt(result);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17b()
@@ -60,12 +60,12 @@ namespace Unit1.PlainArithmetics
             double m = double.Parse(temp);
             temp = Console.ReadLine();
             double v = double.Parse(temp);
-            double g = 9.81d;
+            double g = 9.8067d;
             temp = Console.ReadLine();
             double h = double.Parse(temp);
             double result;
             result = m * v * v / 2 + m * g * h;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17e()
@@ -87,7 +87,7 @@ namespace Unit1.PlainArithmetics
             }
             double result;
             result = 1 / R1 + 1 / R2;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17f()
@@ -95,13 +95,12 @@ namespace Unit1.PlainArithmetics
             string temp;
             temp = Console.ReadLine();
             double m = double.Parse(temp);
-            temp = Console.ReadLine();
-            double g = 9.81d;
+            double g = 9.8067d;
             temp = Console.ReadLine();
             double a = double.Parse(temp);
             double result;
             result = m * g * Math.Cos(Math.PI / 180 * a);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17g()
@@ -111,7 +110,7 @@ namespace Unit1.PlainArithmetics
             double r = double.Parse(temp);
             double result;
             result = 2 * Math.PI * r;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17h()
@@ -125,7 +124,7 @@ namespace Unit1.PlainArithmetics
             double c = double.Parse(temp);
             double result;
             result = b * b - 4 * a * c;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17i()
@@ -139,9 +138,14 @@ namespace Unit1.PlainArithmetics
             double y = double.Parse(temp);
             temp = Console.ReadLine();
             double r = double.Parse(temp);
+            if (r == 0)
+            {
+                Console.WriteLine("При данных значениях, знаменатель равен нулю");
+                return;
+            }
             double result;
             result = y * m1 * m2 / (r * r);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17j()
@@ -153,7 +157,7 @@ namespace Unit1.PlainArithmetics
             double R = double.Parse(temp);
             double result;
             result = I * I * R;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17k()
@@ -166,7 +170,7 @@ namespace Unit1.PlainArithmetics
             temp = Console.ReadLine();
             double c = double.Parse(temp);
             double result = a * b * Math.Sin(Math.PI / 180 * c);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17l()
@@ -186,7 +190,7 @@ namespace Unit1.PlainArithmetics
                 return;
             }
             result = Math.Sqrt(result);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17m()
@@ -201,8 +205,13 @@ namespace Unit1.PlainArithmetics
             temp = Console.ReadLine();
             double d = double.Parse(temp);
             double result;
+            if (a == 0 || d == 0)
+            {
+                Console.WriteLine("При данных значениях, знаменатель равен нулю");
+                return;
+            }
             result = a * d + b * c / (a * d);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17n()
@@ -219,7 +228,7 @@ namespace Unit1.PlainArithmetics
                 return;
             }
             result = Math.Sqrt(result);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17o()
@@ -247,7 +256,7 @@ namespace Unit1.PlainArithmetics
                 return;
             }
             result = 1 / result;
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17p()
@@ -255,29 +264,14 @@ namespace Unit1.PlainArithmetics
             string temp;
             temp = Console.ReadLine();
             double x = double.Parse(temp);
-            if (x + 1 < 0)
+            if (x < 1)
             {
                 Console.WriteLine("При данных значениях, подкоренное выражение отрицательно");
-                return;
-            }
-            if (x - 1 < 0)
-            {
-                Console.WriteLine("При данных значениях, подкоренное выражение отрицательно");
-                return;
-            }
-            if (x < 0)
-            {
-                Console.WriteLine("При данных значениях, подкоренное выражение отрицательно");
-                return;
-            }
-            if (x == 0)
-            {
-                Console.WriteLine("При данных значениях, знаменатель равен нулю");
                 return;
             }
             double result;
-            result = Math.Sqrt(x + 1) + Math.Sqrt(x - 1) / (2 * Math.Sqrt(x));
-            Console.WriteLine(result);
+            result = (Math.Sqrt(x + 1) + Math.Sqrt(x - 1)) / (2 * Math.Sqrt(x));
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17q()
@@ -287,7 +281,7 @@ namespace Unit1.PlainArithmetics
             double x = double.Parse(temp);
             double result;
             result = Math.Abs(x) + Math.Abs(x + 1);
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
 
         public void task1_17r()
@@ -297,7 +291,7 @@ namespace Unit1.PlainArithmetics
             double x = double.Parse(temp);
             double result;
             result = Math.Abs(1 - Math.Abs(x));
-            Console.WriteLine(result);
+            Console.WriteLine("{0:F4}", result);
         }
     }
 }
