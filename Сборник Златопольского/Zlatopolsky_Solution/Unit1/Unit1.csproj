@@ -44,7 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlainArithmetics.cs" />
+    <Compile Include="PlainArithmetics\Task12.cs" />
+    <Compile Include="PlainArithmetics\Task13.cs" />
+    <Compile Include="PlainArithmetics\Task14.cs" />
+    <Compile Include="PlainArithmetics\Task17.cs" />
+    <Compile Include="PlainArithmetics\Tasks1to11.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

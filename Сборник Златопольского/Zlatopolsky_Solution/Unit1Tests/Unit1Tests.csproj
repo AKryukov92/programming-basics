@@ -51,7 +51,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="PlainArithmeticsTests.cs" />
+    <Compile Include="ConsoleTest.cs" />
+    <Compile Include="PlainArithmetics\Task12Tests.cs" />
+    <Compile Include="PlainArithmetics\Task13Tests.cs" />
+    <Compile Include="PlainArithmetics\Task14Tests.cs" />
+    <Compile Include="PlainArithmetics\Tasks1to11Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
