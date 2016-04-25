@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormulaCalculating\Tasks22to30.cs" />
+    <Compile Include="FormulaCalculating\Tasks31to40.cs" />
+    <Compile Include="FormulaCalculating\Tasks41to50.cs" />
+    <Compile Include="FormulaCalculating\Tasks51to58.cs" />
+    <Compile Include="FormulaCalculating\Tasks59to62.cs" />
     <Compile Include="PlainArithmetics\Task12.cs" />
     <Compile Include="PlainArithmetics\Task13.cs" />
     <Compile Include="PlainArithmetics\Task14.cs" />
