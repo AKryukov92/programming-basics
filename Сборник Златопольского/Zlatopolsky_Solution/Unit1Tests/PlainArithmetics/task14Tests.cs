@@ -180,5 +180,25 @@ namespace Unit1Tests.PlainArithmetics
             obj.task1_14l();
             Assert.AreEqual("При данных значениях, подкоренное выражение отрицательно", Output);
         }
+
+        [TestMethod()]
+        public void task1_14mTest()
+        {
+            FakeInput("6221");
+            FakeInput("6373");
+            Begin();
+            obj.task1_14m();
+            Assert.AreEqual("При данных значениях, подкоренное выражение отрицательно", Output.Trim());
+        }
+
+        [TestMethod()]
+        public void task1_14mIllegalInputTest()
+        {
+            FakeInput("6047");
+            FakeInput("-6011");
+            Begin();
+            obj.task1_14m();
+            Assert.AreEqual("1240401,6995", Output.Trim());
+        }
     }
 }

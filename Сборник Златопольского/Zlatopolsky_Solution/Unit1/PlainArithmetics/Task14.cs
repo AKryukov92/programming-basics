@@ -161,5 +161,22 @@ namespace Unit1.PlainArithmetics
             result = -5 * Math.Sqrt(x + Math.Sqrt(y));
             Console.WriteLine("{0:F4}", result);
         }
+
+        public void task1_14m()
+        {
+            string temp;
+            temp = Console.ReadLine();
+            double a = double.Parse(temp);
+            temp = Console.ReadLine();
+            double b = double.Parse(temp);
+            if (b > 0)
+            {
+                Console.WriteLine("При данных значениях, подкоренное выражение отрицательно");
+                return;
+            }
+            double result;
+            result = a * Math.Sqrt(-7 * b);
+            Console.WriteLine("{0:F4}", result);
+        }
     }
 }
