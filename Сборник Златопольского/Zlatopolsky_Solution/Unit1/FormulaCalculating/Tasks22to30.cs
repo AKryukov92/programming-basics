@@ -118,7 +118,7 @@ namespace Unit1.FormulaCalculating
                 Console.WriteLine("Длина отрезка не может быть отрицательной");
                 return;
             }
-            l = (h + r) * (h + r) - r * r;
+            l = Math.Sqrt((h + r) * (h + r) - r * r);
             Console.WriteLine("{0:F4}", l);
         }
 
