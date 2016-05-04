@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1.3 Работа с цифрами чисел</title>
+		<style>
+.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+	width:calc(80% - 30px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.check_values {
+	border-collapse:collapse;
+	width:100%;
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+}
+.task_block {
+	width:75%;
+	page-break-inside:avoid;
+	display:block;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:75%;
+	overflow:auto;
+}
+.check_values .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+		</style>
+	</head>
+	<body>
+	<a name="heading"><h1>Линейные алгоритмы</h1></a>
+	<h2>Работа с цифрами чисел</h2>
+	<div class="lab_nav">
+			Другие темы:
+			<ul>
+				<li><a href="[1.1] лаб. ОСАЛП.html">Линейные алгоритмы: Ввод и вывод информации</a></li>
+				<li><a href="[1.2] лаб. ОСАЛП.html">Линейные алгоритмы: Арифметические действия</a></li>
+				<li><a href="[1.3] лаб. ОСАЛП.html">Линейные алгоритмы: Работа с цифрами чисел</a></li>
+				<li><a href="[1.4] лаб. ОСАЛП.html">Линейные алгоритмы: Сложные задачи</a></li>
+				<li><a href="[2] лаб. ОСАЛП.html">Условия</a></li>
+				<li><a href="[3] лаб. ОСАЛП.html">Циклы</a></li>
+				<li><a href="[4] лаб ОСАЛП.html">Массивы</a></li>
+				<li><a href="[5] лаб ОСАЛП.html">Чтение файлов</a></li>
+				<li><a href="[6] лаб ОСАЛП.html">Запись в файл</a></li>
+				<li><a href="[7] лаб ОСАЛП.html">Двумерные массивы</a></li>
+			</ul>
+		</div>
+	<div class="nav">
+	<ul>
+		<li><a href="#heading">^</a></li>
+		<li><a href="#quiz">?</a></li>
+		<li><a href="#writing1">П 1</a></li>
+		<li><a href="#writing2">П 2</a></li>
+		<li><a href="#writing3">П 3</a></li>
+		<li><a href="#task1">№ 1</a></li>
+		<li><a href="#task2">№ 2</a></li>
+		<li><a href="#task3">№ 3</a></li>
+		<li><a href="#task4">№ 4</a></li>
+		<li><a href="#task5">№ 5</a></li>
+		<li><a href="#task6">№ 6</a></li>
+		<li><a href="#task7">№ 7</a></li>
+		<li><a href="#task8">№ 8</a></li>
+		<li><a href="#task9">№ 9</a></li>
+		<li><a href="#task10">№ 10</a></li>
+		<li><a href="#task11">№ 11</a></li>
+		<li><a href="#task12">№ 12</a></li>
+		<li><a href="#task13">№ 13</a></li>
+		<li><a href="#task14">№ 14</a></li>
+		<li><a href="#task15">№ 15</a></li>
+		<li><a href="#task16">№ 16</a></li>
+		<!-- <li><a href="#task">№ </a></li> -->
+	</ul>
+	<ul>
+		<li><a href="#task17">№ 17</a></li>
+		<li><a href="#task18">№ 18</a></li>
+		<li><a href="#task19">№ 19</a></li>
+		<li><a href="#task20">№ 20</a></li>
+		<li><a href="#task21">№ 21</a></li>
+		<li><a href="#task22">№ 22</a></li>
+		<li><a href="#task23">№ 23</a></li>
+		<li><a href="#task24">№ 24</a></li>
+		<li><a href="#task25">№ 25</a></li>
+		<li><a href="#task26">№ 26</a></li>
+		<li><a href="#task27">№ 27</a></li>
+		<li><a href="#task28">№ 28</a></li>
+		<li><a href="#task29">№ 29</a></li>
+		<li><a href="#task30">№ 30</a></li>
+		<li><a href="#task31">№ 31</a></li>
+		<li><a href="#task32">№ 32</a></li>
+		<li><a href="#task33">№ 33</a></li>
+		<li><a href="#task34">№ 34</a></li>
+		<li><a href="#task35">№ 35</a></li>
+		<li><a href="#task36">№ 36</a></li>
+		<li><a href="#task37">№ 37</a></li>
+	</ul>
+	</div>
+	<div class="task_block">
+		<a name="quiz"><h3>Контрольные вопросы</h3></a>
+		<ol style="width:80%">
+			<li>Какой результат у арифметической операции "%"?</li>
+			<li>Можно ли к дробным переменным применять операцию "остаток от деления нацело"?</li>
+			<li>В какую сторону округляется результат при делении целых переменных друг на друга?</li>
+		</ol>
+	</div>
+	
+	<div class="task_block">
+		<a name="writing1"><h3>Письменное задание 1</h3></a>
+		<div class="task_desc">Вычислить результат "операции остаток от деления" L на R</div>
+		<table class="check_values">
+			<tr>
+				<th rowspan="2">Порядковый номер</th>
+				<th colspan="2">Исходные данные</th>
+				<th rowspan="2">Результат</th>
+			</tr>
+			<tr>
+				<th>L</th>
+				<th>R</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>7919</td>
+				<td>137</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>7873</td>
+				<td>211</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3085</td>
+				<td>1489</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>2015</td>
+				<td>4</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>463</td>
+				<td>10</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>463</td>
+				<td>100</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="writing2"><h3>Письменное задание 2</h3></a>
+		<div class="task_desc">Найти результат по описанию.</div>
+		<table class="check_values">
+			<tr>
+				<th>Порядковый номер</th>
+				<th>Описание</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Дано число x, равное 197. Из x вычли его последнюю цифру. Результат разделили на 10, а к частному слева приписали последнюю цифру числа x.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Дано число x, равное 367. В нем зачеркнули первую цифру. Оставшееся число умножили на 10, а произведение сложили с первой цифрой числа x.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Дано число x, равное 541. В нем зачеркнули вторую цифру. К результату слева приписали вторую цифру числа x.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Дано число x, равное 317. В нем зачеркнули вторую цифру. К результату справа приписали вторую цифру числа x.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Дано число x, равное 607. В нем зачеркнули последнюю цифру. В оставшемся двузначном числе переставили цифры, а затем приписали к ним слева последнюю цифру числа x.</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="writing3"><h3>Письменное задание 3</h3></a>
+		<div class="task_desc">Получить линейную запись следующих выражений</div>
+		<table class="check_values">
+			<tr>
+				<th>Порядковый номер</th>
+				<th>Описание</th>
+				<th>Результат (X)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 237. Найти число x.</td>
+				<td><!--372--></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>В трехзначном числе x зачеркнули первую цифру. Когда оставшееся число умножили на 10, а произведение сложили с первой цифрой числа x, то получилось число 564</td>
+				<td><!--456--></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>В трехзначном числе x зачеркнули его вторую цифру. Когда к образованному при этом двузначному числу слева приписали вторую цифру числа x, то получилось число 719.</td>
+				<td><!--179--></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>В трехзначном числе x зачеркнули его вторую цифру. Когда к образованному при этом двузначному числу справа приписали вторую цифру числа x, то получилось число 941</td>
+				<td><!--914--></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>В трехзначном числе x зачеркнули его последнюю цифру. Когда в оставшемся двузначном числе переставили цифры, а затем приписали к ним слева последнюю цифру числа x, то получилось число 769</td>
+				<td><!--967--></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task1"><h3>Задача 1</h3></a>
+		<div class="task_desc">Дано двузначное число X. Найти число единиц в нем (C).</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (X)</th>
+				<th>Результат (C)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>11</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>23</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>29</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>100</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>9</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>-6</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task2"><h3>Задача 2</h3></a>
+		<div class="task_desc">Дано двузначное число A. Найти число десятков в нем (D).</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (A)</th>
+				<th>Результат (D)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>11</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>23</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>41</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>100</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>7</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>-5</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task3"><h3>Задача 3</h3></a>
+		<div class="task_desc">Дано двузначное число N. Найти сумму его цифр (S).</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (N)</th>
+				<th>Результат (S)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>13</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>53</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>151</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>3</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task4"><h3>Задача 4</h3></a>
+		<div class="task_desc">
+			Дано двузначное число AB. Получить число BA, образованное при перестановке его цифр.</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные(AB)</th>
+				<th>Результат (BA)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>37</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>59</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>0</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>113</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task5"><h3>Задача 5</h3></a>
+		<div>Дано трехзначное число P. Найти число десятков (Q) в нем.</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные(P)</th>
+				<th>Результат (Q)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>439</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>809</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>99</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>1879</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task6"><h3>Задача 6</h3></a>
+		<div class="task_desc">
+			Дано трехзначное число K. Найти сумму его цифр (S).
+		</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (K)</th>
+			<th>Результат (S)</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>347</td>
+			<td>14</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>521</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>61</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>1021</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task7"><h3>Задача 7</h3></a>
+		<div class="task_desc">
+			Дано трехзначное число OPK. Найти число KPO, образованное при перестановке его цифр.
+		</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (OPK)</th>
+			<th>Результат (KPO)</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>643</td>
+			<td>346</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>797</td>
+			<td>797</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>97</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>1103</td>
+			<td>Сообщение об ошибке</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task8"><h3>Задача 8</h3></a>
+		<div class="task_desc">Число X вводится с клавиатуры. Из X вычли его последнюю цифру. Результат разделили на 10, а к частному слева приписали последнюю цифру числа X. Найти результат N.</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (X)</th>
+				<th>Результат (N)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>197</td>
+				<td>719</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>113</td>
+				<td>311</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>83</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>1303</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task9"><h3>Задача 9</h3></a>
+		<div class="task_desc">Из трехзначного числа X вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа X, то получилось число N. По данному N найти число X.</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (N)</th>
+				<th>Результат (X)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>719</td>
+				<td>197</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>311</td>
+				<td>113</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>79</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>1259</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task10"><h3>Задача 10</h3></a>
+		<div class="task_desc">
+			Число X вводится с клавиатуры. В нем зачеркнули первую цифру. Оставшееся число умножили на 10, а произведение сложили с первой цифрой числа X.
+		</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные(X)</th>
+				<th>Результат (N)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>791</td>
+				<td>179</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>587</td>
+				<td>758</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>97</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>1217</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task11"><h3>Задача 11</h3></a>
+		<div class="task_desc">
+			Число X вводится с клавиатуры. В нем зачеркнули первую цифру. Оставшееся число умножили на 10. Когда произведение сложили с первой цифрой числа X, то получилось число N. По данному N найти число X.
+		</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные (N)</th>
+				<th>Результат (X)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="task12"><h3>Задача 12</h3></a>
+		<div class="task_desc">
+			Число X вводится с клавиатуры. В нем зачеркнули вторую цифру. К результату слева приписали вторую цифру числа X.
+		</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер теста</th>
+				<th>Вводимые данные(X)</th>
+				<th>Результат (N)</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>541</td>
+				<td>451</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>739</td>
+				<td>379</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>0</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>1447</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	</body>
+</html>

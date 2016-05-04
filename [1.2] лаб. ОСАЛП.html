@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>1 Линейные алгоритмы</title>
+		<title>1.2 Арифметические действия</title>
 		<style>
 .check_single {
     margin:15px;
@@ -96,11 +96,15 @@ denominator {
 		</style>
 	</head>
 	<body>
-	<a name="heading"/><h1>Линейные алгоритмы</h1>
+	<a name="heading"><h1>Линейные алгоритмы</h1></a>
+	<h2>Арифметические действия</h2>
 	<div class="lab_nav">
 			Другие темы:
 			<ul>
-				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
+				<li><a href="[1.1] лаб. ОСАЛП.html">Линейные алгоритмы: Ввод и вывод информации</a></li>
+				<li><a href="[1.2] лаб. ОСАЛП.html">Линейные алгоритмы: Арифметические действия</a></li>
+				<li><a href="[1.3] лаб. ОСАЛП.html">Линейные алгоритмы: Работа с цифрами чисел</a></li>
+				<li><a href="[1.4] лаб. ОСАЛП.html">Линейные алгоритмы: Сложные задачи</a></li>
 				<li><a href="[2] лаб. ОСАЛП.html">Условия</a></li>
 				<li><a href="[3] лаб. ОСАЛП.html">Циклы</a></li>
 				<li><a href="[4] лаб ОСАЛП.html">Массивы</a></li>
@@ -113,6 +117,9 @@ denominator {
 	<ul>
 		<li><a href="#heading">^</a></li>
 		<li><a href="#quiz">?</a></li>
+		<li><a href="#writing1">П 1</a></li>
+		<li><a href="#writing2">П 2</a></li>
+		<li><a href="#writing3">П 3</a></li>
 		<li><a href="#task1">№ 1</a></li>
 		<li><a href="#task2">№ 2</a></li>
 		<li><a href="#task3">№ 3</a></li>
@@ -129,6 +136,9 @@ denominator {
 		<li><a href="#task14">№ 14</a></li>
 		<li><a href="#task15">№ 15</a></li>
 		<li><a href="#task16">№ 16</a></li>
+		<!-- <li><a href="#task">№ </a></li> -->
+	</ul>
+	<ul>
 		<li><a href="#task17">№ 17</a></li>
 		<li><a href="#task18">№ 18</a></li>
 		<li><a href="#task19">№ 19</a></li>
@@ -136,9 +146,6 @@ denominator {
 		<li><a href="#task21">№ 21</a></li>
 		<li><a href="#task22">№ 22</a></li>
 		<li><a href="#task23">№ 23</a></li>
-		<!-- <li><a href="#task">№ </a></li> -->
-	</ul>
-	<ul>
 		<li><a href="#task24">№ 24</a></li>
 		<li><a href="#task25">№ 25</a></li>
 		<li><a href="#task26">№ 26</a></li>
@@ -153,33 +160,16 @@ denominator {
 		<li><a href="#task35">№ 35</a></li>
 		<li><a href="#task36">№ 36</a></li>
 		<li><a href="#task37">№ 37</a></li>
-		<li><a href="#task38">№ 38</a></li>
-		<li><a href="#task39">№ 39</a></li>
-		<li><a href="#task40">№ 40</a></li>
-		<li><a href="#task41">№ 41</a></li>
-		<li><a href="#task42">№ 42</a></li>
-		<li><a href="#task43">№ 43</a></li>
-		<li><a href="#task44">№ 44</a></li>
-		<li><a href="#task45">№ 45</a></li>
-		<li><a href="#task46">№ 46</a></li>
-		<li><a href="#task47">№ 47</a></li>
-		<li><a href="#task48">№ 48</a></li>
 	</ul>
 	</div>
 	<div class="task_block">
 		<a name="quiz"><h3>Контрольные вопросы</h3></a>
 		<ol style="width:80%">
-			<li>Что делает компьютер для того, чтобы превратить исходный код в программу и запустить ее?</li>
-			<li>Как оформляется команда вывода на экран?</li>
-			<li>Что происходит, если компьютер встречает некорректно оформленную команду?</li>
-			<li>Как нужно оформлять команду вывода, чтобы информация выводилась на экран с новой строки?</li>
-			<li>Как вывести на экран кавычку? Как вывести символ "обратная косая черта" "\" (обратный слеш)?</li>
 			<li>Какие базовые типы переменных существуют в языке программирования?</li>
 			<li>Как оформляется объявление переменной?</li>
 			<li>Как оформляется операция присваивания? Что происходит при ее выполнении?</li>
 			<li>Чем отличается объявление переменной от инициализации?</li>
 			<li>Каким символом разделяются целая и дробная части числа в исходном коде?</li>
-			<li>Как правильно оформлять команду ввода? Какого типа результат команды ввода? Что происходит при выполнении этой команды?</li>
 			<li>Как преобразовать текст, содержащий цифры, в числовое значение?</li>
 			<li>Каким символом разделяются целая и дробная части числа при вводе в программу?</li>
 			<li>Как оформляется арифметическое выражение в языке программирования?</li>
@@ -188,6 +178,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
+		<a name="writing1"><h3>Письменное задание 1</h3></a>
 		<div class="task_desc">Указать значение величины r после выполнения следующих операторов присваивания</div>
 		<table class="check_values">
 			<tr>
@@ -225,6 +216,7 @@ r=r+p;</td>
 	</div>
 	
 	<div class="task_block">
+		<a name="writing2"><h3>Письменное задание 2</h3></a>
 		<div class="task_desc">Указать значение величины r и p после выполнения следующих операторов присваивания:</div>
 		<table class="check_values">
 			<tr>
@@ -278,6 +270,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
+		<a name="writing3"><h3>Письменное задание 3</h3></a>
 		<div class="task_desc">Получить линейную запись следующих выражений</div>
 		<table class="check_values">
 			<tr>
@@ -429,319 +422,6 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task1"><h3>Задача 1</h3></a>
-		<div class="task_desc">Вывести на экран тексты:</div>
-		<table class="check_values">
-			<tr>
-				<th>Порядковый номер</th>
-				<th>Выводимый текст</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td class="preformatted">+---+
-|   |
-|   |
-+---+</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td class="preformatted">#
-##
-###
-####</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td class="preformatted"> /\
-//\\
-//\\
- ][
-				</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td class="preformatted">{ &quot;x&quot;:15, &quot;y&quot;: 28.7 }</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td class="preformatted">Три девицы под окном
-Пряли поздно вечерком.
-&quot;Кабы я была царица, —
-Говорит одна девица, —
-То на весь крещеный мир
-Приготовила б я пир&quot;.
-&quot;Кабы я была царица, —
-Говорит ее сестрица, —
-То на весь бы мир одна
-Наткала я полотна&quot;.
-&quot;Кабы я была царица, —
-Третья молвила сестрица, —
-Я б для батюшки-царя
-Родила богатыря&quot;.
-
-Только вымолвить успела,
-Дверь тихонько заскрыпела,
-И в светлицу входит царь,
-Стороны той государь.
-Во всё время разговора
-Он стоял позадь забора;
-Речь последней по всему
-Полюбилася ему.</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td class="preformatted">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-&lt;head/&gt;
-&lt;body&gt;
-    &lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
-
-    &lt;svg width=&quot;800&quot; height=&quot;600&quot;&gt;
-        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot;
-		stroke-width=&quot;4&quot; fill=&quot;yellow&quot;/&gt;
-    &lt;/svg&gt;
-&lt;/body&gt;
-&lt;/html&gt;</td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task2"><h3>Задача 2</h3></a>
-		<div class="task_desc">Составить программу вывода на экран слова (А), вводимого с клавиатуры. Перед выводимым словом нужно написать фразу "Мы стремимся к ".</div>
-		<table class="check_values">
-			<tr>
-				<th>Номер теста</th>
-				<th>Вводимые данные (A)</th>
-				<th>Результат (C)</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>знаниям</td>
-				<td>Мы стремимся к знаниям</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>цели</td>
-				<td>Мы стремимся к цели</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>результату</td>
-				<td>Мы стремимся к результату</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task3"><h3>Задача 3</h3></a>
-		<div class="task_desc">Дана строка А. Нужно вывести ее на экран и дописать слова "нас не остановят!" в конце.</div>
-		<table class="check_values">
-			<tr>
-				<th>Номер теста</th>
-				<th>Вводимые данные (A)</th>
-				<th>Результат (C)</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>трудности</td>
-				<td>трудности нас не остановят!</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>загадки</td>
-				<td>загадки нас не остановят!</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>сложные задачи</td>
-				<td>сложные задачи нас не остановят</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task4"><h3>Задача 4</h3></a>
-		<div class="task_desc">Дана строка A. Нужно вывести ее на экран и дописать слова "Программирование это" перед началом и "!"(восклицательный знак) в конце этой строки. Задачу нужно решить тремя различными способами.</div>
-		<table class="check_values">
-			<tr>
-				<th>Номер теста</th>
-				<th>Вводимые данные (A)</th>
-				<th>Результат (C)</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>просто</td>
-				<td>Программирование это просто!</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>интересно</td>
-				<td>Программирование это интересно!</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>перспективно</td>
-				<td>Программирование это перспективно!</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task5"><h3>Задача 5</h3></a>
-		<div class="task_desc">Дано две строки A и B. Нужно составить из них третью строку C, которая должна начинаться строкой B и заканчиваться строкой A. Задачу нужно решить тремя различными способами.</div>
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="2">Вводимые данные</th>
-				<th rowspan="2">Результат (C)</th>
-			</tr>
-			<tr>
-				<th>A</th>
-				<th>B</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>начало</td>
-				<td>конец</td>
-				<td>конец начало</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>сила</td>
-				<td>знание</td>
-				<td>знание сила</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>курица</td>
-				<td>яйцо</td>
-				<td>яйцо курица</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>шаг</td>
-				<td>шаг</td>
-				<td>шаг шаг</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task6"><h3>Задача 6</h3></a>
-		<div class="task_desc">Составить программу вывода на экран вводимых чисел с точностью 4 символа после запятой.</div>
-		<table class="check_values">
-			<tr>
-				<th>Номер теста</th>
-				<th>Вводимые данные (A)</th>
-				<th>Результат</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>9,780327</td>
-				<td>9,7803</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>-273,15</td>
-				<td>-273,1500</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>0,00006</td>
-				<td>0,0001</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task7"><h3>Задача 7</h3></a>
-		<div class="task_desc">Вывести число &pi; и <i>e</i> (основание натурального логарифма) с точностью 4 символа после запятой на разных строчках.</div>
-		<div class="check_single">3.1416
-		<br/>2,7183</div>
-	</div>
-	
-	<div class="task_block">
-		<a name="task8"/><h3>Задача 8</h3>
 		<div class="task_desc">Вычислить результат по формуле <b>2x</b>, где x вводится с клавиатуры.</div>
 		<table class="check_values">
 			<tr>
@@ -783,7 +463,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task9"><h3>Задача 9</h3></a>
+		<a name="task2"><h3>Задача 2</h3></a>
 		<div class="task_desc">Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>S=6a<sup>2</sup></formula>.</div>
 		<table class="check_values">
 			<tr>
@@ -835,8 +515,10 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task10"><h3>Задача 10</h3></a>
-		<div class="task_desc">Дана длина ребра куба. Найти объем куба по формуле <formula>V=a<sup>3</sup></formula>.</div>
+		<a name="task3"><h3>Задача 3</h3></a>
+		<div class="task_desc">
+			Дана длина ребра куба. Найти объем куба по формуле <formula>V=a<sup>3</sup></formula>.
+		</div>
 		<table class="check_values">
 			<tr>
 				<th>Номер теста</th>
@@ -888,7 +570,7 @@ r=p;</td>
 	
 	
 	<div class="task_block">
-		<a name="task11"><h3>Задача 11</h3></a>
+		<a name="task4"><h3>Задача 4</h3></a>
 		<div class="task_desc">Вычислить длину окружности по формуле <formula>C=2&pi;R</formula>.</div>
 		<table class="check_values">
 			<tr>
@@ -940,7 +622,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task12"><h3>Задача 12</h3></a>
+		<a name="task5"><h3>Задача 5</h3></a>
 		<div>Вычислить объём шара по формуле <formula>V=4&pi;R<sup>3</sup>/3</formula>.</div>
 		<table class="check_values">
 			<tr>
@@ -992,7 +674,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task13"><h3>Задача 13</h3></a>
+		<a name="task6"><h3>Задача 6</h3></a>
 		<div class="task_desc">Вычислить площадь прямоугольного треугольника по формуле <formula>S=ah/2</formula>, где a - основание, h - высота.</div>
 		<table class="check_values">
 			<tr>
@@ -1062,7 +744,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task14"><h3>Задача 14</h3></a>
+		<a name="task7"><h3>Задача 7</h3></a>
 		<div class="task_desc">Дан угол в градусах (A). Определить (M) наименьшее положительное значение угла, равного данному.</div>
 		<table class="check_values">
 			<tr>
@@ -1114,7 +796,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task15"><h3>Задача 15</h3></a>
+		<a name="task8"><h3>Задача 8</h3></a>
 		<div class="task_desc">Перевести угол из градусов в радианы по формуле: <formula>B=A*&pi;/180</formula>, где A - угол в градусах, B - угол в радианах. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ).<!--radian = (360+angle)%360 * (Math.PI/180)--></div>
 		<table class="check_values">
 			<tr>
@@ -1171,7 +853,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task16"><h3>Задача 16</h3></a>
+		<a name="task9"><h3>Задача 9</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <b>sin(x)</b></div>
 		<table class="check_values">
 			<tr>
@@ -1223,7 +905,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task17"><h3>Задача 17</h3></a>
+		<a name="task10"><h3>Задача 10</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1275,7 +957,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task18"><h3>Задача 18</h3></a>
+		<a name="task11"><h3>Задача 11</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>5cos(y)</formula></div>
 		<table class="check_values">
 			<tr>
@@ -1322,7 +1004,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task19"><h3>Задача 19</h3></a>
+		<a name="task12"><h3>Задача 12</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>3<sqrt><val>x</val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1374,7 +1056,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task20"><h3>Задача 20</h3></a>
+		<a name="task13"><h3>Задача 13</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>sin(&alpha;)cos(&beta;)+cos(&alpha;)sin(&beta;)</formula></div>
 		<table class="check_values">
 			<tr>
@@ -1426,7 +1108,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task21"><h3>Задача 21</h3></a>
+		<a name="task14"><h3>Задача 14</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>a<sqrt><val>-7b</val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1490,7 +1172,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task22"><h3>Задача 22</h3></a>
+		<a name="task15"><h3>Задача 15</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>3sin(2&alpha;)cos(3&beta;)</formula></div>
 		<table class="check_values">
 			<tr>
@@ -1542,7 +1224,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task23"><h3>Задача 23</h3></a>
+		<a name="task16"><h3>Задача 16</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>-5<sqrt><val>x+<sqrt><val>y</val></sqrt></val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1600,7 +1282,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task24"><h3>Задача 24</h3></a>
+		<a name="task17"><h3>Задача 17</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula><sqrt><val>x<sub>2</sub><sup>2</sup>+x<sub>1</sub><sup>2</sup></val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1652,7 +1334,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task25"><h3>Задача 25</h3></a>
+		<a name="task18"><h3>Задача 18</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>x<sub>1</sub>x<sub>2</sub>+x<sub>1</sub>x<sub>3</sub>+x<sub>2</sub>x<sub>3</sub></formula></div>
 		<table class="check_values">
 			<tr>
@@ -1711,7 +1393,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task26"><h3>Задача 26</h3></a>
+		<a name="task19"><h3>Задача 19</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 			<formula>
 				v<sub>0</sub>t+
@@ -1771,7 +1453,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task27"><h3>Задача 27</h3></a>
+		<a name="task20"><h3>Задача 20</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 			<formula>
 				<fraction>
@@ -1831,7 +1513,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task28"><h3>Задача 28</h3></a>
+		<a name="task21"><h3>Задача 21</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 			<formula>
 				<fraction>
@@ -1901,7 +1583,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task29"><h3>Задача 29</h3></a>
+		<a name="task22"><h3>Задача 22</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>mgcos(&alpha;)</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067</div>
 		<table class="check_values">
 			<tr>
@@ -1947,7 +1629,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task30"><h3>Задача 30</h3></a>
+		<a name="task23"><h3>Задача 23</h3></a>
 		<div class="task_desc">Вычислить результат по формуле <formula>b<sup>2</sup>-4ac</formula></div>
 		<table class="check_values">
 			<tr>
@@ -1999,7 +1681,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task31"><h3>Задача 31</h3></a>
+		<a name="task24"><h3>Задача 24</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 		<formula>
 			y
@@ -2081,7 +1763,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task32"><h3>Задача 32</h3></a>
+		<a name="task25"><h3>Задача 25</h3></a>
 		<div class="task_desc">Вычислить результат по формуле
 			<formula>
 				<sqrt><val>
@@ -2139,7 +1821,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task33"><h3>Задача 33</h3></a>
+		<a name="task26"><h3>Задача 26</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 			<fraction>
 				<numerator>ad+bc</numerator>
@@ -2218,7 +1900,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task34"><h3>Задача 34</h3></a>
+		<a name="task27"><h3>Задача 27</h3></a>
 		<div class="task_desc">Вычислить результат по формуле
 		<formula>
 			<sqrt><val>
@@ -2261,7 +1943,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task35"><h3>Задача 35</h3></a>
+		<a name="task28"><h3>Задача 28</h3></a>
 		<div class="task_desc">Вычислить результат по формуле:
 			<fraction>
 				<numerator>1</numerator>
@@ -2350,7 +2032,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task36"><h3>Задача 36</h3></a>
+		<a name="task29"><h3>Задача 29</h3></a>
 		<div class="task_desc">Вычислить результат по формуле
 			<fraction>
 				<numerator>
@@ -2406,7 +2088,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task37"><h3>Задача 37</h3></a>
+		<a name="task30"><h3>Задача 30</h3></a>
 		<div class="task_desc">Дан рулон материала длиной T метров. Для изготовления изделия требуется L сантиметров материала. Сколько изделий получится изготовить? Сколько материала останется?</div>
 		<table class="check_values">
 			<tr>
@@ -2470,6 +2152,10 @@ r=p;</td>
 	</div>
 	<!-- 
 	<div class="task_block">
+	</div>	-->
+	
+	<div class="task_block">
+		<a name="task31"><h3>Задача 31</h3></a>
 		<div class="task_desc">Вычислить значение функции <formula>y=7x<sup>2</sup>-3x+6</formula> при любом значении x.</div>
 		<table class="check_values">
 			<tr>
@@ -2503,10 +2189,10 @@ r=p;</td>
 				<td></td>
 			</tr>
 		</table>
-	</div>	-->
+	</div>
 	
 	<div class="task_block">
-		<a name="task38"><h3>Задача 38</h3></a>
+		<a name="task32"><h3>Задача 32</h3></a>
 		<div class="task_desc">Вычислить значение функции <formula>b=12a<sup>2</sup>+7a-16</formula> при любом значении a;</div>
 		<table class="check_values">
 			<tr>
@@ -2553,7 +2239,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task39"><h3>Задача 39</h3></a>
+		<a name="task33"><h3>Задача 33</h3></a>
 		<div class="task_desc">Считая, что Земля - идеальная сфера с радиусом r=6350 км, определить расстояние до линии горизонта от точки с заданной высотой над Землей.</div>
 		<table class="check_values">
 			<tr>
@@ -2595,7 +2281,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task40"><h3>Задача 40</h3></a>
+		<a name="task34"><h3>Задача 34</h3></a>
 		<div class="task_desc">Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.</div>
 		<table class="check_values">
 			<tr>
@@ -2652,7 +2338,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task41"><h3>Задача 41</h3></a>
+		<a name="task35"><h3>Задача 35</h3></a>
 		<div class="task_desc">Два автомобиля едут навстречу друг другу с постоянными скоростями V<sub>1</sub> и V<sub>2</sub> км/час. Определить, через какое время автомобили встретятся, если расстояние между ними было S км.</div>
 		<table class="check_values">
 			<tr>
@@ -2725,7 +2411,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task42"><h3>Задача 42</h3></a>
+		<a name="task36"><h3>Задача 36</h3></a>
 		<div class="task_desc">
 			Вычислить расстояние между двумя точками A и B с координатами (X<sub>a</sub>, Y<sub>a</sub>) и (X<sub>b</sub>, Y<sub>b</sub>) по формуле <br/>
 			<formula>
@@ -2814,7 +2500,7 @@ r=p;</td>
 	</div>
 	
 	<div class="task_block">
-		<a name="task43"><h3>Задача 43</h3></a>
+		<a name="task37"><h3>Задача 37</h3></a>
 		<div class="task_desc">
 			Смешали V<sub>1</sub> литров воды с температурой T<sub>1</sub> градусов Цельсия с V<sub>2</sub> литрами воды с температурой T<sub>2</sub> градусов Цельсия. Вычислите объем <formula>V=V<sub>1</sub>+V<sub>2</sub></formula> и температуру образовавшейся смеси по формуле
 		</div>
@@ -2915,570 +2601,6 @@ r=p;</td>
 			</tr>
 			<tr>
 				<td>9</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task44"><h3>Задача 44</h3></a>
-		<div class="task_desc">
-			Дан прямоугольник, у которого верхний левый угол находится в точке с экранными координатами (X<sub>1</sub>;Y<sub>1</sub>), высота равна H, ширина равна W. Определить координаты нижнего правого угла. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.
-		</div>
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="4">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
-			</tr>
-			<tr>
-				<th>X<sub>1</sub></th>
-				<th>Y<sub>1</sub></th>
-				<th>H</th>
-				<th>W</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>0</td>
-				<td>0</td>
-				<td>2</td>
-				<td>3</td>
-				<td>(3;2)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>0</td>
-				<td>0</td>
-				<td>1</td>
-				<td>1</td>
-				<td>(1;1)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>219</td>
-				<td>374</td>
-				<td>51</td>
-				<td>96</td>
-				<td>(315;425)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>2</td>
-				<td>2</td>
-				<td>0</td>
-				<td>3</td>
-				<td>Сообщение об ошибке<!-- неправильный ввод (высота 0) --></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>2</td>
-				<td>2</td>
-				<td>-1</td>
-				<td>3</td>
-				<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная высота) --></td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>2</td>
-				<td>2</td>
-				<td>3</td>
-				<td>0</td>
-				<td>Сообщение об ошибке<!-- неправильный ввод(ширина 0) --></td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>2</td>
-				<td>2</td>
-				<td>3</td>
-				<td>-1</td>
-				<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная ширина) --></td>
-			</tr>
-			<tr>
-				<td>10</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>11</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task45"><h3>Задача 45</h3></a>
-		<div class="task_desc">На экране с шириной 800 и высотой 600 подготовлено пространство для графика функции. Центр осей координат (точка с математическими координатами (0;0)) располагается в точке с экранными координатами (X<sub>эц</sub>;Y<sub>эц</sub>). Требуется найти экранные координаты точки, математические координаты которой (X<sub>мт</sub>;Y<sub>мт</sub>). Масштаб экранных координат к математическим 1:1. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.</div>
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="4">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
-			</tr>
-			<tr>
-				<th>X<sub>эц</sub></th>
-				<th>Y<sub>эц</sub></th>
-				<th>X<sub>мт</sub></th>
-				<th>Y<sub>мт</sub></th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>400</td>
-				<td>500</td>
-				<td>60</td>
-				<td>70</td>
-				<td>(460;430)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>11</td>
-				<td>13</td>
-				<td>713</td>
-				<td>-86</td>
-				<td>(724;99)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>691</td>
-				<td>584</td>
-				<td>-462</td>
-				<td>359</td>
-				<td>(229;225)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task46"><h3>Задача 46</h3></a>
-		<div class="task_desc">Найти координаты вершин равнобедренного треугольника. Пользователь вводит координаты одной точки (x;y), длину основания (A), длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис. 1). Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
-			<div style="text-align:center"><svg width="100" height="100">
-				<line x1="10" y1="10" x2="90" y2="10" stroke="black" stroke-width="1"/>
-				<line x1="10" y1="10" x2="50" y2="90" stroke="black" stroke-width="1"/>
-				<line x1="90" y1="10" x2="50" y2="90" stroke="black" stroke-width="1"/>
-			</svg></div>
-			<div style="text-align:center">Рисунок 1. Расположение треугольника</div>
-			</div>
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="4">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
-			</tr>
-			<tr>
-				<td>x</td>
-				<td>y</td>
-				<td>A</td>
-				<td>L</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>5</td>
-				<td>5</td>
-				<td>500</td>
-				<td>300</td>
-				<td>(5; 5) (505; 5) (255; 165.8312)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>300</td>
-				<td>20</td>
-				<td>20</td>
-				<td>200</td>
-				<td>(300; 20) (320; 20) (310; 199.7498)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>100</td>
-				<td>200</td>
-				<td>200</td>
-				<td>200</td>
-				<td>(100; 200) (300; 200) (200; 173.2050)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>200</td>
-				<td>640</td>
-				<td>120</td>
-				<td>240</td>
-				<td>(200; 640) (320; 640) (260; 232.3790)</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>807</td>
-				<td>120</td>
-				<td>200</td>
-				<td>300</td>
-				<td>(807; 120) (1007; 120) (907; 282.8427)</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>25</td>
-				<td>25</td>
-				<td>0</td>
-				<td>110</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>100</td>
-				<td>102</td>
-				<td>200</td>
-				<td>0</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>10</td>
-				<td>600</td>
-				<td>100</td>
-				<td>210</td>
-				<td>100</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>11</td>
-				<td>200</td>
-				<td>200</td>
-				<td>200</td>
-				<td>100</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>12</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>13</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task47"><h3>Задача 47</h3></a>
-		<div class="task_desc">Даны координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>). <strike>Нужно построить вектор, начинающийся в точке (0;0), коллинеарный и сонаправленный вектору AB, который будет иметь такую же длину.</strike> Нужно перенести вектор в начало координат, сохранив направление. Вывести координаты ненулевого конца полученного вектора. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
-		</div>
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="4">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
-			</tr>
-			<tr>
-				<th>X<sub>1</sub></th>
-				<th>Y<sub>1</sub></th>
-				<th>X<sub>2</sub></th>
-				<th>Y<sub>2</sub></th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>0</td>
-				<td>0</td>
-				<td>20</td>
-				<td>30</td>
-				<td>(20;30)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>50</td>
-				<td>50</td>
-				<td>50</td>
-				<td>100</td>
-				<td>(0;50)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>40</td>
-				<td>30</td>
-				<td>60</td>
-				<td>30</td>
-				<td>(20;0)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>75</td>
-				<td>25</td>
-				<td>65</td>
-				<td>35</td>
-				<td>(-10;10)</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>65</td>
-				<td>0</td>
-				<td>75</td>
-				<td>0</td>
-				<td>(10;0)</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>0</td>
-				<td>65</td>
-				<td>0</td>
-				<td>75</td>
-				<td>(0;10)</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>0</td>
-				<td>0</td>
-				<td>80</td>
-				<td>90</td>
-				<td>(80;90)</td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>10</td>
-				<td>-10</td>
-				<td>0</td>
-				<td>15</td>
-				<td>70</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>11</td>
-				<td>200</td>
-				<td>-300</td>
-				<td>40</td>
-				<td>80</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>12</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>13</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class="task_block">
-		<a name="task48"><h3>Задача 48</h3></a>
-		<div class="task_desc">Даны экранные координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>), а также угол &alpha; в градусах. Найти координаты вектора, который получится в результате поворота вектора AB на угол &alpha; вокруг точки A. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>. Систему координат считать правосторонней с отрицательным направлением вращения по часовой стрелке.</div>
-		<!--x'=x*cos(a)+y*sin(a)-->
-		<!--y'=-x*sin(a)+y*cos(a)-->
-		<table class="check_values">
-			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="5">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
-			</tr>
-			<tr>
-				<th>X<sub>1</sub></th>
-				<th>Y<sub>1</sub></th>
-				<th>X<sub>2</sub></th>
-				<th>Y<sub>2</sub></th>
-				<th>&alpha;</th>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>0</td>
-				<td>0</td>
-				<td>20</td>
-				<td>30</td>
-				<td>30</td>
-				<td>(0;0) (32.32.05;15.9807)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>50</td>
-				<td>50</td>
-				<td>50</td>
-				<td>100</td>
-				<td>270</td>
-				<td>(50;50) (0;50)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>40</td>
-				<td>30</td>
-				<td>60</td>
-				<td>30</td>
-				<td>-45</td>
-				<td>(40;30) (54.1421;44.1421)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>75</td>
-				<td>25</td>
-				<td>65</td>
-				<td>35</td>
-				<td>180</td>
-				<td>(75;25) (85;15)</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>65</td>
-				<td>0</td>
-				<td>75</td>
-				<td>0</td>
-				<td>45</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>0</td>
-				<td>65</td>
-				<td>0</td>
-				<td>75</td>
-				<td>-45</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>0</td>
-				<td>0</td>
-				<td>80</td>
-				<td>90</td>
-				<td>180</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>10</td>
-				<td>-10</td>
-				<td>0</td>
-				<td>15</td>
-				<td>70</td>
-				<td>-90</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>11</td>
-				<td>200</td>
-				<td>-300</td>
-				<td>40</td>
-				<td>80</td>
-				<td>45</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>12</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>13</td>
 				<td></td>
 				<td></td>
 				<td></td>
