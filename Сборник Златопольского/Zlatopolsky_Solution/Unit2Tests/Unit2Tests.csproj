@@ -6,7 +6,7 @@
     <ProjectGuid>{CD44BAFA-D913-4461-B28B-2F8853D62B7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Unit2Test</RootNamespace>
+    <RootNamespace>Unit2Tests</RootNamespace>
     <AssemblyName>Unit2Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -56,6 +56,7 @@
     <Compile Include="ConsoleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task24to33Tests.cs" />
+    <Compile Include="Task39Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Unit2\Unit2.csproj">

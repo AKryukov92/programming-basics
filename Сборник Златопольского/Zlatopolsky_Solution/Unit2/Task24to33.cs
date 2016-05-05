@@ -7,7 +7,6 @@ namespace Unit2
 {
     public class Task24to33
     {
-
         public void task25()
         {
             string temp;
@@ -100,6 +99,30 @@ namespace Unit2
             n = n * 10;
             n = n + x / 100;
             Console.WriteLine(n);
+        }
+
+        public void task27()
+        {
+            string temp;
+            temp = Console.ReadLine();
+            int n;
+            int x;
+            n = int.Parse(temp);
+            if (n < 100)
+            {
+                Console.WriteLine("Введенное число не подходит для решения задачи.");
+                return;
+            }
+            if (n >= 1000)
+            {
+                Console.WriteLine("Введенное число не подходит для решения задачи.");
+                return;
+            }
+            int step1, step2;
+            step1 = n % 10 + n / 100 * 10;
+            step2 = n / 10 % 10 * 100;
+            x = step1 + step2;
+            Console.WriteLine(x);
         }
 
         public void task27rev()

@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Unit2;
-using Unit2Tests;
 
-namespace Unit2Test
+namespace Unit2Tests
 {
     [TestClass()]
     public class Task24to33Tests : ConsoleTest
@@ -47,6 +46,15 @@ namespace Unit2Test
             Begin();
             obj.task26rev();
             Assert.AreEqual("791", Output);
+        }
+
+        [TestMethod()]
+        public void task27Test()
+        {
+            FakeInput("853");
+            Begin();
+            obj.task27();
+            Assert.AreEqual("937", Output);
         }
 
         [TestMethod()]
