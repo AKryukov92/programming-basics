@@ -47,18 +47,13 @@ sqrt:before {
 	display:block;
 	padding:7px;
 }
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-}
 .task_block {
-	width:75%;
+	width:80%;
 	page-break-inside:avoid;
 	display:block;
+}
+.quiz_block {
+	width:80%;
 }
 .task_desc {
 	margin:5px;
@@ -74,6 +69,7 @@ sqrt:before {
 	font-family:monospace;
 	white-space:pre;
 	text-align:left;
+	padding:10px;
 }
 formula {
 	font-weight:bold;
@@ -92,6 +88,20 @@ numerator {
 }
 denominator {
 	display:block;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
 }
 		</style>
 	</head>

@@ -47,18 +47,13 @@ sqrt:before {
 	display:block;
 	padding:7px;
 }
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-}
 .task_block {
-	width:75%;
+	width:80%;
 	page-break-inside:avoid;
 	display:block;
+}
+.quiz_block {
+	width:80%;
 }
 .task_desc {
 	margin:5px;
@@ -67,13 +62,14 @@ sqrt:before {
 	width:200px;
 }
 .lab_nav {
-	width:75%;
+	width:80%;
 	overflow:auto;
 }
 .check_values .preformatted {
 	font-family:monospace;
 	white-space:pre;
 	text-align:left;
+	padding:10px;
 }
 formula {
 	font-weight:bold;
@@ -92,6 +88,20 @@ numerator {
 }
 denominator {
 	display:block;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
 }
 		</style>
 	</head>
@@ -120,6 +130,7 @@ denominator {
 		<li><a href="#writing1">П 1</a></li>
 		<li><a href="#writing2">П 2</a></li>
 		<li><a href="#task1">№ 1</a></li>
+		<li><a href="#writing3">П 3</a></li>
 		<li><a href="#task2">№ 2</a></li>
 		<li><a href="#task3">№ 3</a></li>
 		<li><a href="#task4">№ 4</a></li>
@@ -130,10 +141,11 @@ denominator {
 		<!-- <li><a href="#task">№ </a></li> -->
 	</ul>
 	</div>
-	<div class="task_block">
+	
+	<div class="quiz_block">
 		<a name="quiz"><h3>Контрольные вопросы</h3></a>
-		<ol style="width:80%">
-			<li>Что делает компьютер для того, чтобы превратить исходный код в программу и запустить ее?</li>
+		<ol>
+			<li>Перечислите действия компьютера необходимые, чтобы превратить исходный код в программу и запустить ее?</li>
 			<li>Как оформляется команда вывода на экран?</li>
 			<li>Что происходит, если компьютер встречает некорректно оформленную команду?</li>
 			<li>Как нужно оформлять команду вывода, чтобы информация выводилась на экран с новой строки?</li>
@@ -290,16 +302,7 @@ str = input;</td>
 &quot;Кабы я была царица, —
 Третья молвила сестрица, —
 Я б для батюшки-царя
-Родила богатыря&quot;.
-
-Только вымолвить успела,
-Дверь тихонько заскрыпела,
-И в светлицу входит царь,
-Стороны той государь.
-Во всё время разговора
-Он стоял позадь забора;
-Речь последней по всему
-Полюбилася ему.</td>
+Родила богатыря&quot;.</td>
 			</tr>
 			<tr>
 				<td>6</td>
@@ -317,6 +320,140 @@ str = input;</td>
     &lt;/svg&gt;
 &lt;/body&gt;
 &lt;/html&gt;</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="task_block">
+		<a name="writing3"><h3>Письменное задание 3</h3></a>
+		<div class="task_desc">Отметить галочкой правильно оформленные варианты объявления переменных. Для неверных вариантов названий указать причину и предложить способ исправления.</div>
+		<table class="check_values">
+			<tr>
+				<th>Номер</th>
+				<th style="width:120px;">Выражение</th>
+				<th style="width:40px;">Метка</th>
+				<th>Причина</th>
+				<th style="width:120px;">Исправленный вариант</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td class="preformatted">int a;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td class="preformatted">int c</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td class="preformatted">double x;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td class="preformatted">string temp</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td class="preformatted">intb;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td class="preformatted">double x, y;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td class="preformatted">string left; right;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td class="preformatted">double v1, v2, v3;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td class="preformatted">double a;
+int a;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td class="preformatted">int 3p;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td class="preformatted">double _q;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td class="preformatted">string first_name;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td class="preformatted">int a - b;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td class="preformatted">double 0 &lt; h &lt; 15;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td class="preformatted">d;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td class="preformatted">int i = 0;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td class="preformatted">int a b c d;</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</table>
 	</div>
@@ -552,16 +689,6 @@ str = input;</td>
 			</tr>
 			<tr>
 				<td>6</td>
-				<td>нечисло</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>8</td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -601,21 +728,6 @@ str = input;</td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td>13,17</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>нечисло</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>8</td>
 				<td></td>
 				<td></td>
 			</tr>

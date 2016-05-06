@@ -47,18 +47,13 @@ sqrt:before {
 	display:block;
 	padding:7px;
 }
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-}
 .task_block {
-	width:75%;
+	width:80%;
 	page-break-inside:avoid;
 	display:block;
+}
+.quiz_block {
+	width:80%;
 }
 .task_desc {
 	margin:5px;
@@ -74,6 +69,7 @@ sqrt:before {
 	font-family:monospace;
 	white-space:pre;
 	text-align:left;
+	padding:10px;
 }
 formula {
 	font-weight:bold;
@@ -92,6 +88,20 @@ numerator {
 }
 denominator {
 	display:block;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
 }
 		</style>
 	</head>
@@ -162,9 +172,9 @@ denominator {
 		<li><a href="#task37">№ 37</a></li>
 	</ul>
 	</div>
-	<div class="task_block">
+	<div class="quiz_block">
 		<a name="quiz"><h3>Контрольные вопросы</h3></a>
-		<ol style="width:80%">
+		<ol>
 			<li>Какие базовые типы переменных существуют в языке программирования?</li>
 			<li>Как оформляется объявление переменной?</li>
 			<li>Как оформляется операция присваивания? Что происходит при ее выполнении?</li>
@@ -1057,34 +1067,34 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task13"><h3>Задача 13</h3></a>
-		<div class="task_desc">Вычислить результат по формуле <formula>sin(&alpha;)cos(&beta;)+cos(&alpha;)sin(&beta;)</formula></div>
+		<div class="task_desc">Дан рулон материала длиной T метров. Для изготовления изделия требуется L сантиметров материала. Сколько изделий получится изготовить? Сколько материала останется?</div>
 		<table class="check_values">
 			<tr>
 				<th rowspan="2">Номер теста</th>
 				<th colspan="2">Вводимые данные</th>
-				<th rowspan="2">Результат (R)</th>
+				<th rowspan="2">Результат</th>
 			</tr>
 			<tr>
-				<th>a</th>
-				<th>b</th>
+				<th>T</th>
+				<th>L</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>90</td>
-				<td>90</td>
-				<td>0,0000</td>
+				<td>400</td>
+				<td>17</td>
+				<td>2352 шт и 16 см</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>90</td>
-				<td>0</td>
-				<td>1,0000</td>
+				<td>103</td>
+				<td>29</td>
+				<td>355 шт и 5 см</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td>7559</td>
-				<td>7549</td>
-				<td>-0,2079</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>4</td>
@@ -1094,12 +1104,24 @@ r=p;</td>
 			</tr>
 			<tr>
 				<td>5</td>
+				<td>300</td>
+				<td>-70</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>-800</td>
+				<td>20</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
 				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td>8</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -1173,50 +1195,55 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task15"><h3>Задача 15</h3></a>
-		<div class="task_desc">Вычислить результат по формуле <formula>3sin(2&alpha;)cos(3&beta;)</formula></div>
+		<div class="task_desc">Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.</div>
 		<table class="check_values">
 			<tr>
-				<th rowspan="2">Номер теста</th>
-				<th colspan="2">Вводимые данные</th>
-				<th rowspan="2">Результат (R)</th>
-			</tr>
-			<tr>
-				<th>A</th>
-				<th>B</th>
+				<th>Номер теста</th>
+				<th>Вводимые данные</th>
+				<th>Результат</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>45</td>
-				<td>90</td>
-				<td>0,0000</td>
+				<td>0</td>
+				<td>32</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>200</td>
-				<td>45</td>
-				<td>-1,3636</td>
+				<td>20</td>
+				<td>68</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td>7523</td>
-				<td>7517</td>
-				<td>1,8148</td>
+				<td>40</td>
+				<td>104</td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>-273,15</td>
+				<td>-459,67</td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>6</td>
 				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>-300</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>9</td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -1283,49 +1310,70 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task17"><h3>Задача 17</h3></a>
-		<div class="task_desc">Вычислить результат по формуле <formula><sqrt><val>x<sub>2</sub><sup>2</sup>+x<sub>1</sub><sup>2</sup></val></sqrt></formula></div>
+		<div class="task_desc">Два автомобиля едут навстречу друг другу с постоянными скоростями V<sub>1</sub> и V<sub>2</sub> км/час. Определить, через какое время автомобили встретятся, если расстояние между ними было S км.</div>
 		<table class="check_values">
 			<tr>
 				<th rowspan="2">Номер теста</th>
-				<th colspan="2">Вводимые данные</th>
-				<th rowspan="2">Результат (R)</th>
+				<th colspan="3">Вводимые данные</th>
+				<th rowspan="2">Результат (T)</th>
 			</tr>
 			<tr>
-				<th>x1</th>
-				<th>x2</th>
+				<th>V<sub>1</sub></th>
+				<th>V<sub>2</sub></th>
+				<th>S</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>7459</td>
-				<td>7457</td>
-				<td>10547,2048</td>
+				<td>31</td>
+				<td>47</td>
+				<td>6833</td>
+				<td>87,6026</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>-3</td>
-				<td>-7</td>
-				<td>7,6158</td>
+				<td>0</td>
+				<td>7</td>
+				<td>6829</td>
+				<td>975,5714</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0,0000</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>4</td>
 				<td></td>
 				<td></td>
 				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>5</td>
+				<td>-13</td>
+				<td>11</td>
+				<td>200</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>67</td>
+				<td>-79</td>
+				<td>400</td>
+				<td>Сообщение об ошибке</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -2089,34 +2137,34 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task30"><h3>Задача 30</h3></a>
-		<div class="task_desc">Дан рулон материала длиной T метров. Для изготовления изделия требуется L сантиметров материала. Сколько изделий получится изготовить? Сколько материала останется?</div>
+		<div class="task_desc">Вычислить результат по формуле <formula>sin(&alpha;)cos(&beta;)+cos(&alpha;)sin(&beta;)</formula></div>
 		<table class="check_values">
 			<tr>
 				<th rowspan="2">Номер теста</th>
 				<th colspan="2">Вводимые данные</th>
-				<th rowspan="2">Результат</th>
+				<th rowspan="2">Результат (R)</th>
 			</tr>
 			<tr>
-				<th>T</th>
-				<th>L</th>
+				<th>a</th>
+				<th>b</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>400</td>
-				<td>17</td>
-				<td>2352 шт и 16 см</td>
+				<td>90</td>
+				<td>90</td>
+				<td>0,0000</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>103</td>
-				<td>29</td>
-				<td>355 шт и 5 см</td>
+				<td>90</td>
+				<td>0</td>
+				<td>1,0000</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>7559</td>
+				<td>7549</td>
+				<td>-0,2079</td>
 			</tr>
 			<tr>
 				<td>4</td>
@@ -2126,33 +2174,18 @@ r=p;</td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td>300</td>
-				<td>-70</td>
-				<td>Сообщение об ошибке</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>6</td>
-				<td>-800</td>
-				<td>20</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>8</td>
 				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 		</table>
 	</div>
-	<!-- 
-	<div class="task_block">
-	</div>	-->
 	
 	<div class="task_block">
 		<a name="task31"><h3>Задача 31</h3></a>
@@ -2282,55 +2315,50 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task34"><h3>Задача 34</h3></a>
-		<div class="task_desc">Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.</div>
+		<div class="task_desc">Вычислить результат по формуле <formula>3sin(2&alpha;)cos(3&beta;)</formula></div>
 		<table class="check_values">
 			<tr>
-				<th>Номер теста</th>
-				<th>Вводимые данные</th>
-				<th>Результат</th>
+				<th rowspan="2">Номер теста</th>
+				<th colspan="2">Вводимые данные</th>
+				<th rowspan="2">Результат (R)</th>
+			</tr>
+			<tr>
+				<th>A</th>
+				<th>B</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>0</td>
-				<td>32</td>
+				<td>45</td>
+				<td>90</td>
+				<td>0,0000</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>20</td>
-				<td>68</td>
+				<td>200</td>
+				<td>45</td>
+				<td>-1,3636</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td>40</td>
-				<td>104</td>
+				<td>7523</td>
+				<td>7517</td>
+				<td>1,8148</td>
 			</tr>
 			<tr>
 				<td>4</td>
-				<td>-273,15</td>
-				<td>-459,67</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>5</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>6</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>-300</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>9</td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -2339,70 +2367,49 @@ r=p;</td>
 	
 	<div class="task_block">
 		<a name="task35"><h3>Задача 35</h3></a>
-		<div class="task_desc">Два автомобиля едут навстречу друг другу с постоянными скоростями V<sub>1</sub> и V<sub>2</sub> км/час. Определить, через какое время автомобили встретятся, если расстояние между ними было S км.</div>
+		<div class="task_desc">Вычислить результат по формуле <formula><sqrt><val>x<sub>2</sub><sup>2</sup>+x<sub>1</sub><sup>2</sup></val></sqrt></formula></div>
 		<table class="check_values">
 			<tr>
 				<th rowspan="2">Номер теста</th>
-				<th colspan="3">Вводимые данные</th>
-				<th rowspan="2">Результат (T)</th>
+				<th colspan="2">Вводимые данные</th>
+				<th rowspan="2">Результат (R)</th>
 			</tr>
 			<tr>
-				<th>V<sub>1</sub></th>
-				<th>V<sub>2</sub></th>
-				<th>S</th>
+				<th>x1</th>
+				<th>x2</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>31</td>
-				<td>47</td>
-				<td>6833</td>
-				<td>87,6026</td>
+				<td>7459</td>
+				<td>7457</td>
+				<td>10547,2048</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>0</td>
-				<td>7</td>
-				<td>6829</td>
-				<td>975,5714</td>
+				<td>-3</td>
+				<td>-7</td>
+				<td>7,6158</td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>0</td>
+				<td>0</td>
+				<td>0,0000</td>
 			</tr>
 			<tr>
 				<td>4</td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td></td>
 			</tr>
 			<tr>
 				<td>5</td>
-				<td>-13</td>
-				<td>11</td>
-				<td>200</td>
-				<td>Сообщение об ошибке</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>6</td>
-				<td>67</td>
-				<td>-79</td>
-				<td>400</td>
-				<td>Сообщение об ошибке</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>

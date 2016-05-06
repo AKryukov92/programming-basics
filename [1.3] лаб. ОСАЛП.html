@@ -47,18 +47,13 @@ sqrt:before {
 	display:block;
 	padding:7px;
 }
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-}
 .task_block {
-	width:75%;
+	width:80%;
 	page-break-inside:avoid;
 	display:block;
+}
+.quiz_block {
+	width:80%;
 }
 .task_desc {
 	margin:5px;
@@ -74,6 +69,7 @@ sqrt:before {
 	font-family:monospace;
 	white-space:pre;
 	text-align:left;
+	padding:10px;
 }
 formula {
 	font-weight:bold;
@@ -92,6 +88,20 @@ numerator {
 }
 denominator {
 	display:block;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
 }
 		</style>
 	</head>
@@ -236,7 +246,7 @@ denominator {
 	
 	<div class="task_block">
 		<a name="writing3"><h3>Письменное задание 3</h3></a>
-		<div class="task_desc">Получить линейную запись следующих выражений</div>
+		<div class="task_desc">Найти число х по описанию.</div>
 		<table class="check_values">
 			<tr>
 				<th>Порядковый номер</th>
@@ -245,7 +255,7 @@ denominator {
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 237. Найти число x.</td>
+				<td>Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 237.</td>
 				<td><!--372--></td>
 			</tr>
 			<tr>
