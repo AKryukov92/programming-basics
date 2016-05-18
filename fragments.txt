@@ -6,6 +6,39 @@
 	
 		<table class="check_values">
 			<tr>
+				<th>Порядковый номер</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	
+		<table class="check_values">
+			<tr>
 				<th>Номер теста</th>
 				<th>Вводимые данные</th>
 				<th>Результат</th>
