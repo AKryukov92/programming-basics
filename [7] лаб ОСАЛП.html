@@ -4,11 +4,28 @@
 		<meta charset="utf-8">
 		<title>6 Двумерные массивы</title>
 		<style>
+.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+	width:calc(80% - 30px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
 .check_values {
 	border-collapse:collapse;
+	width:100%;
 }
 .check_values td, .check_values th {
 	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
 }
 .nav {
 	position:fixed;
@@ -20,6 +37,7 @@
 .nav ul{
 	list-style-type:none;
 	padding:0px;
+	float:left;
 }
 .nav li {
 	margin:2px;
@@ -29,6 +47,48 @@
 	display:block;
 	padding:7px;
 }
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	display:block;
+}
+.quiz_block {
+	width:80%;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
 @media print {
 	.nav {
 		display:none;
@@ -36,38 +96,33 @@
 	.lab_nav {
 		display:none;
 	}
-}
-.task_desc {
-	width:75%;
-	margin:5px;
-}
-.example_image {
-	width:200px;
-}
-.lab_nav {
-	width:75%;
-	overflow:auto;
-}
-.preformatted {
-	font-family:monospace;
-	white-space:pre;
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
 }
 		</style>
 	</head>
 	<body>
 		<a name="heading"/><h1>Алгоритмы работы с двумерными массивами</h1>
-		<div class="lab_nav">
-			Другие темы:
-			<ul>
-				<li><a href="[1] лаб. ОСАЛП.html">Линейные алгоритмы</a></li>
-				<li><a href="[2] лаб. ОСАЛП.html">Условия</a></li>
-				<li><a href="[3] лаб. ОСАЛП.html">Циклы</a></li>
-				<li><a href="[4] лаб ОСАЛП.html">Массивы</a></li>
-				<li><a href="[5] лаб ОСАЛП.html">Чтение файлов</a></li>
-				<li><a href="[6] лаб ОСАЛП.html">Запись в файл</a></li>
-				<li><a href="[7] лаб ОСАЛП.html">Двумерные массивы</a></li>
-			</ul>
-		</div>
+        <div class="lab_nav">
+            Другие темы:
+            <ul>
+                <li><a href="[1.1] лаб. ОСАЛП.html">Линейные алгоритмы: Ввод и вывод информации</a></li>
+                <li><a href="[1.2] лаб. ОСАЛП.html">Линейные алгоритмы: Арифметические операторы и методы</a></li>
+                <li><a href="[1.3] лаб. ОСАЛП.html">Линейные алгоритмы: Работа с цифрами чисел</a></li>
+                <li><a href="[1.4] лаб. ОСАЛП.html">Линейные алгоритмы: Сложные задачи</a></li>
+                <li><a href="[2] лаб. ОСАЛП.html">Условия</a></li>
+                <li><a href="[3] лаб. ОСАЛП.html">Циклы</a></li>
+                <li><a href="[4] лаб ОСАЛП.html">Массивы</a></li>
+				<li><a href="[4.1] лаб. ОСАЛП.html">Строки</a></li>
+                <li><a href="[5] лаб ОСАЛП.html">Чтение файлов</a></li>
+                <li><a href="[6] лаб ОСАЛП.html">Запись в файл</a></li>
+                <li><a href="[7] лаб ОСАЛП.html">Двумерные массивы</a></li>
+            </ul>
+        </div>
 		<div class="nav">
 		<ul>
 			<li><a href="#heading">Начало</a></li>
