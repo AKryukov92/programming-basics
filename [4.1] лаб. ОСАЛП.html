@@ -16,9 +16,21 @@ sqrt val {
 sqrt:before {
 	content:"\221A";
 }
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
 .check_values {
 	border-collapse:collapse;
 	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
 }
 .check_values td, .check_values th {
 	border:1px solid black;
@@ -156,9 +168,9 @@ denominator {
 				<li>Где найти справку по строковым методам?</li>
 			</ol>
 		</div>
-		
+	<div class="section">
 		<div class="task_block">
-			<a name="writing1"><h3>Письменное задание 1</h3></a>
+			<a name="writing1"><h3>Письменное задание</h3></a>
 			<div class="task_desc">Предложить способ исправления для неправильных вариантов строк.</div>
 			<table class="check_values">
 				<tr>
@@ -166,78 +178,78 @@ denominator {
 					<th>Выражение</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td></td>
 					<td class="preformatted">string a = "Три девицы под окном";
 					</td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td></td>
 					<td class="preformatted">string b = "Пряли" поздно вечерком";
 					</td>
 				</tr>
 				<tr>
-					<td>3</td>
+					<td></td>
 					<td class="preformatted">string c = Кабы я "была царица";
 					</td>
 				</tr>
 				<tr>
-					<td>4</td>
+					<td></td>
 					<td class="preformatted">string d = "Говорит\n одна\tдевица, -";
 					</td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td></td>
 					<td class="preformatted">string d = "То \ на весь крещеный мир";
 					</td>
 				</tr>
 				<tr>
-					<td>6</td>
+					<td></td>
 					<td class="preformatted">string d = @"Приготовила б я пир";
 					</td>
 				</tr>
 				<tr>
-					<td>7</td>
+					<td></td>
 					<td class="preformatted">string e = "Кабы я\"была царица\", -";
 					</td>
 				</tr>
 				<tr>
-					<td>8</td>
+					<td></td>
 					<td class="preformatted">string f = @"Говорит \ ее сестрица, -";
 					</td>
 				</tr>
 				<tr>
-					<td>9</td>
+					<td></td>
 					<td class="preformatted">string g = @"То \nна весь бы мир одна";
 					</td>
 				</tr>
 				<tr>
-					<td>10</td>
+					<td></td>
 					<td class="preformatted">string h = "Наткала я полотна
 Кабы я была царица, -";
 </td>
 				</tr>
 				<tr>
-					<td>11</td>
+					<td></td>
 					<td class="preformatted">string i = "\u0422\u0440\u0435\u0442\u044c\u044f молвила сестрица
 					</td>
 				</tr>
 				<tr>
-					<td>12</td>
+					<td></td>
 					<td class="preformatted">String j = new string("Я б для батюшки-царя");
 					</td>
 				</tr>
 				<tr>
-					<td>13</td>
+					<td></td>
 					<td class="preformatted">string x = new string('!',13);
 					</td>
 				</tr>
 				<tr>
-					<td>14</td>
+					<td></td>
 					<td class="preformatted">string y = new string("Конец");
 					</td>
 				</tr>
 				<tr>
-					<td>15</td>
+					<td></td>
 					<td class="preformatted">var s = "Родила богатыря";
 					</td>
 				</tr>
@@ -245,7 +257,7 @@ denominator {
 		</div>
 		
 		<div class="task_block">
-			<a name="writing2"><h3>Письменное задание 2</h3></a>
+			<a name="writing2"><h3>Письменное задание</h3></a>
 			<div class="task_desc">Какое значение будет у переменной <b>index</b> после выполнения кода?</div>
 			<table class="check_values">
 				<tr>
@@ -254,111 +266,107 @@ denominator {
 					<th>Результат</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td></td>
 					<td class="preformatted">string source = "aaaaaBaaaaa";
 int index = source.IndexOf("B");</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td></td>
 					<td class="preformatted">string source = "bbbbbbbbCbbbbbbCbb";
 int index = source.IndexOf("C");</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>3</td>
+					<td></td>
 					<td class="preformatted">string source = "cccccccdccccdcdcdcd";
 int index = source.IndexOf("e");</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>4</td>
+					<td></td>
 					<td class="preformatted">string source = "eeefeeeeeeeefeeee";
 int index = source.IndexOf("f", 5);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td></td>
 					<td class="preformatted">string source = "fffffffgffffffffgf";
 int index = source.IndexOf("g", 10);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>6</td>
+					<td></td>
 					<td class="preformatted">string source = "gghggggggggggggggghgg";
 int index = source.IndexOf("h",7,5);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>7</td>
+					<td></td>
 					<td class="preformatted">string source = "hhhhhhhhhhjhjhhjhhhhhhh";
 int index = source.IndexOf("j", 11, 3);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>8</td>
+					<td></td>
 					<td class="preformatted">string source = "jjjjjjkjjjjjjjjjjjkjjjjjj";
 int index = source.LastIndexOf("k");</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>9</td>
+					<td></td>
 					<td class="preformatted">string source = "kkkkklkkkkkkklkkkkkk";
 int index = source.LastIndexOf("l", 4);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>10</td>
+					<td></td>
 					<td class="preformatted">string source = "llllllmlllmllllllll";
 int index = source.LastIndexOf("m", 8);</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>11</td>
+					<td></td>
 					<td class="preformatted">string source = "mmmmmmnmmmmmmmmommmmmm";
 int index = source.IndexOfAny(new char[] { 'o', 'm' });</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>12</td>
+					<td></td>
 					<td class="preformatted">string source = "nnnnnnnonnnnnnpnnn";
 int index = source.IndexOfAny(new char[] { 'o', 'p' });</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>13</td>
+					<td></td>
 					<td class="preformatted">string source = "oppopopqoopopoopppopop";
 int index = source.IndexOfAny("qrs".ToCharArray());</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>14</td>
+					<td></td>
 					<td class="preformatted">string source = "qqqrqtqqqqrqrqrqqsqqrrrq";
 int index = source.IndexOfAny("ts".ToCharArray());</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>15</td>
+					<td></td>
 					<td class="preformatted">string source = "tttttwtttttttuttttttt";
 int index = source.LastIndexOfAny("uw".ToCharArray());</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>16</td>
+					<td></td>
 					<td class="preformatted">string source = "uwuuuuuuuuuvuuuuvuuuuuuuu";
 int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 					<td></td>
 				</tr>
 			</table>
 		</div>
-		
+	</div>
+	<div class="section">
 		<div class="task_block">
-			<a name="writing"><h3>Письменное задание </h3></a>
-			<div class="task_desc"></div>
-		</div>
-		
-		<div class="task_block">
-			<a name="task"><h3>Задача </h3></a>
+			<a name="task"><h3>Задача</h3></a>
 			<div class="task_desc">Дана фиксированная строчка "abcdefwxyz". Пользователь вводит символ. Определить сколько других символов находится после него.</div>
 			<table class="check_values">
 				<tr>
@@ -367,37 +375,37 @@ int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 					<th>Результат</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td></td>
 					<td>z</td>
 					<td>0</td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td></td>
 					<td>a</td>
 					<td>9</td>
 				</tr>
 				<tr>
-					<td>3</td>
 					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>4</td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
 					<td>g</td>
 					<td>Сообщение об ошибке</td>
 				</tr>
 				<tr>
-					<td>6</td>
+					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>7</td>
+					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
@@ -405,7 +413,7 @@ int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 		</div>
 		
 		<div class="task_block">
-			<a name="task"><h3>Задача </h3></a>
+			<a name="task"><h3>Задача</h3></a>
 			<div class="task_desc">Дана фиксированная строчка "abcdefwxyz". Пользователь вводит два символа. Посчитать количество символов между введенными символами.</div>
 			<table class="check_values">
 				<tr>
@@ -418,49 +426,49 @@ int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 					<th>B</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td></td>
 					<td>a</td>
 					<td>x</td>
 					<td>6</td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td></td>
 					<td>w</td>
 					<td>d</td>
 					<td>2</td>
 				</tr>
 				<tr>
-					<td>3</td>
 					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>4</td>
 					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
 					<td>g</td>
 					<td>z</td>
 					<td>Сообщение об ошибке</td>
 				</tr>
 				<tr>
-					<td>6</td>
+					<td></td>
 					<td>x</td>
 					<td>u</td>
 					<td>Сообщение об ошибке</td>
 				</tr>
 				<tr>
-					<td>7</td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>8</td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -469,7 +477,7 @@ int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 		</div>
 		
 		<div class="task_block">
-			<a name="task"><h3>Задача </h3></a>
+			<a name="task"><h3>Задача</h3></a>
 			<div class="task_desc">Дана фиксированная строчка "abcdefwxyz". Пользователь вводит два символа. Вывести фрагмент текста, который находится между этими символами исключая их.</div>
 			<table class="check_values">
 				<tr>
@@ -482,54 +490,55 @@ int index = source.LastIndexOfAny("wx".ToCharArray());</td>
 					<th>B</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td></td>
 					<td>a</td>
 					<td>z</td>
 					<td>bcdefwxy</td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td></td>
 					<td>c</td>
 					<td>d</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>3</td>
+					<td></td>
 					<td>y</td>
 					<td>d</td>
 					<td>efwx</td>
 				</tr>
 				<tr>
-					<td>4</td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>5</td>
+					<td></td>
 					<td>g</td>
 					<td>z</td>
 					<td>Сообщение об ошибке</td>
 				</tr>
 				<tr>
-					<td>6</td>
+					<td></td>
 					<td>a</td>
 					<td>l</td>
 					<td>Сообщение об ошибке</td>
 				</tr>
 				<tr>
-					<td>7</td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>8</td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
 				</tr>
 			</table>
 		</div>
+	</div>
 	</body>
 </html>

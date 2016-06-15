@@ -16,9 +16,21 @@ sqrt val {
 sqrt:before {
 	content:"\221A";
 }
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
 .check_values {
 	border-collapse:collapse;
 	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
 }
 .check_values td, .check_values th {
 	border:1px solid black;
@@ -155,9 +167,9 @@ denominator {
 			<li>В какую сторону округляется результат при делении целых переменных друг на друга?</li>
 		</ol>
 	</div>
-	
+<div class="section">
 	<div class="task_block">
-		<a name="writing1"><h3>Письменное задание 1</h3></a>
+		<a name="writing1"><h3>Письменное задание</h3></a>
 		<div class="task_desc">Вычислить результат "операции остаток от деления" L на R</div>
 		<table class="check_values">
 			<tr>
@@ -170,37 +182,37 @@ denominator {
 				<th>R</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>7919</td>
 				<td>137</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>7873</td>
 				<td>211</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>3</td>
+				<td></td>
 				<td>3085</td>
 				<td>1489</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>4</td>
+				<td></td>
 				<td>2015</td>
 				<td>4</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td>463</td>
 				<td>10</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>463</td>
 				<td>100</td>
 				<td></td>
@@ -209,7 +221,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="writing2"><h3>Письменное задание 2</h3></a>
+		<a name="writing2"><h3>Письменное задание</h3></a>
 		<div class="task_desc">Найти результат по описанию.</div>
 		<table class="check_values">
 			<tr>
@@ -218,27 +230,27 @@ denominator {
 				<th>Результат</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>Дано число x, равное 197. Из x вычли его последнюю цифру. Результат разделили на 10, а к частному слева приписали последнюю цифру числа x.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>Дано число x, равное 367. В нем зачеркнули первую цифру. Оставшееся число умножили на 10, а произведение сложили с первой цифрой числа x.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>3</td>
+				<td></td>
 				<td>Дано число x, равное 541. В нем зачеркнули вторую цифру. К результату слева приписали вторую цифру числа x.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>4</td>
+				<td></td>
 				<td>Дано число x, равное 317. В нем зачеркнули вторую цифру. К результату справа приписали вторую цифру числа x.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td>Дано число x, равное 607. В нем зачеркнули последнюю цифру. В оставшемся двузначном числе переставили цифры, а затем приписали к ним слева последнюю цифру числа x.</td>
 				<td></td>
 			</tr>
@@ -246,7 +258,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="writing3"><h3>Письменное задание 3</h3></a>
+		<a name="writing3"><h3>Письменное задание</h3></a>
 		<div class="task_desc">Найти число х по описанию.</div>
 		<table class="check_values">
 			<tr>
@@ -255,35 +267,36 @@ denominator {
 				<th>Результат (X)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа x, то получилось число 237.</td>
 				<td><!--372--></td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>В трехзначном числе x зачеркнули первую цифру. Когда оставшееся число умножили на 10, а произведение сложили с первой цифрой числа x, то получилось число 564</td>
 				<td><!--456--></td>
 			</tr>
 			<tr>
-				<td>3</td>
+				<td></td>
 				<td>В трехзначном числе x зачеркнули его вторую цифру. Когда к образованному при этом двузначному числу слева приписали вторую цифру числа x, то получилось число 719.</td>
 				<td><!--179--></td>
 			</tr>
 			<tr>
-				<td>4</td>
+				<td></td>
 				<td>В трехзначном числе x зачеркнули его вторую цифру. Когда к образованному при этом двузначному числу справа приписали вторую цифру числа x, то получилось число 941</td>
 				<td><!--914--></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td>В трехзначном числе x зачеркнули его последнюю цифру. Когда в оставшемся двузначном числе переставили цифры, а затем приписали к ним слева последнюю цифру числа x, то получилось число 769</td>
 				<td><!--967--></td>
 			</tr>
 		</table>
 	</div>
-	
+</div>
+<div class="section">
 	<div class="task_block">
-		<a name="task1"><h3>Задача 1</h3></a>
+		<a name="task1"><h3>Задача</h3></a>
 		<div class="task_desc">Дано двузначное число X. Найти число единиц в нем (C).</div>
 		<table class="check_values">
 			<tr>
@@ -292,52 +305,52 @@ denominator {
 				<th>Результат (C)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>11</td>
 				<td>1</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>23</td>
 				<td>3</td>
 			</tr>
 			<tr>
-				<td>3</td>
+				<td></td>
 				<td>29</td>
 				<td>9</td>
 			</tr>
 			<tr>
-				<td>4</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>100</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td>9</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td>-6</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>9</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>10</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -345,7 +358,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task2"><h3>Задача 2</h3></a>
+		<a name="task2"><h3>Задача</h3></a>
 		<div class="task_desc">Дано двузначное число A. Найти число десятков в нем (D).</div>
 		<table class="check_values">
 			<tr>
@@ -354,52 +367,52 @@ denominator {
 				<th>Результат (D)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>11</td>
 				<td>1</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>23</td>
 				<td>2</td>
 			</tr>
 			<tr>
-				<td>3</td>
+				<td></td>
 				<td>41</td>
 				<td>4</td>
 			</tr>
 			<tr>
-				<td>4</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>100</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td>7</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td>-5</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>9</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>10</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -407,7 +420,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task3"><h3>Задача 3</h3></a>
+		<a name="task3"><h3>Задача</h3></a>
 		<div class="task_desc">Дано двузначное число N. Найти сумму его цифр (S).</div>
 		<table class="check_values">
 			<tr>
@@ -416,42 +429,42 @@ denominator {
 				<th>Результат (S)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>13</td>
 				<td>4</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>53</td>
 				<td>11</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>151</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>3</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -459,7 +472,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task4"><h3>Задача 4</h3></a>
+		<a name="task4"><h3>Задача</h3></a>
 		<div class="task_desc">
 			Дано двузначное число AB. Получить число BA, образованное при перестановке его цифр.</div>
 		<table class="check_values">
@@ -469,42 +482,42 @@ denominator {
 				<th>Результат (BA)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>37</td>
 				<td>73</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>59</td>
 				<td>95</td>
 			</tr>
 			<tr>
-				<td>4</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>5</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>0</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td>113</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>9</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -512,7 +525,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task5"><h3>Задача 5</h3></a>
+		<a name="task5"><h3>Задача</h3></a>
 		<div>Дано трехзначное число P. Найти число десятков (Q) в нем.</div>
 		<table class="check_values">
 			<tr>
@@ -521,42 +534,42 @@ denominator {
 				<th>Результат (Q)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>439</td>
 				<td>3</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>809</td>
 				<td>0</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>99</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1879</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -564,7 +577,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task6"><h3>Задача 6</h3></a>
+		<a name="task6"><h3>Задача</h3></a>
 		<div class="task_desc">
 			Дано трехзначное число K. Найти сумму его цифр (S).
 		</div>
@@ -575,42 +588,42 @@ denominator {
 			<th>Результат (S)</th>
 		</tr>
 		<tr>
-			<td>1</td>
+			<td></td>
 			<td>347</td>
 			<td>14</td>
 		</tr>
 		<tr>
-			<td>2</td>
+			<td></td>
 			<td>521</td>
 			<td>8</td>
 		</tr>
 		<tr>
-			<td>3</td>
 			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>4</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
 			<td>61</td>
 			<td>Сообщение об ошибке</td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td></td>
 			<td>1021</td>
 			<td>Сообщение об ошибке</td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -618,7 +631,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task7"><h3>Задача 7</h3></a>
+		<a name="task7"><h3>Задача</h3></a>
 		<div class="task_desc">
 			Дано трехзначное число OPK. Найти число KPO, образованное при перестановке его цифр.
 		</div>
@@ -629,42 +642,42 @@ denominator {
 			<th>Результат (KPO)</th>
 		</tr>
 		<tr>
-			<td>1</td>
+			<td></td>
 			<td>643</td>
 			<td>346</td>
 		</tr>
 		<tr>
-			<td>2</td>
+			<td></td>
 			<td>797</td>
 			<td>797</td>
 		</tr>
 		<tr>
-			<td>3</td>
 			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>4</td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
 			<td>97</td>
 			<td>Сообщение об ошибке</td>
 		</tr>
 		<tr>
-			<td>6</td>
+			<td></td>
 			<td>1103</td>
 			<td>Сообщение об ошибке</td>
 		</tr>
 		<tr>
-			<td>7</td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>8</td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -672,7 +685,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task8"><h3>Задача 8</h3></a>
+		<a name="task8"><h3>Задача</h3></a>
 		<div class="task_desc">Число X вводится с клавиатуры. Из X вычли его последнюю цифру. Результат разделили на 10, а к частному слева приписали последнюю цифру числа X. Найти результат N.</div>
 		<table class="check_values">
 			<tr>
@@ -681,42 +694,42 @@ denominator {
 				<th>Результат (N)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>197</td>
 				<td>719</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>113</td>
 				<td>311</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>83</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1303</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -724,7 +737,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task9"><h3>Задача 9</h3></a>
+		<a name="task9"><h3>Задача</h3></a>
 		<div class="task_desc">Из трехзначного числа X вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числа X, то получилось число N. По данному N найти число X.</div>
 		<table class="check_values">
 			<tr>
@@ -733,42 +746,42 @@ denominator {
 				<th>Результат (X)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>719</td>
 				<td>197</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>311</td>
 				<td>113</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>79</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1259</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -776,7 +789,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task10"><h3>Задача 10</h3></a>
+		<a name="task10"><h3>Задача</h3></a>
 		<div class="task_desc">
 			Число X вводится с клавиатуры. В нем зачеркнули первую цифру. Оставшееся число умножили на 10, а произведение сложили с первой цифрой числа X.
 		</div>
@@ -787,42 +800,42 @@ denominator {
 				<th>Результат (N)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>791</td>
 				<td>179</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>587</td>
 				<td>758</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>97</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1217</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -830,7 +843,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task11"><h3>Задача 11</h3></a>
+		<a name="task11"><h3>Задача</h3></a>
 		<div class="task_desc">
 			В числе X зачеркнули первую цифру. Оставшееся число умножили на 10. Когда произведение сложили с первой цифрой числа X, то получилось число N. По данному N найти число X.
 		</div>
@@ -841,42 +854,42 @@ denominator {
 				<th>Результат (X)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>127</td>
 				<td>271</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>293</td>
 				<td>932</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>10</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1051</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -884,7 +897,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task12"><h3>Задача 12</h3></a>
+		<a name="task12"><h3>Задача</h3></a>
 		<div class="task_desc">
 			Число X вводится с клавиатуры. В нем зачеркнули вторую цифру. К результату слева приписали вторую цифру числа X.
 		</div>
@@ -895,42 +908,42 @@ denominator {
 				<th>Результат (N)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>541</td>
 				<td>451</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>739</td>
 				<td>379</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>0</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>1447</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
@@ -938,7 +951,7 @@ denominator {
 	</div>
 	
 	<div class="task_block">
-		<a name="task13"><h3>Задача 13</h3></a>
+		<a name="task13"><h3>Задача</h3></a>
 		<div class="task_desc">
 			В числе X зачеркнули вторую цифру. Когда к результату слева приписали вторую цифру числа X, то получилось число N. По данному N найти число X.
 		</div>
@@ -949,46 +962,47 @@ denominator {
 				<th>Результат (X)</th>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td></td>
 				<td>397</td>
 				<td>937</td>
 			</tr>
 			<tr>
-				<td>2</td>
+				<td></td>
 				<td>853</td>
 				<td>583</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>4</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td>1381</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td>15</td>
 				<td>Сообщение об ошибке</td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>8</td>
+				<td></td>
 				<td></td>
 				<td></td>
 			</tr>
 		</table>
 	</div>
+</div>
 	</body>
 </html>

@@ -16,9 +16,21 @@ sqrt val {
 sqrt:before {
     content:"\221A";
 }
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
 .check_values {
-    border-collapse:collapse;
-    width:100%;
+	border-collapse:collapse;
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
 }
 .check_values td, .check_values th {
     border:1px solid black;
@@ -185,9 +197,9 @@ denominator {
         </ul></p>
         </div>
         </div>
-        
+	<div class="section">
         <div class="task_block">
-        <a name="task1"><h3>Задача 1</h3></a>
+        <a name="task1"><h3>Задача</h3></a>
         <div class="task_desc">Написать программу для построения кругов в формате SVG. Пользователь вводит координаты центра круга (cx, cy), его радиус (r) и толщину обводки (stroke-width). Цвет круга – желтый, цвет обводки – зеленый. Если круг не видно на рисунке или видно частично, то нужно вывести сообщение об ошибке.</div>
         <table class="check_values">
             <tr>
@@ -202,7 +214,7 @@ denominator {
                 <th>stroke-<br/>width</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td></td>
                 <td>0</td>
                 <td>0</td>
                 <td>20</td>
@@ -210,7 +222,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>2</td>
+                <td></td>
                 <td>400</td>
                 <td>300</td>
                 <td>200</td>
@@ -218,7 +230,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task1test2.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
                 <td>600</td>
                 <td>400</td>
                 <td>60</td>
@@ -226,7 +238,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task1test3.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>4</td>
+                <td></td>
                 <td>254</td>
                 <td>356</td>
                 <td>100</td>
@@ -234,7 +246,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task1test5.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>5</td>
+                <td></td>
                 <td>400</td>
                 <td>300</td>
                 <td>50</td>
@@ -242,7 +254,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task1test6.png" class="example_image"/></td>
             </tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -250,7 +262,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>7</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -258,7 +270,7 @@ denominator {
 				<td></td>
 			</tr>
             <tr>
-                <td>8</td>
+                <td></td>
                 <td>300</td>
                 <td>300</td>
                 <td>0</td>
@@ -266,7 +278,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td></td>
                 <td>100</td>
                 <td>100</td>
                 <td>150</td>
@@ -274,7 +286,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td></td>
                 <td>300</td>
                 <td>250</td>
                 <td>80</td>
@@ -282,7 +294,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td></td>
                 <td>600</td>
                 <td>800</td>
                 <td>50</td>
@@ -290,7 +302,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>12</td>
+                <td></td>
                 <td>900</td>
                 <td>200</td>
                 <td>51</td>
@@ -298,7 +310,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
 			<tr>
-				<td>13</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -306,7 +318,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>14</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -339,7 +351,7 @@ denominator {
         </div>
         
         <div class="task_block">
-        <a name="task2"><h3>Задача 2</h3></a>
+        <a name="task2"><h3>Задача</h3></a>
         <div class="task_desc">Написать программу для построения красного прямоугольника с синей обводкой, толщиной 2 пикселя. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника. Если прямоугольник получается невидимым, то вывести сообщение об ошибке.</div>
         <table class="check_values">
             <tr>
@@ -354,7 +366,7 @@ denominator {
                 <th>height</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td></td>
                 <td>400</td>
                 <td>300</td>
                 <td>250</td>
@@ -362,7 +374,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task2test1.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>2</td>
+                <td></td>
                 <td>135</td>
                 <td>100</td>
                 <td>350</td>
@@ -370,7 +382,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task2test3.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
                 <td>400</td>
                 <td>100</td>
                 <td>200</td>
@@ -378,7 +390,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task2test4.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>4</td>
+                <td></td>
                 <td>200</td>
                 <td>200</td>
                 <td>1</td>
@@ -386,7 +398,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task2test6.png" class="example_image"/></td>
             </tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -394,7 +406,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>6</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -402,7 +414,7 @@ denominator {
 				<td></td>
 			</tr>
             <tr>
-                <td>7</td>
+                <td></td>
                 <td>120</td>
                 <td>120</td>
                 <td>0</td>
@@ -410,7 +422,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td></td>
                 <td>200</td>
                 <td>200</td>
                 <td>100</td>
@@ -418,7 +430,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td></td>
                 <td>400</td>
                 <td>300</td>
                 <td>420</td>
@@ -426,7 +438,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td></td>
                 <td>1200</td>
                 <td>600</td>
                 <td>50</td>
@@ -434,7 +446,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td></td>
                 <td>601</td>
                 <td>601</td>
                 <td>51</td>
@@ -442,7 +454,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
 			<tr>
-				<td>12</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -450,7 +462,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>13</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -461,7 +473,7 @@ denominator {
         </div>
         
         <div class="task_block">
-        <a name="task3"><h3>Задача 3</h3></a>
+        <a name="task3"><h3>Задача</h3></a>
         <div class="task_desc"><p>Написать программу для построения равнобедренного треугольника при помощи синих линий. Пользователь вводит координаты одной точки (x,y), длину основания (A) и длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис.1).</p>
         <p><img src="6 ОСАЛП/task3example.png" class="example_image"/></p></div>
         <table class="check_values">
@@ -477,7 +489,7 @@ denominator {
                 <th>L</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td></td>
                 <td>5</td>
                 <td>5</td>
                 <td>500</td>
@@ -485,7 +497,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task3test1.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>2</td>
+                <td></td>
                 <td>300</td>
                 <td>20</td>
                 <td>20</td>
@@ -493,7 +505,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task3test1.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
                 <td>100</td>
                 <td>200</td>
                 <td>200</td>
@@ -501,7 +513,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task3test5.png" class="example_image"/></td>
             </tr>
 			<tr>
-				<td>4</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -509,7 +521,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -517,7 +529,7 @@ denominator {
 				<td></td>
 			</tr>
             <tr>
-                <td>6</td>
+                <td></td>
                 <td>25</td>
                 <td>25</td>
                 <td>0</td>
@@ -525,7 +537,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td></td>
                 <td>100</td>
                 <td>102</td>
                 <td>200</td>
@@ -533,7 +545,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td></td>
                 <td>600</td>
                 <td>100</td>
                 <td>210</td>
@@ -541,7 +553,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td></td>
                 <td>200</td>
                 <td>200</td>
                 <td>200</td>
@@ -549,7 +561,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td></td>
                 <td>200</td>
                 <td>640</td>
                 <td>120</td>
@@ -557,7 +569,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td></td>
                 <td>807</td>
                 <td>120</td>
                 <td>200</td>
@@ -565,7 +577,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
 			<tr>
-				<td>12</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -573,7 +585,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>13</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -584,7 +596,7 @@ denominator {
         </div>
         
         <div class="task_block">
-        <a name="task4"><h3>Задача 4</h3></a>
+        <a name="task4"><h3>Задача</h3></a>
         <div class="task_desc"><p>Написать программу для построения композиции: Четыре одинаковых желтых круга, с центрами в различных углах красного полупрозрачного (opacity=”0.5”) прямоугольника. Прямоугольник находится перед кругами. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника, а также радиус (r) кругов. Если хотя бы один круг не видно на рисунке, выводить сообщение об ошибке. Если прямоугольник не видно на рисунке, выводить сообщение об ошибке.</p>
         <p><img src="6 ОСАЛП/task4example.png" class="example_image"/></p></div>
         <table class="check_values">
@@ -601,7 +613,7 @@ denominator {
                 <th>r</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td></td>
                 <td>200</td>
                 <td>200</td>
                 <td>300</td>
@@ -610,7 +622,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task4test1.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>2</td>
+                <td></td>
                 <td>150</td>
                 <td>180</td>
                 <td>120</td>
@@ -619,7 +631,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task4test2.png" class="example_image"/></td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
                 <td>200</td>
                 <td>200</td>
                 <td>100</td>
@@ -628,7 +640,7 @@ denominator {
                 <td><img src="6 ОСАЛП/task4test5.png" class="example_image"/></td>
             </tr>
 			<tr>
-				<td>4</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -637,7 +649,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>5</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -646,7 +658,7 @@ denominator {
 				<td></td>
 			</tr>
             <tr>
-                <td>6</td>
+                <td></td>
                 <td>250</td>
                 <td>250</td>
                 <td>0</td>
@@ -655,7 +667,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td></td>
                 <td>200</td>
                 <td>120</td>
                 <td>120</td>
@@ -664,7 +676,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td></td>
                 <td>700</td>
                 <td>100</td>
                 <td>150</td>
@@ -673,7 +685,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td></td>
                 <td>300</td>
                 <td>300</td>
                 <td>200</td>
@@ -682,7 +694,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td></td>
                 <td>25</td>
                 <td>25</td>
                 <td>100</td>
@@ -691,7 +703,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td></td>
                 <td>700</td>
                 <td>500</td>
                 <td>99</td>
@@ -700,7 +712,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>12</td>
+                <td></td>
                 <td>-10</td>
                 <td>810</td>
                 <td>100</td>
@@ -709,7 +721,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
             <tr>
-                <td>13</td>
+                <td></td>
                 <td>100</td>
                 <td>650</td>
                 <td>80</td>
@@ -718,7 +730,7 @@ denominator {
                 <td>Сообщение об ошибке</td>
             </tr>
 			<tr>
-				<td>14</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -727,7 +739,7 @@ denominator {
 				<td></td>
 			</tr>
 			<tr>
-				<td>15</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -739,7 +751,7 @@ denominator {
         </div>
         
         <div class="task_block">
-        <a name="task5"><h3>Задача 5</h3></a>
+        <a name="task5"><h3>Задача</h3></a>
         <div class="task_desc"><p>Написать программу для построения двух прямоугольников: синего и красного. Закрасить площадь пересечения прямоугольников желтым цветом. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) синего и красного прямоугольников. Если хотя бы один из прямоугольников не видно на рисунке, то выводить сообщение об ошибке.</p><p><img src="6 ОСАЛП/task5example.png" style="height:90px;"/></p></div>
         <table class="check_values">
             <tr>
@@ -758,24 +770,25 @@ denominator {
             <th>H<sub>2</sub></th>
             <th>W<sub>2</sub></th>
         </tr>
-        <tr><td>1</td><td>10</td><td>10</td><td>200</td><td>100</td><td>50</td><td>50</td><td>300</td><td>350</td><td> <img src="6 ОСАЛП/task5test1.png" class="example_image"/></td></tr>
-        <tr><td>2</td><td>25</td><td>25</td><td>200</td><td>200</td><td>225</td><td>225</td><td>200</td><td>200</td><td> <img src="6 ОСАЛП/task5test2.png" class="example_image"/> </td></tr>
-        <tr><td>3</td><td>500</td><td>200</td><td>100</td><td>200</td><td>10</td><td>400</td><td>100</td><td>120</td><td> <img src="6 ОСАЛП/task5test4.png" class="example_image"/> </td></tr>
-        <tr><td>4</td><td>60</td><td>70</td><td>120</td><td>200</td><td>50</td><td>50</td><td>120</td><td>200</td><td> <img src="6 ОСАЛП/task5test5.png" class="example_image"/></td></tr>
-        <tr><td>5</td><td>100</td><td>100</td><td>200</td><td>200</td><td>200</td><td>200</td><td>50</td><td>50</td><td> <img src="6 ОСАЛП/task5test6.png" class="example_image"/></td></tr>
-        <tr><td>6</td><td>150</td><td>150</td><td>150</td><td>300</td><td>150</td><td>150</td><td>150</td><td>300</td><td> <img src="6 ОСАЛП/task5test7.png" class="example_image"/></td></tr>
-		<tr><td>7</td><td>100</td><td>0</td><td>100</td><td>500</td><td>0</td><td>200</td><td>700</td><td>100</td><td> <img src="6 ОСАЛП/task5test8.png" class="example_image"/></td></tr>
-        <tr><td>8</td><td>5</td><td>0</td><td>10</td><td>10</td><td>0</td><td>5</td><td>10</td><td>10</td><td> <img src="6 ОСАЛП/task5test9.png" class="example_image"/></td></tr>
-        <tr><td>9</td><td>200</td><td>200</td><td>100</td><td>100</td><td>900</td><td>200</td><td>100</td><td>10</td><td> <img src="6 ОСАЛП/task5test13.png" class="example_image"/> </td></tr>
-		<tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>12</td><td>102</td><td>200</td><td>100</td><td>200</td><td>0</td><td>500</td><td>100</td><td>120</td><td> Сообщение об ошибке </td></tr>
-        <tr><td>13</td><td>105</td><td>5</td><td>10</td><td>10</td><td>100</td><td>0</td><td>10</td><td>30</td><td> Сообщение об ошибке</td></tr>
-        <tr><td>14</td><td>150</td><td>150</td><td>50</td><td>300</td><td>100</td><td>100</td><td>300</td><td>200</td><td> Сообщение об ошибке</td></tr>
-        <tr><td>15</td><td>0</td><td>0</td><td>802</td><td>200</td><td>0</td><td>0</td><td>610</td><td>610</td><td> Сообщение об ошибке</td></tr>
-		<tr><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-		<tr><td>17</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>10</td><td>10</td><td>200</td><td>100</td><td>50</td><td>50</td><td>300</td><td>350</td><td> <img src="6 ОСАЛП/task5test1.png" class="example_image"/></td></tr>
+        <tr><td></td><td>25</td><td>25</td><td>200</td><td>200</td><td>225</td><td>225</td><td>200</td><td>200</td><td> <img src="6 ОСАЛП/task5test2.png" class="example_image"/> </td></tr>
+        <tr><td></td><td>500</td><td>200</td><td>100</td><td>200</td><td>10</td><td>400</td><td>100</td><td>120</td><td> <img src="6 ОСАЛП/task5test4.png" class="example_image"/> </td></tr>
+        <tr><td></td><td>60</td><td>70</td><td>120</td><td>200</td><td>50</td><td>50</td><td>120</td><td>200</td><td> <img src="6 ОСАЛП/task5test5.png" class="example_image"/></td></tr>
+        <tr><td></td><td>100</td><td>100</td><td>200</td><td>200</td><td>200</td><td>200</td><td>50</td><td>50</td><td> <img src="6 ОСАЛП/task5test6.png" class="example_image"/></td></tr>
+        <tr><td></td><td>150</td><td>150</td><td>150</td><td>300</td><td>150</td><td>150</td><td>150</td><td>300</td><td> <img src="6 ОСАЛП/task5test7.png" class="example_image"/></td></tr>
+		<tr><td></td><td>100</td><td>0</td><td>100</td><td>500</td><td>0</td><td>200</td><td>700</td><td>100</td><td> <img src="6 ОСАЛП/task5test8.png" class="example_image"/></td></tr>
+        <tr><td></td><td>5</td><td>0</td><td>10</td><td>10</td><td>0</td><td>5</td><td>10</td><td>10</td><td> <img src="6 ОСАЛП/task5test9.png" class="example_image"/></td></tr>
+        <tr><td></td><td>200</td><td>200</td><td>100</td><td>100</td><td>900</td><td>200</td><td>100</td><td>10</td><td> <img src="6 ОСАЛП/task5test13.png" class="example_image"/> </td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>102</td><td>200</td><td>100</td><td>200</td><td>0</td><td>500</td><td>100</td><td>120</td><td> Сообщение об ошибке </td></tr>
+        <tr><td></td><td>105</td><td>5</td><td>10</td><td>10</td><td>100</td><td>0</td><td>10</td><td>30</td><td> Сообщение об ошибке</td></tr>
+        <tr><td></td><td>150</td><td>150</td><td>50</td><td>300</td><td>100</td><td>100</td><td>300</td><td>200</td><td> Сообщение об ошибке</td></tr>
+        <tr><td></td><td>0</td><td>0</td><td>802</td><td>200</td><td>0</td><td>0</td><td>610</td><td>610</td><td> Сообщение об ошибке</td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
         </div>
+	</div>
     </body>
 </html>
