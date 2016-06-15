@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1.4 Сложные задачи</title>
+		<style>
+.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+.check_values {
+	border-collapse:collapse;
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+.check_values td, .check_values th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	display:block;
+}
+.quiz_block {
+	width:80%;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:75%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+}
+		</style>
+	</head>
+	<body>
+		<a name="heading"><h1>Линейные алгоритмы</h1></a>
+		<h2>Сложные задачи</h2>
+		<div class="lab_nav">
+			Другие темы:
+			<ul>
+				<li><a href="[1] лаб. ОСАЛП.html">Ввод и вывод информации</a></li>
+				<li><a href="[2] лаб. ОСАЛП.html">Арифметические операторы и методы</a></li>
+				<li><a href="[3] лаб. ОСАЛП.html">Работа с цифрами чисел</a></li>
+				<li><a href="[4] лаб. ОСАЛП.html">Сложные линейные задачи</a></li>
+				<li><a href="[5] лаб. ОСАЛП.html">Условия</a></li>
+				<li><a href="[6] лаб. ОСАЛП.html">Циклы</a></li>
+				<li><a href="[7] лаб. ОСАЛП.html">Массивы</a></li>
+				<li><a href="[8] лаб. ОСАЛП.html">Строки</a></li>
+				<li><a href="[9] лаб. ОСАЛП.html">Чтение файлов</a></li>
+				<li><a href="[10] лаб. ОСАЛП.html">Запись в файл</a></li>
+				<li><a href="[11] лаб. ОСАЛП.html">Двумерные массивы</a></li>
+			</ul>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#heading">^</a></li>
+				<li><a href="#quiz">?</a></li>
+				<li><a href="#task1">№ 1</a></li>
+				<li><a href="#task2">№ 2</a></li>
+				<li><a href="#task3">№ 3</a></li>
+				<li><a href="#task4">№ 4</a></li>
+				<li><a href="#task5">№ 5</a></li>
+				<li><a href="#task6">№ 6</a></li>
+				<!-- <li><a href="#task">№ </a></li> -->
+			</ul>
+		</div>
+	<div class="section">
+		<div class="task_block">
+			<a name="task1"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Дан прямоугольник, у которого верхний левый угол находится в точке с экранными координатами (X<sub>1</sub>;Y<sub>1</sub>), высота равна H, ширина равна W. Определить координаты нижнего правого угла. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.
+			</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="4">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>X<sub>1</sub></th>
+					<th>Y<sub>1</sub></th>
+					<th>H</th>
+					<th>W</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>2</td>
+					<td>3</td>
+					<td>(3;2)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>1</td>
+					<td>1</td>
+					<td>(1;1)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>219</td>
+					<td>374</td>
+					<td>51</td>
+					<td>96</td>
+					<td>(315;425)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>2</td>
+					<td>2</td>
+					<td>0</td>
+					<td>3</td>
+					<td>Сообщение об ошибке<!-- неправильный ввод (высота 0) --></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>2</td>
+					<td>2</td>
+					<td>-1</td>
+					<td>3</td>
+					<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная высота) --></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>2</td>
+					<td>2</td>
+					<td>3</td>
+					<td>0</td>
+					<td>Сообщение об ошибке<!-- неправильный ввод(ширина 0) --></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>2</td>
+					<td>2</td>
+					<td>3</td>
+					<td>-1</td>
+					<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная ширина) --></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="task_block">
+			<a name="task2"><h3>Задача</h3></a>
+			<div class="task_desc">На экране с шириной 800 и высотой 600 подготовлено пространство для графика функции. Центр осей координат (точка с математическими координатами (0;0)) располагается в точке с экранными координатами (X<sub>эц</sub>;Y<sub>эц</sub>). Требуется найти экранные координаты точки, математические координаты которой (X<sub>мт</sub>;Y<sub>мт</sub>). Масштаб экранных координат к математическим 1:1. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="4">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>X<sub>эц</sub></th>
+					<th>Y<sub>эц</sub></th>
+					<th>X<sub>мт</sub></th>
+					<th>Y<sub>мт</sub></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>400</td>
+					<td>500</td>
+					<td>60</td>
+					<td>70</td>
+					<td>(460;430)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>11</td>
+					<td>13</td>
+					<td>713</td>
+					<td>-86</td>
+					<td>(724;99)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>691</td>
+					<td>584</td>
+					<td>-462</td>
+					<td>359</td>
+					<td>(229;225)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="task_block">
+			<a name="task3"><h3>Задача</h3></a>
+			<div class="task_desc">Найти координаты вершин равнобедренного треугольника. Пользователь вводит координаты одной точки (x;y), длину основания (A), длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис. 1). Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
+				<div style="text-align:center"><svg width="100" height="100">
+					<line x1="10" y1="10" x2="90" y2="10" stroke="black" stroke-width="1"/>
+					<line x1="10" y1="10" x2="50" y2="90" stroke="black" stroke-width="1"/>
+					<line x1="90" y1="10" x2="50" y2="90" stroke="black" stroke-width="1"/>
+				</svg></div>
+				<div style="text-align:center">Рисунок 1. Расположение треугольника</div>
+				</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="4">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<td>x</td>
+					<td>y</td>
+					<td>A</td>
+					<td>L</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>5</td>
+					<td>5</td>
+					<td>500</td>
+					<td>300</td>
+					<td>(5; 5) (505; 5) (255; 165.8312)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>300</td>
+					<td>20</td>
+					<td>20</td>
+					<td>200</td>
+					<td>(300; 20) (320; 20) (310; 199.7498)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>100</td>
+					<td>200</td>
+					<td>200</td>
+					<td>200</td>
+					<td>(100; 200) (300; 200) (200; 173.2050)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>200</td>
+					<td>640</td>
+					<td>120</td>
+					<td>240</td>
+					<td>(200; 640) (320; 640) (260; 232.3790)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>807</td>
+					<td>120</td>
+					<td>200</td>
+					<td>300</td>
+					<td>(807; 120) (1007; 120) (907; 282.8427)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>25</td>
+					<td>25</td>
+					<td>0</td>
+					<td>110</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>100</td>
+					<td>102</td>
+					<td>200</td>
+					<td>0</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>600</td>
+					<td>100</td>
+					<td>210</td>
+					<td>100</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>200</td>
+					<td>200</td>
+					<td>200</td>
+					<td>100</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="task_block">
+			<a name="task4"><h3>Задача</h3></a>
+			<div class="task_desc">Даны координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>). <strike>Нужно построить вектор, начинающийся в точке (0;0), коллинеарный и сонаправленный вектору AB, который будет иметь такую же длину.</strike> Нужно перенести вектор в начало координат, сохранив направление. Вывести координаты ненулевого конца полученного вектора. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>.
+			</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="4">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>X<sub>1</sub></th>
+					<th>Y<sub>1</sub></th>
+					<th>X<sub>2</sub></th>
+					<th>Y<sub>2</sub></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>20</td>
+					<td>30</td>
+					<td>(20;30)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>100</td>
+					<td>(0;50)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>40</td>
+					<td>30</td>
+					<td>60</td>
+					<td>30</td>
+					<td>(20;0)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>75</td>
+					<td>25</td>
+					<td>65</td>
+					<td>35</td>
+					<td>(-10;10)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>65</td>
+					<td>0</td>
+					<td>75</td>
+					<td>0</td>
+					<td>(10;0)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>65</td>
+					<td>0</td>
+					<td>75</td>
+					<td>(0;10)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>80</td>
+					<td>90</td>
+					<td>(80;90)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>-10</td>
+					<td>0</td>
+					<td>15</td>
+					<td>70</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>200</td>
+					<td>-300</td>
+					<td>40</td>
+					<td>80</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="task_block">
+			<a name="task5"><h3>Задача</h3></a>
+			<div class="task_desc">Даны экранные координаты вектора AB: A(X<sub>1</sub>;Y<sub>1</sub>) и B(X<sub>2</sub>;Y<sub>2</sub>), а также угол &alpha; в градусах. Найти координаты вектора, который получится в результате поворота вектора AB на угол &alpha; вокруг точки A. Все координаты - <a href="[1] лаб. ОСАЛП.html#task10" target="_blank">экранные</a>. Систему координат считать правосторонней с отрицательным направлением вращения по часовой стрелке.</div>
+			<!--x'=x*cos(a)+y*sin(a)-->
+			<!--y'=-x*sin(a)+y*cos(a)-->
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="5">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>X<sub>1</sub></th>
+					<th>Y<sub>1</sub></th>
+					<th>X<sub>2</sub></th>
+					<th>Y<sub>2</sub></th>
+					<th>&alpha;</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>20</td>
+					<td>30</td>
+					<td>30</td>
+					<td>(0;0) (32.32.05;15.9807)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>50</td>
+					<td>50</td>
+					<td>50</td>
+					<td>100</td>
+					<td>270</td>
+					<td>(50;50) (0;50)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>40</td>
+					<td>30</td>
+					<td>60</td>
+					<td>30</td>
+					<td>-45</td>
+					<td>(40;30) (54.1421;44.1421)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>75</td>
+					<td>25</td>
+					<td>65</td>
+					<td>35</td>
+					<td>180</td>
+					<td>(75;25) (85;15)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>65</td>
+					<td>0</td>
+					<td>75</td>
+					<td>0</td>
+					<td>45</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>65</td>
+					<td>0</td>
+					<td>75</td>
+					<td>-45</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>80</td>
+					<td>90</td>
+					<td>180</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>-10</td>
+					<td>0</td>
+					<td>15</td>
+					<td>70</td>
+					<td>-90</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>200</td>
+					<td>-300</td>
+					<td>40</td>
+					<td>80</td>
+					<td>45</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="task_block">
+			<a name="task6"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Даны целые числа H, M, S (0 &le; H &le; 12, 0 &lt; M &le; 59, 0 &le; S &le; 59), указывающие момент времени: "H часов, M минут, S секунд". Определить угол (A, в градусах) между положением часовой стрелки в начале суток и в указанный момент времени.
+			</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="3">Вводимые данные</th>
+					<th rowspan="2">Результат (A)</th>
+				</tr>
+				<tr>
+					<th>H</th>
+					<th>M</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0,0000</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>6</td>
+					<td>0</td>
+					<td>0</td>
+					<td>180,0000</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>15</td>
+					<td>0</td>
+					<td>0</td>
+					<td>90,0000</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>3</td>
+					<td>30</td>
+					<td>0</td>
+					<td>105,0000</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>21</td>
+					<td>0</td>
+					<td>17</td>
+					<td>270,1417</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>-2</td>
+					<td>30</td>
+					<td>40</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>24</td>
+					<td>59</td>
+					<td>59</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>-30</td>
+					<td>0</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>62</td>
+					<td>0</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>-3</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>0</td>
+					<td>0</td>
+					<td>73</td>
+					<td>Сообщение об ошибке</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	</body>
+</html>
