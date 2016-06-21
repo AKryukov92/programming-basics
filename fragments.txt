@@ -1,6 +1,6 @@
 	
 	<div class="task_block">
-		<a name="task"><h3>Задача </h3></a>
+		<a name="task"><h3>Задача</h3></a>
 		<div class="task_desc"></div>
 	</div>
 	
