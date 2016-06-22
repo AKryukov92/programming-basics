@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>10 Запись в файлы</title>
+        <style>
+.check_single {
+    margin:15px;
+    border:1px solid black;
+    padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+    border-top: 1px solid black;
+}
+sqrt:before {
+    content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+.check_values {
+	border-collapse:collapse;
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+.check_values td, .check_values th {
+    border:1px solid black;
+    text-align:center;
+}
+.check_values td:first-child{
+    width:40px;
+}
+.nav {
+    position:fixed;
+    top:0px;
+    right:0px;
+    margin:15px;
+    clear:both;
+}
+.nav ul{
+    list-style-type:none;
+    padding:0px;
+    float:left;
+}
+.nav li {
+    margin:2px;
+    border:1px solid black;
+}
+.nav li a {
+    display:block;
+    padding:7px;
+}
+.task_block {
+    width:80%;
+    page-break-inside:avoid;
+    display:block;
+}
+.quiz_block {
+    width:80%;
+}
+.task_desc {
+    margin:5px;
+}
+.example_image {
+    width:200px;
+}
+.lab_nav {
+    width:80%;
+    overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+    font-family:monospace;
+    white-space:pre;
+    text-align:left;
+    padding:10px;
+}
+formula {
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+}
+fraction {
+    display:inline-block;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+}
+numerator {
+    display:block;
+    border-bottom:2px solid black;
+}
+denominator {
+    display:block;
+}
+@media print {
+    .nav {
+        display:none;
+    }
+    .lab_nav {
+        display:none;
+    }
+    ol li {
+        margin-bottom:30px;
+    }
+    .quiz_block {
+        width:100%;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <a name="heading"><h1>Алгоритмы записи в файл</h1></a>
+		<div class="lab_nav">
+			Другие темы:
+			<ul>
+				<li><a href="[1] лаб. ОСАЛП.html">Ввод и вывод информации</a></li>
+				<li><a href="[2] лаб. ОСАЛП.html">Арифметические операторы и методы</a></li>
+				<li><a href="[3] лаб. ОСАЛП.html">Работа с цифрами чисел</a></li>
+				<li><a href="[4] лаб. ОСАЛП.html">Сложные линейные задачи</a></li>
+				<li><a href="[5] лаб. ОСАЛП.html">Условия</a></li>
+				<li><a href="[6] лаб. ОСАЛП.html">Циклы</a></li>
+				<li><a href="[7] лаб. ОСАЛП.html">Строки</a></li>
+				<li><a href="[8] лаб. ОСАЛП.html">Массивы</a></li>
+				<li><a href="[9] лаб. ОСАЛП.html">Чтение файлов</a></li>
+				<li><a href="[10] лаб. ОСАЛП.html">Запись в файл</a></li>
+				<li><a href="[11] лаб. ОСАЛП.html">Двумерные массивы</a></li>
+			</ul>
+		</div>
+        <div class="nav">
+        <ul>
+            <li><a href="#heading">Начало</a></li>
+            <li><a href="#info1">Справка 1</a></li>
+            <li><a href="#info2">Справка 2</a></li>
+            <li><a href="#task1">Задача 1</a></li>
+            <li><a href="#task2">Задача 2</a></li>
+            <li><a href="#task3">Задача 3</a></li>
+            <li><a href="#task4">Задача 4</a></li>
+            <li><a href="#task5">Задача 5</a></li>
+        <!-- <li><a href="#task">Задача </a></li> -->
+        </ul>
+        </div>
+	<div class="section">
+        <a name="info1"><h3>Справочная информация</h3></a>
+        <div class="task_block">
+        <div class="task_desc"><p>SVG (от англ. Scalable Vector Graphics — масштабируемая векторная графика) — язык разметки двумерной векторной графики в формате XML.</p>
+        <p>Особенности SVG:
+        <ul>
+        <li>SVG рисунок это текстовый файл с расширением .svg</li>
+        <li>SVG рисунки могут встраиваться в HTML страницы (с расширением .html)</li>
+        <li>SVG широко используется для описания векторной графики в Интернете</li>
+        <li>SVG описывает рисунок в формате XML.</li>
+        <li>Рисунки в формате SVG не теряют качество при масштабировании, растяжении или сжатии.</li>
+        <li>Все элементы SVG рисунка могут быть анимированы</li>
+        <li>SVG соответствует международным стандартам DOM и XSL</li>
+        </ul></p>
+        <p>Существует множество программ для их редактирования, например Inkscape, CorelDRAW, Adobe Illustrator. В рамках данной лабораторной работы мы будем создавать векторные рисунки с помощью функций текстового вывода в файл.</p>
+        <p>Для того, чтобы немедленно увидеть результат наших действий, мы воспользуемся возможностью встраивать SVG рисунки внутрь HTML страниц.</p>
+        <p>Создайте текстовый файл, скопируйте в него следующий код.</p>
+        <div class="preformatted check_single">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
+
+    &lt;svg width=&quot;800&quot; height=&quot;600&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </div>
+        <p>Сохраните файл с расширением «.html».
+        Откройте получившийся файл в браузере. В результате вы должны увидеть следующее изображение.</p>
+        <img src="6 ОСАЛП/Main example.png"/>
+        <p>Обратите внимание:
+        <ul>
+            <li>Описание SVG рисунка начинается с элемента &lt;svg&gt;</li>
+            <li>Высота и ширина SVG рисунка описывается атрибутами элемента &lt;svg&gt;.
+Высоте соответствует height. Ширине соответствует width.</li>
+            <li>Элемент &lt;circle&gt; используется для создания круга.</li>
+            <li>Атрибуты cx и cy описывают координаты центра круга по оси X и Y.
+Если они не будут указаны, то центр будет находиться в точке (0,0)</li>
+            <li>Атрибут r описывает радиус круга.</li>
+            <li>Атрибут stroke указывает на цвет обводки круга, а stroke-width – на толщину линии.
+Данный круг обведен зеленой (green) линией толщиной 4 пикселя.</li>
+            <li>Атрибут fill описывает цвет заливки круга. В данном примере он желтый (yellow).</li>
+            <li>Описание SVG рисунка заканчивается элементом &lt;/svg&gt;</li>
+        </ul></p>
+        </div>
+        </div>
+        
+        <div class="task_block">
+        <a name="info2"><h3>Справочная информация</h3></a>
+        <div class="task_desc">Формат SVG также поддерживает следующие фигуры:
+        <ul>
+            <li>Прямоугольники</li>
+            <li>Линии</li>
+            <li>а также некоторые другие</li>
+        </ul>
+        Прямоугольник описывается элементом &lt;rect&gt;.
+        <ul>
+            <li>Положение прямоугольника определяется координатами его верхнего левого угла и описывается атрибутами x и y.</li>
+            <li>Ширина и высота прямоугольника зависит от атрибутов width и height соответственно.</li>
+            <li>Цвет заливки, цвет обводки и толщина обводки описывается, так же как и для круга.</li>
+            <li>У всех фигур есть также свойство opacity. Оно отвечает за прозрачность фигуры и представляет собой дробное число от 0 до 1.</li>
+        </ul>
+		Линия описывается элементом &lt;line&gt;
+        <ul>
+            <li>
+            Положение линии описывается двумя точками: x1, y1 и x2, y2.</li>
+            <li>Цвет линии описывается атрибутом stroke.
+            Толщина линии описывается атрибутом stroke-width.</li>
+        </ul>
+        </div>
+        </div>
+	</div>
+	<div class="section">
+        <div class="task_block">
+        <a name="task1"><h3>Задача</h3></a>
+        <div class="task_desc">Написать программу для построения кругов в формате SVG. Пользователь вводит координаты центра круга (cx, cy), его радиус (r) и толщину обводки (stroke-width). Цвет круга – желтый, цвет обводки – зеленый. Если круг не видно на рисунке или видно частично, то нужно вывести сообщение об ошибке.</div>
+        <table class="check_values">
+            <tr>
+                <th rowspan="2">Номер теста</th>
+                <th colspan="4">Вводимые данные</th>
+                <th rowspan="2">Результат</th>
+            </tr>
+            <tr>
+                <th>cx</th>
+                <th>cy</th>
+                <th>r</th>
+                <th>stroke-<br/>width</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>20</td>
+                <td>5</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>400</td>
+                <td>300</td>
+                <td>200</td>
+                <td>0</td>
+                <td><img src="6 ОСАЛП/task1test2.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>600</td>
+                <td>400</td>
+                <td>60</td>
+                <td>10</td>
+                <td><img src="6 ОСАЛП/task1test3.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>254</td>
+                <td>356</td>
+                <td>100</td>
+                <td>80</td>
+                <td><img src="6 ОСАЛП/task1test5.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>400</td>
+                <td>300</td>
+                <td>50</td>
+                <td>100</td>
+                <td><img src="6 ОСАЛП/task1test6.png" class="example_image"/></td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+            <tr>
+                <td></td>
+                <td>300</td>
+                <td>300</td>
+                <td>0</td>
+                <td>25</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>100</td>
+                <td>100</td>
+                <td>150</td>
+                <td>20</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>300</td>
+                <td>250</td>
+                <td>80</td>
+                <td>162</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>600</td>
+                <td>800</td>
+                <td>50</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>900</td>
+                <td>200</td>
+                <td>51</td>
+                <td>102</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+        </table>
+        </div>
+        
+        <div class="task_block">
+        <a name="task2"><h3>Задача</h3></a>
+        <div class="task_desc">Написать программу для построения красного прямоугольника с синей обводкой, толщиной 2 пикселя. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника. Если прямоугольник получается невидимым, то вывести сообщение об ошибке.</div>
+        <table class="check_values">
+            <tr>
+                <th rowspan="2">Номер теста</th>
+                <th colspan="4">Вводимые данные</th>
+                <th rowspan="2">Результат</th>
+            </tr>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+                <th>width</th>
+                <th>height</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>400</td>
+                <td>300</td>
+                <td>250</td>
+                <td>250</td>
+                <td><img src="6 ОСАЛП/task2test1.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>135</td>
+                <td>100</td>
+                <td>350</td>
+                <td>100</td>
+                <td><img src="6 ОСАЛП/task2test3.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>400</td>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+                <td><img src="6 ОСАЛП/task2test4.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>200</td>
+                <td>1</td>
+                <td>100</td>
+                <td><img src="6 ОСАЛП/task2test6.png" class="example_image"/></td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+            <tr>
+                <td></td>
+                <td>120</td>
+                <td>120</td>
+                <td>0</td>
+                <td>180</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>200</td>
+                <td>100</td>
+                <td>0</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>400</td>
+                <td>300</td>
+                <td>420</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1200</td>
+                <td>600</td>
+                <td>50</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>601</td>
+                <td>601</td>
+                <td>51</td>
+                <td>101</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+        </table>
+        </div>
+        
+        <div class="task_block">
+        <a name="task3"><h3>Задача</h3></a>
+        <div class="task_desc"><p>Написать программу для построения равнобедренного треугольника при помощи синих линий. Пользователь вводит координаты одной точки (x,y), длину основания (A) и длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис.1).</p>
+        <p><img src="6 ОСАЛП/task3example.png" class="example_image"/></p></div>
+        <table class="check_values">
+            <tr>
+                <th rowspan="2">Номер теста</th>
+                <th colspan="4">Вводимые данные</th>
+                <th rowspan="2">Результат</th>
+            </tr>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+                <th>A</th>
+                <th>L</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>5</td>
+                <td>5</td>
+                <td>500</td>
+                <td>300</td>
+                <td><img src="6 ОСАЛП/task3test1.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>300</td>
+                <td>20</td>
+                <td>20</td>
+                <td>200</td>
+                <td><img src="6 ОСАЛП/task3test1.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>100</td>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+                <td><img src="6 ОСАЛП/task3test5.png" class="example_image"/></td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+            <tr>
+                <td></td>
+                <td>25</td>
+                <td>25</td>
+                <td>0</td>
+                <td>110</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>100</td>
+                <td>102</td>
+                <td>200</td>
+                <td>0</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>600</td>
+                <td>100</td>
+                <td>210</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>200</td>
+                <td>200</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>640</td>
+                <td>120</td>
+                <td>240</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>807</td>
+                <td>120</td>
+                <td>200</td>
+                <td>300</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+        </table>
+        </div>
+        
+        <div class="task_block">
+        <a name="task4"><h3>Задача</h3></a>
+        <div class="task_desc"><p>Написать программу для построения композиции: Четыре одинаковых желтых круга, с центрами в различных углах красного полупрозрачного (opacity=”0.5”) прямоугольника. Прямоугольник находится перед кругами. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника, а также радиус (r) кругов. Если хотя бы один круг не видно на рисунке, выводить сообщение об ошибке. Если прямоугольник не видно на рисунке, выводить сообщение об ошибке.</p>
+        <p><img src="6 ОСАЛП/task4example.png" class="example_image"/></p></div>
+        <table class="check_values">
+            <tr>
+                <th rowspan="2">Номер теста</th>
+                <th colspan="5">Вводимые данные</th>
+                <th rowspan="2">Результат</th>
+            </tr>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+                <th>width</th>
+                <th>height</th>
+                <th>r</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>200</td>
+                <td>300</td>
+                <td>100</td>
+                <td>40</td>
+                <td><img src="6 ОСАЛП/task4test1.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>150</td>
+                <td>180</td>
+                <td>120</td>
+                <td>300</td>
+                <td>50</td>
+                <td><img src="6 ОСАЛП/task4test2.png" class="example_image"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>200</td>
+                <td>100</td>
+                <td>100</td>
+                <td>120</td>
+                <td><img src="6 ОСАЛП/task4test5.png" class="example_image"/></td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+            <tr>
+                <td></td>
+                <td>250</td>
+                <td>250</td>
+                <td>0</td>
+                <td>100</td>
+                <td>20</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>200</td>
+                <td>120</td>
+                <td>120</td>
+                <td>0</td>
+                <td>25</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>700</td>
+                <td>100</td>
+                <td>150</td>
+                <td>200</td>
+                <td>20</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>300</td>
+                <td>300</td>
+                <td>200</td>
+                <td>200</td>
+                <td>0</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>25</td>
+                <td>25</td>
+                <td>100</td>
+                <td>100</td>
+                <td>50</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>700</td>
+                <td>500</td>
+                <td>99</td>
+                <td>102</td>
+                <td>3</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>-10</td>
+                <td>810</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>100</td>
+                <td>650</td>
+                <td>80</td>
+                <td>80</td>
+                <td>45</td>
+                <td>Сообщение об ошибке</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+        </table>
+        </div>
+        
+        <div class="task_block">
+        <a name="task5"><h3>Задача</h3></a>
+        <div class="task_desc"><p>Написать программу для построения двух прямоугольников: синего и красного. Закрасить площадь пересечения прямоугольников желтым цветом. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) синего и красного прямоугольников. Если хотя бы один из прямоугольников не видно на рисунке, то выводить сообщение об ошибке.</p><p><img src="6 ОСАЛП/task5example.png" style="height:90px;"/></p></div>
+        <table class="check_values">
+            <tr>
+                <th rowspan="2">Номер теста</th>
+                <th colspan="8">Вводимые данные</th>
+                <th rowspan="2">Результат</th>
+            </tr>
+            
+        <tr>
+            <th>X<sub>1</sub></th>
+            <th>Y<sub>1</sub></th>
+            <th>H<sub>1</sub></th>
+            <th>W<sub>1</sub></th>
+            <th>X<sub>2</sub></th>
+            <th>Y<sub>2</sub></th>
+            <th>H<sub>2</sub></th>
+            <th>W<sub>2</sub></th>
+        </tr>
+        <tr><td></td><td>10</td><td>10</td><td>200</td><td>100</td><td>50</td><td>50</td><td>300</td><td>350</td><td> <img src="6 ОСАЛП/task5test1.png" class="example_image"/></td></tr>
+        <tr><td></td><td>25</td><td>25</td><td>200</td><td>200</td><td>225</td><td>225</td><td>200</td><td>200</td><td> <img src="6 ОСАЛП/task5test2.png" class="example_image"/> </td></tr>
+        <tr><td></td><td>500</td><td>200</td><td>100</td><td>200</td><td>10</td><td>400</td><td>100</td><td>120</td><td> <img src="6 ОСАЛП/task5test4.png" class="example_image"/> </td></tr>
+        <tr><td></td><td>60</td><td>70</td><td>120</td><td>200</td><td>50</td><td>50</td><td>120</td><td>200</td><td> <img src="6 ОСАЛП/task5test5.png" class="example_image"/></td></tr>
+        <tr><td></td><td>100</td><td>100</td><td>200</td><td>200</td><td>200</td><td>200</td><td>50</td><td>50</td><td> <img src="6 ОСАЛП/task5test6.png" class="example_image"/></td></tr>
+        <tr><td></td><td>150</td><td>150</td><td>150</td><td>300</td><td>150</td><td>150</td><td>150</td><td>300</td><td> <img src="6 ОСАЛП/task5test7.png" class="example_image"/></td></tr>
+		<tr><td></td><td>100</td><td>0</td><td>100</td><td>500</td><td>0</td><td>200</td><td>700</td><td>100</td><td> <img src="6 ОСАЛП/task5test8.png" class="example_image"/></td></tr>
+        <tr><td></td><td>5</td><td>0</td><td>10</td><td>10</td><td>0</td><td>5</td><td>10</td><td>10</td><td> <img src="6 ОСАЛП/task5test9.png" class="example_image"/></td></tr>
+        <tr><td></td><td>200</td><td>200</td><td>100</td><td>100</td><td>900</td><td>200</td><td>100</td><td>10</td><td> <img src="6 ОСАЛП/task5test13.png" class="example_image"/> </td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>102</td><td>200</td><td>100</td><td>200</td><td>0</td><td>500</td><td>100</td><td>120</td><td> Сообщение об ошибке </td></tr>
+        <tr><td></td><td>105</td><td>5</td><td>10</td><td>10</td><td>100</td><td>0</td><td>10</td><td>30</td><td> Сообщение об ошибке</td></tr>
+        <tr><td></td><td>150</td><td>150</td><td>50</td><td>300</td><td>100</td><td>100</td><td>300</td><td>200</td><td> Сообщение об ошибке</td></tr>
+        <tr><td></td><td>0</td><td>0</td><td>802</td><td>200</td><td>0</td><td>0</td><td>610</td><td>610</td><td> Сообщение об ошибке</td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </table>
+        </div>
+	</div>
+    </body>
+</html>
