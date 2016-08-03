@@ -747,6 +747,247 @@ int a;</td>
 				</tr>
 			</table>
 		</div>
+		
+		<div class="task_block">
+			<a name="task9"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $ID на введенное значение id.
+			</div>
+			<div class="check_single preformatted">
+SELECT first_name, last_name, group FROM students WHERE id = '$ID';
+			</div>
+			
+			<table class="check_values">
+				<tr>
+					<th>Номер теста</th>
+					<th>Вводимые данные (id)</th>
+					<th>Результат</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>123456789</td>
+					<td class="preformatted">SELECT first_name, last_name, group FROM students WHERE student_id = '123456789';</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>fa93f</td>
+					<td class="preformatted">SELECT first_name, last_name, group FROM students WHERE student_id = 'fa93f';</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="task_block">
+			<a name="task10"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $X на введенное значение x. $Y на введенное значение y.
+			</div>
+			<div class="check_single preformatted">
+INSERT INTO points (x, y) VALUES ('$X', '$Y');
+			</div>
+		
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="2">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>x</th>
+					<th>y</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>5</td>
+					<td>7</td>
+					<td class="preformatted">INSERT INTO points (x, y) VALUES ('5', '7');</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>-1</td>
+					<td>1000</td>
+					<td class="preformatted">INSERT INTO points (x, y) VALUES ('-1', '1000');</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="task_block">
+			<a name="task11"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
+			</div>
+			<div class="check_single preformatted">
+&lt;circle cx="$CX" cy="$CY" r="$R" fill="$FILL"/&gt;
+			</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="4">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>cx</th>
+					<th>cy</th>
+					<th>r</th>
+					<th>fill</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>50</td>
+					<td>50</td>
+					<td>40</td>
+					<td>yellow</td>
+					<td class="preformatted">&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>400</td>
+					<td>300</td>
+					<td>200</td>
+					<td>green</td>
+					<td class="preformatted">&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>254</td>
+					<td>356</td>
+					<td>100</td>
+					<td>#cc6600</td>
+					<td class="preformatted">&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="preformatted"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="preformatted"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="preformatted"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="task_block">
+			<a name="task12"><h3>Задача</h3></a>
+			<div class="task_desc">
+				Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
+			</div>
+			<div class="check_single preformatted">
+User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;
+			</div>
+			<table class="check_values">
+				<tr>
+					<th rowspan="2">Номер теста</th>
+					<th colspan="5">Вводимые данные</th>
+					<th rowspan="2">Результат</th>
+				</tr>
+				<tr>
+					<th>user</th>
+					<th>pass</th>
+					<th>host</th>
+					<th>port</th>
+					<th>db</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>test</td>
+					<td>pass</td>
+					<td>localhost</td>
+					<td>5432</td>
+					<td>my_db</td>
+					<td class="preformatted">User ID=test;Password=pass;Host=localhost;Port=5432;Database=my_db;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>admin</td>
+					<td>7e8efd48d69c</td>
+					<td>production-node1</td>
+					<td>5432</td>
+					<td>bank</td>
+					<td class="preformatted">User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>akryukov</td>
+					<td>123</td>
+					<td>localhost</td>
+					<td>dev-node1</td>
+					<td>bank</td>
+					<td class="preformatted">User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	</body>
 </html>
