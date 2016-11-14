@@ -1,12 +1,3 @@
-<html>
-	<head>
-		<script src="js/jquery.js"></script>
-		<script src="js/jasmine.js"></script>
-	</head>
-	<body>
-		This file includes jquery and jasmine script
-		<script>
-			alert("custom script");
-		</script>
-	</body>
-</html>
+2
+один, два, три
+одиннадцать, тринадцать

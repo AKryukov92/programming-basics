@@ -1,4 +1,9 @@
-3
-0,1,2,3,4,5
-11,13,17,19,23,27
-7879,7877,7873,7867
+8
+C:\temp\/example.txt
+C:\temp\example:txt
+C:\temp\exa*ple.txt
+C:\temp\ex?mple.txt
+C:\temp\"xample.txt
+C:\temp\e<ample.txt
+C:\temp\e>ample.txt
+C:\temp\examp|e.txt

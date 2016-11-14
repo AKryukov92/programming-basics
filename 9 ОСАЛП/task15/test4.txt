@@ -1,5 +1,7 @@
-"vSMHx;m;mrMjwQCu,KrBOUSmHqpUTYmFDwLRWJva",
-"PVC;KfDH,pTAKcFuLITxHf,CLsLwEqUScMOchy,Y",
-"pIIwYJmYCHwV,mLodTmDsItkiNxDerq;uVDKALTX",
-"FbaUF;JjjEJHXr,UNNAuLUyLqpx,Vteulp,EXnjb",
-"unxlfyMwAWmML,MJ;LAeUxmoYqLajCfNKcIuW,oQ"
+<html>
+	<head>
+	</head>
+	<body>
+		This file contains no scripts
+	</body>
+</html>

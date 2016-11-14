@@ -1,25 +1,12 @@
-"zoHJUeywNWoIPgaDvQgs","lDhsdmtSJRYzTRNMtCIN
-ajGqJrWj","rcBFyhcyWuQLgmWeYdWhcmsplUzEzWrZ
-lDhwvOJVFtXJgbRSdyUJyzrMhBjLwrSgWvvJorDC",
-"elomjxzKheqViaxzaEvEfFcYcjizhpVTRjSEvpuS
-qrTWbqoSlzHJIZbDJkVwLZ","bZZTyASHXHOiw","DXoXk
-TsCPJdkeJv","NkLRxthwaaWZybRmbkDxXInMhwaydg
-aRdAGjqQLLCrGTeDwchdalVjziZGWZruZnJDykUB",
-"XtPTpagoyccPbaKTgBBXBxGOBRVerIodGflOyOLN
-xelwVnJuXiYTgqlAXm","bctVZIbyTULCRBUtIXBFYC
-udTgPcATifHDsKiVTuFSzcsATzSv","taeLMWZaQBez
-ejVFHsiXfAz","GteIxcmpLsjHZqFdlBNjIZFRv","Ukx","c",
-"nFaCsMiSzxDGVblTDihhlAZvqihePWBAcQxreXT","V
-j","jdHHcPbjHTsBQCTdhDCEpfRXcsKdOVOKsjGhqYG
-","zfANBKPXrbREbWcGykqXshO","bpDMlOscdOqSfOhPB
-PnbpmOwdwKWyBy","BBjlRjHsEpaPUFprUCswmyercf
-jqkHDQmPEFILDsFCUMUsWWGpzqEvck","laXuIgvzKw
-LQHQQI","OKfKWVuemuieTRfjPzUGBovMoIrUvbrO","ja
-pesKgiBtzjVVwaJaPqDzqwfAvQYVwCXZoKosipWI",
-"RDzFtjlIrMutJqtjmlgljKZKeFszVcHywWgzdZUJ",
-"SxPXPwTNOeYXvurxCxNvbXnJKmpLlloFwHeeoPso",
-"zWibYquWYYHsTsaLtSdRsymRfFnOGtZmhEAfCurq",
-"BoCrjKDfiUJBVqXyUXsEGaCLgKzhHbDhKxofmVQJ",
-"daKFvgtIYmnZWoCsQmxSjDSuqNSIPZoSJnMRCziW
-fBhdWYTDNPCLjkKjDsCWBxqVokOkDCkFOCrbNknD",
-"wOMilcDWnJqCKXDrpBdBvZLAVDDXyTJqaxnVEyZY"
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/jasmine.js"></script>
+	</head>
+	<body>
+		This file includes jquery and jasmine script
+		<script>
+			alert("custom script");
+		</script>
+	</body>
+</html>

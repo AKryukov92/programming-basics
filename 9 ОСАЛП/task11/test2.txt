@@ -1,5 +1,4 @@
-4
-1,2,,4
-,
-
-8
+3
+C:\Temp\test.txt
+C:\Windows\notepad.exe
+C:\Windows\regedit.exe

@@ -1,15 +1,10 @@
-"nMiDNRJuWCPLhdImQfXCHaZmhKhFwTsVTCekxEUB
-GMILlbQvhGFqWMAZHYGazdQHptMTzTniKOGZlwzQ",
-"WcNGrAmJckfrWxqwLeeVgYwOGyxAvPImSUkzNdWv
-hTMrCWppJpHVdUFgkQWCeAYOpXzGnTPzSVcdzvTn",
-"mSFOxnvNGuuJZqgwinDxihdZAzNMpDUwwnndZYFI",
-"brFCxeQZFkNPCYfrpJzOtDGNyWBFFbSQzbUKqdRF",
-"vPoKVZWdAFansypfFoRgkNqnvRXcfOrhKXLNqEAh
-DOlAdtPATtNkqBKwUgISrxGyGqnpaaZabXiazllb",
-"xAenQBEZUwnzNXxqodHbhtABGOYcwaSOKFwehXGk",
-"yQQxoRWxasutJNuSSoSlMyZplKJpTZLQHebMslXG
-kAwtZkTjXcWYttzKFSGFiJnYDmUNaIAwkzogothc",
-"yBkDEfYKdptvgSNBJNZauWtkOsndnhcyATYPtkCc
-qqyaMgInfPqIaCCGOIErzftXbbYZOeUPsHKtBdLR",
-"PYFDNkrcqodAwVyfJHEhCglgLcdmnvCWrfFEQWQS",
-"WTPcpAKEWoCjNANMiWKiVGpOgvXeHGlZtlsBKFiA"
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/lodash.js"></script>
+	</head>
+	<body>
+		Application loading script should be included at the end of body
+		<script scr="application.js">
+	</body>
+</html>

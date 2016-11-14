@@ -1,9 +1,1 @@
-8
-C:\temp\/example.txt
-C:\temp\example:txt
-C:\temp\exa*ple.txt
-C:\temp\ex?mple.txt
-C:\temp\"xample.txt
-C:\temp\e<ample.txt
-C:\temp\e>ample.txt
-C:\temp\examp|e.txt
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

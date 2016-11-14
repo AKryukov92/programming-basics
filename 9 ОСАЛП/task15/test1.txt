@@ -1,14 +1,9 @@
-"XxJvoZyEBdVuNmKPYfDQBGtmlluGZzAGvmXRkQMu",
-"rAiQKoplTuEylJrmjuEELRxTVZUzIENbzetegQyM",
-"igOgKEKJZyCUWyDHdWaVuNDaWNlFTbvcTvXTaDzq",
-"GgLlbWVekmPmMeYlcDcRKjWlJpVrTMIURhtyBPxw",
-"LwiHCymGYkkUxDaIQWsNeVszcOxXoZLUFuGgppUK",
-"rxecMiZpfszgzsnDGGbwAufDFcPdDiwnwdyaYVMh",
-"AHDcilrYjHhEJLXVhmYUiiEAJKmcyFdVROjyRRwW",
-"eKWGNDitKpuetryDrndXCfDLLoyfTcXsbykMoZIb",
-"LfRafIJCbqnxwQWdJgOGKsWsWZVmOkYxruOpnvPz",
-"KdfXmRPQVZbACddQpDFlgBwBAyQndivIPwCzgMWR",
-"yeIRnLjXltuHbewvFvwpxJiQaFGXicPwgdfXjdjP",
-"iKvhFAAalxYFIBHVFshBssEjNndXoFOccAdGhZhE",
-"uLeHRdcLxxGglHfKbjxayFxPoitYIxZcwIJhyHDX",
-"OxhrzfrNDaWkGhKvEItmBBgJkpcorFoDpLVZdyfc"
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/jasmine.js"></script>
+	</head>
+	<body>
+		This file includes jquery and jasmine script
+	</body>
+</html>
