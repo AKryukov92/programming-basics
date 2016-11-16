@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>14 Классы и объекты</title>
+        <style>
+.check_single {
+    margin:15px;
+    border:1px solid black;
+    padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+    border-top: 1px solid black;
+}
+sqrt:before {
+    content:"\221A";
+}
+.section {
+    counter-reset:section;
+}
+.section h3:after {
+    counter-increment:section;
+    content: " " counter(section);
+}
+.check_values {
+    border-collapse:collapse;
+    width:100%;
+    counter-reset:test_case;
+}
+.check_values td:first-child::before {
+    counter-increment:test_case;
+    content: counter(test_case);
+}
+.check_values td, .check_values th {
+    border:1px solid black;
+    text-align:center;
+}
+.check_values td:first-child{
+    width:40px;
+}
+.nav {
+    position:fixed;
+    top:0px;
+    right:0px;
+    margin:15px;
+    clear:both;
+}
+.nav ul{
+    list-style-type:none;
+    padding:0px;
+    float:left;
+}
+.nav li {
+    margin:2px;
+    border:1px solid black;
+}
+.nav li a {
+    display:block;
+    padding:7px;
+}
+.task_block {
+    width:80%;
+    page-break-inside:avoid;
+    display:block;
+}
+.quiz_block {
+    width:80%;
+}
+.task_desc {
+    margin:5px;
+}
+.example_image {
+    width:200px;
+}
+.lab_nav {
+    width:80%;
+    overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+    font-family:monospace;
+    white-space:pre;
+    text-align:left;
+    padding:10px;
+}
+formula {
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+}
+fraction {
+    display:inline-block;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+}
+numerator {
+    display:block;
+    border-bottom:2px solid black;
+}
+denominator {
+    display:block;
+}
+@media print {
+    .nav {
+        display:none;
+    }
+    .lab_nav {
+        display:none;
+    }
+    ol li {
+        margin-bottom:30px;
+    }
+    .quiz_block {
+        width:100%;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <a name="heading"><h1>Классы и объекты</h1></a>
+        <div class="lab_nav">
+            Другие темы:
+            <ol>
+                <li><a href="[1] лаб. ОСАЛП.html">Ввод и вывод информации</a></li>
+                <li><a href="[2] лаб. ОСАЛП.html">Арифметические операторы и методы</a></li>
+                <li><a href="[3] лаб. ОСАЛП.html">Работа с цифрами чисел</a></li>
+                <li><a href="[4] лаб. ОСАЛП.html">Сложные линейные задачи</a></li>
+                <li><a href="[5] лаб. ОСАЛП.html">Условия</a></li>
+                <li><a href="[6] лаб. ОСАЛП.html">Циклы</a></li>
+                <li><a href="[7] лаб. ОСАЛП.html">Строки</a></li>
+                <li><a href="[8] лаб. ОСАЛП.html">Массивы</a></li>
+                <li><a href="[9] лаб. ОСАЛП.html">Чтение файлов</a></li>
+                <li><a href="[10] лаб. ОСАЛП.html">Запись в файл</a></li>
+                <li><a href="[11] лаб. ОСАЛП.html">Двумерные массивы</a></li>
+                <li><a href="[12] лаб. ОСАЛП.html">Методы</a></li>
+                <li><a href="[13] лаб. ОСАЛП.html">Исключения</a></li>
+                <li><a href="[14] лаб. ОСАЛП.html">Классы и объекты</a></li>
+            </ol>
+        </div>
+		
+		<div class="nav">
+		<ul>
+			<li><a href="#heading">^</a></li>
+			<li><a href="#writing1">П 1</a></li>
+			<li><a href="#task1">№ 1</a></li>
+			<li><a href="#task2">№ 2</a></li>
+			<li><a href="#task3">№ 3</a></li>
+			<li><a href="#task4">№ 4</a></li>
+			<li><a href="#task5">№ 5</a></li>
+			<li><a href="#task6">№ 6</a></li>
+			<li><a href="#task7">№ 7</a></li>
+			<li><a href="#task8">№ 8</a></li>
+			<li><a href="#task9">№ 9</a></li>
+		<!-- <li><a href="#task">№ </a></li> -->
+		</ul>
+		</div>
+		
+        <div class="quiz_block">
+            <a name="quiz"><h3>Контрольные вопросы</h3></a>
+            <ol>
+                <li>Какими классами уже приходилось пользоваться для решения задач?</li>
+                <li>Какие виды элементов могут содержать в себе классы?</li>
+                <li>Чем класс отличается от объекта?</li>
+                <li>Как можно создать экземпляр класса?</li>
+                <li>Чем отличается статический метод от нестатического?</li>
+                <li>Может ли поле класса быть статическим?</li>
+                <li>Как связана переменная и объект класса?</li>
+                <li>Могут ли две переменные указывать на один и тот же экземпляр класса?</li>
+                <li>Как удалить объект класса?</li>
+                <li>Что хранится в переменной класса, если объект не был создан?</li>
+                <li>Что произойдет, если обратиться к полю переменной класса, которая не указывает на экземпляр класса?</li>
+                <li>Как оформить передачу экземпляра класса через аргументы метода?</li>
+                <li>Как оформить возврат экземпляра класса методом?</li>
+                <li>Что такое конструктор класса?</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+	<div class="section">
+		<div class="task_block">
+			<a name="writing1"><h3>Письменное задание</h3></a>
+			<div class="task_desc">Определить результат выполнения сценария</div>
+			<table class="check_values">
+				<tr>
+					<th>Порядковый номер</th>
+					<th>Выражение</th>
+					<th>Результат</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p1 = new Point();
+p1.x = 5;
+p1.y = 7;
+Point p2 = p1;
+System.out.print("x=" + p2.x + " y=" + p2.y);</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p1 = new Point();
+p1.x = 5;
+p1.y = 7;
+Point p2 = p1;
+p2.x = 11;
+System.out.print("x=" + p2.x + " y=" + p2.y);</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p1 = new Point();
+p1.x = 5;
+p1.y = 7;
+Point p2 = p1;
+p2.x = 11;
+p1.y = 13;
+System.out.print("x=" + p2.x + " y=" + p2.y);</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p1 = new Point();
+p1.x = 5;
+p1.y = 7;
+Point p2 = new Point();
+p2.x = 11;
+p1.y = 13;
+System.out.print("x=" + p2.x + " y=" + p2.y);</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+            
+    <div class="section">
+        <div class="task_block">
+            <a name="task1"><h3>Задача</h3></a>
+            <div class="task_desc">Реализовать класс Point так, чтобы при выполнении данного сценария на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 0;
+p.y = 0;
+System.out.println(p.distanceTo(4,3));</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 0;
+p.y = 0;
+System.out.println(p.distanceTo(0,0));</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 19;
+p.y = 23;
+System.out.println(p.distanceTo(11,13));</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 11;
+p.y = 23;
+System.out.println(p.distanceTo(11,13));</td>
+                    <td>12.8062</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 0;
+p.y = 0;
+System.out.println(p.distanceTo(4,3));</td>
+                    <td>10.0</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task2"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 0;
+p1.y = 0;
+Point p2 = new Point();
+p2.x = 4;
+p2.y = 3;
+System.out.println(p1.distanceTo(p2));</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 0;
+p1.y = 0;
+Point p2 = new Point();
+p2.x = 0;
+p2.y = 0;
+System.out.println(p1.distanceTo(p2));</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 19;
+p1.y = 23;
+Point p2 = new Point();
+p2.x = 11;
+p2.y = 13;
+System.out.println(p1.distanceTo(p2));</td>
+                    <td>12.8062</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 11;
+p1.y = 23;
+Point p2 = new Point();
+p2.x = 11;
+p2.y = 13;
+System.out.println(p1.distanceTo(p2));</td>
+                    <td>10.0</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task3"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 31;
+p.y = 37;
+System.out.println(p.print());</td>
+                    <td>(31;37)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.setCoordinates(5,7);
+System.out.println(p.print());</td>
+                    <td>(5;7)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.setCoordinates(23,29);
+System.out.println("Distance between " + p1.print()
+    + " to (0;0) is " + p1.distanceTo(0,0));</td>
+                    <td>Distance between (23;29) to (0;0) is 37.0135</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.setCoordinates(11,13);
+Point p2 = new Point();
+p2.x = 17;
+p2.y = 19;
+System.out.println("Distance between " + p1.print()
+    + " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
+                    <td>Distance between (11;13) and (17;19) is 8.4852</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task4"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 31;
+p.y = 37;
+System.out.println(p.print());</td>
+                    <td>(31;37)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.setCoordinates(5,7);
+System.out.println(p.print());</td>
+                    <td>(5;7)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.setCoordinates(23,29);
+System.out.println("Distance between " + p1.print()
+    + " to (0;0) is " + p1.distanceTo(0,0));</td>
+                    <td>Distance between (23;29) to (0;0) is 37.0135</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.setCoordinates(11,13);
+Point p2 = new Point();
+p2.x = 17;
+p2.y = 19;
+System.out.println("Distance between " + p1.print()
+    + " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
+                    <td>Distance between (11;13) and (17;19) is 8.4852</td>
+                </tr>
+            </table>
+        </div>
+		
+		<div class="task_block">
+			<a name="task5"><h3>Задача</h3></a>
+			<div class="task_desc">Реализовать параметризованный конструктор класса Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
+			<table class="check_values">
+				<tr>
+					<th>Порядковый номер</th>
+					<th>Сценарий</th>
+					<th>Результат</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p = new Point(53, 59);
+System.out.println(p.print());</td>
+					<td>(53;59)</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p1 = new Point(53, 59);
+Point p2 = new Point(61,67);
+System.out.println("Distance between " + p1.print()
+	+ " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
+					<td>Distance between (53;59) and (61;67) is 11.3137</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">double dist = new Point(79, 83)
+	.distanceTo(new Point(89, 97));
+System.out.println(dist);</td>
+					<td>8.4853</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">Point p = new Point(71, 73);
+System.out.println("Distance between " + p.print()
+	+ " to zero is " + p.distanceTo(new Point(0, 0)));</td>
+					<td>Distance between (71;73) to zero is 101.8332</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="preformatted">System.out.println(new Point(79, 83)
+	.distanceTo(new Point(89, 97)));</td>
+					<td>17.2047</td>
+				</tr>
+			</table>
+		</div>
+		
+    </div>
+    </body>
+</html>
