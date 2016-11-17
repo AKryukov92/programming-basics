@@ -138,33 +138,42 @@ denominator {
                 <li><a href="[14] лаб. ОСАЛП.html">Классы и объекты</a></li>
             </ol>
         </div>
-		
-		<div class="nav">
-		<ul>
-			<li><a href="#heading">^</a></li>
-			<li><a href="#writing1">П 1</a></li>
-			<li><a href="#task1">№ 1</a></li>
-			<li><a href="#task2">№ 2</a></li>
-			<li><a href="#task3">№ 3</a></li>
-			<li><a href="#task4">№ 4</a></li>
-			<li><a href="#task5">№ 5</a></li>
-			<li><a href="#task6">№ 6</a></li>
-			<li><a href="#task7">№ 7</a></li>
-			<li><a href="#task8">№ 8</a></li>
-			<li><a href="#task9">№ 9</a></li>
-		<!-- <li><a href="#task">№ </a></li> -->
-		</ul>
-		</div>
-		
+        
+        <div class="nav">
+        <ul>
+            <li><a href="#heading">^</a></li>
+            <li><a href="#writing1">П 1</a></li>
+            <li><a href="#task1">№ 1</a></li>
+            <li><a href="#task2">№ 2</a></li>
+            <li><a href="#task3">№ 3</a></li>
+            <li><a href="#task4">№ 4</a></li>
+            <li><a href="#task5">№ 5</a></li>
+            <li><a href="#task6">№ 6</a></li>
+            <li><a href="#task7">№ 7</a></li>
+            <li><a href="#task8">№ 8</a></li>
+            <li><a href="#task9">№ 9</a></li>
+			<li><a href="#task10">№ 10</a></li>
+			<li><a href="#task11">№ 11</a></li>
+			<li><a href="#task12">№ 12</a></li>
+        <!-- <li><a href="#task">№ </a></li> -->
+        </ul>
+        </div>
+        
         <div class="quiz_block">
             <a name="quiz"><h3>Контрольные вопросы</h3></a>
             <ol>
                 <li>Какими классами уже приходилось пользоваться для решения задач?</li>
+                <li>Каким механизмом сгруппированы эти классы?</li>
+                <li>Что нужно сделать для того, чтобы пользоваться классом, описанным в отдельном файле?</li>
+                <li>Что нужно сделать для того, чтобы пользоваться классом, описанным в отдельном проекте(пакете)?</li>
+                <li>Где можно оформлять описание нового класса?</li>
                 <li>Какие виды элементов могут содержать в себе классы?</li>
                 <li>Чем класс отличается от объекта?</li>
                 <li>Как можно создать экземпляр класса?</li>
                 <li>Чем отличается статический метод от нестатического?</li>
                 <li>Может ли поле класса быть статическим?</li>
+                <li>Можно ли пользоваться статическими переменными и методами внутри нестатических методов? А наоборот?</li>
+                <li>В каких случаях можно не указывать имя класса при использовании статических методов или переменных?</li>
                 <li>Как связана переменная и объект класса?</li>
                 <li>Могут ли две переменные указывать на один и тот же экземпляр класса?</li>
                 <li>Как удалить объект класса?</li>
@@ -173,66 +182,65 @@ denominator {
                 <li>Как оформить передачу экземпляра класса через аргументы метода?</li>
                 <li>Как оформить возврат экземпляра класса методом?</li>
                 <li>Что такое конструктор класса?</li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Будет ли создан объект, если в конструкторе класса будет выброшено исключение?</li>
+                <li>Как гарантировать корректность значений полей класса?</li>
                 <li></li>
             </ol>
         </div>
-	<div class="section">
-		<div class="task_block">
-			<a name="writing1"><h3>Письменное задание</h3></a>
-			<div class="task_desc">Определить результат выполнения сценария</div>
-			<table class="check_values">
-				<tr>
-					<th>Порядковый номер</th>
-					<th>Выражение</th>
-					<th>Результат</th>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p1 = new Point();
+    <div class="section">
+        <div class="task_block">
+            <a name="writing1"><h3>Письменное задание</h3></a>
+            <div class="task_desc">Определить результат выполнения сценария</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Выражение</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
 p1.x = 5;
 p1.y = 7;
 Point p2 = p1;
 System.out.print("x=" + p2.x + " y=" + p2.y);</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p1 = new Point();
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
 p1.x = 5;
 p1.y = 7;
 Point p2 = p1;
 p2.x = 11;
 System.out.print("x=" + p2.x + " y=" + p2.y);</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p1 = new Point();
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
 p1.x = 5;
 p1.y = 7;
 Point p2 = p1;
 p2.x = 11;
 p1.y = 13;
 System.out.print("x=" + p2.x + " y=" + p2.y);</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p1 = new Point();
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
 p1.x = 5;
 p1.y = 7;
 Point p2 = new Point();
 p2.x = 11;
 p1.y = 13;
 System.out.print("x=" + p2.x + " y=" + p2.y);</td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-	</div>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
             
     <div class="section">
         <div class="task_block">
@@ -345,6 +353,175 @@ System.out.println(p1.distanceTo(p2));</td>
         
         <div class="task_block">
             <a name="task3"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 2;
+l.b = 3;
+Interval r = new Interval();
+r.a = 5;
+r.b = 7;
+System.out.println(l.intersects(r));</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 11;
+l.b = 17;
+Interval r = new Interval();
+r.a = 13;
+r.b = 19;
+System.out.println(r.intersects(l));</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 5;
+l.b = 15;
+Interval r = new Interval();
+r.a = 0;
+r.b = 30;
+System.out.println(l.intersects(r));</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 67;
+l.b = 71;
+Interval r = new Interval();
+r.a = 59;
+r.b = 61;
+System.out.println(l.intersects(r));</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 79;
+l.b = 73;
+Interval r = new Interval();
+r.a = 83;
+r.b = 89;
+System.out.println(l.intersects(r));</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 97;
+l.b = 101;
+Interval r = new Interval();
+r.a = 107;
+r.b = 103;
+System.out.println(l.intersects(r));</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task4"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 109;
+p1.y = 113;
+Point p2 = new Point();
+p2.x = 127;
+p2.y = 131;
+double dist = Point.distanceBetween(p1, p2);
+System.out.println(dist);</td>
+                    <td>25.4558</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 137;
+p2.y = 139;
+Point p2 = new Point();
+p2.x = 139;
+p2.y = 149;
+System.out.println(Point.distanceBetween(p1, p2));</td>
+                    <td>10.1980</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task5"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 2;
+l.b = 3;
+Interval r = new Interval();
+r.a = 5;
+r.b = 7;
+System.out.println(Interval.areIntersect(l,r));</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 11;
+l.b = 17;
+Interval r = new Interval();
+r.a = 13;
+r.b = 19;
+System.out.println(Interval.areIntersect(l,r));</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 79;
+l.b = 73;
+Interval r = new Interval();
+r.a = 83;
+r.b = 89;
+System.out.println(Interval.areIntersect(l,r));</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 97;
+l.b = 101;
+Interval r = new Interval();
+r.a = 107;
+r.b = 103;
+System.out.println(Interval.areIntersect(l,r));</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+            </table>
+        </div>
+            
+        <div class="task_block">
+            <a name="task6"><h3>Задача</h3></a>
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001</div>
             <table class="check_values">
                 <tr>
@@ -390,7 +567,111 @@ System.out.println("Distance between " + p1.print()
         </div>
         
         <div class="task_block">
-            <a name="task4"><h3>Задача</h3></a>
+            <a name="task7"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 11;
+l.b = 17;
+System.out.println(l.contains(0));
+System.out.println(l.contains(15));
+System.out.println(l.contains(20));</td>
+                    <td class="preformatted">false
+true
+false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 19;
+range.b = 17;
+System.out.println(range.contains(18));</td>
+                    <td class="preformatted">java.lang.IllegalArgumentException</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task8"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Выражение</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 23;
+range.b = 29;
+System.out.println(range.print());</td>
+                    <td>[23;29]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 31;
+range.b = 29;
+System.out.println(range.print());</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task9"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 5;
+range.b = 11;
+range.slide(7);
+System.out.println("Интервал успешно изменен");
+System.out.println(range.print());</td>
+                    <td class="preformatted">Интервал успешно изменен
+[12;18]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 17;
+range.b = 29;
+range.slide(-4);
+System.out.println("Интервал успешно изменен");
+System.out.println(range.print());</td>
+                    <td class="preformatted">Интервал успешно изменен
+[13;25]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 37;
+range.b = 31;
+range.slide(2);
+System.out.println("Интервал успешно изменен");
+System.out.println(range.print());</td>
+                    <td>java.lang.IllegalArgumentException</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task10"><h3>Задача</h3></a>
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
             <table class="check_values">
                 <tr>
@@ -434,53 +715,131 @@ System.out.println("Distance between " + p1.print()
                 </tr>
             </table>
         </div>
-		
-		<div class="task_block">
-			<a name="task5"><h3>Задача</h3></a>
-			<div class="task_desc">Реализовать параметризованный конструктор класса Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
-			<table class="check_values">
-				<tr>
-					<th>Порядковый номер</th>
-					<th>Сценарий</th>
-					<th>Результат</th>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p = new Point(53, 59);
+        
+        <div class="task_block">
+            <a name="task11"><h3>Задача</h3></a>
+            <div class="task_desc">Реализовать параметризованный конструктор класса Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point(53, 59);
 System.out.println(p.print());</td>
-					<td>(53;59)</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p1 = new Point(53, 59);
+                    <td>(53;59)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point(53, 59);
 Point p2 = new Point(61,67);
 System.out.println("Distance between " + p1.print()
-	+ " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
-					<td>Distance between (53;59) and (61;67) is 11.3137</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">double dist = new Point(79, 83)
-	.distanceTo(new Point(89, 97));
+    + " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
+                    <td>Distance between (53;59) and (61;67) is 11.3137</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">double dist = new Point(79, 83)
+    .distanceTo(new Point(89, 97));
 System.out.println(dist);</td>
-					<td>8.4853</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">Point p = new Point(71, 73);
+                    <td>8.4853</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point(71, 73);
 System.out.println("Distance between " + p.print()
-	+ " to zero is " + p.distanceTo(new Point(0, 0)));</td>
-					<td>Distance between (71;73) to zero is 101.8332</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="preformatted">System.out.println(new Point(79, 83)
-	.distanceTo(new Point(89, 97)));</td>
-					<td>17.2047</td>
-				</tr>
-			</table>
-		</div>
-		
+    + " to zero is " + p.distanceTo(new Point(0, 0)));</td>
+                    <td>Distance between (71;73) to zero is 101.8332</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">System.out.println(new Point(79, 83)
+    .distanceTo(new Point(89, 97)));</td>
+                    <td>17.2047</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">double dist = Point.distanceBetween(
+    new Point(151, 157),
+    new Point(163, 167));
+System.out.println(dist);</td>
+                    <td>15.6204</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">System.out.println(Point.distanceBetween(
+    new Point(173, 179),
+    new Point(181, 191)));</td>
+                    <td>14.4222</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task12"><h3>Задача</h3></a>
+            <div class="task_desc">Реализовать параметризованный конструктор класса Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(23,29);
+    System.out.println("Интервал инициализирован");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println("Некорректный интервал");
+}</td>
+                    <td class="preformatted">Интервал инициализирован
+[23;29]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    System.out.println("Интервал инициализирован");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println("Некорректный интервал");
+}</td>
+                    <td class="preformatted">Некорректный интервал</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(5, 11);
+    System.out.println("Интервал инициализирован");
+    range.slide(7);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println("Некорректный интервал");
+}</td>
+                    <td class="preformatted">Интервал инициализирован
+Интервал успешно изменен
+[12;18]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    System.out.println("Интервал инициализирован");
+    range.slide(20);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println("Некорректный интервал");
+}</td>
+                    <td class="preformatted">Некорректный интервал</td>
+                </tr>
+            </table>
+        </div>
+        
     </div>
     </body>
 </html>
