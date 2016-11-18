@@ -136,6 +136,7 @@ denominator {
                 <li><a href="[12] лаб. ОСАЛП.html">Методы</a></li>
                 <li><a href="[13] лаб. ОСАЛП.html">Исключения</a></li>
                 <li><a href="[14] лаб. ОСАЛП.html">Классы и объекты</a></li>
+                <li><a href="[15] лаб. ОСАЛП.html">Коллекции</a></li>
             </ol>
         </div>
         
@@ -152,9 +153,12 @@ denominator {
             <li><a href="#task7">№ 7</a></li>
             <li><a href="#task8">№ 8</a></li>
             <li><a href="#task9">№ 9</a></li>
-			<li><a href="#task10">№ 10</a></li>
-			<li><a href="#task11">№ 11</a></li>
-			<li><a href="#task12">№ 12</a></li>
+            <li><a href="#task10">№ 10</a></li>
+            <li><a href="#task11">№ 11</a></li>
+            <li><a href="#task12">№ 12</a></li>
+            <li><a href="#task13">№ 13</a></li>
+			<li><a href="#task14">№ 14</a></li>
+			<li><a href="#task15">№ 15</a></li>
         <!-- <li><a href="#task">№ </a></li> -->
         </ul>
         </div>
@@ -170,11 +174,12 @@ denominator {
                 <li>Какие виды элементов могут содержать в себе классы?</li>
                 <li>Чем класс отличается от объекта?</li>
                 <li>Как можно создать экземпляр класса?</li>
+                
                 <li>Чем отличается статический метод от нестатического?</li>
                 <li>Может ли поле класса быть статическим?</li>
                 <li>Можно ли пользоваться статическими переменными и методами внутри нестатических методов? А наоборот?</li>
                 <li>В каких случаях можно не указывать имя класса при использовании статических методов или переменных?</li>
-                <li>Как связана переменная и объект класса?</li>
+                
                 <li>Могут ли две переменные указывать на один и тот же экземпляр класса?</li>
                 <li>Как удалить объект класса?</li>
                 <li>Что хранится в переменной класса, если объект не был создан?</li>
@@ -184,7 +189,6 @@ denominator {
                 <li>Что такое конструктор класса?</li>
                 <li>Будет ли создан объект, если в конструкторе класса будет выброшено исключение?</li>
                 <li>Как гарантировать корректность значений полей класса?</li>
-                <li></li>
             </ol>
         </div>
     <div class="section">
@@ -194,7 +198,7 @@ denominator {
             <table class="check_values">
                 <tr>
                     <th>Порядковый номер</th>
-                    <th>Выражение</th>
+                    <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
                 <tr>
@@ -235,6 +239,15 @@ p1.y = 7;
 Point p2 = new Point();
 p2.x = 11;
 p1.y = 13;
+System.out.print("x=" + p2.x + " y=" + p2.y);</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = null;
+Point p2 = new Point();
+p2.x = 19;
+p1.y = 17;
 System.out.print("x=" + p2.x + " y=" + p2.y);</td>
                     <td></td>
                 </tr>
@@ -348,6 +361,19 @@ p2.y = 13;
 System.out.println(p1.distanceTo(p2));</td>
                     <td>10.0</td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p1 = new Point();
+p1.x = 11;
+p1.y = 23;
+Point p2 = null;
+try {
+    System.out.println(p1.distanceTo(p2));
+} catch (IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Конечная точка не инициализирована</td>
+                </tr>
             </table>
         </div>
         
@@ -412,8 +438,12 @@ l.b = 73;
 Interval r = new Interval();
 r.a = 83;
 r.b = 89;
-System.out.println(l.intersects(r));</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(l.intersects(r));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -423,8 +453,25 @@ l.b = 101;
 Interval r = new Interval();
 r.a = 107;
 r.b = 103;
-System.out.println(l.intersects(r));</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(l.intersects(r));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval l = new Interval();
+l.a = 127;
+l.b = 131;
+Interval r = null;
+try {
+    System.out.println(l.intersects(r));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Данный интервал не инициализирован</td>
                 </tr>
             </table>
         </div>
@@ -503,8 +550,12 @@ l.b = 73;
 Interval r = new Interval();
 r.a = 83;
 r.b = 89;
-System.out.println(Interval.areIntersect(l,r));</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(Interval.areIntersect(l,r));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -514,8 +565,12 @@ l.b = 101;
 Interval r = new Interval();
 r.a = 107;
 r.b = 103;
-System.out.println(Interval.areIntersect(l,r));</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(Interval.areIntersect(r,l));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
                 </tr>
             </table>
         </div>
@@ -592,8 +647,12 @@ false</td>
                     <td class="preformatted">Interval range = new Interval();
 range.a = 19;
 range.b = 17;
-System.out.println(range.contains(18));</td>
-                    <td class="preformatted">java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(range.contains(18));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Некорректный интервал</td>
                 </tr>
             </table>
         </div>
@@ -620,8 +679,12 @@ System.out.println(range.print());</td>
                     <td class="preformatted">Interval range = new Interval();
 range.a = 31;
 range.b = 29;
-System.out.println(range.print());</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
                 </tr>
             </table>
         </div>
@@ -662,16 +725,76 @@ System.out.println(range.print());</td>
                     <td class="preformatted">Interval range = new Interval();
 range.a = 37;
 range.b = 31;
-range.slide(2);
-System.out.println("Интервал успешно изменен");
-System.out.println(range.print());</td>
-                    <td>java.lang.IllegalArgumentException</td>
+try {
+    range.slide(2);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td>Некорректный интервал</td>
                 </tr>
             </table>
         </div>
         
         <div class="task_block">
             <a name="task10"><h3>Задача</h3></a>
+            <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 31;
+range.b = 37;
+try {
+    range.squeeze(2);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Интервал успешно изменен
+[31;35]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 41;
+range.b = 43;
+try {
+    range.squeeze(19);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval range = new Interval();
+range.a = 101;
+range.b = 67;
+try {
+    range.squeeze(23);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Некорректный интервал</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task11"><h3>Задача</h3></a>
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
             <table class="check_values">
                 <tr>
@@ -717,7 +840,7 @@ System.out.println("Distance between " + p1.print()
         </div>
         
         <div class="task_block">
-            <a name="task11"><h3>Задача</h3></a>
+            <a name="task12"><h3>Задача</h3></a>
             <div class="task_desc">Реализовать параметризованный конструктор класса Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат.</div>
             <table class="check_values">
                 <tr>
@@ -778,7 +901,7 @@ System.out.println(dist);</td>
         </div>
         
         <div class="task_block">
-            <a name="task12"><h3>Задача</h3></a>
+            <a name="task13"><h3>Задача</h3></a>
             <div class="task_desc">Реализовать параметризованный конструктор класса Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
@@ -793,7 +916,7 @@ System.out.println(dist);</td>
     System.out.println("Интервал инициализирован");
     System.out.println(range.print());
 } catch (IllegalArgumentException ex){
-    System.out.println("Некорректный интервал");
+    System.out.println(ex.getMessage());
 }</td>
                     <td class="preformatted">Интервал инициализирован
 [23;29]</td>
@@ -805,7 +928,7 @@ System.out.println(dist);</td>
     System.out.println("Интервал инициализирован");
     System.out.println(range.print());
 } catch (IllegalArgumentException ex){
-    System.out.println("Некорректный интервал");
+    System.out.println(ex.getMessage());
 }</td>
                     <td class="preformatted">Некорректный интервал</td>
                 </tr>
@@ -818,7 +941,7 @@ System.out.println(dist);</td>
     System.out.println("Интервал успешно изменен");
     System.out.println(range.print());
 } catch (IllegalArgumentException ex){
-    System.out.println("Некорректный интервал");
+    System.out.println(ex.getMessage());
 }</td>
                     <td class="preformatted">Интервал инициализирован
 Интервал успешно изменен
@@ -833,9 +956,153 @@ System.out.println(dist);</td>
     System.out.println("Интервал успешно изменен");
     System.out.println(range.print());
 } catch (IllegalArgumentException ex){
-    System.out.println("Некорректный интервал");
+    System.out.println(ex.getMessage());
 }</td>
                     <td class="preformatted">Некорректный интервал</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(211,223);
+    range.squeeze(23);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(13,151);
+    range.squeeze(41);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Интервал успешно изменен
+[13;110]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">try {
+    Interval range = new Interval(13, 151);
+    System.out.println("Длина интервала: " + range.length());
+    range.squeeze(41);
+    System.out.println("Интервал успешно изменен");
+    System.out.println("Длина интервала: " + range.length());
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex) {
+    System.out.println(ex.getMessage());
+}</td>
+                    <td class="preformatted">Длина интервала: 138
+Интервал успешно изменен
+Длина интервала: 97
+[13;110]</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task14"><h3>Задача</h3></a>
+            <div class="task_desc">Реализовать класс Rectangle так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Rectangle r = new Rectangle(5,5,20,20);
+Point p = new Point(30,30);
+System.out.println(r.contains(p));</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point corner = new Point(10,10);
+Rectangle r = new Rectangle(corner,20,20);
+Point p = new Point(30,30);
+System.out.println(r.contains(p));</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point corner = new Point(10,10);
+Rectangle r = new Rectangle(corner,20,20);
+System.out.println(r.area());</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Interval projectionX = new Interval(15, 30);
+Interval projectionY = new Interval(20, 35);
+Rectangle r = new Rectangle(projectionX, projectionY);
+System.out.println(r.area());</td>
+                    <td>225</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Rectangle r = new Rectangle(100, 200, 300, 400);
+Interval i = new Interval(50, 75);
+System.out.println(r.getProjectionX().intersects(i));</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Rectangle r = new Rectangle(100, 200, 300, 400);
+Interval i = new Interval(100, 300);
+System.out.println(r.getProjectionY().intersects(i));</td>
+                    <td>true</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="task_block">
+            <a name="task15"><h3>Задача</h3></a>
+            <div class="task_desc">Реализовать класс Circle так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001.</div>
+            <table class="check_values">
+                <tr>
+                    <th>Порядковый номер</th>
+                    <th>Сценарий</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Circle c = new Circle(40, 50, 13);
+System.out.println(c.area());</td>
+                    <td class="preformatted">530.9292
+[27;53]
+[37;63]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point(100, 120);
+Circle c = new Circle(p, 17);
+System.out.println(c.getProjectionX().print());
+System.out.println(c.getProjectionY().print());</td>
+                    <td class="preformatted">[83;117]
+[103;137]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point(100, 120);
+Circle c = new Circle(p, 34,50);
+System.out.println(c.getProjectionX().print());
+System.out.println(c.getProjectionY().print());</td>
+                    <td class="preformatted">[83;117]
+[103;137]</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point(100, 120);
+Circle c = new Circle(p, 70, 50);
+System.out.println(c.area());</td>
+                    <td class="preformatted">1963.4954</td>
                 </tr>
             </table>
         </div>
