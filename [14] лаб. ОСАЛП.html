@@ -198,7 +198,7 @@ denominator {
             <div class="task_desc">Определить результат выполнения сценария</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -262,7 +262,7 @@ System.out.print("x=" + p2.x + " y=" + p2.y);</td>
             <div class="task_desc">Реализовать класс Point так, чтобы при выполнении данного сценария на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -271,7 +271,8 @@ System.out.print("x=" + p2.x + " y=" + p2.y);</td>
                     <td class="preformatted">Point p = new Point();
 p.x = 0;
 p.y = 0;
-System.out.println(p.distanceTo(4,3));</td>
+double dist = p.distanceTo(4,3);
+System.out.println(dist);</td>
                     <td>5.0</td>
                 </tr>
                 <tr>
@@ -288,7 +289,7 @@ System.out.println(p.distanceTo(0,0));</td>
 p.x = 19;
 p.y = 23;
 System.out.println(p.distanceTo(11,13));</td>
-                    <td>5.0</td>
+                    <td>12.8062</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -296,14 +297,6 @@ System.out.println(p.distanceTo(11,13));</td>
 p.x = 11;
 p.y = 23;
 System.out.println(p.distanceTo(11,13));</td>
-                    <td>12.8062</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="preformatted">Point p = new Point();
-p.x = 0;
-p.y = 0;
-System.out.println(p.distanceTo(4,3));</td>
                     <td>10.0</td>
                 </tr>
             </table>
@@ -314,7 +307,7 @@ System.out.println(p.distanceTo(4,3));</td>
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -326,7 +319,8 @@ p1.y = 0;
 Point p2 = new Point();
 p2.x = 4;
 p2.y = 3;
-System.out.println(p1.distanceTo(p2));</td>
+double dist = p1.distanceTo(p2);
+System.out.println(dist);</td>
                     <td>5.0</td>
                 </tr>
                 <tr>
@@ -383,7 +377,7 @@ try {
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -395,7 +389,8 @@ l.b = 3;
 Interval r = new Interval();
 r.a = 5;
 r.b = 7;
-System.out.println(l.intersects(r));</td>
+boolean fact = l.intersects(r);
+System.out.println(fact);</td>
                     <td>false</td>
                 </tr>
                 <tr>
@@ -482,7 +477,7 @@ try {
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -502,7 +497,7 @@ System.out.println(dist);</td>
                     <td></td>
                     <td class="preformatted">Point p1 = new Point();
 p1.x = 137;
-p2.y = 139;
+p1.y = 139;
 Point p2 = new Point();
 p2.x = 139;
 p2.y = 149;
@@ -517,7 +512,7 @@ System.out.println(Point.distanceBetween(p1, p2));</td>
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -581,9 +576,18 @@ try {
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="preformatted">Point p = new Point();
+p.x = 127;
+p.y = 113;
+String str = p.print();
+System.out.println(str);</td>
+                    <td>(127;113)</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -627,7 +631,7 @@ System.out.println("Distance between " + p1.print()
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -663,7 +667,7 @@ try {
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Выражение</th>
                     <th>Результат</th>
                 </tr>
@@ -695,7 +699,7 @@ try {
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -743,7 +747,7 @@ try {
             <div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -799,7 +803,7 @@ try {
             <div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -845,7 +849,7 @@ System.out.println("Distance between " + p1.print()
             <div class="task_desc">Реализовать параметризованный конструктор класса Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -906,7 +910,7 @@ System.out.println(dist);</td>
             <div class="task_desc">Реализовать параметризованный конструктор класса Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -1012,7 +1016,7 @@ System.out.println(dist);</td>
             <div class="task_desc">Реализовать класс Rectangle так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -1068,7 +1072,7 @@ System.out.println(r.getProjectionY().intersects(i));</td>
             <div class="task_desc">Реализовать класс Circle так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>
@@ -1113,7 +1117,7 @@ System.out.println(c.area());</td>
             <div class="task_desc">Реализовать класс Shape так, чтобы при выполнении данного сценария на экран был выведен указанный результат с точностью 0.0001.</div>
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Сценарий</th>
                     <th>Результат</th>
                 </tr>

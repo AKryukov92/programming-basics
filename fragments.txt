@@ -6,7 +6,7 @@
         
             <table class="check_values">
                 <tr>
-                    <th>Порядковый номер</th>
+                    <th>Номер по порядку</th>
                     <th>Выражение</th>
                     <th>Результат</th>
                 </tr>
