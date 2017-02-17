@@ -1,5 +1,8 @@
 chcp 65001
-set filename=file.html
+pushd ..\..\
+mkdir csharp
+popd
+set filename="..\..\csharp\[1] лаб. ОСАЛП.html"
 set title=Ввод и вывод информации
 set chapter=Линейные алгоритмы
 
@@ -26,8 +29,8 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
  ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing3"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
@@ -42,13 +45,32 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
-type ..\quiz.html>> %filename%
+type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
 type writing01.html>>%filename%
-
 type writing02.html>>%filename%
+type writing03.html>>%filename%
+
+echo ^</div^>>>%filename%
+
+echo ^<div class="section"^>>>%filename%
+
+type task01.html>>%filename%
+type task02.html>>%filename%
+type task03.html>>%filename%
+type task04.html>>%filename%
+type task05.html>>%filename%
+type task06.html>>%filename%
+type task07.html>>%filename%
+type task08.html>>%filename%
+type task09.html>>%filename%
+type task10.html>>%filename%
+type task11.html>>%filename%
+type task12.html>>%filename%
+
+echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
