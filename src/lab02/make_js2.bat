@@ -1,8 +1,8 @@
 chcp 65001
 pushd ..\..\
-mkdir csharp
+mkdir js
 popd
-set filename="..\..\csharp\[2] лаб. ОСАЛП.html"
+set filename="..\..\js\[2] лаб. ОСАЛП.html"
 set title=Арифметические операторы
 set chapter=Линейные алгоритмы
 
@@ -76,8 +76,8 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writing01cs.html>>%filename%
-type writing02cs.html>>%filename%
+type writing01js.html>>%filename%
+type writing02js.html>>%filename%
 type writing03.html>>%filename%
 
 echo ^</div^>>>%filename%
