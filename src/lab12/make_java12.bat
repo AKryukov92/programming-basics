@@ -40,9 +40,9 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writing01.html>>%filename%
-type writing02.html>>%filename%
-type writing03.html>>%filename%
+type writingjava01.html>>%filename%
+type writingjava02.html>>%filename%
+type writingjava03.html>>%filename%
 
 echo ^</div^>>>%filename%
 
