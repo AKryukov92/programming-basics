@@ -1,0 +1,63 @@
+<div class="task_block">
+	<a name="task5"><h3>Задача</h3></a>
+	<div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval l = new Interval();
+l.a = 2;
+l.b = 3;
+Interval r = new Interval();
+r.a = 5;
+r.b = 7;
+System.out.println(Interval.areIntersect(l,r));</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval l = new Interval();
+l.a = 11;
+l.b = 17;
+Interval r = new Interval();
+r.a = 13;
+r.b = 19;
+System.out.println(Interval.areIntersect(l,r));</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval l = new Interval();
+l.a = 79;
+l.b = 73;
+Interval r = new Interval();
+r.a = 83;
+r.b = 89;
+try {
+    System.out.println(Interval.areIntersect(l,r));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td>Некорректный интервал</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval l = new Interval();
+l.a = 97;
+l.b = 101;
+Interval r = new Interval();
+r.a = 107;
+r.b = 103;
+try {
+    System.out.println(Interval.areIntersect(r,l));
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td>Некорректный интервал</td>
+		</tr>
+	</table>
+</div>

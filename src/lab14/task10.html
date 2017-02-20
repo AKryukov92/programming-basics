@@ -1,0 +1,55 @@
+<div class="task_block">
+	<a name="task10"><h3>Задача</h3></a>
+	<div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval range = new Interval();
+range.a = 31;
+range.b = 37;
+try {
+    range.squeeze(2);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Интервал успешно изменен
+[31;35]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval range = new Interval();
+range.a = 41;
+range.b = 43;
+try {
+    range.squeeze(19);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval range = new Interval();
+range.a = 101;
+range.b = 67;
+try {
+    range.squeeze(23);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Некорректный интервал</td>
+		</tr>
+	</table>
+</div>

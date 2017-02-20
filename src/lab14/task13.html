@@ -1,0 +1,105 @@
+<div class="task_block">
+	<a name="task13"><h3>Задача</h3></a>
+	<div class="task_desc">Реализовать параметризованный конструктор класса Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(23,29);
+    System.out.println("Интервал инициализирован");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Интервал инициализирован
+[23;29]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    System.out.println("Интервал инициализирован");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Некорректный интервал</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(5, 11);
+    System.out.println("Интервал инициализирован");
+    range.slide(7);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Интервал инициализирован
+Интервал успешно изменен
+[12;18]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    System.out.println("Интервал инициализирован");
+    range.slide(20);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Некорректный интервал</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(211,223);
+    range.squeeze(23);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(13,151);
+    range.squeeze(41);
+    System.out.println("Интервал успешно изменен");
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Интервал успешно изменен
+[13;110]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(13, 151);
+    System.out.println("Длина интервала: " + range.length());
+    range.squeeze(41);
+    System.out.println("Интервал успешно изменен");
+    System.out.println("Длина интервала: " + range.length());
+    System.out.println(range.print());
+} catch (IllegalArgumentException ex) {
+    System.out.println(ex.getMessage());
+}</td>
+			<td class="preformatted">Длина интервала: 138
+Интервал успешно изменен
+Длина интервала: 97
+[13;110]</td>
+		</tr>
+	</table>
+</div>

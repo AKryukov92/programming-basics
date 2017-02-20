@@ -1,0 +1,31 @@
+<div class="task_block">
+	<a name="task8"><h3>Задача</h3></a>
+	<div class="task_desc">Дополнить класс Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Выражение</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval range = new Interval();
+range.a = 23;
+range.b = 29;
+System.out.println(range.print());</td>
+			<td>[23;29]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Interval range = new Interval();
+range.a = 31;
+range.b = 29;
+try {
+    System.out.println(range.print());
+} catch(IllegalArgumentException ex){
+    System.out.println(ex.getMessage());
+}</td>
+			<td>Некорректный интервал</td>
+		</tr>
+	</table>
+</div>
