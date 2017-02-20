@@ -1,16 +1,19 @@
 chcp 65001
-pushd ..\..\
-mkdir csharp
-popd
-set filename="..\..\csharp\[1] лаб. ОСАЛП.html"
-set title=Ввод и вывод информации
+set lang=java
+set index=3
+set title=Работа с цифрами чисел
 set chapter=Линейные алгоритмы
+set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+
+pushd ..\..\
+mkdir %lang%
+popd
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>1 %title%^</title^> ^
+ ^<title^>%index% %title%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -42,6 +45,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task12"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task13"^>№ 13^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -69,6 +73,7 @@ type task09.html>>%filename%
 type task10.html>>%filename%
 type task11.html>>%filename%
 type task12.html>>%filename%
+type task13.html>>%filename%
 
 echo ^</div^>>>%filename%
 

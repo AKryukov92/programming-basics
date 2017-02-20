@@ -1,0 +1,65 @@
+<div class="task_block">
+	<a name="task16"><h3>Задача</h3></a>
+	<div class="task_desc">Реализовать класс Shape так, чтобы при выполнении данного сценария на экран был выведен указанный результат с точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Shape s1 = new Rectangle(0,0,20,20);
+Console.WriteLine(s1.Center.Print());
+Shape s2 = new Circle(100,100,15);
+Console.WriteLine(s2.Center.Print());
+Console.WriteLine(s1.Center.Equals(s2.Center));</td>
+			<td class="preformatted">(10;10)
+(100;100)
+false</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Shape s1 = new Rectangle(0,0,20,20);
+Console.WriteLine(s1.Center.Print());
+Shape s2 = new Circle(100,100,15);
+Console.WriteLine(s2.Center.Print());
+s1.Slide(90,0);            
+Console.WriteLine(s1.Center.Print());
+s2.Slide(0,-90);           
+Console.WriteLine(s2.Center.Print());
+Console.WriteLine(s1.Center.Equals(s2.Center));</td>
+			<td class="preformatted">(10;10)
+(100;100)
+(100;10)
+(100;10)
+true</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Shape[] arr = new Shape[] {
+	new Rectangle(0,0,20,20),
+	new Circle(100,100,15),
+	new Rectangle(13,17,19,23),
+	new Circle(73,79,83)
+};
+double areaSum = 0;
+for (int i = 0; i < arr.Length; i++){
+	areaSum += arr[i].Area;
+}
+Console.WriteLine(areaSum);</td>
+			<td class="preformatted">23186.2901</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Shape r = new Rectangle(0, 0, 10, 10, "blue", "red", 5);
+Shape c = new Circle(50, 50, 40, "green", "yellow", 4);
+Console.WriteLine(r);
+Console.WriteLine(c);</td>
+			<td class="preformatted">&lt;rect x='0' y='0' width='10' height='10'
+  stroke='blue' stroke-width='5' fill='red'/&gt;
+&lt;circle cx='50' cy='50' r='40'
+  stroke='green' stroke-width='4' fill='yellow'/&gt;</td>
+		</tr>
+	</table>
+</div>

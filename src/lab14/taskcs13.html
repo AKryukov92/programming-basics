@@ -1,0 +1,105 @@
+<div class="task_block">
+	<a name="task13"><h3>Задача</h3></a>
+	<div class="task_desc">Реализовать параметризованный конструктор класса Interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(23,29);
+    Console.WriteLine("Интервал инициализирован");
+    Console.WriteLine(range.Print());
+} catch (ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Интервал инициализирован
+[23;29]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    Console.WriteLine("Интервал инициализирован");
+    Console.WriteLine(range.Print());
+} catch (ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Некорректный интервал</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(5, 11);
+    Console.WriteLine("Интервал инициализирован");
+    range.Slide(7);
+    Console.WriteLine("Интервал успешно изменен");
+    Console.WriteLine(range.Print());
+} catch (ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Интервал инициализирован
+Интервал успешно изменен
+[12;18]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(41,29);
+    Console.WriteLine("Интервал инициализирован");
+    range.Slide(20);
+    Console.WriteLine("Интервал успешно изменен");
+    Console.WriteLine(range.Print());
+} catch (ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Некорректный интервал</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(211,223);
+    range.Squeeze(23);
+    Console.WriteLine("Интервал успешно изменен");
+    Console.WriteLine(range.Print());
+} catch(ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(13,151);
+    range.Squeeze(41);
+    Console.WriteLine("Интервал успешно изменен");
+    Console.WriteLine(range.Print());
+} catch(ArgumentException ex){
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Интервал успешно изменен
+[13;110]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">try {
+    Interval range = new Interval(13, 151);
+    Console.WriteLine("Длина интервала: " + range.Length);
+    range.Squeeze(41);
+    Console.WriteLine("Интервал успешно изменен");
+    Console.WriteLine("Длина интервала: " + range.Length);
+    Console.WriteLine(range.Print());
+} catch (ArgumentException ex) {
+    Console.WriteLine(ex.Message);
+}</td>
+			<td class="preformatted">Длина интервала: 138
+Интервал успешно изменен
+Длина интервала: 97
+[13;110]</td>
+		</tr>
+	</table>
+</div>

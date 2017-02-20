@@ -1,0 +1,45 @@
+<div class="task_block">
+	<a name="task11"><h3>Задача</h3></a>
+	<div class="task_desc">Дополнить класс Point так, чтобы при выполнении данных сценариев на экран был выведен указанный результат</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Point p = new Point();
+p.x = 31;
+p.y = 37;
+Console.WriteLine(p.Print());</td>
+			<td>(31;37)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Point p = new Point();
+p.SetCoordinates(5,7);
+Console.WriteLine(p.Print());</td>
+			<td>(5;7)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Point p1 = new Point();
+p1.SetCoordinates(23,29);
+Console.WriteLine("Distance between " + p1.Print()
++ " to (0;0) is " + p1.DistanceTo(0,0));</td>
+			<td>Distance between (23;29) to (0;0) is 37.0135</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Point p1 = new Point();
+p1.SetCoordinates(11,13);
+Point p2 = new Point();
+p2.x = 17;
+p2.y = 19;
+Console.WriteLine("Distance between " + p1.Print()
++ " and " + p2.Print() + " is " + p1.DistanceTo(p2));</td>
+			<td>Distance between (11;13) and (17;19) is 8.4852</td>
+		</tr>
+	</table>
+</div>

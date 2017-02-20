@@ -1,5 +1,5 @@
 chcp 65001
-set lang=csharp
+set lang=java
 set index=10
 set chapter=Запись в файлы
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"

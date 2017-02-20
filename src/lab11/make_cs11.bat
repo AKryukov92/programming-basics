@@ -1,16 +1,19 @@
 chcp 65001
-pushd ..\..\
-mkdir csharp
-popd
-set filename="..\..\csharp\[11] лаб. ОСАЛП.html"
+set lang=csharp
+set index=11
 set title=Двумерные массивы
 set chapter=Алгоритмы работы с двумерными массивами
+set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+
+pushd ..\..\
+mkdir %lang%
+popd
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>11 %title%^</title^> ^
+ ^<title^>%index% %title%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -36,8 +39,6 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
-type quiz.html>> %filename%
-
 echo ^<div class="section"^>>>%filename%
 
 type info01.html>>%filename%

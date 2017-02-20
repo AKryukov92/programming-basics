@@ -1,16 +1,18 @@
 chcp 65001
-pushd ..\..\
-mkdir csharp
-popd
-set filename="..\..\csharp\[13] лаб. ОСАЛП.html"
-set title=Исключения
+set lang=csharp
+set index=13
 set chapter=Исключения
+set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+
+pushd ..\..\
+mkdir %lang%
+popd
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>13 %title%^</title^> ^
+ ^<title^>%index% %chapter%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -18,8 +20,7 @@ type ..\styles.css >> %filename%
 echo ^</style^> ^
  ^</head^> ^
  ^<body^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
- ^<h2^>%title%^</h2^>>> %filename%
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
 

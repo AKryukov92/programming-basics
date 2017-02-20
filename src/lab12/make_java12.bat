@@ -1,5 +1,5 @@
 chcp 65001
-set lang=csharp
+set lang=java
 set index=12
 set title=Методы
 set chapter=Оформление подпрограмм с помощью методов

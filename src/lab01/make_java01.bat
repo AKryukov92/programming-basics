@@ -1,15 +1,19 @@
 chcp 65001
+set lang=java
+set index=1
+set title=Ввод и вывод информации
+set chapter=Линейные алгоритмы
+set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+
 pushd ..\..\
-mkdir csharp
+mkdir %lang%
 popd
-set filename="..\..\csharp\[7] лаб. ОСАЛП.html"
-set chapter=Строки
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>7 %chapter%^</title^> ^
+ ^<title^>%index% %title%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -17,7 +21,8 @@ type ..\styles.css >> %filename%
 echo ^</style^> ^
  ^</head^> ^
  ^<body^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
+ ^<h2^>%title%^</h2^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
 
@@ -27,6 +32,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
  ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
+ ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
  ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
@@ -36,6 +42,9 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task9"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task12"^>№ 12^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -60,6 +69,9 @@ type task06.html>>%filename%
 type task07.html>>%filename%
 type task08.html>>%filename%
 type task09.html>>%filename%
+type task10.html>>%filename%
+type task11.html>>%filename%
+type task12.html>>%filename%
 
 echo ^</div^>>>%filename%
 

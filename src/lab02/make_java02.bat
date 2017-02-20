@@ -1,15 +1,19 @@
 chcp 65001
+set lang=java
+set index=2
+set title=Арифметические операторы
+set chapter=Линейные алгоритмы
+set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+
 pushd ..\..\
-mkdir csharp
+mkdir %lang%
 popd
-set filename="..\..\csharp\[6] лаб. ОСАЛП.html"
-set chapter=Циклические алгоритмы
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>6 %chapter%^</title^> ^
+ ^<title^>%index% %title%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -17,7 +21,8 @@ type ..\styles.css >> %filename%
 echo ^</style^> ^
  ^</head^> ^
  ^<body^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
+ ^<h2^>%title%^</h2^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
 
@@ -26,6 +31,8 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
+ ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
  ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
@@ -38,12 +45,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task12"^>№ 12^</a^>^</li^> ^
- ^</ul^> ^
- ^<ul^> ^
  ^<li^>^<a href="#task13"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task14"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task15"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task16"^>№ 16^</a^>^</li^> ^
+ ^</ul^> ^
+ ^<ul^> ^
  ^<li^>^<a href="#task17"^>№ 17^</a^>^</li^> ^
  ^<li^>^<a href="#task18"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task19"^>№ 19^</a^>^</li^> ^
@@ -55,6 +62,16 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task25"^>№ 25^</a^>^</li^> ^
  ^<li^>^<a href="#task26"^>№ 26^</a^>^</li^> ^
  ^<li^>^<a href="#task27"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task28"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task29"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task30"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task31"^>№ 31^</a^>^</li^> ^
+ ^<li^>^<a href="#task32"^>№ 32^</a^>^</li^> ^
+ ^<li^>^<a href="#task33"^>№ 33^</a^>^</li^> ^
+ ^<li^>^<a href="#task34"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task35"^>№ 35^</a^>^</li^> ^
+ ^<li^>^<a href="#task36"^>№ 36^</a^>^</li^> ^
+ ^<li^>^<a href="#task37"^>№ 37^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -62,7 +79,9 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writing01.html>>%filename%
+type writing01cs.html>>%filename%
+type writing02cs.html>>%filename%
+type writing03.html>>%filename%
 
 echo ^</div^>>>%filename%
 
@@ -95,6 +114,16 @@ type task24.html>>%filename%
 type task25.html>>%filename%
 type task26.html>>%filename%
 type task27.html>>%filename%
+type task28.html>>%filename%
+type task29.html>>%filename%
+type task30.html>>%filename%
+type task31.html>>%filename%
+type task32.html>>%filename%
+type task33.html>>%filename%
+type task34.html>>%filename%
+type task35.html>>%filename%
+type task36.html>>%filename%
+type task37.html>>%filename%
 
 echo ^</div^>>>%filename%
 

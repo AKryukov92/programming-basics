@@ -1,7 +1,7 @@
 chcp 65001
-set lang=csharp
-set index=14
-set chapter=Классы и объекты
+set lang=java
+set index=9
+set chapter=Чтение файлов
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
 pushd ..\..\
@@ -28,8 +28,7 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#task1cs"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
@@ -45,35 +44,33 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task14"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task15"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task16"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task17"^>№ 17^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
 type quiz.html>> %filename%
 
-echo ^<div class="section"^>>>%filename%
-
-type writingcs01.html>>%filename%
-
-echo ^</div^>>>%filename%
+type info.html>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type taskcs01.html>>%filename%
-type taskcs02.html>>%filename%
-type taskcs03.html>>%filename%
-type taskcs04.html>>%filename%
-type taskcs05.html>>%filename%
-type taskcs06.html>>%filename%
-type taskcs07.html>>%filename%
-type taskcs08.html>>%filename%
-type taskcs09.html>>%filename%
-type taskcs10.html>>%filename%
-type taskcs11.html>>%filename%
-type taskcs12.html>>%filename%
-type taskcs13.html>>%filename%
-type taskcs14.html>>%filename%
-type taskcs15.html>>%filename%
-type taskcs16.html>>%filename%
+type task01.html>>%filename%
+type task02.html>>%filename%
+type task03.html>>%filename%
+type task04.html>>%filename%
+type task05.html>>%filename%
+type task06.html>>%filename%
+type task07.html>>%filename%
+type task08.html>>%filename%
+type task09.html>>%filename%
+type task10.html>>%filename%
+type task11.html>>%filename%
+type task12.html>>%filename%
+type task13.html>>%filename%
+type task14.html>>%filename%
+type task15.html>>%filename%
+type task16.html>>%filename%
+type task17.html>>%filename%
 
 echo ^</div^>>>%filename%
 
