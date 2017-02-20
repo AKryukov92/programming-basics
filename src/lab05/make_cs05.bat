@@ -33,6 +33,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
  ^<li^>^<a href="#writing4"^>П 4^</a^>^</li^> ^
  ^<li^>^<a href="#writing5"^>П 5^</a^>^</li^> ^
+ ^<li^>^<a href="#writing6"^>П 6^</a^>^</li^> ^
  ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
@@ -70,8 +71,9 @@ echo ^<div class="section"^>>>%filename%
 type writing01.html>>%filename%
 type writing02.html>>%filename%
 type writing03.html>>%filename%
-type writing04.html>>%filename%
-type writing05.html>>%filename%
+type writingcs04.html>>%filename%
+type writingcs05.html>>%filename%
+type writing06.html>>%filename%
 
 echo ^</div^>>>%filename%
 
