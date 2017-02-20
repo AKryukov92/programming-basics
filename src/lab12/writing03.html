@@ -1,0 +1,75 @@
+<div class="task_block">
+	<a name="writing3"><h3>Письменное задание</h3></a>
+	<div class="task_desc">В каждой строке нужно поставить отметку, если вызов метода соответствует его реализации. Предложить вариант для исправления.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Реализация</th>
+			<th>Вызов</th>
+			<th>Отметка</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int sizeof(double[] arr){
+    return arr.length;
+}</td>
+			<td class="preformatted">public static void main(String[] args) {
+    double[] arr = new double[2];
+    arr[0] = 5; arr[1] = 10;
+    System.out.println(sizeof(arr));
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int last(int[] arr){
+    return arr[0];
+}</td>
+			<td class="preformatted">public static void main(String[] args) {
+    int[] input = new int[] { 5, 8 };
+    System.out.println(last(input));
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int sizeof(double[] arr){
+    return arr.length;
+}</td>
+			<td class="preformatted">public static void main(String[] args) {
+    int[] arr = new int[2];
+    arr[0] = 13; arr[1] = 19;
+    int deficit = 20 - sizeof(arr);
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int sizeof(double[] arr){
+    return arr.length;
+}</td>
+			<td class="preformatted">public static void main(String[] args) {
+    double[] arr = new double[]
+        {15, 16, 17, 18, 19, 20};
+    int deficit = 23 - sizeof(arr);
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int[] convert(double[] arr){
+    int i = 0;
+    int[] result = new int[arr.length];
+    while (i < arr.length){
+        result[i] = (int)arr[i];
+    }
+    return result;
+}</td>
+			<td class="preformatted">public static void main(String[] args) {
+    double[] input = new double[] { 11.0, 13.0 };
+    int[] temp = convert(input);
+}</td>
+			<td></td>
+		</tr>
+	</table>
+</div>
