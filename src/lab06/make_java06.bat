@@ -65,7 +65,7 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writing01.html>>%filename%
+type writingjava01.html>>%filename%
 
 echo ^</div^>>>%filename%
 
