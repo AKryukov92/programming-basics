@@ -8,6 +8,41 @@ pushd ..\..\
 mkdir %lang%
 popd
 
+pushd ..\..\%lang%\
+mkdir images
+popd
+
+pushd ..\..\%lang%\images
+mkdir "10 ОСАЛП"
+popd
+
+pushd "..\..\%lang%\images\10 ОСАЛП"
+mkdir task01
+mkdir task02
+mkdir task03
+mkdir task04
+mkdir task05
+popd
+
+pushd "..\..\10 ОСАЛП"
+copy "Main example.png" "..\%lang%\images\10 ОСАЛП\Main example.png"
+popd
+pushd "..\..\10 ОСАЛП\task01"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task01\*.png"
+popd
+pushd "..\..\10 ОСАЛП\task02"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task02\*.png"
+popd
+pushd "..\..\10 ОСАЛП\task03"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task03\*.png"
+popd
+pushd "..\..\10 ОСАЛП\task04"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task04\*.png"
+popd
+pushd "..\..\10 ОСАЛП\task05"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task05\*.png"
+popd
+
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^

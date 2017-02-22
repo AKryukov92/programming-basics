@@ -8,6 +8,86 @@ pushd ..\..\
 mkdir %lang%
 popd
 
+pushd ..\..\%lang%\
+mkdir files
+popd
+
+pushd ..\..\%lang%\files\
+mkdir "9 ОСАЛП"
+popd
+
+pushd "..\..\%lang%\files\9 ОСАЛП"
+mkdir task01
+mkdir task02
+mkdir task03
+mkdir task04
+mkdir task05
+mkdir task06
+mkdir task07
+mkdir task08
+mkdir task09
+mkdir task10
+mkdir task11
+mkdir task12
+mkdir task13
+mkdir task14
+mkdir task15
+mkdir task16
+mkdir task17
+popd
+
+pushd "..\..\9 ОСАЛП\task01"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task01\*"
+popd
+pushd "..\..\9 ОСАЛП\task02"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task02\*"
+popd
+pushd "..\..\9 ОСАЛП\task03"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task03\*"
+popd
+pushd "..\..\9 ОСАЛП\task04"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task04\*"
+popd
+pushd "..\..\9 ОСАЛП\task05"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task05\*"
+popd
+pushd "..\..\9 ОСАЛП\task06"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task06\*"
+popd
+pushd "..\..\9 ОСАЛП\task07"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task07\*"
+popd
+pushd "..\..\9 ОСАЛП\task08"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task08\*"
+popd
+pushd "..\..\9 ОСАЛП\task09"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task09\*"
+popd
+pushd "..\..\9 ОСАЛП\task10"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task10\*"
+popd
+pushd "..\..\9 ОСАЛП\task11"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task11\*"
+popd
+pushd "..\..\9 ОСАЛП\task12"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task12\*"
+popd
+pushd "..\..\9 ОСАЛП\task13"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task13\*"
+popd
+pushd "..\..\9 ОСАЛП\task14"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task14\*"
+popd
+pushd "..\..\9 ОСАЛП\task15"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task15\*"
+popd
+pushd "..\..\9 ОСАЛП\task16"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task16\*"
+popd
+pushd "..\..\9 ОСАЛП\task17"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task17\*"
+popd
+
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^

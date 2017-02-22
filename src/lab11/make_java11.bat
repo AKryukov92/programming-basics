@@ -9,6 +9,42 @@ pushd ..\..\
 mkdir %lang%
 popd
 
+pushd ..\..\%lang%\
+mkdir files
+popd
+
+pushd ..\..\%lang%\files\
+mkdir "11 ОСАЛП"
+popd
+
+pushd "..\..\%lang%\files\11 ОСАЛП"
+mkdir task01
+mkdir task02
+mkdir task03
+mkdir task04
+mkdir task05
+mkdir task06
+popd
+
+pushd "..\..\11 ОСАЛП\task1"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task01\*"
+popd
+pushd "..\..\11 ОСАЛП\task2"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task02\*"
+popd
+pushd "..\..\11 ОСАЛП\task3"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task03\*"
+popd
+pushd "..\..\11 ОСАЛП\task4"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task04\*"
+popd
+pushd "..\..\11 ОСАЛП\task5"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task05\*"
+popd
+pushd "..\..\11 ОСАЛП\task6"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task06\*"
+popd
+
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
