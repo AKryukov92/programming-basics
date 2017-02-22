@@ -79,8 +79,8 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writing01js.html>>%filename%
-type writing02js.html>>%filename%
+type writingjs01.html>>%filename%
+type writingjs02.html>>%filename%
 type writing03.html>>%filename%
 
 echo ^</div^>>>%filename%

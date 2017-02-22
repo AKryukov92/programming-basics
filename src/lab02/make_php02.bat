@@ -1,5 +1,5 @@
 chcp 65001
-set lang=csharp
+set lang=php
 set index=2
 set title=Арифметические операторы
 set chapter=Линейные алгоритмы
@@ -24,7 +24,7 @@ echo ^</style^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
  ^<h2^>%title%^</h2^>>> %filename%
 
-type ..\nav_cs.html>> %filename%
+type ..\nav_php.html>> %filename%
 
 echo ^<div class="nav"^> ^
  ^<ul^> ^
@@ -79,8 +79,8 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writingcs01.html>>%filename%
-type writingcs02.html>>%filename%
+type writingphp01.html>>%filename%
+type writingphp02.html>>%filename%
 type writing03.html>>%filename%
 
 echo ^</div^>>>%filename%
