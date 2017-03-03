@@ -11,7 +11,6 @@ popd
 pushd ..\..\%lang%\
 mkdir images
 popd
-pause
 
 pushd ..\..\images
 copy "Области 1.png" "..\%lang%\images\Области 1.png"
