@@ -1,82 +1,91 @@
 <div class="task_block empty_on_print">
 	<a name="task22"><h3>Задача</h3></a>
 	<div class="task_desc">
-		Даны два интервала чисел (A1;B1) (A2;B2), A&lt;B. Нужно определить: пересекаются ли они. Найти границы пересекающихся интервалов.
+		Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямая, проходящая через точки (X<sub>п1</sub>;Y<sub>п1</sub>) (X<sub>п2</sub>;Y<sub>п2</sub>). Определить: принадлежит ли точка прямой. Все координаты - <a href="[4] лаб. ОСАЛП.html#task1" target="_blank">экранные</a>.
+		<table style="text-align:center;display:none;">
+			<tr>
+				<td style="border-bottom:1px solid black;">y-y<sub>1</sub></td>
+				<td rowspan="2">=</td>
+				<td style="border-bottom:1px solid black;">x-x<sub>1</sub></td>
+			</tr>
+			<tr>
+				<td>y<sub>2</sub>-y<sub>1</sub></td>
+				<td>x<sub>2</sub>-x<sub>1</sub></td>
+			</tr>
+		</table>
 	</div>
 	<table class="check_values">
 		<tr>
 			<th rowspan="2">Номер теста</th>
-			<th colspan="4">Вводимые данные</th>
+			<th colspan="6">Вводимые данные</th>
 			<th rowspan="2">Результат</th>
 		</tr>
 		<tr>
-			<th>A<sub>1</sub></th>
-			<th>B<sub>1</sub></th>
-			<th>A<sub>2</sub></th>
-			<th>B<sub>2</sub></th>
+			<th>X<sub>т</sub></th>
+			<th>Y<sub>т</sub></th>
+			<th>X<sub>п1</sub></th>
+			<th>Y<sub>п1</sub></th>
+			<th>X<sub>п2</sub></th>
+			<th>Y<sub>п2</sub></th>
 		</tr>
 		<tr>
 			<td></td>
 			<td>2</td>
+			<td>2</td>
+			<td>1</td>
+			<td>1</td>
 			<td>3</td>
-			<td>5</td>
-			<td>7</td>
-			<td>не пересекаются</td>
+			<td>3</td>
+			<td>Точка принадлежит прямой</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>11</td>
-			<td>17</td>
-			<td>13</td>
-			<td>19</td>
-			<td>пересекаются (13;17)</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>23</td>
-			<td>37</td>
-			<td>29</td>
-			<td>31</td>
-			<td>пересекаются (29;31)</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>43</td>
-			<td>53</td>
-			<td>41</td>
-			<td>47</td>
-			<td>пересекаются (43;47)</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>15</td>
+			<td>1</td>
+			<td>3</td>
 			<td>0</td>
-			<td>30</td>
-			<td>пересекаются (5;15)</td>
+			<td>0</td>
+			<td>2</td>
+			<td>6</td>
+			<td>Точка принадлежит прямой</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>67</td>
-			<td>71</td>
-			<td>59</td>
-			<td>61</td>
-			<td>не пересекаются</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>Точка принадлежит прямой</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>79</td>
-			<td>73</td>
-			<td>83</td>
-			<td>89</td>
-			<td>Сообщение об ошибке</td>
+			<td>0</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>Точка не принадлежит прямой</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>97</td>
-			<td>101</td>
-			<td>107</td>
-			<td>103</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>Точка принадлежит прямой</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
 			<td>Сообщение об ошибке</td>
 		</tr>
 	</table>

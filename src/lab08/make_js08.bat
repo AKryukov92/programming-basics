@@ -39,9 +39,9 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task7"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
- ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task9"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
@@ -54,6 +54,8 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task18"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task19"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task20"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task21"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task22"^>№ 22^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -70,26 +72,28 @@ echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
-type task07.html>>%filename%
-type task08.html>>%filename%
+type taskjs01.html>>%filename%
+type taskjs02.html>>%filename%
+type taskjs03.html>>%filename%
+type taskjs04.html>>%filename%
+type taskjs05.html>>%filename%
+type taskjs06.html>>%filename%
+type taskjs07.html>>%filename%
+type taskjs08.html>>%filename%
 type task09.html>>%filename%
 type task10.html>>%filename%
-type task11.html>>%filename%
-type task12.html>>%filename%
-type task13.html>>%filename%
-type task14.html>>%filename%
-type task15.html>>%filename%
-type task16.html>>%filename%
-type task17.html>>%filename%
-type task18.html>>%filename%
-type task19.html>>%filename%
-type task20.html>>%filename%
+type taskjs11.html>>%filename%
+type taskjs12.html>>%filename%
+type taskjs13.html>>%filename%
+type taskjs14.html>>%filename%
+type taskjs15.html>>%filename%
+type taskjs16.html>>%filename%
+type taskjs17.html>>%filename%
+type taskjs18.html>>%filename%
+type taskjs19.html>>%filename%
+type taskjs20.html>>%filename%
+type taskjs21.html>>%filename%
+type taskjs22.html>>%filename%
 
 echo ^</div^>>>%filename%
 

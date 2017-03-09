@@ -1,19 +1,6 @@
 <div class="task_block empty_on_print">
 	<a name="task21"><h3>Задача</h3></a>
-	<div class="task_desc">
-		Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямая, проходящая через точки (X<sub>п1</sub>;Y<sub>п1</sub>) (X<sub>п2</sub>;Y<sub>п2</sub>). Определить: принадлежит ли точка прямой. Все координаты - <a href="[4] лаб. ОСАЛП.html#task1" target="_blank">экранные</a>.
-		<table style="text-align:center;display:none;">
-			<tr>
-				<td style="border-bottom:1px solid black;">y-y<sub>1</sub></td>
-				<td rowspan="2">=</td>
-				<td style="border-bottom:1px solid black;">x-x<sub>1</sub></td>
-			</tr>
-			<tr>
-				<td>y<sub>2</sub>-y<sub>1</sub></td>
-				<td>x<sub>2</sub>-x<sub>1</sub></td>
-			</tr>
-		</table>
-	</div>
+	<div class="task_desc">Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямоугольник, у которого верхний левый угол находится в точке (X<sub>п</sub>;Y<sub>п</sub>), высота равна H, ширина равна W. Определить: лежит ли точка внутри прямоугольника. Все координаты - <a href="[4] лаб. ОСАЛП.html#task1" target="_blank">экранные</a>.</div>
 	<table class="check_values">
 		<tr>
 			<th rowspan="2">Номер теста</th>
@@ -23,70 +10,100 @@
 		<tr>
 			<th>X<sub>т</sub></th>
 			<th>Y<sub>т</sub></th>
-			<th>X<sub>п1</sub></th>
-			<th>Y<sub>п1</sub></th>
-			<th>X<sub>п2</sub></th>
-			<th>Y<sub>п2</sub></th>
+			<th>X<sub>п</sub></th>
+			<th>Y<sub>п</sub></th>
+			<th>H</th>
+			<th>W</th>
 		</tr>
 		<tr>
 			<td></td>
-			<td>2</td>
-			<td>2</td>
 			<td>1</td>
 			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
 			<td>3</td>
+			<td>точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
 			<td>3</td>
-			<td>Точка принадлежит прямой</td>
+			<td>точка не внутри</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>1</td>
 			<td>3</td>
+			<td>2</td>
 			<td>0</td>
 			<td>0</td>
 			<td>2</td>
-			<td>6</td>
-			<td>Точка принадлежит прямой</td>
+			<td>3</td>
+			<td>точка не внутри <!--(точка совпадает с углом) --></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>1</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2</td>
+			<td>3</td>
+			<td>точка не внутри <!-- (точка лежит на ребре) --></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>0</td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>2</td>
-			<td>2</td>
-			<td>Точка принадлежит прямой</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>2</td>
-			<td>2</td>
-			<td>Точка не принадлежит прямой</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>2</td>
-			<td>2</td>
-			<td>Точка принадлежит прямой</td>
-		</tr>
-		<tr>
-			<td></td>
 			<td>-1</td>
+			<td>0</td>
+			<td>0</td>
 			<td>1</td>
+			<td>1</td>
+			<td>Сообщение об ошибке<!-- неправильный ввод (отрицательная координата) --></td>
+		</tr>
+		<tr>
+			<td></td>
 			<td>1</td>
 			<td>1</td>
 			<td>2</td>
 			<td>2</td>
-			<td>Сообщение об ошибке</td>
+			<td>0</td>
+			<td>3</td>
+			<td>Сообщение об ошибке<!-- неправильный ввод (высота 0) --></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>-1</td>
+			<td>3</td>
+			<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная высота) --></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>3</td>
+			<td>0</td>
+			<td>Сообщение об ошибке<!-- неправильный ввод(ширина 0) --></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>2</td>
+			<td>2</td>
+			<td>3</td>
+			<td>-1</td>
+			<td>Сообщение об ошибке<!-- неправильный ввод(отрицательная ширина) --></td>
 		</tr>
 	</table>
 </div>
