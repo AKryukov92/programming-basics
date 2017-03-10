@@ -30,48 +30,48 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task7"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task9"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task12"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task13"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task14"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task15"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task16"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#writing8569"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing3730"^>П 2^</a^>^</li^> ^
+ ^<li^>^<a href="#writing9007"^>П 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task4411"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task9298"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task3354"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task5201"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task2981"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task4312"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task8428"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task2361"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task5063"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task7711"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task8833"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task1262"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task9020"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task1934"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task7237"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task3943"^>№ 16^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
- ^<li^>^<a href="#task17"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task18"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task19"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task20"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task21"^>№ 21^</a^>^</li^> ^
- ^<li^>^<a href="#task22"^>№ 22^</a^>^</li^> ^
- ^<li^>^<a href="#task23"^>№ 23^</a^>^</li^> ^
- ^<li^>^<a href="#task24"^>№ 24^</a^>^</li^> ^
- ^<li^>^<a href="#task25"^>№ 25^</a^>^</li^> ^
- ^<li^>^<a href="#task26"^>№ 26^</a^>^</li^> ^
- ^<li^>^<a href="#task27"^>№ 27^</a^>^</li^> ^
- ^<li^>^<a href="#task28"^>№ 28^</a^>^</li^> ^
- ^<li^>^<a href="#task29"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#task30"^>№ 30^</a^>^</li^> ^
- ^<li^>^<a href="#task31"^>№ 31^</a^>^</li^> ^
- ^<li^>^<a href="#task32"^>№ 32^</a^>^</li^> ^
- ^<li^>^<a href="#task33"^>№ 33^</a^>^</li^> ^
- ^<li^>^<a href="#task34"^>№ 34^</a^>^</li^> ^
- ^<li^>^<a href="#task35"^>№ 35^</a^>^</li^> ^
- ^<li^>^<a href="#task36"^>№ 36^</a^>^</li^> ^
- ^<li^>^<a href="#task37"^>№ 37^</a^>^</li^> ^
+ ^<li^>^<a href="#task7619"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task3832"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task1346"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task9622"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task8873"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task7799"^>№ 22^</a^>^</li^> ^
+ ^<li^>^<a href="#task9354"^>№ 23^</a^>^</li^> ^
+ ^<li^>^<a href="#task9130"^>№ 24^</a^>^</li^> ^
+ ^<li^>^<a href="#task5895"^>№ 25^</a^>^</li^> ^
+ ^<li^>^<a href="#task2461"^>№ 26^</a^>^</li^> ^
+ ^<li^>^<a href="#task2790"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task2624"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task5871"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task9164"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task7457"^>№ 31^</a^>^</li^> ^
+ ^<li^>^<a href="#task9865"^>№ 32^</a^>^</li^> ^
+ ^<li^>^<a href="#task3591"^>№ 33^</a^>^</li^> ^
+ ^<li^>^<a href="#task3558"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task4366"^>№ 35^</a^>^</li^> ^
+ ^<li^>^<a href="#task5789"^>№ 36^</a^>^</li^> ^
+ ^<li^>^<a href="#task6522"^>№ 37^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -79,51 +79,51 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writingcs01.html>>%filename%
-type writingcs02.html>>%filename%
-type writing03.html>>%filename%
+type writingcs8569.html>>%filename%
+type writingcs3730.html>>%filename%
+type writing9007.html>>%filename%
 
 echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
-type task07.html>>%filename%
-type task08.html>>%filename%
-type task09.html>>%filename%
-type task10.html>>%filename%
-type task11.html>>%filename%
-type task12.html>>%filename%
-type task13.html>>%filename%
-type task14.html>>%filename%
-type task15.html>>%filename%
-type task16.html>>%filename%
-type task17.html>>%filename%
-type task18.html>>%filename%
-type task19.html>>%filename%
-type task20.html>>%filename%
-type task21.html>>%filename%
-type task22.html>>%filename%
-type task23.html>>%filename%
-type task24.html>>%filename%
-type task25.html>>%filename%
-type task26.html>>%filename%
-type task27.html>>%filename%
-type task28.html>>%filename%
-type task29.html>>%filename%
-type task30.html>>%filename%
-type task31.html>>%filename%
-type task32.html>>%filename%
-type task33.html>>%filename%
-type task34.html>>%filename%
-type task35.html>>%filename%
-type task36.html>>%filename%
-type task37.html>>%filename%
+type task4411.html>>%filename%
+type task9298.html>>%filename%
+type task3354.html>>%filename%
+type task5201.html>>%filename%
+type task2981.html>>%filename%
+type task4312.html>>%filename%
+type task8428.html>>%filename%
+type task2361.html>>%filename%
+type task5063.html>>%filename%
+type task7711.html>>%filename%
+type task8833.html>>%filename%
+type task1262.html>>%filename%
+type task9020.html>>%filename%
+type task1934.html>>%filename%
+type task7237.html>>%filename%
+type task3943.html>>%filename%
+type task7619.html>>%filename%
+type task3832.html>>%filename%
+type task1346.html>>%filename%
+type task9622.html>>%filename%
+type task8873.html>>%filename%
+type task7799.html>>%filename%
+type task9354.html>>%filename%
+type task9130.html>>%filename%
+type task5895.html>>%filename%
+type task2461.html>>%filename%
+type task2790.html>>%filename%
+type task2624.html>>%filename%
+type task5871.html>>%filename%
+type task9164.html>>%filename%
+type task7457.html>>%filename%
+type task9865.html>>%filename%
+type task3591.html>>%filename%
+type task3558.html>>%filename%
+type task4366.html>>%filename%
+type task5789.html>>%filename%
+type task6522.html>>%filename%
 
 echo ^</div^>>>%filename%
 
