@@ -17,30 +17,30 @@ mkdir "10 ОСАЛП"
 popd
 
 pushd "..\..\%lang%\images\10 ОСАЛП"
-mkdir task01
-mkdir task02
-mkdir task03
-mkdir task04
-mkdir task05
+mkdir task9300
+mkdir task3951
+mkdir task6409
+mkdir task7343
+mkdir task7060
 popd
 
 pushd "..\..\10 ОСАЛП"
 copy "Main example.png" "..\%lang%\images\10 ОСАЛП\Main example.png"
 popd
-pushd "..\..\10 ОСАЛП\task01"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task01\*.png"
+pushd "..\..\10 ОСАЛП\task9300"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task9300\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task02"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task02\*.png"
+pushd "..\..\10 ОСАЛП\task3951"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task3951\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task03"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task03\*.png"
+pushd "..\..\10 ОСАЛП\task6409"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task6409\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task04"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task04\*.png"
+pushd "..\..\10 ОСАЛП\task7343"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task7343\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task05"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task05\*.png"
+pushd "..\..\10 ОСАЛП\task7060"
+copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task7060\*.png"
 popd
 
 echo ^<!DOCTYPE html^> ^
@@ -65,11 +65,11 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#info1"^>И 1^</a^>^</li^> ^
  ^<li^>^<a href="#info2"^>И 2^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task9300"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task3951"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task6409"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task7343"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task7060"^>№ 5^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -84,11 +84,11 @@ echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
+type task9300.html>>%filename%
+type task3951.html>>%filename%
+type task6409.html>>%filename%
+type task7343.html>>%filename%
+type task7060.html>>%filename%
 
 echo ^</div^>>>%filename%
 
