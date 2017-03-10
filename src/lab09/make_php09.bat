@@ -17,75 +17,75 @@ mkdir "9 ОСАЛП"
 popd
 
 pushd "..\..\%lang%\files\9 ОСАЛП"
-mkdir task01
-mkdir task02
-mkdir task03
-mkdir task04
-mkdir task05
-mkdir task06
-mkdir task07
-mkdir task08
-mkdir task09
-mkdir task10
-mkdir task11
-mkdir task12
-mkdir task13
-mkdir task14
-mkdir task15
-mkdir task16
-mkdir task17
+mkdir task6175
+mkdir task4642
+mkdir task9765
+mkdir task4954
+mkdir task5537
+mkdir task6431
+mkdir task7193
+mkdir task5621
+mkdir task5847
+mkdir task4769
+mkdir task9930
+mkdir task6861
+mkdir task2205
+mkdir task4372
+mkdir task4463
+mkdir task1668
+mkdir task2137
 popd
 
-pushd "..\..\9 ОСАЛП\task01"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task01\*"
+pushd "..\..\9 ОСАЛП\task6175"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task6175\*"
 popd
-pushd "..\..\9 ОСАЛП\task02"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task02\*"
+pushd "..\..\9 ОСАЛП\task4642"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task4642\*"
 popd
-pushd "..\..\9 ОСАЛП\task03"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task03\*"
+pushd "..\..\9 ОСАЛП\task9765"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task9765\*"
 popd
-pushd "..\..\9 ОСАЛП\task04"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task04\*"
+pushd "..\..\9 ОСАЛП\task4954"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task4954\*"
 popd
-pushd "..\..\9 ОСАЛП\task05"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task05\*"
+pushd "..\..\9 ОСАЛП\task5537"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task5537\*"
 popd
-pushd "..\..\9 ОСАЛП\task06"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task06\*"
+pushd "..\..\9 ОСАЛП\task6431"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task6431\*"
 popd
-pushd "..\..\9 ОСАЛП\task07"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task07\*"
+pushd "..\..\9 ОСАЛП\task7193"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task7193\*"
 popd
-pushd "..\..\9 ОСАЛП\task08"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task08\*"
+pushd "..\..\9 ОСАЛП\task5621"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task5621\*"
 popd
-pushd "..\..\9 ОСАЛП\task09"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task09\*"
+pushd "..\..\9 ОСАЛП\task5847"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task5847\*"
 popd
-pushd "..\..\9 ОСАЛП\task10"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task10\*"
+pushd "..\..\9 ОСАЛП\task4769"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task4769\*"
 popd
-pushd "..\..\9 ОСАЛП\task11"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task11\*"
+pushd "..\..\9 ОСАЛП\task9930"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task9930\*"
 popd
-pushd "..\..\9 ОСАЛП\task12"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task12\*"
+pushd "..\..\9 ОСАЛП\task6861"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task6861\*"
 popd
-pushd "..\..\9 ОСАЛП\task13"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task13\*"
+pushd "..\..\9 ОСАЛП\task2205"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task2205\*"
 popd
-pushd "..\..\9 ОСАЛП\task14"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task14\*"
+pushd "..\..\9 ОСАЛП\task4372"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task4372\*"
 popd
-pushd "..\..\9 ОСАЛП\task15"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task15\*"
+pushd "..\..\9 ОСАЛП\task4463"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task4463\*"
 popd
-pushd "..\..\9 ОСАЛП\task16"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task16\*"
+pushd "..\..\9 ОСАЛП\task1668"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task1668\*"
 popd
-pushd "..\..\9 ОСАЛП\task17"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task17\*"
+pushd "..\..\9 ОСАЛП\task2137"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task2137\*"
 popd
 
 echo ^<!DOCTYPE html^> ^
@@ -108,23 +108,23 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task7"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task9"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task10"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task11"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task12"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task13"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task14"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task15"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task16"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task17"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task6175"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task4642"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task9765"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task4954"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task5537"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6431"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task7193"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task5621"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task5847"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task4769"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task2205"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task4372"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task4463"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task1668"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task2137"^>№ 17^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -134,23 +134,23 @@ type info.html>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
-type task07.html>>%filename%
-type task08.html>>%filename%
-type task09.html>>%filename%
-type task10.html>>%filename%
-type task11.html>>%filename%
-type task12.html>>%filename%
-type task13.html>>%filename%
-type task14.html>>%filename%
-type task15.html>>%filename%
-type task16.html>>%filename%
-type task17.html>>%filename%
+type task6175.html>>%filename%
+type task4642.html>>%filename%
+type task9765.html>>%filename%
+type task4954.html>>%filename%
+type task5537.html>>%filename%
+type task6431.html>>%filename%
+type task7193.html>>%filename%
+type task5621.html>>%filename%
+type task5847.html>>%filename%
+type task4769.html>>%filename%
+type task9930.html>>%filename%
+type task6861.html>>%filename%
+type task2205.html>>%filename%
+type task4372.html>>%filename%
+type task4463.html>>%filename%
+type task1668.html>>%filename%
+type task2137.html>>%filename%
 
 echo ^</div^>>>%filename%
 
