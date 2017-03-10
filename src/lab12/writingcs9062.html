@@ -1,0 +1,90 @@
+<div class="task_block">
+	<a name="writing9062"><h3>Письменное задание</h3></a>
+	<div class="task_desc">В каждой строке нужно поставить отметку, если вызов метода с данными аргументами соответствуют его сигнатуре. Предложить вариант для исправления.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Реализация</th>
+			<th>Вызов</th>
+			<th>Отметка</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int Sizeof(double[] arr){
+    return arr.Length;
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    double[] arr = new double[2];
+    arr[0] = 5; arr[1] = 10;
+    Console.WriteLine(Sizeof(arr));
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int Last(int[] arr){
+    return arr[0];
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    int[] input = new int[] { 5, 8 };
+    Console.WriteLine(Last(input));
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int Sizeof(double[] arr){
+    return arr.Length;
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    int[] arr = new int[2];
+    arr[0] = 13; arr[1] = 19;
+    int deficit = 20 - Sizeof(arr);
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int Sizeof(double[] arr){
+    return arr.Length;
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    double[] arr = new double[]
+        {15, 16, 17, 18, 19, 20};
+    int deficit = 23 - Sizeof(arr);
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int[] Convert(double[] arr){
+    int i = 0;
+    int[] result = new int[arr.length];
+    while (i < arr.length){
+        result[i] = (int)arr[i];
+    }
+    return result;
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    double[] input = new double[] { 11.0, 13.0 };
+    int[] temp = Convert(input);
+}</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">public static int[] Convert(double[] arr){
+    int i = 0;
+    int[] result = new int[arr.length];
+    while (i < arr.length){
+        result[i] = (int)arr[i];
+    }
+    return result;
+}</td>
+			<td class="preformatted">static void Main(string[] args) {
+    int[] temp = Convert(new int[] { 11.0, 13.0 });
+}</td>
+			<td></td>
+		</tr>
+	</table>
+</div>

@@ -30,9 +30,9 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#writing3"^>П 3^</a^>^</li^> ^
+ ^<li^>^<a href="#writing3939"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing1516"^>П 2^</a^>^</li^> ^
+ ^<li^>^<a href="#writing9062"^>П 3^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -40,9 +40,9 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writingcs01.html>>%filename%
-type writingcs02.html>>%filename%
-type writingcs03.html>>%filename%
+type writingcs3939.html>>%filename%
+type writingcs1516.html>>%filename%
+type writingcs9062.html>>%filename%
 
 echo ^</div^>>>%filename%
 

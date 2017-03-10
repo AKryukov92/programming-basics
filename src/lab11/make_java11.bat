@@ -18,31 +18,31 @@ mkdir "11 ОСАЛП"
 popd
 
 pushd "..\..\%lang%\files\11 ОСАЛП"
-mkdir task01
-mkdir task02
-mkdir task03
-mkdir task04
-mkdir task05
-mkdir task06
+mkdir task9299
+mkdir task7560
+mkdir task9002
+mkdir task7432
+mkdir task1954
+mkdir task2048
 popd
 
-pushd "..\..\11 ОСАЛП\task1"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task01\*"
+pushd "..\..\11 ОСАЛП\task9299"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task9299\*"
 popd
-pushd "..\..\11 ОСАЛП\task2"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task02\*"
+pushd "..\..\11 ОСАЛП\task7560"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task7560\*"
 popd
-pushd "..\..\11 ОСАЛП\task3"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task03\*"
+pushd "..\..\11 ОСАЛП\task9002"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task9002\*"
 popd
-pushd "..\..\11 ОСАЛП\task4"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task04\*"
+pushd "..\..\11 ОСАЛП\task7432"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task7432\*"
 popd
-pushd "..\..\11 ОСАЛП\task5"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task05\*"
+pushd "..\..\11 ОСАЛП\task1954"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task1954\*"
 popd
-pushd "..\..\11 ОСАЛП\task6"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task06\*"
+pushd "..\..\11 ОСАЛП\task2048"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task2048\*"
 popd
 
 echo ^<!DOCTYPE html^> ^
@@ -66,12 +66,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#info1"^>И 1^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task9299"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task7560"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task9002"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task7432"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task1954"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task2048"^>№ 6^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -83,12 +83,12 @@ echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
+type task9299.html>>%filename%
+type task7560.html>>%filename%
+type task9002.html>>%filename%
+type task7432.html>>%filename%
+type task1954.html>>%filename%
+type task2048.html>>%filename%
 
 echo ^</div^>>>%filename%
 
