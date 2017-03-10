@@ -29,23 +29,23 @@ type ..\nav_js.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task6912"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task6598"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task3093"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task8805"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task8158"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6499"^>№ 6^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
+type task6912.html>>%filename%
+type task6598.html>>%filename%
+type task3093.html>>%filename%
+type task8805.html>>%filename%
+type task8158.html>>%filename%
+type task6499.html>>%filename%
 
 echo ^</div^>>>%filename%
 
