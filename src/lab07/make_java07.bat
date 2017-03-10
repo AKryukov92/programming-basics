@@ -28,17 +28,17 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing1"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing2"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#task1"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task2"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task3"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task7"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task8"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task9"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#writing8165"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing9001"^>П 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task9631"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task9812"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task5728"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task7491"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task5923"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task4265"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task2166"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task9116"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task9925"^>№ 9^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -46,22 +46,22 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writingjava01.html>>%filename%
-type writingjava02.html>>%filename%
+type writingjava8165.html>>%filename%
+type writingjava9001.html>>%filename%
 
 echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type task01.html>>%filename%
-type task02.html>>%filename%
-type task03.html>>%filename%
-type task04.html>>%filename%
-type task05.html>>%filename%
-type task06.html>>%filename%
-type task07.html>>%filename%
-type task08.html>>%filename%
-type task09.html>>%filename%
+type task9631.html>>%filename%
+type task9812.html>>%filename%
+type task5728.html>>%filename%
+type task7491.html>>%filename%
+type task5923.html>>%filename%
+type task4265.html>>%filename%
+type task2166.html>>%filename%
+type task9116.html>>%filename%
+type task9925.html>>%filename%
 
 echo ^</div^>>>%filename%
 
