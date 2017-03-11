@@ -40,9 +40,9 @@ type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type writingcs3939.html>>%filename%
-type writingcs1516.html>>%filename%
-type writingcs9062.html>>%filename%
+type writingphp3939.html>>%filename%
+type writingphp1516.html>>%filename%
+type writingphp9062.html>>%filename%
 
 echo ^</div^>>>%filename%
 

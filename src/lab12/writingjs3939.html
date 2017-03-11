@@ -14,71 +14,77 @@
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function it_works(){
-    echo "It works!";
+            <td class="preformatted">function itWorks(){
+    console.log("It works!");
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function print_msg($msg){
-    echo $msg;
+            <td class="preformatted">function printMsg(msg){
+    console.log(msg);
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function get_g(){ return 9.81; }</td>
+            <td class="preformatted">function getG(){ return 9.81; }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function mul($a, $b) { return $a * $b; }</td>
+            <td class="preformatted">function mul(a, b) { return a * b; }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function sum($a, $b) {
-    return $a + $b;
+            <td class="preformatted">function sum(a, b) {
+    return a + b;
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function abs($a) {
-    if ($a &lt; 0) {
-        return -$a;
+            <td class="preformatted">function abs(a) {
+    if (a &lt; 0) {
+        return -a;
     } else {
-        return $a;
+        return a;
     }
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function divide($a, $b){
-    if($b==0){
-        throw new Exception("b is 0");
+            <td class="preformatted">function divide(a, b){
+    if(b==0){
+        throw new Error("b is 0");
     }
-    return $a / $b;
+    return a / b;
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function items_in_array($arr){
-    return count($arr);
+            <td class="preformatted">function itemsInArray(arr){
+    return arr.length;
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function items_in_array_offset($arr, $offset){
-    return count($arr) - $offset;
+            <td class="preformatted">function itemsInArrayOffset(arr, offset){
+    return arr.length - offset;
 }</td>
         </tr>
         <tr>
             <td></td>
-            <td class="preformatted">function make_arr(){
+            <td class="preformatted">function makeArr(){
     return [1, 2, 3, 4];
 }</td>
         </tr>
         <tr>
             <td></td>
             <td class="preformatted">function populate(){
-    return array(9.7, 8.1, 7.5, 6.6);
+    return new Array(9.7, 8.1, 7.5, 6.6);
+}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">var sum = function(a,b){
+    return a + b;
 }</td>
         </tr>
     </table>
