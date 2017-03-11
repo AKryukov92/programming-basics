@@ -1,4 +1,7 @@
 @echo off
+pushd ..
+rmdir php /s /q
+popd
 pushd lab01
 call make_php01
 popd

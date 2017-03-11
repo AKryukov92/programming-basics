@@ -1,4 +1,7 @@
 @echo off
+pushd ..
+rmdir js /s /q
+popd
 pushd lab01
 call make_js01
 popd

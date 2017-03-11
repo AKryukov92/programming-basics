@@ -1,4 +1,7 @@
 @echo off
+pushd ..
+rmdir java /s /q
+popd
 pushd lab01
 call make_cs01
 popd
