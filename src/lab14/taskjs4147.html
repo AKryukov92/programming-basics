@@ -1,0 +1,55 @@
+<div class="task_block">
+	<a name="task4147"><h3>Задача</h3></a>
+	<div class="task_desc">Реализовать код так, чтобы при выполнении данных сценариев на экран был выведен указанный результат с точностью 0.0001.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var r = new Rectangle(5,5,20,20);
+var p = new Point(30,30);
+console.log(r.contains(p));</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var corner = new Point(10,10);
+var r = new Rectangle(corner,20,20);
+var p = new Point(30,30);
+console.log(r.contains(p));</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var corner = new Point(10,10);
+var r = new Rectangle(corner,20,20);
+console.log(r.getArea());</td>
+			<td>400</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var projectionX = new Interval(15, 30);
+var projectionY = new Interval(20, 35);
+var r = new Rectangle(projectionX, projectionY);
+console.log(r.getArea());</td>
+			<td>225</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var r = new Rectangle(100, 200, 300, 400);
+var i = new Interval(50, 75);
+console.log(r.getProjectionX().intersects(i));</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">var r = new Rectangle(100, 200, 300, 400);
+var i = new Interval(100, 300);
+console.log(r.getProjectionY().intersects(i));</td>
+			<td>true</td>
+		</tr>
+	</table>
+</div>

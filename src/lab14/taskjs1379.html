@@ -1,0 +1,44 @@
+<div class="task_block">
+    <a name="task1379"><h3>Задача</h3></a>
+    <div class="task_desc">Инициализировать объект range так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Сценарий</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">range.a = 5;
+range.b = 11;
+range.slide(7);
+console.log("Интервал успешно изменен");
+console.log(range.print());</td>
+            <td class="preformatted">Интервал успешно изменен
+[12;18]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">range.a = 17;
+range.b = 29;
+range.slide(-4);
+console.log("Интервал успешно изменен");
+console.log(range.print());</td>
+            <td class="preformatted">Интервал успешно изменен
+[13;25]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">range.a = 37;
+range.b = 31;
+try {
+    range.slide(2);
+    console.log("Интервал успешно изменен");
+    console.log(range.print());
+} catch(ex){
+    console.log(ex.message);
+}</td>
+            <td>Некорректный интервал</td>
+        </tr>
+    </table>
+</div>

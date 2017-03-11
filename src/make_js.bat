@@ -26,4 +26,7 @@ popd
 pushd lab12
 call make_js12
 popd
+pushd lab14
+call make_js14
+popd
 pause

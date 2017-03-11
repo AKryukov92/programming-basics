@@ -1,0 +1,105 @@
+<div class="task_block">
+    <a name="task2000"><h3>Задача</h3></a>
+    <div class="task_desc">Реализовать код так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Сценарий</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(23,29);
+    console.log("Интервал инициализирован");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Интервал инициализирован
+[23;29]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(41,29);
+    console.log("Интервал инициализирован");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Некорректный интервал</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(5, 11);
+    console.log("Интервал инициализирован");
+    range.slide(7);
+    console.log("Интервал успешно изменен");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Интервал инициализирован
+Интервал успешно изменен
+[12;18]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(41,29);
+    console.log("Интервал инициализирован");
+    range.slide(20);
+    console.log("Интервал успешно изменен");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Некорректный интервал</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(211,223);
+    range.squeeze(23);
+    console.log("Интервал успешно изменен");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Невозможно уменьшить интервал
+на указанную длину</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(13,151);
+    range.squeeze(41);
+    console.log("Интервал успешно изменен");
+    console.log(range.print());
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td class="preformatted">Интервал успешно изменен
+[13;110]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">try {
+    var range = new Interval(13, 151);
+    console.log("Длина интервала: " + range.getLength());
+    range.squeeze(41);
+    console.log("Интервал успешно изменен");
+    console.log("Длина интервала: " + range.getLength());
+    console.log(range.print());
+} catch (ex) {
+    console.log(ex.Message);
+}</td>
+            <td class="preformatted">Длина интервала: 138
+Интервал успешно изменен
+Длина интервала: 97
+[13;110]</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,65 @@
+<div class="task_block">
+    <a name="task3956"><h3>Задача</h3></a>
+    <div class="task_desc">Реализовать класс Shape так, чтобы при выполнении данного сценария на экран был выведен указанный результат с точностью 0.0001.</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Сценарий</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">var s1 = new Rectangle(0,0,20,20);
+console.log(s1.getCenter().print());
+var s2 = new Circle(100,100,15);
+console.log(s2.getCenter().print());
+console.log(s1.getCenter().Equals(s2.getCenter()));</td>
+            <td class="preformatted">(10;10)
+(100;100)
+false</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">var s1 = new Rectangle(0,0,20,20);
+console.log(s1.getCenter().print());
+var s2 = new Circle(100,100,15);
+console.log(s2.getCenter().print());
+s1.Slide(90,0);            
+console.log(s1.getCenter().print());
+s2.Slide(0,-90);           
+console.log(s2.getCenter().print());
+console.log(s1.getCenter().Equals(s2.getCenter()));</td>
+            <td class="preformatted">(10;10)
+(100;100)
+(100;10)
+(100;10)
+true</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">var arr = [
+    new Rectangle(0,0,20,20),
+    new Circle(100,100,15),
+    new Rectangle(13,17,19,23),
+    new Circle(73,79,83)
+];
+var areaSum = 0;
+for (int i = 0; i &lt; arr.length; i++){
+    areaSum += arr[i].getArea();
+}
+console.log(areaSum);</td>
+            <td class="preformatted">23186.2901</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">var r = new Rectangle(0, 0, 10, 10, "blue", "red", 5);
+var c = new Circle(50, 50, 40, "green", "yellow", 4);
+console.log(r);
+console.log(c);</td>
+            <td class="preformatted">&lt;rect x='0' y='0' width='10' height='10'
+  stroke='blue' stroke-width='5' fill='red'/&gt;
+&lt;circle cx='50' cy='50' r='40'
+  stroke='green' stroke-width='4' fill='yellow'/&gt;</td>
+        </tr>
+    </table>
+</div>

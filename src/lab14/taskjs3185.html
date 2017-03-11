@@ -1,0 +1,72 @@
+<div class="task_block">
+    <a name="task3185"><h3>Задача</h3></a>
+    <div class="task_desc">Инициализировать объекты p1 и p2 так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Сценарий</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 0;
+p1.y = 0;
+p2.x = 4;
+p2.y = 3;
+var dist = p1.distanceTo(p2);
+console.log(dist);</td>
+            <td>5.0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 0;
+p1.y = 0;
+p2.x = 0;
+p2.y = 0;
+console.log(p1.distanceTo(p2));</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 19;
+p1.y = 23;
+p2.x = 11;
+p2.y = 13;
+console.log(p1.distanceTo(p2));</td>
+            <td>12.8062</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 11;
+p1.y = 23;
+p2.x = 11;
+p2.y = 13;
+console.log(p1.distanceTo(p2));</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 11;
+p1.y = 23;
+p2 = null;
+try {
+    console.log(p1.distanceTo(p2));
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td>Конечная точка не инициализирована</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">p1.x = 31;
+p1.y = 37;
+var p2;
+try {
+    console.log(p1.distanceTo(p2));
+} catch (ex){
+    console.log(ex.message);
+}</td>
+            <td>Конечная точка не инициализирована</td>
+        </tr>
+    </table>
+</div>
