@@ -44,27 +44,28 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task5951"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task2802"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task6580"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task7585"^>№ 16^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
- ^<li^>^<a href="#task7585"^>№ 16^</a^>^</li^> ^
  ^<li^>^<a href="#task8770"^>№ 17^</a^>^</li^> ^
  ^<li^>^<a href="#task4236"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task5969"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task8696"^>№ 20^</a^>^</li^> ^
  ^<li^>^<a href="#task8418"^>№ 21^</a^>^</li^> ^
- ^<li^>^<a href="#task8395"^>№ 22^</a^>^</li^> ^
- ^<li^>^<a href="#task5568"^>№ 23^</a^>^</li^> ^
- ^<li^>^<a href="#task2592"^>№ 24^</a^>^</li^> ^
- ^<li^>^<a href="#task4075"^>№ 25^</a^>^</li^> ^
- ^<li^>^<a href="#task7517"^>№ 26^</a^>^</li^> ^
- ^<li^>^<a href="#task5448"^>№ 27^</a^>^</li^> ^
- ^<li^>^<a href="#task6572"^>№ 28^</a^>^</li^> ^
- ^<li^>^<a href="#task5238"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#task2084"^>№ 30^</a^>^</li^> ^
- ^<li^>^<a href="#task5411"^>№ 31^</a^>^</li^> ^
- ^<li^>^<a href="#task5171"^>№ 32^</a^>^</li^> ^
- ^<li^>^<a href="#task1862"^>№ 33^</a^>^</li^> ^
- ^<li^>^<a href="#task9238"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task5170"^>№ 22^</a^>^</li^> ^
+ ^<li^>^<a href="#task8395"^>№ 23^</a^>^</li^> ^
+ ^<li^>^<a href="#task5568"^>№ 24^</a^>^</li^> ^
+ ^<li^>^<a href="#task2592"^>№ 25^</a^>^</li^> ^
+ ^<li^>^<a href="#task4075"^>№ 26^</a^>^</li^> ^
+ ^<li^>^<a href="#task7517"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task5448"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task6572"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task5238"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task2084"^>№ 31^</a^>^</li^> ^
+ ^<li^>^<a href="#task5411"^>№ 32^</a^>^</li^> ^
+ ^<li^>^<a href="#task5171"^>№ 33^</a^>^</li^> ^
+ ^<li^>^<a href="#task1862"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task9238"^>№ 35^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -99,6 +100,7 @@ type task4236.html>>%filename%
 type task5969.html>>%filename%
 type task8696.html>>%filename%
 type task8418.html>>%filename%
+type task5170.html>>%filename%
 type task8395.html>>%filename%
 type task5568.html>>%filename%
 type task2592.html>>%filename%

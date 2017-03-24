@@ -9,42 +9,6 @@ pushd ..\..\
 mkdir %lang%
 popd
 
-pushd ..\..\%lang%\
-mkdir files
-popd
-
-pushd ..\..\%lang%\files\
-mkdir "11 ОСАЛП"
-popd
-
-pushd "..\..\%lang%\files\11 ОСАЛП"
-mkdir task9299
-mkdir task7560
-mkdir task9002
-mkdir task7432
-mkdir task1954
-mkdir task2048
-popd
-
-pushd "..\..\11 ОСАЛП\task9299"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task9299\*"
-popd
-pushd "..\..\11 ОСАЛП\task7560"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task7560\*"
-popd
-pushd "..\..\11 ОСАЛП\task9002"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task9002\*"
-popd
-pushd "..\..\11 ОСАЛП\task7432"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task7432\*"
-popd
-pushd "..\..\11 ОСАЛП\task1954"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task1954\*"
-popd
-pushd "..\..\11 ОСАЛП\task2048"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task2048\*"
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -94,3 +58,39 @@ echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
+
+pushd ..\..\%lang%\
+mkdir files
+popd
+
+pushd ..\..\%lang%\files\
+mkdir "11 ОСАЛП"
+popd
+
+pushd "..\..\%lang%\files\11 ОСАЛП"
+mkdir task9299
+mkdir task7560
+mkdir task9002
+mkdir task7432
+mkdir task1954
+mkdir task2048
+popd
+
+pushd "..\..\11 ОСАЛП\task9299"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task9299\*"
+popd
+pushd "..\..\11 ОСАЛП\task7560"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task7560\*"
+popd
+pushd "..\..\11 ОСАЛП\task9002"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task9002\*"
+popd
+pushd "..\..\11 ОСАЛП\task7432"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task7432\*"
+popd
+pushd "..\..\11 ОСАЛП\task1954"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task1954\*"
+popd
+pushd "..\..\11 ОСАЛП\task2048"
+copy "*" "..\..\%lang%\files\11 ОСАЛП\task2048\*"
+popd

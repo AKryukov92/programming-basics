@@ -8,6 +8,75 @@ pushd ..\..\
 mkdir %lang%
 popd
 
+echo ^<!DOCTYPE html^> ^
+ ^<html^> ^
+ ^<head^> ^
+ ^<meta charset=^"utf-8^"/^> ^
+ ^<title^>%index% %chapter%^</title^> ^
+ ^<style^>> %filename%
+
+type ..\styles.css >> %filename%
+
+echo ^</style^> ^
+ ^</head^> ^
+ ^<body^> ^
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
+
+type ..\nav_php.html>> %filename%
+
+echo ^<div class="nav"^> ^
+ ^<ul^> ^
+ ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
+ ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
+ ^<li^>^<a href="#task6175"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task4642"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task9765"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task4954"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task5537"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6431"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task7193"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task5621"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task5847"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task4769"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task2205"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task4372"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task4463"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task1668"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task2137"^>№ 17^</a^>^</li^> ^
+ ^</ul^> ^
+ ^</div^>>>%filename%
+ 
+type quiz.html>> %filename%
+
+type info.html>>%filename%
+
+echo ^<div class="section"^>>>%filename%
+
+type task6175.html>>%filename%
+type task4642.html>>%filename%
+type task9765.html>>%filename%
+type task4954.html>>%filename%
+type task5537.html>>%filename%
+type task6431.html>>%filename%
+type task7193.html>>%filename%
+type task5621.html>>%filename%
+type task5847.html>>%filename%
+type task4769.html>>%filename%
+type task9930.html>>%filename%
+type task6861.html>>%filename%
+type task2205.html>>%filename%
+type task4372.html>>%filename%
+type task4463.html>>%filename%
+type task1668.html>>%filename%
+type task2137.html>>%filename%
+
+echo ^</div^>>>%filename%
+
+echo ^</body^> ^
+ ^</html^>>> %filename%
+
 pushd ..\..\%lang%\
 mkdir files
 popd
@@ -87,72 +156,3 @@ popd
 pushd "..\..\9 ОСАЛП\task2137"
 copy "*" "..\..\%lang%\files\9 ОСАЛП\task2137\*"
 popd
-
-echo ^<!DOCTYPE html^> ^
- ^<html^> ^
- ^<head^> ^
- ^<meta charset=^"utf-8^"/^> ^
- ^<title^>%index% %chapter%^</title^> ^
- ^<style^>> %filename%
-
-type ..\styles.css >> %filename%
-
-echo ^</style^> ^
- ^</head^> ^
- ^<body^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
-
-type ..\nav_php.html>> %filename%
-
-echo ^<div class="nav"^> ^
- ^<ul^> ^
- ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#task6175"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task4642"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task9765"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4954"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5537"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6431"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task7193"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task5621"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task5847"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task4769"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task2205"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task4372"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task4463"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task1668"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task2137"^>№ 17^</a^>^</li^> ^
- ^</ul^> ^
- ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
-
-type info.html>>%filename%
-
-echo ^<div class="section"^>>>%filename%
-
-type task6175.html>>%filename%
-type task4642.html>>%filename%
-type task9765.html>>%filename%
-type task4954.html>>%filename%
-type task5537.html>>%filename%
-type task6431.html>>%filename%
-type task7193.html>>%filename%
-type task5621.html>>%filename%
-type task5847.html>>%filename%
-type task4769.html>>%filename%
-type task9930.html>>%filename%
-type task6861.html>>%filename%
-type task2205.html>>%filename%
-type task4372.html>>%filename%
-type task4463.html>>%filename%
-type task1668.html>>%filename%
-type task2137.html>>%filename%
-
-echo ^</div^>>>%filename%
-
-echo ^</body^> ^
- ^</html^>>> %filename%
