@@ -30,8 +30,8 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#task6175"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task4642"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task9765"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4954"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task4954"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task9765"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task5537"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task6431"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task7193"^>№ 7^</a^>^</li^> ^
@@ -56,8 +56,8 @@ echo ^<div class="section"^>>>%filename%
 
 type task6175.html>>%filename%
 type task4642.html>>%filename%
-type task9765.html>>%filename%
 type task4954.html>>%filename%
+type task9765.html>>%filename%
 type task5537.html>>%filename%
 type task6431.html>>%filename%
 type task7193.html>>%filename%
@@ -88,8 +88,8 @@ popd
 pushd "..\..\%lang%\files\9 ОСАЛП"
 mkdir task6175
 mkdir task4642
-mkdir task9765
 mkdir task4954
+mkdir task9765
 mkdir task5537
 mkdir task6431
 mkdir task7193
@@ -111,11 +111,11 @@ popd
 pushd "..\..\9 ОСАЛП\task4642"
 copy "*" "..\..\%lang%\files\9 ОСАЛП\task4642\*"
 popd
-pushd "..\..\9 ОСАЛП\task9765"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task9765\*"
-popd
 pushd "..\..\9 ОСАЛП\task4954"
 copy "*" "..\..\%lang%\files\9 ОСАЛП\task4954\*"
+popd
+pushd "..\..\9 ОСАЛП\task9765"
+copy "*" "..\..\%lang%\files\9 ОСАЛП\task9765\*"
 popd
 pushd "..\..\9 ОСАЛП\task5537"
 copy "*" "..\..\%lang%\files\9 ОСАЛП\task5537\*"
