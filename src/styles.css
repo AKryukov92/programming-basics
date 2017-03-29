@@ -56,7 +56,11 @@ sqrt:before {
 .task_block {
 	width:80%;
 	page-break-inside:avoid;
+	padding:10px;
 	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
 }
 .quiz_block {
 	width:80%;
