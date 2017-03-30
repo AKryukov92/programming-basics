@@ -103,8 +103,8 @@ echo ^<div class="section"^>>>%filename%
 type writing3587.html>>%filename%
 type writing2217.html>>%filename%
 type writing1824.html>>%filename%
-type writingcs2564.html>>%filename%
-type writingcs8487.html>>%filename%
+type writingjava2564.html>>%filename%
+type writingjava8487.html>>%filename%
 type writing8045.html>>%filename%
 
 echo ^</div^>>>%filename%
