@@ -10,18 +10,17 @@ import java.util.stream.Collectors;
 public class Lab06 {
     public static void main(String[] args) {
         System.out.println("8495");
-        task8495();
+        System.out.println(task8495());
         System.out.println();
         System.out.println("1315");
-        task1315();
+        System.out.println(task1315());
         System.out.println();
         System.out.println("6066");
         int[] in6066a = {8, 691, 3000};
         int[] in6066b = {13, 702, 24};
         for (int i = 0; i < in6066a.length; i++){
             try {
-                task6066(in6066a[i], in6066b[i]);
-                System.out.println();
+                System.out.println(task6066(in6066a[i], in6066b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -32,8 +31,7 @@ public class Lab06 {
         int[] in2565b = {13, 703, 24};
         for (int i = 0; i < in2565a.length; i++){
             try {
-                task2565(in2565a[i], in2565b[i]);
-                System.out.println();
+                System.out.println(task2565(in2565a[i], in2565b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -44,7 +42,7 @@ public class Lab06 {
         String[] in2594b = {"#", " ", "?", "*"};
         for (int i = 0; i < in2594a.length; i++){
             try {
-                task2594(in2594a[i], in2594b[i]);
+                System.out.println(task2594(in2594a[i], in2594b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -61,10 +59,10 @@ public class Lab06 {
         System.out.println(task5053(27, 17).stream().map(Object::toString).collect(Collectors.joining(" ")));
         System.out.println();
         System.out.println("3762");
-        task3762();
+        System.out.println(task3762());
         System.out.println();
         System.out.println("3550");
-        task3550();
+        System.out.println(task3550());
         System.out.println();
         System.out.println("2475");
         System.out.println(task2475() - 120300);
@@ -128,7 +126,7 @@ public class Lab06 {
         int[] in7585 = {10, 15, 20, 9, 21};
         for (int i = 0; i < in7585.length; i++){
             try {
-                task7585(in7585[i]);
+                System.out.println(task7585(in7585[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -138,7 +136,7 @@ public class Lab06 {
         int[] in3983 = {5, 23, 51, 0, -7};
         for (int i = 0; i < in3983.length; i++){
             try {
-                task3983(in3983[i]);
+                System.out.println(task3983(in3983[i]));
                 System.out.println();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -149,7 +147,7 @@ public class Lab06 {
         int[] in8770 = {30, 37, 40, 8, 100};
         for (int i = 0; i < in7585.length; i++){
             try {
-                task8770(in8770[i]);
+                System.out.println(task8770(in8770[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -159,7 +157,7 @@ public class Lab06 {
         int[] in4236 = {3, 12, 15, -1, 16};
         for (int i = 0; i < in4236.length; i++){
             try {
-                task4236(in4236[i]);
+                System.out.println(task4236(in4236[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -188,7 +186,11 @@ public class Lab06 {
         int[] in5170 = {6, 3219, 7, 2017, -10};
         for (int i = 0; i < in5170.length; i++){
             try {
-                System.out.println(task5170(in5170[i]));
+                if (task5170(in5170[i])) {
+                    System.out.println("Число простое");
+                } else {
+                    System.out.println("Число не простое");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -198,7 +200,7 @@ public class Lab06 {
         int[] in8395 = {1, 13, -1, 21};
         for (int i = 0; i < in8395.length; i++){
             try {
-                task8395(in8395[i]);
+                System.out.println(task8395(in8395[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -208,7 +210,7 @@ public class Lab06 {
         int[] in5568 = {1, 10, -2, 23};
         for (int i = 0; i < in5568.length; i++){
             try {
-                task5568(in5568[i]);
+                System.out.println(task5568(in5568[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -220,7 +222,7 @@ public class Lab06 {
         int[] in2592h = {3, 10, 0, 15, 8, -6};
         for (int i = 0; i < in2592s.length; i++){
             try {
-                task2592(in2592s[i], in2592w[i], in2592h[i]);
+                System.out.println(task2592(in2592s[i], in2592w[i], in2592h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -230,7 +232,7 @@ public class Lab06 {
         int[] in4075 = {5, 15, 0, -2};
         for (int i = 0; i < in4075.length; i++){
             try {
-                task4075(in4075[i]);
+                System.out.println(task4075(in4075[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -241,7 +243,7 @@ public class Lab06 {
         int[] in7517h = {1, 2, 3, 5, 17, 0, 11, -7};
         for (int i = 0; i < in7517w.length; i++){
             try {
-                task7517(in7517w[i], in7517h[i]);
+                System.out.println(task7517(in7517w[i], in7517h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -252,43 +254,43 @@ public class Lab06 {
         int[] in5448h = {6, 3, 0, -2, -3};
         for (int i = 0; i < in5448s.length; i++){
             try {
-                task5448(in5448s[i], in5448h[i]);
+                System.out.println(task5448(in5448s[i], in5448h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
         System.out.println();
         System.out.println("6572");
-        task6572(8, 13);
-        task6572(691, 703);
-        task6572(19, 3);
+        System.out.println(task6572(8, 13));
+        System.out.println(task6572(691, 703));
+        System.out.println(task6572(19, 3));
         System.out.println();
         System.out.println("5238");
         int[] in5238w = {5, 4, 0, 7, -11, 29};
         int[] in5238h = {5, 5, 5, 0, 4, -2};
         for (int i = 0; i < in5238w.length; i++){
             try {
-                task5238(in5238w[i], in5238h[i]);
+                System.out.println(task5238(in5238w[i], in5238h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
         System.out.println();
         System.out.println("2084");
-        task2084(20, 30);
-        task2084(8, 13);
-        task2084(571, 580);
-        task2084(691, 703);
-        task2084(-71, -96);
-        task2084(64, 58);
-        task2084(19, 7);
-        task2084(401, 390);
-        task2084(800, 785);
+        System.out.println(task2084(20, 30));
+        System.out.println(task2084(8, 13));
+        System.out.println(task2084(571, 580));
+        System.out.println(task2084(691, 703));
+        System.out.println(task2084(-71, -96));
+        System.out.println(task2084(64, 58));
+        System.out.println(task2084(19, 7));
+        System.out.println(task2084(401, 390));
+        System.out.println(task2084(800, 785));
         System.out.println();
         System.out.println("5411");
-        task5411(7, 11);
-        task5411(211, 223);
-        task5411(37, 29);
+        System.out.println(task5411(7, 11));
+        System.out.println(task5411(211, 223));
+        System.out.println(task5411(37, 29));
         System.out.println();
         System.out.println("5171");
         String[] in5171s1 = {"#", "?", "*", "=", "o", "!"};
@@ -297,7 +299,7 @@ public class Lab06 {
         int[] in5171h = {3, 10, 0, 15, 8, -6};
         for (int i = 0; i < in5238w.length; i++){
             try {
-                task5171(in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
+                System.out.println(task5171(in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -310,63 +312,76 @@ public class Lab06 {
         int[] in1862h = {3, 10, 0, 15, 8, -6};
         for (int i = 0; i < in1862s1.length; i++){
             try {
-                task1862(in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
+                System.out.println(task1862(in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
     }
 
-    public static void task8495(){
+    public static String task8495(){
+        StringBuilder sb = new StringBuilder(13);
         int i = 0;
         while (i < 13){
-            System.out.print("!");
+            sb.append("!");
             i++;
         }
+        return sb.toString();
     }
 
-    public static void task1315(){
+    public static String task1315(){
         int a = 17;
         int b = 47;
+        StringBuilder sb = new StringBuilder((b - a) * 2);
         while (a <= b){
-            System.out.print(a + " ");
+            sb.append(a);
+            sb.append(" ");
             a++;
         }
+        return sb.toString();
     }
 
-    public static void task6066(int a, int b) throws Exception {
+    public static String task6066(int a, int b) throws Exception {
         if (a > b){
             throw new Exception("Сообщение об ошибке");
         }
+        StringBuilder sb = new StringBuilder((b - a) * 2);
         int i = a;
         while(i <= b){
-            System.out.println(i);
+            sb.append(i);
+            sb.append("\n");
             i++;
         }
+        return sb.toString();
     }
 
-    public static void task2565(int a, int b) throws Exception {
+    public static String task2565(int a, int b) throws Exception {
         if (a > b){
             throw new Exception("Сообщение об ошибке");
         }
         int i = b;
+        StringBuilder sb = new StringBuilder(b - a);
         while(i >= a){
-            System.out.print(i + " ");
+            sb.append(i);
+            sb.append(" ");
             i--;
         }
+        return sb.toString();
     }
 
-    public static void task2594(int a, String b) throws Exception {
+    public static String task2594(int a, String b) throws Exception {
         if (a < 0){
             throw new Exception("Сообщение об ошибке");
         }
         int i = 0;
-        System.out.print("\"");
+        StringBuilder sb = new StringBuilder(a + 2);
+        sb.append("\"");
         while(i < a){
-            System.out.print(b);
+            sb.append(b);
             i++;
         }
-        System.out.println("\"");
+        sb.append("\"");
+        return sb.toString();
     }
 
     public static List<Integer> task2321(int a, int b){
@@ -402,20 +417,30 @@ public class Lab06 {
         return ret;
     }
 
-    public static void task3762(){
+    public static String task3762(){
         int i = 1;
+        StringBuilder sb = new StringBuilder(80);
         while (i <= 20){
-            System.out.println(i + "\t" + i*453);
+            sb.append(i);
+            sb.append("\t");
+            sb.append(i*453);
+            sb.append("\n");
             i++;
         }
+        return sb.toString();
     }
 
-    public static void task3550(){
+    public static String task3550(){
         int i = 1;
+        StringBuilder sb = new StringBuilder(40);
         while (i <= 9){
-            System.out.println(i + " x 7 = " + i*7);
+            sb.append(i);
+            sb.append(" x 7 = ");
+            sb.append(i * 7);
+            sb.append("\n");
             i++;
         }
+        return sb.toString();
     }
 
     public static int task2475(){
@@ -527,69 +552,73 @@ public class Lab06 {
         return sum;
     }
 
-    public static void task7585(int x) throws Exception {
+    public static String task7585(int x) throws Exception {
         if (x > 20 || x < 10){
             throw new Exception("Сообщение об ошибке");
         }
+        StringBuilder sb = new StringBuilder();
         int i = 10;
         while (i <= 20){
-            System.out.print(i);
+            sb.append(i);
             if (i == x){
-                System.out.print("+");
+                sb.append("+");
             }
-            System.out.println();
+            sb.append("\n");
             i++;
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task3983(int n) throws Exception {
+    public static String task3983(int n) throws Exception {
         if (n < 0){
             throw new Exception("Сообщение об ошибке");
         }
+        StringBuilder sb = new StringBuilder();
         int i = 1;
         while (i <= n){
-            System.out.print("#");
+            sb.append("#");
             if (i%20 == 0){
-                System.out.println();
+                sb.append("\n");
             }
             i++;
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task8770(int x) throws Exception {
+    public static String task8770(int x) throws Exception {
         if (x > 40 || x < 30){
             throw new Exception("Сообщение об ошибке");
         }
         int i = 30;
+        StringBuilder sb = new StringBuilder();
         while (i <= 40){
-            System.out.print(i);
+            sb.append(i);
             if (i == x){
-                System.out.print("+");
+                sb.append("+");
             } else {
-                System.out.print("-");
+                sb.append("-");
             }
-            System.out.println();
+            sb.append("\n");
             i++;
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task4236(int y) throws Exception {
+    public static String task4236(int y) throws Exception {
         if (y < 0 || y > 15){
             throw new Exception("Сообщение об ошибке");
         }
         int i = 0;
+        StringBuilder sb = new StringBuilder();
         while (i < y){
-            System.out.print("#");
+            sb.append("#");
             i++;
         }
         while (i < 15){
-            System.out.print(".");
+            sb.append(".");
             i++;
         }
-        System.out.println();
+        return sb.toString();
     }
 
     public static int task5969(int a, int b){
@@ -638,151 +667,160 @@ public class Lab06 {
         return ret;
     }
 
-    public static String task5170(int y) throws Exception {
+    public static boolean task5170(int y) throws Exception {
         if (y <= 0){
             throw new Exception("Сообщение об ошибке");
         }
         int i = 2;
         while (i < y/2+1){
             if (y%i == 0){
-                return "Число не простое";
+                return false;
             }
             i++;
         }
-        return "Число простое";
+        return true;
     }
 
-    public static void task8395(int w) throws Exception {
+    public static String task8395(int w) throws Exception {
         if (w < 0 || w > 20){
             throw new Exception("Сообщение об ошибке");
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < w; i++){
-            System.out.print("a");
+            sb.append("a");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("b");
+            sb.append("b");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("c");
+            sb.append("c");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("d");
+            sb.append("d");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("e");
+            sb.append("e");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("f");
+            sb.append("f");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("g");
+            sb.append("g");
         }
-        System.out.println();
+        sb.append("\n");
         for (int i = 0; i < w; i++){
-            System.out.print("h");
+            sb.append("h");
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task5568(int w) throws Exception {
+    public static String task5568(int w) throws Exception {
         if (w < 0 || w > 20){
             throw new Exception("Сообщение об ошибке");
         }
         int i = 0;
+        StringBuilder sb = new StringBuilder();
         while (i <= 9){
             int j = 0;
             while (j < w){
-                System.out.print(i);
+                sb.append(i);
                 j++;
             }
-            System.out.println();
+            sb.append("\n");
             i++;
         }
+        return sb.toString();
     }
 
-    public static void task2592(String s, int w, int h) throws Exception {
+    public static String task2592(String s, int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w == 0 || h == 0){
-            return;
+            return "";
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){
-                System.out.print(s);
+                sb.append(s);
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 
-    public static void task4075(int w) throws Exception {
+    public static String task4075(int w) throws Exception {
         if (w < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w < 2){
-            System.out.println("\n\n");
-            return;
+            return "\n\n";
         }
-        System.out.print("+");
+        StringBuilder sb = new StringBuilder();
+        sb.append("+");
         for (int i = 1; i < w-1; i++){
-            System.out.print("-");
+            sb.append("-");
         }
-        System.out.print("+\n|");
+        sb.append("+\n|");
         for (int i = 1; i < w-1; i++){
-            System.out.print(".");
+            sb.append(".");
         }
-        System.out.print("|\n+");
+        sb.append("|\n+");
         for (int i = 1; i < w-1; i++){
-            System.out.print("-");
+            sb.append("-");
         }
-        System.out.println("+");
+        sb.append("+");
+        return sb.toString();
     }
 
-    public static void task7517(int w, int h) throws Exception {
+    public static String task7517(int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w == 0 || h == 0){
-            return;
+            return "";
         }
-        System.out.print(" ");
+        StringBuilder sb = new StringBuilder();
+        sb.append(" ");
         for (int i = 0; i < w; i++){
-            System.out.print(i);
+            sb.append(i);
         }
-        System.out.println();
+        sb.append("\n");
         for (int j = 0; j < h; j++){
-            System.out.print(j);
+            sb.append(j);
             for (int i = 0; i < w; i++){
-                System.out.print(" ");
+                sb.append(" ");
             }
-            System.out.println("|");
+            sb.append("|\n");
         }
-        System.out.print(" ");
+        sb.append(" ");
         for (int i = 0; i < w; i++){
-            System.out.print("-");
+            sb.append("-");
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task5448(String s, int h) throws Exception {
+    public static String task5448(String s, int h) throws Exception {
         if (h < 0){
             throw new Exception("Сообщение об ошибке");
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= h; i++){
             for (int j = 0; j < i; j++){
-                System.out.print(s);
+                sb.append(s);
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 
-    public static void task6572(int a, int b){
+    public static String task6572(int a, int b){
         int i = 0, n, min;
         if (a < b){
             n = b - a;
@@ -794,72 +832,80 @@ public class Lab06 {
         if (min%2 == 0){
             min ++;
         }
+        StringBuilder sb = new StringBuilder();
         while(i <= n){
             for (int j = 0; j < i/2; j++){
-                System.out.print(".");
+                sb.append(".");
             }
-            System.out.println(i+ min);
+            sb.append(i+min);
+            sb.append("\n");
             i += 2;
         }
-        System.out.println();
+        sb.append("\n");
+        return sb.toString();
     }
 
-    public static void task5238(int w, int h) throws Exception {
+    public static String task5238(int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w == 0 || h == 0){
-            System.out.println();
-            return;
+            return "\n";
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < h; i++){
             int j = 0;
             while (j < w - i){
-                System.out.print("+");
+                sb.append("+");
                 j++;
             }
             while (j < w){
-                System.out.print("#");
+                sb.append("#");
                 j++;
             }
-            System.out.println();
-
+            sb.append("\n");
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task2084(int a, int b){
+    public static String task2084(int a, int b){
         if (a == b){
-            System.out.println(a);
+            return Integer.toString(a);
         } else if (a < b){
+            StringBuilder sb = new StringBuilder();
             int i = a + 2;
             if (a%2 == 0) {
-                System.out.print(a + 1);
+                sb.append(a + 1);
                 i++;
             } else {
+                sb.append(a);
                 System.out.print(a);
             }
             while (i <= b){
-                System.out.print(", " + i);
+                sb.append(", ");
+                sb.append(i);
                 i+=2;
             }
+            return sb.toString();
         } else {
+            StringBuilder sb = new StringBuilder();
             int i = a - 2;
             if (a%2 == 0) {
-                System.out.print(a - 1);
+                sb.append(a - 1);
                 i--;
             } else {
-                System.out.print(a);
+                sb.append(a);
             }
             while (i >= b){
-                System.out.print(", " + i);
+                sb.append(", ");
+                sb.append(i);
                 i-=2;
             }
+            return sb.toString();
         }
-        System.out.println();
     }
 
-    public static void task5411(int p, int q){
+    public static String task5411(int p, int q){
         int i = 1, n, min;
         if (p < q){
             min = p;
@@ -868,55 +914,60 @@ public class Lab06 {
             min = q;
             n = p - q;
         }
-        System.out.print(min);
+        StringBuilder sb = new StringBuilder();
+        sb.append(min);
         while (i <= n/2){
-            System.out.print("<" + (i+min));
+            sb.append("<");
+            sb.append(i+min);
             i++;
         }
         while (i <= n){
-            System.out.print(">" + (i+min));
+            sb.append(">");
+            sb.append(i+min);
             i++;
         }
-        System.out.println();
+        return sb.toString();
     }
 
-    public static void task5171(String s1, String s2, int w, int h) throws Exception {
+    public static String task5171(String s1, String s2, int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w == 0 || h == 0){
-            System.out.println();
-            return;
+            return "";
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){
                 if (i%2 == 0){
-                    System.out.print(s1);
+                    sb.append(s1);
                 } else {
-                    System.out.print(s2);
+                    sb.append(s2);
                 }
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 
-    public static void task1862(String s1, String s2, int w, int h) throws Exception {
+    public static String task1862(String s1, String s2, int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (w == 0 || h == 0){
-            System.out.println();
-            return;
+            return "";
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){
                 if (j%2 == 0){
-                    System.out.print(s1);
+                    sb.append(s1);
                 } else {
-                    System.out.print(s2);
+                    sb.append(s2);
                 }
             }
-            System.out.println();
+            sb.append("\n");
         }
+        return sb.toString();
     }
 }

@@ -11,10 +11,15 @@ import java.util.stream.Collectors;
 public class Lab05 {
     public static void main(String[] args) {
         System.out.println("8878");
-        System.out.println(task8878(5, 6));
-        System.out.println(task8878(11, 7));
-        System.out.println(task8878(-2, 3));
-        System.out.println(task8878(-13, -18));
+        int[] in8878a = {5, 11, -2, -13};
+        int[] in8878b = {6, 7, 3, -18};
+        for (int i = 0; i < in8878a.length; i++){
+            if (task8878(in8878a[i], in8878b[i])){
+                System.out.println("Второе");
+            } else {
+                System.out.println("Первое");
+            }
+        }
         System.out.println();
         System.out.println("3072");
         System.out.println(task3072(173, 179).print());
@@ -38,7 +43,11 @@ public class Lab05 {
         double[] in4257p = {2297, 983, 101, 15, -113};
         for (int i = 0; i < in4257l.length; i++){
             try {
-                System.out.println(task4257(in4257l[i], in4257p[i]));
+                if (task4257(in4257l[i], in4257p[i])){
+                    System.out.println("Расстояние в километрах меньше");
+                } else {
+                    System.out.println("Расстояние в футах меньше");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -49,7 +58,11 @@ public class Lab05 {
         int[] in2291v2 = {13000, 5000, 3989, -2891};
         for (int i = 0; i < in2291v1.length; i++){
             try {
-                System.out.println(task2291(in2291v1[i], in2291v2[i]));
+                if (task2291(in2291v1[i], in2291v2[i])){
+                    System.out.println("V1 (км/ч) меньше V2 (м/с)");
+                } else {
+                    System.out.println("V2 (м/с) меньше V1(км/ч)");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -60,7 +73,11 @@ public class Lab05 {
         int[] in1763a = {31, 41, 23, -5};
         for (int i = 0; i < in1763r.length; i++){
             try {
-                System.out.println(task1763(in1763r[i], in1763a[i]));
+                if (task1763(in1763r[i], in1763a[i])){
+                    System.out.println("Площадь квадрата больше площади круга");
+                } else {
+                    System.out.println("Площадь круга больше площади квадрата");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -73,10 +90,15 @@ public class Lab05 {
         System.out.println(task5662(0, 7, 13));
         System.out.println();
         System.out.println("1945");
-        System.out.println(task1945(17, 19));
-        System.out.println(task1945(13, 19));
-        System.out.println(task1945(-20, 4));
-        System.out.println(task1945(300, -200));
+        int[] in1945sc = {17, 13, -20, 300};
+        int[] in1945ss = {19, 19, 4, -200};
+        for (int i = 0; i < in1945sc.length; i++){
+            if (task1945(in1945sc[i], in1945ss[i])){
+                System.out.println("Круг уместится в квадрате");
+            } else {
+                System.out.println("Круг не поместится в квадрате");
+            }
+        }
         System.out.println();
         System.out.println("1186");
         System.out.println();
@@ -93,14 +115,17 @@ public class Lab05 {
         }
         System.out.println();
         System.out.println("8715");
-        System.out.println(task8715(1, 2, 3));
-        System.out.println(task8715(-4, 0, 5));
-        System.out.println(task8715(7, 4, -2));
-        System.out.println(task8715(0, 5, -7));
-        System.out.println(task8715(4, 4, 4));
-        System.out.println(task8715(-2, 4, 3));
-        System.out.println(task8715(10, 3, 5));
-        System.out.println(task8715(5, 1, 7));
+        int[] in8718a = {1, -4, 7, 0, 4, -2, 10, 5};
+        int[] in8718b = {2, 0, 4, 5, 4, 4, 3, 1};
+        int[] in8718c = {3, 5, -2, -7, 4, 3, 5, 7};
+        for (int i = 0; i < in8718a.length; i++){
+            if (task8715(in8718a[i], in8718b[i], in8718c[i])){
+                System.out.println("Выполняется");
+            } else {
+                System.out.println("Не выполняется");
+            }
+            System.out.println();
+        }
         System.out.println();
         System.out.println("8518");
         System.out.println(task8518("a"));
@@ -109,11 +134,17 @@ public class Lab05 {
         System.out.println(task8518("i"));
         System.out.println();
         System.out.println("4847");
-        System.out.println(task4847(31, 59, 83));
-        System.out.println(task4847(19, 19, 41));
-        System.out.println(task4847(7, 11, 11));
-        System.out.println(task4847(67, -67, 67));
-        System.out.println(task4847(1, 1, 1));
+        int[] in4847x = {31, 19, 7, 67, 1};
+        int[] in4847y = {59, 19, 11, -67, 1};
+        int[] in4847z = {83, 41, 11, 67, 1};
+        for (int i = 0; i < in8718a.length; i++){
+            if (task4847(in4847x[i], in4847y[i], in4847z[i])){
+                System.out.println("Среди чисел есть равные");
+            } else {
+                System.out.println("Числа не равны друг другу");
+            }
+            System.out.println();
+        }
         System.out.println();
         System.out.println("7991");
         System.out.println(task7991(6.35, 2.7, 5.08).stream().map(Object::toString).collect(Collectors.joining(" ")));
@@ -127,7 +158,11 @@ public class Lab05 {
         int[] in6291c = {14, 37, 29, 47, 211, 239, -3, -101};
         for (int i = 0; i < in6291a.length; i++){
             try {
-                System.out.println(task6291(in6291a[i], in6291b[i], in6291c[i]));
+                if (task6291(in6291a[i], in6291b[i], in6291c[i])){
+                    System.out.println("Треугольник является равнобедренным.");
+                } else {
+                    System.out.println("Треугольник не является равнобедренным.");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -153,7 +188,11 @@ public class Lab05 {
         int[] in3883 = {1234, 9171, 100, 98765};
         for (int i = 0; i < in3883.length; i++){
             try {
-                System.out.println(task3883(in3883[i]));
+                if (task3883(in3883[i])){
+                    System.out.println("равно");
+                } else {
+                    System.out.println("не равно");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -176,7 +215,11 @@ public class Lab05 {
         int[] in6556d = {9, 19, 11, 7, 6, 19, -4639};
         for (int i = 0; i < in6556a.length; i++){
             try {
-                System.out.println(task6556(in6556a[i], in6556b[i], in6556c[i], in6556d[i]));
+                if (task6556(in6556a[i], in6556b[i], in6556c[i], in6556d[i])){
+                    System.out.println("Размещение возможно");
+                } else {
+                    System.out.println("Размещение невозможно");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -191,7 +234,11 @@ public class Lab05 {
         int[] in5635w = {3, 3, 3, 3, 1, 3, 3, 0, -1};
         for (int i = 0; i < in5635xt.length; i++){
             try {
-                System.out.println(task5635(in5635xt[i], in5635yt[i], in5635xp[i], in5635yp[i], in5635h[i], in5635w[i]));
+                if (task5635(in5635xt[i], in5635yt[i], in5635xp[i], in5635yp[i], in5635h[i], in5635w[i])){
+                    System.out.println("точка внутри");
+                } else {
+                    System.out.println("точка не внутри");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -206,7 +253,12 @@ public class Lab05 {
         int[] in3878yp2 = {3, 6, 2, 2, 2, 2};
         for (int i = 0; i < in3878xt.length; i++){
             try {
-                System.out.println(task3878(in3878xt[i], in3878yt[i], in3878xp1[i], in3878yp1[i], in3878xp2[i], in3878yp2[i]));
+                if (task3878(in3878xt[i], in3878yt[i], in3878xp1[i], in3878yp1[i], in3878xp2[i], in3878yp2[i])){
+                    System.out.println("Точка принадлежит прямой");
+                } else {
+                    System.out.println("Точка не принадлежит прямой");
+                }
+                System.out.println();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -246,7 +298,11 @@ public class Lab05 {
         int[] in2153t = {13, 44, 60, 0, 61};
         for (int i = 0; i < in2153t.length; i++){
             try {
-                System.out.println(task2153(in2153t[i]));
+                if (task2153(in2153t[i])){
+                    System.out.println("Зеленый");
+                } else {
+                    System.out.println("Красный");
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -322,12 +378,8 @@ public class Lab05 {
         }
     }
 
-    public static String task8878(int a, int b){
-        if(a < b){
-            return "Второе";
-        } else {
-            return "Первое";
-        }
+    public static boolean task8878(int a, int b){
+        return a < b;
     }
 
     public static class class3072{
@@ -354,7 +406,7 @@ public class Lab05 {
         if(k > 0){
             return Math.sqrt(k);
         } else {
-            return k*k;
+            return k * k;
         }
     }
 
@@ -366,46 +418,34 @@ public class Lab05 {
         }
     }
 
-    public static String task4257(double l, double p) throws Exception {
+    public static boolean task4257(double l, double p) throws Exception {
         if(l < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if(p < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (l*1000<p*0.305){
-            return "Расстояние в километрах меньше";
-        } else {
-            return "Расстояние в футах меньше";
-        }
+        return l * 1000 < p * 0.305;
     }
 
-    public static String task2291(double v1, double v2) throws Exception {
+    public static boolean task2291(double v1, double v2) throws Exception {
         if (v1 < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (v2 < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (v1*1000*60>v2){
-            return "V1 (км/ч) меньше V2 (м/с)";
-        } else {
-            return "V2 (м/с) меньше V1(км/ч)";
-        }
+        return v1 * 1000 * 60 > v2;
     }
 
-    public static String task1763(int r, int a) throws Exception {
+    public static boolean task1763(int r, int a) throws Exception {
         if (r < 0){
             throw new Exception("Сообщение об ошибке");
         }
         if (a < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (Math.PI*r*r < a*a){
-            return "Площадь квадрата больше площади круга";
-        } else {
-            return "Площадь круга больше площади квадрата";
-        }
+        return Math.PI * r * r < a * a;
     }
 
     public static String task5662(int a, int b, int c){
@@ -422,12 +462,8 @@ public class Lab05 {
         }
     }
 
-    public static String task1945(int sc, int ss){
-        if (Math.sqrt(sc/Math.PI) < Math.sqrt(ss)/2){
-            return "Круг уместится в квадрате";
-        } else {
-            return "Круг не поместится в квадрате";
-        }
+    public static boolean task1945(int sc, int ss){
+        return Math.sqrt(sc/Math.PI) < Math.sqrt(ss)/2;
     }
 
     public static double[] task1186(double x, double y, double z){
@@ -438,12 +474,8 @@ public class Lab05 {
         };
     }
 
-    public static String task8715(int a, int b, int c){
-        if (a < b && b < c){
-            return "Выполняется";
-        } else {
-            return "Не выполняется";
-        }
+    public static boolean task8715(int a, int b, int c){
+        return a < b && b < c;
     }
 
     public static String task8518(String x){
@@ -459,12 +491,8 @@ public class Lab05 {
         return builder.toString();
     }
 
-    public static String task4847(int x, int y, int z){
-        if (x == y || y == z || x == z){
-            return "Среди чисел есть равные";
-        } else {
-            return "Числа не равны друг другу";
-        }
+    public static boolean task4847(int x, int y, int z){
+        return x == y || y == z || x == z;
     }
 
     public static List<Double> task7991(double x, double y, double z){
@@ -481,15 +509,11 @@ public class Lab05 {
         return ret;
     }
 
-    public static String task6291(int a, int b, int c) throws Exception {
+    public static boolean task6291(int a, int b, int c) throws Exception {
         if (a < 0 || b < 0 || c < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (a == b || a == c || b == c){
-            return "Треугольник является равнобедренным.";
-        } else {
-            return "Треугольник не является равнобедренным.";
-        }
+        return a == b || a == c || b == c;
     }
 
     public static int task3770(int x, int y, int z){
@@ -531,17 +555,13 @@ public class Lab05 {
         }
     }
 
-    public static String task3883(int a) throws Exception {
+    public static boolean task3883(int a) throws Exception {
         if (a < 1000 || a > 9999){
             throw new Exception("Сообщение об ошибке");
         }
         int hundreds = a / 100 % 10;
         int units = a % 10;
-        if (hundreds == units){
-            return "равно";
-        } else {
-            return "не равно";
-        }
+        return hundreds == units;
     }
 
     public static String task4527(int a) throws Exception {
@@ -568,37 +588,25 @@ public class Lab05 {
         return Integer.toString(a);
     }
 
-    public static String task6556(int a, int b, int c, int d) throws Exception {
+    public static boolean task6556(int a, int b, int c, int d) throws Exception {
         if (a < 0 || b < 0 || c < 0 || d < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (a < c && b < d){
-            return "Размещение возможно";
-        } else {
-            return "Размещение невозможно";
-        }
+        return a < c && b < d;
     }
 
-    public static String task5635(int xt, int yt, int xp, int yp, int h, int w) throws Exception {
+    public static boolean task5635(int xt, int yt, int xp, int yp, int h, int w) throws Exception {
         if (h <= 0 || w <= 0 || xt < 0 || yt < 0 || xp < 0 || yp < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if (xp < xt && xt < xp+w && yp < yt && yt < yp+w){
-            return "точка внутри";
-        } else {
-            return "точка не внутри";
-        }
+        return xp < xt && xt < xp+w && yp < yt && yt < yp+w;
     }
 
-    public static String task3878(int xt, int yt, int xp1, int yp1, int xp2, int yp2) throws Exception {
+    public static boolean task3878(int xt, int yt, int xp1, int yp1, int xp2, int yp2) throws Exception {
         if (xt < 0 || yt < 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if ((xt - xp1) / (xp2 - xp1) == (yt - yp1) / (yp2 - yp1)){
-            return "Точка принадлежит прямой";
-        } else {
-            return "Точка не принадлежит прямой";
-        }
+        return (xt - xp1) / (xp2 - xp1) == (yt - yp1) / (yp2 - yp1);
     }
 
     public static class class1217{
@@ -682,15 +690,11 @@ public class Lab05 {
         return new class1438(horizontal.a, vertical.a, vertical.b - vertical.a, horizontal.b - horizontal.a);
     }
 
-    public static String task2153(int t) throws Exception {
+    public static boolean task2153(int t) throws Exception {
         if (t > 60 || t <= 0){
             throw new Exception("Сообщение об ошибке");
         }
-        if ((t-1)%5 < 3){
-            return "Зеленый";
-        } else {
-            return "Красный";
-        }
+        return (t-1)%5 < 3;
     }
 
     public static String task7937(int w, int h, int c, int d) throws Exception {
