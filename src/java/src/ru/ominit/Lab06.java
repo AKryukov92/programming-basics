@@ -134,6 +134,17 @@ public class Lab06 {
             }
         }
         System.out.println();
+        System.out.println("3983");
+        int[] in3983 = {5, 23, 51, 0, -7};
+        for (int i = 0; i < in3983.length; i++){
+            try {
+                task3983(in3983[i]);
+                System.out.println();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
         System.out.println("8770");
         int[] in8770 = {30, 37, 40, 8, 100};
         for (int i = 0; i < in7585.length; i++){
@@ -214,7 +225,96 @@ public class Lab06 {
                 System.out.println(e.getMessage());
             }
         }
-
+        System.out.println();
+        System.out.println("4075");
+        int[] in4075 = {5, 15, 0, -2};
+        for (int i = 0; i < in4075.length; i++){
+            try {
+                task4075(in4075[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("7517");
+        int[] in7517w = {1, 2, 7, 5, 0, 23, -3, 7};
+        int[] in7517h = {1, 2, 3, 5, 17, 0, 11, -7};
+        for (int i = 0; i < in7517w.length; i++){
+            try {
+                task7517(in7517w[i], in7517h[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("5448");
+        String[] in5448s = {"#", "\\", "^", "*", "56"};
+        int[] in5448h = {6, 3, 0, -2, -3};
+        for (int i = 0; i < in5448s.length; i++){
+            try {
+                task5448(in5448s[i], in5448h[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("6572");
+        task6572(8, 13);
+        task6572(691, 703);
+        task6572(19, 3);
+        System.out.println();
+        System.out.println("5238");
+        int[] in5238w = {5, 4, 0, 7, -11, 29};
+        int[] in5238h = {5, 5, 5, 0, 4, -2};
+        for (int i = 0; i < in5238w.length; i++){
+            try {
+                task5238(in5238w[i], in5238h[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("2084");
+        task2084(20, 30);
+        task2084(8, 13);
+        task2084(571, 580);
+        task2084(691, 703);
+        task2084(-71, -96);
+        task2084(64, 58);
+        task2084(19, 7);
+        task2084(401, 390);
+        task2084(800, 785);
+        System.out.println();
+        System.out.println("5411");
+        task5411(7, 11);
+        task5411(211, 223);
+        task5411(37, 29);
+        System.out.println();
+        System.out.println("5171");
+        String[] in5171s1 = {"#", "?", "*", "=", "o", "!"};
+        String[] in5171s2 = {"0", "-", "!", "+", "T", "."};
+        int[] in5171w = {5, 7, 90, 0, -2, 20};
+        int[] in5171h = {3, 10, 0, 15, 8, -6};
+        for (int i = 0; i < in5238w.length; i++){
+            try {
+                task5171(in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("1862");
+        String[] in1862s1 = {"#", "?", "*", "=", "o", "!"};
+        String[] in1862s2 = {"0", "-", "!", "+", "T", "."};
+        int[] in1862w = {5, 7, 90, 0, -2, 20};
+        int[] in1862h = {3, 10, 0, 15, 8, -6};
+        for (int i = 0; i < in1862s1.length; i++){
+            try {
+                task1862(in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public static void task8495(){
@@ -443,6 +543,21 @@ public class Lab06 {
         System.out.println();
     }
 
+    public static void task3983(int n) throws Exception {
+        if (n < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        int i = 1;
+        while (i <= n){
+            System.out.print("#");
+            if (i%20 == 0){
+                System.out.println();
+            }
+            i++;
+        }
+        System.out.println();
+    }
+
     public static void task8770(int x) throws Exception {
         if (x > 40 || x < 30){
             throw new Exception("Сообщение об ошибке");
@@ -590,6 +705,7 @@ public class Lab06 {
             i++;
         }
     }
+
     public static void task2592(String s, int w, int h) throws Exception {
         if (w < 0 || h < 0){
             throw new Exception("Сообщение об ошибке");
@@ -600,6 +716,205 @@ public class Lab06 {
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){
                 System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task4075(int w) throws Exception {
+        if (w < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (w < 2){
+            System.out.println("\n\n");
+            return;
+        }
+        System.out.print("+");
+        for (int i = 1; i < w-1; i++){
+            System.out.print("-");
+        }
+        System.out.print("+\n|");
+        for (int i = 1; i < w-1; i++){
+            System.out.print(".");
+        }
+        System.out.print("|\n+");
+        for (int i = 1; i < w-1; i++){
+            System.out.print("-");
+        }
+        System.out.println("+");
+    }
+
+    public static void task7517(int w, int h) throws Exception {
+        if (w < 0 || h < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (w == 0 || h == 0){
+            return;
+        }
+        System.out.print(" ");
+        for (int i = 0; i < w; i++){
+            System.out.print(i);
+        }
+        System.out.println();
+        for (int j = 0; j < h; j++){
+            System.out.print(j);
+            for (int i = 0; i < w; i++){
+                System.out.print(" ");
+            }
+            System.out.println("|");
+        }
+        System.out.print(" ");
+        for (int i = 0; i < w; i++){
+            System.out.print("-");
+        }
+        System.out.println();
+    }
+
+    public static void task5448(String s, int h) throws Exception {
+        if (h < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        for (int i = 1; i <= h; i++){
+            for (int j = 0; j < i; j++){
+                System.out.print(s);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task6572(int a, int b){
+        int i = 0, n, min;
+        if (a < b){
+            n = b - a;
+            min = a;
+        } else {
+            n = a - b;
+            min = b;
+        }
+        if (min%2 == 0){
+            min ++;
+        }
+        while(i <= n){
+            for (int j = 0; j < i/2; j++){
+                System.out.print(".");
+            }
+            System.out.println(i+ min);
+            i += 2;
+        }
+        System.out.println();
+    }
+
+    public static void task5238(int w, int h) throws Exception {
+        if (w < 0 || h < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (w == 0 || h == 0){
+            System.out.println();
+            return;
+        }
+        for (int i = 0; i < h; i++){
+            int j = 0;
+            while (j < w - i){
+                System.out.print("+");
+                j++;
+            }
+            while (j < w){
+                System.out.print("#");
+                j++;
+            }
+            System.out.println();
+
+        }
+        System.out.println();
+    }
+
+    public static void task2084(int a, int b){
+        if (a == b){
+            System.out.println(a);
+        } else if (a < b){
+            int i = a + 2;
+            if (a%2 == 0) {
+                System.out.print(a + 1);
+                i++;
+            } else {
+                System.out.print(a);
+            }
+            while (i <= b){
+                System.out.print(", " + i);
+                i+=2;
+            }
+        } else {
+            int i = a - 2;
+            if (a%2 == 0) {
+                System.out.print(a - 1);
+                i--;
+            } else {
+                System.out.print(a);
+            }
+            while (i >= b){
+                System.out.print(", " + i);
+                i-=2;
+            }
+        }
+        System.out.println();
+    }
+
+    public static void task5411(int p, int q){
+        int i = 1, n, min;
+        if (p < q){
+            min = p;
+            n = q - p;
+        } else {
+            min = q;
+            n = p - q;
+        }
+        System.out.print(min);
+        while (i <= n/2){
+            System.out.print("<" + (i+min));
+            i++;
+        }
+        while (i <= n){
+            System.out.print(">" + (i+min));
+            i++;
+        }
+        System.out.println();
+    }
+
+    public static void task5171(String s1, String s2, int w, int h) throws Exception {
+        if (w < 0 || h < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (w == 0 || h == 0){
+            System.out.println();
+            return;
+        }
+        for (int i = 0; i < h; i++){
+            for (int j = 0; j < w; j++){
+                if (i%2 == 0){
+                    System.out.print(s1);
+                } else {
+                    System.out.print(s2);
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void task1862(String s1, String s2, int w, int h) throws Exception {
+        if (w < 0 || h < 0){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (w == 0 || h == 0){
+            System.out.println();
+            return;
+        }
+        for (int i = 0; i < h; i++){
+            for (int j = 0; j < w; j++){
+                if (j%2 == 0){
+                    System.out.print(s1);
+                } else {
+                    System.out.print(s2);
+                }
             }
             System.out.println();
         }

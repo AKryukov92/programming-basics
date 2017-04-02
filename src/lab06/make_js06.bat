@@ -49,25 +49,25 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^<ul^> ^
  ^<li^>^<a href="#task7585"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task8770"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task4236"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task5969"^>№ 21^</a^>^</li^> ^
- ^<li^>^<a href="#task8696"^>№ 22^</a^>^</li^> ^
- ^<li^>^<a href="#task8418"^>№ 23^</a^>^</li^> ^
- ^<li^>^<a href="#task5170"^>№ 24^</a^>^</li^> ^
- ^<li^>^<a href="#task8395"^>№ 25^</a^>^</li^> ^
- ^<li^>^<a href="#task5568"^>№ 26^</a^>^</li^> ^
- ^<li^>^<a href="#task2592"^>№ 27^</a^>^</li^> ^
- ^<li^>^<a href="#task4075"^>№ 28^</a^>^</li^> ^
- ^<li^>^<a href="#task7517"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#task5448"^>№ 30^</a^>^</li^> ^
- ^<li^>^<a href="#task6572"^>№ 31^</a^>^</li^> ^
- ^<li^>^<a href="#task5238"^>№ 32^</a^>^</li^> ^
- ^<li^>^<a href="#task2084"^>№ 33^</a^>^</li^> ^
- ^<li^>^<a href="#task5411"^>№ 34^</a^>^</li^> ^
- ^<li^>^<a href="#task5171"^>№ 35^</a^>^</li^> ^
- ^<li^>^<a href="#task1862"^>№ 36^</a^>^</li^> ^
- ^<li^>^<a href="#task9238"^>№ 37^</a^>^</li^> ^
+ ^<li^>^<a href="#task3983"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task8770"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task4236"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task5969"^>№ 22^</a^>^</li^> ^
+ ^<li^>^<a href="#task8696"^>№ 23^</a^>^</li^> ^
+ ^<li^>^<a href="#task8418"^>№ 24^</a^>^</li^> ^
+ ^<li^>^<a href="#task5170"^>№ 25^</a^>^</li^> ^
+ ^<li^>^<a href="#task8395"^>№ 26^</a^>^</li^> ^
+ ^<li^>^<a href="#task5568"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task2592"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task4075"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task7517"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task5448"^>№ 31^</a^>^</li^> ^
+ ^<li^>^<a href="#task6572"^>№ 32^</a^>^</li^> ^
+ ^<li^>^<a href="#task5238"^>№ 33^</a^>^</li^> ^
+ ^<li^>^<a href="#task2084"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task5411"^>№ 35^</a^>^</li^> ^
+ ^<li^>^<a href="#task5171"^>№ 36^</a^>^</li^> ^
+ ^<li^>^<a href="#task1862"^>№ 37^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -99,6 +99,7 @@ type task5951.html>>%filename%
 type task2802.html>>%filename%
 type task6580.html>>%filename%
 type task7585.html>>%filename%
+type task3983.html>>%filename%
 type task8770.html>>%filename%
 type task4236.html>>%filename%
 type task5969.html>>%filename%
@@ -117,7 +118,6 @@ type task2084.html>>%filename%
 type task5411.html>>%filename%
 type task5171.html>>%filename%
 type task1862.html>>%filename%
-type task9238.html>>%filename%
 
 echo ^</div^>>>%filename%
 
