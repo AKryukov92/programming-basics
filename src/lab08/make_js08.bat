@@ -73,27 +73,27 @@ echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
-type taskjs1223.html>>%filename%
-type taskjs3946.html>>%filename%
-type taskjs3940.html>>%filename%
-type taskjs8311.html>>%filename%
-type taskjs3134.html>>%filename%
-type taskjs9774.html>>%filename%
-type taskjs9711.html>>%filename%
-type taskjs3333.html>>%filename%
-type taskjs7290.html>>%filename%
+type task1223.html>>%filename%
+type task3946.html>>%filename%
+type task3940.html>>%filename%
+type task8311.html>>%filename%
+type task3134.html>>%filename%
+type task9774.html>>%filename%
+type task9711.html>>%filename%
+type task3333.html>>%filename%
+type task7290.html>>%filename%
 type task5694.html>>%filename%
 type task6806.html>>%filename%
-type taskjs4515.html>>%filename%
-type taskjs9271.html>>%filename%
-type taskjs8769.html>>%filename%
-type taskjs4497.html>>%filename%
-type taskjs8820.html>>%filename%
-type taskjs3218.html>>%filename%
-type taskjs4283.html>>%filename%
-type taskjs7703.html>>%filename%
-type taskjs9182.html>>%filename%
-type taskjs5541.html>>%filename%
+type task4515.html>>%filename%
+type task9271.html>>%filename%
+type task8769.html>>%filename%
+type task4497.html>>%filename%
+type task8820.html>>%filename%
+type task3218.html>>%filename%
+type task4283.html>>%filename%
+type task7703.html>>%filename%
+type task9182.html>>%filename%
+type task5541.html>>%filename%
 type task2386.html>>%filename%
 type task9159.html>>%filename%
 
