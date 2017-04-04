@@ -1,7 +1,9 @@
 package ru.ominit;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -9,64 +11,84 @@ import java.util.stream.Collectors;
  */
 public class Lab08 {
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println("4425");
+        int[] in4425a = {0, 3, 9, 5, -1, 0};
+        String[] in4425data = {
+            "4 3 2 1",
+            "4 3 2 1",
+            "0 9 8 7 6 5 4 3 2 1",
+            "4 3 2 1",
+            "4 3 2 1",
+            ""
+        };
+        int[] out4425 = {4, 1, 1, 0, 0, 0};
+        for (int i = 0; i < in4425a.length; i++){
+            try{
+                System.out.println(task4425(in4425a[i], in4425data[i]) - out4425[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
         System.out.println("1223");
         String[] in1223 = {
-            "1 2 3 4 1",
-            "1 2 3 4 1 2 3 4 1 2",
-            ""
+                "1 2 3 4 1",
+                "1 2 3 4 1 2 3 4 1 2",
+                ""
         };
         String[] out1223 = {
-            "1 4 3 2 1",
-            "2 1 4 3 2 1 4 3 2 1",
-            ""
+                "1 4 3 2 1",
+                "2 1 4 3 2 1 4 3 2 1",
+                ""
         };
-        for (int i = 0; i < in1223.length; i++){
+        for (int i = 0; i < in1223.length; i++) {
             System.out.println(
-                task1223(in1223[i])
-                    .stream()
-                    .map(Object::toString)
-                    .collect(Collectors.joining(" "))
-                    .equals(out1223[i])
+                    task1223(in1223[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out1223[i])
             );
         }
         System.out.println();
         System.out.println("3946");
         String[] in3946 = {
-            "1 2 3 4 1",
-            "1 2 3 4 1 3 4 4 4 4",
-            ""
+                "1 2 3 4 1",
+                "1 2 3 4 1 3 4 4 4 4",
+                ""
         };
         double[] out3946 = {2.2, 3, 0};
-        for (int i = 0; i < in3946.length; i++){
+        for (int i = 0; i < in3946.length; i++) {
             System.out.println(task3946(in3946[i]) - out3946[i]);
         }
         System.out.println();
         System.out.println("3940");
         String[] in3940l = {
-            "1 2 3 4 1",
-            "1 2 3 4 1 3 4 4 4 4",
-            "1 2 3",
-            "1 2 3"
+                "1 2 3 4 1",
+                "1 2 3 4 1 3 4 4 4 4",
+                "1 2 3",
+                "1 2 3"
         };
         String[] in3940r = {
-            "2 3 4 1 2",
-            "3 4 1 2 3 4 1 2 3 4",
-            "3 4",
-            "3 4 1 2"
+                "2 3 4 1 2",
+                "3 4 1 2 3 4 1 2 3 4",
+                "3 4",
+                "3 4 1 2"
         };
         String[] out3940 = {
-            "2 6 12 4 2",
-            "3 8 3 8 3 12 4 8 12 16",
-            "", ""
+                "2 6 12 4 2",
+                "3 8 3 8 3 12 4 8 12 16",
+                "", ""
         };
-        for (int i = 0; i < in3940l.length; i++){
+        for (int i = 0; i < in3940l.length; i++) {
             try {
                 System.out.println(
-                    task3940(in3940l[i], in3940r[i])
-                        .stream()
-                        .map(Object::toString)
-                        .collect(Collectors.joining(" "))
-                        .equals(out3940[i])
+                        task3940(in3940l[i], in3940r[i])
+                                .stream()
+                                .map(Object::toString)
+                                .collect(Collectors.joining(" "))
+                                .equals(out3940[i])
                 );
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -77,29 +99,29 @@ public class Lab08 {
         int[] in8311b = {0, 3, 2, 8, 11, -1, 8};
         int[] in8311e = {3, 10, 2, 2, 8, 5, 50};
         String[] in8311data = {
-            "1 2 3 4 1",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3"
+                "1 2 3 4 1",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "1 2 3 4 1 2 3 4 1 2 3"
         };
         String[] out8311 = {
-            "1 2 3 4",
-            "4 1 2 3 4 1 2 3",
-            "3",
-            "3 4 1 2 3 4 1",
-            "", "", ""
+                "1 2 3 4",
+                "4 1 2 3 4 1 2 3",
+                "3",
+                "3 4 1 2 3 4 1",
+                "", "", ""
         };
-        for (int i = 0; i < in8311b.length; i++){
+        for (int i = 0; i < in8311b.length; i++) {
             try {
                 System.out.println(
-                    task8311(in8311b[i], in8311e[i], in8311data[i])
-                        .stream()
-                        .map(Object::toString)
-                        .collect(Collectors.joining(" "))
-                        .equals(out8311[i])
+                        task8311(in8311b[i], in8311e[i], in8311data[i])
+                                .stream()
+                                .map(Object::toString)
+                                .collect(Collectors.joining(" "))
+                                .equals(out8311[i])
                 );
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -111,18 +133,18 @@ public class Lab08 {
         int[] in3134q = {3, 5, 2, 5, 17, 2, -5};
         String in3134data = "1 2 3 4 1 2";
         String[] out3134 = {
-            "4 2 3 1 1 2",
-            "1 2 2 4 1 3",
-            "1 2 1 4 3 2",
-            "", "", "", ""
+                "4 2 3 1 1 2",
+                "1 2 2 4 1 3",
+                "1 2 1 4 3 2",
+                "", "", "", ""
         };
-        for (int i = 0; i < in3134p.length; i++){
+        for (int i = 0; i < in3134p.length; i++) {
             try {
                 System.out.println(
-                    task3134(in3134p[i], in3134q[i], in3134data)
-                        .stream()
-                        .collect(Collectors.joining(" "))
-                        .equals(out3134[i])
+                        task3134(in3134p[i], in3134q[i], in3134data)
+                                .stream()
+                                .collect(Collectors.joining(" "))
+                                .equals(out3134[i])
                 );
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -133,35 +155,35 @@ public class Lab08 {
         int[] in9774m = {31, -3};
         String in9774data = "1 2 3 4 1 2";
         String[] out9774 = {
-            "62 31 124 93 62 31",
-            "-6 -3 -12 -9 -6 -3"
+                "62 31 124 93 62 31",
+                "-6 -3 -12 -9 -6 -3"
         };
-        for (int i = 0; i < in9774m.length; i++){
+        for (int i = 0; i < in9774m.length; i++) {
             System.out.println(
-                task9774(in9774m[i], in9774data)
-                    .stream()
-                    .map(Object::toString)
-                    .collect(Collectors.joining(" "))
-                    .equals(out9774[i])
+                    task9774(in9774m[i], in9774data)
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out9774[i])
             );
         }
         System.out.println();
         System.out.println("9711");
         String[] in9711 = {
-            "1 2 3 4 1 2",
-            "3 4 1 2 3 4 1 2 3 4"
+                "1 2 3 4 1 2",
+                "3 4 1 2 3 4 1 2 3 4"
         };
         String[] out9711 = {
-            "2 1 2 3 4 1",
-            "4 3 4 1 2 3 4 1 2 3"
+                "2 1 2 3 4 1",
+                "4 3 4 1 2 3 4 1 2 3"
         };
-        for (int i = 0; i < in9711.length; i++){
+        for (int i = 0; i < in9711.length; i++) {
             System.out.println(
-                task9711(in9711[i])
-                    .stream()
-                    .map(Object::toString)
-                    .collect(Collectors.joining(" "))
-                    .equals(out9711[i])
+                    task9711(in9711[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out9711[i])
             );
         }
         System.out.println();
@@ -169,38 +191,38 @@ public class Lab08 {
         int[] in3333s = {1, 3, 6, 8, 99, -2, -9};
         String in3333data = "1 2 3 4 1 2";
         String[] out3333 = {
-            "2 1 2 3 4 1",
-            "4 1 2 1 2 3",
-            "1 2 3 4 1 2",
-            "1 2 1 2 3 4",
-            "4 1 2 1 2 3",
-            "3 4 1 2 1 2",
-            "4 1 2 1 2 3"
+                "2 1 2 3 4 1",
+                "4 1 2 1 2 3",
+                "1 2 3 4 1 2",
+                "1 2 1 2 3 4",
+                "4 1 2 1 2 3",
+                "3 4 1 2 1 2",
+                "4 1 2 1 2 3"
         };
-        for (int i = 0; i < in3333s.length; i++){
+        for (int i = 0; i < in3333s.length; i++) {
             System.out.println(
-                task3333(in3333s[i], in3333data)
-                    .stream()
-                    .map(Object::toString)
-                    .collect(Collectors.joining(" "))
-                    .equals(out3333[i])
+                    task3333(in3333s[i], in3333data)
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out3333[i])
             );
         }
         System.out.println();
         System.out.println("7290");
         int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
         String[] in7290data = {
-            "1 1 1 3 4 1",
-            "1 2 3 4 1 2",
-            "3 4 1 2 3 4 1 2 3 1 2",
-            "4 2 3 4 3 2",
-            "4 4 4 4 4 3 2 1",
-            "4 4 4 4",
-            "1 1 1 3 4 1",
-            "1 2 3"
+                "1 1 1 3 4 1",
+                "1 2 3 4 1 2",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 2 1",
+                "4 4 4 4",
+                "1 1 1 3 4 1",
+                "1 2 3"
         };
         int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
-        for (int i = 0; i < in3333s.length; i++){
+        for (int i = 0; i < in3333s.length; i++) {
             try {
                 System.out.println(task7290(in7290b[i], in7290data[i]) - out7290[i]);
             } catch (Exception e) {
@@ -211,13 +233,13 @@ public class Lab08 {
         System.out.println("5694");
         String[] in5694 = {"a", "d", "h", "i", "z"};
         String[] out5694 = {
-            "a+\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd+\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh+\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n"
+                "a+\nb\nc\nd\ne\nf\ng\nh\n",
+                "a\nb\nc\nd+\ne\nf\ng\nh\n",
+                "a\nb\nc\nd\ne\nf\ng\nh+\n",
+                "a\nb\nc\nd\ne\nf\ng\nh\n",
+                "a\nb\nc\nd\ne\nf\ng\nh\n"
         };
-        for (int i = 0; i < in5694.length; i++){
+        for (int i = 0; i < in5694.length; i++) {
             try {
                 System.out.println(task5694(in5694[i]).equals(out5694[i]));
             } catch (Exception e) {
@@ -228,15 +250,224 @@ public class Lab08 {
         System.out.println("6806");
         int[] in6806 = {10, 15, 20, 9, 23};
         String[] out6806 = {
-            "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-            "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-            "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-            "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-            "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
+                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
         };
-        for (int i = 0; i < in6806.length; i++){
+        for (int i = 0; i < in6806.length; i++) {
             System.out.println(task6806(in6806[i]).equals(out6806[i]));
         }
+        System.out.println();
+        System.out.println("4515");
+        String[] in4515 = {
+                "9 8 7 6 5",
+                "4 3 2 1 5 6 7 8 9 0",
+                "1 2 3 1"
+        };
+        for (int i = 0; i < in4515.length; i++) {
+            if (task4515(in4515[i])) {
+                System.out.println("Повторения есть");
+            } else {
+                System.out.println("Повторений нет");
+            }
+        }
+        System.out.println();
+        System.out.println("7035");
+        String[] in7035 = {
+                "1 2 3 4 5 6",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 8 9",
+                "4 4 4 4",
+                "4 3"
+        };
+        int[] out7035 = {1, 1, 2, 3, 4, 3};
+        for (int i = 0; i < in7035.length; i++) {
+            System.out.println(task7035(in7035[i]) - out7035[i]);
+        }
+        System.out.println();
+        System.out.println("9271");
+        String[] in9271 = {
+                "1 2 3 4 1 2",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 2 1",
+                "4 4 4 4",
+                "4 3"
+        };
+        String[] out9271 = {
+                "0 1 2 3 0 1",
+                "2 3 0 1 2 3 0 1 2 0 1",
+                "2 0 1 2 1 0",
+                "3 3 3 3 3 2 1 0",
+                "0 0 0 0",
+                "1 0"
+        };
+        for (int i = 0; i < in9271.length; i++) {
+            System.out.println(
+                    task9271(in9271[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out9271[i])
+            );
+        }
+        System.out.println();
+        System.out.println("8769");
+        int[] in8769p = {1, 8, 0, 0, 1, -1, 5};
+        int[] in8769q = {3, 10, 5, 5, 7, 0, 10};
+        String[] in8769s = {
+                "1 2 3 4 1 2",
+                "3 4 4 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 2 1",
+                "4 4 4 4",
+                "4 3",
+                "1 2 3 4"
+        };
+        int[] out8769 = {2, 1, 2, 3, 0, 0, 0};
+        for (int i = 0; i < in8769p.length; i++) {
+            try {
+                System.out.println(task8769(in8769p[i], in8769q[i], in8769s[i]) - out8769[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("4497");
+        int[] in4497x = {1, 3, 5};
+        int[] in4497y = {33, 55, 1};
+        String in4497data = "1 2 3 4 1 2";
+        String[] out4497 = {
+                "33 2 3 4 33 2",
+                "1 2 55 4 1 2",
+                "1 2 3 4 1 2"
+        };
+        for (int i = 0; i < in4497x.length; i++) {
+            System.out.println(
+                    task4497(in4497x[i], in4497y[i], in4497data)
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out4497[i])
+            );
+        }
+        System.out.println();
+        System.out.println("8820");
+        String[] in8820 = {
+                "1 2 3 4 1 2",
+                "1 2 3 4 1 2 3 4 1 2 3"
+        };
+        String[] out8820 = {
+                "2 1 4 3 2 1",
+                "3 2 1 4 3 2 1 4 3 2 1"
+        };
+        for (int i = 0; i < in8820.length; i++) {
+            System.out.println(
+                    task8820(in8820[i])
+                            .stream()
+                            .collect(Collectors.joining(" "))
+                            .equals(out8820[i])
+            );
+        }
+        System.out.println();
+        System.out.println("3218");
+        String[] in3218 = {
+                "1 2 3 4 1 2",
+                "1 2 3 4 1 2 3 4 1 2 3"
+        };
+        String[] out3218 = {
+                "1 1 2 2 3 4",
+                "1 1 1 2 2 2 3 3 3 4 4"
+        };
+        for (int i = 0; i < in3218.length; i++) {
+            System.out.println(
+                    task3218(in3218[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out3218[i])
+            );
+        }
+        System.out.println();
+        System.out.println("4283");
+        int[] in4283k = {3, 5, 2, 1};
+        String[] in4283s = {
+                "1 2 3 4 1 2",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "3 2 2 2 2 2",
+                "4 4 4 4 4 4"
+        };
+        int[] out4283 = {1, 0, 5, 0};
+        for (int i = 0; i < in4283k.length; i++) {
+            System.out.println(task4283(in4283k[i], in4283s[i]) - out4283[i]);
+        }
+        System.out.println();
+        System.out.println("7703");
+        String[] in7703 = {
+                "1 2 3 4 1 2",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "3 2 2 2 2 2",
+                "4 4 4 4 4 4"
+        };
+        String[] out7703 = {
+                "2 2 1 1 2 2",
+                "3 3 3 2 3 3 3 2 3 3 3",
+                "1 5 5 5 5 5",
+                "6 6 6 6 6 6"
+        };
+        for (int i = 0; i < in7703.length; i++) {
+            System.out.println(
+                    task7703(in7703[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out7703[i])
+            );
+        }
+        System.out.println();
+        System.out.println("5541");
+        String[] in5541 = {
+                "1 2 3 4 1 2",
+                "1 1 3 3 2 2"
+        };
+        String[] out5541 = {
+                "1 2 3 4",
+                "1 3 2"
+        };
+        for (int i = 0; i < in5541.length; i++) {
+            System.out.println(
+                    task5541(in5541[i])
+                            .stream()
+                            .map(Object::toString)
+                            .collect(Collectors.joining(" "))
+                            .equals(out5541[i])
+            );
+        }
+        System.out.println();
+        System.out.println("9182");
+        String[] in9182 = {
+                "1 2 3 4 5 6",
+                "1 2 3 1 2 6",
+                "1 1 1 1 1 1"
+        };
+        int[] out9182 = {6, 4, 1};
+        for (int i = 0; i < out9182.length; i++) {
+            System.out.println(task9182(in9182[i]) - out9182[i]);
+        }
+    }
+
+    public static int task4425(int a, String raw) throws Exception {
+        if (raw.isEmpty()){
+            throw new Exception("Сообщение об ошибке");
+        }
+        String[] arr = raw.split(" ");
+        if (a < 0 || a >= arr.length){
+            throw new Exception("Сообщение об ошибке");
+        }
+        return Integer.parseInt(arr[a]);
     }
 
     public static List<Integer> task1223(String raw){
@@ -390,5 +621,161 @@ public class Lab08 {
             sb.append("\n");
         }
         return sb.toString();
+    }
+
+    public static boolean task4515(String raw){
+        String[] arr = raw.split(" ");
+        for (int i = 0; i < arr.length; i++){
+            for (int j = i + 1; j < arr.length; j++){
+                if (arr[i].equals(arr[j])){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static int task7035(String raw) {
+        String[] arr = raw.split(" ");
+        int min = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            if (current < min){
+                min = current;
+            }
+        }
+        return min;
+    }
+
+    public static List<Integer> task9271(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        if (arr.length == 0){
+            return ret;
+        }
+        int min = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            if (current < min){
+                min = current;
+            }
+        }
+        for (int i = 0; i < arr.length; i++){
+            ret.add(Integer.parseInt(arr[i]) - min);
+        }
+        return ret;
+    }
+
+    public static int task8769(int p, int q, String raw) throws Exception {
+        String[] arr = raw.split(" ");
+        int i, n;
+        if (p < 0 || p >= arr.length || q < 0 || q >= arr.length){
+            throw new Exception("Сообщение об ошибке");
+        }
+        if (p < q){
+            i = p;
+            n = q;
+        } else {
+            i = q;
+            n = p;
+        }
+        int min = Integer.parseInt(arr[i]);
+        while(i <= n){
+            int current = Integer.parseInt(arr[i]);
+            if (current < min){
+                min = current;
+            }
+            i++;
+        }
+        return min;
+    }
+
+    public static List<Integer> task4497(int x, int y, String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            if (current == x){
+                ret.add(y);
+            } else {
+                ret.add(current);
+            }
+        }
+        return ret;
+    }
+
+    public static List<String> task8820(String raw){
+        String[] arr = raw.split(" ");
+        List<String> ret = new ArrayList<>();
+        for (int i = arr.length - 1; i >= 0; i--){
+            ret.add(arr[i]);
+        }
+        return ret;
+    }
+
+    public static List<Integer> task3218(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        int[] data = new int[arr.length];
+        for (int i = 0; i < arr.length; i++){
+            data[i] = Integer.parseInt(arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++){
+            int min = i;
+            for (int j = i; j < arr.length; j++){
+                if (data[j] < data[min]){
+                    min = j;
+                }
+            }
+            int t = data[min];
+            data[min] = data[i];
+            data[i] = t;
+            ret.add(t);
+        }
+        return ret;
+    }
+
+    public static int task4283(int k, String raw){
+        String[] arr = raw.split(" ");
+        int count = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (Integer.parseInt(arr[i]) == k){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static List<Integer> task7703(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++){
+            int count = 0;
+            for (int j = 0; j < arr.length; j++){
+                if (arr[j].equals(arr[i])){
+                    count++;
+                }
+            }
+            ret.add(count);
+        }
+        return ret;
+    }
+
+    public static Set<String> task5541(String raw){
+        String[] arr = raw.split(" ");
+        Set<String> data = new HashSet<>();
+        for (int i = 0; i < arr.length; i++){
+            data.add(arr[i]);
+        }
+        return data;
+    }
+
+    public static int task9182(String raw){
+        String[] arr = raw.split(" ");
+        Set<String> data = new HashSet<>();
+        for (int i = 0; i < arr.length; i++){
+            data.add(arr[i]);
+        }
+        return data.size();
     }
 }
