@@ -31,6 +31,6 @@ java/*
 csharp/*
 js/*
 php/*
-/src/java/out
-/src/java/.idea/workspace.xml
-/src/java/.idea/tasks.xml
+/out
+/.idea/workspace.xml
+/.idea/tasks.xml

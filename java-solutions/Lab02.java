@@ -1,5 +1,3 @@
-package ru.ominit;
-
 /**
  * @author akryukov
  *         28.03.2017
