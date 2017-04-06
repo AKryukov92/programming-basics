@@ -82,10 +82,6 @@ mkdir files
 popd
 
 pushd ..\..\%lang%\files\
-mkdir "9 ОСАЛП"
-popd
-
-pushd "..\..\%lang%\files\9 ОСАЛП"
 mkdir task6175
 mkdir task4642
 mkdir task4954
@@ -105,54 +101,54 @@ mkdir task1668
 mkdir task2137
 popd
 
-pushd "..\..\9 ОСАЛП\task6175"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task6175\*"
+pushd "task6175"
+copy "*" "..\..\..\%lang%\files\task6175\*"
 popd
-pushd "..\..\9 ОСАЛП\task4642"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task4642\*"
+pushd "task4642"
+copy "*" "..\..\..\%lang%\files\task4642\*"
 popd
-pushd "..\..\9 ОСАЛП\task4954"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task4954\*"
+pushd "task4954"
+copy "*" "..\..\..\%lang%\files\task4954\*"
 popd
-pushd "..\..\9 ОСАЛП\task9765"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task9765\*"
+pushd "task9765"
+copy "*" "..\..\..\%lang%\files\task9765\*"
 popd
-pushd "..\..\9 ОСАЛП\task5537"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task5537\*"
+pushd "task5537"
+copy "*" "..\..\..\%lang%\files\task5537\*"
 popd
-pushd "..\..\9 ОСАЛП\task6431"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task6431\*"
+pushd "task6431"
+copy "*" "..\..\..\%lang%\files\task6431\*"
 popd
-pushd "..\..\9 ОСАЛП\task7193"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task7193\*"
+pushd "task7193"
+copy "*" "..\..\..\%lang%\files\task7193\*"
 popd
-pushd "..\..\9 ОСАЛП\task5621"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task5621\*"
+pushd "task5621"
+copy "*" "..\..\..\%lang%\files\task5621\*"
 popd
-pushd "..\..\9 ОСАЛП\task5847"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task5847\*"
+pushd "task5847"
+copy "*" "..\..\..\%lang%\files\task5847\*"
 popd
-pushd "..\..\9 ОСАЛП\task4769"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task4769\*"
+pushd "task4769"
+copy "*" "..\..\..\%lang%\files\task4769\*"
 popd
-pushd "..\..\9 ОСАЛП\task9930"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task9930\*"
+pushd "task9930"
+copy "*" "..\..\..\%lang%\files\task9930\*"
 popd
-pushd "..\..\9 ОСАЛП\task6861"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task6861\*"
+pushd "task6861"
+copy "*" "..\..\..\%lang%\files\task6861\*"
 popd
-pushd "..\..\9 ОСАЛП\task2205"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task2205\*"
+pushd "task2205"
+copy "*" "..\..\..\%lang%\files\task2205\*"
 popd
-pushd "..\..\9 ОСАЛП\task4372"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task4372\*"
+pushd "task4372"
+copy "*" "..\..\..\%lang%\files\task4372\*"
 popd
-pushd "..\..\9 ОСАЛП\task4463"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task4463\*"
+pushd "task4463"
+copy "*" "..\..\..\%lang%\files\task4463\*"
 popd
-pushd "..\..\9 ОСАЛП\task1668"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task1668\*"
+pushd "task1668"
+copy "*" "..\..\..\%lang%\files\task1668\*"
 popd
-pushd "..\..\9 ОСАЛП\task2137"
-copy "*" "..\..\%lang%\files\9 ОСАЛП\task2137\*"
+pushd "task2137"
+copy "*" "..\..\..\%lang%\files\task2137\*"
 popd

@@ -65,10 +65,6 @@ mkdir images
 popd
 
 pushd ..\..\%lang%\images
-mkdir "10 ОСАЛП"
-popd
-
-pushd "..\..\%lang%\images\10 ОСАЛП"
 mkdir task9300
 mkdir task3951
 mkdir task6409
@@ -76,21 +72,20 @@ mkdir task7343
 mkdir task7060
 popd
 
-pushd "..\..\10 ОСАЛП"
-copy "Main example.png" "..\%lang%\images\10 ОСАЛП\Main example.png"
+copy "Main example.png" "..\..\%lang%\images\Main example.png"
+
+pushd "task9300"
+copy "*.png" "..\..\..\%lang%\images\task9300\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task9300"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task9300\*.png"
+pushd "task3951"
+copy "*.png" "..\..\..\%lang%\images\task3951\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task3951"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task3951\*.png"
+pushd "task6409"
+copy "*.png" "..\..\..\%lang%\images\task6409\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task6409"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task6409\*.png"
+pushd "task7343"
+copy "*.png" "..\..\..\%lang%\images\task7343\*.png"
 popd
-pushd "..\..\10 ОСАЛП\task7343"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task7343\*.png"
-popd
-pushd "..\..\10 ОСАЛП\task7060"
-copy "*.png" "..\..\%lang%\images\10 ОСАЛП\task7060\*.png"
+pushd "task7060"
+copy "*.png" "..\..\..\%lang%\images\task7060\*.png"
 popd

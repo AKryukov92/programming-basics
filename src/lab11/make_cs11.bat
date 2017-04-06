@@ -64,10 +64,6 @@ mkdir files
 popd
 
 pushd ..\..\%lang%\files\
-mkdir "11 ОСАЛП"
-popd
-
-pushd "..\..\%lang%\files\11 ОСАЛП"
 mkdir task9299
 mkdir task7560
 mkdir task9002
@@ -76,21 +72,21 @@ mkdir task1954
 mkdir task2048
 popd
 
-pushd "..\..\11 ОСАЛП\task9299"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task9299\*"
+pushd "task9299"
+copy "*" "..\..\..\%lang%\files\task9299\*"
 popd
-pushd "..\..\11 ОСАЛП\task7560"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task7560\*"
+pushd "task7560"
+copy "*" "..\..\..\%lang%\files\task7560\*"
 popd
-pushd "..\..\11 ОСАЛП\task9002"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task9002\*"
+pushd "task9002"
+copy "*" "..\..\..\%lang%\files\task9002\*"
 popd
-pushd "..\..\11 ОСАЛП\task7432"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task7432\*"
+pushd "task7432"
+copy "*" "..\..\..\%lang%\files\task7432\*"
 popd
-pushd "..\..\11 ОСАЛП\task1954"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task1954\*"
+pushd "task1954"
+copy "*" "..\..\..\%lang%\files\task1954\*"
 popd
-pushd "..\..\11 ОСАЛП\task2048"
-copy "*" "..\..\%lang%\files\11 ОСАЛП\task2048\*"
+pushd "task2048"
+copy "*" "..\..\..\%lang%\files\task2048\*"
 popd

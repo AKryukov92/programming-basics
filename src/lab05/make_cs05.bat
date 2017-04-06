@@ -8,29 +8,6 @@ pushd ..\..\
 mkdir %lang%
 popd
 
-pushd ..\..\%lang%\
-mkdir images
-popd
-
-pushd ..\..\images
-copy "Области 1.png" "..\%lang%\images\Области 1.png"
-copy "Области 2.png" "..\%lang%\images\Области 2.png"
-copy "Области 3.png" "..\%lang%\images\Области 3.png"
-copy "Области 4.png" "..\%lang%\images\Области 4.png"
-copy "Области 5.png" "..\%lang%\images\Области 5.png"
-copy "Области 6.png" "..\%lang%\images\Области 6.png"
-copy "Области 7.png" "..\%lang%\images\Области 7.png"
-copy "Области 8.png" "..\%lang%\images\Области 8.png"
-copy "Области 9.png" "..\%lang%\images\Области 9.png"
-copy "Области 10.png" "..\%lang%\images\Области 10.png"
-copy "Области 11.png" "..\%lang%\images\Области 11.png"
-copy "Области 12.png" "..\%lang%\images\Области 12.png"
-copy "Области 13.png" "..\%lang%\images\Области 13.png"
-copy "Области 14.png" "..\%lang%\images\Области 14.png"
-copy "Области 15.png" "..\%lang%\images\Области 15.png"
-copy "Области 16.png" "..\%lang%\images\Области 16.png"
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -150,3 +127,26 @@ echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
+
+pushd ..\..\%lang%\
+mkdir images
+popd
+
+pushd images
+copy "Области 1.png" "..\..\..\%lang%\images\Области 1.png"
+copy "Области 2.png" "..\..\..\%lang%\images\Области 2.png"
+copy "Области 3.png" "..\..\..\%lang%\images\Области 3.png"
+copy "Области 4.png" "..\..\..\%lang%\images\Области 4.png"
+copy "Области 5.png" "..\..\..\%lang%\images\Области 5.png"
+copy "Области 6.png" "..\..\..\%lang%\images\Области 6.png"
+copy "Области 7.png" "..\..\..\%lang%\images\Области 7.png"
+copy "Области 8.png" "..\..\..\%lang%\images\Области 8.png"
+copy "Области 9.png" "..\..\..\%lang%\images\Области 9.png"
+copy "Области 10.png" "..\..\..\%lang%\images\Области 10.png"
+copy "Области 11.png" "..\..\..\%lang%\images\Области 11.png"
+copy "Области 12.png" "..\..\..\%lang%\images\Области 12.png"
+copy "Области 13.png" "..\..\..\%lang%\images\Области 13.png"
+copy "Области 14.png" "..\..\..\%lang%\images\Области 14.png"
+copy "Области 15.png" "..\..\..\%lang%\images\Области 15.png"
+copy "Области 16.png" "..\..\..\%lang%\images\Области 16.png"
+popd
