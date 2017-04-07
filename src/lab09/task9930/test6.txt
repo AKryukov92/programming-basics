@@ -1,0 +1,3 @@
+C:\
+C:\Temp\.gitignore
+C:\Temp\com.google\README

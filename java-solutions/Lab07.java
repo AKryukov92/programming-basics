@@ -90,6 +90,30 @@ public class Lab07 {
         System.out.println(task9925("один, два, три, четыре, пять") - 5);
         System.out.println(task9925("янв,фев,март") - 3);
         System.out.println(task9925("один") - 1);
+        System.out.println();
+        System.out.println("1618");
+        String[] in1618 = {
+            "{}",
+            "{{}}",
+            "{{}}{}",
+            "{{}{}}",
+            "{{{{}{}}{{}{{}}{}}}{{}{}}}",
+            "{",
+            "{{}",
+            "{{}}{",
+            "{{{}}{}{}}{{}{}{}",
+            "}",
+            "{}}",
+            "{{{}{}}}{{}{}}{{}}}"
+        };
+        int[] out1618 = {1, 2, 2, 2, 5, -1, -1, -1, -1, -1, -1, -1};
+        for (int i = 0; i < in1618.length; i++){
+            try {
+                task1618(in1618[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public static String STR = "abcdefwxyz";
@@ -164,5 +188,45 @@ public class Lab07 {
 
     public static int task9925(String s){
         return s.split(",").length;
+    }
+
+    public static void task1618(String line) throws Exception {
+        System.out.println(line);
+        int openIndex;
+        int depth = 0;
+        int closeIndex;
+        int lastIndex = 0;
+        while(lastIndex < line.length()){
+            closeIndex = line.indexOf("}", lastIndex);
+            openIndex = line.indexOf("{", lastIndex);
+            if (openIndex >= 0 && openIndex < closeIndex) {
+                depth++;
+                lastIndex = openIndex;
+            }
+            if (openIndex >= 0 && closeIndex < 0){
+                depth++;
+                lastIndex = openIndex;
+            }
+            if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0){
+                depth--;
+                lastIndex = closeIndex;
+            }
+            if (openIndex < 0 && closeIndex >=0){
+                depth--;
+                lastIndex = closeIndex;
+            }
+            if (openIndex < 0 && closeIndex < 0){
+                break;
+            }
+            if (depth < 0){
+                throw new Exception("Неожиданная закрывающаяся скобочка");
+            }
+            System.out.print(depth);
+            lastIndex++;
+        }
+        if (depth > 0){
+            throw new Exception("Неожиданный конец строки");
+        }
+        System.out.println();
     }
 }

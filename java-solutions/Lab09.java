@@ -134,6 +134,67 @@ public class Lab09 {
             System.out.println("-->" + out7193[i] + "<--");
             task7193(".\\task7193\\test" + (i+1) + ".csv");
         }
+        System.out.println();
+        System.out.println("5847");
+        String[] in5847 = {
+            "B", "Y", "I", "F", "", "B", "S"
+        };
+        String[] out5847 = {
+            "32",
+            "0",
+            "24",
+            "0",
+            "Файл не существует",
+            "Указанная буква не найдена",
+            "В данной строке несколько искомых букв"
+        };
+        for (int i = 0; i < out5847.length; i++){
+            System.out.println("-->" + out5847[i] + "<--");
+            task5847(in5847[i], ".\\task5847\\test" + (i+1) + ".txt");
+        }
+        System.out.println();
+        System.out.println("4768");
+        String[] in4769a = {"P", "N" , "W", "U", "F", "I", "B", "P", "S"};
+        String[] in4769b = {"Q", "K", "X", "T", "A", "I", "E", "Q", "F"};
+        String[] out4769 = {
+            "16",
+            "0",
+            "41",
+            "4",
+            "Одна из указанных букв не найдена",
+            "В данной строке несколько искомых букв",
+            "Одна из указанных букв не найдена",
+            "Файл не существует",
+            "Одна из указанных букв не найдена"
+        };
+        for (int i = 0; i < out4769.length; i++){
+            System.out.println("-->" + out4769[i] + "<--");
+            task4769(in4769a[i], in4769b[i], ".\\task4769\\test" + (i+1) + ".txt");
+        }
+        System.out.println();
+        System.out.println("9930");
+        for (int i = 1; i <= 6; i++){
+            System.out.println("#" + i);
+            task9930(".\\task9930\\test" + i + ".txt");
+        }
+        System.out.println();
+        System.out.println("6861");
+        for (int i = 1; i <= 5; i++){
+            System.out.println("#" + i);
+            task6861(".\\task6861\\test" + i + ".txt");
+        }
+        System.out.println();
+        System.out.println("2205");
+        for (int i = 1; i <= 4; i++){
+            System.out.println("#" + i);
+            task2205(".\\task2205\\test" + i + ".txt");
+        }
+        System.out.println();
+        System.out.println("3226");
+        for (int i = 1; i <= 9; i++){
+            System.out.println("#" + i);
+            task3226(".\\task3226\\test" + i + ".txt");
+        }
     }
 
     public static void task6175(String filename) {
@@ -292,7 +353,7 @@ public class Lab09 {
         return width*height;
     }
 
-    public static void task6431(String filename){
+    public static void task6431(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
             if (!scanner.hasNext()) {
@@ -307,7 +368,7 @@ public class Lab09 {
                 }
                 System.out.println(max);
             }
-        } catch (NumberFormatException | InputMismatchException ex){
+        } catch (NumberFormatException | InputMismatchException ex) {
             System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
@@ -339,7 +400,7 @@ public class Lab09 {
         }
     }
 
-    public static void task7193(String filename){
+    public static void task7193(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
             if (!scanner.hasNext()){
@@ -360,6 +421,217 @@ public class Lab09 {
             System.out.println("Файл не существует");
         } catch (Exception e) {
             System.out.println("Некорректный формат данных");
+        }
+    }
+
+    public static void task5847(String a, String filename) {
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            if (scanner.hasNext()){
+                String line = scanner.next();
+                if (line.indexOf(a) != line.lastIndexOf(a)){
+                    System.out.println("В данной строке несколько искомых букв");
+                } else if (line.contains(a)) {
+                    System.out.println(line.length() - line.indexOf(a) - 1);
+                } else {
+                    System.out.println("Указанная буква не найдена");
+                }
+            } else {
+                System.out.println("Файл пуст");
+            }
+        } catch (NumberFormatException | InputMismatchException ex){
+            System.out.println("Не удается считать число");
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println("Некорректный формат данных");
+        }
+    }
+
+    public static void task4769(String a, String b, String filename) {
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            if (scanner.hasNext()){
+                String line = scanner.next();
+                int ia = line.indexOf(a);
+                int ib = line.indexOf(b);
+                if (ia != line.lastIndexOf(a) || ib != line.lastIndexOf(b)){
+                    System.out.println("В данной строке несколько искомых букв");
+                } else if (line.contains(a) && line.contains(b)){
+                    if (ia > ib){
+                        System.out.println(ia - ib - 1);
+                    } else {
+                        System.out.println(ib - ia - 1);
+                    }
+                } else {
+                    System.out.println("Одна из указанных букв не найдена");
+                }
+            } else {
+                System.out.println("Файл пуст");
+            }
+        } catch (NumberFormatException | InputMismatchException ex){
+            System.out.println("Не удается считать число");
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println("Некорректный формат данных");
+        }
+    }
+
+    public static String logic9930(String line) throws Exception {
+        int start = line.lastIndexOf("\\");
+        int end = line.lastIndexOf(".");
+        String name;
+        if (start > end){
+            name = line.substring(start + 1);
+        } else {
+            name = line.substring(start + 1, end);
+        }
+        String[] check = {"*", "|", ":", "\"", "<", ">", "?", "/"};
+        for (int i = 0; i < check.length; i++){
+            if (name.contains(check[i])){
+                throw new Exception("Некорректное имя файла");
+            }
+        }
+        return name;
+    }
+
+    public static void task9930(String filename) {
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                try {
+                    System.out.println(logic9930(line));
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        }
+    }
+
+    public static String logic6861(String line) throws Exception {
+        int start = line.lastIndexOf("@");
+        int end = line.lastIndexOf(".");
+        if (line.indexOf("@") != start || start == 0 || start > end || !line.contains("@")){
+            throw new Exception("Некорректный почтовый адрес");
+        }
+        return line.substring(0, start);
+    }
+
+    public static void task6861(String filename) {
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                try {
+                    System.out.println(logic6861(line));
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        }
+    }
+
+    public static int logic2205(String line) throws Exception {
+        if (line.isEmpty()){
+            throw new Exception("Строка пуста");
+        }
+        String[] values = line.split(",");
+        int sum = 0;
+        for (int i = 0; i < values.length; i++) {
+            if (values[i].isEmpty()){
+                throw new NumberFormatException();
+            }
+            sum += Integer.parseInt(values[i]);
+        }
+        return sum;
+    }
+
+    public static void task2205(String filename){
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                try {
+                    System.out.println(logic2205(line));
+                } catch(NumberFormatException ex){
+                    System.out.println("Не удается считать число");
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        }
+    }
+
+    public static void task3226(String filename){
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            int depth = 0;
+            int maxDepth = 0;
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                int openIndex;
+                int closeIndex;
+                int lastIndex = 0;
+                while(lastIndex < line.length()){
+                    closeIndex = line.indexOf("}", lastIndex);
+                    openIndex = line.indexOf("{", lastIndex);
+                    if (openIndex >= 0 && openIndex < closeIndex) {
+                        depth++;
+                        lastIndex = openIndex;
+                    }
+                    if (openIndex >= 0 && closeIndex < 0){
+                        depth++;
+                        lastIndex = openIndex;
+                    }
+                    if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0){
+                        depth--;
+                        lastIndex = closeIndex;
+                    }
+                    if (openIndex < 0 && closeIndex >=0){
+                        depth--;
+                        lastIndex = closeIndex;
+                    }
+                    if (openIndex < 0 && closeIndex < 0){
+                        break;
+                    }
+                    if (depth < 0){
+                        break;
+                    }
+                    if (maxDepth < depth){
+                        maxDepth = depth;
+                    }
+                    lastIndex++;
+                }
+                if (depth < 0){
+                    break;
+                }
+            }
+            if (depth > 0){
+                System.out.println("Неожиданный конец файла");
+            } else if (depth < 0) {
+                System.out.println("Неожиданная закрывающаяся скобочка");
+            } else {
+                System.out.println(maxDepth);
+            }
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
+        }
+    }
+
+    public static void task4372(String filename){
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+
+        } catch (FileNotFoundException ex){
+            System.out.println("Файл не существует");
         }
     }
 }

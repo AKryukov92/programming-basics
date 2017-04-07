@@ -1,4 +1,3 @@
-8
 C:\temp\/example.txt
 C:\temp\example:txt
 C:\temp\exa*ple.txt
