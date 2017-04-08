@@ -3,11 +3,128 @@
  *         28.03.2017
  */
 public class Lab02 {
-    public static void main(String[] args) {
+
+    public static void task2354(){
         System.out.println("4411");
         System.out.println(task4411(11.13) - 22.26);
         System.out.println(task4411(-7919) - -15838);
         System.out.println(task4411(0) - 0);
+
+        System.out.println();
+        System.out.println("8428");
+        System.out.printf("%.6f\n", task8428(45) - 0.7854);
+        System.out.printf("%.6f\n", task8428(1125) - 19.6350);
+        System.out.printf("%.6f\n", task8428(0));
+        System.out.printf("%.6f\n", task8428(360) - 6.2832);
+        System.out.printf("%.6f\n", task8428(90) - 1.5708);
+        System.out.printf("%.6f\n", task8428(2000) - 34.9066);
+
+        System.out.println();
+        System.out.println("5063");
+        System.out.println(task5063(365) - 5);
+        System.out.println(task5063(45) - 45);
+        System.out.println(task5063(1125) - 45);
+        System.out.println(task5063(1500) - 60);
+        System.out.println(task5063(2000) - 200);
+        System.out.println(task5063(0));
+        System.out.println(task5063(360));
+
+        System.out.println();
+        System.out.println("7711");
+        System.out.printf("%.6f\n",task7711(45) - 0.7071);
+        System.out.printf("%.6f\n",task7711(1125) - 0.7071);
+        System.out.printf("%.6f\n",task7711(7639) - 0.9816);
+        System.out.printf("%.6f\n",task7711(360) - 0.0000);
+        System.out.printf("%.6f\n",task7711(90) - 1.0000);
+
+        System.out.println();
+        System.out.println("1262");
+        System.out.printf("%.6f\n",task1262(7583) - 4.6025);
+        System.out.printf("%.6f\n",task1262(200) - -4.6985);
+        System.out.printf("%.6f\n",task1262(360) - 5);
+        System.out.printf("%.6f\n",task1262(90) - 0);
+
+        System.out.println();
+        System.out.println("3832");
+        System.out.println(task3832(7451, 7433, 7417) - 165777911);
+        System.out.println(task3832(3, 7, 11) - 131);
+        System.out.println(task3832(-2, -2029, 0) - 4058);
+
+        System.out.println();
+        System.out.println("1346");
+        System.out.printf("%.6f\n",task1346(7411,7433,7417) - 204947815919.5);
+        System.out.printf("%.6f\n",task1346(3,7,11) - 290.5);
+
+        System.out.println();
+        System.out.println("7799");
+        System.out.printf("%.6f\n",task7799(7297, 7283) - 8720.9080);
+        System.out.printf("%.6f\n",task7799(2659, 0) - 26076.0153);
+
+        System.out.println();
+        System.out.println("9354");
+        System.out.println(task9354(7247,7243,7229) - -157093203);
+        System.out.println(task9354(7,1,3) - -83);
+
+        System.out.println();
+        System.out.println("5895");
+        System.out.printf("%.6f\n", task5895(7109,7103,7079) - 12369.4955);
+        System.out.printf("%.6f\n", task5895(3,7,13) - 4.1324);
+
+        System.out.println();
+        System.out.println("2790");
+        System.out.printf("%.6f\n", task2790(6997) - 0.9205);
+        System.out.printf("%.6f\n", task2790(31) - 0.8572);
+        System.out.printf("%.6f\n", task2790(0) - 1.0000);
+
+        System.out.println();
+        System.out.println("9164");
+        System.out.printf("%.6f\n", task9164(90,90) - 0.0);
+        System.out.printf("%.6f\n", task9164(90, 0) - 1.0);
+        System.out.printf("%.6f\n", task9164(7559, 7549) - -0.2079);
+
+        System.out.println();
+        System.out.println("7457");
+        System.out.println(task7457(6883) - 331609180);
+        System.out.println(task7457(-6871) - 330495106);
+        System.out.println(task7457(0) - 6);
+
+        System.out.println();
+        System.out.println("9865");
+        System.out.printf("%.6f\n", task9865(6869) - 566245999.0000);
+        System.out.printf("%.6f\n", task9865(-6863) - 565161171.0000);
+        System.out.printf("%.6f\n", task9865(0) - -16.0000);
+        System.out.printf("%.6f\n", task9865(-1.482634) - 0.0000);
+
+        System.out.println();
+        System.out.println("3591");
+        System.out.printf("%.6f\n", task3591(0) - 0);
+        System.out.printf("%.6f\n", task3591(200) - 1606.2378);
+        System.out.printf("%.6f\n", task3591(6857) - 11580.2569);
+
+        System.out.println();
+        System.out.println("3558");
+        System.out.printf("%.6f\n", task3558(45, 90) - 0.0);
+        System.out.printf("%.6f\n", task3558(200, 45) - -1.3636);
+        System.out.printf("%.6f\n", task3558(7523, 7517) - 1.8148);
+
+        System.out.println();
+        System.out.println("4366");
+        System.out.printf("%.6f\n", task4366(7459, 7457) - 10547.2048);
+        System.out.printf("%.6f\n", task4366(-3, -7) - 7.6158);
+        System.out.printf("%.6f\n", task4366(0, 0) - 0.0);
+
+        System.out.println();
+        System.out.println("5789");
+        System.out.printf("%.6f\n", task5789(1, 1, 3, 4) - 3.6055);
+        System.out.printf("%.6f\n", task5789(-2, 4, 8, -10) - 17.2046);
+        System.out.printf("%.6f\n", task5789(0, 0, -5, -7) - 8.6023);
+        System.out.printf("%.6f\n", task5789(0, 0, 0, 0) - 0);
+        System.out.printf("%.6f\n", task5789(-1, -3, 2, 9) - 12.3693);
+    }
+
+    public static void main(String[] args) {
+        task2354();
+
         System.out.println();
         System.out.println("9298");
         int[] in9298 = {1, 5, 0, -2};
@@ -65,14 +182,6 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("8428");
-        System.out.printf("%.6f\n", task8428(45) - 0.7854);
-        System.out.printf("%.6f\n", task8428(1125) - 19.6350);
-        System.out.printf("%.6f\n", task8428(0));
-        System.out.printf("%.6f\n", task8428(360) - 6.2832);
-        System.out.printf("%.6f\n", task8428(90) - 1.5708);
-        System.out.printf("%.6f\n", task8428(2000) - 34.9066);
-        System.out.println();
         System.out.println("2361");
         int[] in2361t = {400, 103, 300, -800};
         int[] in2361l = {17, 29, -70, 20};
@@ -84,22 +193,6 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("5063");
-        System.out.println(task5063(365) - 5);
-        System.out.println(task5063(45) - 45);
-        System.out.println(task5063(1125) - 45);
-        System.out.println(task5063(1500) - 60);
-        System.out.println(task5063(2000) - 200);
-        System.out.println(task5063(0));
-        System.out.println(task5063(360));
-        System.out.println();
-        System.out.println("7711");
-        System.out.printf("%.6f\n",task7711(45) - 0.7071);
-        System.out.printf("%.6f\n",task7711(1125) - 0.7071);
-        System.out.printf("%.6f\n",task7711(7639) - 0.9816);
-        System.out.printf("%.6f\n",task7711(360) - 0.0000);
-        System.out.printf("%.6f\n",task7711(90) - 1.0000);
-        System.out.println();
         System.out.println("8833");
         int[] in8833 = {7606, 9, 0, -7603};
         double[] outs8833 = {87.2124, 3.0000, 0, 0};
@@ -110,12 +203,6 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("1262");
-        System.out.printf("%.6f\n",task1262(7583) - 4.6025);
-        System.out.printf("%.6f\n",task1262(200) - -4.6985);
-        System.out.printf("%.6f\n",task1262(360) - 5);
-        System.out.printf("%.6f\n",task1262(90) - 0);
         System.out.println();
         System.out.println("9020");
         int[] in9020 = {7573, 75, 0, -9};
@@ -176,15 +263,6 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("3832");
-        System.out.println(task3832(7451, 7433, 7417) - 165777911);
-        System.out.println(task3832(3, 7, 11) - 131);
-        System.out.println(task3832(-2, -2029, 0) - 4058);
-        System.out.println();
-        System.out.println("1346");
-        System.out.printf("%.6f\n",task1346(7411,7433,7417) - 204947815919.5);
-        System.out.printf("%.6f\n",task1346(3,7,11) - 290.5);
-        System.out.println();
         System.out.println("9622");
         System.out.println(task9622(7351, 7349, 7333).print());
         System.out.println(task9622(19, 23, 29).print());
@@ -201,14 +279,6 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("7799");
-        System.out.printf("%.6f\n",task7799(7297, 7283) - 8720.9080);
-        System.out.printf("%.6f\n",task7799(2659, 0) - 26076.0153);
-        System.out.println();
-        System.out.println("9354");
-        System.out.println(task9354(7247,7243,7229) - -157093203);
-        System.out.println(task9354(7,1,3) - -83);
-        System.out.println();
         System.out.println("9130");
         int[] in9130y = {7211, 11, 7177};
         int[] in9130m1 = {7219, 3, 7193};
@@ -223,10 +293,6 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("5895");
-        System.out.printf("%.6f\n", task5895(7109,7103,7079) - 12369.4955);
-        System.out.printf("%.6f\n", task5895(3,7,13) - 4.1324);
-        System.out.println();
         System.out.println("2461");
         int[] in2461a = {7069, 0, 7019};
         int[] in2461b = {7043, 7043, 7043};
@@ -240,10 +306,6 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("2790");
-        System.out.printf("%.6f\n", task2790(6997) - 0.9205);
-        System.out.printf("%.6f\n", task2790(31) - 0.8572);
         System.out.println();
         System.out.println("2624");
         int[] in2624a = {6991, 11, -6959, 0};
@@ -270,51 +332,13 @@ public class Lab02 {
             }
         }
         System.out.println();
-        System.out.println("9164");
-        System.out.printf("%.6f\n", task9164(90,90) - 0.0);
-        System.out.printf("%.6f\n", task9164(90, 0) - 1.0);
-        System.out.printf("%.6f\n", task9164(7559, 7549) - -0.2079);
-        System.out.println();
-        System.out.println("7457");
-        System.out.println(task7457(6883) - 331609180);
-        System.out.println(task7457(-6871) - 330495106);
-        System.out.println(task7457(0) - 6);
-        System.out.println();
-        System.out.println("9865");
-        System.out.printf("%.6f\n", task9865(6869) - 566245999.0000);
-        System.out.printf("%.6f\n", task9865(-6863) - 565161171.0000);
-        System.out.printf("%.6f\n", task9865(0) - -16.0000);
-        System.out.printf("%.6f\n", task9865(-1.482634) - 0.0000);
-        System.out.println();
-        System.out.println("3591");
-        System.out.printf("%.6f\n", task3591(0) - 0);
-        System.out.printf("%.6f\n", task3591(200) - 1606.2378);
-        System.out.printf("%.6f\n", task3591(6857) - 11580.2569);
-        System.out.println();
-        System.out.println("3558");
-        System.out.printf("%.6f\n", task3558(45, 90) - 0.0);
-        System.out.printf("%.6f\n", task3558(200, 45) - -1.3636);
-        System.out.printf("%.6f\n", task3558(7523, 7517) - 1.8148);
-        System.out.println();
-        System.out.println("4366");
-        System.out.printf("%.6f\n", task4366(7459, 7457) - 10547.2048);
-        System.out.printf("%.6f\n", task4366(-3, -7) - 7.6158);
-        System.out.printf("%.6f\n", task4366(0, 0) - 0.0);
-        System.out.println();
-        System.out.println("5789");
-        System.out.printf("%.6f\n", task5789(1, 1, 3, 4) - 3.6055);
-        System.out.printf("%.6f\n", task5789(-2, 4, 8, -10) - 17.2046);
-        System.out.printf("%.6f\n", task5789(0, 0, -5, -7) - 8.6023);
-        System.out.printf("%.6f\n", task5789(0, 0, 0, 0) - 0);
-        System.out.printf("%.6f\n", task5789(-1, -3, 2, 9) - 12.3693);
-        System.out.println();
         System.out.println("6522");
         int[] in6522v1 = {1, 1, 5, -2, 4};
         int[] in6522t1 = {30, -20, 90, 10, 100};
         int[] in6522v2 = {3, 10, 1, 5, -10};
         int[] in6522t2 = {20, 20, -10, 50, 4};
         for (int i = 0; i < in6522v1.length; i++){
-            try{
+            try {
                 System.out.println(task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]).print());
             } catch (Exception e) {
                 System.out.println(e.getMessage());

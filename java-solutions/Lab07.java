@@ -2,7 +2,25 @@
  * Created by Александр on 02.04.2017.
  */
 public class Lab07 {
+    public static void task2354(){
+        System.out.println();
+        System.out.println("4265");
+        System.out.println(task4265("sABCD"));
+        System.out.println(task4265("Uxyz"));
+        System.out.println(task4265("s"));
+        System.out.println(task4265("F123"));
+        System.out.println(task4265("Sopqr"));
+
+        System.out.println();
+        System.out.println("9925");
+        System.out.println(task9925("один, два, три, четыре, пять") - 5);
+        System.out.println(task9925("янв,фев,март") - 3);
+        System.out.println(task9925("один") - 1);
+    }
+
     public static void main(String[] args) {
+        task2354();
+
         System.out.println();
         System.out.println("9631");
         String[] in9631 = {"z", "a", "g"};
@@ -59,13 +77,6 @@ public class Lab07 {
             }
         }
         System.out.println();
-        System.out.println("4265");
-        System.out.println(task4265("sABCD"));
-        System.out.println(task4265("Uxyz"));
-        System.out.println(task4265("s"));
-        System.out.println(task4265("F123"));
-        System.out.println(task4265("Sopqr"));
-        System.out.println();
         System.out.println("2166");
         String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
         for (int i = 0; i < in2166.length; i++){
@@ -86,11 +97,6 @@ public class Lab07 {
             }
         }
         System.out.println();
-        System.out.println("9925");
-        System.out.println(task9925("один, два, три, четыре, пять") - 5);
-        System.out.println(task9925("янв,фев,март") - 3);
-        System.out.println(task9925("один") - 1);
-        System.out.println();
         System.out.println("1618");
         String[] in1618 = {
             "{}",
@@ -106,7 +112,6 @@ public class Lab07 {
             "{}}",
             "{{{}{}}}{{}{}}{{}}}"
         };
-        int[] out1618 = {1, 2, 2, 2, 5, -1, -1, -1, -1, -1, -1, -1};
         for (int i = 0; i < in1618.length; i++){
             try {
                 task1618(in1618[i]);

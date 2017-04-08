@@ -7,7 +7,36 @@ import java.util.stream.Collectors;
  *         29.03.2017
  */
 public class Lab05 {
-    public static void main(String[] args) {
+    public static void task2354(){
+        System.out.println("5980");
+        System.out.println(task5980(9) - 3.0);
+        System.out.println(task5980(0) - 0.0);
+        System.out.println(task5980(-7) - 49.0);
+
+        System.out.println();
+        System.out.println("8174");
+        System.out.println(task8174(-5) - 5);
+        System.out.println(task8174(-11) - 11);
+        System.out.println(task8174(7) - 7);
+        System.out.println(task8174(13) - 13);
+        System.out.println(task8174(0));
+
+        System.out.println();
+        System.out.println("5662");
+        System.out.println(task5662(1, 2, 3));
+        System.out.println(task5662(3, 17, 5));
+        System.out.println(task5662(3, 6, 3));
+        System.out.println(task5662(0, 7, 13));
+
+        System.out.println();
+        System.out.println("3770");
+        System.out.println(task3770(1, 2, 3) - 3);
+        System.out.println(task3770(7, 4, -2) - 7);
+        System.out.println(task3770(0, 5, -7) - 5);
+    }
+
+    public static void task2030(){
+        System.out.println();
         System.out.println("8878");
         int[] in8878a = {5, 11, -2, -13};
         int[] in8878b = {6, 7, 3, -18};
@@ -18,6 +47,168 @@ public class Lab05 {
                 System.out.println("Первое");
             }
         }
+
+        System.out.println();
+        System.out.println("1945");
+        int[] in1945sc = {17, 13, -20, 300};
+        int[] in1945ss = {19, 19, 4, -200};
+        for (int i = 0; i < in1945sc.length; i++){
+            if (task1945(in1945sc[i], in1945ss[i])){
+                System.out.println("Круг уместится в квадрате");
+            } else {
+                System.out.println("Круг не поместится в квадрате");
+            }
+        }
+
+        System.out.println();
+        System.out.println("8715");
+        int[] in8718a = {1, -4, 7, 0, 4, -2, 10, 5};
+        int[] in8718b = {2, 0, 4, 5, 4, 4, 3, 1};
+        int[] in8718c = {3, 5, -2, -7, 4, 3, 5, 7};
+        for (int i = 0; i < in8718a.length; i++){
+            if (task8715(in8718a[i], in8718b[i], in8718c[i])){
+                System.out.println("Выполняется");
+            } else {
+                System.out.println("Не выполняется");
+            }
+        }
+
+        System.out.println();
+        System.out.println("4847");
+        int[] in4847x = {31, 19, 7, 67, 1};
+        int[] in4847y = {59, 19, 11, -67, 1};
+        int[] in4847z = {83, 41, 11, 67, 1};
+        for (int i = 0; i < in4847x.length; i++){
+            if (task4847(in4847x[i], in4847y[i], in4847z[i])){
+                System.out.println("Среди чисел есть равные");
+            } else {
+                System.out.println("Числа не равны друг другу");
+            }
+        }
+
+        System.out.println();
+        System.out.println("1999");
+        int[] in1999x = {-3, -2, -1, -3, -2, -1, -3, -2, -1};
+        int[] in1999y = {2, 2, 2, 1, 1, 1, 0, 0, 0};
+        for (int i = 0; i < in1999x.length; i++){
+            System.out.print("{" + in1999x[i] + ";" + in1999y[i]);
+            if (task1999(in1999x[i], in1999y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("4042");
+        double[] in4042x = {2, 1, 0, -1, -2};
+        double[] in4042y = {2, 1.5, 0, -2, -3};
+        for (int i = 0; i < in4042x.length; i++){
+            System.out.print("{" + in4042x[i] + ";" + in4042y[i]);
+            if (task4042(in4042x[i], in4042y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("6351");
+        double[] in6351x = {0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3};
+        double[] in6351y = {5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2};
+        for (int i = 0; i < in6351x.length; i++){
+            System.out.print("{" + in6351x[i] + ";" + in6351y[i]);
+            if (task6351(in6351x[i], in6351y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("5382");
+        double[] in5382x = {5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0};
+        double[] in5382y = {5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1};
+        for (int i = 0; i < in5382x.length; i++){
+            System.out.print("{" + in5382x[i] + ";" + in5382y[i]);
+            if (task5382(in5382x[i], in5382y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("7088");
+        double[] in7088x = {0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1,
+                1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5};
+        double[] in7088y = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, -0.5, -0.5,
+                -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
+        for (int i = 0; i < in7088x.length; i++){
+            System.out.print("{" + in7088x[i] + ";" + in7088y[i]);
+            if (task7088(in7088x[i], in7088y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("7250");
+        double[] in7250x = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3};
+        double[] in7250y = {2, 2, 2, 1, 1, 1, 0, 0, 0, -1.5, -1.5, -1.5, -2, -2, -2};
+        for (int i = 0; i < in7250x.length; i++){
+            System.out.print("{" + in7250x[i] + ";" + in7250y[i]);
+            if (task7250(in7250x[i], in7250y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("6740");
+        double[] in6740x = {0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
+        double[] in6740y = {0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1.5, -1.5, -1.5, -1.5, -1.5, -2, -2, -2, -2, -2, -3, -3, -3, -3, -3};
+        for (int i = 0; i < in6740x.length; i++){
+            System.out.print("{" + in6740x[i] + ";" + in6740y[i]);
+            if (task6740(in6740x[i], in6740y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+
+        System.out.println();
+        System.out.println("9038");
+        double[] in9038x = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3};
+        double[] in9038y = {2, 2, 2, 1.5, 1.5, 1.5, 1, 1, 1, 0.5, 0.5, 0.5, 0, 0, 0};
+        for (int i = 0; i < in9038x.length; i++){
+            System.out.print("{" + in9038x[i] + ";" + in9038y[i]);
+            if (task9038(in9038x[i], in9038y[i])){
+                System.out.println("} принадлежит области");
+            } else {
+                System.out.println("} не принадлежит области");
+            }
+        }
+    }
+
+    public static void task7649(){
+        System.out.println();
+        System.out.println("8518");
+        StringBuilder sb = new StringBuilder();
+        task8518(sb, "a").append("\n");
+        task8518(sb, "d").append("\n");
+        task8518(sb, "h").append("\n");
+        task8518(sb, "i").append("\n");
+        System.out.println(sb.toString());
+    }
+
+    public static void main(String[] args) {
+        task2354();
+        task2030();
+        task7649();
+
         System.out.println();
         System.out.println("3072");
         System.out.println(task3072(173, 179).print());
@@ -25,18 +216,7 @@ public class Lab05 {
         System.out.println(task3072(439, -761).print());
         System.out.println(task3072(0, -15).print());
         System.out.println();
-        System.out.println("5980");
-        System.out.println(task5980(9) - 3.0);
-        System.out.println(task5980(0) - 0.0);
-        System.out.println(task5980(-7) - 49.0);
-        System.out.println();
-        System.out.println("8174");
-        System.out.println(task8174(-5) - 5);
-        System.out.println(task8174(-11) - 11);
-        System.out.println(task8174(7) - 7);
-        System.out.println(task8174(13) - 13);
-        System.out.println(task8174(0));
-        System.out.println();
+        System.out.println("4257");
         double[] in4257l = {0.7, 0.3, 0.05, -2, 300};
         double[] in4257p = {2297, 983, 101, 15, -113};
         for (int i = 0; i < in4257l.length; i++){
@@ -80,23 +260,7 @@ public class Lab05 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("5662");
-        System.out.println(task5662(1, 2, 3));
-        System.out.println(task5662(3, 17, 5));
-        System.out.println(task5662(3, 6, 3));
-        System.out.println(task5662(0, 7, 13));
-        System.out.println();
-        System.out.println("1945");
-        int[] in1945sc = {17, 13, -20, 300};
-        int[] in1945ss = {19, 19, 4, -200};
-        for (int i = 0; i < in1945sc.length; i++){
-            if (task1945(in1945sc[i], in1945ss[i])){
-                System.out.println("Круг уместится в квадрате");
-            } else {
-                System.out.println("Круг не поместится в квадрате");
-            }
-        }
+
         System.out.println();
         System.out.println("1186");
         System.out.println();
@@ -111,38 +275,8 @@ public class Lab05 {
             }
             System.out.println();
         }
-        System.out.println();
-        System.out.println("8715");
-        int[] in8718a = {1, -4, 7, 0, 4, -2, 10, 5};
-        int[] in8718b = {2, 0, 4, 5, 4, 4, 3, 1};
-        int[] in8718c = {3, 5, -2, -7, 4, 3, 5, 7};
-        for (int i = 0; i < in8718a.length; i++){
-            if (task8715(in8718a[i], in8718b[i], in8718c[i])){
-                System.out.println("Выполняется");
-            } else {
-                System.out.println("Не выполняется");
-            }
-            System.out.println();
-        }
-        System.out.println();
-        System.out.println("8518");
-        System.out.println(task8518("a"));
-        System.out.println(task8518("d"));
-        System.out.println(task8518("h"));
-        System.out.println(task8518("i"));
-        System.out.println();
-        System.out.println("4847");
-        int[] in4847x = {31, 19, 7, 67, 1};
-        int[] in4847y = {59, 19, 11, -67, 1};
-        int[] in4847z = {83, 41, 11, 67, 1};
-        for (int i = 0; i < in8718a.length; i++){
-            if (task4847(in4847x[i], in4847y[i], in4847z[i])){
-                System.out.println("Среди чисел есть равные");
-            } else {
-                System.out.println("Числа не равны друг другу");
-            }
-            System.out.println();
-        }
+
+
         System.out.println();
         System.out.println("7991");
         System.out.println(task7991(6.35, 2.7, 5.08).stream().map(Object::toString).collect(Collectors.joining(" ")));
@@ -165,11 +299,6 @@ public class Lab05 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("3770");
-        System.out.println(task3770(1, 2, 3));
-        System.out.println(task3770(7, 4, -2));
-        System.out.println(task3770(0, 5, -7));
         System.out.println();
         System.out.println("7178");
         int[] in7178m = {36, 41, 15};
@@ -318,62 +447,7 @@ public class Lab05 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("1999");
-        int[] in1999x = {-3, -2, -1, -3, -2, -1, -3, -2, -1};
-        int[] in1999y = {2, 2, 2, 1, 1, 1, 0, 0, 0};
-        for (int i = 0; i < in1999x.length; i++){
-            System.out.println(task1999(in1999x[i], in1999y[i]));
-        }
-        System.out.println();
-        System.out.println("4042");
-        double[] in4042x = {2, 1, 0, -1, -2};
-        double[] in4042y = {2, 1.5, 0, -2, -3};
-        for (int i = 0; i < in4042x.length; i++){
-            System.out.println(task4042(in4042x[i], in4042y[i]));
-        }
-        System.out.println();
-        System.out.println("6351");
-        double[] in6351x = {0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3};
-        double[] in6351y = {5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2};
-        for (int i = 0; i < in6351x.length; i++){
-            System.out.println(task6351(in6351x[i], in6351y[i]));
-        }
-        System.out.println();
-        System.out.println("5382");
-        double[] in5382x = {5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0};
-        double[] in5382y = {5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1};
-        for (int i = 0; i < in5382x.length; i++){
-            System.out.println(task5382(in5382x[i], in5382y[i]));
-        }
-        System.out.println();
-        System.out.println("7088");
-        double[] in7088x = {0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5};
-        double[] in7088y = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, -0.5, -0.5, -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
-        for (int i = 0; i < in7088x.length; i++){
-            System.out.println(task7088(in7088x[i], in7088y[i]));
-        }
-        System.out.println();
-        System.out.println("7250");
-        double[] in7250x = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3};
-        double[] in7250y = {2, 2, 2, 1, 1, 1, 0, 0, 0, -1.5, -1.5, -1.5, -2, -2, -2};
-        for (int i = 0; i < in7250x.length; i++){
-            System.out.println(task7250(in7250x[i], in7250y[i]));
-        }
-        System.out.println();
-        System.out.println("6740");
-        double[] in6740x = {0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
-        double[] in6740y = {0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1.5, -1.5, -1.5, -1.5, -1.5, -2, -2, -2, -2, -2, -3, -3, -3, -3, -3};
-        for (int i = 0; i < in6740x.length; i++){
-            System.out.println(task6740(in6740x[i], in6740y[i]));
-        }
-        System.out.println();
-        System.out.println("9038");
-        double[] in9038x = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3};
-        double[] in9038y = {2, 2, 2, 1.5, 1.5, 1.5, 1, 1, 1, 0.5, 0.5, 0.5, 0, 0, 0};
-        for (int i = 0; i < in9038x.length; i++){
-            System.out.println(task9038(in9038x[i], in9038y[i]));
-        }
+
     }
 
     public static boolean task8878(int a, int b){
@@ -452,7 +526,7 @@ public class Lab05 {
         }
         double d = b*b - 4*a*c;
         if(d > 0){
-            return "Вещественных корней уравнения "+ a + "x^2 + " + b + "x + " + c + " = 0 нет";
+            return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
         } else if (d == 0){
             return "У уравнения "+ a + "x^2 + " + b + "x + " + c + " два вещественных корня";
         } else {
@@ -476,9 +550,8 @@ public class Lab05 {
         return a < b && b < c;
     }
 
-    public static String task8518(String x){
+    public static StringBuilder task8518(StringBuilder builder, String x){
         String[] chars = {"a","b","c","d","e","f","g","h"};
-        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < chars.length; i++){
             builder.append(chars[i]);
             if(chars[i].equals(x)){
@@ -486,7 +559,7 @@ public class Lab05 {
             }
             builder.append("\n");
         }
-        return builder.toString();
+        return builder;
     }
 
     public static boolean task4847(int x, int y, int z){

@@ -629,7 +629,12 @@ public class Lab09 {
     public static void task4372(String filename){
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                int openIndex = line.indexOf("{");
+                int closeIndex = line.indexOf("}");
 
+            }
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
         }

@@ -6,12 +6,117 @@ import java.util.stream.Collectors;
  * Created by Александр on 31.03.2017.
  */
 public class Lab06 {
-    public static void main(String[] args) {
+    public static void task2354(){
+        System.out.println();
+        System.out.println("2475");
+        System.out.println(task2475() - 120300);
+
+        System.out.println();
+        System.out.println("9562");
+        System.out.println(task9562(15, 27) - 273);
+        System.out.println(task9562(25, 44) - 690);
+        System.out.println(task9562(80, 100) - 1890);
+        System.out.println(task9562(3000, 24) - 4501224);
+
+        System.out.println();
+        System.out.println("3669");
+        System.out.println(task3669(8, 13) - 1235520);
+        System.out.println(task3669(159, 161) - 4095840);
+        System.out.println(task3669(648, 648) - 648);
+        System.out.println(task3669(-2, 600));
+        System.out.println(task3669(50, 24) - 2421409269157986304L);
+
+        System.out.println();
+        System.out.println("5951");
+        System.out.println(task5951() - 630);
+
+        System.out.println();
+        System.out.println("6580");
+        System.out.println(task6580(15, 27) - 5915);
+        System.out.println(task6580(25, 44) - 24470);
+        System.out.println(task6580(80, 100) - 170870);
+        System.out.println(task6580(3000, 24) - 414561584);
+
+        System.out.println();
+        System.out.println("5969");
+        System.out.println(task5969(8, 13));
+        System.out.println(task5969(25, 44) - 105);
+        System.out.println(task5969(80, 100) - 273);
+        System.out.println(task5969(300, 24) - 6279);
+
+        System.out.println();
+        System.out.println("8696");
+        System.out.println(task8696() - 69);
+    }
+
+    public static void task7649(){
         System.out.println("8495");
-        System.out.println(task8495());
+        StringBuilder sb8495 = new StringBuilder();
+        sb8495 = sb8495.append("@");
+        sb8495 = task8495(sb8495);
+        sb8495 = sb8495.append("#");
+        System.out.println(sb8495.toString());
+
         System.out.println();
         System.out.println("1315");
-        System.out.println(task1315());
+        StringBuilder sb1315 = new StringBuilder();
+        sb1315.append("@");
+        task1315(sb1315);
+        sb1315.append("#");
+        System.out.println(sb1315);
+
+        System.out.println();
+        System.out.println("3762");
+        String result3762 = task3762(new StringBuilder()).toString();
+        System.out.println(result3762);
+
+        System.out.println();
+        System.out.println("3550");
+        StringBuilder sb3550 = task3550(
+                new StringBuilder()
+                        .append("@"))
+                .append("#");
+        System.out.println(sb3550.toString());
+
+        System.out.println();
+        System.out.println("6572");
+        StringBuilder sb6572 = new StringBuilder();
+        task6572(sb6572, 8, 13);
+        task6572(sb6572, 691, 703);
+        task6572(sb6572, 19, 3);
+        System.out.println(sb6572);
+
+        System.out.println();
+        System.out.println("2084");
+        String result2084;
+        result2084 = task2084(new StringBuilder(), 20, 30).append("\n")
+                .append(task2084(new StringBuilder(), 8, 13)).append("\n")
+                .append(task2084(new StringBuilder(), 571, 580)).append("\n")
+                .append(task2084(new StringBuilder(), 691, 703)).append("\n")
+                .append(task2084(new StringBuilder(), -71, -90)).append("\n")
+                .append(task2084(new StringBuilder(), 64, 58)).append("\n")
+                .append(task2084(new StringBuilder(), 19, 7)).append("\n")
+                .append(task2084(new StringBuilder(), 401, 390)).append("\n")
+                .append(task2084(new StringBuilder(), 800, 785)).append("\n")
+                .toString();
+        System.out.println(result2084);
+
+        System.out.println();
+        System.out.println("5411");
+        String result5411 = task5411(
+                task5411(
+                        task5411(new StringBuilder(), 7, 11)
+                                .append("\n")
+                        , 211, 223).append("\n")
+                , 37, 29).append("\n")
+                .toString();
+        System.out.println(result5411);
+    }
+
+    public static void main(String[] args) {
+        task2354();
+        task7649();
+
         System.out.println();
         System.out.println("6066");
         int[] in6066a = {8, 691, 3000};
@@ -56,15 +161,6 @@ public class Lab06 {
         System.out.println(task5053(691, 702).stream().map(Object::toString).collect(Collectors.joining(" ")));
         System.out.println(task5053(27, 17).stream().map(Object::toString).collect(Collectors.joining(" ")));
         System.out.println();
-        System.out.println("3762");
-        System.out.println(task3762());
-        System.out.println();
-        System.out.println("3550");
-        System.out.println(task3550());
-        System.out.println();
-        System.out.println("2475");
-        System.out.println(task2475() - 120300);
-        System.out.println();
         System.out.println("9180");
         int[] in9180 = {-100, 7, 368, 501, -101};
         int[] outs9180 = {120200, 125229, 57722, 0, 0};
@@ -87,22 +183,6 @@ public class Lab06 {
             }
         }
         System.out.println();
-        System.out.println("9562");
-        System.out.println(task9562(15, 27) - 273);
-        System.out.println(task9562(25, 44) - 690);
-        System.out.println(task9562(80, 100) - 1890);
-        System.out.println(task9562(3000, 24) - 4501224);
-        System.out.println();
-        System.out.println("3669");
-        System.out.println(task3669(8, 13) - 1235520);
-        System.out.println(task3669(159, 161) - 4095840);
-        System.out.println(task3669(648, 648) - 648);
-        System.out.println(task3669(-2, 600));
-        System.out.println(task3669(50, 24));
-        System.out.println();
-        System.out.println("5951");
-        System.out.println(task5951());
-        System.out.println();
         System.out.println("2802");
         int[] in2802 = {4, 11, 19, -1, 0};
         double[] out2802 = {2.0833, 3.0198, 3.5477};
@@ -113,12 +193,6 @@ public class Lab06 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("6580");
-        System.out.println(task6580(15, 27) - 5915);
-        System.out.println(task6580(25, 44) - 24470);
-        System.out.println(task6580(80, 100) - 170870);
-        System.out.println(task6580(3000, 24) - 414561584);
         System.out.println();
         System.out.println("7585");
         int[] in7585 = {10, 15, 20, 9, 21};
@@ -160,15 +234,6 @@ public class Lab06 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("5969");
-        System.out.println(task5969(8, 13));
-        System.out.println(task5969(25, 44) - 105);
-        System.out.println(task5969(80, 100) - 273);
-        System.out.println(task5969(300, 24) - 6279);
-        System.out.println();
-        System.out.println("8696");
-        System.out.println(task8696());
         System.out.println();
         System.out.println("8418");
         int[] in8418 = {6, 385, -9};
@@ -257,11 +322,7 @@ public class Lab06 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("6572");
-        System.out.println(task6572(8, 13));
-        System.out.println(task6572(691, 703));
-        System.out.println(task6572(19, 3));
+
         System.out.println();
         System.out.println("5238");
         int[] in5238w = {5, 4, 0, 7, -11, 29};
@@ -273,22 +334,7 @@ public class Lab06 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("2084");
-        System.out.println(task2084(20, 30));
-        System.out.println(task2084(8, 13));
-        System.out.println(task2084(571, 580));
-        System.out.println(task2084(691, 703));
-        System.out.println(task2084(-71, -96));
-        System.out.println(task2084(64, 58));
-        System.out.println(task2084(19, 7));
-        System.out.println(task2084(401, 390));
-        System.out.println(task2084(800, 785));
-        System.out.println();
-        System.out.println("5411");
-        System.out.println(task5411(7, 11));
-        System.out.println(task5411(211, 223));
-        System.out.println(task5411(37, 29));
+
         System.out.println();
         System.out.println("5171");
         String[] in5171s1 = {"#", "?", "*", "=", "o", "!"};
@@ -317,26 +363,24 @@ public class Lab06 {
         }
     }
 
-    public static String task8495(){
-        StringBuilder sb = new StringBuilder(13);
+    public static StringBuilder task8495(StringBuilder sb){
         int i = 0;
         while (i < 13){
             sb.append("!");
             i++;
         }
-        return sb.toString();
+        return sb;
     }
 
-    public static String task1315(){
+    public static StringBuilder task1315(StringBuilder sb){
         int a = 17;
         int b = 47;
-        StringBuilder sb = new StringBuilder((b - a) * 2);
         while (a <= b){
             sb.append(a);
             sb.append(" ");
             a++;
         }
-        return sb.toString();
+        return sb;
     }
 
     public static String task6066(int a, int b) throws Exception {
@@ -415,22 +459,20 @@ public class Lab06 {
         return ret;
     }
 
-    public static String task3762(){
+    public static StringBuilder task3762(StringBuilder sb){
         int i = 1;
-        StringBuilder sb = new StringBuilder(80);
         while (i <= 20){
             sb.append(i);
-            sb.append("\t");
+            sb.append(" ");
             sb.append(i*453);
             sb.append("\n");
             i++;
         }
-        return sb.toString();
+        return sb;
     }
 
-    public static String task3550(){
+    public static StringBuilder task3550(StringBuilder sb){
         int i = 1;
-        StringBuilder sb = new StringBuilder(40);
         while (i <= 9){
             sb.append(i);
             sb.append(" x 7 = ");
@@ -438,7 +480,7 @@ public class Lab06 {
             sb.append("\n");
             i++;
         }
-        return sb.toString();
+        return sb;
     }
 
     public static int task2475(){
@@ -818,7 +860,7 @@ public class Lab06 {
         return sb.toString();
     }
 
-    public static String task6572(int a, int b){
+    public static StringBuilder task6572(StringBuilder sb, int a, int b){
         int i = 0, n, min;
         if (a < b){
             n = b - a;
@@ -830,7 +872,6 @@ public class Lab06 {
         if (min%2 == 0){
             min ++;
         }
-        StringBuilder sb = new StringBuilder();
         while(i <= n){
             for (int j = 0; j < i/2; j++){
                 sb.append(".");
@@ -839,8 +880,7 @@ public class Lab06 {
             sb.append("\n");
             i += 2;
         }
-        sb.append("\n");
-        return sb.toString();
+        return sb;
     }
 
     public static String task5238(int w, int h) throws Exception {
@@ -866,27 +906,24 @@ public class Lab06 {
         return sb.toString();
     }
 
-    public static String task2084(int a, int b){
+    public static StringBuilder task2084(StringBuilder sb, int a, int b){
         if (a == b){
-            return Integer.toString(a);
+            return sb.append(a);
         } else if (a < b){
-            StringBuilder sb = new StringBuilder();
             int i = a + 2;
             if (a%2 == 0) {
                 sb.append(a + 1);
                 i++;
             } else {
                 sb.append(a);
-                System.out.print(a);
             }
             while (i <= b){
                 sb.append(", ");
                 sb.append(i);
                 i+=2;
             }
-            return sb.toString();
+            return sb;
         } else {
-            StringBuilder sb = new StringBuilder();
             int i = a - 2;
             if (a%2 == 0) {
                 sb.append(a - 1);
@@ -899,11 +936,11 @@ public class Lab06 {
                 sb.append(i);
                 i-=2;
             }
-            return sb.toString();
+            return sb;
         }
     }
 
-    public static String task5411(int p, int q){
+    public static StringBuilder task5411(StringBuilder sb, int p, int q){
         int i = 1, n, min;
         if (p < q){
             min = p;
@@ -912,19 +949,18 @@ public class Lab06 {
             min = q;
             n = p - q;
         }
-        StringBuilder sb = new StringBuilder();
         sb.append(min);
         while (i <= n/2){
-            sb.append("<");
+            sb.append("&lt;");
             sb.append(i+min);
             i++;
         }
         while (i <= n){
-            sb.append(">");
+            sb.append("&gt;");
             sb.append(i+min);
             i++;
         }
-        return sb.toString();
+        return sb;
     }
 
     public static String task5171(String s1, String s2, int w, int h) throws Exception {

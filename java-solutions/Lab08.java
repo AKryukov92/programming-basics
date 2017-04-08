@@ -8,7 +8,114 @@ import java.util.stream.Collectors;
  * Created by Александр on 03.04.2017.
  */
 public class Lab08 {
+    public static void task2354() {
+        System.out.println();
+        System.out.println("3946");
+        String[] in3946 = {
+                "1 2 3 4 1",
+                "1 2 3 4 1 3 4 4 4 4",
+                ""
+        };
+        double[] out3946 = {2.2, 3, 0};
+        for (int i = 0; i < in3946.length; i++) {
+            System.out.println(task3946(in3946[i]) - out3946[i]);
+        }
+
+        System.out.println();
+        System.out.println("5694");
+        String[] in5694 = {"a", "d", "h", "i", "z"};
+        String[] out5694 = {
+                "a+\nb\nc\nd\ne\nf\ng\nh\n",
+                "a\nb\nc\nd+\ne\nf\ng\nh\n",
+                "a\nb\nc\nd\ne\nf\ng\nh+\n",
+                "a\nb\nc\nd\ne\nf\ng\nh\n",
+                "a\nb\nc\nd\ne\nf\ng\nh\n"
+        };
+        for (int i = 0; i < in5694.length; i++) {
+            try {
+                System.out.println(task5694(in5694[i]).equals(out5694[i]));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
+        System.out.println("6806");
+        int[] in6806 = {10, 15, 20, 9, 23};
+        String[] out6806 = {
+                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
+        };
+        for (int i = 0; i < in6806.length; i++) {
+            System.out.println(task6806(in6806[i]).equals(out6806[i]));
+        }
+
+        System.out.println();
+        System.out.println("7035");
+        String[] in7035 = {
+                "1 2 3 4 5 6",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 8 9",
+                "4 4 4 4",
+                "4 3"
+        };
+        int[] out7035 = {1, 1, 2, 3, 4, 3};
+        for (int i = 0; i < in7035.length; i++) {
+            System.out.println(task7035(in7035[i]) - out7035[i]);
+        }
+
+        System.out.println();
+        System.out.println("4283");
+        int[] in4283k = {3, 5, 2, 1};
+        String[] in4283s = {
+                "1 2 3 4 1 2",
+                "1 2 3 4 1 2 3 4 1 2 3",
+                "3 2 2 2 2 2",
+                "4 4 4 4 4 4"
+        };
+        int[] out4283 = {1, 0, 5, 0};
+        for (int i = 0; i < in4283k.length; i++) {
+            System.out.println(task4283(in4283k[i], in4283s[i]) - out4283[i]);
+        }
+
+        System.out.println();
+        System.out.println("9182");
+        String[] in9182 = {
+                "1 2 3 4 5 6",
+                "1 2 3 1 2 6",
+                "1 1 1 1 1 1"
+        };
+        int[] out9182 = {6, 4, 1};
+        for (int i = 0; i < out9182.length; i++) {
+            System.out.println(task9182(in9182[i]) - out9182[i]);
+        }
+    }
+
+    public static void task2030() {
+        System.out.println();
+        System.out.println("4515");
+        String[] in4515 = {
+                "9 8 7 6 5",
+                "4 3 2 1 5 6 7 8 9 0",
+                "1 2 3 1"
+        };
+        for (int i = 0; i < in4515.length; i++) {
+            if (task4515(in4515[i])) {
+                System.out.println("Повторения есть");
+            } else {
+                System.out.println("Повторений нет");
+            }
+        }
+    }
+
     public static void main(String[] args) {
+        task2354();
+        task2030();
+
         System.out.println();
         System.out.println("4425");
         int[] in4425a = {0, 3, 9, 5, -1, 0};
@@ -22,7 +129,7 @@ public class Lab08 {
         };
         int[] out4425 = {4, 1, 1, 0, 0, 0};
         for (int i = 0; i < in4425a.length; i++){
-            try{
+            try {
                 System.out.println(task4425(in4425a[i], in4425data[i]) - out4425[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -48,17 +155,6 @@ public class Lab08 {
                             .collect(Collectors.joining(" "))
                             .equals(out1223[i])
             );
-        }
-        System.out.println();
-        System.out.println("3946");
-        String[] in3946 = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 3 4 4 4 4",
-                ""
-        };
-        double[] out3946 = {2.2, 3, 0};
-        for (int i = 0; i < in3946.length; i++) {
-            System.out.println(task3946(in3946[i]) - out3946[i]);
         }
         System.out.println();
         System.out.println("3940");
@@ -227,64 +323,9 @@ public class Lab08 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("5694");
-        String[] in5694 = {"a", "d", "h", "i", "z"};
-        String[] out5694 = {
-                "a+\nb\nc\nd\ne\nf\ng\nh\n",
-                "a\nb\nc\nd+\ne\nf\ng\nh\n",
-                "a\nb\nc\nd\ne\nf\ng\nh+\n",
-                "a\nb\nc\nd\ne\nf\ng\nh\n",
-                "a\nb\nc\nd\ne\nf\ng\nh\n"
-        };
-        for (int i = 0; i < in5694.length; i++) {
-            try {
-                System.out.println(task5694(in5694[i]).equals(out5694[i]));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        System.out.println();
-        System.out.println("6806");
-        int[] in6806 = {10, 15, 20, 9, 23};
-        String[] out6806 = {
-                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
-        };
-        for (int i = 0; i < in6806.length; i++) {
-            System.out.println(task6806(in6806[i]).equals(out6806[i]));
-        }
-        System.out.println();
-        System.out.println("4515");
-        String[] in4515 = {
-                "9 8 7 6 5",
-                "4 3 2 1 5 6 7 8 9 0",
-                "1 2 3 1"
-        };
-        for (int i = 0; i < in4515.length; i++) {
-            if (task4515(in4515[i])) {
-                System.out.println("Повторения есть");
-            } else {
-                System.out.println("Повторений нет");
-            }
-        }
-        System.out.println();
-        System.out.println("7035");
-        String[] in7035 = {
-                "1 2 3 4 5 6",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 8 9",
-                "4 4 4 4",
-                "4 3"
-        };
-        int[] out7035 = {1, 1, 2, 3, 4, 3};
-        for (int i = 0; i < in7035.length; i++) {
-            System.out.println(task7035(in7035[i]) - out7035[i]);
-        }
+
+
+
         System.out.println();
         System.out.println("9271");
         String[] in9271 = {
@@ -389,19 +430,7 @@ public class Lab08 {
                             .equals(out3218[i])
             );
         }
-        System.out.println();
-        System.out.println("4283");
-        int[] in4283k = {3, 5, 2, 1};
-        String[] in4283s = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3",
-                "3 2 2 2 2 2",
-                "4 4 4 4 4 4"
-        };
-        int[] out4283 = {1, 0, 5, 0};
-        for (int i = 0; i < in4283k.length; i++) {
-            System.out.println(task4283(in4283k[i], in4283s[i]) - out4283[i]);
-        }
+
         System.out.println();
         System.out.println("7703");
         String[] in7703 = {
@@ -444,17 +473,7 @@ public class Lab08 {
                             .equals(out5541[i])
             );
         }
-        System.out.println();
-        System.out.println("9182");
-        String[] in9182 = {
-                "1 2 3 4 5 6",
-                "1 2 3 1 2 6",
-                "1 1 1 1 1 1"
-        };
-        int[] out9182 = {6, 4, 1};
-        for (int i = 0; i < out9182.length; i++) {
-            System.out.println(task9182(in9182[i]) - out9182[i]);
-        }
+
     }
 
     public static int task4425(int a, String raw) throws Exception {
