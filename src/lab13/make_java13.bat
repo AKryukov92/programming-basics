@@ -28,10 +28,19 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
+ ^<li^>^<a href="#task9701"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task6732"^>№ 2^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
 type quiz.html>> %filename%
+
+echo ^<div class="section"^>>>%filename%
+
+type taskjava9701.html>>%filename%
+type taskjava6732.html>>%filename%
+
+echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

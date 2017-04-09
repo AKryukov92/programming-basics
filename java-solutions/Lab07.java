@@ -125,14 +125,17 @@ public class Lab07 {
 
     public static int task9631(String s) throws Exception {
         if (!STR.contains(s)){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение S отсутствует в строке");
         }
         return STR.length() - STR.indexOf(s) - 1;
     }
 
     public static int task9812(String a, String b) throws Exception {
-        if (!STR.contains(a) || !STR.contains(b)){
-            throw new Exception("Сообщение об ошибке");
+        if (!STR.contains(a)){
+            throw new Exception("Значение A отсутствует в строке");
+        }
+        if (!STR.contains(b)){
+            throw new Exception("Значение B отсутствует в строке");
         }
         int indexA = STR.indexOf(a);
         int indexB = STR.indexOf(b);
@@ -144,8 +147,11 @@ public class Lab07 {
     }
 
     public static String task5728(String a, String b) throws Exception {
-        if (!STR.contains(a) || !STR.contains(b)){
-            throw new Exception("Сообщение об ошибке");
+        if (!STR.contains(a)){
+            throw new Exception("Значение A отсутствует в строке");
+        }
+        if (!STR.contains(b)){
+            throw new Exception("Значение B отсутствует в строке");
         }
         int indexA = STR.indexOf(a);
         int indexB = STR.indexOf(b);

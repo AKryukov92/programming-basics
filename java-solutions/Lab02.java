@@ -122,53 +122,59 @@ public class Lab02 {
         System.out.printf("%.6f\n", task5789(-1, -3, 2, 9) - 12.3693);
     }
 
-    public static void main(String[] args) {
-        task2354();
-
+    public static void task9701(){
         System.out.println();
         System.out.println("9298");
         int[] in9298 = {1, 5, 0, -2};
         int[] outs9298 = {6, 150, 0, 0};
         for(int i = 0; i < in9298.length; i++){
             try {
-                System.out.println(task9298(in9298[i]) - outs9298[i]);
+                int result = task9298(in9298[i]);
+                System.out.printf("%d (%d)\n",result, outs9298[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("3354");
         int[] in3354 = {7, 11, 0, -3};
         int[] outs3354 = {343, 1331, 0, 0};
         for(int i = 0; i < in3354.length; i++){
             try {
-                System.out.println(task3354(in3354[i]) - outs3354[i]);
+                int result = task3354(in3354[i]);
+                System.out.printf("%d (%d)\n",result, outs3354[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("5201");
         int[] in5201 = {13, 17, 0, -5};
         double[] outs5201 = {81.6814, 106.8142,0,0};
         for (int i = 0; i < in5201.length; i++){
             try {
-                System.out.printf("%.6f\n",task5201(in5201[i]) - outs5201[i]);
+                double result = task5201(in5201[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs5201[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("2981");
         int[] in2981 = {19, 23, 0, -7};
         double[] outs2981 = {28730.9120, 50965.0104,0,0};
         for (int i = 0; i < in2981.length; i++){
             try {
-                System.out.printf("%.6f\n",task2981(in2981[i]) - outs2981[i]);
+                double result = task2981(in2981[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs2981[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("4312");
         int[] in4312a = {1,2,0,-2,3};
@@ -176,44 +182,39 @@ public class Lab02 {
         double[] outs4312 = {0.5, 3};
         for (int i = 0; i < in4312a.length; i++){
             try {
-                System.out.printf("%.6f\n", task4312(in4312a[i], in4312h[i]) - outs4312[i]);
+                double result = task4312(in4312a[i], in4312h[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs4312[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("2361");
-        int[] in2361t = {400, 103, 300, -800};
-        int[] in2361l = {17, 29, -70, 20};
-        for (int i = 0; i < in2361l.length;i++){
-            try {
-                System.out.println(task2361(in2361t[i], in2361l[i]).print());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
         System.out.println();
         System.out.println("8833");
         int[] in8833 = {7606, 9, 0, -7603};
         double[] outs8833 = {87.2124, 3.0000, 0, 0};
         for (int i = 0; i < in8833.length; i++){
             try {
-                System.out.printf("%.6f\n", task8833(in8833[i]) - outs8833[i]);
+                double result = task8833(in8833[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs8833[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("9020");
         int[] in9020 = {7573, 75, 0, -9};
         double[] outs9020 = {261.0690, 25.9808, 0, 0};
         for (int i = 0; i < in9020.length; i++){
             try {
-                System.out.printf("%.6f\n", task9020(in9020[i]) - outs9020[i]);
+                double result = task9020(in9020[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs9020[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("1934");
         int[] in1934a = {6047, -3, 0, 6221};
@@ -221,22 +222,26 @@ public class Lab02 {
         double[] outs1934 = {1240401.6995, -21.0000, 0.0000, 0};
         for (int i = 0; i < in1934a.length; i++){
             try {
-                System.out.printf("%.6f\n", task1934(in1934a[i],in1934b[i]) - outs1934[i]);
+                double result = task1934(in1934a[i],in1934b[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs1934[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("7237");
         double[] in7237 = {0, 20, 40, -273.15, -300};
-        double[] outs7237 = {32, 68, 104, -439.67, 0};
+        double[] outs7237 = {32, 68, 104, -459.67, 0};
         for (int i = 0; i < in7237.length; i++){
             try {
-                System.out.printf("%.6f\n", task7237(in7237[i]) - outs7237[i]);
+                double result = task7237(in7237[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs7237[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("3943");
         int[] in3943x = {-5, 7507, 7489, -7481};
@@ -244,11 +249,13 @@ public class Lab02 {
         double[] outs3943 = {-10, -435.7062, 0, 0};
         for (int i = 0; i < in3943x.length; i++){
             try {
-                System.out.printf("%.6f\n", task3943(in3943x[i], in3943y[i]) - outs3943[i]);
+                double result = task3943(in3943x[i], in3943y[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs3943[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("7619");
         int[] in7619v1 = {31,0,-13,67};
@@ -257,15 +264,13 @@ public class Lab02 {
         double[] outs7619 = {87.6026, 975.5714,0,0};
         for (int i = 0; i < in7619v1.length;i++){
             try {
-                System.out.printf("%.6f\n", task7619(in7619v1[i], in7619v2[i], in7619s[i]) - outs7619[i]);
+                double result = task7619(in7619v1[i], in7619v2[i], in7619s[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs7619[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("9622");
-        System.out.println(task9622(7351, 7349, 7333).print());
-        System.out.println(task9622(19, 23, 29).print());
+
         System.out.println();
         System.out.println("8873");
         int[] in8873r1 = {7331, 3, 0, 7309};
@@ -273,11 +278,13 @@ public class Lab02 {
         double[] outs8873 = {0.0003, 0.5333, 0, 0};
         for (int i = 0; i < in8873r1.length; i++){
             try {
-                System.out.printf("%.6f\n",task8873(in8873r1[i], in8873r2[i]) - outs8873[i]);
+                double result = task8873(in8873r1[i], in8873r2[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs8873[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("9130");
         int[] in9130y = {7211, 11, 7177};
@@ -287,11 +294,15 @@ public class Lab02 {
         double[] outs9130 = {7229.0200, 1.3669, 0};
         for (int i = 0; i < in9130y.length; i++){
             try {
-                System.out.printf("%.6f\n", task9130(in9130y[i], in9130m1[i], in9130m2[i], in9130r[i]) - outs9130[i]);
+                double result = task9130(
+                        in9130y[i], in9130m1[i],
+                        in9130m2[i], in9130r[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs9130[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("2461");
         int[] in2461a = {7069, 0, 7019};
@@ -301,11 +312,15 @@ public class Lab02 {
         double[] outs2461 = {1.9938, 0, 0};
         for (int i = 0; i < in2461a.length; i++){
             try {
-                System.out.printf("%.6f\n", task2461(in2461a[i], in2461b[i], in2461c[i], in2461d[i]) - outs2461[i]);
+                double result = task2461(
+                        in2461a[i], in2461b[i],
+                        in2461c[i], in2461d[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs2461[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("2624");
         int[] in2624a = {6991, 11, -6959, 0};
@@ -315,22 +330,51 @@ public class Lab02 {
         double[] outs2624 = {0.0, 0.0154, 0, 0};
         for (int i = 0; i < in2624a.length; i++){
             try {
-                System.out.printf("%.6f\n", task2624(in2624a[i], in2624b[i], in2624c[i], in2624x[i]) - outs2624[i]);
+                double result = task2624(
+                        in2624a[i], in2624b[i],
+                        in2624c[i], in2624x[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs2624[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("5871");
         double[] in5871 = {6911, 3, 0.9};
         double[] outs5871 = {1.0, 0.9856, 0};
         for (int i = 0; i < in5871.length; i++){
             try {
-                System.out.printf("%.6f\n", task5871(in5871[i]) - outs5871[i]);
+                double result = task5871(in5871[i]);
+                System.out.printf("%.6f (%.6f)\n", result, outs5871[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public static void main(String[] args) {
+        task2354();
+
+        task9701();
+
+        System.out.println();
+        System.out.println("2361");
+        int[] in2361t = {400, 103, 300, -800};
+        int[] in2361l = {17, 29, -70, 20};
+        for (int i = 0; i < in2361l.length;i++){
+            try {
+                class2361 result = task2361(in2361t[i], in2361l[i]);
+                System.out.println(result);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("9622");
+        System.out.println(task9622(7351, 7349, 7333).print());
+        System.out.println(task9622(19, 23, 29).print());
+
         System.out.println();
         System.out.println("6522");
         int[] in6522v1 = {1, 1, 5, -2, 4};
@@ -339,7 +383,8 @@ public class Lab02 {
         int[] in6522t2 = {20, 20, -10, 50, 4};
         for (int i = 0; i < in6522v1.length; i++){
             try {
-                System.out.println(task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]).print());
+                class6522 result = task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]);
+                System.out.println(result);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -351,39 +396,39 @@ public class Lab02 {
     }
 
     public static int task9298(int a) throws Exception {
-        if (a <=0){
-            throw new Exception("Сообщение об ошибке");
+        if (a <= 0){
+            throw new Exception("Значение A должно быть положительным");
         }
         return 6 * a * a;
     }
 
     public static int task3354(int a) throws Exception {
-        if (a <=0){
-            throw new Exception("Сообщение об ошибке");
+        if (a <= 0){
+            throw new Exception("Значение A должно быть положительным");
         }
         return a * a * a;
     }
 
     public static double task5201(int r) throws Exception {
-        if (r <=0){
-            throw new Exception("Сообщение об ошибке");
+        if (r <= 0){
+            throw new Exception("Значение R должно быть положительным");
         }
         return 2 * Math.PI * r;
     }
 
     public static double task2981(int r) throws Exception {
-        if (r <=0){
-            throw new Exception("Сообщение об ошибке");
+        if (r <= 0){
+            throw new Exception("Значение R должно быть положительным");
         }
         return 4 * Math.PI * r * r * r / 3;
     }
 
     public static double task4312(int a, int h) throws Exception{
         if (a <= 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение A должно быть положительным");
         }
         if (h <= 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение H должно быть положительным");
         }
         return (double)a*(double)h/2;
     }
@@ -400,18 +445,18 @@ public class Lab02 {
             this.amount = amount;
             this.deficit = deficit;
         }
-
-        public String print(){
+        @Override
+        public String toString(){
             return amount + " шт и " + deficit + " см";
         }
     }
 
     public static class2361 task2361(int t, int l) throws Exception {
         if (t <= 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение T должно быть положительным");
         }
         if (l <= 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение L должно быть положительным");
         }
         return new class2361(t*100/l, t*100%l);
     }
@@ -426,7 +471,7 @@ public class Lab02 {
 
     public static double task8833(int x) throws Exception {
         if (x < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение X должно быть положительным");
         }
         return Math.sqrt(x);
     }
@@ -437,40 +482,41 @@ public class Lab02 {
 
     public static double task9020(int x) throws Exception {
         if (x < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение X должно быть неотрицательным");
         }
         return 3 * Math.sqrt(x);
     }
+
     public static double task1934(int a, int b) throws Exception {
-        if (-7*b < 0){
-            throw new Exception("Сообщение об ошибке");
+        if (b >= 0){
+            throw new Exception("Значение B должно быть отрицательным");
         }
         return a*Math.sqrt(-7*b);
     }
 
     public static double task7237(double t) throws Exception {
-        if (t <= -273.15){
-            throw new Exception("Сообщение об ошибке");
+        if (t < -273.15){
+            throw new Exception("Значение T должно быть не ниже абсолютного нуля");
         }
         return t*1.8+32;
     }
 
     public static double task3943(int x, int y) throws Exception {
         if (y < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение y должно быть неотрицательным");
         }
         if (x+Math.sqrt(y) < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Подкоренное выражение должно быть неотрицательным");
         }
         return -5 * Math.sqrt(x + Math.sqrt(y));
     }
 
     public static double task7619(int v1, int v2, int s) throws Exception {
         if (v1 < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение v1 должно быть неотрицательным");
         }
         if (v2 < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение v2 должно быть неотрицательным");
         }
         return (double)s / (v1+v2);
     }
@@ -504,10 +550,10 @@ public class Lab02 {
 
     public static double task8873(int r1, int r2) throws Exception {
         if(r1 == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение r1 должно быть не равно нулю");
         }
         if(r2 == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение r2 должно быть не равно нулю");
         }
         return 1.0/r1 + 1.0/r2;
     }
@@ -523,7 +569,7 @@ public class Lab02 {
 
     public static double task9130(int y, int m1, int m2, int r) throws Exception {
         if(r == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение r должно быть не равно нулю");
         }
         return y*m1*m2/r/r;
     }
@@ -534,10 +580,10 @@ public class Lab02 {
 
     public static double task2461(int a, int b, int c, int d) throws Exception {
         if (a == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение a должно быть не равно нулю");
         }
         if (d == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение d должно быть не равно нулю");
         }
         return (double)(a*d+b*c)/(a*d);
     }
@@ -549,18 +595,18 @@ public class Lab02 {
 
     public static double task2624(long a, long b, long c, long x) throws Exception {
         if (a*x*x+b*x+c < 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Подкоренное выражение должно быть неотрицательным");
         }
         double denominator = Math.sqrt(a*x*x+b*x+c);
         if (denominator == 0){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Знаменатель не может быть равен нулю");
         }
         return 1.0/denominator;
     }
 
     public static double task5871(double x) throws Exception {
         if (x < 1){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение X должно быть не меньше 1");
         }
         return (Math.sqrt(x+1)+Math.sqrt(x-1))/2/Math.sqrt(x);
     }
@@ -609,17 +655,18 @@ public class Lab02 {
             this.v = v;
             this.t = t;
         }
-        public String print(){
+        @Override
+        public String toString(){
             return String.format("v %.4f t %.4f", v, t);
         }
     }
 
     public static class6522 task6522(int v1, int t1, int v2, int t2) throws Exception {
         if(v1 < 0) {
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение v1 должно быть неотрицательным");
         }
         if(v2 < 0) {
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Значение v2 должно быть неотрицательным");
         }
         return new class6522(v1+v2, (double)(t1*v1+t2*v2)/(v1+v2));
     }

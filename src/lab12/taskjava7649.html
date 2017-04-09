@@ -195,5 +195,109 @@ System.out.println(result5411);</td>
 211&lt;212&lt;213&lt;214&lt;215&lt;216&lt;217&gt;218&gt;219&gt;220&gt;221&gt;222&gt;223
 29&lt;30&lt;31&lt;32&lt;33&gt;34&gt;35&gt;36&gt;37</td>
         </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task7585" target="_blank">ЛР6№7585 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7585 = {10, 15, 20, 9, 21};
+String[] out7585 = {
+    "10+\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15+\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20+\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"
+};
+for (int i = 0; i &lt; in7585.length; i++){
+    StringBuilder result = task7585(new StringBuilder(), in7585[i]);
+    if (out7585[i].equals(result.toString())){
+        System.out.println("Задача решена верно");
+    } else {
+        result.insert(0, "Неверно. Результат:\n");
+        System.out.println(result);
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task8770" target="_blank">ЛР6№8770 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in8770 = {30, 37, 40, 8, 100};
+String[] out8770 = {
+    "30+\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37+\n38-\n39-\n40-",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-"
+}
+for (int i = 0; i &lt; in8770.length; i++){
+    StringBuilder result = task8770(new StringBuilder(), in8770[i]);
+    if (out8770[i].equals(result.toString())){
+        System.out.println("Задача решена верно");
+    } else {
+        result.insert(0, "Неверно. Результат:\n");
+        System.out.println(result.toString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task5694" target="_blank">ЛР8№5694 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in5694 = {"a", "d", "h", "i", "z"};
+String[] out5694 = {
+    "a+\nb\nc\nd\ne\nf\ng\nh\n",
+    "a\nb\nc\nd+\ne\nf\ng\nh\n",
+    "a\nb\nc\nd\ne\nf\ng\nh+\n",
+    "a\nb\nc\nd\ne\nf\ng\nh\n",
+    "a\nb\nc\nd\ne\nf\ng\nh\n"
+};
+for (int i = 0; i &lt; in5694.length; i++) {
+    StringBuilder result = task5694(new StringBuilder(), in5694[i]);
+    if (out5694[i].equals(result.toString())){
+        System.out.println("Задача решена верно");
+    } else {
+        result.insert(0, "Неверно. Результат:\n");
+        System.out.println(result.toString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task6806" target="_blank">ЛР8№6806 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in6806 = {10, 15, 20, 9, 23};
+String[] out6806 = {
+    "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
+};
+for (int i = 0; i &lt; in6806.length; i++) {
+    StringBuilder result = task6806(new StringBuilder(), in6806[i]);
+    if (out6806[i].equals(result.toString())){
+        System.out.println("Задача решена верно");
+    } else {
+        result.insert(0, "Неверно. Результат:\n");
+        System.out.println(result.toString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
     </table>
 </div>

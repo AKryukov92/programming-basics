@@ -18,40 +18,10 @@ public class Lab08 {
         };
         double[] out3946 = {2.2, 3, 0};
         for (int i = 0; i < in3946.length; i++) {
-            System.out.println(task3946(in3946[i]) - out3946[i]);
+            double result = task3946(in3946[i]);
+            System.out.printf("%.6f (%.6f)\n", result, out3946[i]);
         }
 
-        System.out.println();
-        System.out.println("5694");
-        String[] in5694 = {"a", "d", "h", "i", "z"};
-        String[] out5694 = {
-                "a+\nb\nc\nd\ne\nf\ng\nh\n",
-                "a\nb\nc\nd+\ne\nf\ng\nh\n",
-                "a\nb\nc\nd\ne\nf\ng\nh+\n",
-                "a\nb\nc\nd\ne\nf\ng\nh\n",
-                "a\nb\nc\nd\ne\nf\ng\nh\n"
-        };
-        for (int i = 0; i < in5694.length; i++) {
-            try {
-                System.out.println(task5694(in5694[i]).equals(out5694[i]));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-
-        System.out.println();
-        System.out.println("6806");
-        int[] in6806 = {10, 15, 20, 9, 23};
-        String[] out6806 = {
-                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
-        };
-        for (int i = 0; i < in6806.length; i++) {
-            System.out.println(task6806(in6806[i]).equals(out6806[i]));
-        }
 
         System.out.println();
         System.out.println("7035");
@@ -65,7 +35,8 @@ public class Lab08 {
         };
         int[] out7035 = {1, 1, 2, 3, 4, 3};
         for (int i = 0; i < in7035.length; i++) {
-            System.out.println(task7035(in7035[i]) - out7035[i]);
+            int result = task7035(in7035[i]);
+            System.out.printf("%d (%d)\n", result, out7035[i]);
         }
 
         System.out.println();
@@ -79,7 +50,8 @@ public class Lab08 {
         };
         int[] out4283 = {1, 0, 5, 0};
         for (int i = 0; i < in4283k.length; i++) {
-            System.out.println(task4283(in4283k[i], in4283s[i]) - out4283[i]);
+            int result = task4283(in4283k[i], in4283s[i]);
+            System.out.printf("%d (%d)\n", result, out4283[i]);
         }
 
         System.out.println();
@@ -91,7 +63,75 @@ public class Lab08 {
         };
         int[] out9182 = {6, 4, 1};
         for (int i = 0; i < out9182.length; i++) {
-            System.out.println(task9182(in9182[i]) - out9182[i]);
+            int result = task9182(in9182[i]);
+            System.out.printf("%d (%d)\n", result, out9182[i]);
+        }
+
+        System.out.println();
+        System.out.println("4425");
+        int[] in4425a = {0, 3, 9, 5, -1, 0};
+        String[] in4425data = {
+                "4 3 2 1",
+                "4 3 2 1",
+                "0 9 8 7 6 5 4 3 2 1",
+                "4 3 2 1",
+                "4 3 2 1",
+                ""
+        };
+        int[] out4425 = {4, 1, 1, 0, 0, 0};
+        for (int i = 0; i < in4425a.length; i++){
+            try {
+                int result = task4425(in4425a[i], in4425data[i]);
+                System.out.printf("%d (%d)\n", result, out4425[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
+        System.out.println("7290");
+        int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
+        String[] in7290data = {
+                "1 1 1 3 4 1",
+                "1 2 3 4 1 2",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 2 1",
+                "4 4 4 4",
+                "1 1 1 3 4 1",
+                "1 2 3"
+        };
+        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
+        for (int i = 0; i < in7290b.length; i++) {
+            try {
+                int result = task7290(in7290b[i], in7290data[i]);
+                System.out.printf("%d (%d)\n", result, out7290[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
+        System.out.println("8769");
+        int[] in8769p = {1, 8, 0, 0, 1, -1, 5};
+        int[] in8769q = {3, 10, 5, 5, 7, 0, 10};
+        String[] in8769s = {
+                "1 2 3 4 1 2",
+                "3 4 4 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 2 1",
+                "4 4 4 4",
+                "4 3",
+                "1 2 3 4"
+        };
+        int[] out8769 = {2, 1, 2, 3, 0, 0, 0};
+        for (int i = 0; i < in8769p.length; i++) {
+            try {
+                int result = task8769(in8769p[i], in8769q[i], in8769s[i]);
+                System.out.printf("%d (%d)\n", result, out8769[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
@@ -112,29 +152,54 @@ public class Lab08 {
         }
     }
 
+    public static void task7649(){
+        System.out.println();
+        System.out.println("5694");
+        String[] in5694 = {"a", "d", "h", "i", "z"};
+        String[] out5694 = {
+            "a+\nb\nc\nd\ne\nf\ng\nh\n",
+            "a\nb\nc\nd+\ne\nf\ng\nh\n",
+            "a\nb\nc\nd\ne\nf\ng\nh+\n",
+            "a\nb\nc\nd\ne\nf\ng\nh\n",
+            "a\nb\nc\nd\ne\nf\ng\nh\n"
+        };
+        for (int i = 0; i < in5694.length; i++) {
+            StringBuilder result = task5694(new StringBuilder(), in5694[i]);
+            if (out5694[i].equals(result.toString())){
+                System.out.println("Задача решена верно");
+            } else {
+                result.insert(0, "Неверно. Результат:\n");
+                System.out.println(result.toString());
+            }
+        }
+
+        System.out.println();
+        System.out.println("6806");
+        int[] in6806 = {10, 15, 20, 9, 23};
+        String[] out6806 = {
+                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
+                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
+        };
+        for (int i = 0; i < in6806.length; i++) {
+            StringBuilder result = task6806(new StringBuilder(), in6806[i]);
+            if (out6806[i].equals(result.toString())){
+                System.out.println("Задача решена верно");
+            } else {
+                result.insert(0, "Неверно. Результат:\n");
+                System.out.println(result.toString());
+            }
+        }
+    }
+
     public static void main(String[] args) {
         task2354();
         task2030();
+        task7649();
 
-        System.out.println();
-        System.out.println("4425");
-        int[] in4425a = {0, 3, 9, 5, -1, 0};
-        String[] in4425data = {
-            "4 3 2 1",
-            "4 3 2 1",
-            "0 9 8 7 6 5 4 3 2 1",
-            "4 3 2 1",
-            "4 3 2 1",
-            ""
-        };
-        int[] out4425 = {4, 1, 1, 0, 0, 0};
-        for (int i = 0; i < in4425a.length; i++){
-            try {
-                System.out.println(task4425(in4425a[i], in4425data[i]) - out4425[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
         System.out.println();
         System.out.println("1223");
         String[] in1223 = {
@@ -302,27 +367,7 @@ public class Lab08 {
                             .equals(out3333[i])
             );
         }
-        System.out.println();
-        System.out.println("7290");
-        int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
-        String[] in7290data = {
-                "1 1 1 3 4 1",
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "1 1 1 3 4 1",
-                "1 2 3"
-        };
-        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
-        for (int i = 0; i < in3333s.length; i++) {
-            try {
-                System.out.println(task7290(in7290b[i], in7290data[i]) - out7290[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
 
 
 
@@ -353,27 +398,7 @@ public class Lab08 {
                             .equals(out9271[i])
             );
         }
-        System.out.println();
-        System.out.println("8769");
-        int[] in8769p = {1, 8, 0, 0, 1, -1, 5};
-        int[] in8769q = {3, 10, 5, 5, 7, 0, 10};
-        String[] in8769s = {
-                "1 2 3 4 1 2",
-                "3 4 4 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "4 3",
-                "1 2 3 4"
-        };
-        int[] out8769 = {2, 1, 2, 3, 0, 0, 0};
-        for (int i = 0; i < in8769p.length; i++) {
-            try {
-                System.out.println(task8769(in8769p[i], in8769q[i], in8769s[i]) - out8769[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
         System.out.println();
         System.out.println("4497");
         int[] in4497x = {1, 3, 5};
@@ -478,11 +503,11 @@ public class Lab08 {
 
     public static int task4425(int a, String raw) throws Exception {
         if (raw.isEmpty()){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Исходная строка пуста");
         }
         String[] arr = raw.split(" ");
         if (a < 0 || a >= arr.length){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Число A должно быть в интервале [0, размер массива)");
         }
         return Integer.parseInt(arr[a]);
     }
@@ -515,7 +540,7 @@ public class Lab08 {
         String[] larr = left.split(" ");
         String[] rarr = right.split(" ");
         if (larr.length != rarr.length){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Размеры массивов должны быть одинаковы");
         }
         List<Integer> ret = new ArrayList<>();
         for (int i = 0; i < larr.length; i++){
@@ -528,8 +553,11 @@ public class Lab08 {
 
     public static List<Integer> task8311(int b, int e, String raw) throws Exception {
         String[] arr = raw.split(" ");
-        if (b < 0 || b >= arr.length || e < 0 || e >= arr.length){
-            throw new Exception("Сообщение об ошибке");
+        if (b < 0 || b >= arr.length){
+            throw new Exception("Число И должно быть в интервале [0, размер массива)");
+        }
+        if (e < 0 || e >= arr.length){
+            throw new Exception("Число E должно быть в интервале [0, размер массива)");
         }
         List<Integer> ret = new ArrayList<>();
         int i, n;
@@ -549,8 +577,11 @@ public class Lab08 {
 
     public static List<String> task3134(int p, int q, String raw) throws Exception {
         String[] arr = raw.split(" ");
-        if (p < 0 || p >= arr.length || q < 0 || q >= arr.length){
-            throw new Exception("Сообщение об ошибке");
+        if (p < 0 || p >= arr.length ){
+            throw new Exception("Число P должно быть в интервале [0, размер массива)");
+        }
+        if (q < 0 || q >= arr.length){
+            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
         }
         List<String> ret = new ArrayList<>();
         String t = arr[p];
@@ -602,7 +633,7 @@ public class Lab08 {
     public static int task7290(int b, String raw) throws Exception {
         String[] arr = raw.split(" ");
         if (b < 0 || b >= arr.length){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Число B должно быть в интервале [0, размер массива)");
         }
         int t = Integer.parseInt(arr[b]);
         int count = 0;
@@ -614,9 +645,8 @@ public class Lab08 {
         return count;
     }
 
-    public static String task5694(String x){
+    public static StringBuilder task5694(StringBuilder sb, String x){
         String[] arr = "a b c d e f g h".split(" ");
-        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < arr.length; i++){
             sb.append(arr[i]);
             if (arr[i].equals(x)){
@@ -624,12 +654,11 @@ public class Lab08 {
             }
             sb.append("\n");
         }
-        return sb.toString();
+        return sb;
     }
 
-    public static String task6806(int x){
+    public static StringBuilder task6806(StringBuilder sb, int x){
         int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
-        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < arr.length; i++){
             sb.append(arr[i]);
             if (arr[i] == x){
@@ -637,7 +666,7 @@ public class Lab08 {
             }
             sb.append("\n");
         }
-        return sb.toString();
+        return sb;
     }
 
     public static boolean task4515(String raw){
@@ -686,8 +715,11 @@ public class Lab08 {
     public static int task8769(int p, int q, String raw) throws Exception {
         String[] arr = raw.split(" ");
         int i, n;
-        if (p < 0 || p >= arr.length || q < 0 || q >= arr.length){
-            throw new Exception("Сообщение об ошибке");
+        if (p < 0 || p >= arr.length){
+            throw new Exception("Число P должно быть в интервале [0, размер массива)");
+        }
+        if (q < 0 || q >= arr.length){
+            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
         }
         if (p < q){
             i = p;
