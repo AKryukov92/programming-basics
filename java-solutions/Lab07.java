@@ -13,25 +13,39 @@ public class Lab07 {
 
         System.out.println();
         System.out.println("9925");
-        System.out.println(task9925("один, два, три, четыре, пять") - 5);
+        int result9925 = task9925("один, два, три, четыре, пять");
+        System.out.println(result9925 - 5);
         System.out.println(task9925("янв,фев,март") - 3);
         System.out.println(task9925("один") - 1);
     }
 
-    public static void main(String[] args) {
-        task2354();
+    public static void task2030(){
+        System.out.println();
+        System.out.println("7491");
+        String[] in7491 = {"bx", "fw", "123"};
+        for (int i = 0; i < in7491.length; i++){
+            if (task7491(in7491[i])){
+                System.out.println("Содержится");
+            } else {
+                System.out.println("Не содержится");
+            }
+        }
+    }
 
+    public static void task9701(){
         System.out.println();
         System.out.println("9631");
         String[] in9631 = {"z", "a", "g"};
         int[] out9631 = {0, 9, 0};
         for (int i = 0; i < in9631.length; i++){
             try {
-                System.out.println(task9631(in9631[i]) - out9631[i]);
+                int result = task9631(in9631[i]);
+                System.out.printf("%d (%d)\n", result, out9631[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("9812");
         String[] in9812a = {"a", "w", "g", "x"};
@@ -39,11 +53,13 @@ public class Lab07 {
         int[] out9812 = {6, 2, 0, 0};
         for (int i = 0; i < in9812a.length; i++){
             try {
-                System.out.println(task9812(in9812a[i], in9812b[i]) - out9812[i]);
+                int result = task9812(in9812a[i], in9812b[i]);
+                System.out.printf("%d (%d)\n", result, out9812[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("5728");
         String[] in5728a = {"a", "c", "y", "g", "a"};
@@ -55,20 +71,11 @@ public class Lab07 {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println();
-        System.out.println("7491");
-        String[] in7491 = {"bx", "fw", "123"};
-        for (int i = 0; i < in5728a.length; i++){
-            try {
-                System.out.println(task7491(in7491[i]));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
         System.out.println();
         System.out.println("5923");
-        int[] in5923a = {5, 6, 0, -1, 10};
-        int[] in5923b = {3, 0, 7, 1, 3};
+        int[] in5923a = {5, 6, 0, -1, 10, 5};
+        int[] in5923b = {3, 0, 7, 1, 3, -2};
         for (int i = 0; i < in5923a.length; i++){
             try {
                 System.out.println(task5923(in5923a[i], in5923b[i]));
@@ -76,6 +83,7 @@ public class Lab07 {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("2166");
         String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
@@ -86,9 +94,18 @@ public class Lab07 {
                 System.out.println(e.getMessage());
             }
         }
+
         System.out.println();
         System.out.println("9116");
-        String[] in9116 = {"\"   12345\"", "\"abcdef    \"", "\"  xyz  \"", "\"  a b  \"", "\" pq\"rt \"", "asdf\"", "\"xyz", "p\"w\""};
+        String[] in9116 = {"\"   12345\"",
+                "\"abcdef    \"",
+                "\"  xyz  \"",
+                "\"  a b  \"",
+                "\" pq\"rt \"",
+                "asdf\"",
+                "\"xyz",
+                "p\"w\""
+        };
         for (int i = 0; i < in9116.length; i++){
             try {
                 System.out.println(task9116(in9116[i]));
@@ -99,18 +116,18 @@ public class Lab07 {
         System.out.println();
         System.out.println("1618");
         String[] in1618 = {
-            "{}",
-            "{{}}",
-            "{{}}{}",
-            "{{}{}}",
-            "{{{{}{}}{{}{{}}{}}}{{}{}}}",
-            "{",
-            "{{}",
-            "{{}}{",
-            "{{{}}{}{}}{{}{}{}",
-            "}",
-            "{}}",
-            "{{{}{}}}{{}{}}{{}}}"
+                "{}",
+                "{{}}",
+                "{{}}{}",
+                "{{}{}}",
+                "{{{{}{}}{{}{{}}{}}}{{}{}}}",
+                "{",
+                "{{}",
+                "{{}}{",
+                "{{{}}{}{}}{{}{}{}",
+                "}",
+                "{}}",
+                "{{{}{}}}{{}{}}{{}}}"
         };
         for (int i = 0; i < in1618.length; i++){
             try {
@@ -119,6 +136,12 @@ public class Lab07 {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public static void main(String[] args) {
+        task2354();
+        task2030();
+        task9701();
     }
 
     public static String STR = "abcdefwxyz";
@@ -162,13 +185,19 @@ public class Lab07 {
         }
     }
 
-    public static boolean task7491(String x) throws Exception {
+    public static boolean task7491(String x) {
         return STR.contains(x);
     }
 
     public static String task5923(int a, int b) throws Exception {
-        if (a < 0 || a > STR.length() || (a + b) > STR.length()){
-            throw new Exception("Сообщение об ошибке");
+        if (a < 0 || a > STR.length()){
+            throw new Exception("Значение A должно быть в интервале [0, длина строки)");
+        }
+        if (b < 0){
+            throw new Exception("Значение B должно быть неотрицательно");
+        }
+        if ((a + b) > STR.length()){
+            throw new Exception("Сумма значений A и B должна быть меньше длины строки");
         }
         return STR.substring(0, a) + STR.substring(a + b);
     }
@@ -185,14 +214,14 @@ public class Lab07 {
 
     public static String task2166(String s) throws Exception {
         if (s.length() != 2){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
         }
         return "abcdacadbacdaabaadc".replace(s, " ");
     }
 
     public static String task9116(String s) throws Exception {
         if(!s.startsWith("\"") || !s.endsWith("\"")){
-            throw new Exception("Сообщение об ошибке");
+            throw new Exception("Строка должна начинаться и заканчиваться кавычкой");
         }
         return s.substring(1, s.length() - 1).trim();
     }
@@ -230,7 +259,7 @@ public class Lab07 {
                 break;
             }
             if (depth < 0){
-                throw new Exception("Неожиданная закрывающаяся скобочка");
+                throw new Exception("Неожиданный символ '}'");
             }
             System.out.print(depth);
             lastIndex++;

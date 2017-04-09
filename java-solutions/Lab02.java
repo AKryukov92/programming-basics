@@ -52,7 +52,8 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("1346");
-        System.out.printf("%.6f\n",task1346(7411,7433,7417) - 204947815919.5);
+        double result1346 = task1346(7411,7433,7417);
+        System.out.printf("%.6f\n", result1346 - 204947815919.5);
         System.out.printf("%.6f\n",task1346(3,7,11) - 290.5);
 
         System.out.println();
@@ -67,7 +68,8 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("5895");
-        System.out.printf("%.6f\n", task5895(7109,7103,7079) - 12369.4955);
+        double result5895 = task5895(7109, 7103, 7079);
+        System.out.printf("%.6f\n", result5895 - 12369.4955);
         System.out.printf("%.6f\n", task5895(3,7,13) - 4.1324);
 
         System.out.println();
@@ -264,7 +266,8 @@ public class Lab02 {
         double[] outs7619 = {87.6026, 975.5714,0,0};
         for (int i = 0; i < in7619v1.length;i++){
             try {
-                double result = task7619(in7619v1[i], in7619v2[i], in7619s[i]);
+                double result = task7619(
+                        in7619v1[i], in7619v2[i], in7619s[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs7619[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());

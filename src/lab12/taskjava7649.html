@@ -18,47 +18,22 @@
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task8518" target="_blank">ЛР5№8518 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">StringBuilder sb = new StringBuilder();
+            <td class="preformatted">String out8518 = "a+\nb\nc\nd\ne\nf\ng\nh\n\n" +
+    "a\nb\nc\nd+\ne\nf\ng\nh\n\n" +
+    "a\nb\nc\nd\ne\nf\ng\nh+\n\n" +
+    "a\nb\nc\nd\ne\nf\ng\nh\n\n";
+StringBuilder sb = new StringBuilder();
 task8518(sb, "a").append("\n");
 task8518(sb, "d").append("\n");
 task8518(sb, "h").append("\n");
 task8518(sb, "i").append("\n");
-System.out.println(sb.toString());</td>
-            <td class="preformatted">a+
-b
-c
-d
-e
-f
-g
-h
-
-a
-b
-c
-d+
-e
-f
-g
-h
-
-a
-b
-c
-d
-e
-f
-g
-h+
-
-a
-b
-c
-d
-e
-f
-g
-h</td>
+if (out8518.equals(sb.toString())){
+    System.out.println("Задача решена верно");
+} else {
+    sb.insert(0, "Неверно. Результат:\n");
+    System.out.println(sb.toString());
+}</td>
+            <td class="preformatted">Задача решена верно</td>
         </tr>
         <tr>
             <td></td>
@@ -207,7 +182,8 @@ String[] out7585 = {
     "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"
 };
 for (int i = 0; i &lt; in7585.length; i++){
-    StringBuilder result = task7585(new StringBuilder(), in7585[i]);
+    StringBuilder result = task7585(
+        new StringBuilder(), in7585[i]);
     if (out7585[i].equals(result.toString())){
         System.out.println("Задача решена верно");
     } else {
@@ -233,7 +209,8 @@ String[] out8770 = {
     "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-"
 }
 for (int i = 0; i &lt; in8770.length; i++){
-    StringBuilder result = task8770(new StringBuilder(), in8770[i]);
+    StringBuilder result = task8770(
+        new StringBuilder(), in8770[i]);
     if (out8770[i].equals(result.toString())){
         System.out.println("Задача решена верно");
     } else {
@@ -259,7 +236,8 @@ String[] out5694 = {
     "a\nb\nc\nd\ne\nf\ng\nh\n"
 };
 for (int i = 0; i &lt; in5694.length; i++) {
-    StringBuilder result = task5694(new StringBuilder(), in5694[i]);
+    StringBuilder result = task5694(
+        new StringBuilder(), in5694[i]);
     if (out5694[i].equals(result.toString())){
         System.out.println("Задача решена верно");
     } else {
@@ -285,7 +263,8 @@ String[] out6806 = {
     "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
 };
 for (int i = 0; i &lt; in6806.length; i++) {
-    StringBuilder result = task6806(new StringBuilder(), in6806[i]);
+    StringBuilder result = task6806(
+        new StringBuilder(), in6806[i]);
     if (out6806[i].equals(result.toString())){
         System.out.println("Задача решена верно");
     } else {

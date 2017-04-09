@@ -207,7 +207,8 @@ int[] in7619s = {6833, 6829, 200, 400};
 double[] outs7619 = {87.6026, 975.5714,0,0};
 for (int i = 0; i &lt; in7619v1.length;i++){
     try {
-        double result = task7619(in7619v1[i], in7619v2[i], in7619s[i]);
+        double result = task7619(
+            in7619v1[i], in7619v2[i], in7619s[i]);
         System.out.printf("%.6f (%.6f\n", result, outs7619[i]);
     } catch (Exception e) {
         System.out.println(e.getMessage());
@@ -323,6 +324,29 @@ for (int i = 0; i &lt; in5871.length; i++){
         </tr>
         <tr>
             <td></td>
+            <td><a href="[5] лаб. ОСАЛП.html#task7937" target="_blank">ЛР5№7937 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7937w = {1721, 2473, 0, 877, 1181, 491};
+int[] in7937h = {661, 449, 1879, 0, 1033, 3533};
+int[] in7937c = {11, 23, 1163, 7, 0, 1297};
+int[] in7937d = {7, 11, 109, 19, 127, 0};
+for (int i = 0; i &lt; in7937w.length; i++){
+    try {
+        String result = task7937(in7937w[i], in7937h[i],
+                in7937c[i], in7937d[i]);
+        System.out.println(result);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">14700 при C вдоль H
+4280 при C вдоль W
+Значение W должно быть положительным
+Значение H должно быть положительным
+Значение C должно быть положительным
+Значение D должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
             <td><a href="[6] лаб. ОСАЛП.html#task9180" target="_blank">ЛР6№9180 (открыть в новой вкладке)</a></td>
             <td class="preformatted">int[] in9180 = {-100, 7, 368, 501, -101};
 int[] outs9180 = {120200, 125229, 57722, 0, 0};
@@ -378,6 +402,264 @@ for (int i = 0; i &lt; in2802.length; i++){
 3,547740 (3,547700)
 Значение N должно быть положительным
 Значение N должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9631" target="_blank">ЛР7№9631 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9631 = {"z", "a", "g"};
+int[] out9631 = {0, 9, 0};
+for (int i = 0; i &lt; in9631.length; i++){
+    try {
+        int result = task9631(in9631[i]);
+        System.out.printf("%d (%d)\n", result, out9631[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">0 (0)
+9 (9)
+Значение S отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9812" target="_blank">ЛР7№9812 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9812a = {"a", "w", "g", "x"};
+String[] in9812b = {"x", "d", "z", "u"};
+int[] out9812 = {6, 2, 0, 0};
+for (int i = 0; i &lt; in9812a.length; i++){
+    try {
+        int result = task9812(in9812a[i], in9812b[i]);
+        System.out.printf("%d (%d)\n", result, out9812[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">6 (6)
+2 (2)
+Значение A отсутствует в строке
+Значение B отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task5728" target="_blank">ЛР7№5728 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in5728a = {"a", "c", "y", "g", "a"};
+String[] in5728b = {"z", "d", "d", "z", "l"};
+for (int i = 0; i &lt; in5728a.length; i++){
+    try {
+        System.out.println(task5728(in5728a[i], in5728b[i]));
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">bcdefwxy
+
+efwx
+Значение A отсутствует в строке
+Значение B отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task5923" target="_blank">ЛР7№5923 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in5923a = {5, 6, 0, -1, 10, 5};
+int[] in5923b = {3, 0, 7, 1, 3, -2};
+for (int i = 0; i &lt; in5923a.length; i++){
+    try {
+        System.out.println(task5923(in5923a[i], in5923b[i]));
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">abcdeyz
+abcdefwxyz
+xyz
+Значение A должно быть в интервале [0, длина строки)
+Сумма значений A и B должна быть меньше длины строки
+Значение B должно быть неотрицательно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task2166" target="_blank">ЛР7№2166 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
+for (int i = 0; i &lt; in2166.length; i++){
+    try {
+        System.out.println(task2166(in2166[i]));
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">ab acadba aabaadc
+abcdacadbacd b dc
+abcdacadbacdaabaadc
+Вводимая строка должна содержать ровно 2 символа
+Вводимая строка должна содержать ровно 2 символа</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9116" target="_blank">ЛР7№9116 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9116 = {"\"   12345\"",
+    "\"abcdef    \"",
+    "\"  xyz  \"",
+    "\"  a b  \"",
+    "\" pq\"rt \"",
+    "asdf\"",
+    "\"xyz",
+    "p\"w\""
+};
+for (int i = 0; i &lt; in9116.length; i++){
+    try {
+        System.out.println(task9116(in9116[i]));
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">12345
+abcdef
+xyz
+a b
+pq"rt
+Строка должна начинаться и заканчиваться кавычкой
+Строка должна начинаться и заканчиваться кавычкой
+Строка должна начинаться и заканчиваться кавычкой</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task1618" target="_blank">ЛР7№1618 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in1618 = {
+    "{}",
+    "{{}}",
+    "{{}}{}",
+    "{{}{}}",
+    "{{{{}{}}{{}{{}}{}}}{{}{}}}",
+    "{",
+    "{{}",
+    "{{}}{",
+    "{{{}}{}{}}{{}{}{}",
+    "}",
+    "{}}",
+    "{{{}{}}}{{}{}}{{}}}"
+};
+for (int i = 0; i &lt; in1618.length; i++){
+    try {
+        task1618(in1618[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">{}
+10
+{{}}
+1210
+{{}}{}
+121010
+{{}{}}
+121210
+{{{{}{}}{{}{{}}{}}}{{}{}}}
+12343432343454343212323210
+{
+1Неожиданный конец строки
+{{}
+121Неожиданный конец строки
+{{}}{
+12101Неожиданный конец строки
+{{{}}{}{}}{{}{}{}
+12321212101212121Неожиданный конец строки
+}
+Неожиданный символ '}'
+{}}
+10Неожиданный символ '}'
+{{{}{}}}{{}{}}{{}}}
+123232101212101210Неожиданный символ '}'</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task4425" target="_blank">ЛР8№4425 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in4425a = {0, 3, 9, 5, -1, 0};
+String[] in4425data = {
+    "4 3 2 1",
+    "4 3 2 1",
+    "0 9 8 7 6 5 4 3 2 1",
+    "4 3 2 1",
+    "4 3 2 1",
+    ""
+};
+int[] out4425 = {4, 1, 1, 0, 0, 0};
+for (int i = 0; i &lt; in4425a.length; i++){
+    try {
+        int result = task4425(in4425a[i], in4425data[i]);
+        System.out.printf("%d (%d)\n", result, out4425[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">4 (4)
+1 (1)
+1 (1)
+Число A должно быть в интервале [0, размер массива)
+Число A должно быть в интервале [0, размер массива)
+Исходная строка пуста</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task7290" target="_blank">ЛР8№7290 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
+String[] in7290data = {
+    "1 1 1 3 4 1",
+    "1 2 3 4 1 2",
+    "3 4 1 2 3 4 1 2 3 1 2",
+    "4 2 3 4 3 2",
+    "4 4 4 4 4 3 2 1",
+    "4 4 4 4",
+    "1 1 1 3 4 1",
+    "1 2 3"
+};
+int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
+for (int i = 0; i &lt; in7290b.length; i++) {
+    try {
+        int result = task7290(in7290b[i], in7290data[i]);
+        System.out.printf("%d (%d)\n", result, out7290[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">4 (4)
+4 (4)
+6 (6)
+2 (2)
+0 (0)
+0 (0)
+Число B должно быть в интервале [0, размер массива)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task8769" target="_blank">ЛР8№8769 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in8769p = {1, 8, 0, 0, 1, -1, 5};
+int[] in8769q = {3, 10, 5, 5, 7, 0, 10};
+String[] in8769s = {
+    "1 2 3 4 1 2",
+    "3 4 4 2 3 4 1 2 3 1 2",
+    "4 2 3 4 3 2",
+    "4 4 4 4 4 3 2 1",
+    "4 4 4 4",
+    "4 3",
+    "1 2 3 4"
+};
+int[] out8769 = {2, 1, 2, 3, 0, 0, 0};
+for (int i = 0; i &lt; in8769p.length; i++) {
+    try {
+        int result = task8769(
+            in8769p[i], in8769q[i], in8769s[i]);
+        System.out.printf("%d (%d)\n", result, out8769[i]);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+}</td>
+            <td class="preformatted">4 (4)
+4 (4)
+6 (6)
+2 (2)
+0 (0)
+0 (0)
+Число B должно быть в интервале [0, размер массива)</td>
         </tr>
     </table>
 </div>
