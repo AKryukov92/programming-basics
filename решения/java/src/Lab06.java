@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Александр on 31.03.2017.
@@ -140,7 +139,7 @@ public class Lab06 {
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37+\n38-\n39-\n40-\n",
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40+\n",
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
+                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n"
         };
         for (int i = 0; i < in8770.length; i++){
             StringBuilder result = task8770(new StringBuilder(), in8770[i]);
@@ -402,7 +401,8 @@ public class Lab06 {
         };
         for (int i = 0; i < in5448s.length; i++){
             try {
-                StringBuilder result = task5448(new StringBuilder(), in5448s[i], in5448h[i]);
+                StringBuilder result = task5448(new StringBuilder(),
+                        in5448s[i], in5448h[i]);
                 if (out5448[i].equals(result.toString())){
                     System.out.println("Задача решена верно");
                 } else {
@@ -428,7 +428,8 @@ public class Lab06 {
         };
         for (int i = 0; i < in5238w.length; i++){
             try {
-                StringBuilder result = task5238(new StringBuilder(), in5238w[i], in5238h[i]);
+                StringBuilder result = task5238(new StringBuilder(),
+                        in5238w[i], in5238h[i]);
                 if (out5238[i].equals(result.toString())){
                     System.out.println("Задача решена верно");
                 } else {
@@ -503,32 +504,59 @@ public class Lab06 {
         }
     }
 
-    public static void main(String[] args) {
-        task2354();
-        task7649();
-        task9701();
-        task6732();
-
+    public static void task8787(){
         System.out.println();
         System.out.println("2321");
-        System.out.println(task2321(8, 13).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task2321(691, 702).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task2321(23, 11).stream().map(Object::toString).collect(Collectors.joining(" ")));
+        int[] in2321a = {8, 691, 23};
+        int[] in2321b = {13, 702, 11};
+        for (int i = 0; i < in2321a.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            List<Integer> result = task2321(in2321a[i], in2321b[i]);
+            for (Integer item : result) {
+                sb.append(item);
+                sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
+
         System.out.println();
         System.out.println("5053");
-        System.out.println(task5053(8, 13).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task5053(691, 702).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task5053(27, 17).stream().map(Object::toString).collect(Collectors.joining(" ")));
+        int[] in5053a = {8, 691, 27};
+        int[] in5053b = {13, 702, 17};
+        for (int i = 0; i < in5053a.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            List<Integer> result = task5053(in5053a[i], in5053b[i]);
+            for (Integer item : result) {
+                sb.append(item);
+                sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
+
         System.out.println();
         System.out.println("8418");
         int[] in8418 = {6, 385, -9};
         for (int i = 0; i < in8418.length; i++){
             try {
-                System.out.println(task8418(in8418[i]).stream().map(Object::toString).collect(Collectors.joining(" ")));
+                StringBuilder sb = new StringBuilder();
+                List<Integer> result = task8418(in8418[i]);
+                for (Integer item : result) {
+                    sb.append(item);
+                    sb.append(" ");
+                }
+                System.out.println(sb.toString());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public static void main(String[] args) {
+        task2354();
+        task7649();
+        task9701();
+        task6732();
+        task8787();
     }
 
     public static StringBuilder task8495(StringBuilder sb){

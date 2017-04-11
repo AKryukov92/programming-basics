@@ -5,15 +5,45 @@ using System.Text;
 
 namespace lab06
 {
-    class Program
+    class Lab06
     {
         static void Main(string[] args)
         {
-            //task2354();
-            //task7649();
+            task2354();
+            task7649();
             task9701();
             task6732();
+            task8787();
+            task3784();
+        }
 
+        public static void task3784()
+        {
+            Console.WriteLine();
+            Console.WriteLine("5170");
+            int[] in5170 = { 6, 3219, 7, 2017, -10 };
+            for (int i = 0; i < in5170.Length; i++)
+            {
+                try
+                {
+                    if (task5170(in5170[i]))
+                    {
+                        Console.WriteLine("Число простое");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Число не простое");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        public static void task8787()
+        {
             Console.WriteLine();
             Console.WriteLine("2321");
             Console.WriteLine(String.Join(" ", task2321(8, 13)));
@@ -24,6 +54,7 @@ namespace lab06
             Console.WriteLine(String.Join(" ", task5053(8, 13)));
             Console.WriteLine(String.Join(" ", task5053(691, 702)));
             Console.WriteLine(String.Join(" ", task5053(27, 17)));
+
             Console.WriteLine();
             Console.WriteLine("8418");
             int[] in8418 = { 6, 385, -9 };
@@ -31,7 +62,8 @@ namespace lab06
             {
                 try
                 {
-                    Console.WriteLine(String.Join(" ", task8418(in8418[i])));
+                    var result = task8418(in8418[i]);
+                    Console.WriteLine(String.Join(" ", result));
                 }
                 catch (Exception e)
                 {
@@ -156,8 +188,7 @@ namespace lab06
                 "10\n11\n12\n13\n14\n15+\n16\n17\n18\n19\n20\n",
                 "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20+\n",
                 "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
-                "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"
-        };
+                "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"};
             for (int i = 0; i < in7585.Length; i++)
             {
                 StringBuilder result = task7585(new StringBuilder(), in7585[i]);
@@ -179,8 +210,7 @@ namespace lab06
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37+\n38-\n39-\n40-\n",
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40+\n",
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
-        };
+                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n"};
             for (int i = 0; i < in8770.Length; i++)
             {
                 StringBuilder result = task8770(new StringBuilder(), in8770[i]);
@@ -240,27 +270,7 @@ namespace lab06
                 try
                 {
                     double result = task2802(in2802[i]);
-                    Console.WriteLine("{0:F6} ({1:F6})\n", result, out2802[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("5170");
-            int[] in5170 = { 6, 3219, 7, 2017, -10 };
-            for (int i = 0; i < in5170.Length; i++)
-            {
-                try
-                {
-                    if (task5170(in5170[i]))
-                    {
-                        Console.WriteLine("Число простое");
-                    }
-                    else {
-                        Console.WriteLine("Число не простое");
-                    }
+                    Console.WriteLine("{0:F6} ({1:F6})", result, out2802[i]);
                 }
                 catch (Exception e)
                 {
@@ -279,8 +289,7 @@ namespace lab06
                 "8\n9\n10\n11\n12\n13\n",
                 "691\n692\n693\n694\n695\n696\n"+
                         "697\n698\n699\n700\n701\n702\n",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in6066a.Length; i++)
             {
                 try
@@ -419,17 +428,13 @@ namespace lab06
                 "",
                 "",
                 "ожидается исключение",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in2592s.Length; i++)
             {
                 try
                 {
-                    StringBuilder result = task2592(
-                            new StringBuilder(),
-                            in2592s[i],
-                            in2592w[i],
-                            in2592h[i]);
+                    StringBuilder result = task2592(new StringBuilder(),
+                            in2592s[i],in2592w[i],in2592h[i]);
                     if (out2592[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -474,8 +479,7 @@ namespace lab06
                 "",
                 "",
                 "ожидается исключение",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in7517w.Length; i++)
             {
                 try
@@ -506,8 +510,7 @@ namespace lab06
                 "\\\n\\\\\n\\\\\\\n",
                 "",
                 "ожидается исключение",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in5448s.Length; i++)
             {
                 try
@@ -538,8 +541,7 @@ namespace lab06
                 "",
                 "",
                 "ожидается исключение",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in5238w.Length; i++)
             {
                 try
@@ -574,8 +576,7 @@ namespace lab06
                 "",
                 "",
                 "ожидается исключение",
-                "ожидается исключение"
-        };
+                "ожидается исключение"};
             for (int i = 0; i < in5171w.Length; i++)
             {
                 try
@@ -611,8 +612,7 @@ namespace lab06
             "",
             "",
             "ожидается исключение",
-            "ожидается исключение"
-        };
+            "ожидается исключение"};
             for (int i = 0; i < in1862s1.Length; i++)
             {
                 try

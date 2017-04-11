@@ -5,7 +5,7 @@ using System.Text;
 
 namespace lab07
 {
-    class Program
+    class Lab07
     {
         static void Main(string[] args)
         {
@@ -141,8 +141,7 @@ namespace lab07
                 "\" pq\"rt \"",
                 "asdf\"",
                 "\"xyz",
-                "p\"w\""
-        };
+                "p\"w\""};
             for (int i = 0; i < in9116.Length; i++)
             {
                 try
@@ -168,8 +167,7 @@ namespace lab07
                 "{{{}}{}{}}{{}{}{}",
                 "}",
                 "{}}",
-                "{{{}{}}}{{}{}}{{}}}"
-        };
+                "{{{}{}}}{{}{}}{{}}}"};
             for (int i = 0; i < in1618.Length; i++)
             {
                 try

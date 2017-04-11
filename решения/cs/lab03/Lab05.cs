@@ -5,7 +5,7 @@ using System.Text;
 
 namespace lab05
 {
-    class Program
+    class Lab05
     {
         static void Main(string[] args)
         {
@@ -14,6 +14,7 @@ namespace lab05
             task7649();
             task3784();
             task9701();
+            task8787();
 
             Console.WriteLine();
             Console.WriteLine("3072");
@@ -21,12 +22,6 @@ namespace lab05
             Console.WriteLine(task3072(359, 271).print());
             Console.WriteLine(task3072(439, -761).print());
             Console.WriteLine(task3072(0, -15).print());
-            Console.WriteLine();
-            Console.WriteLine("7991");
-            Console.WriteLine(String.Join(" ", task7991(6.35, 2.7, 5.08)));
-            Console.WriteLine(String.Join(" ", task7991(4.71, 2.59, -18.55)));
-            Console.WriteLine(String.Join(" ", task7991(19.99, -1.57, 2.75)));
-            Console.WriteLine(String.Join(" ", task7991(-2.28, 16.92, 6.14)));
             Console.WriteLine();
             Console.WriteLine("7178");
             int[] in7178m = { 36, 41, 15 };
@@ -237,6 +232,23 @@ namespace lab05
             }
 
             Console.WriteLine();
+            Console.WriteLine("1186");
+            Console.WriteLine();
+            double[] in1186x = { 6.35, 4.71, 19.99, -2.28, -18.71, 3.44, -0.09 };
+            double[] in1186y = { 2.7, 5.59, -9.57, 16.92, -7.6, -14.98, -16.6 };
+            double[] in1186z = { 5.08, -18.55, 12.75, 6.14, 6.27, -8.26, -1.84 };
+            double[] result1186;
+            for (int i = 0; i < in1186x.Length; i++)
+            {
+                result1186 = task1186(in1186x[i], in1186y[i], in1186z[i]);
+                foreach (double aResult in result1186)
+                {
+                    Console.Write("{0:F4};\t", aResult);
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
             Console.WriteLine("1999");
             int[] in1999x = { -3, -2, -1, -3, -2, -1, -3, -2, -1 };
             int[] in1999y = { 2, 2, 2, 1, 1, 1, 0, 0, 0 };
@@ -367,6 +379,20 @@ namespace lab05
             }
         }
 
+        public static void task8787()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7991");
+            double[] in7991x = { 6.35, 4.71, 19.99, -2.28 };
+            double[] in7991y = { 2.7, 2.59, -1.57, 16.92 };
+            double[] in7991z = { 5.08, -18.55, 2.75, 6.14 };
+            for (int i = 0; i < in7991x.Length; i++)
+            {
+                IList<double> result = task7991(in7991x[i], in7991y[i], in7991z[i]);
+                Console.WriteLine(String.Join(" ", result));
+            }
+        }
+
         public static void task7649()
         {
             Console.WriteLine();
@@ -477,23 +503,6 @@ namespace lab05
                 {
                     Console.WriteLine(e.Message);
                 }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("1186");
-            Console.WriteLine();
-            double[] in1186x = { 6.35, 4.71, 19.99, -2.28, -18.71, 3.44, -0.09 };
-            double[] in1186y = { 2.7, 5.59, -9.57, 16.92, -7.6, -14.98, -16.6 };
-            double[] in1186z = { 5.08, -18.55, 12.75, 6.14, 6.27, -8.26, -1.84 };
-            double[] result1186;
-            for (int i = 0; i < in1186x.Length; i++)
-            {
-                result1186 = task1186(in1186x[i], in1186y[i], in1186z[i]);
-                foreach (double aResult in result1186)
-                {
-                    Console.Write("{0:F4};\t", aResult);
-                }
-                Console.WriteLine();
             }
 
             Console.WriteLine();

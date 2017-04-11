@@ -1,0 +1,712 @@
+<div class="task_block" id="task9701">
+    <h3>Задача</h3>
+    <div class="task_desc">Нужно реализовать метод для решения указанных задач. Вывод в консоль реализуется вызывающей программой. Проверить с помощью соответствующей программы для вызова.</div>
+    <div class="check_single preformatted">public class Caller9701 {
+    public static void main(String[] args) {
+        //Команды вызова методов
+    }
+}</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер п/п</th>
+            <th>Условие задачи</th>
+            <th>Команды вызова методов</th>
+            <th>Ожидаемый результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task9298" target="_blank">ЛР2№9298 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in9298 = { 1, 5, 0, -2 };
+int[] outs9298 = { 6, 150, 0, 0 };
+for (int i = 0; i &lt; in9298.Length; i++)
+{
+    try
+    {
+        int result = task9298(in9298[i]);
+        Console.WriteLine("{0} ({1})", result, outs9298[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">6 (6)
+150 (150)
+Значение A должно быть положительным
+Значение A должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task3354" target="_blank">ЛР2№3354 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in3354 = { 7, 11, 0, -3 };
+int[] outs3354 = { 343, 1331, 0, 0 };
+for (int i = 0; i &lt; in3354.Length; i++)
+{
+    try
+    {
+        int result = task3354(in3354[i]);
+        Console.WriteLine("{0} ({1})", result, outs3354[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">343 (343)
+1331 (1331)
+Значение A должно быть положительным
+Значение A должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task5201" target="_blank">ЛР2№5201 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in5201 = { 13, 17, 0, -5 };
+double[] outs5201 = { 81.6814, 106.8142, 0, 0 };
+for (int i = 0; i &lt; in5201.Length; i++)
+{
+    try
+    {
+        double r = task5201(in5201[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs5201[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">81,681409 (81,681400)
+106,814150 (106,814200)
+Значение R должно быть положительным
+Значение R должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task2981" target="_blank">ЛР2№2981 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in2981 = { 19, 23, 0, -7 };
+double[] outs2981 = { 28730.9120, 50965.0104, 0, 0 };
+for (int i = 0; i &lt; in2981.Length; i++)
+{
+    try
+    {
+        double r = task2981(in2981[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs2981[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">28730,912015 (28730,912000)
+50965,010422 (50965,010400)
+Значение R должно быть положительным
+Значение R должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task4312" target="_blank">ЛР2№4312 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in4312a = { 1, 2, 0, -2, 3 };
+int[] in4312h = { 1, 3, 10, 1, -4 };
+double[] outs4312 = { 0.5, 3 };
+for (int i = 0; i &lt; in4312a.Length; i++)
+{
+    try
+    {
+        double r = task4312(in4312a[i], in4312h[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs4312[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">0,500000 (0,500000)
+3,000000 (3,000000)
+Значение A должно быть положительным
+Значение A должно быть положительным
+Значение H должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task8833" target="_blank">ЛР2№8833 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in8833 = { 7606, 9, 0, -7603 };
+double[] outs8833 = { 87.2124, 3.0000, 0, 0 };
+for (int i = 0; i &lt; in8833.Length; i++)
+{
+    try
+    {
+        double r = task8833(in8833[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs8833[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">87,212384 (87,212400)
+3,000000 (3,000000)
+0,000000 (0,000000)
+Значение X должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task9020" target="_blank">ЛР2№9020 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in9020 = { 7573, 75, 0, -9 };
+double[] outs9020 = { 261.0690, 25.9808, 0, 0 };
+for (int i = 0; i &lt; in9020.Length; i++)
+{
+    try
+    {
+        double r = task9020(in9020[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs9020[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">261,068956 (261,069000)
+25,980762 (25,980800)
+0,000000 (0,000000)
+Значение X должно быть неотрицательным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task1934" target="_blank">ЛР2№1934 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in1934a = { 6047, -3, 0, 6221 };
+int[] in1934b = { -6011, -7, -50, 6373 };
+double[] outs1934 = { 1240401.6995, -21.0000, 0.0000, 0 };
+for (int i = 0; i &lt; in1934a.Length; i++)
+{
+    try
+    {
+        double r = task1934(in1934a[i], in1934b[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs1934[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">1240401,699488 (1240401,699500)
+-21,000000 (-21,000000)
+0,000000 (0,000000)
+Значение B должно быть отрицательным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task7237" target="_blank">ЛР2№7237 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">double[] in7237 = { 0, 20, 40, -273.15, -300 };
+double[] outs7237 = { 32, 68, 104, -459.67, 0 };
+for (int i = 0; i &lt; in7237.Length; i++)
+{
+    try
+    {
+        double r = task7237(in7237[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs7237[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">32,000000 (32,000000)
+68,000000 (68,000000)
+104,000000 (104,000000)
+-459,670000 (-459,670000)
+Значение T должно быть не ниже абсолютного нуля</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task3943" target="_blank">ЛР2№3943 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in3943x = { -5, 7507, 7489, -7481 };
+int[] in3943y = { 81, 7499, -7487, 7477 };
+double[] outs3943 = { -10, -435.7062, 0, 0 };
+for (int i = 0; i &lt; in3943x.Length; i++)
+{
+    try
+    {
+        double r = task3943(in3943x[i], in3943y[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs3943[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">-10,000000 (-10,000000)
+-435,706230 (-435,706200)
+Значение y должно быть неотрицательным
+Подкоренное выражение должно быть неотрицательным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task7619" target="_blank">ЛР2№7619 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7619v1 = { 31, 0, -13, 67 };
+int[] in7619v2 = { 47, 7, 11, -79 };
+int[] in7619s = { 6833, 6829, 200, 400 };
+double[] outs7619 = { 87.6026, 975.5714, 0, 0 };
+for (int i = 0; i &lt; in7619v1.Length; i++)
+{
+    try
+    {
+        double r = task7619(in7619v1[i],
+            in7619v2[i], in7619s[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs7619[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">87,602564 (87,602600)
+975,571429 (975,571400)
+Значение v1 должно быть неотрицательным
+Значение v2 должно быть неотрицательным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task8873" target="_blank">ЛР2№8873 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in8873r1 = { 7331, 3, 0, 7309 };
+int[] in8873r2 = { 7321, 5, 7307, 0 };
+double[] outs8873 = { 0.0003, 0.5333, 0, 0 };
+for (int i = 0; i &lt; in8873r1.Length; i++)
+{
+    try
+    {
+        double r = task8873(in8873r1[i], in8873r2[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs8873[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">0,000273 (0,000300)
+0,533333 (0,533300)
+Значение r1 должно быть не равно нулю
+Значение r2 должно быть не равно нулю</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task9130" target="_blank">ЛР2№9130 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in9130y = { 7211, 11, 7177 };
+int[] in9130m1 = { 7219, 3, 7193 };
+int[] in9130m2 = { 7213, 7, 7187 };
+int[] in9130r = { 7207, 13, 0 };
+double[] outs9130 = { 7229.0200, 1.3669, 0 };
+for (int i = 0; i &lt; in9130y.Length; i++)
+{
+    try
+    {
+        double r = task9130(in9130y[i], in9130m1[i],
+                in9130m2[i], in9130r[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs9130[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">35,000000 (7229,020000)
+1,000000 (1,366900)
+Значение r должно быть не равно нулю</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task2461" target="_blank">ЛР2№2461 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in2461a = { 7069, 0, 7019 };
+int[] in2461b = { 7043, 7043, 7043 };
+int[] in2461c = { 7039, 7039, 7001 };
+int[] in2461d = { 7057, 7027, 0 };
+double[] outs2461 = { 1.9938, 0, 0 };
+for (int i = 0; i &lt; in2461a.Length; i++)
+{
+    try
+    {
+        double r = task2461(in2461a[i], in2461b[i],
+                in2461c[i], in2461d[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs2461[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">1,993781 (1,993800)
+Значение a должно быть не равно нулю
+Значение d должно быть не равно нулю</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task2624" target="_blank">ЛР2№2624 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in2624a = { 6991, 11, -6959, 0 };
+int[] in2624b = { 6983, 13, 6949, 0 };
+int[] in2624c = { 6977, 17, 6947, 0 };
+int[] in2624x = { 6961, 19, 6917, 0 };
+double[] outs2624 = { 0.0, 0.0154, 0, 0 };
+for (int i = 0; i &lt; in2624a.Length; i++)
+{
+    try
+    {
+        double r = task2624(in2624a[i], in2624b[i],
+                in2624c[i], in2624x[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs2624[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">0,000002 (0,000000)
+0,015366 (0,015400)
+Подкоренное выражение должно быть неотрицательным
+Знаменатель не может быть равен нулю</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[2] лаб. ОСАЛП.html#task5871" target="_blank">ЛР2№5871 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">double[] in5871 = { 6911, 3, 0.9 };
+double[] outs5871 = { 1.0, 0.9856, 0 };
+for (int i = 0; i &lt; in5871.Length; i++)
+{
+    try
+    {
+        double r = task5871(in5871[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, outs5871[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">1,000000 (1,000000)
+0,985599 (0,985600)
+Значение X должно быть не меньше 1</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[5] лаб. ОСАЛП.html#task7937" target="_blank">ЛР5№7937 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7937w = { 1721, 2473, 0, 877, 1181, 491 };
+int[] in7937h = { 661, 449, 1879, 0, 1033, 3533 };
+int[] in7937c = { 11, 23, 1163, 7, 0, 1297 };
+int[] in7937d = { 7, 11, 109, 19, 127, 0 };
+for (int i = 0; i &lt; in7937w.Length; i++)
+{
+    try
+    {
+        String r = task7937(in7937w[i], in7937h[i],
+                in7937c[i], in7937d[i]);
+        Console.WriteLine(r);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">14700 при C вдоль H
+4280 при C вдоль W
+Значение W должно быть положительным
+Значение H должно быть положительным
+Значение C должно быть положительным
+Значение D должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task9180" target="_blank">ЛР6№9180 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in9180 = { -100, 7, 368, 501, -101 };
+int[] outs9180 = { 120200, 125229, 57722, 0, 0 };
+for (int i = 0; i &lt; in9180.Length; i++)
+{
+    try
+    {
+        int result = task9180(in9180[i]);
+        Console.WriteLine("{0} ({1})", result, outs9180[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">120200 (120200)
+125229 (125229)
+57722 (57722)
+Значение A должно быть в интервале [-100, 500]
+Значение A должно быть в интервале [-100, 500]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task1544" target="_blank">ЛР6№1544 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in1544 = { 12, 70, 368, 10000, -11, 10001 };
+int[] outs1544 = { 23, 2430, 67841, 50004945, 0, 0 };
+for (int i = 0; i &lt; in1544.Length; i++)
+{
+    try
+    {
+        int result = task1544(in1544[i]);
+        Console.WriteLine("{0} ({1})", result, outs1544[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">23 (23)
+2430 (2430)
+67841 (67841)
+50004945 (50004945)
+Значение b должно быть в интервале [-10,10000]
+Значение b должно быть в интервале [-10,10000]</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task2802" target="_blank">ЛР6№2802 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in2802 = { 4, 11, 19, -1, 0 };
+double[] out2802 = { 2.0833, 3.0198, 3.5477 };
+for (int i = 0; i &lt; in2802.Length; i++)
+{
+    try
+    {
+        double r = task2802(in2802[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", r, out2802[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">2,083333 (2,083300)
+3,019877 (3,019800)
+3,547740 (3,547700)
+Значение N должно быть положительным
+Значение N должно быть положительным</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9631" target="_blank">ЛР7№9631 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9631 = { "z", "a", "g" };
+int[] out9631 = { 0, 9, 0 };
+for (int i = 0; i &lt; in9631.Length; i++)
+{
+    try
+    {
+        int result = task9631(in9631[i]);
+        Console.WriteLine("{0} ({1})", result, out9631[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">0 (0)
+9 (9)
+Значение S отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9812" target="_blank">ЛР7№9812 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9812a = { "a", "w", "g", "x" };
+String[] in9812b = { "x", "d", "z", "u" };
+int[] out9812 = { 6, 2, 0, 0 };
+for (int i = 0; i &lt; in9812a.Length; i++)
+{
+    try
+    {
+        int result = task9812(in9812a[i], in9812b[i]);
+        Console.WriteLine("{0} ({1})", result, out9812[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">6 (6)
+2 (2)
+Значение A отсутствует в строке
+Значение B отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task5728" target="_blank">ЛР7№5728 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in5728a = { "a", "c", "y", "g", "a" };
+String[] in5728b = { "z", "d", "d", "z", "l" };
+for (int i = 0; i &lt; in5728a.Length; i++)
+{
+    try
+    {
+        Console.WriteLine(task5728(in5728a[i], in5728b[i]));
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">bcdefwxy
+
+efwx
+Значение A отсутствует в строке
+Значение B отсутствует в строке</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task5923" target="_blank">ЛР7№5923 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in5923a = { 5, 6, 0, -1, 10, 5 };
+int[] in5923b = { 3, 0, 7, 1, 3, -2 };
+for (int i = 0; i &lt; in5923a.Length; i++)
+{
+    try
+    {
+        Console.WriteLine(task5923(in5923a[i], in5923b[i]));
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">abcdeyz
+abcdefwxyz
+xyz
+Значение A должно быть в интервале [0, длина строки)
+Сумма значений A и B должна быть меньше длины строки
+Значение B должно быть неотрицательно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task2166" target="_blank">ЛР7№2166 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in2166 = { "cd", "aa", "xy", "abc", "f" };
+for (int i = 0; i &lt; in2166.Length; i++)
+{
+    try
+    {
+        Console.WriteLine(task2166(in2166[i]));
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">ab acadba aabaadc
+abcdacadbacd b dc
+abcdacadbacdaabaadc
+Вводимая строка должна содержать ровно 2 символа
+Вводимая строка должна содержать ровно 2 символа</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task9116" target="_blank">ЛР7№9116 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in9116 = {"\"   12345\"",
+    "\"abcdef    \"",
+    "\"  xyz  \"",
+    "\"  a b  \"",
+    "\" pq\"rt \"",
+    "asdf\"",
+    "\"xyz",
+    "p\"w\""};
+for (int i = 0; i &lt; in9116.Length; i++)
+{
+    try
+    {
+        Console.WriteLine(task9116(in9116[i]));
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">12345
+abcdef
+xyz
+a b
+pq"rt
+Строка должна начинаться и заканчиваться кавычкой
+Строка должна начинаться и заканчиваться кавычкой
+Строка должна начинаться и заканчиваться кавычкой</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[7] лаб. ОСАЛП.html#task1618" target="_blank">ЛР7№1618 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in1618 = {
+    "{}",
+    "{{}}",
+    "{{}}{}",
+    "{{}{}}",
+    "{{{{}{}}{{}{{}}{}}}{{}{}}}",
+    "{",
+    "{{}",
+    "{{}}{",
+    "{{{}}{}{}}{{}{}{}",
+    "}",
+    "{}}",
+    "{{{}{}}}{{}{}}{{}}}"};
+for (int i = 0; i &lt; in1618.Length; i++)
+{
+    try
+    {
+        task1618(in1618[i]);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+    }
+}</td>
+            <td class="preformatted">{}
+10
+{{}}
+1210
+{{}}{}
+121010
+{{}{}}
+121210
+{{{{}{}}{{}{{}}{}}}{{}{}}}
+12343432343454343212323210
+{
+1Неожиданный конец строки
+{{}
+121Неожиданный конец строки
+{{}}{
+12101Неожиданный конец строки
+{{{}}{}{}}{{}{}{}
+12321212101212121Неожиданный конец строки
+}
+Неожиданный символ '}'
+{}}
+10Неожиданный символ '}'
+{{{}{}}}{{}{}}{{}}}
+123232101212101210Неожиданный символ '}'</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task4425" target="_blank">ЛР8№4425 (открыть в новой вкладке)</a></td>
+            <td class="preformatted"></td>
+            <td class="preformatted">4 (4)
+1 (1)
+1 (1)
+Число A должно быть в интервале [0, размер массива)
+Число A должно быть в интервале [0, размер массива)
+Исходная строка пуста</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task7290" target="_blank">ЛР8№7290 (открыть в новой вкладке)</a></td>
+            <td class="preformatted"></td>
+            <td class="preformatted">4 (4)
+4 (4)
+6 (6)
+2 (2)
+0 (0)
+0 (0)
+Число B должно быть в интервале [0, размер массива)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task8769" target="_blank">ЛР8№8769 (открыть в новой вкладке)</a></td>
+            <td class="preformatted"></td>
+            <td class="preformatted">4 (4)
+4 (4)
+6 (6)
+2 (2)
+0 (0)
+0 (0)
+Число B должно быть в интервале [0, размер массива)</td>
+        </tr>
+    </table>
+</div>

@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author akryukov
@@ -72,6 +71,21 @@ public class Lab05 {
             } else {
                 System.out.println("Числа не равны друг другу");
             }
+        }
+
+        System.out.println();
+        System.out.println("1186");
+        System.out.println();
+        double[] in1186x = {6.35, 4.71, 19.99, -2.28, -18.71, 3.44, -0.09};
+        double[] in1186y = {2.7, 5.59, -9.57, 16.92, -7.6, -14.98, -16.6};
+        double[] in1186z = {5.08, -18.55, 12.75, 6.14, 6.27, -8.26, -1.84};
+        double[] result1186;
+        for (int i = 0; i < in1186x.length; i++){
+            result1186 = task1186(in1186x[i], in1186y[i], in1186z[i]);
+            for (double aResult : result1186) {
+                System.out.printf("%.4f;\t", aResult);
+            }
+            System.out.println();
         }
 
         System.out.println();
@@ -268,21 +282,6 @@ public class Lab05 {
         }
 
         System.out.println();
-        System.out.println("1186");
-        System.out.println();
-        double[] in1186x = {6.35, 4.71, 19.99, -2.28, -18.71, 3.44, -0.09};
-        double[] in1186y = {2.7, 5.59, -9.57, 16.92, -7.6, -14.98, -16.6};
-        double[] in1186z = {5.08, -18.55, 12.75, 6.14, 6.27, -8.26, -1.84};
-        double[] result1186;
-        for (int i = 0; i < in1186x.length; i++){
-            result1186 = task1186(in1186x[i], in1186y[i], in1186z[i]);
-            for (double aResult : result1186) {
-                System.out.printf("%.4f;\t", aResult);
-            }
-            System.out.println();
-        }
-
-        System.out.println();
         System.out.println("6291");
         int[] in6291a = {13, 21, 29, 61, 211, -151, 193, -101};
         int[] in6291b = {17, 21, 2, 47, 211, 239, 193, 83};
@@ -387,12 +386,32 @@ public class Lab05 {
         }
     }
 
+    public static void task8787(){
+        System.out.println();
+        System.out.println("7991");
+        double[] in7991x = {6.35, 4.71, 19.99, -2.28};
+        double[] in7991y = {2.7, 2.59, -1.57, 16.92};
+        double[] in7991z = {5.08, -18.55, 2.75, 6.14};
+        for (int i = 0; i < in7991x.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            List<Double> result = task7991(
+                    in7991x[i], in7991y[i], in7991z[i]);
+            for (Double item : result) {
+                sb.append(item);
+                sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
+
+    }
+
     public static void main(String[] args) {
         task2354();
         task2030();
         task7649();
         task3784();
         task9701();
+        task8787();
 
         System.out.println();
         System.out.println("3072");
@@ -400,24 +419,6 @@ public class Lab05 {
         System.out.println(task3072(359, 271).print());
         System.out.println(task3072(439, -761).print());
         System.out.println(task3072(0, -15).print());
-        System.out.println();
-        System.out.println("7991");
-        System.out.println(task7991(6.35, 2.7, 5.08).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task7991(4.71, 2.59, -18.55).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task7991(19.99, -1.57, 2.75).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println(task7991(-2.28, 16.92, 6.14).stream().map(Object::toString).collect(Collectors.joining(" ")));
-        System.out.println();
-        System.out.println("7178");
-        int[] in7178m = {36, 41, 15};
-        int[] in7178p = {2, 7, 0};
-        for (int i = 0; i < in7178m.length; i++){
-            try {
-                class7178 result7178 = task7178(in7178m[i],in7178p[i]);
-                System.out.println(result7178.print());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
         System.out.println();
         System.out.println("5635");
         int[] in5635xt = {1, 5, 3, 3, 0, 1, 1, 1, 1};

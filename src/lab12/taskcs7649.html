@@ -1,0 +1,291 @@
+<div class="task_block" id="task7649">
+    <h3>Задача</h3>
+    <div class="task_desc">Нужно реализовать метод для решения указанных задач. Вывод в консоль реализуется вызывающей программой. Проверить с помощью соответствующей программы для вызова.</div>
+    <div class="check_single preformatted">public class Caller7649 {
+    public static void main(String[] args) {
+        //Команды вызова методов
+    }
+}</div><div class="check_single">Строки являются неизменными, поэтому частая их модификация приводит к созданию новых объектов, что в свою очередь расходует драгоценную память. Для решения этой проблемы были созданы классы java.lang.StringBuilder и java.lang.StringBuffer, которые позволяют более эффективно работать над модификацией строки. Классы является mutable, то есть изменяемым — используйте его, если Вы хотите изменять содержимое строки. StringBuilder был введен в Java 5 и имеет полностью идентичный API с StringBuffer. Единственное отличие — StringBuilder не синхронизирован. Это означает, что его использование в многопоточных средах есть нежелательным. Следовательно, если вы работаете с многопоточностью, Вам идеально подходит StringBuffer, иначе используйте StringBuilder, который работает намного быстрее в большинстве реализаций.
+Больше информации: <a href="https://habrahabr.ru/post/260767/" target="_blank">по русски (в новой вкладке)</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html" target="_blank">по английски (в новой вкладке)</a>
+    </div>
+    <table class="check_values">
+        <tr>
+            <th>Номер п/п</th>
+            <th>Условие задачи</th>
+            <th>Команды вызова методов</th>
+            <th>Ожидаемый результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[5] лаб. ОСАЛП.html#task8518" target="_blank">ЛР5№8518 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String out8518 = "a+\nb\nc\nd\ne\nf\ng\nh\n\n" +
+        "a\nb\nc\nd+\ne\nf\ng\nh\n\n" +
+        "a\nb\nc\nd\ne\nf\ng\nh+\n\n" +
+        "a\nb\nc\nd\ne\nf\ng\nh\n\n";
+StringBuilder sb = new StringBuilder();
+task8518(sb, "a").Append("\n");
+task8518(sb, "d").Append("\n");
+task8518(sb, "h").Append("\n");
+task8518(sb, "i").Append("\n");
+if (out8518.Equals(sb.ToString()))
+{
+    Console.WriteLine("Задача решена верно");
+}
+else {
+    sb.Insert(0, "Неверно. Результат:\n");
+    Console.WriteLine(sb.ToString());
+}</td>
+            <td class="preformatted">Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task8495" target="_blank">ЛР6№8495 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">StringBuilder sb8495 = new StringBuilder();
+sb8495 = sb8495.Append("@");
+sb8495 = task8495(sb8495);
+sb8495 = sb8495.Append("#");
+Console.WriteLine(sb8495.ToString());</td>
+            <td class="preformatted">@!!!!!!!!!!!!!#</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task1315" target="_blank">ЛР6№1315 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">StringBuilder sb1315 = new StringBuilder();
+sb1315.Append("@");
+task1315(sb1315);
+sb1315.Append("#");
+Console.WriteLine(sb1315);</td>
+            <td class="preformatted">@17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 #
+//должна получиться одна длинная строчка</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task3762" target="_blank">ЛР6№3762 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String result3762 = task3762(new StringBuilder()).ToString();
+Console.WriteLine(result3762);</td>
+            <td class="preformatted">1 453
+2 906
+3 1359
+4 1812
+5 2265
+6 2718
+7 3171
+8 3624
+9 4077
+10 4530
+11 4983
+12 5436
+13 5889
+14 6342
+15 6795
+16 7248
+17 7701
+18 8154
+19 8607
+20 9060</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task3550" target="_blank">ЛР6№3550 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">StringBuilder sb3550 = task3550(
+    new StringBuilder()
+        .Append("@"))
+    .Append("#");
+Console.WriteLine(sb3550.ToString());</td>
+            <td class="preformatted">@1 x 7 = 7
+2 x 7 = 14
+3 x 7 = 21
+4 x 7 = 28
+5 x 7 = 35
+6 x 7 = 42
+7 x 7 = 49
+8 x 7 = 56
+9 x 7 = 63
+#</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task6572" target="_blank">ЛР6№6572 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">StringBuilder sb6572 = new StringBuilder();
+task6572(sb6572, 8, 13);
+task6572(sb6572, 691, 703);
+task6572(sb6572, 19, 3);
+Console.WriteLine(sb6572);</td>
+            <td class="preformatted">9
+.11
+..13
+691
+.693
+..695
+...697
+....699
+.....701
+......703
+3
+.5
+..7
+...9
+....11
+.....13
+......15
+.......17
+........19</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task2084" target="_blank">ЛР6№2084 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String result2084;
+result2084 = task2084(new StringBuilder(), 20, 30).Append("\n")
+    .Append(task2084(new StringBuilder(), 8, 13)).Append("\n")
+    .Append(task2084(new StringBuilder(), 571, 580)).Append("\n")
+    .Append(task2084(new StringBuilder(), 691, 703)).Append("\n")
+    .Append(task2084(new StringBuilder(), -71, -90)).Append("\n")
+    .Append(task2084(new StringBuilder(), 64, 58)).Append("\n")
+    .Append(task2084(new StringBuilder(), 19, 7)).Append("\n")
+    .Append(task2084(new StringBuilder(), 401, 390)).Append("\n")
+    .Append(task2084(new StringBuilder(), 800, 785)).Append("\n")
+    .ToString();
+Console.WriteLine(result2084);</td>
+            <td class="preformatted">21, 23, 25, 27, 29
+9, 11, 13
+571, 573, 575, 577, 579
+691, 693, 695, 697, 699, 701, 703
+-71, -73, -75, -77, -79, -81, -83, -85, -87, -89
+63, 61, 59
+19, 17, 15, 13, 11, 9, 7
+401, 399, 397, 395, 393, 391
+799, 797, 795, 793, 791, 789, 787, 785</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task5411" target="_blank">ЛР6№5411 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String result5411 = task5411(
+    task5411(
+        task5411(new StringBuilder(), 7, 11)
+            .Append("\n")
+        , 211, 223).Append("\n")
+    , 37, 29).Append("\n")
+    .ToString();
+Console.WriteLine(result5411);</td>
+            <td class="preformatted">7&lt;8&lt;9&gt;10&gt;11
+211&lt;212&lt;213&lt;214&lt;215&lt;216&lt;217&gt;218&gt;219&gt;220&gt;221&gt;222&gt;223
+29&lt;30&lt;31&lt;32&lt;33&gt;34&gt;35&gt;36&gt;37</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task7585" target="_blank">ЛР6№7585 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in7585 = { 10, 15, 20, 9, 21 };
+String[] out7585 = {
+    "10+\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15+\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20+\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"};
+for (int i = 0; i &lt; in7585.Length; i++)
+{
+    StringBuilder result = task7585(
+        new StringBuilder(), in7585[i]);
+    if (out7585[i].Equals(result.ToString()))
+    {
+        Console.WriteLine("Задача решена верно");
+    }
+    else {
+        result.Insert(0, "Неверно. Результат:\n");
+        Console.WriteLine(result);
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[6] лаб. ОСАЛП.html#task8770" target="_blank">ЛР6№8770 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in8770 = { 30, 37, 40, 8, 100 };
+String[] out8770 = {
+    "30+\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37+\n38-\n39-\n40-\n",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40+\n",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
+    "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n"};
+for (int i = 0; i &lt; in8770.Length; i++)
+{
+    var result = task8770(new StringBuilder(), in8770[i]);
+    if (out8770[i].Equals(result.ToString()))
+    {
+        Console.WriteLine("Задача решена верно");
+    }
+    else {
+        result.Insert(0, "Неверно. Результат:\n");
+        Console.WriteLine(result.ToString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task5694" target="_blank">ЛР8№5694 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">String[] in5694 = { "a", "d", "h", "i", "z" };
+String[] out5694 = {
+"a+\nb\nc\nd\ne\nf\ng\nh\n",
+"a\nb\nc\nd+\ne\nf\ng\nh\n",
+"a\nb\nc\nd\ne\nf\ng\nh+\n",
+"a\nb\nc\nd\ne\nf\ng\nh\n",
+"a\nb\nc\nd\ne\nf\ng\nh\n"};
+for (int i = 0; i &lt; in5694.Length; i++)
+{
+    var result = task5694(new StringBuilder(), in5694[i]);
+    if (out5694[i].Equals(result.ToString()))
+    {
+        Console.WriteLine("Задача решена верно");
+    }
+    else
+    {
+        result.Insert(0, "Неверно. Результат:\n");
+        Console.WriteLine(result.ToString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="[8] лаб. ОСАЛП.html#task6806" target="_blank">ЛР8№6806 (открыть в новой вкладке)</a></td>
+            <td class="preformatted">int[] in6806 = { 10, 15, 20, 9, 23 };
+String[] out6806 = {
+    "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
+    "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"};
+for (int i = 0; i &lt; in6806.Length; i++)
+{
+    var result = task6806(new StringBuilder(), in6806[i]);
+    if (out6806[i].Equals(result.ToString()))
+    {
+        Console.WriteLine("Задача решена верно");
+    }
+    else
+    {
+        result.Insert(0, "Неверно. Результат:\n");
+        Console.WriteLine(result.ToString());
+    }
+}</td>
+            <td class="preformatted">Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно
+Задача решена верно</td>
+        </tr>
+    </table>
+</div>
