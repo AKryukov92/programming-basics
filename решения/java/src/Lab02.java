@@ -574,7 +574,7 @@ public class Lab02 {
         if(r == 0){
             throw new Exception("Значение r должно быть не равно нулю");
         }
-        return y*m1*m2/r/r;
+        return (double)y*m1*m2/r/r;
     }
 
     public static double task5895(int a, int b, int c){

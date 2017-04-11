@@ -49,18 +49,6 @@ public class Lab05 {
         }
 
         System.out.println();
-        System.out.println("1945");
-        int[] in1945sc = {17, 13, -20, 300};
-        int[] in1945ss = {19, 19, 4, -200};
-        for (int i = 0; i < in1945sc.length; i++){
-            if (task1945(in1945sc[i], in1945ss[i])){
-                System.out.println("Круг уместится в квадрате");
-            } else {
-                System.out.println("Круг не поместится в квадрате");
-            }
-        }
-
-        System.out.println();
         System.out.println("8715");
         int[] in8718a = {1, -4, 7, 0, 4, -2, 10, 5};
         int[] in8718b = {2, 0, 4, 5, 4, 4, 3, 1};
@@ -264,6 +252,22 @@ public class Lab05 {
         }
 
         System.out.println();
+        System.out.println("1945");
+        int[] in1945sc = {17, 13, -20, 300};
+        int[] in1945ss = {19, 19, 4, -200};
+        for (int i = 0; i < in1945sc.length; i++) {
+            try {
+                if (task1945(in1945sc[i], in1945ss[i])) {
+                    System.out.println("Круг уместится в квадрате");
+                } else {
+                    System.out.println("Круг не поместится в квадрате");
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
         System.out.println("1186");
         System.out.println();
         double[] in1186x = {6.35, 4.71, 19.99, -2.28, -18.71, 3.44, -0.09};
@@ -285,11 +289,10 @@ public class Lab05 {
         int[] in6291c = {14, 37, 29, 47, 211, 239, -3, -101};
         for (int i = 0; i < in6291a.length; i++){
             try {
-                System.out.print("Треугольник ");
                 if (task6291(in6291a[i], in6291b[i], in6291c[i])){
-                    System.out.print("является");
+                    System.out.print("Треугольник является");
                 } else {
-                    System.out.print("не является");
+                    System.out.print("Треугольник не является");
                 }
                 System.out.println("равнобедренным.");
             } catch (Exception e) {
@@ -454,7 +457,6 @@ public class Lab05 {
                 } else {
                     System.out.println("Точка не принадлежит прямой");
                 }
-                System.out.println();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -470,9 +472,9 @@ public class Lab05 {
                 Interval i1 = makeIntervalByEnds(in1217a1[i], in1217b1[i]);
                 Interval i2 = makeIntervalByEnds(in1217a2[i], in1217b2[i]);
                 if (task1217check(i1,i2)){
-                    System.out.print("Пересекаются");
+                    System.out.print("Пересекаются ");
                     Interval x = task1217intersection(i1, i2);
-                    System.out.println("пересекаются (" + x.a + "; " + x.b + ")");
+                    System.out.println("(" + x.a + "; " + x.b + ")");
                 } else {
                     System.out.println("Не пересекаются");
                 }
@@ -495,9 +497,9 @@ public class Lab05 {
                 Rectangle r1 = makeRectangleByXYHW(in1438x1[i], in1435y1[i], in1435h1[i], in1435w1[i]);
                 Rectangle r2 = makeRectangleByXYHW(in1435x2[i], in1435y2[i], in1435h2[i], in1435w2[i]);
                 if (task1438check(r1, r2)){
-                    System.out.println("Пересекаются");
+                    System.out.print("Пересекаются");
                     Rectangle rx = task1438intersect(r1, r2);
-                    System.out.printf("{\"x\":%d,\"y\":%d,\"w\":%d,\"h\":%d}", rx.x, rx.y, rx.w, rx.h);
+                    System.out.printf("{\"x\":%d,\"y\":%d,\"w\":%d,\"h\":%d}\n", rx.x, rx.y, rx.w, rx.h);
                 } else {
                     System.out.println("Не пересекаются");
                 }
@@ -564,7 +566,7 @@ public class Lab05 {
         if (v2 < 0){
             throw new Exception("Значение V2 должно быть неотрицательным");
         }
-        return v1 * 1000 * 60 > v2;
+        return v1 * 1000 * 60 * 60 < v2;
     }
 
     public static boolean task1763(int r, int a) throws Exception {
@@ -591,7 +593,13 @@ public class Lab05 {
         }
     }
 
-    public static boolean task1945(int sc, int ss){
+    public static boolean task1945(int sc, int ss) throws Exception {
+        if (sc<=0){
+            throw new Exception("Площадь круга должна быть положительной");
+        }
+        if (ss<=0){
+            throw new Exception("Площадь квадрата должна быть положительной");
+        }
         return Math.sqrt(sc/Math.PI) < Math.sqrt(ss)/2;
     }
 
@@ -789,10 +797,10 @@ public class Lab05 {
         if (y < 0){
             throw new Exception("Координата Y должна быть неотрицательной");
         }
-        if (h < 0){
+        if (h <= 0){
             throw new Exception("Высота должна быть положительна");
         }
-        if (w < 0){
+        if (w <= 0){
             throw new Exception("Ширина должна быть положительна");
         }
         return new Rectangle(x, y, h, w);
@@ -817,7 +825,7 @@ public class Lab05 {
     }
 
     public static boolean task1217check(Interval i1, Interval i2){
-        return i1.b <= i2.a || i2.b <= i1.a;
+        return !(i1.b <= i2.a || i2.b <= i1.a);
     }
 
     public static Interval task1217intersection(Interval i1, Interval i2) {
@@ -852,7 +860,7 @@ public class Lab05 {
 
         Interval xx = task1217intersection(r1x, r2x);
         Interval xy = task1217intersection(r1y, r2y);
-        return new Rectangle(xx.a, xx.b - xx.a, xy.a, xy.b - xy.a);
+        return new Rectangle(xx.a, xy.a, xy.b - xy.a, xx.b - xx.a);
     }
 
     public static boolean task2153(int t) throws Exception {

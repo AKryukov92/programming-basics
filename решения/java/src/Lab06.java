@@ -703,11 +703,11 @@ public class Lab06 {
         long mul = 1;
         long i, n;
         if (a < b) {
-            i = (long) Math.ceil(a);
-            n = (long) Math.floor(b);
+            i = a;
+            n = b;
         } else {
-            i = (long) Math.ceil(b);
-            n = (long) Math.floor(a);
+            i = b;
+            n = a;
         }
         while (i <= n){
             mul *= i;

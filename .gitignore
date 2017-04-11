@@ -31,6 +31,8 @@ java/*
 csharp/*
 js/*
 php/*
-/out
-/.idea/workspace.xml
-/.idea/tasks.xml
+решения/java/out
+решения/java/.idea/workspace.xml
+решения/java/.idea/tasks.xml
+/решения/cs/lab*/obj
+/решения/cs/lab*/bin

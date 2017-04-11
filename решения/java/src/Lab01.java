@@ -132,7 +132,7 @@ public class Lab01 {
     }
 
     public static void task2429(String a){
-        System.out.println("Программирование это " + a);
+        System.out.println("Программирование это " + a + "!");
     }
 
     public static void task7472(String a, String b){
