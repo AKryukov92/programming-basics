@@ -219,9 +219,9 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("1934");
-        int[] in1934a = {6047, -3, 0, 6221};
-        int[] in1934b = {-6011, -7, -50, 6373};
-        double[] outs1934 = {1240401.6995, -21.0000, 0.0000, 0};
+        int[] in1934a = {6047, -3, 0, 13, 6221};
+        int[] in1934b = {-6011, -7, -50, 0, 6373};
+        double[] outs1934 = {1240401.6995, -21.0000, 0.0000, 0.0000, 0};
         for (int i = 0; i < in1934a.length; i++){
             try {
                 double result = task1934(in1934a[i],in1934b[i]);
@@ -233,8 +233,8 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("7237");
-        double[] in7237 = {0, 20, 40, -273.15, -300};
-        double[] outs7237 = {32, 68, 104, -459.67, 0};
+        double[] in7237 = { 0, 20.5, 691.9, -273.15, -300 };
+        double[] outs7237 = { 32, 68.9, 1277.4200, -459.67, 0 };
         for (int i = 0; i < in7237.length; i++){
             try {
                 double result = task7237(in7237[i]);
@@ -375,8 +375,17 @@ public class Lab02 {
         }
         System.out.println();
         System.out.println("9622");
-        System.out.println(task9622(7351, 7349, 7333).print());
-        System.out.println(task9622(19, 23, 29).print());
+        int[] in9622m = {7351,19,-1,2,3};
+        int[] in9622v = {7349,23,4,-5,6};
+        int[] in9622h = {7333,29,7,8,-9};
+        for (int i = 0; i < in9622m.length; i++){
+            try {
+                class9622 result = task9622(in9622m[i], in9622v[i], in9622h[i]);
+                System.out.println(result.print());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
         System.out.println();
         System.out.println("6522");
@@ -491,8 +500,8 @@ public class Lab02 {
     }
 
     public static double task1934(int a, int b) throws Exception {
-        if (b >= 0){
-            throw new Exception("Значение B должно быть отрицательным");
+        if (b > 0){
+            throw new Exception("Значение B должно быть не положительным");
         }
         return a*Math.sqrt(-7*b);
     }
@@ -546,7 +555,16 @@ public class Lab02 {
         }
     }
 
-    public static class9622 task9622(int m, int v, int h){
+    public static class9622 task9622(int m, int v, int h) throws Exception {
+        if (m <= 0){
+            throw new Exception("Значение M должно быть положительным");
+        }
+        if (v <= 0){
+            throw new Exception("Значение V должно быть положительным")
+        }
+        if (h < 0){
+            throw new Exception("Значение H должно быть неотрицательным");
+        }
         double g = 9.8067;
         return new class9622((double)m*v*v/2, (double)m*g*h);
     }
