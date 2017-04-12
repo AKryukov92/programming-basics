@@ -613,7 +613,7 @@ namespace lab02
         public static double task8833(int x)
         {
             if (x < 0) {
-                throw new Exception("Значение X должно быть положительным");
+                throw new Exception("Значение X должно быть неотрицательным");
             }
             return Math.Sqrt(x);
         }
