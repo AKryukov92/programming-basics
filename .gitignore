@@ -1,32 +1,3 @@
-/ExplorerJourney/Journey1/obj/*
-/ExplorerJourney/Journey1/bin/*
-/ExplorerJourney/Journey2/obj/*
-/ExplorerJourney/Journey2/bin/*
-/ExplorerJourney/Journey3/obj/*
-/ExplorerJourney/Journey3/bin/*
-/ExplorerJourney/Journey4/obj/*
-/ExplorerJourney/Journey4/bin/*
-/ExplorerJourney/Journey5/obj/*
-/ExplorerJourney/Journey5/bin/*
-/ExplorerJourney/Journey6/obj/*
-/ExplorerJourney/Journey6/bin/*
-/ExplorerJourney/Journey7/obj/*
-/ExplorerJourney/Journey7/bin/*
-/ExplorerJourney/Supplies/obj/*
-/ExplorerJourney/Supplies/bin/*
-*.suo
-/Сборник Златопольского/Zlatopolsky_Solution/TestResults
-/Сборник Златопольского/Zlatopolsky_Solution/.vs
-/Сборник Златопольского/Zlatopolsky_Solution/Unit1Tests/obj
-/Сборник Златопольского/Zlatopolsky_Solution/Unit1Tests/bin
-/Сборник Златопольского/Zlatopolsky_Solution/Unit1/obj
-/Сборник Златопольского/Zlatopolsky_Solution/Unit1/bin
-/Сборник Златопольского/Zlatopolsky_Solution/Unit2/obj
-/Сборник Златопольского/Zlatopolsky_Solution/Unit2/bin
-/Сборник Златопольского/Zlatopolsky_Solution/Unit2Tests/obj
-/Сборник Златопольского/Zlatopolsky_Solution/Unit2Tests/bin
-/ExplorerJourney/ExplorerJourney/obj
-/ExplorerJourney/ExplorerJourney/bin
 java/*
 csharp/*
 js/*
@@ -34,5 +5,6 @@ php/*
 решения/java/out
 решения/java/.idea/workspace.xml
 решения/java/.idea/tasks.xml
-/решения/cs/lab*/obj
-/решения/cs/lab*/bin
+решения/cs/lab*/obj
+решения/cs/lab*/bin
+*.suo
