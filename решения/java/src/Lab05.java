@@ -283,9 +283,9 @@ public class Lab05 {
 
         System.out.println();
         System.out.println("6291");
-        int[] in6291a = {13, 21, 29, 61, 211, -151, 193, -101};
-        int[] in6291b = {17, 21, 2, 47, 211, 239, 193, 83};
-        int[] in6291c = {14, 37, 29, 47, 211, 239, -3, -101};
+        int[] in6291a = {13, 21, 29, 61, 211, -151, 193, 101};
+        int[] in6291b = {17, 21, 2, 47, 211, 239, -193, 83};
+        int[] in6291c = {14, 37, 29, 47, 211, 239, 3, -101};
         for (int i = 0; i < in6291a.length; i++){
             try {
                 if (task6291(in6291a[i], in6291b[i], in6291c[i])){
@@ -293,7 +293,7 @@ public class Lab05 {
                 } else {
                     System.out.print("Треугольник не является");
                 }
-                System.out.println("равнобедренным.");
+                System.out.println(" равнобедренным.");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
