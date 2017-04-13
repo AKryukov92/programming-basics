@@ -149,12 +149,6 @@ namespace lab02
             Console.WriteLine("{0:F6}", task9865(-1.482634) - 0.0000);
 
             Console.WriteLine();
-            Console.WriteLine("3591");
-            Console.WriteLine("{0:F6}", task3591(0) - 0);
-            Console.WriteLine("{0:F6}", task3591(200) - 1606.2378);
-            Console.WriteLine("{0:F6}", task3591(6857) - 11580.2569);
-
-            Console.WriteLine();
             Console.WriteLine("3558");
             Console.WriteLine("{0:F6}", task3558(45, 90) - 0.0);
             Console.WriteLine("{0:F6}", task3558(200, 45) - -1.3636);
@@ -464,6 +458,23 @@ namespace lab02
                 {
                     double result = task5871(in5871[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs5871[i]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("3591");
+            int[] in3591 = { 0, 200, 6857 };
+            double[] out3591 = { 0, 1606.2378, 11580.2569, -1 };
+            for (int i = 0; i < in3591.Length; i++)
+            {
+                try
+                {
+                    double result = task3591(in3591[i]);
+                    Console.WriteLine("{0:F6} ({1:F6})\n", result, out3591[i]);
                 }
                 catch (Exception e)
                 {
@@ -815,6 +826,10 @@ namespace lab02
 
         public static double task3591(int h)
         {
+            if (h < 0)
+            {
+                throw new Exception("Высота над уровнем Земли должна быть неотрицательна");
+            }
             double r = 6350;
             double c = r + h;
             return Math.Sqrt(c * c - r * r);

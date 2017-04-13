@@ -98,12 +98,6 @@ public class Lab02 {
         System.out.printf("%.6f\n", task9865(-1.482634) - 0.0000);
 
         System.out.println();
-        System.out.println("3591");
-        System.out.printf("%.6f\n", task3591(0) - 0);
-        System.out.printf("%.6f\n", task3591(200) - 1606.2378);
-        System.out.printf("%.6f\n", task3591(6857) - 11580.2569);
-
-        System.out.println();
         System.out.println("3558");
         System.out.printf("%.6f\n", task3558(45, 90) - 0.0);
         System.out.printf("%.6f\n", task3558(200, 45) - -1.3636);
@@ -354,6 +348,19 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
+
+        System.out.println();
+        System.out.println("3591");
+        int[] in3591 = {0,200,6857, -500};
+        double[] out3591 = {0, 1606.2378, 11580.2569, -1};
+        for(int i = 0; i < in3591.length; i++){
+            try {
+                double result = task3591(in3591[i]);
+                System.out.printf("%.6f (%.6f)\n",result, out3591[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -560,7 +567,7 @@ public class Lab02 {
             throw new Exception("Значение M должно быть положительным");
         }
         if (v <= 0){
-            throw new Exception("Значение V должно быть положительным")
+            throw new Exception("Значение V должно быть положительным");
         }
         if (h < 0){
             throw new Exception("Значение H должно быть неотрицательным");
@@ -646,7 +653,10 @@ public class Lab02 {
         return 12*a*a+7*a-16;
     }
 
-    public static double task3591(int h){
+    public static double task3591(int h) throws Exception {
+        if (h < 0){
+            throw new Exception("Высота над уровнем Земли должна быть неотрицательна");
+        }
         double r = 6350;
         double c = r+h;
         return Math.sqrt(c*c-r*r);
