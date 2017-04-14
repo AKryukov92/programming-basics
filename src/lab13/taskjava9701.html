@@ -126,8 +126,8 @@ for (int i = 0; i &lt; in8833.length; i++){
         <tr>
             <td></td>
             <td><a href="[2] лаб. ОСАЛП.html#task9020" target="_blank">ЛР2№9020 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in9020 = {7573, 75, 0, -9};
-double[] outs9020 = {261.0690, 25.9808, 0, 0};
+            <td class="preformatted">int[] in9020 = { 0, -9, 61, 60, 62, 7573, 75 };
+double[] outs9020 = { 23.4307, 25.0998, 0, 3, 0, 0, 0 };
 for (int i = 0; i &lt; in9020.length; i++){
     try {
         double result = task9020(in9020[i]);
@@ -136,9 +136,12 @@ for (int i = 0; i &lt; in9020.length; i++){
         System.out.println(e.getMessage());
     }
 }</td>
-            <td class="preformatted">261,068956 (261,069000)
-25,980762 (25,980800)
+            <td class="preformatted">23,430749 (23,430700)
+25,099801 (25,099800)
 0,000000 (0,000000)
+3,000000 (3,000000)
+Значение X должно быть неотрицательным
+Значение X должно быть неотрицательным
 Значение X должно быть неотрицательным</td>
         </tr>
         <tr>
@@ -333,11 +336,11 @@ for (int i = 0; i &lt; in3591.Length; i++)
     try
     {
         double result = task3591(in3591[i]);
-        Console.WriteLine("{0:F6} ({1:F6})\n", result, out3591[i]);
+        System.out.printf("%.6f (%.6f)\n", result, out3591[i]);
     }
     catch (Exception e)
     {
-        Console.WriteLine(e.Message);
+        System.out.println(e.Message);
     }
 }</td>
             <td class="preformatted">0.000000 (0.000000)

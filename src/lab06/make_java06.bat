@@ -29,17 +29,17 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#writing7779"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#task8495"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task1315"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task6066"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task8495" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task1315" class="example"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task6066" class="supervision"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task2565"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task2594"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task2594" class="supervision"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task2321"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task5053"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task3762"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task3550"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task2475"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task9180"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task2475" class="example"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9180" class="supervision"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task1544"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task9562"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task3669"^>№ 14^</a^>^</li^> ^
@@ -48,16 +48,16 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6580"^>№ 17^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
- ^<li^>^<a href="#task7585"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task3983"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task7585" class="supervision"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task3983" class="supervision"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task8770"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task4236"^>№ 21^</a^>^</li^> ^
- ^<li^>^<a href="#task5969"^>№ 22^</a^>^</li^> ^
+ ^<li^>^<a href="#task4236" class="supervision"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task5969" class="example"^>№ 22^</a^>^</li^> ^
  ^<li^>^<a href="#task8696"^>№ 23^</a^>^</li^> ^
  ^<li^>^<a href="#task8418"^>№ 24^</a^>^</li^> ^
  ^<li^>^<a href="#task5170"^>№ 25^</a^>^</li^> ^
- ^<li^>^<a href="#task8395"^>№ 26^</a^>^</li^> ^
- ^<li^>^<a href="#task5568"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task8395" class="supervision"^>№ 26^</a^>^</li^> ^
+ ^<li^>^<a href="#task5568" class="supervision"^>№ 27^</a^>^</li^> ^
  ^<li^>^<a href="#task2592"^>№ 28^</a^>^</li^> ^
  ^<li^>^<a href="#task4075"^>№ 29^</a^>^</li^> ^
  ^<li^>^<a href="#task7517"^>№ 30^</a^>^</li^> ^

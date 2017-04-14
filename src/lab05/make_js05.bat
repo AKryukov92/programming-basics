@@ -34,18 +34,18 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#writing2564"^>П 4^</a^>^</li^> ^
  ^<li^>^<a href="#writing8487"^>П 5^</a^>^</li^> ^
  ^<li^>^<a href="#writing8045"^>П 6^</a^>^</li^> ^
- ^<li^>^<a href="#task8878"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task3072"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task5980"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task8878" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task3072" class="supervision"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task5980" class="example"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task8174"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task4257"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task4257" class="example"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task2291"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task1763"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task5662"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task1945"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task1186"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task8715"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task8518"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task8715" class="example"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task8518" class="supervision"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task4847"^>№ 13^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
@@ -53,7 +53,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6291"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task3770"^>№ 16^</a^>^</li^> ^
  ^<li^>^<a href="#task7178"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task3883"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task3883" class="supervision"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task4527"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task6556"^>№ 20^</a^>^</li^> ^
  ^<li^>^<a href="#task5635"^>№ 21^</a^>^</li^> ^
@@ -149,4 +149,6 @@ copy "Области 13.png" "..\..\..\%lang%\images\Области 13.png"
 copy "Области 14.png" "..\..\..\%lang%\images\Области 14.png"
 copy "Области 15.png" "..\..\..\%lang%\images\Области 15.png"
 copy "Области 16.png" "..\..\..\%lang%\images\Области 16.png"
+copy "example6556.png" "..\..\..\%lang%\images\example6556.png"
+copy "example5635.png" "..\..\..\%lang%\images\example5635.png"
 popd

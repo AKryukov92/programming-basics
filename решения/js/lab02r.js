@@ -89,7 +89,7 @@ for (var i = 0; i < in1262.length; i++){
 	var out = document.getElementById("1262t" + i);
 	out.innerHTML = task1262(in1262[i]).toFixed(4);
 }
-var in9020 = ["7573", "75", "0", "-9"];
+var in9020 = ["0", "-9", "61", "60", "62", "7573", "75"];
 for (var i = 0; i < in9020.length; i++){
 	var out = document.getElementById("9020t" + i);
 	try {

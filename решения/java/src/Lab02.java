@@ -200,8 +200,8 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("9020");
-        int[] in9020 = {7573, 75, 0, -9};
-        double[] outs9020 = {261.0690, 25.9808, 0, 0};
+        int[] in9020 = {0, -9, 61, 60, 62, 7573, 75};
+        double[] outs9020 = {23.4307, 25.0998, 0, 3, 0, 0, 0};
         for (int i = 0; i < in9020.length; i++){
             try {
                 double result = task9020(in9020[i]);
@@ -500,10 +500,10 @@ public class Lab02 {
     }
 
     public static double task9020(int x) throws Exception {
-        if (x < 0){
-            throw new Exception("Значение X должно быть неотрицательным");
+        if (x > 61){
+            throw new Exception("Подкоренное выражение должно быть неотрицательным");
         }
-        return 3 * Math.sqrt(x);
+        return 3 * Math.sqrt(61-x);
     }
 
     public static double task1934(int a, int b) throws Exception {

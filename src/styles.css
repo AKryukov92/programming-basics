@@ -99,6 +99,12 @@ numerator {
 denominator {
 	display:block;
 }
+.example::after{
+	content:"*";
+}
+.supervision::after{
+	content:"!";
+}
 @media print {
 	.nav {
 		display:none;

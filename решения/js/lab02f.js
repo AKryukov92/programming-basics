@@ -67,10 +67,10 @@ function task1262(y){
 	return 5 * Math.cos(y * Math.PI/180);
 }
 function task9020(x){
-	if (x < 0){
-		throw new Error("Значение X должно быть неотрицательным");
+	if (x > 61){
+		throw new Error("Подкоренное выражение должно быть неотрицательным");
 	}
-	return 3 * Math.sqrt(x);
+	return 3 * Math.sqrt(61-x);
 }
 function task1934(a,b){
 	if (b > 0){

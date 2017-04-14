@@ -33,19 +33,19 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#writing8569"^>П 1^</a^>^</li^> ^
  ^<li^>^<a href="#writing3730"^>П 2^</a^>^</li^> ^
  ^<li^>^<a href="#writing9007"^>П 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4411"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task9298"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task4411" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task9298" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3354"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task5201"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task5201" class="supervision"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task2981"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task4312"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task8428"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task2361"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task8428" class="example"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task2361" class="example"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task5063"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task7711"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task8833"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task1262"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task9020"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task7711" class="example"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task8833" class="example"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task1262" class="supervision"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task9020" class="supervision"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task1934"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task7237"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task3943"^>№ 16^</a^>^</li^> ^

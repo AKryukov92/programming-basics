@@ -276,8 +276,8 @@ namespace lab02
 
             Console.WriteLine();
             Console.WriteLine("9020");
-            int[] in9020 = { 7573, 75, 0, -9 };
-            double[] outs9020 = { 261.0690, 25.9808, 0, 0 };
+            int[] in9020 = { 0, -9, 61, 60, 62, 7573, 75 };
+            double[] outs9020 = { 23.4307, 25.0998, 0, 3, 0, 0, 0 };
             for (int i = 0; i < in9020.Length; i++)
             {
                 try
@@ -649,10 +649,11 @@ namespace lab02
 
         public static double task9020(int x)
         {
-            if (x < 0) {
-                throw new Exception("Значение X должно быть неотрицательным");
+            if (x > 61)
+            {
+                throw new Exception("Подкоренное выражение должно быть неотрицательным");
             }
-            return 3 * Math.Sqrt(x);
+            return 3 * Math.Sqrt(61 - x);
         }
 
         public static double task1934(int a, int b)
@@ -726,7 +727,7 @@ namespace lab02
                 throw new Exception("Значение M должно быть положительным");
             }
             if (v <= 0){
-                throw new Exception("Значение V должно быть положительным")
+                throw new Exception("Значение V должно быть положительным");
             }
             if (h < 0){
                 throw new Exception("Значение H должно быть неотрицательным");
