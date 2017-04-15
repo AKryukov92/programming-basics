@@ -186,6 +186,30 @@ function task3883(a){
 	}
 	return Math.floor(a/100)%10 == a%10;
 }
+function task1999(x, y){
+	return x <= -2 && y >= 1;
+}
+function task4042(x, y){
+	return y <= 1.5 && y >= -2;
+}
+function task6351(x, y){
+	return y <= 4 && x >= 1 && x <= 2;
+}
+function task5382(x, y){
+	return y <= 4 && y >= 2 && x >= 1;
+}
+function task7088(x, y){
+	return (x >= 2 && y >= 0) || (x >= 1 && y <= -1);
+}
+function task7250(x, y){
+	return x >= 2 && (y >= 1 || y <= -1.5);
+}
+function task6740(x, y){
+	return x >= 1 && x <= 3 && y >= -2 && y <= -1;
+}
+function task9038(x, y){
+	return x >= 2 || (y <= 1.5 && y >= 0.5);
+}
 function task4527(a){
 	if (a < -10 || a > 100){
 		throw new Error("Значение A должно быть в интервале [-10, 100]");
@@ -239,6 +263,11 @@ function validateRectangle(r){
 		throw new Error("Ширина должна быть положительна");
 	}
 }
+function validateInterval(i){
+	if(i.a > i.b){
+		throw new Error("Значение A должно быть меньше значения B");
+	}
+}
 function task5635(t,r){
 	validatePoint(t);
 	validatePoint(r);
@@ -247,4 +276,80 @@ function task5635(t,r){
 		t.x < r.x + r.w &&
 		r.y < t.y &&
 		t.y < r.y + r.h;
+}
+function task3878(t,p1,p2){
+	validatePoint(t);
+	validatePoint(p1);
+	validatePoint(p2);
+	return (t.x - p1.x) / (p2.x - p1.x) == (t.y - p1.y) / (p2.y - p1.y);
+}
+function task1217check(i1,i2){
+	validateInterval(i1);
+	validateInterval(i2);
+	return !(i1.b <= i2.a || i2.b <= i1.a);
+}
+function task1217x(i1, i2){
+	if (i1.a < i2.a && i2.a < i1.b){
+		if (i2.b > i1.b){
+			return {a:i2.a, b:i1.b};
+		} else {
+			return {a:i2.a, b:i2.b};
+		}
+	} else {
+		if (i2.b > i1.b){
+			return {a:i1.a, b:i1.b};
+		} else {
+			return {a:i1.a, b:i2.b};
+		}
+	}
+}
+function task1438check(r1,r2){
+	validateRectangle(r1);
+	validateRectangle(r2);
+	var r1x = {a:r1.x, b:r1.x + r1.w};
+	var r2x = {a:r2.x, b:r2.x + r2.w};
+	var r1y = {a:r1.y, b:r1.y + r1.h};
+	var r2y = {a:r2.y, b:r2.y + r2.h};
+	return task1217check(r1x, r2x) && task1217check(r1y, r2y);
+}
+function task1438x(r1,r2){
+	var r1x = {a:r1.x, b:r1.x + r1.w};
+	var r2x = {a:r2.x, b:r2.x + r2.w};
+	var r1y = {a:r1.y, b:r1.y + r1.h};
+	var r2y = {a:r2.y, b:r2.y + r2.h};
+	var xx = task1217x(r1x, r2x);
+	var xy = task1217x(r1y, r2y);
+	return {
+		x:xx.a,
+		y:xy.a,
+		w:xx.b-xx.a,
+		h:xy.b-xy.a
+	};
+}
+function task2153(t){
+	if (t > 60 || t <= 0){
+		throw new Error("Значение T должно быть в интервале [0, 59]");
+	}
+	return (t-1)%5 < 3;
+}
+function task7937(w,h,c,d){
+	if (w <= 0){
+		throw new Error("Значение W должно быть положительным");
+	}
+	if (h <= 0){
+		throw new Error("Значение H должно быть положительным");
+	}
+	if (c <= 0){
+		throw new Error("Значение C должно быть положительным");
+	}
+	if (d <= 0){
+		throw new Error("Значение D должно быть положительным");
+	}
+	var cw = (w/c)*(h/d);
+	var ch = (h/c)*(w/d);
+	if (cw > ch){
+		return cw.toFixed(4) + " при C вдоль W";
+	} else {
+		return ch.toFixed(4) + " при C вдоль H";
+	}
 }

@@ -178,6 +178,104 @@ for (var i = 0; i < in3883.length; i++){
 		out.innerHTML = e.message;
 	}
 }
+var in1999x = [-3, -2, -1, -3, -2, -1, -3, -2, -1];
+var in1999y = [2, 2, 2, 1, 1, 1, 0, 0, 0];
+for (var i = 0; i < in1999x.length; i++){
+	var out = document.getElementById("1999t" + i);
+	var ret = "{" + in1999x[i] + ";" + in1999y[i];
+	if (task1999(in1999x[i], in1999y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in4042x = [2, 1, 0, -1, -2];
+var in4042y = [2, 1.5, 0, -2, -3];
+for (var i = 0; i < in4042x.length; i++){
+	var out = document.getElementById("4042t" + i);
+	var ret = "{" + in4042x[i] + ";" + in4042y[i];
+	if (task4042(in4042x[i], in4042y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in6351x = [0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3];
+var in6351y = [5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2];
+for (var i = 0; i < in6351x.length; i++){
+	var out = document.getElementById("6351t" + i);
+	var ret = "{" + in6351x[i] + ";" + in6351y[i];
+	if (task6351(in6351x[i], in6351y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in5382x = [5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0];
+var in5382y = [5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1];
+for (var i = 0; i < in5382x.length; i++){
+	var out = document.getElementById("5382t" + i);
+	var ret = "{" + in5382x[i] + ";" + in5382y[i];
+	if (task5382(in5382x[i], in5382y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in7088x = [0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1,
+	1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5, 0, 1, 1.5, 2, 2.5];
+var in7088y = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, -0.5, -0.5,
+	-0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2];
+for (var i = 0; i < in7088x.length; i++){
+	var out = document.getElementById("7088t" + i);
+	var ret = "{" + in7088x[i] + ";" + in7088y[i];
+	if (task7088(in7088x[i], in7088y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in7250x = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3];
+var in7250y = [2, 2, 2, 1, 1, 1, 0, 0, 0, -1.5, -1.5, -1.5, -2, -2, -2];
+for (var i = 0; i < in7250x.length; i++){
+	var out = document.getElementById("7250t" + i);
+	var ret = "{" + in7250x[i] + ";" + in7250y[i];
+	if (task7250(in7250x[i], in7250y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}	
+var in6740x = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4];
+var in6740y = [0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1.5, -1.5, -1.5, -1.5, -1.5, -2, -2, -2, -2, -2, -3, -3, -3, -3, -3];
+for (var i = 0; i < in6740x.length; i++){
+	var out = document.getElementById("6740t" + i);
+	var ret = "{" + in6740x[i] + ";" + in6740y[i];
+	if (task6740(in6740x[i], in6740y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
+var in9038x = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3];
+var in9038y = [2, 2, 2, 1.5, 1.5, 1.5, 1, 1, 1, 0.5, 0.5, 0.5, 0, 0, 0];
+for (var i = 0; i < in9038x.length; i++){
+	var out = document.getElementById("9038t" + i);
+	var ret = "{" + in9038x[i] + ";" + in9038y[i];
+	if (task9038(in9038x[i], in9038y[i])){
+		ret += "} принадлежит области";
+	} else {
+		ret += "} не принадлежит области";
+	}
+	out.innerHTML = ret;
+}
 var in4527 = ["1","2","3","8","-10","26","40","100","-20","300"];
 for (var i = 0; i < in4527.length; i++){
 	var out = document.getElementById("4527t" + i);
@@ -218,6 +316,77 @@ for (var i = 0; i < in5635p.length; i++){
 		} else {
 			out.innerHTML = "точка не внутри";
 		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in3878t = [{x:2,y:2},{x:1,y:3},{x:0,y:0},{x:0,y:1},{x:1,y:1},{x:-1,y:1}];
+var in3878p1 = [{x:1,y:1},{x:0,y:0},{x:1,y:1},{x:1,y:1},{x:1,y:1},{x:1,y:1}];
+var in3878p2 = [{x:3,y:3},{x:2,y:6},{x:2,y:2},{x:2,y:2},{x:2,y:2},{x:2,y:2}];
+for (var i = 0; i < in3878t.length; i++){
+	var out = document.getElementById("3878t" + i);
+	try {
+		if (task3878(in3878t[i], in3878p1[i], in3878p2[i])){
+			out.innerHTML = "Точка принадлежит прямой";
+		} else {
+			out.innerHTML = "Точка не принадлежит прямой";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in1217i1 = [{a:2,b:3},{a:11,b:17},{a:23,b:37},{a:43,b:53},{a:5,b:15},{a:67,b:71},{a:79,b:73},{a:97,b:101}];
+var in1217i2 = [{a:5,b:7},{a:13,b:19},{a:29,b:31},{a:41,b:47},{a:0,b:30},{a:59,b:61},{a:83,b:89},{a:107,b:103}];
+for (var i = 0; i < in1217i1.length; i++){
+	var out = document.getElementById("1217t" + i);
+	try {
+		if (task1217check(in1217i1[i], in1217i2[i])){
+			var r = task1217x(in1217i1[i], in1217i2[i]);
+			out.innerHTML = "пересекаются (" + r.a + ";" + + r.b + ")";
+		} else {
+			out.innerHTML = "Не пересекаются";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in1438r1 = [{x:10,y:10,h:200,w:100},{x:25,y:25,h:200,w:200},{x:102,y:200,h:100,w:200},{x:500,y:200,h:100,w:200},{x:60,y:70,h:120,w:200},{x:100,y:100,h:200,w:200},{x:150,y:150,h:150,w:300},{x:100,y:0,h:100,w:500},{x:5,y:0,h:10,w:10},{x:105,y:5,h:10,w:10},{x:150,y:150,h:50,w:300},{x:0,y:0,h:802,w:200},{x:200,y:200,h:100,w:100},{x:125,y:138,h:0,w:1},{x:100,y:100,h:120,w:220}];
+var in1438r2 = [{x:50,y:50,h:300,w:350},{x:225,y:225,h:200,w:200},{x:0,y:500,h:100,w:120},{x:10,y:400,h:100,w:120},{x:50,y:50,h:120,w:200},{x:200,y:200,h:50,w:50},{x:150,y:150,h:150,w:300},{x:0,y:200,h:700,w:100},{x:0,y:5,h:10,w:10},{x:100,y:0,h:10,w:30},{x:100,y:100,h:300,w:200},{x:0,y:0,h:610,w:610},{x:900,y:200,h:100,w:10},{x:205,y:202,h:61,w:62},{x:220,y:100,h:120,w:220}];
+for (var i = 0; i < in1438r1.length; i++){
+	var out = document.getElementById("1438t" + i);
+	try {
+		if (task1438check(in1438r1[i], in1438r2[i])){
+			var r = task1438x(in1438r1[i], in1438r2[i]);
+			out.innerHTML = "пересекаются " + JSON.stringify(r);
+		} else {
+			out.innerHTML = "Не пересекаются";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in2153 = ["13","44","60","0","61"];
+for (var i = 0; i < in2153.length; i++){
+	var out = document.getElementById("2153t" + i);
+	try {
+		if (task2153(in2153[i])){
+			out.innerHTML = "Зеленый";
+		} else {
+			out.innerHTML = "Красный";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in7937w = ["1721","2473","0","877","1181","3491"];
+var in7937h = ["661","449","1879","0","1033","3533"];
+var in7937c = ["11","23","1163","7","0","1297"];
+var in7937d = ["7","11","109","19","127","0"];
+for (var i = 0; i < in7937w.length; i++){
+	var out = document.getElementById("7937t" + i);
+	try {
+		var r = task7937(in7937w[i], in7937h[i], in7937c[i], in7937d[i]);
+		out.innerHTML = r;
 	} catch(e){
 		out.innerHTML = e.message;
 	}

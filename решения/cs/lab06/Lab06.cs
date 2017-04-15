@@ -102,7 +102,7 @@ namespace lab06
             Console.WriteLine(task6580(15, 27) - 5915);
             Console.WriteLine(task6580(25, 44) - 24470);
             Console.WriteLine(task6580(80, 100) - 170870);
-            Console.WriteLine(task6580(3000, 24) - 414561584);
+            Console.WriteLine(task6580(3000, 24) - 9004496176);
 
             Console.WriteLine();
             Console.WriteLine("5969");
@@ -340,6 +340,23 @@ namespace lab06
                     StringBuilder result = task2594(new StringBuilder(),
                             in2594a[i], in2594b[i]);
                     Console.WriteLine(result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("1483");
+            int[] in1483 = {4, 18, 42, 0, -9};
+            for (int i = 0; i < in1483.Length; i++)
+            {
+                try
+                {
+                    StringBuilder result = task1483(
+                            new StringBuilder(), in1483[i]);
+                    Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
                 {
@@ -879,10 +896,10 @@ namespace lab06
             return sum;
         }
 
-        public static int task6580(int a, int b)
+        public static long task6580(int a, int b)
         {
             int i, n;
-            int sum = 0;
+            long sum = 0;
             if (a < b)
             {
                 i = a;
@@ -911,6 +928,25 @@ namespace lab06
                     sb.Append("+");
                 }
                 sb.Append("\n");
+                i++;
+            }
+            return sb;
+        }
+
+        public static StringBuilder task1483(StringBuilder sb, int n)
+        {
+            if (n < 0)
+            {
+                throw new Exception("Значение N должно быть неотрицательным");
+            }
+            int i = 1;
+            while (i <= n)
+            {
+                sb.Append("!");
+                if (i % 5 == 0)
+                {
+                    sb.Append(" ");
+                }
                 i++;
             }
             return sb;

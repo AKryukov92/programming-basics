@@ -34,7 +34,7 @@ public class Lab06 {
         System.out.println(task6580(15, 27) - 5915);
         System.out.println(task6580(25, 44) - 24470);
         System.out.println(task6580(80, 100) - 170870);
-        System.out.println(task6580(3000, 24) - 414561584);
+        System.out.println(task6580(3000, 24) - 9004496176L);
 
         System.out.println();
         System.out.println("5969");
@@ -256,6 +256,19 @@ public class Lab06 {
                 StringBuilder result = task2594(new StringBuilder(),
                         in2594a[i], in2594b[i]);
                 System.out.println(result);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
+        System.out.println("1483");
+        int[] in1483 = {4, 18, 42, 0, -9};
+        for (int i = 0; i < in1483.length; i++){
+            try {
+                StringBuilder result = task1483(
+                        new StringBuilder(), in1483[i]);
+                System.out.println(result.toString());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -768,9 +781,9 @@ public class Lab06 {
         return sum;
     }
 
-    public static int task6580(int a, int b){
+    public static long task6580(int a, int b){
         int i, n;
-        int sum = 0;
+        long sum = 0;
         if (a < b){
             i = a;
             n = b;
@@ -793,6 +806,21 @@ public class Lab06 {
                 sb.append("+");
             }
             sb.append("\n");
+            i++;
+        }
+        return sb;
+    }
+
+    public static StringBuilder task1483(StringBuilder sb, int n) throws Exception {
+        if (n < 0){
+            throw new Exception("Значение N должно быть неотрицательным");
+        }
+        int i = 1;
+        while (i <= n){
+            sb.append("!");
+            if (i%5 == 0){
+                sb.append(" ");
+            }
             i++;
         }
         return sb;
