@@ -39,9 +39,9 @@ public class Lab06 {
         System.out.println();
         System.out.println("5969");
         System.out.println(task5969(8, 13));
-        System.out.println(task5969(25, 44) - 105);
-        System.out.println(task5969(80, 100) - 273);
-        System.out.println(task5969(300, 24) - 6279);
+        System.out.println(task5969(28, 44) - 105);
+        System.out.println(task5969(80, 98) - 273);
+        System.out.println(task5969(3000, 24) - 642600);
 
         System.out.println();
         System.out.println("8696");
@@ -882,7 +882,7 @@ public class Lab06 {
             n = a;
         }
         int sum = 0;
-        while (i < n){
+        while (i <= n){
             if (i%7 == 0){
                 sum += i;
             }

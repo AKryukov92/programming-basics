@@ -107,9 +107,9 @@ namespace lab06
             Console.WriteLine();
             Console.WriteLine("5969");
             Console.WriteLine(task5969(8, 13));
-            Console.WriteLine(task5969(25, 44) - 105);
-            Console.WriteLine(task5969(80, 100) - 273);
-            Console.WriteLine(task5969(300, 24) - 6279);
+            Console.WriteLine(task5969(28, 44) - 105);
+            Console.WriteLine(task5969(80, 98) - 273);
+            Console.WriteLine(task5969(3000, 24) - 642600);
 
             Console.WriteLine();
             Console.WriteLine("8696");
@@ -1018,7 +1018,7 @@ namespace lab06
                 n = a;
             }
             int sum = 0;
-            while (i < n)
+            while (i <= n)
             {
                 if (i % 7 == 0)
                 {
