@@ -70,6 +70,34 @@ for (int i = 0; i &lt; in8418.Length; i++)
 1 5 7 11 35 55 77 
 Значение X должно быть положительным</td>
         </tr>
+		<tr>
+			<td></td>
+			<td><a href="[7] лаб. ОСАЛП.html#task9279" target="_blank">ЛР7№9279 (открыть в новой вкладке)</a></td>
+			<td class="preformatted">String[] in9279 = { "ab", "bc", "ac", "cde", "a" };
+for (int i = 0; i &lt; in9279.Length; i++)
+{
+	try
+	{
+		StringBuilder sb = new StringBuilder();
+		IList&lt;int&gt; result = task9279(in9279[i]);
+		foreach (int item in result)
+		{
+			sb.Append(item);
+			sb.Append(" ");
+		}
+		Console.WriteLine(sb.ToString());
+	}
+	catch (Exception e)
+	{
+		Console.WriteLine(e.Message);
+	}
+}</td>
+			<td class="preformatted">0 13 
+1 
+4 9 
+Вводимая строка должна содержать ровно 2 символа
+Вводимая строка должна содержать ровно 2 символа</td>
+		</tr>
         <tr>
             <td></td>
             <td><a href="[8] лаб. ОСАЛП.html#task1223" target="_blank">ЛР8№1223 (открыть в новой вкладке)</a></td>

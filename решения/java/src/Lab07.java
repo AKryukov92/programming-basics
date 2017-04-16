@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Александр on 02.04.2017.
  */
@@ -32,12 +35,12 @@ public class Lab07 {
         }
     }
 
-    public static void task9701(){
+    public static void task9701() {
         System.out.println();
         System.out.println("9631");
         String[] in9631 = {"z", "a", "g"};
         int[] out9631 = {0, 9, 0};
-        for (int i = 0; i < in9631.length; i++){
+        for (int i = 0; i < in9631.length; i++) {
             try {
                 int result = task9631(in9631[i]);
                 System.out.printf("%d (%d)\n", result, out9631[i]);
@@ -51,7 +54,7 @@ public class Lab07 {
         String[] in9812a = {"a", "w", "g", "x"};
         String[] in9812b = {"x", "d", "z", "u"};
         int[] out9812 = {6, 2, 0, 0};
-        for (int i = 0; i < in9812a.length; i++){
+        for (int i = 0; i < in9812a.length; i++) {
             try {
                 int result = task9812(in9812a[i], in9812b[i]);
                 System.out.printf("%d (%d)\n", result, out9812[i]);
@@ -61,10 +64,39 @@ public class Lab07 {
         }
 
         System.out.println();
+        System.out.println("9279");
+        String[] in9279 = {"ab","bc","ac","cde","a"};
+        for (int i = 0; i < in9279.length; i++){
+            try {
+                StringBuilder sb = new StringBuilder();
+                List<Integer> result = task9279(in9279[i]);
+                for(Integer item : result){
+                    sb.append(item);
+                    sb.append(" ");
+                }
+                System.out.println(sb);
+            } catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
+        System.out.println("4845");
+        int[] in4845a = {0, 5, 7, -1, 20, 5, 7};
+        int[] in4845b = {3, 9, 2, 4, 4, -2, 17};
+        for (int i = 0; i < in4845a.length; i++) {
+            try {
+                System.out.println(task4845(in4845a[i], in4845b[i]));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        System.out.println();
         System.out.println("5728");
         String[] in5728a = {"a", "c", "y", "g", "a"};
         String[] in5728b = {"z", "d", "d", "z", "l"};
-        for (int i = 0; i < in5728a.length; i++){
+        for (int i = 0; i < in5728a.length; i++) {
             try {
                 System.out.println(task5728(in5728a[i], in5728b[i]));
             } catch (Exception e) {
@@ -74,9 +106,9 @@ public class Lab07 {
 
         System.out.println();
         System.out.println("5923");
-        int[] in5923a = {5, 6, 0, -1, 10, 5};
+        int[] in5923a = {5, 6, 0, -1, 9, 5};
         int[] in5923b = {3, 0, 7, 1, 3, -2};
-        for (int i = 0; i < in5923a.length; i++){
+        for (int i = 0; i < in5923a.length; i++) {
             try {
                 System.out.println(task5923(in5923a[i], in5923b[i]));
             } catch (Exception e) {
@@ -87,7 +119,7 @@ public class Lab07 {
         System.out.println();
         System.out.println("2166");
         String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
-        for (int i = 0; i < in2166.length; i++){
+        for (int i = 0; i < in2166.length; i++) {
             try {
                 System.out.println(task2166(in2166[i]));
             } catch (Exception e) {
@@ -106,7 +138,7 @@ public class Lab07 {
                 "\"xyz",
                 "p\"w\""
         };
-        for (int i = 0; i < in9116.length; i++){
+        for (int i = 0; i < in9116.length; i++) {
             try {
                 System.out.println(task9116(in9116[i]));
             } catch (Exception e) {
@@ -129,7 +161,7 @@ public class Lab07 {
                 "{}}",
                 "{{{}{}}}{{}{}}{{}}}"
         };
-        for (int i = 0; i < in1618.length; i++){
+        for (int i = 0; i < in1618.length; i++) {
             try {
                 task1618(in1618[i]);
             } catch (Exception e) {
@@ -144,7 +176,8 @@ public class Lab07 {
         task9701();
     }
 
-    public static String STR = "abcdefwxyz";
+    public static final String STR = "abcdefwxyz";
+    public static final String STR2 = "abcdacadbacdaabaadc";
 
     public static int task9631(String s) throws Exception {
         if (!STR.contains(s)){
@@ -166,6 +199,33 @@ public class Lab07 {
             return indexB - indexA - 1;
         } else {
             return indexA - indexB - 1;
+        }
+    }
+
+    public static List<Integer> task9279(String x) throws Exception {
+        if (x.length() != 2){
+            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
+        }
+        List<Integer> ret = new ArrayList<>();
+        int i = STR2.indexOf(x);
+        while(i != -1){
+            ret.add(i);
+            i = STR2.indexOf(x,i+1);
+        }
+        return ret;
+    }
+
+    private static String task4845(int a, int b) throws Exception {
+        if (a < 0 || a > STR.length()){
+            throw new Exception("Значение A должно быть в интервале [0,длина строки)");
+        }
+        if (b < 0 || b > STR.length()){
+            throw new Exception("Значение B должно быть в интервале [0,длина строки)");
+        }
+        if (a > b){
+            return STR.substring(b, a + 1);
+        } else {
+            return STR.substring(a, b + 1);
         }
     }
 
@@ -216,7 +276,7 @@ public class Lab07 {
         if (s.length() != 2){
             throw new Exception("Вводимая строка должна содержать ровно 2 символа");
         }
-        return "abcdacadbacdaabaadc".replace(s, " ");
+        return STR2.replace(s, " ");
     }
 
     public static String task9116(String s) throws Exception {

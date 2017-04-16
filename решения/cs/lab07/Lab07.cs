@@ -86,6 +86,44 @@ namespace lab07
             }
 
             Console.WriteLine();
+            Console.WriteLine("9279");
+            String[] in9279 = { "ab", "bc", "ac", "cde", "a" };
+            for (int i = 0; i < in9279.Length; i++)
+            {
+                try
+                {
+                    StringBuilder sb = new StringBuilder();
+                    IList<int> result = task9279(in9279[i]);
+                    foreach (int item in result)
+                    {
+                        sb.Append(item);
+                        sb.Append(" ");
+                    }
+                    Console.WriteLine(sb.ToString());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("4845");
+            int[] in4845a = { 0, 5, 7, -1, 20, 5, 7 };
+            int[] in4845b = { 3, 9, 2, 4, 4, -2, 17 };
+            for (int i = 0; i < in4845a.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(task4845(in4845a[i], in4845b[i]));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine();
             Console.WriteLine("5728");
             String[] in5728a = { "a", "c", "y", "g", "a" };
             String[] in5728b = { "z", "d", "d", "z", "l" };
@@ -103,7 +141,7 @@ namespace lab07
 
             Console.WriteLine();
             Console.WriteLine("5923");
-            int[] in5923a = { 5, 6, 0, -1, 10, 5 };
+            int[] in5923a = { 5, 6, 0, -1, 9, 5 };
             int[] in5923b = { 3, 0, 7, 1, 3, -2 };
             for (int i = 0; i < in5923a.Length; i++)
             {
@@ -179,9 +217,11 @@ namespace lab07
                     Console.WriteLine(e.Message);
                 }
             }
+            Console.Read();
         }
 
         public static String STR = "abcdefwxyz";
+        public static String STR2 = "abcdacadbacdaabaadc";
 
         public static int task9631(String s)
         {
@@ -210,6 +250,40 @@ namespace lab07
             }
             else {
                 return indexA - indexB - 1;
+            }
+        }
+
+        private static IList<int> task9279(string x)
+        {
+            if (x.Length != 2)
+            {
+                throw new Exception("Вводимая строка должна содержать ровно 2 символа");
+            }
+            IList<int> ret = new List<int>();
+            int i = STR2.IndexOf(x);
+            while (i != -1)
+            {
+                ret.Add(i);
+                i = STR2.IndexOf(x, i + 1);
+            }
+            return ret;
+
+        }
+
+        private static String task4845(int a, int b) {
+            if (a < 0 || a > STR.Length){
+                throw new Exception("Значение A должно быть в интервале [0,длина строки)");
+            }
+            if (b < 0 || b > STR.Length){
+                throw new Exception("Значение B должно быть в интервале [0,длина строки)");
+            }
+            if (a > b)
+            {
+                return STR.Substring(b, a + 1);
+            }
+            else
+            {
+                return STR.Substring(a, b + 1);
             }
         }
 
@@ -277,7 +351,7 @@ namespace lab07
             {
                 throw new Exception("Вводимая строка должна содержать ровно 2 символа");
             }
-            return "abcdacadbacdaabaadc".Replace(s, " ");
+            return STR2.Replace(s, " ");
         }
 
         public static String task9116(String s)
