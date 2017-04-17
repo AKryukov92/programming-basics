@@ -109,3 +109,57 @@ for (var i = 0; i < in7035.length; i++){
 	var out = document.getElementById("7035t" + i);
 	out.innerHTML = task7035(in7035[i]);
 }
+var in9271 = ["1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 1 2", "4 2 3 4 3 2","4 4 4 4 4 3 2 1","4 4 4 4", "4 3"];
+for (var i = 0; i < in9271.length; i++){
+	var out = document.getElementById("9271t" + i);
+	out.innerHTML = task9271(in9271[i]).join(" ");
+}
+var in8769p = ["1","8","0","0","1","-1","5"];
+var in8769q = ["3","10","5","5","7","0","10"];
+var in8769data = ["1 2 3 4 1 2", "3 4 4 2 3 4 1 2 3 1 2", "4 2 3 4 3 2", "4 4 4 4 4 3 2 1", "4 4 4 4", "4 3", "1 2 3 4"];
+for (var i = 0; i < in8769p.length; i++){
+	var out = document.getElementById("8769t" + i);
+	try {
+		out.innerHTML = task8769(in8769p[i],in8769q[i],in8769data[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+var in4497x = ["1","3","5"];
+var in4497y = ["33","55","1"];
+var in4497data = ["1 2 3 4 1 2","1 2 3 4 1 2", "1 2 3 4 1 2"];
+for (var i = 0; i < in4497x.length; i++){
+	var out = document.getElementById("4497t" + i);
+	out.innerHTML = task4497(in4497x[i],in4497y[i],in4497data[i]).join(" ");
+}
+var in3218 = ["1 2 3 4 1 2", "1 2 3 4 1 2 3 4 1 2 3"];
+for (var i = 0; i < in3218.length; i++){
+	var out = document.getElementById("3218t" + i);
+	out.innerHTML = task3218(in3218[i]).join(" ");
+}
+var in4283k = ["3","5","2","1"];
+var in4283data = ["1 2 3 4 1 2","1 2 3 4 1 2 3 4 1 2 3","3 2 2 2 2 2", "4 4 4 4 4 4"];
+for (var i = 0; i < in4283k.length; i++){
+	var out = document.getElementById("4283t" + i);
+	out.innerHTML = task4283(in4283k[i], in4283data[i]);
+}
+var in7703 = ["1 2 3 4 1 2","1 2 3 4 1 2 3 4 1 2 3","3 2 2 2 2 2","4 4 4 4 4 4"];
+for (var i = 0; i < in7703.length; i++){
+	var out = document.getElementById("7703t" + i);
+	out.innerHTML = task7703(in7703[i]).join(" ");
+}
+var in5541 = ["1 2 3 4 1 2", "1 1 3 3 2 2"];
+for (var i = 0; i < in5541.length; i++){
+	var out = document.getElementById("5541t" + i);
+	var data = task5541(in5541[i]);
+	var result = "";
+	for (item in data){
+		result += item + " ";
+	}
+	out.innerHTML = result;
+}
+var in9182 = ["1 2 3 4 5 6","1 2 3 1 2 6","1 1 1 1 1 1"];
+for (var i = 0; i < in9182.length; i++){
+	var out = document.getElementById("9182t" + i);
+	out.innerHTML = task9182(in9182[i]);
+}

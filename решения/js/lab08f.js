@@ -188,3 +188,125 @@ function task7035(raw){
 	}
 	return min;
 }
+function task9271(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	if (arr.length == 0){
+		return ret;
+	}
+	var min = parseInt(arr[0]);
+	for (var i = 1; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		if (current < min){
+			min = current;
+		}
+	}
+	for (var i = 0; i < arr.length; i++){
+		ret.push(parseInt(arr[i]) - min);
+	}
+	return ret;
+}
+function task8769(p,q,raw){
+	var arr = raw.split(" ");
+	var i, n;
+	if (p < 0 || p >= arr.length){
+		throw new Error("Число P должно быть в интервале [0, размер массива)");
+	}
+	if (q < 0 || q >= arr.length){
+		throw new Error("Число Q должно быть в интервале [0, размер массива)");
+	}
+	if (p < q){
+		i = p;
+		n = q;
+	} else {
+		i = q;
+		n = p;
+	}
+	var min = parseInt(arr[i]);
+	while(i <= n){
+		var current = parseInt(arr[i]);
+		if (current < min){
+			min = current;
+		}
+		i++;
+	}
+	return min;
+}
+function task4497(x,y,raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	for (var i = 0; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		if (current == x){
+			ret.push(y);
+		} else {
+			ret.push(current);
+		}
+	}
+	return ret;
+}
+function task3218(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	var data = [];
+	for (var i = 0; i < arr.length; i++){
+		data[i] = parseInt(arr[i]);
+	}
+	for (var i = 0; i < arr.length; i++){
+		var min = i;
+		for (var j = i; j < arr.length; j++){
+			if (data[j] < data[min]){
+				min = j;
+			}
+		}
+		var t = data[min];
+		data[min] = data[i];
+		data[i] = t;
+		ret.push(t);
+	}
+	return ret;
+}
+function task4283(k,raw){
+	var arr = raw.split(" ");
+	var count = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (parseInt(arr[i]) == k){
+			count++;
+		}
+	}
+	return count;
+}
+function task7703(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	for (var i = 0; i < arr.length; i++){
+		var count = 0;
+		for (var j = 0; j < arr.length; j++){
+			if (arr[j] == arr[i]){
+				count++;
+			}
+		}
+		ret.push(count);
+	}
+	return ret;
+}
+function task5541(raw){
+	var arr = raw.split(" ");
+	var data = {};
+	for (var i = 0; i < arr.length; i++){
+		data[arr[i]] = true;
+	}
+	return data;
+}
+function task9182(raw){
+	var arr = raw.split(" ");
+	var data = {};
+	for (var i = 0; i < arr.length; i++){
+		data[arr[i]] = true;
+	}
+	var count = 0;
+	for (item in data){
+		count++;
+	}
+	return count;
+}
