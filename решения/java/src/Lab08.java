@@ -497,7 +497,7 @@ public class Lab08 {
     public static List<Integer> task8311(int b, int e, String raw) throws Exception {
         String[] arr = raw.split(" ");
         if (b < 0 || b >= arr.length){
-            throw new Exception("Число И должно быть в интервале [0, размер массива)");
+            throw new Exception("Число B должно быть в интервале [0, размер массива)");
         }
         if (e < 0 || e >= arr.length){
             throw new Exception("Число E должно быть в интервале [0, размер массива)");

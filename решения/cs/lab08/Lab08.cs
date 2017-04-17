@@ -539,7 +539,7 @@ namespace lab08
             String[] arr = raw.Split(new char[] { ' ' });
             if (b < 0 || b >= arr.Length)
             {
-                throw new Exception("Число И должно быть в интервале [0, размер массива)");
+                throw new Exception("Число B должно быть в интервале [0, размер массива)");
             }
             if (e < 0 || e >= arr.Length)
             {
