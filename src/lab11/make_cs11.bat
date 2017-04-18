@@ -90,3 +90,5 @@ popd
 pushd "task2048"
 copy "*" "..\..\..\%lang%\files\task2048\*"
 popd
+
+if x%1==x start "" %filename%

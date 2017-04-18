@@ -101,3 +101,5 @@ echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
+
+if x%1==x start "" %filename%

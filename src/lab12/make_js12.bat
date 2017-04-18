@@ -67,9 +67,18 @@ mkdir files
 popd
 
 pushd ..\..\%lang%\files\
+mkdir task2354
 mkdir task2030
 popd
 
-pushd task2030
-copy "*" "..\..\..\%lang%\files\task2030\*"
+pushd task2354
+copy "task2354caller.js" "..\..\..\%lang%\files\task2354\task2354caller.js"
+copy "task2354layout.html" "..\..\..\%lang%\files\task2354\task2354layout.html"
 popd
+
+pushd task2030
+copy "task2030caller.js" "..\..\..\%lang%\files\task2030\task2030caller.js"
+copy "task2030layout.html" "..\..\..\%lang%\files\task2030\task2030layout.html"
+popd
+
+if x%1==x start "" %filename%

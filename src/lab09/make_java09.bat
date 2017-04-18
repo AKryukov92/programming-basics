@@ -157,3 +157,5 @@ popd
 pushd "task2137"
 copy "*" "..\..\..\%lang%\files\task2137\*"
 popd
+
+if x%1==x start "" %filename%

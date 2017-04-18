@@ -152,3 +152,5 @@ copy "Области 16.png" "..\..\..\%lang%\images\Области 16.png"
 copy "example6556.png" "..\..\..\%lang%\images\example6556.png"
 copy "example5635.png" "..\..\..\%lang%\images\example5635.png"
 popd
+
+if x%1==x start "" %filename%

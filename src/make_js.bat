@@ -3,33 +3,33 @@ pushd ..
 rmdir js /s /q
 popd
 pushd lab01
-call make_js01
+call make_js01 skip
 popd
 pushd lab02
-call make_js02
+call make_js02 skip
 popd
 pushd lab03
-call make_js03
+call make_js03 skip
 popd
 pushd lab04
-call make_js04
+call make_js04 skip
 popd
 pushd lab05
-call make_js05
+call make_js05 skip
 popd
 pushd lab06
-call make_js06
+call make_js06 skip
 popd
 pushd lab07
-call make_js07
+call make_js07 skip
 popd
 pushd lab08
-call make_js08
+call make_js08 skip
 popd
 pushd lab12
-call make_js12
+call make_js12 skip
 popd
 pushd lab14
-call make_js14
+call make_js14 skip
 popd
 pause

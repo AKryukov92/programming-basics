@@ -101,3 +101,5 @@ popd
 pushd "task7060"
 copy "*.png" "..\..\..\%lang%\images\task7060\*.png"
 popd
+
+if x%1==x start "" %filename%
