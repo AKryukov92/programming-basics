@@ -29,6 +29,9 @@ popd
 pushd lab12
 call make_js12 skip
 popd
+pushd lab13
+call make_js13 skip
+popd
 pushd lab14
 call make_js14 skip
 popd

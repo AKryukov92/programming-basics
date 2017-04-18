@@ -1,4 +1,4 @@
-var STR = "abcdefwxyz"
+var STR = "abcdefwxyz";
 var STR2 = "abcdacadbacdaabaadc";
 function task7491(s){
 	return STR.indexOf(s) != -1;
