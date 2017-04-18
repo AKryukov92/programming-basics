@@ -69,6 +69,8 @@ popd
 pushd ..\..\%lang%\files\
 mkdir task2354
 mkdir task2030
+mkdir task5164
+mkdir task7649
 popd
 
 pushd task2354
@@ -79,6 +81,16 @@ popd
 pushd task2030
 copy "task2030caller.js" "..\..\..\%lang%\files\task2030\task2030caller.js"
 copy "task2030layout.html" "..\..\..\%lang%\files\task2030\task2030layout.html"
+popd
+
+pushd task5164
+copy "task5164caller.js" "..\..\..\%lang%\files\task5164\task5164caller.js"
+copy "task5164layout.html" "..\..\..\%lang%\files\task5164\task5164layout.html"
+popd
+
+pushd task7649
+copy "task7649caller.js" "..\..\..\%lang%\files\task7649\task7649caller.js"
+copy "task7649layout.html" "..\..\..\%lang%\files\task7649\task7649layout.html"
 popd
 
 if x%1==x start "" %filename%
