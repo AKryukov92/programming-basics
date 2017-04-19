@@ -1,0 +1,89 @@
+<div class="task_block" id="task5032">
+    <h3>Задача</h3>
+	<div class="task_desc">Дан прямоугольник с координатами x = 100, y = 100, width = 100, height = 100. Исходный файл содержит список действий над ним в формате CSV (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;. Каждое действие описывается на отдельной строчке: наименование и необходимые значения. Нужно вывести на экран количество обработанных действий, а также получившиеся координаты и размеры прямоугольника. Действия описываются в следующем формате:
+	<ul>
+		<li>Переместить по горизонтали. Наименование shiftX. Значение - целое число, указывает насколько изменится координата прямоугольника по оси Х. Ширина прямоугольника остается прежней.</li>
+		<li>Переместить по вертикали. Наименование shiftY. Значение - целое число, указывает насколько изменится координата прямоугольника по оси Y. Высота прямоугольника остается прежней. </li>
+		<li>Изменить ширину. Наименование stretchX. Значение - целое число, указывает насколько изменится ширина прямоугольника. Координата верхнего-левого угла при этом не меняется.</li>
+		<li>Изменить высоту. Наименование stretchY. Значение - целое число, указывает насколько изменится высота прямоугольника. Координата верхнего-левого угла при этом не меняется.</li>
+	</ul><!--{"x":100,"y":100,"w":100,"h":100}--->
+	При попытке совершить некорректное действие, вывести ошибку и прекратить обработку.
+	</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">1 действий: {"x":113,"y":100,"w":100,"h":100}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">1 действий: {"x":100,"y":117,"w":100,"h":100}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">1 действий: {"x":100,"y":100,"w":119,"h":100}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">1 действий: {"x":100,"y":100,"w":100,"h":123}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">5 действий: {"x":120,"y":120,"w":110,"h":150}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">2 действий: Координата Y должна быть неотрицательной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">11 действий: Координата X должна быть неотрицательной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">8 действий: Высота должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test9.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">2 действий: Щирина должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test10.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">80 действий: {"x":66,"y":183,"w":388,"h":159}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test11.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test12.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректное действие: stretchH</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test13.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5032/test14.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат</td>
+		</tr>
+	</table>
+</div>

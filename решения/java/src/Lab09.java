@@ -8,6 +8,12 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
+        System.out.println("5032");
+        for (int i = 0; i < 14; i++) {
+            task5032(".\\task5032\\test" + (i + 1) + ".csv");
+        }
+    }
+    public static void call(){
         System.out.println("6175");
         String[] out6175 = {
             "1,2,3,4,5",
@@ -637,6 +643,90 @@ public class Lab09 {
             }
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
+        }
+    }
+
+    public static class class5032{
+        int x;
+        int y;
+        int h;
+        int w;
+        public class5032(int x, int y, int h, int w) {
+            this.x = x;
+            this.y = y;
+            this.h = h;
+            this.w = w;
+        }
+        public void shiftX(int value) throws Exception {
+            if (this.x < -value){
+                throw new Exception("Координата X должна быть неотрицательной");
+            }
+            this.x += value;
+        }
+        public void shiftY(int value) throws Exception {
+            if (this.y < -value){
+                throw new Exception("Координата Y должна быть неотрицательной");
+            }
+            this.y += value;
+        }
+        public void stretchX(int value) throws Exception {
+            if (this.w <= -value){
+                throw new Exception("Ширина должна быть положительной");
+            }
+            this.w += value;
+        }
+        public void stretchY(int value) throws Exception {
+            if (this.h <= -value){
+                throw new Exception("Высота должна быть положительной");
+            }
+            this.h += value;
+        }
+
+        @Override
+        public String toString() {
+            return "{\"x\":" + x + ",\"y\":" + y + ",\"w\":" + w + ",\"h\":" + h + "}";
+        }
+    }
+
+    public static void task5032(String filename) {
+        File target = new File(filename);
+        int count = 0;
+        class5032 rect = new class5032(100,100,100,100);
+        try (Scanner scanner = new Scanner(target)) {
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                String[] arr = line.split(";");
+                if (arr.length != 2){
+                    System.out.print(count);
+                    System.out.println(" действий: Некорректный формат");
+                    scanner.close();
+                    return;
+                }
+                int value = Integer.parseInt(arr[1]);
+                if (arr[0].equals("shiftX")){
+                    rect.shiftX(value);
+                } else if (arr[0].equals("shiftY")){
+                    rect.shiftY(value);
+                } else if (arr[0].equals("stretchX")){
+                    rect.stretchX(value);
+                } else if (arr[0].equals("stretchY")){
+                    rect.stretchY(value);
+                } else {
+                    System.out.println("Некорректное действие: " + arr[0]);
+                    scanner.close();
+                    return;
+                }
+                count++;
+            }
+            System.out.print(count);
+            System.out.print(" действий: ");
+            System.out.println(rect);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.print(count);
+            System.out.print(" действий: ");
+            System.out.println(e.getMessage());
         }
     }
 }
