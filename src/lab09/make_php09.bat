@@ -41,12 +41,13 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task2205"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task3226"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task4372"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task4463"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task5032" class="example"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task1668"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task2137"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task5032" class="example"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task5108"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task3226"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task4372"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task4463"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task1668"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task2137"^>№ 20^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -69,10 +70,11 @@ type task4769.html>>%filename%
 type task9930.html>>%filename%
 type task6861.html>>%filename%
 type task2205.html>>%filename%
+type task5032.html>>%filename%
+type task5108.html>>%filename%
 type task3226.html>>%filename%
 type task4372.html>>%filename%
 type task4463.html>>%filename%
-type task5032.html>>%filename%
 type task1668.html>>%filename%
 type task2137.html>>%filename%
 
@@ -99,9 +101,11 @@ mkdir task4769
 mkdir task9930
 mkdir task6861
 mkdir task2205
+mkdir task3226
 mkdir task4372
 mkdir task4463
 mkdir task5032
+mkdir task5108
 mkdir task1668
 mkdir task2137
 popd
@@ -145,14 +149,20 @@ popd
 pushd "task2205"
 copy "*" "..\..\..\%lang%\files\task2205\*"
 popd
+pushd "task5032"
+copy "*" "..\..\..\%lang%\files\task5032\*"
+popd
+pushd "task5108"
+copy "*" "..\..\..\%lang%\files\task5108\*"
+popd
+pushd "task3226"
+copy "*" "..\..\..\%lang%\files\task3226\*"
+popd
 pushd "task4372"
 copy "*" "..\..\..\%lang%\files\task4372\*"
 popd
 pushd "task4463"
 copy "*" "..\..\..\%lang%\files\task4463\*"
-popd
-pushd "task5032"
-copy "*" "..\..\..\%lang%\files\task5032\*"
 popd
 pushd "task1668"
 copy "*" "..\..\..\%lang%\files\task1668\*"

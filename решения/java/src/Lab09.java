@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -8,12 +10,6 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
-        System.out.println("5032");
-        for (int i = 0; i < 14; i++) {
-            task5032(".\\task5032\\test" + (i + 1) + ".csv");
-        }
-    }
-    public static void call(){
         System.out.println("6175");
         String[] out6175 = {
             "1,2,3,4,5",
@@ -200,6 +196,16 @@ public class Lab09 {
         for (int i = 1; i <= 9; i++){
             System.out.println("#" + i);
             task3226(".\\task3226\\test" + i + ".txt");
+        }
+        System.out.println();
+        System.out.println("5032");
+        for (int i = 0; i < 14; i++) {
+            task5032(".\\task5032\\test" + (i + 1) + ".csv");
+        }
+        System.out.println();
+        System.out.println("5108");
+        for (int i = 0; i < 14; i++) {
+            task5108(".\\task5108\\test" + (i + 1) + ".csv");
         }
     }
 
@@ -702,14 +708,15 @@ public class Lab09 {
                     scanner.close();
                     return;
                 }
+                String action = arr[0];
                 int value = Integer.parseInt(arr[1]);
-                if (arr[0].equals("shiftX")){
+                if (action.equals("shiftX")){
                     rect.shiftX(value);
-                } else if (arr[0].equals("shiftY")){
+                } else if (action.equals("shiftY")){
                     rect.shiftY(value);
-                } else if (arr[0].equals("stretchX")){
+                } else if (action.equals("stretchX")){
                     rect.stretchX(value);
-                } else if (arr[0].equals("stretchY")){
+                } else if (action.equals("stretchY")){
                     rect.stretchY(value);
                 } else {
                     System.out.println("Некорректное действие: " + arr[0]);
@@ -726,6 +733,115 @@ public class Lab09 {
         } catch (Exception e) {
             System.out.print(count);
             System.out.print(" действий: ");
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static class class5108{
+        int x;
+        int y;
+        int h;
+        int w;
+        int count = 0;
+        public class5108(int x, int y, int h, int w) {
+            this.x = x;
+            this.y = y;
+            this.h = h;
+            this.w = w;
+        }
+        public void shiftX(int value) throws Exception {
+            if (this.x < -value){
+                throw new Exception("Координата X должна быть неотрицательной");
+            }
+            this.count++;
+            this.x += value;
+        }
+        public void shiftY(int value) throws Exception {
+            if (this.y < -value){
+                throw new Exception("Координата Y должна быть неотрицательной");
+            }
+            this.count++;
+            this.y += value;
+        }
+        public void stretchX(int value) throws Exception {
+            if (this.w <= -value){
+                throw new Exception("Ширина должна быть положительной");
+            }
+            this.count++;
+            this.w += value;
+        }
+        public void stretchY(int value) throws Exception {
+            if (this.h <= -value){
+                throw new Exception("Высота должна быть положительной");
+            }
+            this.count++;
+            this.h += value;
+        }
+
+        @Override
+        public String toString() {
+            return "действий:" + count + " {\"x\":" + x + ",\"y\":" + y + ",\"w\":" + w + ",\"h\":" + h + "}";
+        }
+    }
+
+    private static void logic5108(Scanner scanner) throws Exception {
+        Map<String, class5108> map = new HashMap<>();
+        while(scanner.hasNext()){
+            String line = scanner.nextLine();
+            String[] arr = line.split(";");
+            if (arr.length < 3){
+                throw new Exception("Некорректный формат");
+            }
+            String action = arr[0];
+            String id = arr[1];
+            if(action.equals("create")){
+                if (arr.length != 6){
+                    throw new Exception("Некорректный формат");
+                }
+                if (map.containsKey(id)){
+                    throw new Exception("Идентификатор не должен повторяться");
+                }
+                map.put(id, new class5108(
+                        Integer.parseInt(arr[2]),
+                        Integer.parseInt(arr[3]),
+                        Integer.parseInt(arr[4]),
+                        Integer.parseInt(arr[5])
+                ));
+                continue;
+            }
+            if (!map.containsKey(id)){
+                throw new Exception("Операция над неопознанным объектом");
+            }
+            int value = Integer.parseInt(arr[2]);
+            class5108 rect = map.get(id);
+            if (action.equals("shiftX")){
+                rect.shiftX(value);
+            } else if (action.equals("shiftY")){
+                rect.shiftY(value);
+            } else if (action.equals("stretchX")){
+                rect.stretchX(value);
+            } else if (action.equals("stretchY")){
+                rect.stretchY(value);
+            } else {
+                System.out.println("Некорректное действие: " + arr[0]);
+                scanner.close();
+                return;
+            }
+        }
+        for(Map.Entry<String, class5108> item : map.entrySet()){
+            System.out.print(item.getKey());
+            System.out.print(" ");
+            System.out.println(item.getValue());
+        }
+    }
+    private static void task5108(String filename) {
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)) {
+            System.out.println(filename);
+            logic5108(scanner);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }

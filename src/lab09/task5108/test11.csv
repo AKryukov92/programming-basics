@@ -1,0 +1,6 @@
+create;r1;100;100;100;100
+stretchX;r1;10
+stretchY;r1;20
+stretchX;r1;-30
+destroy;r1;90
+shiftX;r1;50

@@ -1,0 +1,10 @@
+create;r1;100;100;100;100
+shiftY;r1;80
+stretchY;r1;-20
+shiftY;r1;-60
+stretchY;r1;30
+shiftX;r1;10
+stretchY;r1;-50
+stretchX;r1;-50
+shiftX;r1;20
+stretchY;r1;-60
