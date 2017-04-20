@@ -10,6 +10,13 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println("3567");
+        for (int i = 0; i < 14; i++) {
+            task3567(".\\task3567\\test" + (i + 1) + ".csv");
+        }
+    }
+    public static void call(){
         System.out.println("6175");
         String[] out6175 = {
             "1,2,3,4,5",
@@ -719,7 +726,7 @@ public class Lab09 {
                 } else if (action.equals("stretchY")){
                     rect.stretchY(value);
                 } else {
-                    System.out.println("Некорректное действие: " + arr[0]);
+                    System.out.println("Некорректное действие: " + action);
                     scanner.close();
                     return;
                 }
@@ -839,6 +846,93 @@ public class Lab09 {
         try (Scanner scanner = new Scanner(target)) {
             System.out.println(filename);
             logic5108(scanner);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static class class3567{
+        int cx;
+        int cy;
+        int r;
+
+        public class3567(int cx, int cy, int r){
+            this.cx = cx;
+            this.cy = cy;
+            this.r = r;
+        }
+
+        public void shiftX(int value) throws Exception {
+            if (this.cx - this.r < -value){
+                throw new Exception("Левая точка круга должна иметь неотрицательные координаты");
+            }
+            this.cx += value;
+        }
+        public void shiftY(int value) throws Exception {
+            if (this.cy - this.r < -value){
+                throw new Exception("Верхняя точка круга должна иметь неотрицательные координаты");
+            }
+            this.cy += value;
+        }
+        public void stretchX(int value) throws Exception {
+            if (this.r * 2 <= -value){
+                throw new Exception("Ширина должна быть положительной");
+            }
+            this.r += value/2;
+            this.cx += value/2;
+            this.cy += value/2;
+        }
+        public void stretchY(int value) throws Exception {
+            if (this.r * 2 <= -value){
+                throw new Exception("Ширина должна быть положительной");
+            }
+            this.r += value/2;
+            this.cx += value/2;
+            this.cy += value/2;
+        }
+
+        @Override
+        public String toString() {
+            return "{\"cx\":" + cx + ",\"y\":" + cy + ",\"r\":" + r + "}";
+        }
+    }
+
+    private static void logic3567(Scanner scanner) throws Exception {
+        class3567 circle = new class3567(150,150,100);
+        int count = 0;
+        while(scanner.hasNext()){
+            count++;
+            String line = scanner.nextLine();
+            String[] arr = line.split(";");
+            if (arr.length != 2){
+                throw new Exception("Действий:" + count + " Некорректный формат");
+            }
+            String action = arr[0];
+            int value = Integer.parseInt(arr[1]);
+            if (action.equals("shiftX")){
+                circle.shiftX(value);
+            } else if (action.equals("shiftY")){
+                circle.shiftY(value);
+            } else if (action.equals("stretchX")){
+                circle.stretchX(value);
+            } else if (action.equals("stretchY")){
+                circle.stretchY(value);
+            } else {
+                throw new Exception("Некорректное действие: " + action);
+            }
+        }
+        System.out.print(count);
+        System.out.print(" действий: ");
+        System.out.println(circle);
+    }
+
+    private static void task3567(String filename){
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)){
+            System.out.println(filename);
+            logic3567(scanner);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {
