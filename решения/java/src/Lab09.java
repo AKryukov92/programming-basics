@@ -11,9 +11,9 @@ import java.util.Scanner;
 public class Lab09 {
     public static void main(String[] args) {
         System.out.println();
-        System.out.println("3567");
-        for (int i = 0; i < 14; i++) {
-            task3567(".\\task3567\\test" + (i + 1) + ".csv");
+        System.out.println("2033");
+        for (int i = 0; i < 18; i++) {
+            task2033(".\\task2033\\test" + (i + 1) + ".csv");
         }
     }
     public static void call(){
@@ -213,6 +213,11 @@ public class Lab09 {
         System.out.println("5108");
         for (int i = 0; i < 14; i++) {
             task5108(".\\task5108\\test" + (i + 1) + ".csv");
+        }
+        System.out.println();
+        System.out.println("3567");
+        for (int i = 0; i < 14; i++) {
+            task3567(".\\task3567\\test" + (i + 1) + ".csv");
         }
     }
 
@@ -744,7 +749,7 @@ public class Lab09 {
         }
     }
 
-    public static class class5108{
+    public static class class5108 implements interface2033{
         int x;
         int y;
         int h;
@@ -787,7 +792,7 @@ public class Lab09 {
 
         @Override
         public String toString() {
-            return "действий:" + count + " {\"x\":" + x + ",\"y\":" + y + ",\"w\":" + w + ",\"h\":" + h + "}";
+            return String.format("Действий:%d {\"x\":%d,\"y\":%d,\"w\":%d,\"h\":%d}",count,x,y,w,h);
         }
     }
 
@@ -933,6 +938,142 @@ public class Lab09 {
         try (Scanner scanner = new Scanner(target)){
             System.out.println(filename);
             logic3567(scanner);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public interface interface2033{
+        void shiftX(int value) throws Exception;
+        void shiftY(int value) throws Exception;
+        void stretchX(int value) throws Exception;
+        void stretchY(int value) throws Exception;
+    }
+
+    public static class class2033 implements interface2033{
+        int cx;
+        int cy;
+        int r;
+        int count = 0;
+
+        public class2033(int cx, int cy, int r){
+            this.cx = cx;
+            this.cy = cy;
+            this.r = r;
+        }
+
+        public void shiftX(int value) throws Exception {
+            if (this.cx - this.r < -value){
+                throw new Exception("Левая точка круга должна иметь неотрицательные координаты");
+            }
+            this.cx += value;
+            count++;
+        }
+        public void shiftY(int value) throws Exception {
+            if (this.cy - this.r < -value){
+                throw new Exception("Верхняя точка круга должна иметь неотрицательные координаты");
+            }
+            this.cy += value;
+            count++;
+        }
+        public void stretchX(int value) throws Exception {
+            if (this.r * 2 <= -value){
+                throw new Exception("Ширина должна быть положительной");
+            }
+            this.r += value/2;
+            this.cx += value/2;
+            this.cy += value/2;
+            count++;
+        }
+        public void stretchY(int value) throws Exception {
+            if (this.r * 2 <= -value){
+                throw new Exception("Высота должна быть положительной");
+            }
+            this.r += value/2;
+            this.cx += value/2;
+            this.cy += value/2;
+            count++;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("Действий:%d {\"cx\":%d,\"y\":%d,\"r\":%d}",count, cx, cy, r);
+        }
+    }
+
+    public static void logic2033(Scanner scanner) throws Exception {
+        Map<String, interface2033> map = new HashMap<>();
+        while(scanner.hasNext()){
+            String line = scanner.nextLine();
+            String[] arr = line.split(";");
+            if (arr.length < 3){
+                throw new Exception("Некорректный формат");
+            }
+            String action = arr[0];
+            if(action.equals("create")){
+                String id = arr[2];
+                if (map.containsKey(id)){
+                    throw new Exception("Идентификатор не должен повторяться");
+                }
+                String type = arr[1];
+                if (type.equals("circle")){
+                    if (arr.length != 6){
+                        throw new Exception("Некорректный формат");
+                    }
+                    map.put(id, new class2033(
+                        Integer.parseInt(arr[3]),
+                        Integer.parseInt(arr[4]),
+                        Integer.parseInt(arr[5])
+                    ));
+                } else if (type.equals("rectangle")){
+                    if (arr.length != 7){
+                        throw new Exception("Некорректный формат");
+                    }
+                    map.put(id, new class5108(
+                            Integer.parseInt(arr[3]),
+                            Integer.parseInt(arr[4]),
+                            Integer.parseInt(arr[5]),
+                            Integer.parseInt(arr[6])
+                    ));
+                } else {
+                    throw new Exception("Неизвестная фигура");
+                }
+                continue;
+            }
+            String id = arr[1];
+            if (!map.containsKey(id)){
+                throw new Exception("Операция над неопознанным объектом");
+            }
+            int value = Integer.parseInt(arr[2]);
+            interface2033 rect = map.get(id);
+            if (action.equals("shiftX")){
+                rect.shiftX(value);
+            } else if (action.equals("shiftY")){
+                rect.shiftY(value);
+            } else if (action.equals("stretchX")){
+                rect.stretchX(value);
+            } else if (action.equals("stretchY")){
+                rect.stretchY(value);
+            } else {
+                System.out.println("Некорректное действие: " + arr[0]);
+                scanner.close();
+                return;
+            }
+        }
+        for(Map.Entry<String, interface2033> item : map.entrySet()){
+            System.out.print(item.getKey());
+            System.out.print(" ");
+            System.out.println(item.getValue());
+        }
+    }
+
+    private static void task2033(String filename){
+        File target = new File(filename);
+        try (Scanner scanner = new Scanner(target)){
+            System.out.println(filename);
+            logic2033(scanner);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {

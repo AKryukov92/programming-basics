@@ -38,17 +38,20 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7193"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task5847"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task4769"^>№ 10^</a^>^</li^> ^
+ ^</ul^> ^
+ ^<ul^> ^
  ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task2205"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task5032" class="example"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task3567"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task5108"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task3226"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task4372"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task4463"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task1668"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task2137"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task2033"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task3226"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task4372"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task4463"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task1668"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task2137"^>№ 22^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -74,6 +77,7 @@ type task2205.html>>%filename%
 type task5032.html>>%filename%
 type task3567.html>>%filename%
 type task5108.html>>%filename%
+type task2033.html>>%filename%
 type task3226.html>>%filename%
 type task4372.html>>%filename%
 type task4463.html>>%filename%
@@ -106,6 +110,7 @@ mkdir task2205
 mkdir task5032
 mkdir task3567
 mkdir task5108
+mkdir task2033
 mkdir task3226
 mkdir task4372
 mkdir task4463
@@ -160,6 +165,9 @@ copy "*" "..\..\..\%lang%\files\task3567\*"
 popd
 pushd "task5108"
 copy "*" "..\..\..\%lang%\files\task5108\*"
+popd
+pushd "task2033"
+copy "*" "..\..\..\%lang%\files\task2033\*"
 popd
 pushd "task3226"
 copy "*" "..\..\..\%lang%\files\task3226\*"
