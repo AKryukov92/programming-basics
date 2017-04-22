@@ -10,21 +10,16 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
-        System.out.println();
-        System.out.println("2033");
-        for (int i = 0; i < 18; i++) {
-            task2033(".\\task2033\\test" + (i + 1) + ".csv");
-        }
     }
     public static void call(){
         System.out.println("6175");
         String[] out6175 = {
-            "1,2,3,4,5",
-            "0",
-            "",
-            "-1,-2,-3",
+            "стол, стул, дверь, шкаф, кровать",
+            "космос",
+            "Файл пуст",
+            "кирпич, бетон, дерево",
             "Файл не существует",
-            "Не удается считать число"
+            "один два три четыре пять"
         };
         for (int i = 0; i < out6175.length; i++){
             System.out.println("-->" + out6175[i] + "<--");
@@ -33,15 +28,12 @@ public class Lab09 {
         System.out.println();
         System.out.println("4488");
         String[] out4488 = {
-            "Равны",
-            "Равны",
-            "Равны",
-            "Не равны",
-            "Не равны",
-            "Файл пуст",
+            "Поэмы 14",
+            "блокбастеры 0",
+            "Научная и научно-популярная литература 160",
+            "Сказки 7",
             "Файл не существует",
-            "Не удается считать число",
-            "Не удается считать число"
+            "Файл пуст"
         };
         for (int i = 0; i < out4488.length; i++){
             System.out.println("-->" + out4488[i] + "<--");
@@ -49,12 +41,12 @@ public class Lab09 {
         }
         System.out.println();
         System.out.println("4954");
-        int[] in4954 = {13, 371, 12, 0, 23};
+        String[] in4954 = {"а","ц","н","ч","п"};
         String[] out4954 = {
-            "86",
-            "6",
-            "Не удается считать число",
-            "На ноль делить нельзя",
+            "36",
+            "5",
+            "92",
+            "Файл не существует",
             "0"
         };
         for (int i = 0; i < in4954.length; i++){
@@ -64,13 +56,9 @@ public class Lab09 {
         System.out.println();
         System.out.println("4642");
         String[] out4642 = {
-            "0",
-            "4.5000",
-            "9.8516",
-            "Некорректный объем данных",
-            "Некорректный объем данных",
-            "Некорректный объем данных",
-            "Не удается считать число",
+            "7",
+            "10",
+            "933",
             "Файл не существует",
             "Файл пуст"
         };
@@ -219,17 +207,25 @@ public class Lab09 {
         for (int i = 0; i < 14; i++) {
             task3567(".\\task3567\\test" + (i + 1) + ".csv");
         }
+        System.out.println();
+        System.out.println("2033");
+        for (int i = 0; i < 18; i++) {
+            task2033(".\\task2033\\test" + (i + 1) + ".csv");
+        }
     }
 
     public static void task6175(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)){
             if (scanner.hasNext()){
-                System.out.print(scanner.nextInt());
+                System.out.print(scanner.nextLine());
+            } else {
+                System.out.println("Файл пуст");
+                return;
             }
             while (scanner.hasNext()) {
-                System.out.print(",");
-                System.out.print(scanner.nextInt());
+                System.out.print(", ");
+                System.out.print(scanner.nextLine());
             }
             System.out.println();
         } catch (InputMismatchException ex){
@@ -242,44 +238,33 @@ public class Lab09 {
     public static void task4488(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)){
-            int n, c = 0;
+            int c = 0;
+            String n;
             if (!scanner.hasNext()) {
                 System.out.println("Файл пуст");
             } else {
-                n = scanner.nextInt();
+                n = scanner.nextLine();
                 while(scanner.hasNext()){
-                    scanner.nextInt();
+                    scanner.nextLine();
                     c++;
                 }
-                if (n == c){
-                    System.out.println("Равны");
-                } else {
-                    System.out.println("Не равны");
-                }
+                System.out.println(n + " " + c);
             }
-        } catch (InputMismatchException ex){
-            System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
         }
     }
 
-    public static void task4954(int a, String filename) {
+    public static void task4954(String a, String filename) {
         File target = new File(filename);
-        if (a == 0){
-            System.out.println("На ноль делить нельзя");
-            return;
-        }
         try (Scanner scanner = new Scanner(target)){
             int count = 0;
             while(scanner.hasNext()) {
-                if (scanner.nextInt() % a == 0) {
+                if (scanner.nextLine().contains(a)) {
                     count++;
                 }
             }
             System.out.println(count);
-        } catch (InputMismatchException ex){
-            System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
         }
@@ -288,28 +273,20 @@ public class Lab09 {
     public static void task4642(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)){
-            int n, total = 0, denominator = 0, nominator = 0;
+            int total = 0;
             if (!scanner.hasNext()) {
                 System.out.println("Файл пуст");
             } else {
-                n = scanner.nextInt();
                 while(scanner.hasNext()) {
-                    int next = scanner.nextInt();
-                    if (next < 20) {
-                        nominator += next;
-                        denominator++;
-                    }
-                    total++;
-                }
-                if (total != n){
-                    System.out.println("Некорректный объем данных");
-                } else {
-                    if (denominator == 0){
-                        System.out.println("0");
-                    } else {
-                        System.out.printf("%.4f\n", (double) nominator / denominator);
+                    String line = scanner.nextLine();
+                    String[] tokens = line.split(" ");
+                    for (int i = 0; i < tokens.length; i++){
+                        if (!tokens[i].trim().equals("")){
+                            total++;
+                        }
                     }
                 }
+                System.out.println(total);
             }
         } catch (InputMismatchException ex){
             System.out.println("Не удается считать число");

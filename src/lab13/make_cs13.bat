@@ -31,10 +31,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task9701"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3784"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task6732"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task9765"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task6431"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task7193"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task2205"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task6882"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task1212"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task9472"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task5081"^>№ 7^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -45,10 +45,10 @@ echo ^<div class="section"^>>>%filename%
 type taskcs9701.html>>%filename%
 type taskcs3784.html>>%filename%
 type taskcs6732.html>>%filename%
-type task9765.html>>%filename%
-type task6431.html>>%filename%
-type task7193.html>>%filename%
-type task2205.html>>%filename%
+type task6882.html>>%filename%
+type task1212.html>>%filename%
+type task9472.html>>%filename%
+type task5081.html>>%filename%
 
 echo ^</div^>>>%filename%
 
@@ -60,23 +60,23 @@ mkdir files
 popd
 
 pushd ..\..\%lang%\files\
-mkdir task9765
-mkdir task6431
-mkdir task7193
-mkdir task2205
+mkdir task6882
+mkdir task1212
+mkdir task9472
+mkdir task5081
 popd
 
-pushd "task9765"
-copy "*" "..\..\..\%lang%\files\task9765\*"
+pushd "task6882"
+copy "*" "..\..\..\%lang%\files\task6882\*"
 popd
-pushd "task6431"
-copy "*" "..\..\..\%lang%\files\task6431\*"
+pushd "task1212"
+copy "*" "..\..\..\%lang%\files\task1212\*"
 popd
-pushd "task7193"
-copy "*" "..\..\..\%lang%\files\task7193\*"
+pushd "task9472"
+copy "*" "..\..\..\%lang%\files\task9472\*"
 popd
-pushd "task2205"
-copy "*" "..\..\..\%lang%\files\task2205\*"
+pushd "task5081"
+copy "*" "..\..\..\%lang%\files\task5081\*"
 popd
 
 if x%1==x start "" %filename%
