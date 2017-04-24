@@ -5,6 +5,13 @@ import java.util.List;
  * Created by Александр on 02.04.2017.
  */
 public class Lab07 {
+
+    public static void main(String[] args) {
+        task2354();
+        task2030();
+        task9701();
+    }
+
     public static void task2354(){
         System.out.println();
         System.out.println("4265");
@@ -146,6 +153,41 @@ public class Lab07 {
             }
         }
         System.out.println();
+        System.out.println("3657");
+        String[] in3657 = {"a","b","j","z","xy", ""};
+        for (int i = 0; i < in3657.length; i++){
+            try {
+                StringBuilder sb = new StringBuilder();
+                List<Integer> result = task3657(in3657[i]);
+                for(Integer item : result){
+                    sb.append(item);
+                    sb.append(" ");
+                }
+                System.out.println(sb);
+            } catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("6599");
+        String[] in6599 = {"a",
+            "\"b\"",
+            "\"c",
+            "d\"",
+            "\"e\"e",
+            "f\"f\"f",
+            "\"abc\" \"defgh\" \"i\" \"jklm\"",
+            "abc\" \"def\" \"ghi\" \"jk\" \"lm\"",
+            "\"[abc\"def] \"[ghijklm]\""
+        };
+        for (int i = 0; i < in6599.length; i++) {
+            try {
+                System.out.println(task6599(in6599[i]));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println();
         System.out.println("1618");
         String[] in1618 = {
                 "{}",
@@ -168,12 +210,6 @@ public class Lab07 {
                 System.out.println(e.getMessage());
             }
         }
-    }
-
-    public static void main(String[] args) {
-        task2354();
-        task2030();
-        task9701();
     }
 
     public static final String STR = "abcdefwxyz";
@@ -328,5 +364,44 @@ public class Lab07 {
             throw new Exception("Неожиданный конец строки");
         }
         System.out.println();
+    }
+
+    public static List<Integer> task3657(String a) throws Exception {
+        if (a.length() != 1){
+            throw new Exception("Нужно ввести ровно один символ");
+        }
+        String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
+        List<Integer> ret = new ArrayList<>();
+        int next = input.indexOf(a);
+        while(next >= 0){
+            ret.add(next);
+            next = input.indexOf(a, next + 1);
+        }
+        return ret;
+    }
+
+    public static String task6599(String s) throws Exception {
+        String escaped = s.replace("[", "\\[").replace("]", "\\]");
+        boolean outside = true;
+        int next = escaped.indexOf("\"");
+        int current = 0;
+        StringBuilder result = new StringBuilder();
+        while(next >= 0){
+            String part = escaped.substring(current, next);
+            result.append(part);
+            if (outside){
+                result.append("[");
+            } else {
+                result.append("]");
+            }
+            outside = !outside;
+            current = next + 1;
+            next = escaped.indexOf("\"", current);
+        }
+        if (current < escaped.length()){
+            String part = escaped.substring(current);
+            result.append(part);
+        }
+        return result.toString();
     }
 }

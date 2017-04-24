@@ -1,0 +1,61 @@
+<div id="task6599" class="task_block empty_on_print">
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит строку символов, содержащую кавычки. Кавычки отмечают начало и конец фрагментов. Перед каждым символом &quot;[&quot; и &quot;]&quot; в исходном тексте поставить символ &quot;\&quot;. Заменить кавычки в начале фрагмента на символ &quot;[&quot;, а в конце фрагмента на символ &quot;]&quot;.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"b"</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"c</td>
+			<td>[c</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>d"</td>
+			<td>d[</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"e"e</td>
+			<td>[e]e</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>f"f"f</td>
+			<td>f[f]f</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"abc" "defgh" "i" "jklm"</td>
+			<td>[abc] [defgh] [i] [jklm]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abc" "def" "ghi" "jk" "lm"</td>
+			<td>abc[ ]def[ ]ghi[ ]jk[ ]lm[</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"[abc"def] "[ghijklm]"</td>
+			<td>[\[abc]def\] [\[ghijklm\]]</td>
+		</tr>
+	</table>
+</div>
