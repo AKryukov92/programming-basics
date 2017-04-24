@@ -1,6 +1,8 @@
 @echo off
-pushd ..
-rmdir java /s /q
+pushd ..\csharp
+rmdir files /s /q
+rmdir images/s /q
+del *.html
 popd
 pushd lab01
 call make_cs01 skip

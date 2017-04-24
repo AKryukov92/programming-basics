@@ -1,6 +1,8 @@
 @echo off
-pushd ..
-rmdir js /s /q
+pushd ..\js
+rmdir files /s /q
+rmdir images /s /q
+del *.html
 popd
 pushd lab01
 call make_js01 skip

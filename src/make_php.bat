@@ -1,6 +1,8 @@
 @echo off
-pushd ..
-rmdir php /s /q
+pushd ..\php
+rmdir files /s /q
+rmdir images /s /q
+del *.html
 popd
 pushd lab01
 call make_php01 skip
