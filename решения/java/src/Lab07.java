@@ -112,6 +112,20 @@ public class Lab07 {
         }
 
         System.out.println();
+        System.out.println("7222");
+        String[] in7222ca = {"a", "c", "y", "w", "g", "a"};
+        String[] in7222cb = {"z", "d", "d", "w", "z", "l"};
+        for (int i = 0; i < in7222ca.length; i++) {
+            try {
+                System.out.println(task7222(in7222ca[i], in7222cb[i]));
+                System.out.println();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+
+        System.out.println();
         System.out.println("5923");
         int[] in5923a = {5, 6, 0, -1, 9, 5};
         int[] in5923b = {3, 0, 7, 1, 3, -2};
@@ -222,15 +236,15 @@ public class Lab07 {
         return STR.length() - STR.indexOf(s) - 1;
     }
 
-    public static int task9812(String a, String b) throws Exception {
-        if (!STR.contains(a)){
-            throw new Exception("Значение A отсутствует в строке");
+    public static int task9812(String ca, String cb) throws Exception {
+        if (!STR.contains(ca)){
+            throw new Exception("Значение CA отсутствует в строке");
         }
-        if (!STR.contains(b)){
-            throw new Exception("Значение B отсутствует в строке");
+        if (!STR.contains(cb)){
+            throw new Exception("Значение CB отсутствует в строке");
         }
-        int indexA = STR.indexOf(a);
-        int indexB = STR.indexOf(b);
+        int indexA = STR.indexOf(ca);
+        int indexB = STR.indexOf(cb);
         if (indexA < indexB){
             return indexB - indexA - 1;
         } else {
@@ -251,29 +265,29 @@ public class Lab07 {
         return ret;
     }
 
-    private static String task4845(int a, int b) throws Exception {
-        if (a < 0 || a > STR.length()){
-            throw new Exception("Значение A должно быть в интервале [0,длина строки)");
+    private static String task4845(int ca, int cb) throws Exception {
+        if (ca < 0 || ca > STR.length()){
+            throw new Exception("Значение CA должно быть в интервале [0,длина строки)");
         }
-        if (b < 0 || b > STR.length()){
-            throw new Exception("Значение B должно быть в интервале [0,длина строки)");
+        if (cb < 0 || cb > STR.length()){
+            throw new Exception("Значение CB должно быть в интервале [0,длина строки)");
         }
-        if (a > b){
-            return STR.substring(b, a + 1);
+        if (ca > cb){
+            return STR.substring(cb, ca + 1);
         } else {
-            return STR.substring(a, b + 1);
+            return STR.substring(ca, cb + 1);
         }
     }
 
-    public static String task5728(String a, String b) throws Exception {
-        if (!STR.contains(a)){
-            throw new Exception("Значение A отсутствует в строке");
+    public static String task5728(String ca, String cb) throws Exception {
+        if (!STR.contains(ca)){
+            throw new Exception("Значение CA отсутствует в строке");
         }
-        if (!STR.contains(b)){
-            throw new Exception("Значение B отсутствует в строке");
+        if (!STR.contains(cb)){
+            throw new Exception("Значение CB отсутствует в строке");
         }
-        int indexA = STR.indexOf(a);
-        int indexB = STR.indexOf(b);
+        int indexA = STR.indexOf(ca);
+        int indexB = STR.indexOf(cb);
         if (indexA < indexB){
             return STR.substring(indexA + 1, indexB);
         } else {
@@ -281,21 +295,43 @@ public class Lab07 {
         }
     }
 
+    public static String task7222(String ca, String cb) throws Exception {
+        if (!STR.contains(ca)){
+            throw new Exception("Значение CA отсутствует в строке");
+        }
+        if (!STR.contains(cb)){
+            throw new Exception("Значение CB отсутствует в строке");
+        }
+        int indexA = STR.indexOf(ca);
+        int indexB = STR.indexOf(cb);
+        if (indexA < indexB){
+            String part1 = STR.substring(0, indexA);
+            String part2 = STR.substring(indexA, indexB);
+            String part3 = STR.substring(indexB);
+            return "Часть 1: " + part1 + "\nЧасть 2: " + part2 + "\nЧасть 3: " + part3;
+        } else {
+            String part1 = STR.substring(0, indexB);
+            String part2 = STR.substring(indexB, indexA);
+            String part3 = STR.substring(indexA);
+            return "Часть 1: " + part1 + "\nЧасть 2: " + part2 + "\nЧасть 3: " + part3;
+        }
+    }
+
     public static boolean task7491(String x) {
         return STR.contains(x);
     }
 
-    public static String task5923(int a, int b) throws Exception {
-        if (a < 0 || a > STR.length()){
-            throw new Exception("Значение A должно быть в интервале [0, длина строки)");
+    public static String task5923(int ca, int cb) throws Exception {
+        if (ca < 0 || ca > STR.length()){
+            throw new Exception("Значение CA должно быть в интервале [0, длина строки)");
         }
-        if (b < 0){
-            throw new Exception("Значение B должно быть неотрицательно");
+        if (cb < 0){
+            throw new Exception("Значение CB должно быть неотрицательно");
         }
-        if ((a + b) > STR.length()){
-            throw new Exception("Сумма значений A и B должна быть меньше длины строки");
+        if ((ca + cb) > STR.length()){
+            throw new Exception("Сумма значений CA и CB должна быть меньше длины строки");
         }
-        return STR.substring(0, a) + STR.substring(a + b);
+        return STR.substring(0, ca) + STR.substring(ca + cb);
     }
 
     public static String task4265(String s){

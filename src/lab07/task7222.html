@@ -1,0 +1,59 @@
+<div id="task7222" class="task_block empty_on_print">
+	<h3>Задача</h3>
+	<div class="task_desc">Дана фиксированная строка "abcdefwxyz". Пользователь вводит два символа CA и CB. Разбить строку на три части: от начала до CA (исключая CA), от CA до CB (включая CA, исключая CB), от CB до конца (включая CB). Результат вывести на отдельных строках.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>CA</th>
+			<th>CB</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a</td>
+			<td>z</td>
+			<td class="preformatted">Часть 1:
+Часть 2: abcdefwxy
+Часть 3: z</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>c</td>
+			<td>d</td>
+			<td class="preformatted">Часть 1: ab
+Часть 2: c
+Часть 3: defwxyz</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>y</td>
+			<td>d</td>
+			<td class="preformatted">Часть 1: abc
+Часть 2: defwx
+Часть 3: yz</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>w</td>
+			<td>w</td>
+			<td class="preformatted">Часть 1: abcdef
+Часть 2: 
+Часть 3: wxyz</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>g</td>
+			<td>z</td>
+			<td>Значение CA отсутствует в строке</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a</td>
+			<td>l</td>
+			<td>Значение CB отсутствует в строке</td>
+		</tr>
+	</table>
+</div>
