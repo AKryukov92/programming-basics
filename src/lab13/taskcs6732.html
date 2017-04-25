@@ -15,40 +15,6 @@
         </tr>
         <tr>
             <td></td>
-            <td><a href="[6] лаб. ОСАЛП.html#task6066" target="_blank">ЛР6№6066 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in6066a = { 8, 691, 3000 };
-int[] in6066b = { 13, 702, 24 };
-String[] out6066 = {
-    "8\n9\n10\n11\n12\n13\n",
-    "691\n692\n693\n694\n695\n696\n"+
-            "697\n698\n699\n700\n701\n702\n",
-    "ожидается исключение"};
-for (int i = 0; i &lt; in6066a.Length; i++)
-{
-    try
-    {
-        StringBuilder result = task6066(new StringBuilder(),
-                in6066a[i], in6066b[i]);
-        if (out6066[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result);
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Значение A должно быть не больше значения B</td>
-        </tr>
-        <tr>
-            <td></td>
             <td><a href="[6] лаб. ОСАЛП.html#task2565" target="_blank">ЛР6№2565 (открыть в новой вкладке)</a></td>
             <td class="preformatted">int[] in2565a = { 8, 691, 3000 };
 int[] in2565b = { 13, 703, 24 };
@@ -244,48 +210,6 @@ for (int i = 0; i &lt; in5568.Length; i++)
         </tr>
         <tr>
             <td></td>
-            <td><a href="[6] лаб. ОСАЛП.html#task2592" target="_blank">ЛР6№2592 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">String[] in2592s = { "#", "?", "*", "=", "o", "!" };
-int[] in2592w = { 5, 7, 90, 0, -2, 20 };
-int[] in2592h = { 3, 10, 0, 15, 8, -6 };
-String[] out2592 = {
-    "#####\n#####\n#####\n",
-    "???????\n???????\n???????\n???????\n" +
-            "???????\n???????\n???????\n" +
-            "???????\n???????\n???????\n",
-    "",
-    "",
-    "ожидается исключение",
-    "ожидается исключение"};
-for (int i = 0; i &lt; in2592s.Length; i++)
-{
-    try
-    {
-        StringBuilder result = task2592(new StringBuilder(),
-                in2592s[i],in2592w[i],in2592h[i]);
-        if (out2592[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
-Значение W должно быть неотрицательно
-Значение H должно быть неотрицательно</td>
-        </tr>
-        <tr>
-            <td></td>
             <td><a href="[6] лаб. ОСАЛП.html#task4075" target="_blank">ЛР6№4075 (открыть в новой вкладке)</a></td>
             <td class="preformatted">int[] in4075 = { 5, 15, 0, -2 };
 for (int i = 0; i &lt; in4075.Length; i++)
@@ -314,80 +238,33 @@ for (int i = 0; i &lt; in4075.Length; i++)
         </tr>
         <tr>
             <td></td>
-            <td><a href="[6] лаб. ОСАЛП.html#task7517" target="_blank">ЛР6№7517 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in7517w = { 1, 7, 5, 0, 23, -3, 7 };
-int[] in7517h = { 1, 3, 5, 17, 0, 11, -7 };
-String[] out7517 = {
-    " 0\n0 |\n -",
-    " 0123456\n0       |\n1       |\n2       |\n -------",
-    " 01234\n0     |\n1     |\n2     |\n3     |\n" +
-            "4     |\n -----",
-    "",
-    "",
-    "ожидается исключение",
-    "ожидается исключение"};
-for (int i = 0; i &lt; in7517w.Length; i++)
-{
-    try
-    {
-        StringBuilder result = task7517(new StringBuilder(),
-                in7517w[i], in7517h[i]);
-        if (out7517[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
-Значение W должно быть неотрицательно
-Значение H должно быть неотрицательно</td>
-        </tr>
-        <tr>
-            <td></td>
             <td><a href="[6] лаб. ОСАЛП.html#task5448" target="_blank">ЛР6№5448 (открыть в новой вкладке)</a></td>
             <td class="preformatted">String[] in5448s = { "#", "\\", "^", "*", "56" };
 int[] in5448h = { 6, 3, 0, -2, -3 };
-String[] out5448 = {
-    "#\n##\n###\n####\n#####\n######\n",
-    "\\\n\\\\\n\\\\\\\n",
-    "",
-    "ожидается исключение",
-    "ожидается исключение"};
 for (int i = 0; i &lt; in5448s.Length; i++)
 {
     try
     {
-        StringBuilder result = task5448(new StringBuilder(),
-            in5448s[i], in5448h[i]);
-        if (out5448[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
+        StringBuilder result = task5448(new StringBuilder(), in5448s[i], in5448h[i]);
+        Console.WriteLine(result.ToString());
     }
     catch (Exception e)
     {
         Console.WriteLine(e.Message);
     }
 }</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
+            <td class="preformatted">#
+##
+###
+####
+#####
+######
+
+\
+\\
+\\\
+
+
 Значение H должно быть неотрицательно
 Значение H должно быть неотрицательно</td>
         </tr>
@@ -396,123 +273,32 @@ for (int i = 0; i &lt; in5448s.Length; i++)
             <td><a href="[6] лаб. ОСАЛП.html#task5238" target="_blank">ЛР6№5238 (открыть в новой вкладке)</a></td>
             <td class="preformatted">int[] in5238w = { 5, 4, 0, 7, -11, 29 };
 int[] in5238h = { 5, 5, 5, 0, 4, -2 };
-String[] out5238 = {
-    "+++++\n++++#\n+++##\n++###\n+####\n",
-    "++++\n+++#\n++##\n+###\n####\n",
-    "",
-    "",
-    "ожидается исключение",
-    "ожидается исключение"};
 for (int i = 0; i &lt; in5238w.Length; i++)
 {
     try
     {
-        StringBuilder result = task5238(new StringBuilder(),
-            in5238w[i], in5238h[i]);
-        if (out5238[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
+        StringBuilder result = task5238(new StringBuilder(), in5238w[i], in5238h[i]);
+        Console.WriteLine(result.ToString());
     }
     catch (Exception e)
     {
         Console.WriteLine(e.Message);
     }
 }</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
-Значение W должно быть неотрицательно
-Значение H должно быть неотрицательно</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><a href="[6] лаб. ОСАЛП.html#task5171" target="_blank">ЛР6№5171 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">String[] in5171s1 = { "#", "?", "*", "=", "o", "!" };
-String[] in5171s2 = { "0", "-", "!", "+", "T", "." };
-int[] in5171w = { 5, 7, 90, 0, -2, 20 };
-int[] in5171h = { 3, 10, 0, 15, 8, -6 };
-String[] out5171 = {
-    "#####\n00000\n#####\n",
-    "???????\n-------\n???????\n-------\n" +
-            "???????\n-------\n???????\n" +
-            "-------\n???????\n-------\n",
-    "",
-    "",
-    "ожидается исключение",
-    "ожидается исключение"};
-for (int i = 0; i &lt; in5171w.Length; i++)
-{
-    try
-    {
-        StringBuilder result = task5171(new StringBuilder(),
-            in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
-        if (out5171[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
-Значение W должно быть неотрицательно
-Значение H должно быть неотрицательно</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><a href="[6] лаб. ОСАЛП.html#task1862" target="_blank">ЛР6№1862 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">String[] in1862s1 = { "#", "?", "*", "=", "o", "!" };
-String[] in1862s2 = { "0", "-", "!", "+", "T", "." };
-int[] in1862w = { 5, 7, 90, 0, -2, 20 };
-int[] in1862h = { 3, 10, 0, 15, 8, -6 };
-String[] out1862 = {
-"#0#0#\n#0#0#\n#0#0#\n",
-"?-?-?-?\n?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
-        "?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
-        "?-?-?-?\n?-?-?-?\n?-?-?-?\n",
-"",
-"",
-"ожидается исключение",
-"ожидается исключение"};
-for (int i = 0; i &lt; in1862s1.Length; i++)
-{
-    try
-    {
-        StringBuilder result = task1862(new StringBuilder(),
-            in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
-        if (out1862[i].Equals(result.ToString()))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            result.Insert(0, "Неверно. Результат:\n");
-            Console.WriteLine(result.ToString());
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">Задача решена верно
-Задача решена верно
-Задача решена верно
-Задача решена верно
+            <td class="preformatted">+++++
+++++#
++++##
+++###
++####
+
+++++
++++#
+++##
++###
+####
+
+
+
 Значение W должно быть неотрицательно
 Значение H должно быть неотрицательно</td>
         </tr>

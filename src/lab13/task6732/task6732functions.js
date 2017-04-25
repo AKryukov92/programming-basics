@@ -1,17 +1,3 @@
-function task6066(a,b){
-	a = parseInt(a);
-	b = parseInt(b);
-	if (a > b){
-		throw new Error("Значение A должно быть не больше значения B");
-	}
-	var r = "";
-	var i = a;
-	while (i <= b){
-		r += i + "<br/>";
-		i++;
-	}
-	return r;
-}
 function task2565(a,b){
 	a = parseInt(a);
 	b = parseInt(b);
@@ -116,22 +102,6 @@ function task5568(w){
 	}
 	return r;
 }
-function task2592(s,w,h){
-	if (h < 0){
-		throw new Error("Значение H должно быть неотрицательным");
-	}
-	if (w < 0){
-		throw new Error("Значение W должно быть неотрицательным");
-	}
-	var r = "";
-	for (var i = 0; i < h; i++){
-		for (var j = 0; j < w; j++){
-			r += s;
-		}
-		r += "<br/>";
-	}
-	return r;
-}
 function task4075(w){
 	if (w < 0){
 		throw new Error("Значение W должно быть неотрицательным");
@@ -146,34 +116,6 @@ function task4075(w){
 		c2 += ".";
 	}
 	return c1 + "+<br/>" + c2 + "|<br/>" + c1 + "+";
-}
-function task7517(w,h){
-	if (h < 0){
-		throw new Error("Значение H должно быть неотрицательным");
-	}
-	if (w < 0){
-		throw new Error("Значение W должно быть неотрицательным");
-	}
-	if (h == 0 || w == 0){
-		return "";
-	}
-	var r = " ";
-	for (var i = 0; i < w; i++){
-		r += i;
-	}
-	r += "<br/>";
-	for (var i = 0; i < h; i++){
-		r += i;
-		for (var j = 0; j < w; j++){
-			r += " ";
-		}
-		r += "|<br/>";
-	}
-	r += " ";
-	for (var i = 0; i < w; i++){
-		r += "-";
-	}
-	return r;
 }
 function task5448(s,h){
 	if (h < 0){
@@ -208,56 +150,6 @@ function task5238(w,h){
 		while (j < w){
 			r += "#";
 			j++;
-		}
-		r += "\n";
-	}
-	return r;
-}
-function task5171(s1,s2,w,h){
-	w = parseInt(w);
-	h = parseInt(h);
-	if (w < 0){
-		throw new Error("Значение W должно быть неотрицательно");
-	}
-	if (h < 0){
-		throw new Error("Значение H должно быть неотрицательно");
-	}
-	if (w == 0 || h == 0){
-		return "";
-	}
-	var r = "";
-	for (var i = 0; i < h; i++){
-		for (var j = 0; j < w; j++){
-			if (i%2 == 0){
-				r += s1;
-			} else {
-				r += s2;
-			}
-		}
-		r += "<br/>";
-	}
-	return r;
-}
-function task1862(s1,s2,w,h){
-	w = parseInt(w);
-	h = parseInt(h);
-	 if (w < 0){
-		throw new Error("Значение W должно быть неотрицательно");
-	}
-	if (h < 0){
-		throw new Error("Значение H должно быть неотрицательно");
-	}
-	if (w == 0 || h == 0){
-		return "";
-	}
-	var r = "";
-	for (var i = 0; i < h; i++){
-		for (var j = 0; j < w; j++){
-			if (j%2 == 0){
-				r += s1;
-			} else {
-				r += s2;
-			}
 		}
 		r += "\n";
 	}

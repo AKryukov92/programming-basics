@@ -522,25 +522,12 @@ namespace lab06
             Console.WriteLine("5448");
             String[] in5448s = { "#", "\\", "^", "*", "56" };
             int[] in5448h = { 6, 3, 0, -2, -3 };
-            String[] out5448 = {
-                "#\n##\n###\n####\n#####\n######\n",
-                "\\\n\\\\\n\\\\\\\n",
-                "",
-                "ожидается исключение",
-                "ожидается исключение"};
             for (int i = 0; i < in5448s.Length; i++)
             {
                 try
                 {
                     StringBuilder result = task5448(new StringBuilder(), in5448s[i], in5448h[i]);
-                    if (out5448[i].Equals(result.ToString()))
-                    {
-                        Console.WriteLine("Задача решена верно");
-                    }
-                    else {
-                        result.Insert(0, "Неверно. Результат:\n");
-                        Console.WriteLine(result.ToString());
-                    }
+                    Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
                 {
@@ -552,26 +539,12 @@ namespace lab06
             Console.WriteLine("5238");
             int[] in5238w = { 5, 4, 0, 7, -11, 29 };
             int[] in5238h = { 5, 5, 5, 0, 4, -2 };
-            String[] out5238 = {
-                "+++++\n++++#\n+++##\n++###\n+####\n",
-                "++++\n+++#\n++##\n+###\n####\n",
-                "",
-                "",
-                "ожидается исключение",
-                "ожидается исключение"};
             for (int i = 0; i < in5238w.Length; i++)
             {
                 try
                 {
                     StringBuilder result = task5238(new StringBuilder(), in5238w[i], in5238h[i]);
-                    if (out5238[i].Equals(result.ToString()))
-                    {
-                        Console.WriteLine("Задача решена верно");
-                    }
-                    else {
-                        result.Insert(0, "Неверно. Результат:\n");
-                        Console.WriteLine(result.ToString());
-                    }
+                    Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
                 {

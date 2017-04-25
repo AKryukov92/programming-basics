@@ -1,13 +1,3 @@
-var in6066a = ["8", "691", "3000"];
-var in6066b = ["13", "702", "24"];
-for (var i = 0; i < in6066a.length; i++){
-	var out = document.getElementById("6066t" + i);
-	try {
-		out.innerHTML = task6066(in6066a[i], in6066b[i]);
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
 var in2565a = ["8","691","3000"];
 var in2565b = ["13","703","24"];
 for (var i = 0; i < in2565a.length; i++){
@@ -73,32 +63,11 @@ for (var i = 0; i < in5568.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in2592s = ["#","?","*","=","o","!"];
-var in2592w = ["5","7","90","0","-2","20"];
-var in2592h = ["3","10","0","15","8","-6"];
-for (var i = 0; i < in2592s.length; i++){
-	var out = document.getElementById("2592t" + i);
-	try {
-		out.innerHTML = task2592(in2592s[i], in2592w[i], in2592h[i]);
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
 var in4075 = ["5","15","0","-2"];
 for (var i = 0; i < in4075.length; i++){
 	var out = document.getElementById("4075t" + i);
 	try {
 		out.innerHTML = task4075(in4075[i]);
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
-var in7517w = ["1","7","5","0","23","-3","7"];
-var in7517h = ["1","3","5","17","0","11","-7"];
-for (var i = 0; i < in7517w.length; i++){
-	var out = document.getElementById("7517t" + i);
-	try {
-		out.innerHTML = task7517(in7517w[i], in7517h[i]);
 	} catch(e){
 		out.innerHTML = e.message;
 	}
@@ -119,30 +88,6 @@ for (var i = 0; i < in5238w.length; i++){
 	var out = document.getElementById("5238t" + i);
 	try {
 		out.innerHTML = task5238(in5238w[i], in5238h[i]);
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
-var in5171s1 = ["#","?","*","=","o","!"];
-var in5171s2 = ["0","-","!","+","T","."];
-var in5171w = ["5","7","90","0","-2","20"];
-var in5171h = ["3", "10", "0","15","8","-6"];
-for (var i = 0; i < in5171s1.length; i++){
-	var out = document.getElementById("5171t" + i);
-	try {
-		out.innerHTML = task5171(in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
-var in1862s1 = ["#","?","*","=","o","!"];
-var in1862s2 = ["0","-","!","+","T","."];
-var in1862w = ["5","7","90","0","-2","20"];
-var in1862h = ["3", "10", "0","15","8","-6"];
-for (var i = 0; i < in1862s1.length; i++){
-	var out = document.getElementById("1862t" + i);
-	try {
-		out.innerHTML = task1862(in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
 	} catch(e){
 		out.innerHTML = e.message;
 	}
