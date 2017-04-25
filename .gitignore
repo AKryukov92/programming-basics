@@ -19,3 +19,5 @@ php/*.html
 java/postcard/out
 java/postcard/.idea/workspace.xml
 java/postcard/.idea/tasks.xml
+csharp/postcard/postcard/bin
+csharp/postcard/postcard/obj
