@@ -29,6 +29,3 @@ function task7271(x, y) {
 function task2632(cx, cy, r, fill) {
 	return '&lt;circle cx="' + cx + '" cy="' + cy + '"<br/>r="' + r + '" fill="' + fill + '"/&gt;';
 }
-function task4343(user, pass, host, port, db) {
-	return "User ID=" + user + ";Password=" + pass + ";<br/>Host=" + host + ";Port=" + port + ";Database=" + db + ";";
-}

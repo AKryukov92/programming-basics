@@ -49,12 +49,3 @@ for (var i = 0; i < in2632cx.length; i++){
 	var out = document.getElementById("2632t" + i);
 	out.innerHTML = task2632(in2632cx[i], in2632cy[i], in2632r[i], in2632f[i]);
 }
-var in4343user = ["test", "admin", "akryukov"];
-var in4343pass = ["pass", "7e8efd48d69c", "123"];
-var in4343host = ["localhost", "production-node1", "localhost"];
-var in4343port = ["5432", "5432", "dev-node1"];
-var in4343db = ["my_db", "bank", "bank"];
-for (var i = 0; i < in4343user.length; i++){
-	var out = document.getElementById("4343t" + i);
-	out.innerHTML = task4343(in4343user[i], in4343pass[i], in4343host[i], in4343port[i], in4343db[i]);
-}
