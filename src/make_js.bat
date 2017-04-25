@@ -1,4 +1,7 @@
 @echo off
+pushd ..
+mkdir js
+popd
 pushd ..\js
 rmdir files /s /q
 rmdir images /s /q
@@ -37,4 +40,5 @@ popd
 pushd lab14
 call make_js14 skip
 popd
+copy /Y base.html ..\js 
 pause

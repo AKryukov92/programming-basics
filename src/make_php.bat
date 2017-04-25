@@ -1,4 +1,7 @@
 @echo off
+pushd ..
+mkdir php
+popd
 pushd ..\php
 rmdir files /s /q
 rmdir images /s /q
