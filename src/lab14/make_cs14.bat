@@ -49,6 +49,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3567"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task5108"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task2033"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task6981"^>№ 21^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -82,6 +83,7 @@ type task5032.html>>%filename%
 type task3567.html>>%filename%
 type task5108.html>>%filename%
 type task2033.html>>%filename%
+type task6981.html>>%filename%
 
 echo ^</div^>>>%filename%
 
@@ -97,6 +99,7 @@ mkdir task5032
 mkdir task3567
 mkdir task5108
 mkdir task2033
+mkdir task6981
 popd
 
 pushd "task5032"
@@ -110,6 +113,9 @@ copy "*" "..\..\..\%lang%\files\task5108\*"
 popd
 pushd "task2033"
 copy "*" "..\..\..\%lang%\files\task2033\*"
+popd
+pushd "task6981"
+copy "*" "..\..\..\%lang%\files\task6981\*"
 popd
 
 if x%1==x start "" %filename%

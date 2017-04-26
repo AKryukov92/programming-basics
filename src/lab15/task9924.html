@@ -1,0 +1,85 @@
+<div class="task_block" id="task9924">
+	<h3>Задача</h3>
+	<div class="task_desc">Файлы с исходными данными содержат информацию точках в формате CSV с разделителем &quot;;&quot;(<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>). О каждой точке известны ее координаты X и Y, а также цвет. Точка уникально идентифицируется координатами X и Y. Например &quot;0;0;yellow&quot;. Вывести информацию обо всех уникальных точках. Порядок вывода может отличаться от указанного в тестах. Если в файле было две записи об одной и той же точке, вывести первую встретившуюся. При возникновении ошибки, прекращать обработку файла.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr><!--{&quot;x&quot;: , &quot;y&quot;: , &quot;color&quot;:&quot;&quot; }-->
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{&quot;x&quot;:0, &quot;y&quot;:0, &quot;color&quot;:&quot;yellow&quot; }
+{&quot;x&quot;:0, &quot;y&quot;:1, &quot;color&quot;:&quot;yellow&quot; }
+{&quot;x&quot;:1, &quot;y&quot;:0, &quot;color&quot;:&quot;red&quot; }
+{&quot;x&quot;:1, &quot;y&quot;:1, &quot;color&quot;:&quot;red&quot; }</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{&quot;x&quot;:10 , &quot;y&quot;:10 , &quot;color&quot;:&quot;red&quot; }</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{&quot;x&quot;:5, &quot;y&quot;:5, &quot;color&quot;:&quot;blue&quot; }
+{&quot;x&quot;:10, &quot;y&quot;:5, &quot;color&quot;:&quot;yellow&quot; }
+{&quot;x&quot;:5, &quot;y&quot;:10, &quot;color&quot;:&quot;orange&quot; }</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{&quot;x&quot;:4, &quot;y&quot;:5, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:4, &quot;y&quot;:6, &quot;color&quot;:&quot;violet&quot;}
+{&quot;x&quot;:2, &quot;y&quot;:5, &quot;color&quot;:&quot;green&quot;}
+{&quot;x&quot;:4, &quot;y&quot;:7, &quot;color&quot;:&quot;blue&quot;}
+{&quot;x&quot;:2, &quot;y&quot;:6, &quot;color&quot;:&quot;green&quot;}
+{&quot;x&quot;:4, &quot;y&quot;:8, &quot;color&quot;:&quot;orange&quot;}
+{&quot;x&quot;:2, &quot;y&quot;:7, &quot;color&quot;:&quot;violet&quot;}
+{&quot;x&quot;:4, &quot;y&quot;:9, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:0, &quot;y&quot;:5, &quot;color&quot;:&quot;yellow&quot;}
+{&quot;x&quot;:2, &quot;y&quot;:8, &quot;color&quot;:&quot;yellow&quot;}
+{&quot;x&quot;:0, &quot;y&quot;:6, &quot;color&quot;:&quot;orange&quot;}
+{&quot;x&quot;:2, &quot;y&quot;:9, &quot;color&quot;:&quot;yellow&quot;}
+{&quot;x&quot;:0, &quot;y&quot;:7, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:0, &quot;y&quot;:8, &quot;color&quot;:&quot;yellow&quot;}
+{&quot;x&quot;:0, &quot;y&quot;:9, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:3, &quot;y&quot;:5, &quot;color&quot;:&quot;blue&quot;}
+{&quot;x&quot;:3, &quot;y&quot;:6, &quot;color&quot;:&quot;blue&quot;}
+{&quot;x&quot;:1, &quot;y&quot;:5, &quot;color&quot;:&quot;orange&quot;}
+{&quot;x&quot;:3, &quot;y&quot;:7, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:3, &quot;y&quot;:8, &quot;color&quot;:&quot;red&quot;}
+{&quot;x&quot;:1, &quot;y&quot;:6, &quot;color&quot;:&quot;red&quot;}
+{&quot;x&quot;:1, &quot;y&quot;:7, &quot;color&quot;:&quot;cyan&quot;}
+{&quot;x&quot;:3, &quot;y&quot;:9, &quot;color&quot;:&quot;green&quot;}
+{&quot;x&quot;:1, &quot;y&quot;:8, &quot;color&quot;:&quot;blue&quot;}
+{&quot;x&quot;:1, &quot;y&quot;:9, &quot;color&quot;:&quot;yellow&quot;}</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удается считать число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9924/test9.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удается считать число</td>
+		</tr>
+	</table>
+</div>

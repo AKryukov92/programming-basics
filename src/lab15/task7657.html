@@ -1,0 +1,80 @@
+<div class="task_block" id="task7657">
+	<h3>Задача</h3>
+	<div class="task_desc">Файлы с исходными данными содержат информацию точках в формате CSV с разделителем &quot;;&quot;(<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>). О каждой точке известны ее координаты X и Y, а также цвет. Точка уникально идентифицируется координатами X и Y. Например &quot;0;0;yellow&quot;. Нужно учитывать последний из дубликатов точек. Вывести информацию о каждой уникальной точке и посчитать количество ее дубликатов. Отдельно вывести количество ошибочных записей.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":1, "y":2, "color":"violet"} 9
+{"x":1, "y":3, "color":"blue"} 2
+{"x":0, "y":3, "color":"cyan"} 3
+Некорректных записей: 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":2, "y":2, "color":"orange"} 1
+{"x":1, "y":2, "color":"violet"} 3
+{"x":2, "y":3, "color":"cyan"} 4
+{"x":1, "y":3, "color":"violet"} 3
+{"x":0, "y":2, "color":"cyan"} 7
+{"x":2, "y":4, "color":"red"} 4
+{"x":1, "y":4, "color":"green"} 6
+{"x":0, "y":3, "color":"violet"} 4
+{"x":0, "y":4, "color":"blue"} 3
+Некорректных записей: 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":8356, "y":4363, "color":"violet"} Замен:16
+{"x":7348, "y":4363, "color":"orange"} Замен:18
+{"x":7348, "y":2542, "color":"green"} Замен:13
+{"x":8356, "y":2542, "color":"orange"} Замен:10
+Некорректных записей: 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":3732, "y":3732, "color":"green"} Замен:750
+{"x":7460, "y":3732, "color":"red"} Замен:758
+{"x":3894, "y":2366, "color":"cyan"} Замен:747
+{"x":7460, "y":2366, "color":"green"} Замен:765
+{"x":3732, "y":2366, "color":"cyan"} Замен:728
+{"x":3894, "y":3732, "color":"red"} Замен:752
+</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":1401, "y":1401, "color":"cyan"} Замен: 3
+{"x":1352, "y":1401, "color":"green"} Замен: 5
+{"x":8887, "y":1401, "color":"red"} Замен: 2
+{"x":8887, "y":9126, "color":"red"} Замен: 5
+{"x":1401, "y":9126, "color":"green"} Замен: 2
+{"x":1352, "y":9126, "color":"violet"} Замен: 2
+Некорректных записей: 4</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task7657/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">{"x":7661, "y":8431, "color":"blue"} Замен: 4
+{"x":7661, "y":6254, "color":"green"} Замен: 3
+{"x":8431, "y":8431, "color":"blue"} Замен: 4
+{"x":8431, "y":6254, "color":"red"} Замен: 1
+{"x":2032, "y":8431, "color":"red"} Замен: 4
+{"x":2032, "y":6254, "color":"yellow"} Замен: 6
+Некорректных записей: 9</td>
+		</tr>
+	</table>
+</div>
