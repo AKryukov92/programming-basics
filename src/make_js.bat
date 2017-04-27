@@ -40,5 +40,8 @@ popd
 pushd lab14
 call make_js14 skip
 popd
+pushd lab16
+call make_js16 skip
+popd
 copy /Y base.html ..\js 
 pause

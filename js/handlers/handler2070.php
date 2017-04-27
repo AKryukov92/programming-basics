@@ -1,7 +1,5 @@
 <?php
-$MAX_VALUE = 4000;
-$MIN_VALUE = 1000;
-$EXPECTED_AMOUNT = 3000;
+$EXPECTED_AMOUNT = 1000;
 $UNPROCESSABLE_ENTITY = 422;
 $raw = file_get_contents('php://input');
 $arr = explode(";", $raw);
@@ -11,7 +9,6 @@ if(count($arr) != $EXPECTED_AMOUNT){
 	echo "Нужно прислать массив из $EXPECTED_AMOUNT элементов. Пришло $length";
 	die;
 }
-$sum = 0;
 for($i = 0; $i < count($arr); $i++){
 	$current = $arr[$i];
 	for($j = $i + 1; $j < count($arr); $j++){
@@ -22,12 +19,16 @@ for($i = 0; $i < count($arr); $i++){
 			die;
 		}
 	}
-	if ($current < $MIN_VALUE || $MAX_VALUE < $current){
+	
+	if ($current <= 0){
 		http_response_code($UNPROCESSABLE_ENTITY);
-		echo "Число № $i = $current находится за пределами интервала [$MIN_VALUE;$MAX_VALUE]";
+		echo "Число № $i равное $current вызвало ошибку";
 		die;
 	}
-	$sum += $current;
 }
-echo $sum;
+for ($i = 0; $i < count($arr); $i++){
+	$c = 2 * pi() * $arr[$i];
+	echo round($c, 4);
+	echo "; ";
+}
 ?>

@@ -12,9 +12,9 @@
 var arr;
 function generate(){
 	arr = [];
-	var max = 1000;
-	var min = 4000;
-	while(arr.length < 3000){
+	var max = 10000;
+	var min = 1;
+	while(arr.length < 1000){
 		var next = Math.round(Math.random() * (max - min) + min);
 		if (arr.indexOf(next)<0){
 			arr.push(next);
@@ -23,7 +23,7 @@ function generate(){
 	document.getElementById("out").innerHTML = arr.join(" ");
 }
 function send(){
-	var response = post('handler4304.php', arr.join(";"));
+	var response = post('handler2070.php', arr.join(";"));
 	document.getElementById("response").innerHTML = response;
 }
 	</script>
