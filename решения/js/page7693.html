@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input type="button" value="generate" onclick="generate()"/>
+	<input type="button" value="send" onclick="send()"/>
+	<div id="response"></div>
+	<div id="out"></div>
+	<script>
+var arr;
+function generate(){
+	arr = [];
+	var minX = -1000;
+	var maxX = 1000;
+	var dY = 10000;
+	var amount = 1000;
+	while(arr.length < amount){
+		var nextX = Math.round(Math.random() * (maxX - minX) + minX);
+		var minY = nextX * nextX;
+		var maxY = minY + dY;
+		var nextY = Math.round(Math.random() * (maxY - minY) + minY);
+		arr.push({x:nextX, y:nextY});
+	}
+	document.getElementById("out").innerHTML = JSON.stringify(arr);
+}
+function send(){
+	var response = post('handler7693.php', JSON.stringify({data:arr}));
+	document.getElementById("response").innerHTML = response;
+}
+	</script>
+	<script src="ajax.js"></script>
+	</body>
+</html>
