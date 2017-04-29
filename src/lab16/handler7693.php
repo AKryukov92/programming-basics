@@ -23,13 +23,23 @@ if(count($obj->data) != $EXPECTED_AMOUNT){
 	die;
 }
 for($i = 0; $i < count($obj->data); $i++){
+	if (!property_exists($obj, "x"){
+		http_response_code($UNPROCESSABLE_ENTITY);
+		echo "У объекта № $i отсутствует поле 'x'";
+		die;
+	}
+	if (!property_exists($obj, "y"){
+		http_response_code($UNPROCESSABLE_ENTITY);
+		echo "У объекта № $i отсутствует поле 'y'";
+		die;
+	}
 	$currentX = $obj->data[$i]->x;
 	$currentY = $obj->data[$i]->y;
 	for($j = $i + 1; $j < count($obj->data); $j++){
 		$checkedX = $obj->data[$j]->x;
 		$checkedY = $obj->data[$j]->y;
 		if($currentX == $checkedX &&
-		   $currentY == $checkedY){
+		    $currentY == $checkedY){
 			http_response_code($UNPROCESSABLE_ENTITY);
 			echo "Объект № $i совпадает с объектом № $j и равен {x:$checkedX,y:$checkedY}";
 			die;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input type="button" value="generate" onclick="generate()"/>
+	<input type="button" value="send" onclick="send()"/>
+	<div id="response"></div>
+	<div id="out"></div>
+	<script>
+var arr;
+function generate(){
+	arr = [];
+	var min = 1;
+	var max = 10000;
+	var minNeg = -10000;
+	var amountResultative = 150;
+	var amountError = 100;
+	var amount = amountError;
+	while(arr.length < amount){
+		var nextB1 = Math.round(Math.random() * (max - min) + min);
+		var nextA1 = Math.round(Math.random() * (max - nextB1) + nextB1);
+		var nextA2 = Math.round(Math.random() * (max - min) + min);
+		var nextB2 = Math.round(Math.random() * (max - nextA2) + nextA2);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountError;
+	while(arr.length < amount){
+		var nextA1 = Math.round(Math.random() * (max - min) + min);
+		var nextB1 = Math.round(Math.random() * (max - nextA1) + nextA1);
+		var nextB2 = Math.round(Math.random() * (max - min) + min);
+		var nextA2 = Math.round(Math.random() * (max - nextB2) + nextB2);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA1 = Math.round(Math.random() * (max - min) + min);
+		var nextA2 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		var nextB1 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		var nextB2 = Math.round(Math.random() * (max - nextB1+1) + nextB1+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA1 = Math.round(Math.random() * (max - min) + min);
+		var nextA2 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		var nextB2 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		var nextB1 = Math.round(Math.random() * (max - nextB2+1) + nextB2+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA2 = Math.round(Math.random() * (max - min) + min);
+		var nextA1 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		var nextB1 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		var nextB2 = Math.round(Math.random() * (max - nextB1+1) + nextB1+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA2 = Math.round(Math.random() * (max - min) + min);
+		var nextA1 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		var nextB2 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		var nextB1 = Math.round(Math.random() * (max - nextB2+1) + nextB2+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA1 = Math.round(Math.random() * (max - min) + min);
+		var nextB1 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		var nextA2 = Math.round(Math.random() * (max - nextB1+1) + nextB1+1);
+		var nextB2 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextA2 = Math.round(Math.random() * (max - min) + min);
+		var nextB2 = Math.round(Math.random() * (max - nextA2+1) + nextA2+1);
+		var nextA1 = Math.round(Math.random() * (max - nextB2+1) + nextB2+1);
+		var nextB1 = Math.round(Math.random() * (max - nextA1+1) + nextA1+1);
+		arr.push({a1:nextA1, b1:nextB1, a2:nextA2, b2:nextB2});
+	}
+	document.getElementById("out").innerHTML = JSON.stringify(arr);
+}
+function send(){
+	var response = post('handler7248.php', JSON.stringify({data:arr}));
+	document.getElementById("response").innerHTML = response;
+}
+	</script>
+	<script src="ajax.js"></script>
+	</body>
+</html>

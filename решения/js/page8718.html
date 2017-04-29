@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input type="button" value="generate" onclick="generate()"/>
+	<input type="button" value="send" onclick="send()"/>
+	<div id="response"></div>
+	<div id="out"></div>
+	<script>
+var arr;
+function generate(){
+	arr = [];
+	var min = 1;
+	var max = 10000;
+	var minNeg = -10000;
+	var dY = 10000;
+	var amountResultative = 200;
+	var amountError = 50;
+	var amount = amountResultative;
+	while(arr.length < amount){
+		var nextC = Math.round(Math.random() * (max - min) + min);
+		var nextD = Math.round(Math.random() * (max - min) + min);
+		var nextA = Math.round(Math.random() * (nextC-1 - min) + min);
+		var nextB = Math.round(Math.random() * (nextD-1 - min) + min);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	amount += amountResultative;
+	while(arr.length < amount){
+		var nextC = Math.round(Math.random() * (max - min) + min);
+		var nextD = Math.round(Math.random() * (max - min) + min);
+		var nextA = Math.round(Math.random() * (max - nextC+1) + nextC);
+		var nextB = Math.round(Math.random() * (nextD-1 - min) + min);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	amount += amountError;
+	while(arr.length < amount){
+		var nextA = Math.round(Math.random() * (min - minNeg) + minNeg);
+		var nextB = Math.round(Math.random() * (max - min) + min);
+		var nextC = Math.round(Math.random() * (max - min) + min);
+		var nextD = Math.round(Math.random() * (max - min) + min);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	amount += amountError;
+	while(arr.length < amount){
+		var nextA = Math.round(Math.random() * (max - min) + min);
+		var nextB = Math.round(Math.random() * (min - minNeg) + minNeg);
+		var nextC = Math.round(Math.random() * (max - min) + min);
+		var nextD = Math.round(Math.random() * (max - min) + min);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	amount += amountError;
+	while(arr.length < amount){
+		var nextA = Math.round(Math.random() * (max - min) + min);
+		var nextB = Math.round(Math.random() * (max - min) + min);
+		var nextC = Math.round(Math.random() * (min - minNeg) + minNeg);
+		var nextD = Math.round(Math.random() * (max - min) + min);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	amount += amountError;
+	while(arr.length < amount){
+		var nextA = Math.round(Math.random() * (max - min) + min);
+		var nextB = Math.round(Math.random() * (max - min) + min);
+		var nextC = Math.round(Math.random() * (max - min) + min);
+		var nextD = Math.round(Math.random() * (min - minNeg) + minNeg);
+		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	document.getElementById("out").innerHTML = JSON.stringify(arr);
+}
+function send(){
+	var response = post('handler8718.php', JSON.stringify({data:arr}));
+	document.getElementById("response").innerHTML = response;
+}
+	</script>
+	<script src="ajax.js"></script>
+	</body>
+</html>
