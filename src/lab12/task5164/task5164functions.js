@@ -2,7 +2,7 @@ function task1860(a){
 	return "Мы стремимся к " + a;
 }
 function task4764(a){
-	return a + " нас не остановят";
+	return a + " нас не остановят!";
 }
 function task2429(a){
 	return "Программирование это " + a + "!";

@@ -1,46 +1,79 @@
-var in1860 = ["знаниям","цели","результату"];
-for (var i = 0; i < in1860.length; i++){
-	var out = document.getElementById("1860t" + i);
-	out.innerHTML = task1860(in1860[i]);
-}
-var in4764 = ["трудности","загадки","сложные задачи"];
-for (var i = 0; i < in4764.length; i++){
-	var out = document.getElementById("4764t" + i);
-	out.innerHTML = task4764(in4764[i]);
-}
-var in2429 = ["просто", "интересно","перспективно"];
-for (var i = 0; i < in2429.length; i++){
-	var out = document.getElementById("2429t" + i);
-	out.innerHTML = task2429(in2429[i]);
-}
-var in7472a = ["начало", "сила", "курица", "шаг"];
-var in7472b = ["конец", "знание", "яйцо", "шаг"];
-for (var i = 0; i < in7472a.length; i++){
-	var out = document.getElementById("7472t" + i);
-	out.innerHTML = task7472(in7472a[i], in7472b[i]);
-}
+var out1860 = document.getElementById("1860t0");
+var temp = task1860("знаниям");
+out1860.innerHTML = temp;
+
+out1860 = document.getElementById("1860t1");
+temp = task1860("цели");
+out1860.innerHTML = temp;
+
+out1860 = document.getElementById("1860t2");
+temp = task1860("результату");
+out1860.innerHTML = temp;
+
+
+var out4764 = document.getElementById("4764t0");
+out4764.innerHTML = task4764("трудности");
+
+out4764 = document.getElementById("4764t1");
+out4764.innerHTML = task4764("загадки");
+
+out4764 = document.getElementById("4764t2");
+out4764.innerHTML = task4764("сложные задачи");
+
+
+document.getElementById("2429t0").innerHTML = task2429("просто");
+document.getElementById("2429t1").innerHTML = task2429("интересно");
+document.getElementById("2429t2").innerHTML = task2429("перспективно");
+
+
+var in7472a = "начало";
+var in7472b = "конец";
+var out7472 = task7472(in7472a, in7472b);
+document.getElementById("7472t0").innerHTML = out7472;
+in7472a = "сила";
+in7472b = "знание";
+out7472 = task7472(in7472a, in7472b);
+document.getElementById("7472t1").innerHTML = out7472;
+in7472a = "курица";
+in7472b = "яйцо";
+out7472 = task7472(in7472a, in7472b);
+document.getElementById("7472t2").innerHTML = out7472;
+in7472a = "шаг";
+in7472b = "шаг";
+out7472 = task7472(in7472a, in7472b);
+document.getElementById("7472t3").innerHTML = out7472;
+
+
 task2862();
+
+
 var in9231 = ["9.780327", "-273.15", "0.00006"];
-for (var i = 0; i < in9231.length; i++){
-	var out = document.getElementById("9231t" + i);
-	out.innerHTML = task9231(in9231[i]);
-}
+document.getElementById("9231t0").innerHTML = task9231(in9231[0]);
+document.getElementById("9231t1").innerHTML = task9231(in9231[1]);
+document.getElementById("9231t2").innerHTML = task9231(in9231[2]);
+
 var in8624 = ["811", "1583"];
 for (var i = 0; i < in8624.length; i++){
 	var out = document.getElementById("8624t" + i);
 	out.innerHTML = task8624(in8624[i]);
 }
+
+
 var in2959 = ["123456789","fa93f"];
 for (var i = 0; i < in2959.length; i++){
 	var out = document.getElementById("2959t" + i);
 	out.innerHTML = task2959(in2959[i]);
 }
+
+
 var in7271x = ["5", "-1"];
 var in7271y = ["7", "1000"];
 for (var i = 0; i < in7271x.length; i++){
 	var out = document.getElementById("7271t" + i);
 	out.innerHTML = task7271(in7271x[i], in7271y[i]);
 }
+
+
 var in2632cx = ["50","400","254"];
 var in2632cy = ["50","300","356"];
 var in2632r = ["40","200","100"];
