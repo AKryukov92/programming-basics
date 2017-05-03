@@ -2,7 +2,6 @@
 $RESULTATIVE_AMOUNT = 200;
 $ERROR_AMOUNT = 50;
 $ERR_BAD_REQUEST = 400;
-$ERR_CONFLICT = 409;
 $ERR_UNPROCESSABLE_ENTITY = 422;
 $raw = file_get_contents('php://input');
 $obj = json_decode($raw);
@@ -88,32 +87,32 @@ for($i = 0; $i < count($obj->data); $i++){
 	}
 }
 if($countCasePossible != $RESULTATIVE_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $RESULTATIVE_AMOUNT случаев 'Размещение возможно'. Пришло $countCasePossible";
 	die;
 }
 if($countCaseImpossible != $RESULTATIVE_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $RESULTATIVE_AMOUNT случаев 'Размещение невозможно'. Пришло $countCaseImpossible";
 	die;
 }
 if($countCaseErrorA != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев 'Значение A должно быть неотрицательным'. Пришло $countCaseErrorA";
 	die;
 }
 if($countCaseErrorB != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев 'Значение B должно быть неотрицательным'. Пришло $countCaseErrorB";
 	die;
 }
 if($countCaseErrorC != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев 'Значение C должно быть неотрицательным'. Пришло $countCaseErrorC";
 	die;
 }
 if($countCaseErrorD != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев 'Значение D должно быть неотрицательным'. Пришло $countCaseErrorD";
 	die;
 }

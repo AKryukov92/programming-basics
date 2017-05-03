@@ -2,7 +2,6 @@
 $RESULTATIVE_AMOUNT = 150;
 $ERROR_AMOUNT = 100;
 $ERR_BAD_REQUEST = 400;
-$ERR_CONFLICT = 409;
 $ERR_UNPROCESSABLE_ENTITY = 422;
 $raw = file_get_contents('php://input');
 $obj = json_decode($raw);
@@ -104,12 +103,12 @@ for($i = 0; $i < count($obj->data); $i++){
 	}
 }
 if($countCaseErrorLeft != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев с ошибкой 'Значение A должно быть меньше значения B' для первого интервала. Пришло $countCaseErrorLeft";
 	die;
 }
 if($countCaseErrorRight != $ERROR_AMOUNT){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "В данных должно находиться $ERROR_AMOUNT случаев с ошибкой 'Значение A должно быть меньше значения B' для второго интервала. Пришло $countCaseErrorRight";
 	die;
 }
@@ -120,7 +119,7 @@ if($countClass1 != $RESULTATIVE_AMOUNT ||
    $countClass5 != $RESULTATIVE_AMOUNT ||
    $countClass6 != $RESULTATIVE_AMOUNT
 ){
-	http_response_code($ERR_CONFLICT);
+	http_response_code($ERR_BAD_REQUEST);
 	echo "Один из классов эквивалентности представлен не полностью";
 	die;
 }

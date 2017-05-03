@@ -1,12 +1,48 @@
-var in9020 = ["0", "-9", "61", "60", "62", "7573", "75"];
-for (var i = 0; i < in9020.length; i++){
-	var out = document.getElementById("9020t" + i);
-	try {
-		out.innerHTML = task9020(in9020[i]).toFixed(4);
-	} catch (e){
-		out.innerHTML = e.message;
-	}
+try {
+	var out = document.getElementById("9020t0");
+	out.innerHTML = task9020("0").toFixed(4);
+} catch (e){
+	var out = document.getElementById("9020t0");
+	out.innerHTML = e.message;
 }
+var out = document.getElementById("9020t1");
+try {
+	out.innerHTML = task9020("-9").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+out = document.getElementById("9020t2");
+try {
+	out.innerHTML = task9020("61").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+out = document.getElementById("9020t3");
+try {
+	out.innerHTML = task9020("60").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+out = document.getElementById("9020t4");
+try {
+	out.innerHTML = task9020("62").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+out = document.getElementById("9020t5");
+try {
+	out.innerHTML = task9020("7573").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+out = document.getElementById("9020t6");
+try {
+	out.innerHTML = task9020("75").toFixed(4);
+} catch (e){
+	out.innerHTML = e.message;
+}
+
+
 var in7237 = ["0","20.5","691.9","-273.15","-300"];
 for (var i = 0; i < in7237.length; i++){
 	var out = document.getElementById("7237t" + i);
