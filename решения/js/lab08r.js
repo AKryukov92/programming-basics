@@ -1,5 +1,5 @@
 var in4425a = ["0","3","9","5","-1","0"];
-var in4425data = ["4 3 2 1", "4 3 2 1", "0 9 8 7 6 5 4 3 2 1", "4 3 2 1", "4 3 2 1", ""];
+var in4425data = ["q w e r", "q w e r", "q w e r t y u i o p", "q w e r", "q w e r", ""];
 for (var i = 0; i < in4425a.length; i++){
 	var out = document.getElementById("4425t" + i);
 	try {
@@ -7,6 +7,17 @@ for (var i = 0; i < in4425a.length; i++){
 	} catch(e){
 		out.innerHTML = e.message;
 	}
+}
+var in5683 = [
+	"qw er ty",
+	"qw er ty ui op",
+	"asd fgh jkl",
+	"",
+	"q w e r a s d f z x c v"
+];
+for (var i = 0; i < in5683.length; i++){
+	var out = document.getElementById("5683t" + i);
+	out.innerHTML = task5683(in5683[i]);
 }
 var in1223 = ["1 2 3 4 1", "1 2 3 4 1 2 3 4 1 2", ""];
 for (var i = 0; i < in1223.length; i++){

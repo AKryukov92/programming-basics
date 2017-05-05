@@ -8,6 +8,17 @@ function task4425(a, str){
 	}
 	return arr[a];
 }
+function task5683(str){
+	if (str === ""){
+		return "";
+	}
+	var ret = "";
+	var arr = str.split(" ");
+	for (var i = 0; i < arr.length; i++){
+		ret += arr[i] + " " + i + "<br/>";
+	}
+	return ret;
+}
 function task1223(raw){
 	var ret = [];
 	if (raw == ""){

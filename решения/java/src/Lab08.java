@@ -380,21 +380,34 @@ public class Lab08 {
         System.out.println("4425");
         int[] in4425a = {0, 3, 9, 5, -1, 0};
         String[] in4425data = {
-                "4 3 2 1",
-                "4 3 2 1",
-                "0 9 8 7 6 5 4 3 2 1",
-                "4 3 2 1",
-                "4 3 2 1",
+                "q w e r",
+                "q w e r",
+                "q w e r t y u i o p",
+                "q w e r",
+                "q w e r",
                 ""
         };
-        int[] out4425 = {4, 1, 1, 0, 0, 0};
+        String[] out4425 = {"q", "r", "p", "", "", ""};
         for (int i = 0; i < in4425a.length; i++){
             try {
-                int result = task4425(in4425a[i], in4425data[i]);
-                System.out.printf("%d (%d)\n", result, out4425[i]);
+                String result = task4425(in4425a[i], in4425data[i]);
+                System.out.printf("%s (%s)\n", result, out4425[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+        }
+
+        System.out.println();
+        System.out.println("5683");
+        String[] in5683 = {
+            "qw er ty",
+            "qw er ty ui op",
+            "asd fgh jkl",
+            "",
+            "q w e r a s d f z x c v"
+        };
+        for (int i = 0; i < in5683.length; i++){
+            System.out.println(task5683(in5683[i]));
         }
 
         System.out.println();
@@ -444,7 +457,7 @@ public class Lab08 {
         }
     }
 
-    public static int task4425(int a, String raw) throws Exception {
+    public static String task4425(int a, String raw) throws Exception {
         if (raw.isEmpty()){
             throw new Exception("Исходная строка пуста");
         }
@@ -452,7 +465,22 @@ public class Lab08 {
         if (a < 0 || a >= arr.length){
             throw new Exception("Число A должно быть в интервале [0, размер массива)");
         }
-        return Integer.parseInt(arr[a]);
+        return arr[a];
+    }
+
+    private static String task5683(String str) {
+        if (str.isEmpty()){
+            return "";
+        }
+        String[] arr = str.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++){
+            sb.append(arr[i]);
+            sb.append(" ");
+            sb.append(i);
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
     public static List<Integer> task1223(String raw){

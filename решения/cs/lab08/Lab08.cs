@@ -10,10 +10,11 @@ namespace lab08
     {
         static void Main(string[] args)
         {
-            task2354();
-            task2030();
-            task7649();
-            task8787();
+            //task2354();
+            //task2030();
+            //task7649();
+            //task8787();
+            task9707();
         }
 
         public static void task9707()
@@ -22,24 +23,37 @@ namespace lab08
             Console.WriteLine("4425");
             int[] in4425a = { 0, 3, 9, 5, -1, 0 };
             String[] in4425data = {
-                "4 3 2 1",
-                "4 3 2 1",
-                "0 9 8 7 6 5 4 3 2 1",
-                "4 3 2 1",
-                "4 3 2 1",
-                ""};
-            int[] out4425 = { 4, 1, 1, 0, 0, 0 };
+                "q w e r",
+                "q w e r",
+                "q w e r t y u i o p",
+                "q w e r",
+                "q w e r",
+                ""        };
+            String[] out4425 = { "q", "r", "p", "", "", "" };
             for (int i = 0; i < in4425a.Length; i++)
             {
                 try
                 {
-                    int result = task4425(in4425a[i], in4425data[i]);
+                    String result = task4425(in4425a[i], in4425data[i]);
                     Console.WriteLine("{0} ({1})", result, out4425[i]);
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("5683");
+            String[] in5683 = {
+                "qw er ty",
+                "qw er ty ui op",
+                "asd fgh jkl",
+                "",
+                "q w e r a s d f z x c v"
+            };
+            for (int i = 0; i < in5683.Length; i++){
+                Console.WriteLine(task5683(in5683[i]));
             }
 
             Console.WriteLine();
@@ -472,7 +486,7 @@ namespace lab08
             }
         }
 
-        public static int task4425(int a, String raw)
+        public static String task4425(int a, String raw)
         {
             if (String.IsNullOrEmpty(raw))
             {
@@ -483,9 +497,26 @@ namespace lab08
             {
                 throw new Exception("Число A должно быть в интервале [0, размер массива)");
             }
-            return int.Parse(arr[a]);
+            return arr[a];
         }
 
+        private static String task5683(String str)
+        {
+            if (String.IsNullOrEmpty(str))
+            {
+                return "";
+            }
+            String[] arr = str.Split(' ');
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sb.Append(arr[i]);
+                sb.Append(" ");
+                sb.Append(i);
+                sb.Append("\n");
+            }
+            return sb.ToString();
+        }
         public static IList<int> task1223(String raw)
         {
             IList<int> ret = new List<int>();
