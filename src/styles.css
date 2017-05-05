@@ -62,8 +62,18 @@ sqrt:before {
 .task_block:target{
 	background-color:lightgrey;
 }
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
 .quiz_block {
 	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
 }
 .task_desc {
 	margin:5px;
