@@ -29,6 +29,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#writing7779"^>П 1^</a^>^</li^> ^
+ ^<li^>^<a href="#writing1881"^>П 2^</a^>^</li^> ^
  ^<li^>^<a href="#task8495" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task1315" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task6066" class="supervision"^>№ 3^</a^>^</li^> ^
@@ -77,6 +78,7 @@ type quiz.html>> %filename%
 echo ^<div class="section"^>>>%filename%
 
 type writingjs7779.html>>%filename%
+type writing1881.html>>%filename%
 
 echo ^</div^>>>%filename%
 
