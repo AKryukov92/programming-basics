@@ -33,6 +33,9 @@ sqrt:before {
 .check_values td:first-child{
 	width:40px;
 }
+ol {
+	list-style:none;
+}
 .nav {
 	position:fixed;
 	top:0px;
