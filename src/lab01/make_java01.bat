@@ -38,7 +38,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task4764" class="supervision"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task2429"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task7472"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task2862" class="example"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task3862" class="example"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task9231" class="supervision"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task8624"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task2959"^>№ 9^</a^>^</li^> ^

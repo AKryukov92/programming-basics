@@ -17,7 +17,7 @@ include 'lab02functions.php'
 <body>
 <h3>4411</h3>
 <?php
-$in4411 = array(11.13, -7919, 0);
+$in4411 = array("11.13", "-7919", "0");
 for ($i = 0; $i < count($in4411); $i++){
 	echo "<div>";
 	echo task4411($in4411[$i]);
