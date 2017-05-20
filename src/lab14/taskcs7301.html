@@ -19,7 +19,7 @@ Console.WriteLine(p.Print());</td>
 			<td class="preformatted">Point p1 = new Point(53, 59);
 Point p2 = new Point(61,67);
 Console.WriteLine("Distance between " + p1.Print()
-+ " and " + p2.Print() + " is " + p1.DistanceTo(p2));</td>
++ " and " + p2.Print() + " is {0:F4}", p1.DistanceTo(p2));</td>
 			<td>Distance between (53;59) and (61;67) is 11.3137</td>
 		</tr>
 		<tr>
@@ -33,12 +33,12 @@ Console.WriteLine(dist);</td>
 			<td></td>
 			<td class="preformatted">Point p = new Point(71, 73);
 Console.WriteLine("Distance from " + p.Print()
-+ " to zero is " + p.DistanceTo(new Point(0, 0)));</td>
++ " to zero is {0:F4}", p.DistanceTo(new Point(0, 0)));</td>
 			<td>Distance between (71;73) to zero is 101.8332</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="preformatted">Console.WriteLine(new Point(79, 83)
+			<td class="preformatted">Console.WriteLine("{0:F4}", new Point(79, 83)
 .DistanceTo(new Point(89, 97)));</td>
 			<td>17.2047</td>
 		</tr>
@@ -47,12 +47,12 @@ Console.WriteLine("Distance from " + p.Print()
 			<td class="preformatted">double dist = Point.DistanceBetween(
     new Point(151, 157),
     new Point(163, 167));
-Console.WriteLine(dist);</td>
+Console.WriteLine("{0:F4}", dist);</td>
 			<td>15.6204</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="preformatted">Console.WriteLine(Point.DistanceBetween(
+			<td class="preformatted">Console.WriteLine("{0:F4}", Point.DistanceBetween(
     new Point(173, 179),
     new Point(181, 191)));</td>
 			<td>14.4222</td>
