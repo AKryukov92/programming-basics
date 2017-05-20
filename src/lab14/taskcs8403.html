@@ -30,14 +30,16 @@ Console.WriteLine(p.DistanceTo(0,0));</td>
 			<td class="preformatted">Point p = new Point();
 p.x = 19;
 p.y = 23;
-Console.WriteLine(p.DistanceTo(11,13));</td>
+Console.WriteLine("{0:F4}", p.DistanceTo(11,13));</td>
 			<td>12.8062</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="preformatted">Point p = new Point();
-p.x = 11;
-p.y = 23;
+			<td class="preformatted">Point p = new Point()
+{
+    x = 11,
+    y = 23
+};
 Console.WriteLine(p.DistanceTo(11,13));</td>
 			<td>10.0</td>
 		</tr>

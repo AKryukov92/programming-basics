@@ -39,17 +39,21 @@ p1.y = 23;
 Point p2 = new Point();
 p2.x = 11;
 p2.y = 13;
-Console.WriteLine(p1.DistanceTo(p2));</td>
+Console.WriteLine("{0:F4}", p1.DistanceTo(p2));</td>
 			<td>12.8062</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td class="preformatted">Point p1 = new Point();
-p1.x = 11;
-p1.y = 23;
-Point p2 = new Point();
-p2.x = 11;
-p2.y = 13;
+			<td class="preformatted">Point p1 = new Point()
+{
+    x = 11,
+    y = 23
+};
+Point p2 = new Point()
+{
+    x = 11,
+    y = 13
+};
 Console.WriteLine(p1.DistanceTo(p2));</td>
 			<td>10.0</td>
 		</tr>
