@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace lab02
+namespace tfa
 {
-    class Lab02
+    public class Lab02
     {
         static void Main(string[] args)
         {

@@ -15,6 +15,8 @@ php/*.html
 решения/java/.idea/tasks.xml
 решения/cs/lab*/obj
 решения/cs/lab*/bin
+решения/cs/task*/obj
+решения/cs/task*/bin
 *.suo
 java/postcard/out
 java/postcard/.idea/workspace.xml

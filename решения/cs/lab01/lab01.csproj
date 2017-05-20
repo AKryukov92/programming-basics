@@ -7,7 +7,7 @@
     <ProjectGuid>{813D15D5-7109-4855-BFDC-E7ADE3365D9F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>lab01</RootNamespace>
+    <RootNamespace>tfa</RootNamespace>
     <AssemblyName>lab01</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

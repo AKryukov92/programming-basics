@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace lab01
+namespace tfa
 {
-    class Lab01
+    public class Lab01
     {
         static void Main(string[] args)
         {
@@ -132,12 +132,12 @@ namespace lab01
                 "</html>");
         }
 
-        static void task1860(String a)
+        public static void task1860(String a)
         {
             Console.WriteLine("Мы стремимся к " + a);
         }
 
-        static void task4764(String a)
+        public static void task4764(String a)
         {
             Console.WriteLine(a + " нас не остановят!");
         }

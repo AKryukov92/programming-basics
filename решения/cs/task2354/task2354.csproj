@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F71B4BA2-A45B-4330-8543-5F6BBF5AA30D}</ProjectGuid>
+    <ProjectGuid>{C201B96D-2D13-4F23-A7A3-84252CEBC784}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>tfa</RootNamespace>
-    <AssemblyName>lab02</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyName>task2354</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,8 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lab02.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lab02\lab02.csproj">
+      <Project>{f71b4ba2-a45b-4330-8543-5f6bbf5aa30d}</Project>
+      <Name>lab02</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lab03\lab05.csproj">
+      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
+      <Name>lab05</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lab06\lab06.csproj">
+      <Project>{0093e7c9-5d51-4aa2-9540-6b67b434a3d2}</Project>
+      <Name>lab06</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lab07\lab07.csproj">
+      <Project>{cd564d7c-0978-4fe7-ad8f-509050c29929}</Project>
+      <Name>lab07</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lab08\lab08.csproj">
+      <Project>{495680cc-053d-4b06-8a08-055c423c6393}</Project>
+      <Name>lab08</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

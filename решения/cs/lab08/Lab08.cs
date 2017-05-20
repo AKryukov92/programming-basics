@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab08
+namespace tfa
 {
-    class Lab08
+    public class Lab08
     {
         static void Main(string[] args)
         {
