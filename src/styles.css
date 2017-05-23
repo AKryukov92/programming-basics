@@ -33,7 +33,7 @@ sqrt:before {
 .check_values td:first-child{
 	width:40px;
 }
-ol {
+.lab_nav ol {
 	list-style:none;
 }
 .nav {
