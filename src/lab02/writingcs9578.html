@@ -1,12 +1,13 @@
 <div id="writing9578" class="task_block">
 	<div class="task_id">9578</div>
 	<h3>Письменное задание</h3>
-	<div class="task_desc">Оформить данный код наименьшим количеством строк не нарушив его логику.</div>
+	<div class="task_desc">Определите в каждой строчке, одинаков ли результат работы программы слева и программы справа. Подберите не менее трех проверочных значений и сравните результаты.</div>
 	<table class="check_values">
 		<tr>
 			<th>Номер по порядку</th>
-			<th>Исходный код</th>
-			<th>Результат</th>
+			<th>Программа слева</th>
+			<th>Программа справа</th>
+			<th>Метка</th>
 		</tr>
 		<tr>
 			<td></td>
@@ -15,7 +16,10 @@ t = Console.ReadLine();
 double x;
 x = double.Parse(t);
 Console.WriteLine(x);</td>
-			<td class="preformatted">Console.WriteLine("{0:F4}", double.Parse(Console.ReadLine()));</td>
+			<td class="preformatted">String t = Console.ReadLine();
+double x = double.Parse(t);
+Console.WriteLine(x);</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -28,6 +32,12 @@ y1 = x * Math.PI;
 y2 = y1 / 180;
 y3 = Math.Tan(y2);
 Console.WriteLine("{0:F4}", y3);</td>
+			<td class="preformatted">String t = Console.ReadLine();
+double x = double.Parse(t);
+double y1 = x * Math.PI;
+double y2 = y1 / 180;
+double y3 = Math.Sin(y2);
+Console.WriteLine("{0:F4}", y3);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -39,6 +49,11 @@ p = int.Parse(t);
 int q1, q2;
 q1 = p * 17;
 q2 = q1 - 3;
+Console.WriteLine("{0}", q2);</td>
+			<td class="preformatted">String t = Console.ReadLine();
+int p = int.Parse(t);
+int q1 = p * 17;
+int q2 = q1 - 3;
 Console.WriteLine("{0}", q2);</td>
 			<td></td>
 		</tr>
@@ -57,6 +72,14 @@ z4 = Math.Sqrt(z2);
 z5 = 1 / z3;
 z6 = z5 + z4;
 Console.WriteLine("{0:F4}", z6);</td>
+			<td class="preformatted">double x, y;
+double z1, z2, z3;
+x = double.Parse(Console.ReadLine());
+y = double.Parse(Console.ReadLine());
+z1 = Math.Sqrt(x - 13);
+z2 = Math.Sqrt(17 - y);
+z3 = 1 / (z1 + z2);
+Console.WriteLine("{0:F4}", z3);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -72,6 +95,13 @@ z2 = z1 * Math.PI;
 z3 = z2 / 180;
 z4 = Math.Sin(z3);
 Console.WriteLine("{0:F4}", z4);</td>
+			<td class="preformatted">double x, y, z1, z2, z3;
+x = double.Parse(Console.ReadLine());
+y = double.Parse(Console.ReadLine());
+z1 = x + y;
+z2 = z1 * Math.PI / 180;
+z3 = Math.Sin(z2);
+Console.WriteLine("{0:F4}", z3);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -83,6 +113,9 @@ y1 = 4 * Math.PI;
 y2 = y1 * x;
 y3 = y2 * x;
 Console.WriteLine("{0:F4}", y3);</td>
+			<td class="preformatted">double x = double.Parse(Console.ReadLine());
+double y1 = 4 * Math.PI * x * x * x;
+Console.WriteLine("{0:F4}", y1);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -97,6 +130,9 @@ b2 = b1 * a;
 b3 = b2 % 11;
 b4 = b3 + 13;
 Console.WriteLine("{0}", b4);</td>
+			<td class="preformatted">int a = int.Parse(Console.ReadLine());
+int b1 = a * a * a % 11 + 13;
+Console.WriteLine("{0}", b1);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -114,6 +150,14 @@ n3 = 1 / c;
 n4 = n1 + n2;
 n5 = n4 + n3;
 Console.WriteLine("{0:F6}", n5);</td>
+			<td class="preformatted">String t;
+t = Console.ReadLine();
+double a = double.Parse(t);
+double b = double.Parse(t + "0");
+double c = double.Parse(t + "00");
+double n4 = 1 / a + 1 / b;
+double n5 = n4 + 1 / c;
+Console.WriteLine("{0:F6}", n5);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -130,6 +174,10 @@ n3 = 3 * k;
 n4 = n3 / p;
 n5 = n2 + n4;
 Console.WriteLine("{0}", n5);</td>
+			<td class="preformatted">int k = int.Parse(Console.ReadLine());
+int p = int.Parse(Console.ReadLine());
+int n = 1 / k - p + 3 * k / p;
+Console.WriteLine("{0}", n);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -147,6 +195,12 @@ n1 = a + b;
 n2 = b + c;
 n3 = n1 / n2;
 Console.WriteLine("{0:F6}", n3);</td>
+			<td class="preformatted">double a, b, c;
+a = double.Parse(Console.ReadLine());
+b = double.Parse(Console.ReadLine());
+c = double.Parse(Console.ReadLine());
+double n = (a + b) / (b + c);
+Console.WriteLine("{0:F6}", n);</td>
 			<td></td>
 		</tr>
 	</table>

@@ -1,12 +1,13 @@
 <div id="writing9578" class="task_block">
 	<div class="task_id">9578</div>
 	<h3>Письменное задание</h3>
-	<div class="task_desc">Оформить данный код наименьшим количеством строк не нарушив его логику.</div>
+	<div class="task_desc">Определите в каждой строчке, одинаков ли результат работы программы слева и программы справа. Подберите не менее трех проверочных значений и сравните результаты.</div>
 	<table class="check_values">
 		<tr>
 			<th>Номер по порядку</th>
-			<th>Исходный код</th>
-			<th>Результат</th>
+			<th>Программа слева</th>
+			<th>Программа справа</th>
+			<th>Метка</th>
 		</tr>
 		<tr>
 			<td></td>
@@ -15,8 +16,9 @@ var t = in_t.value;
 var x = parseFloat(t);
 var div_out = document.getElementById("out");
 div_out.innerHTML = x.toFixed(4);</td>
-			<td class="preformatted">document.getElementById("out").innerHTML = 
-    parseFloat(document.getElementById("t").value).toFixed(4);</td>
+			<td class="preformatted">var t = document.getElementById("t").value;
+var x = parseFloat(t);
+document.getElementById("out").innerHTML = x.toFixed(4);</td>
 		</tr>
 		<tr>
 			<td></td>
@@ -28,6 +30,11 @@ var y2 = y1 / 180;
 var y3 = Math.tan(y2);
 var div_out = document.getElementById("out");
 div_out.innerHTML = y3.toFixed(4);</td>
+			<td class="preformatted">var t = document.getElementById("t").value;
+var x = parseFloat(t);
+var y1 = x * Math.PI / 180;
+var y2 = Math.sin(y1);
+document.getElementById("out").innerHTML = y3.toFixed(4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -39,6 +46,11 @@ var q1 = p * 17;
 var q2 = q1 - 3;
 var div_out = document.getElementById("out");
 div_out.innerHTML = q2;</td>
+			<td class="preformatted">var t = document.getElementById("t").value;
+var p = parseInt(t);
+var q1 = p * 17;
+var q2 = q1 - 3;
+document.getElementById("out").innerHTML = q2;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -57,7 +69,15 @@ z4 = Math.sqrt(z2);
 z5 = 1 / z3;
 z6 = z5 + z4;
 var div_out = document.getElementById("out");
-div_out.innerHTML = z6;</td>
+div_out.innerHTML = z6.toFixed(4);</td>
+			<td class="preformatted">var x, y;
+var z1, z2, z3;
+x = parseFloat(document.getElementById("t1").value);
+y = parseFloat(document.getElementById("t2").value);
+z1 = Math.sqrt(x - 13);
+z2 = Math.sqrt(17 - y);
+z3 = 1 / (z1 + z2);
+document.getElementById("out").innerHTML = z3.toFixed(4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -74,7 +94,14 @@ z2 = z1 * Math.PI;
 z3 = z2 / 180;
 z4 = Math.sin(z3);
 var div_out = document.getElementById("out");
-div_out.innerHTML = z4;</td>
+div_out.innerHTML = z4.toFixed(4);</td>
+			<td class="preformatted">var x, y, z1, z2, z3, z4;
+x = parseFloat(document.getElementById("t1").value);
+y = parseFloat(document.getElementById("t2").value);
+z1 = x + y;
+z2 = z1 * Math.PI / 180;
+z4 = Math.sin(z2);
+document.getElementById("out").innerHTML = z4.toFixed(4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -87,7 +114,11 @@ y1 = 4 * Math.PI;
 y2 = y1 * x;
 y3 = y2 * x;
 var div_out = document.getElementById("out");
-div_out.innerHTML = y3;</td>
+div_out.innerHTML = y3.toFixed(4);</td>
+			<td class="preformatted">var t = document.getElementById("t").value;
+var x = parseFloat(document.getElementById("t").value);
+var y = 4 * Math.PI * x * x * x;
+document.getElementById("out").innerHTML = y3.toFixed(4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -102,6 +133,9 @@ b3 = b2 % 11;
 b4 = b3 + 13;
 var div_out = document.getElementById("out");
 div_out.innerHTML = b4;</td>
+			<td class="preformatted">var a = parseInt(document.getElementById("t").value);
+var b1 = a * a * a % 11 + 13;
+document.getElementById("out").innerHTML = b4;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -120,6 +154,13 @@ n4 = n1 + n2;
 n5 = n4 + n3;
 var div_out = document.getElementById("out");
 div_out.innerHTML = n5;</td>
+			<td class="preformatted">var t = document.getElementById("t").value;
+var a = parseInt(t);
+var b = parseInt(t + "0");
+var c = parseInt(t + "00");
+var n4 = 1 / a + 1 / b;
+var n5 = n4 + 1 / c;
+document.getElementById("out").innerHTML = n5;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -139,6 +180,10 @@ n4 = n3 / p;
 n5 = n2 + n4;
 var div_out = document.getElementById("out");
 div_out.innerHTML = n5;</td>
+			<td class="preformatted">var k = parseInt(document.getElementById("t1").value);
+var p = parseInt(document.getElementById("t2").value);
+var n = 1 / k - p + 3 * k / p;
+document.getElementById("out").innerHTML = n5;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -160,6 +205,12 @@ n2 = b + c;
 n3 = n1 / n2;
 var div_out = document.getElementById("out");
 div_out.innerHTML = n3;</td>
+			<td class="preformatted">var a, b, c;
+a = parseFloat(document.getElementById("t1").value);
+b = parseFloat(document.getElementById("t2").value);
+c = parseFloat(document.getElementById("t3").value);
+var n = (a + b) / (b + c);
+document.getElementById("out").innerHTML = n;</td>
 			<td></td>
 		</tr>
 	</table>

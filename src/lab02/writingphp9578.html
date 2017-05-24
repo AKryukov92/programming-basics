@@ -1,7 +1,7 @@
 <div id="writing9578" class="task_block">
 	<div class="task_id">9578</div>
 	<h3>Письменное задание</h3>
-	<div class="task_desc">Оформить данный код наименьшим количеством строк не нарушив его логику.</div>
+	<div class="task_desc">Определите в каждой строчке, одинаков ли результат работы программы слева и программы справа. Подберите не менее трех проверочных значений и сравните результаты.</div>
 	<table class="check_values">
 		<tr>
 			<th>Номер по порядку</th>
@@ -10,10 +10,12 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td class="preformatted">$y = GET["x"];
-$x = (float)$y;
-echo round($x,4);</td>
-			<td class="preformatted">echo round((float)$_GET["x"],4);</td>
+			<td class="preformatted">$t = $_GET["x"];
+$x = (float)$t;
+echo round($x, 4);</td>
+			<td class="preformatted">$x = (float)$_GET["x"];
+echo round($x, 4);</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -22,7 +24,12 @@ $x = (float)$t;
 $y1 = $x * pi();
 $y2 = $y1 / 180;
 $y3 = tan($y2);
-echo round($y3,4);</td>
+echo round($y3, 4);</td>
+			<td class="preformatted">$x = (float)$_GET["x"];
+$y1 = $x * pi();
+$y2 = $y1 / 180;
+$y3 = sin($y2);
+echo round($y3, 4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -31,7 +38,11 @@ echo round($y3,4);</td>
 $p = (int)$t;
 $q1 = $p * 17;
 $q2 = $q1 - 3;
-echo round($q2,4);</td>
+echo $q2;</td>
+			<td class="preformatted">$p = (int)$_GET["p"];
+$q1 = $p * 17;
+$q2 = $q1 - 3;
+echo $q2;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -46,7 +57,13 @@ $z3 = sqrt($z1);
 $z4 = sqrt($z2);
 $z5 = 1 / $z3;
 $z6 = $z5 + $z4;
-echo round($z6,4);</td>
+echo round($z6, 4);</td>
+			<td class="preformatted">$x = (float) $_GET["x"];
+$y = (float) $_GET["y"];
+$z1 = sqrt($x - 13);
+$z2 = sqrt(17 - $y);
+$z3 = 1 / ($z1 + $z2);
+echo round($z3, 4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -60,6 +77,12 @@ $z2 = $z1 * pi();
 $z3 = $z2 / 180;
 $z4 = sin($z3);
 echo round($z4,4);</td>
+			<td class="preformatted">$x = (float) $_GET["x"];
+$y = (float) $_GET["y"];
+$z1 = $x + $y;
+$z2 = $z1 * pi() / 180;
+$z3 = sin($z3);
+echo round($z3, 4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -70,6 +93,9 @@ $y1 = 4 * pi();
 $y2 = $y1 * $x;
 $y3 = $y2 * $x;
 echo round($y3,4);</td>
+			<td class="preformatted">$x = (float) $_GET["x"];
+$y = 4 * pi() * x * x * x;
+echo round($y, 4);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -81,6 +107,9 @@ $b2 = $b1 * $a;
 $b3 = $b2 % 11;
 $b4 = $b3 + 13;
 echo round($b4,4);</td>
+			<td class="preformatted">$a = (int) $_GET["a"];
+$b1 = $a * $a * $a % 11 + 13;
+echo $b1;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -94,7 +123,14 @@ $n2 = 1 / $b;
 $n3 = 1 / $c;
 $n4 = $n1 + $n2;
 $n5 = $n4 + $n3;
-echo round($n5,4);</td>
+echo round($n5, 6);</td>
+			<td class="preformatted">$t = $_GET["t"];
+$a = (float) $t;
+$b = (float) ($t + "0");
+$c = (float) ($t + "00");
+$n4 = 1 / $a + 1 / $b;
+$n5 = $n4 + 1 / $c;
+echo round($n5, 6);</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -109,6 +145,10 @@ $n3 = 3 * $k;
 $n4 = $n3 / $p;
 $n5 = $n2 + $n4;
 echo $n5;</td>
+			<td class="preformatted">$k = (int) $_GET["k"];
+$p = (int) $_GET["p"];
+$n = 1 / $k - $p + 3 * $k / $p;
+echo $n;</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -123,6 +163,11 @@ $n1 = $a + $b;
 $n2 = $b + $c;
 $n3 = $n1 / $n2;
 echo round($n3,6);</td>
+			<td class="preformatted">$a = (float) $_GET["a"];
+$b = (float) $_GET["b"];
+$c = (float) $_GET["c"];
+$n = ($a + $b) / ($b + $c);
+echo round($n, 6);</td>
 			<td></td>
 		</tr>
 	</table>
