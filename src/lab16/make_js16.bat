@@ -19,7 +19,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_js.html>> %filename%
@@ -27,7 +27,7 @@ type ..\nav_js.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#info1"^>И 1^</a^>^</li^> ^
+ ^<li^>^<a href="#info1"^>справка^</a^>^</li^> ^
  ^<li^>^<a href="#task4304"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task2070"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task7693"^>№ 3^</a^>^</li^> ^

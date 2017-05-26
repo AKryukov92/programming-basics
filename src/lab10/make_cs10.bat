@@ -27,9 +27,8 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#info1"^>И 1^</a^>^</li^> ^
- ^<li^>^<a href="#info2"^>И 2^</a^>^</li^> ^
+ ^<li^>^<a href="#info1"^>справка 1^</a^>^</li^> ^
+ ^<li^>^<a href="#info2"^>справка 2^</a^>^</li^> ^
  ^<li^>^<a href="#task9300" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3951" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task7343"^>№ 3^</a^>^</li^> ^
@@ -44,8 +43,6 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6812"^>№ 12^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
 
 echo ^<div class="section"^>>>%filename%
 

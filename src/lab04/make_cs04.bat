@@ -20,7 +20,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
  ^<h2^>%title%^</h2^>>> %filename%
 
@@ -38,16 +38,12 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
-echo ^<div class="section"^>>>%filename%
-
 type task6912.html>>%filename%
 type task6598.html>>%filename%
 type task3093.html>>%filename%
 type task8805.html>>%filename%
 type task8158.html>>%filename%
 type task6499.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

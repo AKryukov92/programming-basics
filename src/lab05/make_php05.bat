@@ -19,7 +19,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>>%filename%
 
 type ..\nav_php.html>> %filename%
@@ -27,13 +27,6 @@ type ..\nav_php.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing3587"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing2217"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#writing1824"^>П 3^</a^>^</li^> ^
- ^<li^>^<a href="#writing2564"^>П 4^</a^>^</li^> ^
- ^<li^>^<a href="#writing8487"^>П 5^</a^>^</li^> ^
- ^<li^>^<a href="#writing8045"^>П 6^</a^>^</li^> ^
  ^<li^>^<a href="#task8878" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3072" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task5980" class="example"^>№ 3^</a^>^</li^> ^
@@ -47,12 +40,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task8715" class="example"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task8518" class="supervision"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task4847"^>№ 13^</a^>^</li^> ^
- ^</ul^> ^
- ^<ul^> ^
  ^<li^>^<a href="#task7991"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task6291"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task3770"^>№ 16^</a^>^</li^> ^
  ^<li^>^<a href="#task7178"^>№ 17^</a^>^</li^> ^
+ ^</ul^> ^
+ ^<ul^> ^
  ^<li^>^<a href="#task3883" class="supervision"^>№ 18^</a^>^</li^> ^
  ^<li^>^<a href="#task1999"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task4042"^>№ 20^</a^>^</li^> ^
@@ -72,21 +65,6 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7937"^>№ 34^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
-
-echo ^<div class="section"^>>>%filename%
-
-type writingphp3587.html>>%filename%
-type writingphp2217.html>>%filename%
-type writing1824.html>>%filename%
-type writingphp2564.html>>%filename%
-type writingphp8487.html>>%filename%
-type writing8045.html>>%filename%
-
-echo ^</div^>>>%filename%
-
-echo ^<div class="section"^>>>%filename%
 
 type task8878.html>>%filename%
 type task3072.html>>%filename%
@@ -122,8 +100,6 @@ type task1217.html>>%filename%
 type task1438.html>>%filename%
 type task2153.html>>%filename%
 type task7937.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

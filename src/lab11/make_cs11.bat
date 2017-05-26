@@ -28,8 +28,7 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#info1"^>И 1^</a^>^</li^> ^
+ ^<li^>^<a href="#info1"^>справка^</a^>^</li^> ^
  ^<li^>^<a href="#task9299"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task7560"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task9002"^>№ 3^</a^>^</li^> ^

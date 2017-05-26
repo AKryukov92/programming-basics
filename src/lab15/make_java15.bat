@@ -19,7 +19,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
@@ -27,7 +27,6 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
  ^<li^>^<a href="#task8787"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task5087" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task9990"^>№ 3^</a^>^</li^> ^
@@ -35,18 +34,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7657"^>№ 5^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
-
-echo ^<div class="section"^>>>%filename%
 
 type taskjava8787.html>>%filename%
 type task5087.html>>%filename%
 type task9990.html>>%filename%
 type task9924.html>>%filename%
 type task7657.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

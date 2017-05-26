@@ -19,7 +19,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
@@ -27,11 +27,6 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing2885"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing9931"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#writing1947"^>П 3^</a^>^</li^> ^
- ^<li^>^<a href="#writing9696"^>П 4^</a^>^</li^> ^
  ^<li^>^<a href="#task4425" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task5683" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task1223"^>№ 3^</a^>^</li^> ^
@@ -41,11 +36,11 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3134" class="supervision"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task9774"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task9711"^>№ 9^</a^>^</li^> ^
- ^</ul^> ^
- ^<ul^> ^
  ^<li^>^<a href="#task3333"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task8820"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task7290"^>№ 12^</a^>^</li^> ^
+ ^</ul^> ^
+ ^<ul^> ^
  ^<li^>^<a href="#task5694" class="supervision"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task6806"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task4515"^>№ 15^</a^>^</li^> ^
@@ -60,19 +55,6 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task9182"^>№ 24^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
-
-echo ^<div class="section"^>>>%filename%
-
-type writing2885.html>>%filename%
-type writing9931.html>>%filename%
-type writing1947.html>>%filename%
-type writing9696.html>>%filename%
-
-echo ^</div^>>>%filename%
-
-echo ^<div class="section"^>>>%filename%
 
 type task4425.html>>%filename%
 type task5683.html>>%filename%
@@ -98,8 +80,6 @@ type task4283.html>>%filename%
 type task7703.html>>%filename%
 type task5541.html>>%filename%
 type task9182.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

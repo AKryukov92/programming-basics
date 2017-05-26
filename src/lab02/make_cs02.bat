@@ -20,7 +20,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
  ^<h2^>%title%^</h2^>>> %filename%
 
@@ -29,11 +29,6 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing8569"^>П 1^</a^>^</li^> ^
- ^<li^>^<a href="#writing3730"^>П 2^</a^>^</li^> ^
- ^<li^>^<a href="#writing9007"^>П 3^</a^>^</li^> ^
- ^<li^>^<a href="#writing9578"^>П 4^</a^>^</li^> ^
  ^<li^>^<a href="#task4411" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task9298" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task3354"^>№ 3^</a^>^</li^> ^
@@ -50,10 +45,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task1934"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task7237"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task3943"^>№ 16^</a^>^</li^> ^
- ^</ul^> ^
- ^<ul^> ^
  ^<li^>^<a href="#task7619"^>№ 17^</a^>^</li^> ^
  ^<li^>^<a href="#task3832"^>№ 18^</a^>^</li^> ^
+ ^</ul^> ^
+ ^<ul^> ^
  ^<li^>^<a href="#task1346"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task9622"^>№ 20^</a^>^</li^> ^
  ^<li^>^<a href="#task8873"^>№ 21^</a^>^</li^> ^
@@ -75,19 +70,6 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6522"^>№ 37^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quiz.html>> %filename%
-
-echo ^<div class="section"^>>>%filename%
-
-type writingcs8569.html>>%filename%
-type writingcs3730.html>>%filename%
-type writing9007.html>>%filename%
-type writingcs9578.html>>%filename%
-
-echo ^</div^>>>%filename%
-
-echo ^<div class="section"^>>>%filename%
 
 type task4411.html>>%filename%
 type task9298.html>>%filename%
@@ -126,8 +108,6 @@ type task3558.html>>%filename%
 type task4366.html>>%filename%
 type task5789.html>>%filename%
 type task6522.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

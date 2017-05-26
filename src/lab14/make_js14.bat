@@ -19,7 +19,7 @@ type ..\styles.css >> %filename%
 
 echo ^</style^> ^
  ^</head^> ^
- ^<body^> ^
+ ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_js.html>> %filename%
@@ -27,8 +27,6 @@ type ..\nav_js.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#writing5463"^>П 1^</a^>^</li^> ^
  ^<li^>^<a href="#task8403" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3185" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task9914"^>№ 3^</a^>^</li^> ^
@@ -45,16 +43,6 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3956"^>№ 14^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
- 
-type quizjs.html>> %filename%
-
-echo ^<div class="section"^>>>%filename%
-
-type writingjs5463.html>>%filename%
-
-echo ^</div^>>>%filename%
-
-echo ^<div class="section"^>>>%filename%
 
 type taskjs8403.html>>%filename%
 type taskjs3185.html>>%filename%
@@ -70,8 +58,6 @@ type taskjs2000.html>>%filename%
 type taskjs4147.html>>%filename%
 type taskjs1953.html>>%filename%
 type taskjs3956.html>>%filename%
-
-echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
