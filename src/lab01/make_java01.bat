@@ -60,4 +60,6 @@ type task4343.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
+copy "Письменные задания к ЛР1.docx" "..\..\java\Письменные задания к ЛР1.docx"
+
 if x%1==x start "" %filename%
