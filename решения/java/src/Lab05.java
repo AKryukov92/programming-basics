@@ -234,8 +234,8 @@ public class Lab05 {
 
         System.out.println();
         System.out.println("2291");
-        double[] in2291v1 = {0.004, 0.0013, -0.0006, 0.1004};
-        int[] in2291v2 = {13000, 5000, 3989, -2891};
+        double[] in2291v1 = { 60.5, 17950, -0.6, 0.1004 };
+        double[] in2291v2 = { 16.8, 5000, 0.2, -0.028 };
         for (int i = 0; i < in2291v1.length; i++){
             try {
                 if (task2291(in2291v1[i], in2291v2[i])){
@@ -267,8 +267,8 @@ public class Lab05 {
 
         System.out.println();
         System.out.println("1945");
-        int[] in1945sc = {17, 13, -20, 300};
-        int[] in1945ss = {19, 19, 4, -200};
+        int[] in1945sc = {17, 13, 7854, 5808, -20, 300};
+        int[] in1945ss = {19, 19, 8100, 8100, 4, -200};
         for (int i = 0; i < in1945sc.length; i++) {
             try {
                 if (task1945(in1945sc[i], in1945ss[i])) {
@@ -567,7 +567,7 @@ public class Lab05 {
         if (v2 < 0){
             throw new Exception("Значение V2 должно быть неотрицательным");
         }
-        return v1 * 1000 * 60 * 60 < v2;
+        return v1 * 1000 / 60 / 60 < v2;
     }
 
     public static boolean task1763(int r, int a) throws Exception {

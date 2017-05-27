@@ -12,8 +12,8 @@ for (var i = 0; i < in4257l.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in2291v1 = ["0.004", "0.0013", "-0.0006", "0.1004"];
-var in2291v2 = ["13000", "5000", "3989", "-2891"];
+var in2291v1 = ["60.5", "17950", "-0.6", "0.1004"];
+var in2291v2 = ["16.8", "5000", "0.2", "-0.028"];
 for (var i = 0; i < in2291v1.length; i++){
 	var out = document.getElementById("2291t" + i);
 	try {
@@ -40,8 +40,8 @@ for (var i = 0; i < in1763r.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in1945sc = ["17","13","-20","300"];
-var in1945ss = ["19","19","4","-200"];
+var in1945sc = ["17","13","7854","5808","-20","300"];
+var in1945ss = ["19","19","8100","8100","4","-200"];
 for (var i = 0; i < in1945sc.length; i++){
 	var out = document.getElementById("1945t" + i);
 	try {

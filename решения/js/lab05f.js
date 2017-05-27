@@ -38,7 +38,7 @@ function task2291(v1,v2){
 	if (v2 < 0){
 		throw new Error("Значение V2 должно быть неотрицательным");
 	}
-	return v1 * 1000 * 60 * 60 < v2;
+	return v1 * 1000 / 60 / 60 < v2;
 }
 function task1763(r,a) {
 	if (r < 0){
