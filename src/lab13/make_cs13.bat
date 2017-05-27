@@ -48,6 +48,8 @@ type task5081.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
+copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
+
 pushd ..\..\%lang%\
 mkdir files
 popd

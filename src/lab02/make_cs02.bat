@@ -112,7 +112,7 @@ type task6522.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР2 csharp.docx" "..\..\csharp\Письменные задания к ЛР2.docx"
+copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
 
 
 if x%1==x start "" %filename%

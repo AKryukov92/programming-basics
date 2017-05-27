@@ -71,6 +71,8 @@ echo ^</div^>>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
+copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
+
 pushd ..\..\%lang%\
 mkdir images
 popd
