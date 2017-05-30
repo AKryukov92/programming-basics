@@ -46,9 +46,59 @@ public class Lab06 {
         System.out.println();
         System.out.println("8696");
         System.out.println(task8696() - 69);
+
+        System.out.println();
+        System.out.println("2324");
+        String[] in2324 = {
+            "1 2 3 4 5 0",
+            "0",
+            "-1 -2 0",
+            "1 1 1 1 1 1 1 1 1 1 1 1 0"};
+        int[] out2324 = { 15, 0, -3, 12 };
+        for (int i = 0; i < in2324.length; i++)
+        {
+            int result = task2324(in2324[i]);
+            System.out.printf("%d (%d)\n", result, out2324[i]);
+        }
+        System.out.println();
+        System.out.println("8731");
+        String[] in8731 = {
+            "501 501",
+            "0 0 1001",
+            "400 400 200 1",
+            "190 190 190 190 190 190 190 190 190 190 190",
+            "130 130 130 130 130 130 130 130 130 130 130",
+            "129 179 89 155 188 163 94 66"};
+        int[] out8731 = { 2, 3, 4, 6, 8, 8 };
+        for (int i = 0; i < in8731.length; i++)
+        {
+            int result = task8731(in8731[i]);
+            System.out.printf("%d (%d)\n", result, out8731[i]);
+        }
+
+        System.out.println();
+        System.out.println("4082");
+        String[] in4082 = {
+            "10 20 100",
+            "300 400 100",
+            "1000 1000 83 150",
+            "1 1 1 1 1 1 1 1 199 90"
+        };
+        String[] out4082 = {
+            "Сумма слева: 30, сумма справа: 0",
+            "Сумма слева: 0, сумма справа: 700",
+            "Сумма слева: 83, сумма справа: 2000",
+            "Сумма слева: 8, сумма справа: 199"};
+        for (int i = 0; i < in4082.length; i++)
+        {
+            String result = task4082(in4082[i]);
+            System.out.println(result);
+            System.out.println(out4082[i]);
+        }
     }
 
     public static void task7649() {
+        System.out.println();
         System.out.println("8495");
         StringBuilder sb8495 = new StringBuilder();
         sb8495 = sb8495.append("@");
@@ -754,6 +804,65 @@ public class Lab06 {
             i++;
         }
         return sum;
+    }
+    public static int task2324(String str)
+    {
+        String[] raw = str.split(" ");
+        int sum = 0;
+        int i = 0;
+        int current;
+        do
+        {
+            current = Integer.parseInt(raw[i]);
+            sum += current;
+            i++;
+        }
+        while (current != 0);
+        return sum;
+    }
+
+    public static int task8731(String str)
+    {
+        String[] raw = str.split(" ");
+        int sum = 0;
+        int index = 0;
+        int current;
+        do
+        {
+            current = Integer.parseInt(raw[index]);
+            sum += current;
+            index++;
+        }
+        while (sum <= 1000);
+        return index;
+    }
+
+    public static String task4082(String str)
+    {
+        String[] raw = str.split(" ");
+        int leftSum = 0;
+        int rightSum = 0;
+        int current;
+        int i = 0;
+        do
+        {
+            current = Integer.parseInt(raw[i]);
+            if (current <= 83)
+            {
+                leftSum += current;
+            }
+            else if (current >= 199)
+            {
+                rightSum += current;
+            }
+            else
+            {
+                break;
+            }
+            i++;
+        }
+        while (true);
+        return String.format("Сумма слева: %d, сумма справа: %d", leftSum, rightSum);
     }
 
     public static long task6580(int a, int b){
