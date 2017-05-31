@@ -1,5 +1,5 @@
 <div class="task_block" id="task9701">
-	<div class="task_id">9701</div>
+    <div class="task_id">9701</div>
     <h3>Задача</h3>
     <div class="task_desc">Нужно реализовать метод для решения указанных задач. Вывод в консоль реализуется вызывающей программой. Проверить с помощью соответствующей программы для вызова.</div>
     <div class="check_single preformatted">public class Caller9701 {
@@ -137,14 +137,14 @@ for (int i = 0; i &lt; in2624a.Length; i++)
         <tr>
             <td></td>
             <td><a href="[2] лаб. ОСАЛП.html#task5871" target="_blank">ЛР2№5871 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">double[] in5871 = { 6911, 3, 0.9 };
-double[] outs5871 = { 1.0, 0.9856, 0 };
+            <td class="preformatted">double[] in5871 = { 6911, 5, 6, 2, 0, -4};
+double[] outs5871 = { 1.0, 0.707107, 0.881127, -1, -1, -1 };
 for (int i = 0; i &lt; in5871.Length; i++)
 {
     try
     {
-        double r = task5871(in5871[i]);
-        Console.WriteLine("{0:F6} ({1:F6})", r, outs5871[i]);
+        double result = task5871(in5871[i]);
+        Console.WriteLine("{0:F6} ({1:F6})", result, outs5871[i]);
     }
     catch (Exception e)
     {
@@ -152,8 +152,11 @@ for (int i = 0; i &lt; in5871.Length; i++)
     }
 }</td>
             <td class="preformatted">1,000000 (1,000000)
-0,985599 (0,985600)
-Значение X должно быть не меньше 1</td>
+0,707107 (0,707107)
+0,881127 (0,881127)
+Подкоренное выражение должно быть неотрицательным
+Подкоренное выражение должно быть неотрицательным
+Подкоренное выражение должно быть неотрицательным</td>
         </tr>
         <tr>
             <td></td>

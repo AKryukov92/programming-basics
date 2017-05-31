@@ -48,10 +48,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\lab03\lab05.csproj">
-      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
-      <Name>lab05</Name>
-    </ProjectReference>
     <ProjectReference Include="..\lab07\lab07.csproj">
       <Project>{cd564d7c-0978-4fe7-ad8f-509050c29929}</Project>
       <Name>lab07</Name>

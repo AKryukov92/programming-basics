@@ -42,11 +42,11 @@ function task2624(a,b,c,x){
 	return 1/Math.sqrt(root);
 }
 function task5871(x){
-	if (x < 1){
-		throw new Error("Значение X должно быть не меньше 1");
-	}
 	x = parseInt(x);
-	return (Math.sqrt(x+1)+Math.sqrt(x-1))/2/Math.sqrt(x);
+	if (x < 5){
+		throw new Error("Подкоренное выражение должно быть неотрицательным");
+	}
+	return (Math.sqrt(x+5)+Math.sqrt(x-5))/2/Math.sqrt(x);
 }
 function task3591(h){
 	if (h < 0){

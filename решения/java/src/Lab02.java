@@ -338,8 +338,8 @@ public class Lab02 {
 
         System.out.println();
         System.out.println("5871");
-        double[] in5871 = {6911, 3, 0.9};
-        double[] outs5871 = {1.0, 0.9856, 0};
+        double[] in5871 = { 6911, 5, 6, 2, 0, -4};
+        double[] outs5871 = { 1.0, 0.707107, 0.881127, -1, -1, -1 };
         for (int i = 0; i < in5871.length; i++){
             try {
                 double result = task5871(in5871[i]);
@@ -633,10 +633,10 @@ public class Lab02 {
     }
 
     public static double task5871(double x) throws Exception {
-        if (x < 1){
-            throw new Exception("Значение X должно быть не меньше 1");
+        if (x < 5){
+            throw new Exception("Подкоренное выражение должно быть неотрицательным");
         }
-        return (Math.sqrt(x+1)+Math.sqrt(x-1))/2/Math.sqrt(x);
+        return (Math.sqrt(x+5)+Math.sqrt(x-5))/2/Math.sqrt(x);
     }
 
     public static double task9164(int a, int b){

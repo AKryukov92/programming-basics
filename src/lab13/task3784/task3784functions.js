@@ -118,10 +118,10 @@ function validateInterval(i){
 	}
 }
 function task2153(t){
-	if (t > 60 || t <= 0){
+	if (t < 0 || 60 <= t){
 		throw new Error("Значение T должно быть в интервале [0, 59]");
 	}
-	return (t-1)%5 < 3;
+	return t%5 < 3;
 }
 function task5170(y){
 	y = parseInt(y);
