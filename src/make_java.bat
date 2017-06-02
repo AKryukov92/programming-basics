@@ -3,6 +3,7 @@ pushd ..\java
 rmdir files /s /q
 rmdir images /s /q
 del *.html
+del *.docx
 popd
 pushd lab01
 call make_java01 skip

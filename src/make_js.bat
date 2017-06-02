@@ -6,6 +6,7 @@ pushd ..\js
 rmdir files /s /q
 rmdir images /s /q
 del *.html
+del *.docx
 popd
 pushd lab01
 call make_js01 skip

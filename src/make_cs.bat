@@ -1,9 +1,14 @@
 @echo off
 pushd ..\csharp
 rmdir files /s /q
-rmdir images/s /q
+rmdir images /s /q
 del *.html
+del *.docx
+rmdir code-complete-citations /s /q
 popd
+mkdir "..\csharp\code-complete-citations\"
+copy code-complete-citations\*.html ..\csharp\code-complete-citations\*.html
+copy code-complete-citations\*.css ..\csharp\code-complete-citations\*.css
 pushd lab01
 call make_cs01 skip
 popd
