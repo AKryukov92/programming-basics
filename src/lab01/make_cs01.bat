@@ -29,7 +29,7 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#link_c1_p4.3"^>C1P4.3^</a^>^</li^> ^
+ ^<li^>^<a href="#link_c1_p4.3"^>Ч1Г4.3^</a^>^</li^> ^
  ^<li^>^<a href="#task1662" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task1860" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task4764" class="supervision"^>№ 3^</a^>^</li^> ^
@@ -38,7 +38,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3862" class="example"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task9231" class="supervision"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task8624"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#link_c3_p10.2"^>C3P10.2^</a^>^</li^> ^
+ ^<li^>^<a href="#link_c3_p10.2"^>Ч3Г10.2^</a^>^</li^> ^
  ^<li^>^<a href="#task2959"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task7271"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task2632"^>№ 11^</a^>^</li^> ^

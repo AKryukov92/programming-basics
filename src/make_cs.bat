@@ -8,7 +8,7 @@ rmdir code-complete-citations /s /q
 popd
 mkdir "..\csharp\code-complete-citations\"
 copy code-complete-citations\*.html ..\csharp\code-complete-citations\*.html
-copy code-complete-citations\*.css ..\csharp\code-complete-citations\*.css
+copy styles.css ..\csharp\code-complete-citations\styles.css
 pushd lab01
 call make_cs01 skip
 popd
