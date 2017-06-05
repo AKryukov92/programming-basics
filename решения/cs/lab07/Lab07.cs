@@ -87,7 +87,7 @@ namespace tfa
 
             Console.WriteLine();
             Console.WriteLine("9279");
-            String[] in9279 = { "ab", "bc", "ac", "cde", "a" };
+            String[] in9279 = { "ab", "bc", "ac", "xz", "cde", "a" };
             for (int i = 0; i < in9279.Length; i++)
             {
                 try
@@ -135,6 +135,24 @@ namespace tfa
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("7222");
+            String[] in7222 = {
+                "4607009520018",
+                "9785750200641",
+                "9785964300694",
+                "123456789012",
+                "12345678901234567890"
+            };
+            for (int i = 0; i < in7222.Length; i++) {
+                try {
+                    Console.WriteLine(task7222(in7222[i]));
+                    Console.WriteLine();
+                } catch (Exception e) {
                     Console.WriteLine(e.Message);
                 }
             }
@@ -311,6 +329,22 @@ namespace tfa
         public static bool task7491(String x)
         {
             return STR.Contains(x);
+        }
+
+        public static String task7222(String code)
+        {
+            if (code.Length != 13)
+            {
+                throw new Exception("Некорректная длина штрих-кода");
+            }
+            String country = code.Substring(0, 2);
+            String manufacturer = code.Substring(3, 3);
+            String product = code.Substring(7, 4);
+            String checksum = code.Substring(12, 1);
+            return "Код страны: " + country +
+                    "\nКод изготовителя: " + manufacturer +
+                    "\nКод товара: " + product +
+                    "\nКонтрольное число: " + checksum;
         }
 
         public static String task5923(int a, int b)

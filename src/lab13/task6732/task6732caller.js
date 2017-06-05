@@ -82,8 +82,8 @@ for (var i = 0; i < in5448s.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in5238w = ["5","4","0","7","-11","29"];
-var in5238h = ["5","5","5","0","4","-2"];
+var in5238w = ["5","4","3","0","7","-11","29"];
+var in5238h = ["5","5","5","5","0","4","-2"];
 for (var i = 0; i < in5238w.length; i++){
 	var out = document.getElementById("5238t" + i);
 	try {

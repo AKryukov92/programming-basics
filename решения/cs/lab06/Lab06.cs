@@ -589,8 +589,8 @@ namespace tfa
 
             Console.WriteLine();
             Console.WriteLine("5238");
-            int[] in5238w = { 5, 4, 0, 7, -11, 29 };
-            int[] in5238h = { 5, 5, 5, 0, 4, -2 };
+            int[] in5238w = { 5, 4, 3, 0, 7, -11, 29 };
+            int[] in5238h = { 5, 5, 5, 5, 0, 4, -2 };
             for (int i = 0; i < in5238w.Length; i++)
             {
                 try

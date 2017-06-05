@@ -1,60 +1,46 @@
 <div id="task7222" class="task_block empty_on_print">
 	<div class="task_id">7222</div>
 	<h3>Задача</h3>
-	<div class="task_desc">Дана фиксированная строка "abcdefwxyz". Пользователь вводит два символа CA и CB. Разбить строку на три части: от начала до CA (исключая CA), от CA до CB (включая CA, исключая CB), от CB до конца (включая CB). Результат вывести на отдельных строках.</div>
+	<div class="task_desc">Пользователь вводит цифры штрих кода в стандарте EAN-13. Расшифровать значение штрих кода.</div>
 	<table class="check_values">
 		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="2">Вводимые данные</th>
-			<th rowspan="2">Результат</th>
-		</tr>
-		<tr>
-			<th>CA</th>
-			<th>CB</th>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
 		</tr>
 		<tr>
 			<td></td>
-			<td>a</td>
-			<td>z</td>
-			<td class="preformatted">Часть 1:
-Часть 2: abcdefwxy
-Часть 3: z</td>
+			<td>4607009520018</td>
+			<td class="preformatted">Код страны: 46
+Код изготовителя: 700
+Код товара: 5200
+Контрольное число: 8</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>c</td>
-			<td>d</td>
-			<td class="preformatted">Часть 1: ab
-Часть 2: c
-Часть 3: defwxyz</td>
+			<td>9785750200641</td>
+			<td class="preformatted">Код страны: 97
+Код изготовителя: 575
+Код товара: 2006
+Контрольное число: 1</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>y</td>
-			<td>d</td>
-			<td class="preformatted">Часть 1: abc
-Часть 2: defwx
-Часть 3: yz</td>
+			<td>9785964300694</td>
+			<td class="preformatted">Код страны: 97
+Код изготовителя: 596
+Код товара: 3006
+Контрольное число: 4</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>w</td>
-			<td>w</td>
-			<td class="preformatted">Часть 1: abcdef
-Часть 2: 
-Часть 3: wxyz</td>
+			<td>123456789012</td>
+			<td class="preformatted">Некорректная длина штрих-кода</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>g</td>
-			<td>z</td>
-			<td>Значение CA отсутствует в строке</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>a</td>
-			<td>l</td>
-			<td>Значение CB отсутствует в строке</td>
+			<td>12345678901234567890</td>
+			<td class="preformatted">Некорректная длина штрих-кода</td>
 		</tr>
 	</table>
 </div>
