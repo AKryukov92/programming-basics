@@ -9,6 +9,7 @@ popd
 mkdir "..\csharp\code-complete-citations\"
 copy code-complete-citations\*.html ..\csharp\code-complete-citations\*.html
 copy styles.css ..\csharp\code-complete-citations\styles.css
+pause
 pushd lab01
 call make_cs01 skip
 popd

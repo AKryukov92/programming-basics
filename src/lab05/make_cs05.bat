@@ -27,6 +27,7 @@ type ..\nav_cs.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
+ ^<li^>^<a href="#link_c2_p8.1"^>Ч2Г8.1^</a^>^</li^> ^
  ^<li^>^<a href="#task8878" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3072" class="supervision"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task5980" class="example"^>№ 3^</a^>^</li^> ^
@@ -58,7 +59,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task4527"^>№ 27^</a^>^</li^> ^
  ^<li^>^<a href="#task6556"^>№ 28^</a^>^</li^> ^
  ^<li^>^<a href="#task5635"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#link_c2_p5.3"^>C2P5.3^</a^>^</li^> ^
+ ^<li^>^<a href="#link_c2_p5.3"^>Ч2Г5.3^</a^>^</li^> ^
  ^<li^>^<a href="#task3878"^>№ 30^</a^>^</li^> ^
  ^<li^>^<a href="#task1217"^>№ 31^</a^>^</li^> ^
  ^<li^>^<a href="#task1438"^>№ 32^</a^>^</li^> ^
@@ -67,6 +68,7 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
+type link_c2_p8.1.html>>%filename%
 type task8878.html>>%filename%
 type task3072.html>>%filename%
 type task5980.html>>%filename%
