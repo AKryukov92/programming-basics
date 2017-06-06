@@ -43,10 +43,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3669"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task5951"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task2802"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task6580"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task2324" class="supervision"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task8731"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task4082"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task2324" class="supervision"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task8731"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task4082"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task6580"^>№ 20^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
  ^<li^>^<a href="#task7585" class="supervision"^>№ 21^</a^>^</li^> ^
