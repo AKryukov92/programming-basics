@@ -17,8 +17,10 @@ sqrt:before {
 	counter-increment:section;
 	content: " " counter(section);
 }
-.check_values {
+table {
 	border-collapse:collapse;
+}
+.check_values {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -26,7 +28,7 @@ sqrt:before {
 	counter-increment:test_case;
 	content: counter(test_case);
 }
-.check_values td, .check_values th {
+table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
