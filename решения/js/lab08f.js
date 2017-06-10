@@ -177,6 +177,54 @@ function task6806(x){
 	}
 	return ret;
 }
+function task7369(leftRaw, topRaw){
+	if (leftRaw == ""){
+		return "Данные слева отсутствуют";
+	}
+	if(topRaw == ""){
+		return "Данные сверху отсутствуют";
+	}
+	var leftArr = leftRaw.split(" ");
+	var topArr = topRaw.split(" ");
+	var sb = "  ";
+	sb += topRaw;
+	sb += "\n";
+	for (var i = 0; i < leftArr.length; i++){
+		sb += leftArr[i];
+		for (var j = 0; j < topArr.length; j++){
+			if(leftArr[i] == topArr[j]){
+				sb += " +";
+			} else {
+				sb += "  ";
+			}
+		}
+		sb += "|\n";
+	}
+	sb += " ";
+	for(var i = 0; i < topArr.length;i++){
+		sb += "--";
+	}
+	return sb.toString();
+}
+function task5894(leftRaw, topRaw) {
+	if (leftRaw == ""){
+		throw new Error("Данные слева отсутствуют");
+	}
+	if(topRaw == ""){
+		throw new Error("Данные сверху отсутствуют");
+	}
+	var count = 0;
+	var leftArr = leftRaw.split(" ");
+	var topArr = topRaw.split(" ");
+	for (var i = 0; i < leftArr.length; i++){
+		for (var j = 0; j < topArr.length; j++){
+			if(leftArr[i] == topArr[j]){
+				count++;
+			}
+		}
+	}
+	return count;
+}
 function task4515(raw){
 	var arr = raw.split(" ");
 	for (var i = 0; i < arr.length; i++){

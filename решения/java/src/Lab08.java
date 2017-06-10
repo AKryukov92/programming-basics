@@ -13,6 +13,51 @@ public class Lab08 {
         task7649();
         task8787();
         task9707();
+        System.out.println();
+        System.out.println("7369");
+        String[] in7369top = {
+            "q a z w s x",
+            "e d c",
+            "a a a a",
+            "r f v",
+            ""
+        };
+        String[] in7369left = {
+            "q w e",
+            "a s d f g h j",
+            "a a a a",
+            "",
+            "z x c v"
+        };
+        for (int i = 0; i < in7369left.length; i++){
+            String result = task7369(in7369left[i], in7369top[i]);
+            System.out.println(result);
+        }
+
+        System.out.println();
+        System.out.println("5894");
+        String[] in5894top = {
+            "q a z",
+            "qw fg hj ty kl",
+            "oiuy hjkl vbmn",
+            "a s d f",
+            ""
+        };
+        String[] in5894left = {
+            "q w e",
+            "qw er ty ui op",
+            "asdf ghjk",
+            "",
+            "zxc vbn"
+        };
+        for (int i = 0; i < in5894left.length; i++){
+            try {
+                int result = task5894(in5894left[i], in5894top[i]);
+                System.out.println("Повторений: " + result);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public static void task2354() {
@@ -638,6 +683,57 @@ public class Lab08 {
             sb.append("\n");
         }
         return sb;
+    }
+
+    public static String task7369(String leftRaw, String topRaw){
+        if (leftRaw.isEmpty()){
+            return "Данные слева отсутствуют";
+        }
+        if(topRaw.isEmpty()){
+            return "Данные сверху отсутствуют";
+        }
+        StringBuilder sb = new StringBuilder();
+        String[] leftArr = leftRaw.split(" ");
+        String[] topArr = topRaw.split(" ");
+        sb.append("  ");
+        sb.append(topRaw);
+        sb.append("\n");
+        for (int i = 0; i < leftArr.length; i++){
+            sb.append(leftArr[i]);
+            for (int j = 0; j < topArr.length; j++){
+                if(leftArr[i].equals(topArr[j])){
+                    sb.append(" +");
+                } else {
+                    sb.append("  ");
+                }
+            }
+            sb.append("|\n");
+        }
+        sb.append(" ");
+        for(int i = 0; i < topArr.length;i++){
+            sb.append("--");
+        }
+        return sb.toString();
+    }
+
+    public static int task5894(String leftRaw, String topRaw) throws Exception {
+        if (leftRaw.isEmpty()){
+            throw new Exception("Данные слева отсутствуют");
+        }
+        if(topRaw.isEmpty()){
+            throw new Exception("Данные сверху отсутствуют");
+        }
+        int count = 0;
+        String[] leftArr = leftRaw.split(" ");
+        String[] topArr = topRaw.split(" ");
+        for (int i = 0; i < leftArr.length; i++){
+            for (int j = 0; j < topArr.length; j++){
+                if(leftArr[i].equals(topArr[j])){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public static boolean task4515(String raw){

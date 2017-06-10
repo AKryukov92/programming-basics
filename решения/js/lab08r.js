@@ -106,6 +106,47 @@ for (var i = 0; i < in6806.length; i++){
 	var out = document.getElementById("6806t" + i);
 	out.innerHTML = task6806(in6806[i]);
 }
+var in7369top = [
+	"q a z w s x",
+	"e d c",
+	"a a a a",
+	"r f v",
+	""
+];
+var in7369left = [
+	"q w e",
+	"a s d f g h j",
+	"a a a a",
+	"",
+	"z x c v"
+];
+for (var i = 0; i < in7369left.length; i++){
+	var out = document.getElementById("7369t" + i);
+	out.innerHTML = task7369(in7369left[i], in7369top[i]);
+}
+var in5894top = [
+	"q a z",
+	"qw fg hj ty kl",
+	"oiuy hjkl vbmn",
+	"a s d f",
+	""
+];
+var in5894left = [
+	"q w e",
+	"qw er ty ui op",
+	"asdf ghjk",
+	"",
+	"zxc vbn"
+];
+for (var i = 0; i < in5894left.length; i++){
+	var out = document.getElementById("5894t" + i);
+	try {
+		var result = task5894(in5894left[i], in5894top[i]);
+		out.innerHTML = "Повторений: " + result;
+	} catch (e) {
+		out.innerHTML = e.message;
+	}
+}
 var in4515 = ["9 8 7 6 5", "4 3 2 1 5 6 7 8 9 0", "1 2 3 1"];
 for (var i = 0; i < in4515.length; i++){
 	var out = document.getElementById("4515t" + i);
