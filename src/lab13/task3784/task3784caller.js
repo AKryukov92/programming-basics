@@ -107,7 +107,7 @@ for (var i = 0; i < in6556a.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in2153 = ["13","44","60","0","61"];
+var in2153 = ["0", "1", "2", "3", "4", "5", "13", "59", "60", "61"];
 for (var i = 0; i < in2153.length; i++){
 	var out = document.getElementById("2153t" + i);
 	try {

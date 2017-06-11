@@ -27,8 +27,8 @@ public class Lab01 {
         task7472("шаг", "шаг");
 
         System.out.println();
-        System.out.println("2862");
-        task2862();
+        System.out.println("3862");
+        task3862();
 
         System.out.println();
         System.out.println("9231");
@@ -139,7 +139,7 @@ public class Lab01 {
         System.out.println(b + " " + a);
     }
 
-    public static void task2862(){
+    public static void task3862(){
         System.out.printf("%.4f\n%.4f", Math.PI, Math.E);
     }
 

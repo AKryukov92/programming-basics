@@ -602,7 +602,7 @@ namespace tfa
 
             Console.WriteLine();
             Console.WriteLine("2153");
-            int[] in2153t = { 13, 44, 60, 0, 61 };
+            int[] in2153t = { 0, 1, 2, 3, 4, 5, 13, 59, 60, 61 };
             for (int i = 0; i < in2153t.Length; i++)
             {
                 try
@@ -611,7 +611,7 @@ namespace tfa
                     {
                         Console.WriteLine("Зеленый");
                     }
-                    else {
+                    else{
                         Console.WriteLine("Красный");
                     }
                 }
@@ -1102,11 +1102,11 @@ namespace tfa
 
         public static bool task2153(int t)
         {
-            if (t > 60 || t <= 0)
+            if (t < 0 || 60 <= t)
             {
                 throw new Exception("Значение T должно быть в интервале [0, 59]");
             }
-            return (t - 1) % 5 < 3;
+            return t % 5 < 3;
         }
 
         public static String task7937(int w, int h, int c, int d)

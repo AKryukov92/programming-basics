@@ -10,11 +10,55 @@ namespace tfa
     {
         static void Main(string[] args)
         {
-            //task2354();
-            //task2030();
-            //task7649();
-            //task8787();
+            task2354();
+            task2030();
+            task7649();
+            task8787();
             task9707();
+
+            Console.WriteLine();
+            Console.WriteLine("7369");
+            String[] in7369top = {
+                "q a z w s x",
+                "e d c",
+                "a a a a",
+                "r f v",
+                ""};
+            String[] in7369left = {
+                "q w e",
+                "a s d f g h j",
+                "a a a a",
+                "",
+                "z x c v"};
+            for (int i = 0; i < in7369left.Length; i++){
+                String result = task7369(in7369left[i], in7369top[i]);
+                Console.WriteLine(result);
+            }
+            
+            Console.WriteLine();
+            Console.WriteLine("5894");
+            String[] in5894top = {
+                "q a z",
+                "qw fg hj ty kl",
+                "oiuy hjkl vbmn",
+                "a s d f",
+                ""
+            };
+            String[] in5894left = {
+                "q w e",
+                "qw er ty ui op",
+                "asdf ghjk",
+                "",
+                "zxc vbn"
+            };
+            for (int i = 0; i < in5894left.Length; i++){
+                try {
+                    int result = task5894(in5894left[i], in5894top[i]);
+                    Console.WriteLine("Повторений: " + result);
+                } catch (Exception e) {
+                    Console.WriteLine(e.Message);
+                }
+            }
         }
 
         public static void task9707()
@@ -28,7 +72,7 @@ namespace tfa
                 "q w e r t y u i o p",
                 "q w e r",
                 "q w e r",
-                ""        };
+                ""};
             String[] out4425 = { "q", "r", "p", "", "", "" };
             for (int i = 0; i < in4425a.Length; i++)
             {
@@ -50,8 +94,7 @@ namespace tfa
                 "qw er ty ui op",
                 "asd fgh jkl",
                 "",
-                "q w e r a s d f z x c v"
-            };
+                "q w e r a s d f z x c v"};
             for (int i = 0; i < in5683.Length; i++){
                 Console.WriteLine(task5683(in5683[i]));
             }
@@ -712,6 +755,72 @@ namespace tfa
                 sb.Append("\n");
             }
             return sb;
+        }
+
+        public static int task5894(String leftRaw, String topRaw)
+        {
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                throw new Exception("Данные слева отсутствуют");
+            }
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                throw new Exception("Данные сверху отсутствуют");
+            }
+            int count = 0;
+            String[] leftArr = leftRaw.Split(' ');
+            String[] topArr = topRaw.Split(' ');
+            for (int i = 0; i < leftArr.Length; i++)
+            {
+                for (int j = 0; j < topArr.Length; j++)
+                {
+                    if (leftArr[i].Equals(topArr[j]))
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public static String task7369(String leftRaw, String topRaw)
+        {
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                return "Данные слева отсутствуют";
+            }
+            if (String.IsNullOrWhiteSpace(topRaw))
+            {
+                return "Данные сверху отсутствуют";
+            }
+            StringBuilder sb = new StringBuilder();
+            String[] leftArr = leftRaw.Split(' ');
+            String[] topArr = topRaw.Split(' ');
+            sb.Append("  ");
+            sb.Append(topRaw);
+            sb.Append("\n");
+            for (int i = 0; i < leftArr.Length; i++)
+            {
+                sb.Append(leftArr[i]);
+                for (int j = 0; j < topArr.Length; j++)
+                {
+                    if (leftArr[i].Equals(topArr[j]))
+                    {
+                        sb.Append(" +");
+                    }
+                    else
+                    {
+                        sb.Append("  ");
+                    }
+                }
+                sb.Append("|\n");
+            }
+            sb.Append(" ");
+            for (int i = 0; i < topArr.Length; i++)
+            {
+                sb.Append("--");
+            }
+            return sb.ToString();
         }
 
         public static bool task4515(String raw)

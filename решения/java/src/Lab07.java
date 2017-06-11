@@ -72,7 +72,7 @@ public class Lab07 {
 
         System.out.println();
         System.out.println("9279");
-        String[] in9279 = {"ab","bc","ac","cde","a"};
+        String[] in9279 = {"ab","bc","ac","xz","cde","a"};
         for (int i = 0; i < in9279.length; i++){
             try {
                 StringBuilder sb = new StringBuilder();
@@ -113,11 +113,16 @@ public class Lab07 {
 
         System.out.println();
         System.out.println("7222");
-        String[] in7222ca = {"a", "c", "y", "w", "g", "a"};
-        String[] in7222cb = {"z", "d", "d", "w", "z", "l"};
-        for (int i = 0; i < in7222ca.length; i++) {
+        String[] in7222 = {
+            "4607009520018",
+            "9785750200641",
+            "9785964300694",
+            "123456789012",
+            "12345678901234567890"
+        };
+        for (int i = 0; i < in7222.length; i++) {
             try {
-                System.out.println(task7222(in7222ca[i], in7222cb[i]));
+                System.out.println(task7222(in7222[i]));
                 System.out.println();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -295,26 +300,18 @@ public class Lab07 {
         }
     }
 
-    public static String task7222(String ca, String cb) throws Exception {
-        if (!STR.contains(ca)){
-            throw new Exception("Значение CA отсутствует в строке");
+    public static String task7222(String code) throws Exception {
+        if(code.length() != 13) {
+            throw new Exception("Некорректная длина штрих-кода");
         }
-        if (!STR.contains(cb)){
-            throw new Exception("Значение CB отсутствует в строке");
-        }
-        int indexA = STR.indexOf(ca);
-        int indexB = STR.indexOf(cb);
-        if (indexA < indexB){
-            String part1 = STR.substring(0, indexA);
-            String part2 = STR.substring(indexA, indexB);
-            String part3 = STR.substring(indexB);
-            return "Часть 1: " + part1 + "\nЧасть 2: " + part2 + "\nЧасть 3: " + part3;
-        } else {
-            String part1 = STR.substring(0, indexB);
-            String part2 = STR.substring(indexB, indexA);
-            String part3 = STR.substring(indexA);
-            return "Часть 1: " + part1 + "\nЧасть 2: " + part2 + "\nЧасть 3: " + part3;
-        }
+        String country = code.substring(0, 2);
+        String manufacturer = code.substring(3, 6);
+        String product = code.substring(7, 11);
+        String checksum = code.substring(12);
+        return "Код страны: " + country +
+                "\nКод изготовителя: " + manufacturer +
+                "\nКод товара: " + product +
+                "\nКонтрольное число: " + checksum;
     }
 
     public static boolean task7491(String x) {

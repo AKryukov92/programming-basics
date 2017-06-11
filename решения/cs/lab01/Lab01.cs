@@ -42,8 +42,8 @@ namespace tfa
             task7472("шаг", "шаг");
 
             Console.WriteLine();
-            Console.WriteLine("2862");
-            task2862();
+            Console.WriteLine("3862");
+            task3862();
 
             Console.WriteLine();
             Console.WriteLine("9231");
@@ -152,7 +152,7 @@ namespace tfa
             Console.WriteLine(b + " " + a);
         }
 
-        public static void task2862()
+        public static void task3862()
         {
             Console.WriteLine("{0:F4}\n{1:F4}", Math.PI, Math.E);
         }

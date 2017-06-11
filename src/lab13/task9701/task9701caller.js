@@ -85,7 +85,7 @@ for (var i = 0; i < in2624a.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in5871 = ["6911", "3", "0.9"];
+var in5871 = ["6911", "5", "6", "2", "0", "-4"];
 for (var i = 0; i < in5871.length; i++){
 	var out = document.getElementById("5871t" + i);
 	try {
