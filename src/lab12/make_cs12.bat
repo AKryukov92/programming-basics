@@ -37,6 +37,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#link_c2_p7.2"^>Ч2Г7.2^</a^>^</li^> ^
  ^<li^>^<a href="#task7649"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#link_c2_p7.3"^>Ч2Г7.3^</a^>^</li^> ^
+ ^<li^>^<a href="#link_c2_p7.5"^>Ч2Г7.5^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -48,6 +49,7 @@ type taskcs2030.html>>%filename%
 type link_c2_p7.2.html>>%filename%
 type taskcs7649.html>>%filename%
 type link_c2_p7.3.html>>%filename%
+type link_c2_p7.5.html>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

@@ -163,7 +163,9 @@ double[] out3591 = {0, 1606.2378, 11580.2569, -1};
 for(int i = 0; i &lt; in3591.length; i++){
     try {
         double result = task3591(in3591[i]);
-        Console.WriteLine("{0:F6} ({1:F6})",result, out3591[i]);
+        Console.WriteLine("{0:F6} ({1:F6})",
+            result,
+            out3591[i]);
     } catch (Exception e) {
         Console.WriteLine(e.Message);
     }
@@ -420,7 +422,8 @@ for (int i = 0; i &lt; in8769p.Length; i++)
 {
     try
     {
-        int result = task8769(in8769p[i], in8769q[i], in8769s[i]);
+        int result = task8769(
+            in8769p[i], in8769q[i], in8769s[i]);
         Console.WriteLine("{0} ({1})", result, out8769[i]);
     }
     catch (Exception e)
