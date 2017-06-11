@@ -10,8 +10,8 @@ function task2429(a){
 function task7472(a,b){
 	return b + " " + a;
 }
-function task2862(){
-	document.getElementById("2862t0").innerHTML = Math.PI.toFixed(4) + "<br/>" + Math.E.toFixed(4);
+function task3862(){
+	document.getElementById("3862t0").innerHTML = Math.PI.toFixed(4) + "<br/>" + Math.E.toFixed(4);
 }
 function task9231(a){
 	return parseFloat(a).toFixed(4);
