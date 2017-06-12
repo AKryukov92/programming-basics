@@ -31,14 +31,11 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#task4411" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task9298" class="supervision"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#link_c3_p11.1"^>Ч3Г11.1^</a^>^</li^> ^
  ^<li^>^<a href="#task3354"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task5201" class="supervision"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#link_c3_p11.2"^>Ч3Г11.2^</a^>^</li^> ^
  ^<li^>^<a href="#task2981"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task4312"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task8428" class="example"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#link_c7_p32.5"^>Ч7Г32.5^</a^>^</li^> ^
  ^<li^>^<a href="#task2361" class="example"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task5063"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task7711" class="example"^>№ 10^</a^>^</li^> ^
@@ -54,7 +51,6 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#task1346"^>№ 19^</a^>^</li^> ^
  ^<li^>^<a href="#task9622"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#link_c3_p12.1"^>Ч3Г12.1^</a^>^</li^> ^
  ^<li^>^<a href="#task8873"^>№ 21^</a^>^</li^> ^
  ^<li^>^<a href="#task7799"^>№ 22^</a^>^</li^> ^
  ^<li^>^<a href="#task9354"^>№ 23^</a^>^</li^> ^
