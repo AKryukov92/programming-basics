@@ -69,6 +69,7 @@ type taskcs1953.html>>%filename%
 type taskcs3956.html>>%filename%
 type link_c2_p6.1.html>>%filename%
 type task5032.html>>%filename%
+type link_c7_p34.1.html>>%filename%
 type task3567.html>>%filename%
 type task5108.html>>%filename%
 type task2033.html>>%filename%
