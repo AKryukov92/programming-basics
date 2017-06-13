@@ -108,11 +108,6 @@ namespace tfa
             Console.WriteLine("{0:F6}", task1346(3, 7, 11) - 290.5);
 
             Console.WriteLine();
-            Console.WriteLine("7799");
-            Console.WriteLine("{0:F6}", task7799(7297, 7283) - 8720.9080);
-            Console.WriteLine("{0:F6}", task7799(2659, 0) - 26076.0153);
-
-            Console.WriteLine();
             Console.WriteLine("9354");
             Console.WriteLine(task9354(7247, 7243, 7229) - -157093203);
             Console.WriteLine(task9354(7, 1, 3) - -83);
@@ -384,18 +379,16 @@ namespace tfa
 
             Console.WriteLine();
             Console.WriteLine("9130");
-            int[] in9130y = { 7211, 11, 7177 };
-            int[] in9130m1 = { 7219, 3, 7193 };
-            int[] in9130m2 = { 7213, 7, 7187 };
-            int[] in9130r = { 7207, 13, 0 };
-            double[] outs9130 = { 7229.0200, 1.3669, 0 };
-            for (int i = 0; i < in9130y.Length; i++)
+            int[] in9130m1 = { 3, 7219, 7193, -5, 10 };
+            int[] in9130m2 = { 7, 7213, 7187, 4, 0 };
+            int[] in9130r = { 13, 7207, 0, 10, 15 };
+            double[] outs9130 = { 9.8312, 1.2186, 0, 0, 0 };
+            for (int i = 0; i < in9130m1.Length; i++)
             {
                 try
                 {
                     double result = task9130(
-                            in9130y[i], in9130m1[i],
-                            in9130m2[i], in9130r[i]);
+                        in9130m1[i], in9130m2[i], in9130r[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs9130[i]);
                 }
                 catch (Exception e)
@@ -488,6 +481,24 @@ namespace tfa
             task2354();
 
             task9701();
+
+            Console.WriteLine();
+            Console.WriteLine("7799");
+            int[] in7799mass = { 5, 7297, 10, 7, 9, 0 };
+            int[] in7799a = { 45, 30, 90, 91, 100, 30 };
+            double[] outs7799 = { 34.671920, 61972.336135, 0, 0, 0, 0 };
+            for (int i = 0; i < in7799mass.Length; i++)
+            {
+                try
+                {
+                    double result = task7799(in7799mass[i], in7799a[i]);
+                    Console.WriteLine("{0:F6} ({1:F6})", result, outs7799[i]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
 
             Console.WriteLine();
             Console.WriteLine("2361");
@@ -749,7 +760,15 @@ namespace tfa
 
         public static double task7799(int m, int a)
         {
+            if (m <= 0)
+            {
+                throw new Exception("Масса должна быть положительной");
+            }
             double g = 9.8067;
+            if (a >= 90)
+            {
+                return 0;
+            }
             return m * g * Math.Cos(a * Math.PI / 180);
         }
 
@@ -758,12 +777,13 @@ namespace tfa
             return b * b - 4 * a * c;
         }
 
-        public static double task9130(int y, int m1, int m2, int r)
+        public static double task9130(int m1, int m2, int r)
         {
             if (r == 0) {
                 throw new Exception("Значение r должно быть не равно нулю");
             }
-            return (double)y * m1 * m2 / r / r;
+            double g = 9.8067;
+            return (double)g * m1 * m2 / r / r;
         }
 
         public static double task5895(int a, int b, int c)

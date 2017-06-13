@@ -175,8 +175,8 @@ for (var i = 0; i < in8873r1.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in7799m = ["7297","2659"];
-var in7799a = ["7283", "0"];
+var in7799m = ["5","7292", "10", "7", "9", "0"];
+var in7799a = ["45", "30", "90", "91", "100", "30"];
 for (var i = 0; i < in7799m.length; i++){
 	var out = document.getElementById("7799t" + i);
 	out.innerHTML = task7799(in7799m[i], in7799a[i]).toFixed(4);
@@ -188,14 +188,13 @@ for (var i = 0; i < in9354a.length; i++){
 	var out = document.getElementById("9354t" + i);
 	out.innerHTML = task9354(in9354a[i], in9354b[i], in9354c[i]).toFixed(4);
 }
-var in9130y = ["7211","11","7177"];
-var in9130m1 = ["7219","3","7193"];
-var in9130m2 = ["7213","7","7207"];
-var in9130r = ["7207","13","0"];
-for (var i = 0; i < in9130y.length; i++){
+var in9130m1 = ["3", "7219", "7193", "-5", "10"];
+var in9130m2 = ["7", "7213", "7187", "4", "0"];
+var in9130r = ["13", "7207", "0", "10", "15"];
+for (var i = 0; i < in9130m1.length; i++){
 	var out = document.getElementById("9130t" + i);
 	try {
-		var r = task9130(in9130y[i], in9130m1[i],in9130m2[i], in9130r[i]);
+		var r = task9130(in9130m1[i],in9130m2[i], in9130r[i]);
 		out.innerHTML = r.toFixed(4);
 	} catch (e){
 		out.innerHTML = e.message;

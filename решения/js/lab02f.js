@@ -134,16 +134,32 @@ function task8873(r1, r2){
 	return 1/r1 + 1/r2;
 }
 function task7799(m,a){
-	return m*9.8067*Math.cos(a*Math.PI/180);
+	if (m <= 0)
+	{
+		throw new Exception("Масса должна быть положительной");
+	}
+	var g = 9.8067;
+	if (a >= 90)
+	{
+		return 0;
+	}
+	return m*g*Math.cos(a*Math.PI/180);
 }
 function task9354(a,b,c){
 	return b*b-4*a*c;
 }
-function task9130(y,m1,m2,r){
-	if (r == 0){
-		throw new Error("Значение r должно быть не равно нулю");
+function task9130(mass1,mass2,distance){
+	if (distance <= 0){
+		throw new Error("Дистанция должна быть положительна");
 	}
-	return y*m1*m2/r/r;
+	if (mass1 <= 0){
+		throw new Error("Масса должна быть положительна");
+	}
+	if (mass2 <= 0){
+		throw new Error("Масса должна быть положительна");
+	}
+	var g = 9.8067;
+	return g*mass1*mass2/distance/distance;
 }
 function task5895(a,b,c){
 	return Math.sqrt(a*a+b*b-2*a*b*Math.cos(c*Math.PI/180));
