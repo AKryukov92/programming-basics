@@ -66,18 +66,24 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
+type link_c2_p8.1.html>>%filename%
 type task8878.html>>%filename%
 type task3072.html>>%filename%
+type link_c4_p15.1.html>>%filename%
 type task5980.html>>%filename%
+type link_c4_p19.4.html>>%filename%
 type task8174.html>>%filename%
 type task4257.html>>%filename%
+type link_c4_p19.2.html>>%filename%
 type task2291.html>>%filename%
 type task1763.html>>%filename%
 type task5662.html>>%filename%
 type task1945.html>>%filename%
 type task1186.html>>%filename%
 type task8715.html>>%filename%
+type link_c4_p19.3.html>>%filename%
 type task8518.html>>%filename%
+type link_c4_p15.2.html>>%filename%
 type task4847.html>>%filename%
 type task7991.html>>%filename%
 type task6291.html>>%filename%
@@ -94,7 +100,9 @@ type task6740.html>>%filename%
 type task9038.html>>%filename%
 type task4527.html>>%filename%
 type task6556.html>>%filename%
+type link_c4_p19.1.html>>%filename%
 type task5635.html>>%filename%
+type link_c2_p5.3.html>>%filename%
 type task3878.html>>%filename%
 type task1217.html>>%filename%
 type task1438.html>>%filename%

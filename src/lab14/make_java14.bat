@@ -67,7 +67,9 @@ type taskjava2000.html>>%filename%
 type taskjava4147.html>>%filename%
 type taskjava1953.html>>%filename%
 type taskjava3956.html>>%filename%
+type link_c2_p6.1.html>>%filename%
 type task5032.html>>%filename%
+type link_c7_p34.1.html>>%filename%
 type task3567.html>>%filename%
 type task5108.html>>%filename%
 type task2033.html>>%filename%

@@ -58,6 +58,7 @@ type task4642.html>>%filename%
 type task5537.html>>%filename%
 type task5847.html>>%filename%
 type task4769.html>>%filename%
+type link_c2_p8.3.html>>%filename%
 type task9930.html>>%filename%
 type task6861.html>>%filename%
 type task3226.html>>%filename%

@@ -76,8 +76,10 @@ echo ^<div class="nav"^> ^
 type task8495.html>>%filename%
 type task1315.html>>%filename%
 type task6066.html>>%filename%
+type link_c3_p10.8.html>>%filename%
 type task2565.html>>%filename%
 type task2594.html>>%filename%
+type link_c4_p16.2.html>>%filename%
 type task2321.html>>%filename%
 type task5053.html>>%filename%
 type task3762.html>>%filename%
@@ -88,8 +90,10 @@ type task1544.html>>%filename%
 type task9562.html>>%filename%
 type task3669.html>>%filename%
 type task5951.html>>%filename%
+type link_c5_p23.1.html>>%filename%
 type task2802.html>>%filename%
 type task2324.html>>%filename%
+type link_c4_p16.1.html>>%filename%
 type task8731.html>>%filename%
 type task4082.html>>%filename%
 type task6580.html>>%filename%
@@ -100,12 +104,14 @@ type task8770.html>>%filename%
 type task4236.html>>%filename%
 type task5969.html>>%filename%
 type task8696.html>>%filename%
+type link_c3_p11.2.html>>%filename%
 type task8418.html>>%filename%
 type task5170.html>>%filename%
 type task8395.html>>%filename%
 type task5568.html>>%filename%
 type task2592.html>>%filename%
 type task4075.html>>%filename%
+type link_c2_p9.2.html>>%filename%
 type task7517.html>>%filename%
 type task5448.html>>%filename%
 type task6572.html>>%filename%

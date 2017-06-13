@@ -37,6 +37,7 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
+type link_c2_p8.4.html>>%filename%
 type taskjava9701.html>>%filename%
 type taskjava3784.html>>%filename%
 type taskjava6732.html>>%filename%
