@@ -69,8 +69,9 @@ echo ^<div class="nav"^> ^
 type link_c2_p8.1.html>>%filename%
 type task8878.html>>%filename%
 type task3072.html>>%filename%
-type task5980.html>>%filename%
 type link_c4_p15.1.html>>%filename%
+type task5980.html>>%filename%
+type link_c4_p19.4.html>>%filename%
 type task8174.html>>%filename%
 type task4257.html>>%filename%
 type link_c4_p19.2.html>>%filename%
