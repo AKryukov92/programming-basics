@@ -4,10 +4,6 @@ set index=15
 set chapter=Коллекции
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -45,10 +41,6 @@ echo ^</body^> ^
  ^</html^>>> %filename%
 
 copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
-pushd ..\..\%lang%\
-mkdir files
-popd
 
 pushd ..\..\%lang%\files
 mkdir task9990

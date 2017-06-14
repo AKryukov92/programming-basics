@@ -4,10 +4,6 @@ set index=7
 set chapter=Строки
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^

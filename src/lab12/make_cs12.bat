@@ -5,10 +5,6 @@ set title=Методы
 set chapter=Оформление подпрограмм с помощью методов
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^

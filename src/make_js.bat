@@ -1,12 +1,19 @@
 @echo off
+chcp 65001
 pushd ..
 mkdir js
 popd
 pushd ..\js
 rmdir files /s /q
 rmdir images /s /q
+rmdir конспекты /s /q
+rmdir handlers /s /q
 del *.html
 del *.docx
+mkdir files
+mkdir images
+mkdir конспекты
+mkdir handlers
 popd
 pushd lab01
 call make_js01 skip

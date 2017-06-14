@@ -138,6 +138,24 @@ spoiler:hover trans {
 .comment{
 	color:darkgrey;
 }
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
 @media print {
 	.nav {
 		display:none;

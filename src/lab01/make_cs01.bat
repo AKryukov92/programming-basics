@@ -5,10 +5,6 @@ set title=Ввод и вывод информации
 set chapter=Линейные алгоритмы
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -45,6 +41,7 @@ echo ^<div class="nav"^> ^
  ^</div^>>>%filename%
 
 type link_c1_p4.3.html>>%filename%
+type link_pre1662.html>>%filename%
 type task1662.html>>%filename%
 type task1860.html>>%filename%
 type link_c7_p33.html>>%filename%
@@ -64,6 +61,8 @@ type task4343.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР1.docx" "..\..\csharp\Письменные задания к ЛР1.docx"
+call prepare_1662 skip
+
+copy "Письменные задания к ЛР1.docx" "..\..\%lang%\Письменные задания к ЛР1.docx"
 
 if x%1==x start "" %filename%

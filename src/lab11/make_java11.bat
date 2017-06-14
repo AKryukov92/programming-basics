@@ -5,10 +5,6 @@ set title=Двумерные массивы
 set chapter=Алгоритмы работы с двумерными массивами
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -57,10 +53,6 @@ echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
-
-pushd ..\..\%lang%\
-mkdir files
-popd
 
 pushd ..\..\%lang%\files\
 mkdir task9299

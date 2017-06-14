@@ -5,10 +5,6 @@ set title=Ввод и вывод информации
 set chapter=Линейные алгоритмы
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^

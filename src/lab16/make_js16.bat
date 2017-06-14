@@ -4,10 +4,6 @@ set index=16
 set chapter=AJAX
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
-pushd ..\..\
-mkdir %lang%
-popd
-
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
@@ -57,10 +53,6 @@ echo ^</div^>>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
-
-pushd ..\..\%lang%\
-mkdir handlers
-popd
 
 copy "*.php" "..\..\%lang%\handlers\*.php"
 

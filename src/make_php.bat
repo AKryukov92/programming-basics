@@ -1,12 +1,17 @@
 @echo off
+chcp 65001
 pushd ..
 mkdir php
 popd
 pushd ..\php
 rmdir files /s /q
 rmdir images /s /q
+rmdir конспекты /s /q
 del *.html
 del *.docx
+mkdir files
+mkdir images
+mkdir конспекты
 popd
 pushd lab01
 call make_php01 skip

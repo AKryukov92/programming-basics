@@ -1,9 +1,14 @@
 @echo off
+chcp 65001
 pushd ..\java
 rmdir files /s /q
 rmdir images /s /q
+rmdir конспекты /s /q
 del *.html
 del *.docx
+mkdir files
+mkdir images
+mkdir конспекты
 popd
 pushd lab01
 call make_java01 skip
