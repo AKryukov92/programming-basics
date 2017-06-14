@@ -23,8 +23,11 @@ public class Lab05 {
         System.out.println();
         System.out.println("5662");
         System.out.println(task5662(1, 2, 3));
+        System.out.println(task5662(11, 13, 19));
         System.out.println(task5662(3, 17, 5));
+        System.out.println(task5662(5, 31, 29));
         System.out.println(task5662(3, 6, 3));
+        System.out.println(task5662(1, 2, 1));
         System.out.println(task5662(0, 7, 13));
 
         System.out.println();
@@ -238,11 +241,8 @@ public class Lab05 {
         double[] in2291v2 = { 16.8, 5000, 0.2, -0.028 };
         for (int i = 0; i < in2291v1.length; i++){
             try {
-                if (task2291(in2291v1[i], in2291v2[i])){
-                    System.out.println("V1 (км/ч) меньше V2 (м/с)");
-                } else {
-                    System.out.println("V2 (м/с) меньше V1(км/ч)");
-                }
+                String result = task2291(in2291v1[i], in2291v2[i]);
+                System.out.println(result);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -254,12 +254,8 @@ public class Lab05 {
         int[] in1763a = {31, 41, 23, -5};
         for (int i = 0; i < in1763r.length; i++){
             try {
-                System.out.print("Площадь ");
-                if (task1763(in1763r[i], in1763a[i])){
-                    System.out.println("квадрата больше площади круга");
-                } else {
-                    System.out.println("круга больше площади квадрата");
-                }
+                String result = task1763(in1763r[i], in1763a[i]);
+                System.out.println(result);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -560,24 +556,35 @@ public class Lab05 {
         return l * 1000 < p * 0.305;
     }
 
-    public static boolean task2291(double v1, double v2) throws Exception {
-        if (v1 < 0){
-            throw new Exception("Значение V1 должно быть неотрицательным");
+    public static String task2291(double velocityInKmH, double velocityInMS) throws Exception {
+        if (velocityInKmH < 0){
+            throw new Exception("Значение velocityInKmH должно быть неотрицательным");
         }
-        if (v2 < 0){
-            throw new Exception("Значение V2 должно быть неотрицательным");
+        if (velocityInMS < 0){
+            throw new Exception("Значение velocityInMS должно быть неотрицательным");
         }
-        return v1 * 1000 / 60 / 60 < v2;
+        double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
+        if (velocityInMS1 < velocityInMS){
+            return String.format("%.2f км/ч меньше %.2f м/с", velocityInKmH, velocityInMS);
+        } else {
+            return String.format("%.2f км/ч меньше %.2f м/с", velocityInMS, velocityInKmH);
+        }
     }
 
-    public static boolean task1763(int r, int a) throws Exception {
-        if (r < 0){
-            throw new Exception("Значение R должно быть неотрицательным");
+    public static String task1763(int r, int a) throws Exception {
+        if (r <= 0){
+            throw new Exception("Радиус должен быть положительным");
         }
-        if (a < 0){
-            throw new Exception("Значение A должно быть неотрицательным");
+        if (a <= 0){
+            throw new Exception("Сторона квадрата должна быть положительна");
         }
-        return Math.PI * r * r < a * a;
+        double areaSquare = a * a;
+        double areaCircle = Math.PI * r * r;
+        if (areaCircle < areaSquare) {
+            return String.format("Площадь квадрата %.4f больше площади круга %.4f", areaSquare, areaCircle);
+        } else {
+            return String.format("Площадь круга %.4f больше площади квадрата %.4f", areaCircle, areaSquare);
+        }
     }
 
     public static String task5662(int a, int b, int c){
@@ -586,11 +593,11 @@ public class Lab05 {
         }
         double d = b*b - 4*a*c;
         if(d > 0){
-            return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
-        } else if (d == 0){
             return "У уравнения "+ a + "x^2 + " + b + "x + " + c + " два вещественных корня";
-        } else {
+        } else if (d == 0){
             return "Уравнение " + a + "x^2 + " + b + "x + " + c + " имеет один корень";
+        } else {
+            return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
         }
     }
 

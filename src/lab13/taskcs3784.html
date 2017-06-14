@@ -1,5 +1,5 @@
 <div class="task_block" id="task3784">
-	<div class="task_id">3784</div>
+    <div class="task_id">3784</div>
     <h3>Задача</h3>
     <div class="task_desc">Нужно реализовать метод для решения указанных задач. Вывод в консоль реализуется вызывающей программой. Проверить с помощью соответствующей программы для вызова.</div>
     <div class="check_single preformatted">public class Caller3784 {
@@ -51,21 +51,16 @@ for (int i = 0; i &lt; in2291v1.Length; i++)
 {
     try
     {
-        if (task2291(in2291v1[i], in2291v2[i]))
-        {
-            Console.WriteLine("V1 (км/ч) меньше V2 (м/с)");
-        }
-        else {
-            Console.WriteLine("V2 (м/с) меньше V1(км/ч)");
-        }
+        String result = task2291(in2291v1[i], in2291v2[i]);
+        Console.WriteLine(result);
     }
     catch (Exception e)
     {
         Console.WriteLine(e.Message);
     }
 }</td>
-            <td class="preformatted">V2 (м/с) меньше V1(км/ч)
-V2 (м/с) меньше V1(км/ч)
+            <td class="preformatted">16,80 км/ч меньше 60,50 м/с
+17950,00 км/ч меньше 5000,00 м/с
 Значение V1 должно быть неотрицательным
 Значение V2 должно быть неотрицательным</td>
         </tr>
@@ -78,24 +73,18 @@ for (int i = 0; i &lt; in1763r.Length; i++)
 {
     try
     {
-        Console.Write("Площадь ");
-        if (task1763(in1763r[i], in1763a[i]))
-        {
-            Console.WriteLine("квадрата больше площади круга");
-        }
-        else {
-            Console.WriteLine("круга больше площади квадрата");
-        }
+        String result = task1763(in1763r[i], in1763a[i]);
+        Console.WriteLine(result);
     }
     catch (Exception e)
     {
         Console.WriteLine(e.Message);
     }
 }</td>
-            <td class="preformatted">Площадь квадрата больше площади круга
-Площадь круга больше площади квадрата
-Значение R должно быть неотрицательным
-Значение A должно быть неотрицательным</td>
+            <td class="preformatted">Площадь квадрата 961,0000 больше площади круга 706,8583
+Площадь круга 2642,0794 больше площади квадрата 1681,0000
+Радиус должен быть положительным
+Сторона квадрата должна быть положительна</td>
         </tr>
         <tr>
             <td></td>

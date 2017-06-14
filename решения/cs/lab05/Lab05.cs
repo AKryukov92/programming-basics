@@ -448,13 +448,8 @@ namespace tfa
             {
                 try
                 {
-                    if (task2291(in2291v1[i], in2291v2[i]))
-                    {
-                        Console.WriteLine("V1 (км/ч) меньше V2 (м/с)");
-                    }
-                    else {
-                        Console.WriteLine("V2 (м/с) меньше V1(км/ч)");
-                    }
+                    String result = task2291(in2291v1[i], in2291v2[i]);
+                    Console.WriteLine(result);
                 }
                 catch (Exception e)
                 {
@@ -470,14 +465,8 @@ namespace tfa
             {
                 try
                 {
-                    Console.Write("Площадь ");
-                    if (task1763(in1763r[i], in1763a[i]))
-                    {
-                        Console.WriteLine("квадрата больше площади круга");
-                    }
-                    else {
-                        Console.WriteLine("круга больше площади квадрата");
-                    }
+                    String result = task1763(in1763r[i], in1763a[i]);
+                    Console.WriteLine(result);
                 }
                 catch (Exception e)
                 {
@@ -711,30 +700,45 @@ namespace tfa
             return l * 1000 < p * 0.305;
         }
 
-        public static bool task2291(double v1, double v2)
+        public static String task2291(double velocityInKmH, double velocityInMS)
         {
-            if (v1 < 0)
+            if (velocityInKmH < 0)
             {
-                throw new Exception("Значение V1 должно быть неотрицательным");
+                throw new Exception("Значение velocityInKmH должно быть неотрицательным");
             }
-            if (v2 < 0)
+            if (velocityInMS < 0)
             {
-                throw new Exception("Значение V2 должно быть неотрицательным");
+                throw new Exception("Значение velocityInMS должно быть неотрицательным");
             }
-            return v1 * 1000 / 60 / 60 < v2;
+            double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
+            if (velocityInMS1 < velocityInMS)
+            {
+                return String.Format("{0:F2} км/ч меньше {0:F2} м/с", velocityInKmH, velocityInMS);
+            }
+            else {
+                return String.Format("{0:F2} км/ч меньше {0:F2} м/с", velocityInMS, velocityInKmH);
+            }
         }
 
-        public static bool task1763(int r, int a)
+        public static String task1763(int r, int a)
         {
-            if (r < 0)
+            if (r <= 0)
             {
-                throw new Exception("Значение R должно быть неотрицательным");
+                throw new Exception("Радиус должен быть положительным");
             }
-            if (a < 0)
+            if (a <= 0)
             {
-                throw new Exception("Значение A должно быть неотрицательным");
+                throw new Exception("Сторона квадрата должна быть положительна");
             }
-            return Math.PI * r * r < a * a;
+            double areaSquare = a * a;
+            double areaCircle = Math.PI * r * r;
+            if (areaCircle < areaSquare)
+            {
+                return String.Format("Площадь квадрата {0:F4} больше площади круга {1:F4}", areaSquare, areaCircle);
+            }
+            else {
+                return String.Format("Площадь круга {0:F4} больше площади квадрата {1:F4}", areaCircle, areaSquare);
+            }
         }
 
         public static String task5662(int a, int b, int c)

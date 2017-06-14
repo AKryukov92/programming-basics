@@ -17,11 +17,8 @@ var in2291v2 = ["16.8", "5000", "0.2", "-0.028"];
 for (var i = 0; i < in2291v1.length; i++){
 	var out = document.getElementById("2291t" + i);
 	try {
-		if (task2291(in2291v1[i], in2291v2[i])){
-			out.innerHTML = "V1 (км/ч) меньше V2 (м/с)";
-		} else {
-			out.innerHTML = "V2 (м/с) меньше V1(км/ч)";
-		}
+		var result = task2291(in2291v1[i], in2291v2[i]);
+		out.innerHTML = result;
 	} catch (e){
 		out.innerHTML = e.message;
 	}
@@ -31,11 +28,8 @@ var in1763a = ["31", "41", "23", "-5"];
 for (var i = 0; i < in1763r.length; i++){
 	var out = document.getElementById("1763t" + i);
 	try {
-		if (task1763(in1763r[i], in1763a[i])){
-			out.innerHTML = "Площадь квадрата больше площади круга";
-		} else {
-			out.innerHTML = "Площадь круга больше площади квадрата";
-		}
+		var result = task1763(in1763r[i], in1763a[i]);
+		out.innerHTML = result;
 	} catch (e){
 		out.innerHTML = e.message;
 	}

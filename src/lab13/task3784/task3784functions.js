@@ -7,14 +7,19 @@ function task4257(l,p){
 	}
 	return l*1000<p*0.305;
 }
-function task2291(v1,v2){
-	if (v1 < 0){
-		throw new Error("Значение V1 должно быть неотрицательным");
+function task2291(velocityInKmH,velocityInMS){
+	if (velocityInKmH < 0){
+		throw new Error("Значение velocityInKmH должно быть неотрицательным");
 	}
-	if (v2 < 0){
-		throw new Error("Значение V2 должно быть неотрицательным");
+	if (velocityInMS < 0){
+		throw new Error("Значение velocityInMS должно быть неотрицательным");
 	}
-	return v1 * 1000 * 60 * 60 < v2;
+	var velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
+	if (velocityInMS1 < velocityInMS){
+		return velocityInKmH + " км/ч меньше " + velocityInMS + " м/с";
+	} else {
+		return velocityInMS + " км/ч меньше " + velocityInKmH + "м/с";
+	}
 }
 function task1763(r,a) {
 	if (r < 0){
@@ -23,7 +28,13 @@ function task1763(r,a) {
 	if (a < 0){
 		throw new Error("Значение A должно быть неотрицательным");
 	}
-	return Math.PI * r * r < a * a;
+	var areaSquare = a * a;
+	var areaCircle = Math.PI * r * r;
+	if (areaCircle < areaSquare) {
+		return "Площадь квадрата " + areaSquare.toFixed(4) + " больше площади круга " + areaCircle.toFixed(4);
+	} else {                     
+		return "Площадь круга " + areaCircle.toFixed(4) + " больше площади квадрата " + areaSquare.toFixed(4);
+	}
 }
 function task1945(sc, ss){
 	if (sc < 0){
