@@ -1,0 +1,252 @@
+<h1>Разбор теории к задаче 1860 на С#</h1>
+<a href="../[1] лаб. ОСАЛП.html#task1860" target="_blank">открыть условие задачи в новой вкладке</a>
+
+
+
+<div id="step1" class="step">
+<h4>Шаг 1/5</h4>
+<a href="#">К вступлению</a>
+<p>Прежде чем что-то сохранять в переменную, нужно ее объявить. Ниже показана команда объявления переменной с именем "data". Слово "String" перед именем означает, что эта переменная может хранить в себе строку текста. <span class="comment">Другими словами, это команда объявления строковой переменной "data". String это ее тип.</span></p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+        <span class="comment">}
+    }
+}</span></p>
+<p>После объявления переменной, можно получить результат от пользователя и сохранить его. Это действие оформляется следующим образом.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+        <span class="comment">}
+    }
+}</span></p>
+<p>Программа получила текст от пользователя и записала его в переменную data.</p>
+<a href="#step2">К шагу 2</a>
+</div>
+
+
+
+<div id="step2" class="step">
+<h4>Шаг 2/5</h4>
+<a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
+<p>Как только компьютер записал значение в переменную, ее можно использовать для других действий. Например ее можно вывести на экран.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            Console.Write(data);
+        <span class="comment">}
+    }
+}</span></p>
+<table>
+    <tr><th>Пользователь вводит</th><th>В консоли отображается</th></tr>
+    <tr><td class="preformatted">Ауууу</td><td><span class="preformatted console">Ауууу</span></td></tr>
+</table>
+<p>Обратите внимание, что в команде вывода переменной в консоль, мы не пишем <zoom>"</zoom>. Если несколько раз запустить эту программу и ввести в консоль разную информацию, то мы получим разный результат. Двойными кавычками оформляется постоянное сообщение, которое не меняется от вводимых данных.</p>
+<a href="#step3">К шагу 3</a>
+</div>
+
+
+
+<div id="step3" class="step">
+<h4>Шаг 3/5</h4>
+<a href="#step2">К шагу 2</a> <a href="#">К вступлению</a>
+<p>По заданию требуется вывести сообщение, состоящее из двух частей: постоянного фрагмента "Мы стремимся к " и изменяющегося фрагмента, который вводится пользователем. Чтобы выполнить задание, достаточно просто добавить команду вывода постоянного фрагмента.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            Console.Write("Мы стремимся к ");
+            Console.Write(data);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Эту задачу можно решить другим способом. В нем постоянный и изменяющимся фрагменты склеивается с помощью символа <zoom>+</zoom>. Результат выводится одной командой.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            Console.Write("Мы стремимся к " + data);
+        <span class="comment">}
+    }
+}</span></p>
+<p>В обоих случаях получится одинаковый результат</p>
+<table>
+    <tr><th>Пользователь вводит</th><th>В консоли отображается</th></tr>
+    <tr><td class="preformatted">знаниям</td><td><span class="preformatted console">Мы стремимся к знаниям</span></td></tr>
+</table>
+<p>Запустите программу несколько раз. Посмотрите на результаты при вводе других значений из тестов, которые находятся в условии задачи.</p>
+<a href="#step4">К шагу 4</a>
+</div>
+
+
+
+<div id="step4" class="step">
+<h4>Шаг 4/5</h4>
+<a href="#step3">К шагу 3</a> <a href="#">К вступлению</a>
+<p>Склеивание может помочь вам объединить несколько фрагментов текста и несколько переменных.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String first;
+            first = Console.ReadLine();
+            String second;
+            second = Console.ReadLine();
+            Console.Write("Первым делом " + first + ", ну а " + second + " потом.");
+        <span class="comment">}
+    }
+}</span></p>
+<table>
+    <tr><th>Пользователь вводит</th><th>В консоли отображается</th></tr>
+    <tr><td class="preformatted">самолеты
+девушки</td><td><span class="preformatted console">Первым делом самолеты, ну а девушки потом.</span></td></tr>
+    <tr><td class="preformatted">программирование
+самолеты</td><td><span class="preformatted console">Первым делом программирование, ну а самолеты потом.</span></td></tr>
+</table>
+<a href="#step5">К шагу 5</a>
+</div>
+
+
+
+<div id="step5" class="step">
+<h4>Шаг 5/5</h4>
+<a href="#step4">К шагу 4</a> <a href="#">К вступлению</a>
+<p>Старайтесь избегать склеивания между собой фиксированных фрагментов текста. Так программа выглядит сложнее, чем она на самом деле. Вот такой код</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String x;
+            x = Console.ReadLine();
+            String y;
+            y = Console.ReadLine();
+            Console.Write(<span style="color:rgb(214,157,133)">"&lt;point "</span> + <span style="color:rgb(214,157,133)">"x="</span> + <span style="color:rgb(214,157,133)">"\""</span> + x + <span style="color:rgb(214,157,133)">"\""</span> + <span style="color:rgb(214,157,133)">" y="</span> + <span style="color:rgb(214,157,133)">"\""</span> + y + <span style="color:rgb(214,157,133)">"\""</span> + <span style="color:rgb(214,157,133)">"&gt;"</span>);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Можно переписать вот так:</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String x;
+            x = Console.ReadLine();
+            String y;
+            y = Console.ReadLine();
+            Console.Write(<span style="color:rgb(214,157,133)">"&lt;point x=\""</span> + x + <span style="color:rgb(214,157,133)">"\" y=\""</span> + y + <span style="color:rgb(214,157,133)">"\"&gt;"</span>);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Второй вариант выглядит проще, а результат никак не изменился</p>
+<table>
+    <tr><th>Пользователь вводит</th><th>В консоли отображается</th></tr>
+    <tr><td class="preformatted">3
+5</td><td><span class="preformatted console">&lt;point x="3" y="5"&gt;</span></td></tr>
+</table>
+<a href="#">К вступлению</a>
+</div>
+
+
+
+<div id="initial" class="step">
+<h4>Вступление</h4>
+<p>В предыдущем разборе теории <a href="pre1662.html" target="_blank">(открыть в новой вкладке)</a> была рассмотрена команда вывода сообщения на экран. Однако полезные программы, которые занимаются исключительно выводом данных - большая редкость. Чтобы быть действительно полезной, программа должна быть универсальной - решать множество похожих задач. Задачи могут отличаться значениями в исходных данных.</p>
+<p>Есть несколько разных способов передать программе исходные данные. Некоторые из них будут рассмотрены в следующих лабораторных. Мы начнем с получения информации через консоль. Этот способ проще всего оформлять. Это важно для разбора нескольких вводных тем.</p>
+<p>Команда для получения данных от пользователя выглядит вот так</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1860
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            Console.ReadLine();
+        <span class="comment">}
+    }
+}</span></p>
+<p>Когда компьютер начнет выполнять ее, работа программы приостановится. С этого момента пользователь может ввести какой-нибудь текст. Когда он нажмет клавишу Enter, то введенный текст будет получен программой и она продолжит свою работу.</p>
+<p>С помощью такой команды, программа просто получит текст. Если оформить ее именно так, то ничего полезного с информацией сделать нельзя. Программа сразу же забудет введенные данные.</p>
+<p>Если мы хотим использовать эту информацию, ее нужно сохранить. С этой целью используют переменные.</p>
+<a href="#step1">К шагу 1</a>
+</div>

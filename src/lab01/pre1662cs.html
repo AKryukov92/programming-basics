@@ -1,10 +1,10 @@
 <h1>Разбор теории к задаче 1662 на С#</h1>
-<a href="[1] лаб. ОСАЛП.html#task1662" target="_blank">открыть условие задачи в новой вкладке</a>
+<a href="../[1] лаб. ОСАЛП.html#task1662" target="_blank">открыть условие задачи в новой вкладке</a>
 
 
 
 <div id="step1" class="step">
-<h4>Шаг 1</h4>
+<h4>Шаг 1/6</h4>
 <a href="#">К вступлению</a>
 <p>В самом начале мы будем использовать только одну команду - вывод в консоль. Она оформляется следующим образом:</p>
 <p class="preformatted"><span class="comment">using System;
@@ -13,13 +13,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine("Ура! Заработало!");
+            Console.Write("Ура! Заработало!");
         <span class="comment">}
     }
 }</span></p>
@@ -85,9 +85,9 @@ namespace ConsoleApplication1
 
 
 <div id="step2" class="step">
-<h4>Шаг 2</h4>
+<h4>Шаг 2/6</h4>
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
-<p>Команда вывода на экран состоит из двух частей: технического оформления и <span style="color:rgb(214,157,133)">сообщения</span>. <span class="comment">Более корректный термин - "строковый литерал".</span> Одна команда - одно сообщение. Если нужно вывести несколько сообщений, напишите несколько команд или объедините сообщения в одно.</p>
+<p>Команда вывода в консоль состоит из двух частей: технического оформления и <span style="color:rgb(214,157,133)">сообщения</span>. <span class="comment">Более корректный термин - "строковый литерал".</span> Одна команда - одно сообщение. Если нужно вывести несколько сообщений, напишите несколько команд или объедините сообщения в одно.</p>
 
 <p class="preformatted"><span class="comment">using System;
 using System.Collections.Generic;
@@ -95,13 +95,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура! Заработало!"</span>);
+            Console.Write(<span style="color:rgb(214,157,133)">"Ура! Заработало!"</span>);
         <span class="comment">}
     }
 }</span></p>
@@ -114,13 +114,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура! Заработало!);
+            Console.Write(<span style="color:rgb(214,157,133)">"Ура! Заработало!);
         <span class="comment">}
     }
 }</span></span></p>
@@ -131,14 +131,14 @@ namespace ConsoleApplication1
     <li>Newline in constant</li>
 </ul>
 <p>Обратите внимание, что символы <zoom>);</zoom> в конце команды тоже подсвечены как часть сообщения.</p>
-<p>Все, что нужно для исправления - поставить кавычку в конец сообщения</p>
+<p>Все, что нужно для исправления - поставить кавычку в конец сообщения, перед закрывающей круглой скобочкой. Как было первом фрагменте на этом шаге.</p>
 <a href="#step3">К шагу 3</a>
 </div>
 
 
 
 <div id="step3" class="step">
-<h4>Шаг 3</h4>
+<h4>Шаг 3/6</h4>
 <a href="#step2">К шагу 2</a> <a href="#">К вступлению</a>
 <p>А что делать, если нужно вывести двойную кавычку внутри сообщения?</p>
 <p>Просто напишите эту кавычку вместе с обратным слэшем: <zoom>\"</zoom>.  Для каждой кавычки внутри сообщения - свой обратный слэш.</p>
@@ -164,13 +164,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура! \"Заработало\"!"</span>);
+            Console.Write(<span style="color:rgb(214,157,133)">"Ура! \"Заработало\"!"</span>);
         <span class="comment">}
     }
 }</span></p>
@@ -183,7 +183,7 @@ namespace ConsoleApplication1
 
 
 <div id="step4" class="step">
-<h4>Шаг 4</h4>
+<h4>Шаг 4/6</h4>
 <a href="#step3">К шагу 3</a> <a href="#">К вступлению</a>
 <p>С помощью обратного слеша можно оформить одно сообщение, которое займет две строки. Добавьте комбинацию <zoom>\n</zoom> как в примере.</p>
 <p class="preformatted"><span class="comment">using System;
@@ -192,13 +192,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура!\nЗаработало!"</span>);
+            Console.Write(<span style="color:rgb(214,157,133)">"Ура!\nЗаработало!"</span>);
         <span class="comment">}
     }
 }</span></p>
@@ -206,34 +206,34 @@ namespace ConsoleApplication1
 <p class="preformatted console">Ура!
 Заработало!</p>
 <p class="comment">На самом деле этот символ находится в конце каждой строки в текстовых документах. Мы его вводим когда нажимаем Enter. Подробнее на <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8" target="_blank">википедии</a></p>
-<p>Другой способ сделать то же самое - написать две команды вывода в консоль.</p>
+<p>Другой способ сделать то же самое - воспользоваться другой командой вывода в консоль.</p>
 <p class="preformatted"><span class="comment">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
             Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура!"</span>);
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Заработало!"</span>);
+            Console.Write(<span style="color:rgb(214,157,133)">"Заработало!"</span>);
         <span class="comment">}
     }
 }</span></p>
 <p class="preformatted console">Ура!
 Заработало!</p>
-<p>С точки зрения компьютера нет никакой разницы. Поэтому пишите так, как вам будет понятнее.</p>
+<p>С точки зрения компьютера, существенной разницы нет. Поэтому пишите так, как вам будет понятнее.</p>
 <a href="#step5">К шагу 5</a>
 </div>
 
 
 
 <div id="step5" class="step">
-<h4>Шаг 5</h4>
+<h4>Шаг 5/6</h4>
 <a href="#step4">К шагу 4</a> <a href="#">К вступлению</a>
 <p>Если вам вдруг понадобится выводить сам символ обратного слэша, воспользуйтесь комбинацией <zoom>\\</zoom>. Каждые два обратных слэша подряд в результате дадут один символ в консоли. Например у такой программы:</p>
 <p class="preformatted"><span class="comment">using System;
@@ -242,13 +242,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine("\\\\\\\\");
+            Console.Write("\\\\\\\\");
         <span class="comment">}
     }
 }</span></p>
@@ -261,7 +261,7 @@ namespace ConsoleApplication1
 
 
 <div id="step6" class="step">
-<h4>Шаг 6</h4>
+<h4>Шаг 6/6</h4>
 <a href="#step5">К шагу 5</a> <a href="#">К вступлению</a>
 <p>В первой части задачи нужно вывести вот такое сообщение:</p>
 <p class="preformatted">+---+
@@ -275,13 +275,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"+---+\n|   |\n|   |\n+---+"</span>);
+            Console.Write(<span style="color:rgb(214,157,133)">"+---+\n|   |\n|   |\n+---+"</span>);
         <span class="comment">}
     }
 }</span></p>
@@ -292,7 +292,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
@@ -323,20 +323,20 @@ namespace ConsoleApplication1
 <p>На данной странице находится разбор теории, которая нужна вам для решения задачи. Все остальные разборы будут оформлены примерно так же.</p>
 <p>Чтобы не отвлекать ваше внимание на ненужные детали, в разборе не будет объясняться каждая строчка программы.</p>
 <p>Поначалу в коде будет довольно много <span class="comment">магии</span>. По мере обучения, <span class="comment">магии</span> будет становиться все меньше и меньше.</p>
-<p>Когда вы создаете новый проект, то он целиком будет состоять из <span class="comment">магии</span>
+<p>Когда вы создаете новый проект, то он целиком будет состоять из <span class="comment">магии</span></p>
 <p class="preformatted comment">using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Task1662
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ура! Заработало!");
+            Console.Write("Ура! Заработало!");
         }
     }
 }</p>

@@ -1,7 +1,7 @@
 chcp 65001
 set lang=csharp
 set index=1
-set task=1662
+set task=1860
 set filename="..\..\%lang%\конспекты\pre%task%.html"
 
 echo ^<!DOCTYPE html^> ^
