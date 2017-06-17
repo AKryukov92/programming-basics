@@ -43,6 +43,7 @@ echo ^<div class="nav"^> ^
 type link_c1_p4.3.html>>%filename%
 type link_pre1662.html>>%filename%
 type task1662.html>>%filename%
+type link_pre1860.html>>%filename%
 type task1860.html>>%filename%
 type link_c7_p33.html>>%filename%
 type task4764.html>>%filename%
@@ -61,8 +62,11 @@ type task4343.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-call prepare_1662 skip
 
 copy "Письменные задания к ЛР1.docx" "..\..\%lang%\Письменные задания к ЛР1.docx"
 
 if x%1==x start "" %filename%
+
+cd ..
+call prepare_theory csharp 1662 cs lab01
+call prepare_theory csharp 1860 cs lab01
