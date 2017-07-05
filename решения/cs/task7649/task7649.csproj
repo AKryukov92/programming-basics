@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Lab12Task7649.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\lab05\lab05.csproj">
+      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
+      <Name>lab05</Name>
+    </ProjectReference>
     <ProjectReference Include="..\lab06\lab06.csproj">
       <Project>{0093e7c9-5d51-4aa2-9540-6b67b434a3d2}</Project>
       <Name>lab06</Name>

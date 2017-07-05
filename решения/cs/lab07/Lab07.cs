@@ -3,88 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace tfa
+namespace Methods
 {
     public class Lab07
     {
         static void Main(string[] args)
         {
-            task2354();
-            task2030();
-            task9701();
-        }
-        public static void task2354()
-        {
-            Console.WriteLine();
-            Console.WriteLine("4265");
-            Console.WriteLine(task4265("sABCD"));
-            Console.WriteLine(task4265("Uxyz"));
-            Console.WriteLine(task4265("s"));
-            Console.WriteLine(task4265("F123"));
-            Console.WriteLine(task4265("Sopqr"));
-
-            Console.WriteLine();
-            Console.WriteLine("9925");
-            int result9925 = task9925("один, два, три, четыре, пять");
-            Console.WriteLine(result9925 - 5);
-            Console.WriteLine(task9925("янв,фев,март") - 3);
-            Console.WriteLine(task9925("один") - 1);
-        }
-
-        public static void task2030()
-        {
-            Console.WriteLine();
-            Console.WriteLine("7491");
-            String[] in7491 = { "bx", "fw", "123" };
-            for (int i = 0; i < in7491.Length; i++)
-            {
-                if (task7491(in7491[i]))
-                {
-                    Console.WriteLine("Содержится");
-                }
-                else {
-                    Console.WriteLine("Не содержится");
-                }
-            }
-        }
-
-        public static void task9701()
-        {
-            Console.WriteLine();
-            Console.WriteLine("9631");
-            String[] in9631 = { "z", "a", "g" };
-            int[] out9631 = { 0, 9, 0 };
-            for (int i = 0; i < in9631.Length; i++)
-            {
-                try
-                {
-                    int result = task9631(in9631[i]);
-                    Console.WriteLine("{0} ({1})", result, out9631[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("9812");
-            String[] in9812a = { "a", "w", "g", "x" };
-            String[] in9812b = { "x", "d", "z", "u" };
-            int[] out9812 = { 6, 2, 0, 0 };
-            for (int i = 0; i < in9812a.Length; i++)
-            {
-                try
-                {
-                    int result = task9812(in9812a[i], in9812b[i]);
-                    Console.WriteLine("{0} ({1})", result, out9812[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
             Console.WriteLine();
             Console.WriteLine("9279");
             String[] in9279 = { "ab", "bc", "ac", "xz", "cde", "a" };
@@ -106,136 +30,6 @@ namespace tfa
                     Console.WriteLine(e.Message);
                 }
             }
-
-            Console.WriteLine();
-            Console.WriteLine("4845");
-            int[] in4845a = { 0, 5, 7, -1, 20, 5, 7 };
-            int[] in4845b = { 3, 9, 2, 4, 4, -2, 17 };
-            for (int i = 0; i < in4845a.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine(task4845(in4845a[i], in4845b[i]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("5728");
-            String[] in5728a = { "a", "c", "y", "g", "a" };
-            String[] in5728b = { "z", "d", "d", "z", "l" };
-            for (int i = 0; i < in5728a.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine(task5728(in5728a[i], in5728b[i]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("7222");
-            String[] in7222 = {
-                "4607009520018",
-                "9785750200641",
-                "9785964300694",
-                "123456789012",
-                "12345678901234567890"
-            };
-            for (int i = 0; i < in7222.Length; i++) {
-                try {
-                    Console.WriteLine(task7222(in7222[i]));
-                    Console.WriteLine();
-                } catch (Exception e) {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("5923");
-            int[] in5923a = { 5, 6, 0, -1, 9, 5 };
-            int[] in5923b = { 3, 0, 7, 1, 3, -2 };
-            for (int i = 0; i < in5923a.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine(task5923(in5923a[i], in5923b[i]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("2166");
-            String[] in2166 = { "cd", "aa", "xy", "abc", "f" };
-            for (int i = 0; i < in2166.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine(task2166(in2166[i]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("9116");
-            String[] in9116 = {"\"   12345\"",
-                "\"abcdef    \"",
-                "\"  xyz  \"",
-                "\"  a b  \"",
-                "\" pq\"rt \"",
-                "asdf\"",
-                "\"xyz",
-                "p\"w\""};
-            for (int i = 0; i < in9116.Length; i++)
-            {
-                try
-                {
-                    Console.WriteLine(task9116(in9116[i]));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("1618");
-            String[] in1618 = {
-                "{}",
-                "{{}}",
-                "{{}}{}",
-                "{{}{}}",
-                "{{{{}{}}{{}{{}}{}}}{{}{}}}",
-                "{",
-                "{{}",
-                "{{}}{",
-                "{{{}}{}{}}{{}{}{}",
-                "}",
-                "{}}",
-                "{{{}{}}}{{}{}}{{}}}"};
-            for (int i = 0; i < in1618.Length; i++)
-            {
-                try
-                {
-                    task1618(in1618[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-            Console.Read();
         }
 
         public static String STR = "abcdefwxyz";
@@ -288,7 +82,7 @@ namespace tfa
 
         }
 
-        private static String task4845(int a, int b) {
+        public static String task4845(int a, int b) {
             if (a < 0 || a > STR.Length){
                 throw new Exception("Значение A должно быть в интервале [0,длина строки)");
             }

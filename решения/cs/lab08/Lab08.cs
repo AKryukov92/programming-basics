@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tfa
+namespace Methods
 {
     public class Lab08
     {
         static void Main(string[] args)
         {
-            task2354();
-            task2030();
-            task7649();
             task8787();
             task9707();
 
@@ -407,136 +404,6 @@ namespace tfa
                     sb.Append(" ");
                 }
                 Console.WriteLine(sb.ToString());
-            }
-        }
-
-        public static void task2354()
-        {
-            Console.WriteLine();
-            Console.WriteLine("3946");
-            String[] in3946 = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 3 4 4 4 4",
-                ""};
-            double[] out3946 = { 2.2, 3, 0 };
-            for (int i = 0; i < in3946.Length; i++)
-            {
-                double result = task3946(in3946[i]);
-                Console.WriteLine("{0:F6} ({0:F6})", result, out3946[i]);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("7035");
-            String[] in7035 = {
-                "1 2 3 4 5 6",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 8 9",
-                "4 4 4 4",
-                "4 3"};
-            int[] out7035 = { 1, 1, 2, 3, 4, 3 };
-            for (int i = 0; i < in7035.Length; i++)
-            {
-                int result = task7035(in7035[i]);
-                Console.WriteLine("{0} ({1})", result, out7035[i]);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("4283");
-            int[] in4283k = { 3, 5, 2, 1 };
-            String[] in4283s = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3",
-                "3 2 2 2 2 2",
-                "4 4 4 4 4 4"};
-            int[] out4283 = { 1, 0, 5, 0 };
-            for (int i = 0; i < in4283k.Length; i++)
-            {
-                int result = task4283(in4283k[i], in4283s[i]);
-                Console.WriteLine("{0} ({1})", result, out4283[i]);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("9182");
-            String[] in9182 = {
-                "1 2 3 4 5 6",
-                "1 2 3 1 2 6",
-                "1 1 1 1 1 1"};
-            int[] out9182 = { 6, 4, 1 };
-            for (int i = 0; i < out9182.Length; i++)
-            {
-                int result = task9182(in9182[i]);
-                Console.WriteLine("{0} ({1})", result, out9182[i]);
-            }
-        }
-
-        public static void task2030()
-        {
-            Console.WriteLine();
-            Console.WriteLine("4515");
-            String[] in4515 = {
-                "9 8 7 6 5",
-                "4 3 2 1 5 6 7 8 9 0",
-                "1 2 3 1"};
-            for (int i = 0; i < in4515.Length; i++)
-            {
-                if (task4515(in4515[i]))
-                {
-                    Console.WriteLine("Повторения есть");
-                }
-                else
-                {
-                    Console.WriteLine("Повторений нет");
-                }
-            }
-        }
-
-        public static void task7649()
-        {
-            Console.WriteLine();
-            Console.WriteLine("5694");
-            String[] in5694 = { "a", "d", "h", "i", "z" };
-            String[] out5694 = {
-            "a+\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd+\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh+\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n"};
-            for (int i = 0; i < in5694.Length; i++)
-            {
-                StringBuilder result = task5694(new StringBuilder(), in5694[i]);
-                if (out5694[i].Equals(result.ToString()))
-                {
-                    Console.WriteLine("Задача решена верно");
-                }
-                else
-                {
-                    result.Insert(0, "Неверно. Результат:\n");
-                    Console.WriteLine(result.ToString());
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("6806");
-            int[] in6806 = { 10, 15, 20, 9, 23 };
-            String[] out6806 = {
-                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"};
-            for (int i = 0; i < in6806.Length; i++)
-            {
-                StringBuilder result = task6806(new StringBuilder(), in6806[i]);
-                if (out6806[i].Equals(result.ToString()))
-                {
-                    Console.WriteLine("Задача решена верно");
-                }
-                else
-                {
-                    result.Insert(0, "Неверно. Результат:\n");
-                    Console.WriteLine(result.ToString());
-                }
             }
         }
 

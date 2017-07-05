@@ -3,47 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Methods;
 
 namespace tfa
 {
-    class Program
+    class Lab12Task5164
     {
         static void Main(string[] args)
         {
-            Step1();
-            Step2();
-            Step3();
-            Step4();
-            Step5();
-            Step6();
-            Step7();
-            Step8();
-            Step9();
-            Step10();
+            Step1860();
+            Step4764();
+            Step2429();
+            Step7472();
+            Step3862();
+
+            Step9231();
+            Step8624();
+            Step2959();
+            Step7271();
+            Step2632();
+
+            Step4343();
         }
 
-        static void Step1()
+        static void Step1860()
         {
             Lab01.task1860("знаниям");
             Lab01.task1860("цели");
             Lab01.task1860("результату");
         }
 
-        static void Step2()
+        static void Step4764()
         {
             Lab01.task4764("трудности");
             Lab01.task4764("загадки");
             Lab01.task4764("сложные задачи");
         }
 
-        static void Step3()
+        static void Step2429()
         {
             Lab01.task2429("просто");
             Lab01.task2429("интересно");
             Lab01.task2429("перспективно");
         }
 
-        static void Step4()
+        static void Step7472()
         {
             Lab01.task7472("начало", "конец");
             Lab01.task7472("сила", "знание");
@@ -51,37 +55,37 @@ namespace tfa
             Lab01.task7472("шаг", "шаг");
         }
 
-        static void Step5()
+        static void Step3862()
         {
-            Lab01.task2862();
+            Lab01.task3862();
         }
 
-        static void Step6()
+        static void Step9231()
         {
             Lab01.task9231(9.780327);
             Lab01.task9231(-273.15);
             Lab01.task9231(0.00006);
         }
 
-        static void Step7()
+        static void Step8624()
         {
             Lab01.task8624(811);
             Lab01.task8624(1583);
         }
 
-        static void Step8()
+        static void Step2959()
         {
             Lab01.task2959("123456789");
             Lab01.task2959("fa93f");
         }
 
-        static void Step9()
+        static void Step7271()
         {
             Lab01.task7271(5, 7);
             Lab01.task7271(-1, 1000);
         }
 
-        static void Step10()
+        static void Step2632()
         {
             Lab01.task2632(50, 50, 40, "yellow");
             Lab01.task2632(400, 300, 200, "green");
@@ -90,6 +94,20 @@ namespace tfa
                 356,
                 100,
                 "#cc6600");
+        }
+
+        static void Step4343()
+        {
+            Console.WriteLine();
+            Console.WriteLine("4343");
+            Lab01.task4343("test", "pass", "localhost", "5432", "my_db");
+            Lab01.task4343(
+                    "admin",
+                    "7e8efd48d69c",
+                    "production-node1",
+                    "5432",
+                    "bank");
+            Lab01.task4343("akryukov", "123", "localhost", "dev-node1", "bank");
         }
     }
 }

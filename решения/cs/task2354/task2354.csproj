@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Lab12Task2354.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +51,10 @@
     <ProjectReference Include="..\lab02\lab02.csproj">
       <Project>{f71b4ba2-a45b-4330-8543-5f6bbf5aa30d}</Project>
       <Name>lab02</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lab05\lab05.csproj">
+      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
+      <Name>lab05</Name>
     </ProjectReference>
     <ProjectReference Include="..\lab06\lab06.csproj">
       <Project>{0093e7c9-5d51-4aa2-9540-6b67b434a3d2}</Project>

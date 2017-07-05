@@ -3,28 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Methods;
 
 namespace tfa
 {
-    class Program
+    class Lab12Task7649
     {
         static void Main(string[] args)
         {
-            Step1();
-            Step2();
-            Step3();
-            Step4();
-            Step5();
-            Step6();
-            Step7();
-            Step8();
-            Step9();
-            Step10();
-            Step11();
-            Step12();
+            Step8518();
+            Step8495();
+            Step1315();
+            Step3762();
+            Step3550();
+
+            Step6572();
+            Step2084();
+            Step5411();
+            Step7585();
+            Step8770();
+
+            Step5694();
+            Step6806();
         }
 
-        static void Step1()
+        static void Step8518()
         {
             String out8518 = "a+\nb\nc\nd\ne\nf\ng\nh\n\n" +
                 "a\nb\nc\nd+\ne\nf\ng\nh\n\n" +
@@ -46,8 +49,10 @@ namespace tfa
             }
         }
 
-        static void Step2()
+        static void Step8495()
         {
+            Console.WriteLine();
+            Console.WriteLine("8495");
             StringBuilder sb8495 = new StringBuilder();
             sb8495 = sb8495.Append("@");
             sb8495 = Lab06.task8495(sb8495);
@@ -55,8 +60,10 @@ namespace tfa
             Console.WriteLine(sb8495.ToString());
         }
 
-        static void Step3()
+        static void Step1315()
         {
+            Console.WriteLine();
+            Console.WriteLine("1315");
             StringBuilder sb1315 = new StringBuilder();
             sb1315.Append("@");
             Lab06.task1315(sb1315);
@@ -64,14 +71,18 @@ namespace tfa
             Console.WriteLine(sb1315);
         }
 
-        static void Step4()
+        static void Step3762()
         {
+            Console.WriteLine();
+            Console.WriteLine("3762");
             String result3762 = Lab06.task3762(new StringBuilder()).ToString();
             Console.WriteLine(result3762);
         }
 
-        static void Step5()
+        static void Step3550()
         {
+            Console.WriteLine();
+            Console.WriteLine("3550");
             StringBuilder sb3550 = Lab06.task3550(
                 new StringBuilder()
                 .Append("@"))
@@ -79,8 +90,10 @@ namespace tfa
             Console.WriteLine(sb3550.ToString());
         }
 
-        static void Step6()
+        static void Step6572()
         {
+            Console.WriteLine();
+            Console.WriteLine("6572");
             StringBuilder sb6572 = new StringBuilder();
             Lab06.task6572(sb6572, 8, 13);
             Lab06.task6572(sb6572, 691, 703);
@@ -88,8 +101,10 @@ namespace tfa
             Console.WriteLine(sb6572);
         }
 
-        static void Step7()
+        static void Step2084()
         {
+            Console.WriteLine();
+            Console.WriteLine("2084");
             String result2084;
             result2084 = Lab06.task2084(new StringBuilder(), 20, 30).Append("\n")
                 .Append(Lab06.task2084(new StringBuilder(), 8, 13)).Append("\n")
@@ -104,8 +119,10 @@ namespace tfa
             Console.WriteLine(result2084);
         }
 
-        static void Step8()
+        static void Step5411()
         {
+            Console.WriteLine();
+            Console.WriteLine("5411");
             String result5411 = Lab06.task5411(
                 Lab06.task5411(
                     Lab06.task5411(new StringBuilder(), 7, 11)
@@ -116,8 +133,10 @@ namespace tfa
             Console.WriteLine(result5411);
         }
 
-        static void Step9()
+        static void Step7585()
         {
+            Console.WriteLine();
+            Console.WriteLine("7585");
             int[] in7585 = { 10, 15, 20, 9, 21 };
             String[] out7585 = {
                 "10+\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
@@ -141,7 +160,7 @@ namespace tfa
             }
         }
 
-        static void Step10()
+        static void Step8770()
         {
             int[] in8770 = { 30, 37, 40, 8, 100 };
             String[] out8770 = {
@@ -165,7 +184,7 @@ namespace tfa
             }
         }
 
-        static void Step11()
+        static void Step5694()
         {
             String[] in5694 = { "a", "d", "h", "i", "z" };
             String[] out5694 = {
@@ -189,7 +208,7 @@ namespace tfa
             }
         }
 
-        static void Step12()
+        static void Step6806()
         {
             int[] in6806 = { 10, 15, 20, 9, 23 };
             String[] out6806 = {
