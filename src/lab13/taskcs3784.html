@@ -2,40 +2,15 @@
     <div class="task_id">3784</div>
     <h3>Задача</h3>
     <div class="task_desc">Нужно реализовать метод для решения указанных задач. Вывод в консоль реализуется вызывающей программой. Проверить с помощью соответствующей программы для вызова.</div>
-    <div class="check_single preformatted">public class Caller3784 {
-    public static void main(String[] args) {
-        //Команды вызова методов
-    }
-}</div>
     <table class="check_values">
         <tr>
             <th>Номер п/п</th>
             <th>Условие задачи</th>
-            <th>Команды вызова методов</th>
             <th>Ожидаемый результат</th>
         </tr>
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task4257" target="_blank">ЛР5№4257 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">double[] in4257l = { 0.7, 0.3, 0.05, -2, 300 };
-double[] in4257p = { 2297, 983, 101, 15, -113 };
-for (int i = 0; i &lt; in4257l.Length; i++)
-{
-    try
-    {
-        if (task4257(in4257l[i], in4257p[i]))
-        {
-            Console.WriteLine("Расстояние в километрах меньше");
-        }
-        else {
-            Console.WriteLine("Расстояние в футах меньше");
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Расстояние в километрах меньше
 Расстояние в футах меньше
 Расстояние в футах меньше
@@ -45,42 +20,14 @@ for (int i = 0; i &lt; in4257l.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task2291" target="_blank">ЛР5№2291 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">double[] in2291v1 = { 60.5, 17950, -0.6, 0.1004 };
-double[] in2291v2 = { 16.8, 5000, 0.2, -0.028 };
-for (int i = 0; i &lt; in2291v1.Length; i++)
-{
-    try
-    {
-        String result = task2291(in2291v1[i], in2291v2[i]);
-        Console.WriteLine(result);
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
-            <td class="preformatted">16,80 км/ч меньше 60,50 м/с
-17950,00 км/ч меньше 5000,00 м/с
-Значение V1 должно быть неотрицательным
-Значение V2 должно быть неотрицательным</td>
+            <td class="preformatted">16,80 км/ч меньше 16,80 м/с
+17950,00 км/ч меньше 17950,00 м/с
+Значение velocityInKmH должно быть неотрицательным
+Значение velocityInMS должно быть неотрицательным</td>
         </tr>
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task1763" target="_blank">ЛР5№1763 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in1763r = { 15, 29, -17, 37 };
-int[] in1763a = { 31, 41, 23, -5 };
-for (int i = 0; i &lt; in1763r.Length; i++)
-{
-    try
-    {
-        String result = task1763(in1763r[i], in1763a[i]);
-        Console.WriteLine(result);
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Площадь квадрата 961,0000 больше площади круга 706,8583
 Площадь круга 2642,0794 больше площади квадрата 1681,0000
 Радиус должен быть положительным
@@ -89,23 +36,6 @@ for (int i = 0; i &lt; in1763r.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task1945" target="_blank">ЛР6№1945 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in1945sc = { 17, 13, 7854, 5808, -20, 300 };
-int[] in1945ss = { 19, 19, 8100, 8100, 4, -200 };
-for (int i = 0; i &lt; in1945sc.Length; i++)
-{
-    try {
-        if (task1945(in1945sc[i], in1945ss[i]))
-        {
-            Console.WriteLine("Круг уместится в квадрате");
-        }
-        else {
-            Console.WriteLine("Круг не поместится в квадрате");
-        }
-    } catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Круг не поместится в квадрате
 Круг уместится в квадрате
 Круг не поместится в квадрате
@@ -116,27 +46,6 @@ for (int i = 0; i &lt; in1945sc.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task6291" target="_blank">ЛР5№6291 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in6291a = { 13, 21, 29, 61, 211, -151, 193, 101 };
-int[] in6291b = { 17, 21, 2, 47, 211, 239, -193, 83 };
-int[] in6291c = { 14, 37, 29, 47, 211, 239, 3, -101 };
-for (int i = 0; i &lt; in6291a.Length; i++)
-{
-    try
-    {
-        if (task6291(in6291a[i], in6291b[i], in6291c[i]))
-        {
-            Console.Write("Треугольник является ");
-        }
-        else {
-            Console.Write("Треугольник не является");
-        }
-        Console.WriteLine("равнобедренным.");
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Треугольник не является равнобедренным.
 Треугольник является равнобедренным.
 Треугольник является равнобедренным.
@@ -149,24 +58,6 @@ for (int i = 0; i &lt; in6291a.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task3883" target="_blank">ЛР5№3883 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in3883 = { 1234, 9171, 100, 98765 };
-for (int i = 0; i &lt; in3883.Length; i++)
-{
-    try
-    {
-        if (task3883(in3883[i]))
-        {
-            Console.WriteLine("равно");
-        }
-        else {
-            Console.WriteLine("не равно");
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">не равно
 равно
 Значение A должно быть в интервале [1000, 9999]
@@ -175,27 +66,6 @@ for (int i = 0; i &lt; in3883.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task4527" target="_blank">ЛР5№4527 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in4527 = { 1, 2, 3, 8, -10, 26, 40, 100, -20, 300 };
-String[] out4527 = {"1'ый","2'ой","3'ий","8'ой",
-    "-10'ый","26'ой","40'ой","100'ый"};
-for (int i = 0; i &lt; in4527.Length; i++)
-{
-    try
-    {
-        String result = task4527(in4527[i]);
-        if (result.Equals(out4527[i]))
-        {
-            Console.WriteLine("Задача решена верно");
-        }
-        else {
-            Console.WriteLine("Ошибка. Результат:" + result);
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Задача решена верно
 Задача решена верно
 Задача решена верно
@@ -210,28 +80,6 @@ for (int i = 0; i &lt; in4527.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task6556" target="_blank">ЛР5№6556 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in6556a = { 3, 13, 23, -2, 3, 13, 6911 };
-int[] in6556b = { 5, 11, 3, 8, -4, 15, 5881 };
-int[] in6556c = { 7, 7, 9, 9, 5, -17, 3203 };
-int[] in6556d = { 9, 19, 11, 7, 6, 19, -4639 };
-for (int i = 0; i &lt; in6556a.Length; i++)
-{
-    try
-    {
-        if (task6556(in6556a[i], in6556b[i],
-                in6556c[i], in6556d[i]))
-        {
-            Console.WriteLine("Размещение возможно");
-        }
-        else {
-            Console.WriteLine("Размещение невозможно");
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Размещение возможно
 Размещение невозможно
 Размещение невозможно
@@ -243,24 +91,6 @@ for (int i = 0; i &lt; in6556a.Length; i++)
         <tr>
             <td></td>
             <td><a href="[5] лаб. ОСАЛП.html#task2153" target="_blank">ЛР5№2153 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in2153t = {0, 1, 2, 3, 4, 5, 13, 59, 60, 61};
-for (int i = 0; i &lt; in2153t.Length; i++)
-{
-    try
-    {
-        if (task2153(in2153t[i]))
-        {
-            Console.WriteLine("Зеленый");
-        }
-        else {
-            Console.WriteLine("Красный");
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Зеленый
 Зеленый
 Зеленый
@@ -275,24 +105,6 @@ for (int i = 0; i &lt; in2153t.Length; i++)
         <tr>
             <td></td>
             <td><a href="[6] лаб. ОСАЛП.html#task5170" target="_blank">ЛР6№5170 (открыть в новой вкладке)</a></td>
-            <td class="preformatted">int[] in5170 = { 6, 3219, 7, 2017, -10 };
-for (int i = 0; i &lt; in5170.Length; i++)
-{
-    try
-    {
-        if (task5170(in5170[i]))
-        {
-            Console.WriteLine("Число простое");
-        }
-        else {
-            Console.WriteLine("Число не простое");
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-}</td>
             <td class="preformatted">Число не простое
 Число не простое
 Число простое

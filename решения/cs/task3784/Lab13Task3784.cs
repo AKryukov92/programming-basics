@@ -133,7 +133,7 @@ namespace Task3784
                     }
                     else
                     {
-                        Console.Write("Треугольник не является");
+                        Console.Write("Треугольник не является ");
                     }
                     Console.WriteLine("равнобедренным.");
                 }

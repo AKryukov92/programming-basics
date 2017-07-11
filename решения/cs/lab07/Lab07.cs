@@ -83,19 +83,19 @@ namespace Methods
         }
 
         public static String task4845(int a, int b) {
-            if (a < 0 || a > STR.Length){
+            if (a < 0 || a >= STR.Length){
                 throw new Exception("Значение A должно быть в интервале [0,длина строки)");
             }
-            if (b < 0 || b > STR.Length){
+            if (b < 0 || b >= STR.Length){
                 throw new Exception("Значение B должно быть в интервале [0,длина строки)");
             }
             if (a > b)
             {
-                return STR.Substring(b, a + 1);
+                return STR.Substring(b, a - b + 1);
             }
             else
             {
-                return STR.Substring(a, b + 1);
+                return STR.Substring(a, b - a + 1);
             }
         }
 

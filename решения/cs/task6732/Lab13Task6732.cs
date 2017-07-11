@@ -31,84 +31,6 @@ namespace task6732
             Step5683();
         }
 
-        private static void Step1862()
-        {
-            Console.WriteLine();
-            Console.WriteLine("1862");
-            String[] in1862s1 = { "#", "?", "*", "=", "o", "!" };
-            String[] in1862s2 = { "0", "-", "!", "+", "T", "." };
-            int[] in1862w = { 5, 7, 90, 0, -2, 20 };
-            int[] in1862h = { 3, 10, 0, 15, 8, -6 };
-            String[] out1862 = {
-                "#0#0#\n#0#0#\n#0#0#\n",
-                "?-?-?-?\n?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
-                        "?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
-                        "?-?-?-?\n?-?-?-?\n?-?-?-?\n",
-                "",
-                "",
-                "ожидается исключение",
-                "ожидается исключение"};
-            for (int i = 0; i < in1862s1.Length; i++)
-            {
-                try
-                {
-                    StringBuilder result = Lab06.task1862(new StringBuilder(), in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
-                    if (out1862[i].Equals(result.ToString()))
-                    {
-                        Console.WriteLine("Задача решена верно");
-                    }
-                    else
-                    {
-                        result.Insert(0, "Неверно. Результат:\n");
-                        Console.WriteLine(result.ToString());
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-        }
-
-        private static void Step5171()
-        {
-            Console.WriteLine();
-            Console.WriteLine("5171");
-            String[] in5171s1 = { "#", "?", "*", "=", "o", "!" };
-            String[] in5171s2 = { "0", "-", "!", "+", "T", "." };
-            int[] in5171w = { 5, 7, 90, 0, -2, 20 };
-            int[] in5171h = { 3, 10, 0, 15, 8, -6 };
-            String[] out5171 = {
-                "#####\n00000\n#####\n",
-                "???????\n-------\n???????\n-------\n" +
-                        "???????\n-------\n???????\n" +
-                        "-------\n???????\n-------\n",
-                "",
-                "",
-                "ожидается исключение",
-                "ожидается исключение"};
-            for (int i = 0; i < in5171w.Length; i++)
-            {
-                try
-                {
-                    StringBuilder result = Lab06.task5171(new StringBuilder(), in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
-                    if (out5171[i].Equals(result.ToString()))
-                    {
-                        Console.WriteLine("Задача решена верно");
-                    }
-                    else
-                    {
-                        result.Insert(0, "Неверно. Результат:\n");
-                        Console.WriteLine(result.ToString());
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-        }
-
         private static void Step5238()
         {
             Console.WriteLine();
@@ -424,6 +346,84 @@ namespace task6732
             {
                 String str = Lab08.task5683(in5683[i]);
                 Console.WriteLine(str);
+            }
+        }
+
+        private static void Step1862()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1862");
+            String[] in1862s1 = { "#", "?", "*", "=", "o", "!" };
+            String[] in1862s2 = { "0", "-", "!", "+", "T", "." };
+            int[] in1862w = { 5, 7, 90, 0, -2, 20 };
+            int[] in1862h = { 3, 10, 0, 15, 8, -6 };
+            String[] out1862 = {
+                "#0#0#\n#0#0#\n#0#0#\n",
+                "?-?-?-?\n?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
+                        "?-?-?-?\n?-?-?-?\n?-?-?-?\n" +
+                        "?-?-?-?\n?-?-?-?\n?-?-?-?\n",
+                "",
+                "",
+                "ожидается исключение",
+                "ожидается исключение"};
+            for (int i = 0; i < in1862s1.Length; i++)
+            {
+                try
+                {
+                    StringBuilder result = Lab06.task1862(new StringBuilder(), in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
+                    if (out1862[i].Equals(result.ToString()))
+                    {
+                        Console.WriteLine("Задача решена верно");
+                    }
+                    else
+                    {
+                        result.Insert(0, "Неверно. Результат:\n");
+                        Console.WriteLine(result.ToString());
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        private static void Step5171()
+        {
+            Console.WriteLine();
+            Console.WriteLine("5171");
+            String[] in5171s1 = { "#", "?", "*", "=", "o", "!" };
+            String[] in5171s2 = { "0", "-", "!", "+", "T", "." };
+            int[] in5171w = { 5, 7, 90, 0, -2, 20 };
+            int[] in5171h = { 3, 10, 0, 15, 8, -6 };
+            String[] out5171 = {
+                "#####\n00000\n#####\n",
+                "???????\n-------\n???????\n-------\n" +
+                        "???????\n-------\n???????\n" +
+                        "-------\n???????\n-------\n",
+                "",
+                "",
+                "ожидается исключение",
+                "ожидается исключение"};
+            for (int i = 0; i < in5171w.Length; i++)
+            {
+                try
+                {
+                    StringBuilder result = Lab06.task5171(new StringBuilder(), in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
+                    if (out5171[i].Equals(result.ToString()))
+                    {
+                        Console.WriteLine("Задача решена верно");
+                    }
+                    else
+                    {
+                        result.Insert(0, "Неверно. Результат:\n");
+                        Console.WriteLine(result.ToString());
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
     }

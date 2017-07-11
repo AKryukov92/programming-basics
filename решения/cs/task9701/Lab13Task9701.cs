@@ -47,6 +47,7 @@ namespace task9701
             Step5894();
             Step4425();
 
+            Step7290();
             Step8769();
             Step7799();
         }
@@ -180,14 +181,14 @@ namespace task9701
         {
             Console.WriteLine();
             Console.WriteLine("3591");
-            int[] in3591 = { 0, 200, 6857 };
+            int[] in3591 = { 0, 200, 6857, -500 };
             double[] out3591 = { 0, 1606.2378, 11580.2569, -1 };
             for (int i = 0; i < in3591.Length; i++)
             {
                 try
                 {
                     double result = Lab02.task3591(in3591[i]);
-                    Console.WriteLine("{0:F6} ({1:F6})\n", result, out3591[i]);
+                    Console.WriteLine("{0:F6} ({1:F6})", result, out3591[i]);
                 }
                 catch (Exception e)
                 {
@@ -744,7 +745,7 @@ namespace task9701
             }
         }
 
-        static void task7290()
+        static void Step7290()
         {
             Console.WriteLine();
             Console.WriteLine("7290");
