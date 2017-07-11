@@ -25,8 +25,22 @@ type ..\nav_php.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
+ ^<li^>^<a href="#task5164"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task2354"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task2030"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task7649"^>№ 4^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
+
+type link_c2_p7.html>>%filename%
+type task5164.html>>%filename%
+type task2354.html>>%filename%
+type link_c2_p7.1.html>>%filename%
+type task2030.html>>%filename%
+type link_c2_p7.2.html>>%filename%
+type task7649.html>>%filename%
+type link_c2_p7.3.html>>%filename%
+type link_c2_p7.5.html>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

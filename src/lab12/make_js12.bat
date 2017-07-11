@@ -33,12 +33,12 @@ echo ^<div class="nav"^> ^
  ^</div^>>>%filename%
 
 type link_c2_p7.html>>%filename%
-type taskjs5164.html>>%filename%
-type taskjs2354.html>>%filename%
+type task5164.html>>%filename%
+type task2354.html>>%filename%
 type link_c2_p7.1.html>>%filename%
-type taskjs2030.html>>%filename%
+type task2030.html>>%filename%
 type link_c2_p7.2.html>>%filename%
-type taskjs7649.html>>%filename%
+type task7649.html>>%filename%
 type link_c2_p7.3.html>>%filename%
 type link_c2_p7.5.html>>%filename%
 
@@ -46,32 +46,5 @@ echo ^</body^> ^
  ^</html^>>> %filename%
 
 copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
-pushd ..\..\%lang%\files\
-mkdir task2354
-mkdir task2030
-mkdir task5164
-mkdir task7649
-popd
-
-pushd task2354
-copy "task2354caller.js" "..\..\..\%lang%\files\task2354\task2354caller.js"
-copy "task2354layout.html" "..\..\..\%lang%\files\task2354\task2354layout.html"
-popd
-
-pushd task2030
-copy "task2030caller.js" "..\..\..\%lang%\files\task2030\task2030caller.js"
-copy "task2030layout.html" "..\..\..\%lang%\files\task2030\task2030layout.html"
-popd
-
-pushd task5164
-copy "task5164caller.js" "..\..\..\%lang%\files\task5164\task5164caller.js"
-copy "task5164layout.html" "..\..\..\%lang%\files\task5164\task5164layout.html"
-popd
-
-pushd task7649
-copy "task7649caller.js" "..\..\..\%lang%\files\task7649\task7649caller.js"
-copy "task7649layout.html" "..\..\..\%lang%\files\task7649\task7649layout.html"
-popd
 
 if x%1==x start "" %filename%

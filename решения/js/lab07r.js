@@ -79,8 +79,7 @@ for (var i = 0; i < in2166.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in9116 = ['"   12345"', '"abcdef    "', '"  xyz  "',
-'"  a b  "', '" pq"rt "','asdf"','"xyz','p"w"'];
+var in9116 = ['"   12345"', '"abcdef    "', '"  xyz  "','"  a b  "', '" pq"rt "','asdf"','"xyz','p"w"'];
 for (var i = 0; i < in9116.length; i++){
 	var out = document.getElementById("9116t" + i);
 	try {
@@ -89,8 +88,7 @@ for (var i = 0; i < in9116.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in9925 = ["один, два, три, четыре, пять",
-"янв,фев,март","один"];
+var in9925 = ["один, два, три, четыре, пять","янв,фев,март","один"];
 for (var i = 0; i < in9925.length; i++){
 	var out = document.getElementById("9925t" + i);
 	out.innerHTML = task9925(in9925[i]);
