@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE28862F-127B-48BE-A59C-D8C460EDC869}</ProjectGuid>
+    <ProjectGuid>{13BF60D5-501B-4F26-B582-796C4637F940}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>task9701</RootNamespace>
-    <AssemblyName>task9701</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>task6732</RootNamespace>
+    <AssemblyName>task6732</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,28 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lab13Task9701.cs" />
+    <Compile Include="Lab13Task6732.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\lab02\lab02.csproj">
-      <Project>{f71b4ba2-a45b-4330-8543-5f6bbf5aa30d}</Project>
-      <Name>lab02</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lab05\lab05.csproj">
-      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
-      <Name>lab05</Name>
-    </ProjectReference>
     <ProjectReference Include="..\lab06\lab06.csproj">
       <Project>{0093e7c9-5d51-4aa2-9540-6b67b434a3d2}</Project>
       <Name>lab06</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lab07\lab07.csproj">
-      <Project>{cd564d7c-0978-4fe7-ad8f-509050c29929}</Project>
-      <Name>lab07</Name>
     </ProjectReference>
     <ProjectReference Include="..\lab08\lab08.csproj">
       <Project>{495680cc-053d-4b06-8a08-055c423c6393}</Project>

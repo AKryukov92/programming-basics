@@ -11,143 +11,6 @@ namespace Methods
         static void Main(string[] args)
         {
             task8787();
-            task9707();
-
-            Console.WriteLine();
-            Console.WriteLine("7369");
-            String[] in7369top = {
-                "q a z w s x",
-                "e d c",
-                "a a a a",
-                "r f v",
-                ""};
-            String[] in7369left = {
-                "q w e",
-                "a s d f g h j",
-                "a a a a",
-                "",
-                "z x c v"};
-            for (int i = 0; i < in7369left.Length; i++){
-                String result = task7369(in7369left[i], in7369top[i]);
-                Console.WriteLine(result);
-            }
-            
-            Console.WriteLine();
-            Console.WriteLine("5894");
-            String[] in5894top = {
-                "q a z",
-                "qw fg hj ty kl",
-                "oiuy hjkl vbmn",
-                "a s d f",
-                ""
-            };
-            String[] in5894left = {
-                "q w e",
-                "qw er ty ui op",
-                "asdf ghjk",
-                "",
-                "zxc vbn"
-            };
-            for (int i = 0; i < in5894left.Length; i++){
-                try {
-                    int result = task5894(in5894left[i], in5894top[i]);
-                    Console.WriteLine("Повторений: " + result);
-                } catch (Exception e) {
-                    Console.WriteLine(e.Message);
-                }
-            }
-        }
-
-        public static void task9707()
-        {
-            Console.WriteLine();
-            Console.WriteLine("4425");
-            int[] in4425a = { 0, 3, 9, 5, -1, 0 };
-            String[] in4425data = {
-                "q w e r",
-                "q w e r",
-                "q w e r t y u i o p",
-                "q w e r",
-                "q w e r",
-                ""};
-            String[] out4425 = { "q", "r", "p", "", "", "" };
-            for (int i = 0; i < in4425a.Length; i++)
-            {
-                try
-                {
-                    String result = task4425(in4425a[i], in4425data[i]);
-                    Console.WriteLine("{0} ({1})", result, out4425[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("5683");
-            String[] in5683 = {
-                "qw er ty",
-                "qw er ty ui op",
-                "asd fgh jkl",
-                "",
-                "q w e r a s d f z x c v"};
-            for (int i = 0; i < in5683.Length; i++){
-                Console.WriteLine(task5683(in5683[i]));
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("7290");
-            int[] in7290b = { 3, 2, 0, 4, 7, 1, -5 };
-            String[] in7290data = {
-                "1 1 1 3 4 1",
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "1 1 1 3 4 1",
-                "1 2 3"};
-            int[] out7290 = { 4, 4, 6, 2, 0, 0, 0, 0 };
-            for (int i = 0; i < in7290b.Length; i++)
-            {
-                try
-                {
-                    int result = task7290(in7290b[i], in7290data[i]);
-                    Console.WriteLine("{0} ({1})", result, out7290[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("8769");
-            int[] in8769p = { 1, 8, 1, 0, 0, 1, -1, 5 };
-            int[] in8769q = { 3, 10, 4, 5, 5, 7, 0, 10 };
-            String[] in8769s = {
-                "1 2 3 4 1 2",
-                "3 4 4 2 3 4 1 2 3 1 2",
-                "11 12 13 5 11 12",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "4 3",
-                "1 2 3 4"};
-            int[] out8769 = { 2, 1, 5, 2, 3, 0, 0, 0 };
-            for (int i = 0; i < in8769p.Length; i++)
-            {
-                try
-                {
-                    int result = task8769(in8769p[i], in8769q[i], in8769s[i]);
-                    Console.WriteLine("{0} ({1})", result, out8769[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
         }
 
         public static void task8787()
@@ -421,7 +284,7 @@ namespace Methods
             return arr[a];
         }
 
-        private static String task5683(String str)
+        public static String task5683(String str)
         {
             if (String.IsNullOrEmpty(str))
             {
@@ -438,6 +301,7 @@ namespace Methods
             }
             return sb.ToString();
         }
+
         public static IList<int> task1223(String raw)
         {
             IList<int> ret = new List<int>();

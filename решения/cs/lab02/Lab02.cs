@@ -50,24 +50,6 @@ namespace Methods
             }
 
             Console.WriteLine();
-            Console.WriteLine("7799");
-            int[] in7799mass = { 5, 7297, 10, 7, 9, 0 };
-            int[] in7799a = { 45, 30, 90, 91, 100, 30 };
-            double[] outs7799 = { 34.671920, 61972.336135, 0, 0, 0, 0 };
-            for (int i = 0; i < in7799mass.Length; i++)
-            {
-                try
-                {
-                    double result = task7799(in7799mass[i], in7799a[i]);
-                    Console.WriteLine("{0:F6} ({1:F6})", result, outs7799[i]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
-
-            Console.WriteLine();
             Console.WriteLine("9622");
             int[] in9622m = {7351,19,-1,2,3};
             int[] in9622v = {7349,23,4,-5,6};

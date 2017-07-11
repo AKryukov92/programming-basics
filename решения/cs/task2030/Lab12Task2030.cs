@@ -117,14 +117,14 @@ namespace tfa
             int[] in1999y = { 2, 2, 2, 1, 1, 1, 0, 0, 0 };
             for (int i = 0; i < in1999x.Length; i++)
             {
-                Console.Write("{" + in1999x[i] + ";" + in1999y[i]);
+                Console.Write("{" + in1999x[i] + ";" + in1999y[i] + "} ");
                 if (Lab05.task1999(in1999x[i], in1999y[i]))
                 {
-                    Console.WriteLine("} принадлежит области");
+                    Console.WriteLine("принадлежит области");
                 }
                 else
                 {
-                    Console.WriteLine("} не принадлежит области");
+                    Console.WriteLine("не принадлежит области");
                 }
             }
         }
@@ -135,16 +135,17 @@ namespace tfa
             Console.WriteLine("4042");
             double[] in4042x = { 2, 1, 0, -1, -2 };
             double[] in4042y = { 2, 1.5, 0, -2, -3 };
+            String positivePattern = "{{{0};{1}}} принадлежит области";
+            String negativePattern = "{{{0};{1}}} не принадлежит области";
             for (int i = 0; i < in4042x.Length; i++)
             {
-                Console.Write("{" + in4042x[i] + ";" + in4042y[i]);
                 if (Lab05.task4042(in4042x[i], in4042y[i]))
                 {
-                    Console.WriteLine("} принадлежит области");
+                    Console.WriteLine(positivePattern, in4042x[i], in4042y[i]);
                 }
                 else
                 {
-                    Console.WriteLine("} не принадлежит области");
+                    Console.WriteLine(negativePattern, in4042x[i], in4042y[i]);
                 }
             }
         }
@@ -155,17 +156,20 @@ namespace tfa
             Console.WriteLine("6351");
             double[] in6351x = { 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3, 0, 1, 1.5, 2, 3 };
             double[] in6351y = { 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2 };
+            String positivePattern = "{{{0};{1}}} принадлежит области";
+            String negativePattern = "{{{0};{1}}} не принадлежит области";
             for (int i = 0; i < in6351x.Length; i++)
             {
-                Console.Write("{" + in6351x[i] + ";" + in6351y[i]);
+                String currentPattern;
                 if (Lab05.task6351(in6351x[i], in6351y[i]))
                 {
-                    Console.WriteLine("} принадлежит области");
+                    currentPattern = positivePattern;
                 }
                 else
                 {
-                    Console.WriteLine("} не принадлежит области");
+                    currentPattern = negativePattern;
                 }
+                Console.WriteLine(currentPattern, in6351x[i], in6351y[i]);
             }
         }
 
@@ -175,17 +179,26 @@ namespace tfa
             Console.WriteLine("5382");
             double[] in5382x = { 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0, 5, 1, 0 };
             double[] in5382y = { 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2, 2, 1, 1, 1 };
+            String positivePattern = "{{{0};{1}}} принадлежит области";
+            String negativePattern = "{{{0};{1}}} не принадлежит области";
             for (int i = 0; i < in5382x.Length; i++)
             {
-                Console.Write("{" + in5382x[i] + ";" + in5382y[i]);
-                if (Lab05.task5382(in5382x[i], in5382y[i]))
-                {
-                    Console.WriteLine("} принадлежит области");
-                }
-                else
-                {
-                    Console.WriteLine("} не принадлежит области");
-                }
+                String currentPattern = Lab05.task5382(in5382x[i], in5382y[i]) ? positivePattern : negativePattern;
+                Console.WriteLine(currentPattern, in5382x[i], in5382y[i]);
+            }
+        }
+
+        static String getPattern(bool condition)
+        {
+            String positivePattern = "{{{0};{1}}} принадлежит области";
+            String negativePattern = "{{{0};{1}}} не принадлежит области";
+            if (condition)
+            {
+                return positivePattern;
+            }
+            else
+            {
+                return negativePattern;
             }
         }
 
@@ -199,15 +212,8 @@ namespace tfa
                 -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
             for (int i = 0; i < in7088x.Length; i++)
             {
-                Console.Write("{" + in7088x[i] + ";" + in7088y[i]);
-                if (Lab05.task7088(in7088x[i], in7088y[i]))
-                {
-                    Console.WriteLine("} принадлежит области");
-                }
-                else
-                {
-                    Console.WriteLine("} не принадлежит области");
-                }
+                String currentPattern = getPattern(Lab05.task7088(in7088x[i], in7088y[i]));
+                Console.WriteLine(currentPattern, in7088x[i], in7088y[i]);
             }
         }
 
@@ -274,6 +280,8 @@ namespace tfa
 
         static void Step7491()
         {
+            Console.WriteLine();
+            Console.WriteLine("7491");
             String[] in7491 = { "bx", "fw", "123" };
             for (int i = 0; i < in7491.Length; i++)
             {
@@ -290,6 +298,8 @@ namespace tfa
 
         static void Step4515()
         {
+            Console.WriteLine();
+            Console.WriteLine("4515");
             String[] in4515 = {
                 "9 8 7 6 5",
                 "4 3 2 1 5 6 7 8 9 0",

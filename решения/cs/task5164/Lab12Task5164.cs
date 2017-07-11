@@ -28,6 +28,7 @@ namespace tfa
 
         static void Step1860()
         {
+            Console.WriteLine();
             Lab01.task1860("знаниям");
             Lab01.task1860("цели");
             Lab01.task1860("результату");
@@ -35,6 +36,7 @@ namespace tfa
 
         static void Step4764()
         {
+            Console.WriteLine();
             Lab01.task4764("трудности");
             Lab01.task4764("загадки");
             Lab01.task4764("сложные задачи");
@@ -42,6 +44,7 @@ namespace tfa
 
         static void Step2429()
         {
+            Console.WriteLine();
             Lab01.task2429("просто");
             Lab01.task2429("интересно");
             Lab01.task2429("перспективно");
@@ -49,6 +52,7 @@ namespace tfa
 
         static void Step7472()
         {
+            Console.WriteLine();
             Lab01.task7472("начало", "конец");
             Lab01.task7472("сила", "знание");
             Lab01.task7472("курица", "яйцо");
@@ -57,11 +61,13 @@ namespace tfa
 
         static void Step3862()
         {
+            Console.WriteLine();
             Lab01.task3862();
         }
 
         static void Step9231()
         {
+            Console.WriteLine();
             Lab01.task9231(9.780327);
             Lab01.task9231(-273.15);
             Lab01.task9231(0.00006);
@@ -69,24 +75,28 @@ namespace tfa
 
         static void Step8624()
         {
+            Console.WriteLine();
             Lab01.task8624(811);
             Lab01.task8624(1583);
         }
 
         static void Step2959()
         {
+            Console.WriteLine();
             Lab01.task2959("123456789");
             Lab01.task2959("fa93f");
         }
 
         static void Step7271()
         {
+            Console.WriteLine();
             Lab01.task7271(5, 7);
             Lab01.task7271(-1, 1000);
         }
 
         static void Step2632()
         {
+            Console.WriteLine();
             Lab01.task2632(50, 50, 40, "yellow");
             Lab01.task2632(400, 300, 200, "green");
             Lab01.task2632(

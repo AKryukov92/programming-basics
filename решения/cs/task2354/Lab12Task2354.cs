@@ -61,7 +61,7 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("4411");
             double r = Lab02.task4411(11.13);
-            Console.WriteLine(r - 18.13);
+            Console.WriteLine("{0:F15}", r - 18.13);
             r = Lab02.task4411(-7919);
             Console.WriteLine(r - -7912);
             r = Lab02.task4411(0);
@@ -128,7 +128,6 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("5980");
-            Console.WriteLine("5980");
             Console.WriteLine(Lab05.task5980(9) - 3.0);
             Console.WriteLine(Lab05.task5980(0) - 0.0);
             Console.WriteLine(Lab05.task5980(-7) - 49.0);
@@ -150,8 +149,11 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("5662");
             Console.WriteLine(Lab05.task5662(1, 2, 3));
+            Console.WriteLine(Lab05.task5662(11, 13, 19));
             Console.WriteLine(Lab05.task5662(3, 17, 5));
+            Console.WriteLine(Lab05.task5662(5, 31, 29));
             Console.WriteLine(Lab05.task5662(3, 6, 3));
+            Console.WriteLine(Lab05.task5662(1, 2, 1));
             Console.WriteLine(Lab05.task5662(0, 7, 13));
         }
 
