@@ -66,6 +66,20 @@ function task5728(a,b){
 		return STR.substring(ia + 1, ib);
 	}
 }
+function task7222(code){
+	if (code.length != 13)
+	{
+		throw new Error("Некорректная длина штрих-кода");
+	}
+	var country = code.substring(0, 2);
+	var manufacturer = code.substring(3, 6);
+	var product = code.substring(7, 11);
+	var checksum = code.substring(12, 13);
+	return "Код страны: " + country +
+			"<br/>Код изготовителя: " + manufacturer +
+			"<br/>Код товара: " + product +
+			"<br/>Контрольное число: " + checksum;
+}
 function task5923(a,b){
 	a = parseInt(a);
 	b = parseInt(b);

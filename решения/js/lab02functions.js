@@ -136,7 +136,7 @@ function task8873(r1, r2){
 function task7799(m,a){
 	if (m <= 0)
 	{
-		throw new Exception("Масса должна быть положительной");
+		throw new Error("Масса должна быть положительной");
 	}
 	var g = 9.8067;
 	if (a >= 90)
@@ -236,6 +236,11 @@ function task6522(v1, t1, v2, t2){
 	}
 	v1 = parseInt(v1);
 	v2 = parseInt(v2);
+	t1 = parseFloat(t1);
+	t2 = parseFloat(t2);
 	var v = v1+v2;
-	return (t1*v1+t2*v2)/v;
+	return {
+		volume:v,
+		temperature:(t1*v1+t2*v2)/v
+	};
 }

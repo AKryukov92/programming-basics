@@ -223,16 +223,3 @@ for (var i = 0; i < in2153.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in7937w = ["1721","2473","0","877","1181","3491"];
-var in7937h = ["661","449","1879","0","1033","3533"];
-var in7937c = ["11","23","1163","7","0","1297"];
-var in7937d = ["7","11","109","19","127","0"];
-for (var i = 0; i < in7937w.length; i++){
-	var out = document.getElementById("7937t" + i);
-	try {
-		var r = task7937(in7937w[i], in7937h[i], in7937c[i], in7937d[i]);
-		out.innerHTML = r;
-	} catch(e){
-		out.innerHTML = e.message;
-	}
-}
