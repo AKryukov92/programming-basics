@@ -137,6 +137,9 @@ for (var i = 0; i < in6580a.length; i++){
 	out.innerHTML = task6580(in6580a[i],in6580b[i]);
 }
 document.getElementById("8696t0").innerHTML = task8696();
+//2324 - не для js
+//8731 - не для js
+//4082 - не для js
 
 var in3669a = ["8","159","648","-2","50"];
 var in3669b = ["13","161","648","600","24"];

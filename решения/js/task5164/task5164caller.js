@@ -52,6 +52,7 @@ document.getElementById("9231t0").innerHTML = task9231(in9231[0]);
 document.getElementById("9231t1").innerHTML = task9231(in9231[1]);
 document.getElementById("9231t2").innerHTML = task9231(in9231[2]);
 
+
 var in8624 = ["811", "1583"];
 for (var i = 0; i < in8624.length; i++){
 	var out = document.getElementById("8624t" + i);
