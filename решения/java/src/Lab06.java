@@ -5,97 +5,6 @@ import java.util.List;
  * Created by Александр on 31.03.2017.
  */
 public class Lab06 {
-    public static void task2354() {
-        System.out.println();
-        System.out.println("2475");
-        System.out.println(task2475() - 120300);
-
-        System.out.println();
-        System.out.println("9562");
-        System.out.println(task9562(15, 27) - 273);
-        System.out.println(task9562(25, 44) - 690);
-        System.out.println(task9562(80, 100) - 1890);
-        System.out.println(task9562(3000, 24) - 4501224);
-
-        System.out.println();
-        System.out.println("3669");
-        System.out.println(task3669(8, 13) - 1235520);
-        System.out.println(task3669(159, 161) - 4095840);
-        System.out.println(task3669(648, 648) - 648);
-        System.out.println(task3669(-2, 600));
-        System.out.println(task3669(50, 24) - 2421409269157986304L);
-
-        System.out.println();
-        System.out.println("5951");
-        System.out.println(task5951() - 630);
-
-        System.out.println();
-        System.out.println("6580");
-        System.out.println(task6580(15, 27) - 5915);
-        System.out.println(task6580(25, 44) - 24470);
-        System.out.println(task6580(80, 100) - 170870);
-        System.out.println(task6580(3000, 24) - 9004496176L);
-
-        System.out.println();
-        System.out.println("5969");
-        System.out.println(task5969(8, 13));
-        System.out.println(task5969(28, 44) - 105);
-        System.out.println(task5969(80, 98) - 273);
-        System.out.println(task5969(3000, 24) - 642600);
-
-        System.out.println();
-        System.out.println("8696");
-        System.out.println(task8696() - 69);
-
-        System.out.println();
-        System.out.println("2324");
-        String[] in2324 = {
-            "1 2 3 4 5 0",
-            "0",
-            "-1 -2 0",
-            "1 1 1 1 1 1 1 1 1 1 1 1 0"};
-        int[] out2324 = { 15, 0, -3, 12 };
-        for (int i = 0; i < in2324.length; i++)
-        {
-            int result = task2324(in2324[i]);
-            System.out.printf("%d (%d)\n", result, out2324[i]);
-        }
-        System.out.println();
-        System.out.println("8731");
-        String[] in8731 = {
-            "501 501",
-            "0 0 1001",
-            "400 400 200 1",
-            "190 190 190 190 190 190 190 190 190 190 190",
-            "130 130 130 130 130 130 130 130 130 130 130",
-            "129 179 89 155 188 163 94 66"};
-        int[] out8731 = { 2, 3, 4, 6, 8, 8 };
-        for (int i = 0; i < in8731.length; i++)
-        {
-            int result = task8731(in8731[i]);
-            System.out.printf("%d (%d)\n", result, out8731[i]);
-        }
-
-        System.out.println();
-        System.out.println("4082");
-        String[] in4082 = {
-            "10 20 100",
-            "300 400 100",
-            "1000 1000 83 150",
-            "1 1 1 1 1 1 1 1 199 90"
-        };
-        String[] out4082 = {
-            "Сумма слева: 30, сумма справа: 0",
-            "Сумма слева: 0, сумма справа: 700",
-            "Сумма слева: 83, сумма справа: 2000",
-            "Сумма слева: 8, сумма справа: 199"};
-        for (int i = 0; i < in4082.length; i++)
-        {
-            String result = task4082(in4082[i]);
-            System.out.println(result);
-            System.out.println(out4082[i]);
-        }
-    }
 
     public static void task7649() {
         System.out.println();
@@ -590,7 +499,6 @@ public class Lab06 {
     }
 
     public static void main(String[] args) {
-        task2354();
         task7649();
         task9701();
         task6732();

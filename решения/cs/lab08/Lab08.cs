@@ -40,7 +40,7 @@ namespace Methods
 
             String[] in1223t3 = { };
             task1223(in1223t3);
-            Console.WriteLine(String.Join(" ", in1223t3);
+            Console.WriteLine(String.Join(" ", in1223t3));
 
 
 

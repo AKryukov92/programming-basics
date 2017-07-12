@@ -7,26 +7,8 @@ import java.util.List;
 public class Lab07 {
 
     public static void main(String[] args) {
-        task2354();
         task2030();
         task9701();
-    }
-
-    public static void task2354(){
-        System.out.println();
-        System.out.println("4265");
-        System.out.println(task4265("sABCD"));
-        System.out.println(task4265("Uxyz"));
-        System.out.println(task4265("s"));
-        System.out.println(task4265("F123"));
-        System.out.println(task4265("Sopqr"));
-
-        System.out.println();
-        System.out.println("9925");
-        int result9925 = task9925("один, два, три, четыре, пять");
-        System.out.println(result9925 - 5);
-        System.out.println(task9925("янв,фев,март") - 3);
-        System.out.println(task9925("один") - 1);
     }
 
     public static void task2030(){
