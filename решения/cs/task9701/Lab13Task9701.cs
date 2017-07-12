@@ -50,6 +50,8 @@ namespace task9701
             Step7290();
             Step8769();
             Step7799();
+            Step9180();
+            Step1544();
         }
         
         static void Step9020()

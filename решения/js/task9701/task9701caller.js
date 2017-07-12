@@ -450,3 +450,25 @@ for (var i = 0; i < in8769p.length; i++){
 		out.innerHTML = e.message;
 	}
 }
+
+
+var in9180 = ["-100","7","368","501","-101"];
+for (var i = 0; i < in9180.length; i++){
+	var out = document.getElementById("9180t" + i);
+	try {
+		out.innerHTML = task9180(in9180[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+
+var in1544 = ["12","70","368","10000","-11","10001"];
+for (var i = 0; i < in1544.length; i++){
+	var out = document.getElementById("1544t" + i);
+	try {
+		out.innerHTML = task1544(in1544[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}

@@ -1,5 +1,7 @@
 //Lab01
 task1662();
+
+
 //Lab02
 var in2361t = ["400","103","300","-800"];
 var in2361l = ["17","29","-70","20"];
@@ -25,6 +27,7 @@ for (var i = 0; i < in9622m.length; i++){
 		out.innerHTML = e.message;
 	}
 }
+
 var in6522v1 = ["1", "1","5","-2","4"];
 var in6522t1 = ["30","-20","90","10","100"];
 var in6522v2 = ["3","10","1","5","-10"];
@@ -37,4 +40,257 @@ for (var i = 0; i < in6522v1.length; i++){
 	} catch (e){
 		out.innerHTML = e.message;
 	}
+}
+
+
+//Lab05
+var in3072p = ["173", "359", "439", "0"];
+var in3072q = ["179", "271", "-761", "-15"];
+for (var i = 0; i < in3072p.length; i++){
+	var out = document.getElementById("3072t" + i);
+	var r = task3072(in3072p[i], in3072q[i]);
+	out.innerHTML = "Максимальное " + r.max + ", минимальное " + r.min;
+}
+
+var in1186x = ["6.35","4.71","19.99","-2.28","-18.71","3.44","-0.09"];
+var in1186y = ["2.7","5.59","-9.57","16.92","-7.6","-14.98","-16.6"];
+var in1186z = ["5.08","-18.55","12.75","6.14","6.27","-8.26","-1.84"];
+for (var i = 0; i < in1186x.length; i++){
+	var out = document.getElementById("1186t" + i);
+	var arr = task1186(in1186x[i], in1186y[i], in1186z[i]);
+	out.innerHTML = arr.join(";");
+}
+
+var in7991x = ["6.35","4.71","19.99","-2.28"];
+var in7991y = ["2.7","2.59","-1.57","16.92"];
+var in7991z = ["5.08","-18.55","2.75","6.14"];
+for (var i = 0; i < in7991x.length; i++){
+	var out = document.getElementById("7991t" + i);
+	var arr = task7991(in7991x[i],in7991y[i],in7991z[i]);
+	out.innerHTML = arr.join(" ");
+}
+
+var in7178m = ["36","41","15"];
+var in7178p = ["2","7","0"];
+for (var i = 0; i < in7178m.length; i++){
+	var out = document.getElementById("7178t" + i);
+	try {
+		out.innerHTML = task7178(in7178m[i],in7178p[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in5635p = [{x:1,y:1},{x:5,y:5},{x:3,y:1},
+{x:3,y:1},{x:0,y:-1},{x:1,y:1},
+{x:1,y:1},{x:1,y:1},{x:1,y:1}];
+var in5635r = [
+{x:0,y:0,h:2,w:3},{x:0,y:0,h:2,w:3},{x:0,y:0,h:2,w:3},
+{x:0,y:0,h:2,w:3},{x:0,y:0,h:1,w:1},{x:2,y:2,h:0,w:3},
+{x:2,y:2,h:-1,w:3},{x:2,y:2,h:3,w:0},{x:2,y:2,h:3,w:-1}];
+for (var i = 0; i < in5635p.length; i++){
+	var out = document.getElementById("5635t" + i);
+	try {
+		if (task5635(in5635p[i], in5635r[i])){
+			out.innerHTML = "точка внутри";
+		} else {
+			out.innerHTML = "точка не внутри";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in3878t = [{x:2,y:2},{x:1,y:3},{x:0,y:0},{x:0,y:1},{x:1,y:1},{x:-1,y:1}];
+var in3878p1 = [{x:1,y:1},{x:0,y:0},{x:1,y:1},{x:1,y:1},{x:1,y:1},{x:1,y:1}];
+var in3878p2 = [{x:3,y:3},{x:2,y:6},{x:2,y:2},{x:2,y:2},{x:2,y:2},{x:2,y:2}];
+for (var i = 0; i < in3878t.length; i++){
+	var out = document.getElementById("3878t" + i);
+	try {
+		if (task3878(in3878t[i], in3878p1[i], in3878p2[i])){
+			out.innerHTML = "Точка принадлежит прямой";
+		} else {
+			out.innerHTML = "Точка не принадлежит прямой";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in1217i1 = [{a:2,b:3},{a:11,b:17},{a:23,b:37},{a:43,b:53},{a:5,b:15},{a:67,b:71},{a:79,b:73},{a:97,b:101}];
+var in1217i2 = [{a:5,b:7},{a:13,b:19},{a:29,b:31},{a:41,b:47},{a:0,b:30},{a:59,b:61},{a:83,b:89},{a:107,b:103}];
+for (var i = 0; i < in1217i1.length; i++){
+	var out = document.getElementById("1217t" + i);
+	try {
+		if (task1217check(in1217i1[i], in1217i2[i])){
+			var r = task1217x(in1217i1[i], in1217i2[i]);
+			out.innerHTML = "пересекаются (" + r.a + ";" + + r.b + ")";
+		} else {
+			out.innerHTML = "Не пересекаются";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in1438r1 = [{x:10,y:10,h:200,w:100},{x:25,y:25,h:200,w:200},{x:102,y:200,h:100,w:200},{x:500,y:200,h:100,w:200},{x:60,y:70,h:120,w:200},{x:100,y:100,h:200,w:200},{x:150,y:150,h:150,w:300},{x:100,y:0,h:100,w:500},{x:5,y:0,h:10,w:10},{x:105,y:5,h:10,w:10},{x:150,y:150,h:50,w:300},{x:0,y:0,h:802,w:200},{x:200,y:200,h:100,w:100},{x:125,y:138,h:0,w:1},{x:100,y:100,h:120,w:220}];
+var in1438r2 = [{x:50,y:50,h:300,w:350},{x:225,y:225,h:200,w:200},{x:0,y:500,h:100,w:120},{x:10,y:400,h:100,w:120},{x:50,y:50,h:120,w:200},{x:200,y:200,h:50,w:50},{x:150,y:150,h:150,w:300},{x:0,y:200,h:700,w:100},{x:0,y:5,h:10,w:10},{x:100,y:0,h:10,w:30},{x:100,y:100,h:300,w:200},{x:0,y:0,h:610,w:610},{x:900,y:200,h:100,w:10},{x:205,y:202,h:61,w:62},{x:220,y:100,h:120,w:220}];
+for (var i = 0; i < in1438r1.length; i++){
+	var out = document.getElementById("1438t" + i);
+	try {
+		if (task1438check(in1438r1[i], in1438r2[i])){
+			var r = task1438x(in1438r1[i], in1438r2[i]);
+			out.innerHTML = "пересекаются " + JSON.stringify(r);
+		} else {
+			out.innerHTML = "Не пересекаются";
+		}
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+
+//Lab06
+var in2321a = ["8","691","23"];
+var in2321b = ["13","702","11"];
+for (var i = 0; i < in2321a.length; i++){
+	var out = document.getElementById("2321t" + i);
+	out.innerHTML = task2321(in2321a[i],in2321b[i]);
+}
+
+var in5053a = ["8","691","27"];
+var in5053b = ["13","702","17"];
+for (var i = 0; i < in5053a.length; i++){
+	var out = document.getElementById("5053t" + i);
+	out.innerHTML = task5053(in5053a[i],in5053b[i]);
+}
+
+var in8418 = ["6","385","-9"];
+for (var i = 0; i < in8418.length; i++){
+	var out = document.getElementById("8418t" + i);
+	try {
+		out.innerHTML = task8418(in8418[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+
+//Lab07
+var in9279 = ["ab","bc","ac","cde","a"];
+for (var i = 0; i < in9279.length; i++){
+	var out = document.getElementById("9279t" + i);
+	try {
+		out.innerHTML = task9279(in9279[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+
+//Lab08
+var in1223 = ["1 2 3 4 1", "1 2 3 4 1 2 3 4 1 2", ""];
+for (var i = 0; i < in1223.length; i++){
+	var out = document.getElementById("1223t" + i);
+	out.innerHTML = task1223(in1223[i]).join(" ");
+}
+
+var in3940l = ["1 2 3 4 1", "1 2 3 4 1 3 4 4 4 4", "1 2 3", "1 2 3"];
+var in3940r = ["2 3 4 1 2", "3 4 1 2 3 4 1 2 3 4", "3 4", "3 4 1 2"];
+for (var i = 0; i < in3940l.length; i++){
+	var out = document.getElementById("3940t" + i);
+	try {
+		out.innerHTML = task3940(in3940l[i], in3940r[i]).join(" ");
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in8311b = ["0","1","2","3","2","8","11","-1","8"];
+var in8311e = ["3","3","3","10","2","2","8","5","50"];
+var in8311data = ["1 2 3 4 1", "1 2 3 4 1", "1 2 3 4 1", "1 2 3 4 1 2 3 4 1 2 3",
+"1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3",
+"1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3"];
+for (var i = 0; i < in8311b.length; i++){
+	var out = document.getElementById("8311t" + i);
+	try {
+		out.innerHTML = task8311(in8311b[i], in8311e[i], in8311data[i]).join(" ");
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in3134p = ["0","2","4","-1","2","19","1"];
+var in3134q = ["3","5","2","5","17","2","-5"];
+var in3134data = "1 2 3 4 1 2";
+for (var i = 0; i < in3134p.length; i++){
+	var out = document.getElementById("3134t" + i);
+	try {
+		out.innerHTML = task3134(in3134p[i], in3134q[i], in3134data).join(" ");
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in9774m = ["31","-3"];
+var in9774data = ["1 2 3 4 1 2", "1 2 3 4 1 2"];
+for (var i = 0; i < in9774m.length; i++){
+	var out = document.getElementById("9774t" + i);
+	out.innerHTML = task9774(in9774m[i], in9774data[i]).join(" ");
+}
+
+var in9711 = ["1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 4", ""];
+for (var i = 0; i < in9711.length; i++){
+	var out = document.getElementById("9711t" + i);
+	out.innerHTML = task9711(in9711[i]).join(" ");
+}
+
+var in3333s = ["1","3","6","8","99","-2","-9"];
+var in3333data = "1 2 3 4 1 2";
+for (var i = 0; i < in3333s.length; i++){
+	var out = document.getElementById("3333t" + i);
+	out.innerHTML = task3333(in3333s[i], in3333data).join(" ");
+}
+
+var in8820 = ["1 2 3 4 1 2", "1 2 3 4 1 2 3 4 1 2 3"];
+for (var i = 0; i < in8820.length; i++){
+	var out = document.getElementById("8820t" + i);
+	out.innerHTML = task8820(in8820[i]).join(" ");
+}
+
+var in9271 = ["1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 1 2", "4 2 3 4 3 2","4 4 4 4 4 3 2 1","4 4 4 4", "4 3"];
+for (var i = 0; i < in9271.length; i++){
+	var out = document.getElementById("9271t" + i);
+	out.innerHTML = task9271(in9271[i]).join(" ");
+}
+
+var in4497x = ["1","3","5"];
+var in4497y = ["33","55","1"];
+var in4497data = ["1 2 3 4 1 2","1 2 3 4 1 2", "1 2 3 4 1 2"];
+for (var i = 0; i < in4497x.length; i++){
+	var out = document.getElementById("4497t" + i);
+	out.innerHTML = task4497(in4497x[i],in4497y[i],in4497data[i]).join(" ");
+}
+
+var in3218 = ["1 2 3 4 1 2", "1 2 3 4 1 2 3 4 1 2 3"];
+for (var i = 0; i < in3218.length; i++){
+	var out = document.getElementById("3218t" + i);
+	out.innerHTML = task3218(in3218[i]).join(" ");
+}
+
+var in7703 = ["1 2 3 4 1 2","1 2 3 4 1 2 3 4 1 2 3","3 2 2 2 2 2","4 4 4 4 4 4"];
+for (var i = 0; i < in7703.length; i++){
+	var out = document.getElementById("7703t" + i);
+	out.innerHTML = task7703(in7703[i]).join(" ");
+}
+
+var in5541 = ["1 1 1 1", "1 1 2 2", "1 1 1 2", "1 2 3 4", "1 2 3 4 1 2", "1 1 3 3 2 2"];
+for (var i = 0; i < in5541.length; i++){
+	var out = document.getElementById("5541t" + i);
+	var data = task5541(in5541[i]);
+	var result = "";
+	for (item in data){
+		result += item + " ";
+	}
+	out.innerHTML = result;
 }

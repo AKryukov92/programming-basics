@@ -28,6 +28,23 @@ namespace Methods
             }
 
             Console.WriteLine();
+            Console.WriteLine("1223");
+            
+            String[] in1223t1 = { "1", "2", "3", "4", "1" };
+            task1223(in1223t1);
+            Console.WriteLine(String.Join(" ", in1223t1));
+            
+            String[] in1223t2 = { "1", "2", "3", "4", "1", "2", "3", "4", "1", "2"};
+            task1223(in1223t2);
+            Console.WriteLine(String.Join(" ", in1223t2));
+
+            String[] in1223t3 = { };
+            task1223(in1223t3);
+            Console.WriteLine(String.Join(" ", in1223t3);
+
+
+
+            Console.WriteLine();
             Console.WriteLine("3940");
             String[] in3940l = {
                 "1 2 3 4 1",
@@ -302,19 +319,25 @@ namespace Methods
             return sb.ToString();
         }
 
-        public static IList<int> task1223(String raw)
+        public static void task1223(String[] arr)
         {
-            IList<int> ret = new List<int>();
+            for (int i = 0; i < arr.Length / 2; i++)
+            {
+                String temp = arr[i];
+                arr[i] = arr[arr.Length - 1 - i];
+                arr[arr.Length - 1 - i] = temp;
+            }
+        }
+
+        public static IList<String> task1223(String raw)
+        {
             if (raw.Length == 0)
             {
-                return ret;
+                return new List<String>();
             }
             String[] arr = raw.Split(new char[] { ' ' });
-            for (int i = arr.Length - 1; i >= 0; i--)
-            {
-                ret.Add(int.Parse(arr[i]));
-            }
-            return ret;
+            task1223(arr);
+            return arr.ToList();
         }
 
         public static double task3946(String raw)
