@@ -12,18 +12,41 @@ import java.util.Set;
  */
 public class Lab15 {
     public static void main(String[] args) {
+        Step9990();
+        Step7738();
+        Step9924();
+        Step7657();
+    }
+
+    private static void Step7738() {
         System.out.println();
-        System.out.println("7657");
-        for (int i = 0; i < 9; i++) {
-            task7657(".\\task7657\\test" + (i + 1) + ".csv");
+        System.out.println("7738");
+        for (int i = 1; i <= 4; i++){
+            task7738(".\\task7738\\test" + i + ".txt");
         }
     }
 
-    public static void call(){
+    private static void Step9990() {
+        System.out.println();
+        System.out.println("9990");
+        for (int i = 1; i <= 4; i++){
+            task9990(".\\task9990\\test" + i + ".txt");
+        }
+    }
+
+    private static void Step7657() {
+        System.out.println();
+        System.out.println("7657");
+        for (int i = 1; i <= 9; i++) {
+            task7657(".\\task7657\\test" + i + ".csv");
+        }
+    }
+
+    private static void Step9924() {
         System.out.println();
         System.out.println("9924");
-        for (int i = 0; i < 7; i++) {
-            task9924(".\\task9924\\test" + (i + 1) + ".csv");
+        for (int i = 1; i <= 7; i++) {
+            task9924(".\\task9924\\test" + i + ".csv");
         }
     }
 
@@ -90,8 +113,8 @@ public class Lab15 {
 
     static void task9924(String filename){
         File target = new File(filename);
+        System.out.println(target.getAbsolutePath());
         try (Scanner scanner = new Scanner(target)){
-            System.out.println(filename);
             logic9924(scanner);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
@@ -139,9 +162,59 @@ public class Lab15 {
 
     static void task7657(String filename){
         File target = new File(filename);
+        System.out.println(target.getAbsolutePath());
         try (Scanner scanner = new Scanner(target)){
-            System.out.println(filename);
             logic7657(scanner);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    static void logic9990(Scanner scanner){
+        Set<String> result = new HashSet<>();
+        while(scanner.hasNext()){
+            String line = scanner.next();
+            result.add(line);
+        }
+        System.out.println(String.join(", ", result));
+    }
+
+    static void task9990(String filename){
+        File target = new File(filename);
+        System.out.println(target.getAbsolutePath());
+        try (Scanner scanner = new Scanner(target)){
+            logic9990(scanner);
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не существует");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    static void logic7738(Scanner scanner){
+        Map<String, Integer> result = new HashMap<>();
+        while(scanner.hasNext()){
+            String line = scanner.next();
+            if(result.containsKey(line)){
+                Integer count = result.get(line);
+                count++;
+                result.put(line, count);
+            } else {
+                result.put(line, 1);
+            }
+        }
+        for(Map.Entry<String, Integer> entry : result.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+    }
+
+    static void task7738(String filename){
+        File target = new File(filename);
+        System.out.println(target.getAbsolutePath());
+        try(Scanner scanner = new Scanner(target)){
+            logic7738(scanner);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {

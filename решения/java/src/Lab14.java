@@ -10,6 +10,34 @@ import java.util.Scanner;
  */
 public class Lab14 {
     public static void main(String[] args) {
+
+    }
+
+    public static void call(){
+        Step6981();
+        Step5032();
+        Step5108();
+        Step3567();
+        Step2033();
+    }
+
+    private static void Step2033() {
+        System.out.println();
+        System.out.println("2033");
+        for (int i = 0; i < 18; i++) {
+            task2033(".\\task2033\\test" + (i + 1) + ".csv");
+        }
+    }
+
+    private static void Step3567() {
+        System.out.println();
+        System.out.println("3567");
+        for (int i = 0; i < 14; i++) {
+            task3567(".\\task3567\\test" + (i + 1) + ".csv");
+        }
+    }
+
+    private static void Step6981() {
         System.out.println();
         System.out.println("6981");
         for (int i = 0; i < 9; i++) {
@@ -17,26 +45,19 @@ public class Lab14 {
         }
     }
 
-    public static void call(){
-        System.out.println();
-        System.out.println("5032");
-        for (int i = 0; i < 14; i++) {
-            task5032(".\\task5032\\test" + (i + 1) + ".csv");
-        }
+    private static void Step5108() {
         System.out.println();
         System.out.println("5108");
         for (int i = 0; i < 14; i++) {
             task5108(".\\task5108\\test" + (i + 1) + ".csv");
         }
+    }
+
+    private static void Step5032() {
         System.out.println();
-        System.out.println("3567");
+        System.out.println("5032");
         for (int i = 0; i < 14; i++) {
-            task3567(".\\task3567\\test" + (i + 1) + ".csv");
-        }
-        System.out.println();
-        System.out.println("2033");
-        for (int i = 0; i < 18; i++) {
-            task2033(".\\task2033\\test" + (i + 1) + ".csv");
+            task5032(".\\task5032\\test" + (i + 1) + ".csv");
         }
     }
 
