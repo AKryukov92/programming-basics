@@ -9,37 +9,6 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            //task8787();
-        }
-
-        public static void task8787()
-        {
-            Console.WriteLine();
-            Console.WriteLine("2321");
-            Console.WriteLine(String.Join(" ", task2321(8, 13)));
-            Console.WriteLine(String.Join(" ", task2321(691, 702)));
-            Console.WriteLine(String.Join(" ", task2321(23, 11)));
-            Console.WriteLine();
-            Console.WriteLine("5053");
-            Console.WriteLine(String.Join(" ", task5053(8, 13)));
-            Console.WriteLine(String.Join(" ", task5053(691, 702)));
-            Console.WriteLine(String.Join(" ", task5053(27, 17)));
-
-            Console.WriteLine();
-            Console.WriteLine("8418");
-            int[] in8418 = { 6, 385, -9 };
-            for (int i = 0; i < in8418.Length; i++)
-            {
-                try
-                {
-                    var result = task8418(in8418[i]);
-                    Console.WriteLine(String.Join(" ", result));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
         }
         
         public static StringBuilder task8495(StringBuilder sb)

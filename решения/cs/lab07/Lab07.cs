@@ -9,27 +9,6 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            Console.WriteLine("9279");
-            String[] in9279 = { "ab", "bc", "ac", "xz", "cde", "a" };
-            for (int i = 0; i < in9279.Length; i++)
-            {
-                try
-                {
-                    StringBuilder sb = new StringBuilder();
-                    IList<int> result = task9279(in9279[i]);
-                    foreach (int item in result)
-                    {
-                        sb.Append(item);
-                        sb.Append(" ");
-                    }
-                    Console.WriteLine(sb.ToString());
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
         }
 
         public static String STR = "abcdefwxyz";
@@ -65,7 +44,7 @@ namespace Methods
             }
         }
 
-        private static IList<int> task9279(string x)
+        public static IList<int> task9279(string x)
         {
             if (x.Length != 2)
             {

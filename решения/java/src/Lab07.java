@@ -7,69 +7,6 @@ import java.util.List;
 public class Lab07 {
 
     public static void main(String[] args) {
-        Step9279();
-        Step3657();
-        Step6599();
-    }
-
-    private static void Step6599() {
-        System.out.println();
-        System.out.println("6599");
-        String[] in6599 = {"a",
-            "\"b\"",
-            "\"c",
-            "d\"",
-            "\"e\"e",
-            "f\"f\"f",
-            "\"abc\" \"defgh\" \"i\" \"jklm\"",
-            "abc\" \"def\" \"ghi\" \"jk\" \"lm\"",
-            "\"[abc\"def] \"[ghijklm]\""
-        };
-        for (int i = 0; i < in6599.length; i++) {
-            try {
-                System.out.println(task6599(in6599[i]));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step3657() {
-        System.out.println();
-        System.out.println("3657");
-        String[] in3657 = {"a","b","j","z","xy", ""};
-        for (int i = 0; i < in3657.length; i++){
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = task3657(in3657[i]);
-                for(Integer item : result){
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb);
-            } catch(Exception e){
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step9279() {
-        System.out.println();
-        System.out.println("9279");
-        String[] in9279 = {"ab","bc","ac","xz","cde","a"};
-        for (int i = 0; i < in9279.length; i++){
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = task9279(in9279[i]);
-                for(Integer item : result){
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb);
-            } catch(Exception e){
-                System.out.println(e.getMessage());
-            }
-        }
     }
 
     public static final String STR = "abcdefwxyz";

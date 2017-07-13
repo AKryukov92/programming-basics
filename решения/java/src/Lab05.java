@@ -6,46 +6,7 @@ import java.util.List;
  *         29.03.2017
  */
 public class Lab05 {
-
-    public static void task9701(){
-        System.out.println();
-        System.out.println("7937");
-        int[] in7937w = {1721, 2473, 0, 877, 1181, 491};
-        int[] in7937h = {661, 449, 1879, 0, 1033, 3533};
-        int[] in7937c = {11, 23, 1163, 7, 0, 1297};
-        int[] in7937d = {7, 11, 109, 19, 127, 0};
-        for (int i = 0; i < in7937w.length; i++){
-            try {
-                String result = task7937(in7937w[i], in7937h[i],
-                        in7937c[i], in7937d[i]);
-                System.out.println(result);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    public static void task8787(){
-        System.out.println();
-        System.out.println("7991");
-        double[] in7991x = {6.35, 4.71, 19.99, -2.28};
-        double[] in7991y = {2.7, 2.59, -1.57, 16.92};
-        double[] in7991z = {5.08, -18.55, 2.75, 6.14};
-        for (int i = 0; i < in7991x.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Double> result = task7991(
-                    in7991x[i], in7991y[i], in7991z[i]);
-            for (Double item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-    }
-
     public static void main(String[] args) {
-        task9701();
-        task8787();
 
         System.out.println();
         System.out.println("3072");

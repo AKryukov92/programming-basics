@@ -36,10 +36,11 @@ public class Lab13Task9701 {
 
         Step9116();
         Step1618();
+        Step7937();
         Step4845();
         Step7222();
-        Step2166();
 
+        Step2166();
         Step5894();
         Step4425();
         Step7290();
@@ -630,6 +631,24 @@ public class Lab13Task9701 {
             try {
                 String result = Lab08.task4425(in4425a[i], in4425data[i]);
                 System.out.printf("%s (%s)\n", result, out4425[i]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    static void Step7937() {
+        System.out.println();
+        System.out.println("7937");
+        int[] in7937w = {1721, 2473, 0, 877, 1181, 491};
+        int[] in7937h = {661, 449, 1879, 0, 1033, 3533};
+        int[] in7937c = {11, 23, 1163, 7, 0, 1297};
+        int[] in7937d = {7, 11, 109, 19, 127, 0};
+        for (int i = 0; i < in7937w.length; i++){
+            try {
+                String result = Lab05.task7937(in7937w[i], in7937h[i],
+                        in7937c[i], in7937d[i]);
+                System.out.println(result);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

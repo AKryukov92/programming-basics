@@ -6,55 +6,9 @@ import java.util.List;
  */
 public class Lab06 {
 
-    public static void task8787(){
-        System.out.println();
-        System.out.println("2321");
-        int[] in2321a = {8, 691, 23};
-        int[] in2321b = {13, 702, 11};
-        for (int i = 0; i < in2321a.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = task2321(in2321a[i], in2321b[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-
-        System.out.println();
-        System.out.println("5053");
-        int[] in5053a = {8, 691, 27};
-        int[] in5053b = {13, 702, 17};
-        for (int i = 0; i < in5053a.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = task5053(in5053a[i], in5053b[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-
-        System.out.println();
-        System.out.println("8418");
-        int[] in8418 = {6, 385, -9};
-        for (int i = 0; i < in8418.length; i++){
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = task8418(in8418[i]);
-                for (Integer item : result) {
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb.toString());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     public static void main(String[] args) {
-        task8787();
+
+
     }
 
     public static StringBuilder task8495(StringBuilder sb){

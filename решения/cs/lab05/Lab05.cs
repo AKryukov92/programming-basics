@@ -9,8 +9,6 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            task8787();
-
             Console.WriteLine();
             Console.WriteLine("3072");
             Console.WriteLine(task3072(173, 179).print());
@@ -162,20 +160,6 @@ namespace Methods
                     Console.Write("{0:F4};\t", aResult);
                 }
                 Console.WriteLine();
-            }
-        }
-
-        public static void task8787()
-        {
-            Console.WriteLine();
-            Console.WriteLine("7991");
-            double[] in7991x = { 6.35, 4.71, 19.99, -2.28 };
-            double[] in7991y = { 2.7, 2.59, -1.57, 16.92 };
-            double[] in7991z = { 5.08, -18.55, 2.75, 6.14 };
-            for (int i = 0; i < in7991x.Length; i++)
-            {
-                IList<double> result = task7991(in7991x[i], in7991y[i], in7991z[i]);
-                Console.WriteLine(String.Join(" ", result));
             }
         }
 
