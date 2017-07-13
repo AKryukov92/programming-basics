@@ -8,96 +8,7 @@ import java.util.Set;
  */
 public class Lab08 {
     public static void main(String[] args) {
-        task7649();
         task8787();
-        task9707();
-        System.out.println();
-        System.out.println("7369");
-        String[] in7369top = {
-            "q a z w s x",
-            "e d c",
-            "a a a a",
-            "r f v",
-            ""
-        };
-        String[] in7369left = {
-            "q w e",
-            "a s d f g h j",
-            "a a a a",
-            "",
-            "z x c v"
-        };
-        for (int i = 0; i < in7369left.length; i++){
-            String result = task7369(in7369left[i], in7369top[i]);
-            System.out.println(result);
-        }
-
-        System.out.println();
-        System.out.println("5894");
-        String[] in5894top = {
-            "q a z",
-            "qw fg hj ty kl",
-            "oiuy hjkl vbmn",
-            "a s d f",
-            ""
-        };
-        String[] in5894left = {
-            "q w e",
-            "qw er ty ui op",
-            "asdf ghjk",
-            "",
-            "zxc vbn"
-        };
-        for (int i = 0; i < in5894left.length; i++){
-            try {
-                int result = task5894(in5894left[i], in5894top[i]);
-                System.out.println("Повторений: " + result);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    public static void task7649(){
-        System.out.println();
-        System.out.println("5694");
-        String[] in5694 = {"a", "d", "h", "i", "z"};
-        String[] out5694 = {
-            "a+\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd+\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh+\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n"
-        };
-        for (int i = 0; i < in5694.length; i++) {
-            StringBuilder result = task5694(new StringBuilder(), in5694[i]);
-            if (out5694[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result.toString());
-            }
-        }
-
-        System.out.println();
-        System.out.println("6806");
-        int[] in6806 = {10, 15, 20, 9, 23};
-        String[] out6806 = {
-                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
-        };
-        for (int i = 0; i < in6806.length; i++) {
-            StringBuilder result = task6806(new StringBuilder(), in6806[i]);
-            if (out6806[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result.toString());
-            }
-        }
     }
 
     public static void task8787(){
@@ -347,90 +258,7 @@ public class Lab08 {
         }
     }
 
-    public static void task9707(){
-        System.out.println();
-        System.out.println("4425");
-        int[] in4425a = {0, 3, 9, 5, -1, 0};
-        String[] in4425data = {
-                "q w e r",
-                "q w e r",
-                "q w e r t y u i o p",
-                "q w e r",
-                "q w e r",
-                ""
-        };
-        String[] out4425 = {"q", "r", "p", "", "", ""};
-        for (int i = 0; i < in4425a.length; i++){
-            try {
-                String result = task4425(in4425a[i], in4425data[i]);
-                System.out.printf("%s (%s)\n", result, out4425[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-
-        System.out.println();
-        System.out.println("5683");
-        String[] in5683 = {
-            "qw er ty",
-            "qw er ty ui op",
-            "asd fgh jkl",
-            "",
-            "q w e r a s d f z x c v"
-        };
-        for (int i = 0; i < in5683.length; i++){
-            System.out.println(task5683(in5683[i]));
-        }
-
-        System.out.println();
-        System.out.println("7290");
-        int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
-        String[] in7290data = {
-                "1 1 1 3 4 1",
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "1 1 1 3 4 1",
-                "1 2 3"
-        };
-        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
-        for (int i = 0; i < in7290b.length; i++) {
-            try {
-                int result = task7290(in7290b[i], in7290data[i]);
-                System.out.printf("%d (%d)\n", result, out7290[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-
-        System.out.println();
-        System.out.println("8769");
-        int[] in8769p = {1, 8, 1, 0, 0, 1, -1, 5};
-        int[] in8769q = {3, 10, 4, 5, 5, 7, 0, 10};
-        String[] in8769s = {
-                "1 2 3 4 1 2",
-                "3 4 4 2 3 4 1 2 3 1 2",
-                "11 12 13 5 11 12",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "4 3",
-                "1 2 3 4"
-        };
-        int[] out8769 = {2, 1, 5, 2, 3, 0, 0, 0};
-        for (int i = 0; i < in8769p.length; i++) {
-            try {
-                int result = task8769(in8769p[i], in8769q[i], in8769s[i]);
-                System.out.printf("%d (%d)\n", result, out8769[i]);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    public static String task4425(int a, String raw) throws Exception {
+    static String task4425(int a, String raw) throws Exception {
         if (raw.isEmpty()){
             throw new Exception("Исходная строка пуста");
         }
@@ -441,7 +269,7 @@ public class Lab08 {
         return arr[a];
     }
 
-    private static String task5683(String str) {
+    static String task5683(String str) {
         if (str.isEmpty()){
             return "";
         }

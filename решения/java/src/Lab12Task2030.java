@@ -17,6 +17,7 @@ public class Lab12Task2030 {
 
         Step9038();
         Step4515();
+        Step7491();
     }
 
     private static void Step8878(){
@@ -198,6 +199,19 @@ public class Lab12Task2030 {
                 System.out.println("Повторения есть");
             } else {
                 System.out.println("Повторений нет");
+            }
+        }
+    }
+
+    static void Step7491() {
+        System.out.println();
+        System.out.println("7491");
+        String[] in7491 = {"bx", "fw", "123"};
+        for (int i = 0; i < in7491.length; i++){
+            if (Lab07.task7491(in7491[i])){
+                System.out.println("Содержится");
+            } else {
+                System.out.println("Не содержится");
             }
         }
     }
