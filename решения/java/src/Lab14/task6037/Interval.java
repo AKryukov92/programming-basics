@@ -9,13 +9,13 @@ public class Interval {
     public int b;
     public static boolean hasIntersection(Interval i1, Interval i2){
         if(i1 == null){
-            throw new IllegalArgumentException("Данный интервал не инициализирован");
+            throw new IllegalArgumentException("Левый интервал не инициализирован");
         }
         if(i2 == null){
-            throw new IllegalArgumentException("Данный интервал не инициализирован");
+            throw new IllegalArgumentException("Правый интервал не инициализирован");
         }
         if(i1.a > i1.b || i2.a > i2.b){
-            throw new IllegalArgumentException("Некорректный интервал");
+            throw new IllegalStateException("Корректность интервала была нарушена");
         }
         return !(i1.b <= i2.a || i2.b <= i1.a);
     }

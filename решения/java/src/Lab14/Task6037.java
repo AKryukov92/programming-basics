@@ -56,7 +56,7 @@ public class Task6037 {
             } else {
                 System.out.println("Не пересекаются");
             }
-        } catch(IllegalArgumentException ex){
+        } catch(IllegalStateException ex){
             System.out.println(ex.getMessage());
         }
     }
@@ -75,7 +75,7 @@ public class Task6037 {
             } else {
                 System.out.println("Не пересекаются");
             }
-        } catch(IllegalArgumentException ex){
+        } catch(IllegalStateException ex){
             System.out.println(ex.getMessage());
         }
     }

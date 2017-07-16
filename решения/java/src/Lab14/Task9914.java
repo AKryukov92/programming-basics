@@ -25,7 +25,11 @@ public class Task9914 {
         r.a = 5;
         r.b = 7;
         boolean fact = l.intersects(r);
-        System.out.println(fact);
+        if(fact){
+            System.out.println("Пересекаются");
+        } else {
+            System.out.println("Не пересекаются");
+        }
     }
 
     public static void Step2(){
@@ -35,7 +39,11 @@ public class Task9914 {
         Interval r = new Interval();
         r.a = 13;
         r.b = 19;
-        System.out.println(r.intersects(l));
+        if(r.intersects(l)){
+            System.out.println("Пересекаются");
+        } else {
+            System.out.println("Не пересекаются");
+        }
     }
 
     public static void Step3(){
@@ -66,7 +74,11 @@ public class Task9914 {
         r.a = 83;
         r.b = 89;
         try {
-            System.out.println(l.intersects(r));
+            if(l.intersects(r)){
+                System.out.println("Пересекаются");
+            } else {
+                System.out.println("Не пересекаются");
+            }
         } catch(IllegalStateException ex){
             System.out.println(ex.getMessage());
         }
@@ -80,7 +92,11 @@ public class Task9914 {
         r.a = 107;
         r.b = 103;
         try {
-            System.out.println(l.intersects(r));
+            if(l.intersects(r)){
+                System.out.println("Пересекаются");
+            } else {
+                System.out.println("Не пересекаются");
+            }
         } catch(IllegalArgumentException ex){
             System.out.println(ex.getMessage());
         }
@@ -92,7 +108,11 @@ public class Task9914 {
         l.b = 131;
         Interval r = null;
         try {
-            System.out.println(l.intersects(r));
+            if(l.intersects(r)){
+                System.out.println("Пересекаются");
+            } else {
+                System.out.println("Не пересекаются");
+            }
         } catch(IllegalArgumentException ex){
             System.out.println(ex.getMessage());
         }

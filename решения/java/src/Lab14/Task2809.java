@@ -39,7 +39,7 @@ public class Task2809 {
     public static void Step4(){
         Point p1 = new Point();
         p1.setCoordinates(23,29);
-        System.out.printf("Distance between %s and (0;0) is %.4f\n", p1.print(), p1.distanceTo(0,0));
+        System.out.printf("Расстояние между %s и (0;0) составляет %.4f\n", p1.print(), p1.distanceTo(0,0));
     }
 
     public static void Step5(){
@@ -48,6 +48,6 @@ public class Task2809 {
         Point p2 = new Point();
         p2.x = 17;
         p2.y = 19;
-        System.out.printf("Distance between %s and (0;0) is %.4f\n", p1.print(), p1.distanceTo(p2));
+        System.out.printf("Расстояние между %s и (0;0) составляет %.4f\n", p1.print(), p1.distanceTo(p2));
     }
 }

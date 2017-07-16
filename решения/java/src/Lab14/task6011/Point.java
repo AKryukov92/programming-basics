@@ -8,8 +8,11 @@ public class Point {
     public int x;
     public int y;
     public static double distanceBetween(Point p1, Point p2){
-        if(p1 == null || p2 == null){
-            throw new IllegalArgumentException("Некорректный интервал");
+        if(p1 == null) {
+            throw new IllegalArgumentException("Начальная точка не инициализирована");
+        }
+        if (p2 == null){
+            throw new IllegalArgumentException("Конечная точка не инициализирована");
         }
         int dx = p1.x - p2.x;
         int dy = p1.y - p2.y;

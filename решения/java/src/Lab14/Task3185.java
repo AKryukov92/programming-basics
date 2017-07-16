@@ -43,7 +43,7 @@ public class Task3185 {
         Point p2 = new Point();
         p2.x = 11;
         p2.y = 13;
-        System.out.println(p1.distanceTo(p2));
+        System.out.printf("%.4f\n", p1.distanceTo(p2));
     }
 
     private static void Step4(){
