@@ -196,8 +196,13 @@ namespace Methods
 
         public static IList<int> task9711(String raw)
         {
-            String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                return ret;
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            
             ret.Add(int.Parse(arr[arr.Length - 1]));
             for (int i = 0; i < arr.Length - 1; i++)
             {

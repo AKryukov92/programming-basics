@@ -219,7 +219,8 @@ namespace task8787
             Console.WriteLine("9711");
             String[] in9711 = {
                 "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 4"};
+                "3 4 1 2 3 4 1 2 3 4",
+                ""};
             for (int i = 0; i < in9711.Length; i++)
             {
                 var result = Lab08.task9711(in9711[i]);
