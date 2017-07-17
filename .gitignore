@@ -29,6 +29,10 @@ php/*.pdf
 решения/cs/lab*/bin
 решения/cs/task*/obj
 решения/cs/task*/bin
+решения/cs/Classes/obj
+решения/cs/Classes/bin
+решения/cs/Methods/obj
+решения/cs/Methods/bin
 *.suo
 java/postcard/out
 java/postcard/.idea/workspace.xml

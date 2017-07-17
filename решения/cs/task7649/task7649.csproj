@@ -48,17 +48,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\lab05\lab05.csproj">
-      <Project>{ebda352d-5fd4-45bf-88c9-c10e56ebc31a}</Project>
-      <Name>lab05</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lab06\lab06.csproj">
-      <Project>{0093e7c9-5d51-4aa2-9540-6b67b434a3d2}</Project>
-      <Name>lab06</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lab08\lab08.csproj">
-      <Project>{495680cc-053d-4b06-8a08-055c423c6393}</Project>
-      <Name>lab08</Name>
+    <ProjectReference Include="..\Methods\Methods.csproj">
+      <Project>{144a76c2-13c2-46ba-a63b-901ef8630b5a}</Project>
+      <Name>Methods</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
