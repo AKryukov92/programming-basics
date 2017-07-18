@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Classes</RootNamespace>
     <AssemblyName>Classes</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,7 @@
     <Compile Include="task1953\Interval.cs" />
     <Compile Include="task2000\Interval.cs" />
     <Compile Include="task2401\Interval.cs" />
+    <Compile Include="task2662\Interval.cs" />
     <Compile Include="task2809\Point.cs" />
     <Compile Include="task3185\Point.cs" />
     <Compile Include="task3956\Circle.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="task4147\Rectangle.cs" />
     <Compile Include="task5242\Interval.cs" />
     <Compile Include="task5421\Point.cs" />
+    <Compile Include="task5449\Point.cs" />
     <Compile Include="task6011\Point.cs" />
     <Compile Include="task6037\Interval.cs" />
     <Compile Include="task7297\Interval.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="task8403\Point.cs" />
     <Compile Include="task9914\Interval.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

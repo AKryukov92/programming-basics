@@ -20,7 +20,7 @@ namespace Classes.task1953
         {
             if (a > b)
             {
-                throw new IllegalStateException("Корректность интервала была нарушена");
+                throw new InvalidOperationException("Корректность интервала была нарушена");
             }
             return "[" + a + ";" + b + "]";
         }

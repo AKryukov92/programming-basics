@@ -24,8 +24,8 @@ namespace Classes.task4147
 
         public Rectangle(Point p, int w, int h)
         {
-            this.x = p.GetX();
-            this.y = p.GetY();
+            this.x = p.X;
+            this.y = p.Y;
             this.w = w;
             this.h = h;
         }
@@ -40,8 +40,8 @@ namespace Classes.task4147
 
         public bool contains(Point p)
         {
-            return x <= p.GetX() && p.GetX() <= x + w
-                && y <= p.GetY() && p.GetY() <= y + h;
+            return x <= p.X && p.X <= x + w
+                && y <= p.Y && p.Y <= y + h;
         }
 
         public double area()
@@ -59,7 +59,7 @@ namespace Classes.task4147
             return new Interval(y, y + h);
         }
 
-        public override String toString()
+        public override String ToString()
         {
             return "<rect x='" + x +
                 "' y='" + y +

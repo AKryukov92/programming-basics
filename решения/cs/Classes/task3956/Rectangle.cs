@@ -47,7 +47,7 @@ namespace Classes.task3956
             return w * h;
         }
 
-        public override String toString()
+        public override String ToString()
         {
             return "<rect x='" + x +
                 "' y='" + y +

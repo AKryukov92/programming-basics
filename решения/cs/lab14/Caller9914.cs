@@ -99,7 +99,7 @@ namespace lab14
                     Console.WriteLine("Не пересекаются");
                 }
             }
-            catch (ArgumentException ex)
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine(ex.Message);
             }

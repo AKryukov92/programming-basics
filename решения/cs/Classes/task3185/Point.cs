@@ -13,6 +13,10 @@ namespace Classes.task3185
 
         public double DistanceTo(Point p)
         {
+            if(p == null)
+            {
+                throw new ArgumentException("Конечная точка не инициализирована");
+            }
             int dx = p.x - x;
             int dy = p.y - y;
             return Math.Sqrt(dx * dx + dy * dy);

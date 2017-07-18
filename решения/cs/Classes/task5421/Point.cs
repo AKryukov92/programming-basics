@@ -36,7 +36,7 @@ namespace Classes.task5421
             return "(" + x + ";" + y + ")";
         }
 
-        public override String toString()
+        public override String ToString()
         {
             return "(" + x + ";" + y + ")";
         }

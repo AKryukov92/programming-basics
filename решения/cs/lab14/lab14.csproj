@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>lab14</RootNamespace>
     <AssemblyName>lab14</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,11 +46,13 @@
     <Compile Include="Caller1953.cs" />
     <Compile Include="Caller2000.cs" />
     <Compile Include="Caller2401.cs" />
+    <Compile Include="Caller2662.cs" />
     <Compile Include="Caller2809.cs" />
     <Compile Include="Caller3956.cs" />
     <Compile Include="Caller4147.cs" />
     <Compile Include="Caller5242.cs" />
     <Compile Include="Caller5421.cs" />
+    <Compile Include="Caller5449.cs" />
     <Compile Include="Caller6011.cs" />
     <Compile Include="Caller6037.cs" />
     <Compile Include="Caller7297.cs" />
