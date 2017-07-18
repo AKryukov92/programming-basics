@@ -1,6 +1,6 @@
 package Lab15;
 
-import Lab15.task0000.Comparator8258;
+import Lab15.task8258.Comparator8258;
 
 import java.util.ArrayList;
 import java.util.Arrays;

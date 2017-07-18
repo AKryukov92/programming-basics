@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="task1379\Interval.cs" />
+    <Compile Include="task1457\Comparator1457.cs" />
+    <Compile Include="task1457\Point.cs" />
     <Compile Include="task1953\Circle.cs" />
     <Compile Include="task1953\Interval.cs" />
     <Compile Include="task2000\Interval.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="task5449\Point.cs" />
     <Compile Include="task6011\Point.cs" />
     <Compile Include="task6037\Interval.cs" />
+    <Compile Include="task7186\Comparator7186.cs" />
     <Compile Include="task7297\Interval.cs" />
     <Compile Include="task7301\Point.cs" />
     <Compile Include="task8258\Comparator8258.cs" />
