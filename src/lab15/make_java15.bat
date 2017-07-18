@@ -29,6 +29,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7738" class="supervision"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task9924"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task7657"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task8258" class="example"^>№ 7^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -38,6 +39,7 @@ type task9990.html>>%filename%
 type task7738.html>>%filename%
 type task9924.html>>%filename%
 type task7657.html>>%filename%
+type task8258.html>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

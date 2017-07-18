@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16449066-52F4-44D4-B85F-D21AEA41CAB6}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{90DC51BA-4233-4495-94F7-C558FCE72FF9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Classes</RootNamespace>
-    <AssemblyName>Classes</AssemblyName>
+    <RootNamespace>lab15</RootNamespace>
+    <AssemblyName>lab15</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,34 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caller8258.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="task1379\Interval.cs" />
-    <Compile Include="task1953\Circle.cs" />
-    <Compile Include="task1953\Interval.cs" />
-    <Compile Include="task2000\Interval.cs" />
-    <Compile Include="task2401\Interval.cs" />
-    <Compile Include="task2662\Interval.cs" />
-    <Compile Include="task2809\Point.cs" />
-    <Compile Include="task3185\Point.cs" />
-    <Compile Include="task3956\Circle.cs" />
-    <Compile Include="task3956\Point.cs" />
-    <Compile Include="task3956\Rectangle.cs" />
-    <Compile Include="task3956\Shape.cs" />
-    <Compile Include="task4147\Interval.cs" />
-    <Compile Include="task4147\Point.cs" />
-    <Compile Include="task4147\Rectangle.cs" />
-    <Compile Include="task5242\Interval.cs" />
-    <Compile Include="task5421\Point.cs" />
-    <Compile Include="task5449\Point.cs" />
-    <Compile Include="task6011\Point.cs" />
-    <Compile Include="task6037\Interval.cs" />
-    <Compile Include="task7297\Interval.cs" />
-    <Compile Include="task7301\Point.cs" />
-    <Compile Include="task8258\Comparator8258.cs" />
-    <Compile Include="task8403\Point.cs" />
-    <Compile Include="task9914\Interval.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{16449066-52f4-44d4-b85f-d21aea41cab6}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

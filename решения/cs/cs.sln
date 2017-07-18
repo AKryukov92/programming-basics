@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2354", "task2354\task2354.csproj", "{C201B96D-2D13-4F23-A7A3-84252CEBC784}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{16449066-52F4-44D4-B85F-D21AEA41CAB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{144A76C2-13C2-46BA-A63B-901EF8630B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab15", "lab15\lab15.csproj", "{90DC51BA-4233-4495-94F7-C558FCE72FF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{144A76C2-13C2-46BA-A63B-901EF8630B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{144A76C2-13C2-46BA-A63B-901EF8630B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{144A76C2-13C2-46BA-A63B-901EF8630B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DC51BA-4233-4495-94F7-C558FCE72FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DC51BA-4233-4495-94F7-C558FCE72FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DC51BA-4233-4495-94F7-C558FCE72FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DC51BA-4233-4495-94F7-C558FCE72FF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
