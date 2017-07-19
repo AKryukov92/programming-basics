@@ -13,38 +13,36 @@ public class Lab12Task2354 {
         Step5063();
         Step7711();
         Step3832();
-        Step1346();
-
         Step9354();
+
         Step5895();
         Step7457();
         Step9865();
         Step3558();
-
         Step4366();
+
         Step5980();
         Step8174();
         Step5662();
         Step3770();
-
         Step2475();
+
         Step9562();
         Step5951();
         Step6580();
         Step8696();
-
         Step2324();
+
         Step8731();
         Step4082();
         Step3669();
         Step5969();
-
         Step9925();
+
         Step4265();
         Step3946();
         Step7035();
         Step4283();
-
         Step9182();
     }
 
@@ -129,14 +127,6 @@ public class Lab12Task2354 {
         System.out.println(Lab02.task3832(7451, 7433, 7417) - 165777911);
         System.out.println(Lab02.task3832(3, 7, 11) - 131);
         System.out.println(Lab02.task3832(-2, -2029, 0) - 4058);
-    }
-
-    private static void Step1346(){
-        System.out.println();
-        System.out.println("1346");
-        double result1346 = Lab02.task1346(7411,7433,7417);
-        System.out.printf("%.6f\n", result1346 - 204947815919.5);
-        System.out.printf("%.6f\n", Lab02.task1346(3,7,11) - 290.5);
     }
 
     private static void Step9354(){

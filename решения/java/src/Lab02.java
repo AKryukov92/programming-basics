@@ -184,6 +184,14 @@ public class Lab02 {
     }
 
     public static double task1346(long v, long t, long a){
+        if (v < 0)
+        {
+            throw new IllegalArgumentException("Начальная скорость должно быть неотрицательна");
+        }
+        if(t <= 0)
+        {
+            throw new IllegalArgumentException("Время должно быть положительным");
+        }
         return v*t+a*t*t/2.0;
     }
 

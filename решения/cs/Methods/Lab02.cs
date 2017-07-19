@@ -210,11 +210,8 @@ namespace Methods
 
         public static double task7619(int v1, int v2, int s)
         {
-            if (v1 < 0) {
-                throw new Exception("Значение v1 должно быть неотрицательным");
-            }
-            if (v2 < 0) {
-                throw new Exception("Значение v2 должно быть неотрицательным");
+            if (v1 < 0 || v2 < 0) {
+                throw new Exception("Скорость должна быть неотрицательна");
             }
             return (double)s / (v1 + v2);
         }
@@ -226,6 +223,14 @@ namespace Methods
 
         public static double task1346(long v, long t, long a)
         {
+            if (v < 0)
+            {
+                throw new ArgumentException("Начальная скорость должно быть неотрицательна");
+            }
+            if (t <= 0)
+            {
+                throw new ArgumentException("Время должно быть положительным");
+            }
             return v * t + a * t * t / 2.0;
         }
 
