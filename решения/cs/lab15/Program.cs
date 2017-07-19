@@ -36,6 +36,12 @@ namespace lab15
             Caller1457.Step4();
             Caller1457.Step5();
             Caller1457.Step6();
+
+            Console.WriteLine();
+            Console.WriteLine("6876");
+            Caller6876.Step1();
+            Caller6876.Step2();
+            Caller6876.Step3();
         }
     }
 }

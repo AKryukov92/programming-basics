@@ -63,6 +63,10 @@
     <Compile Include="task5449\Point.cs" />
     <Compile Include="task6011\Point.cs" />
     <Compile Include="task6037\Interval.cs" />
+    <Compile Include="task6876\Circle.cs" />
+    <Compile Include="task6876\Comparator6876.cs" />
+    <Compile Include="task6876\Rectangle.cs" />
+    <Compile Include="task6876\Shape.cs" />
     <Compile Include="task7186\Comparator7186.cs" />
     <Compile Include="task7297\Interval.cs" />
     <Compile Include="task7301\Point.cs" />
