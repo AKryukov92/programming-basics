@@ -97,6 +97,21 @@ for (var i = 0; i < in2624a.length; i++){
 }
 
 
+var in1346v = ["3", "100", "0", "7411", "10", "19", "-13"];
+var in1346t = ["7", "5", "33", "7433", "-15", "0", "80"];
+var in1346a = ["11", "-10", "17", "7417", "9", "23", "63"];
+var out1346 = [290.5, 375, 9256.5, 204947815919.5, 0, 0, 0];
+for (var i = 0; i < in1346v.length; i++){
+	var out = document.getElementById("1346t" + i);
+	try {
+		var result = task1346(in1346v[i], in1346t[i], in1346a[i]);
+		out.innerHTML = result.toFixed(4) + " (" + out1346[i].toFixed(4) + ")";
+	} catch (e){
+		out.innerHTML = e.message;
+	}
+}
+
+
 var in5871 = ["6911", "5", "6", "2", "0", "-4"];
 for (var i = 0; i < in5871.length; i++){
 	var out = document.getElementById("5871t" + i);

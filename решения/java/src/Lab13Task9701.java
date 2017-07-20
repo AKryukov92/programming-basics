@@ -10,40 +10,42 @@ public class Lab13Task9701 {
         Step8873();
         Step2624();
 
+        Step1346();
         Step5871();
         Step3591();
         Step9298();
         Step3354();
-        Step5201();
 
+        Step5201();
         Step2981();
         Step4312();
         Step8833();
         Step1934();
-        Step7619();
 
+        Step7619();
         Step9130();
         Step2461();
         Step7799();
         Step2802();
-        Step9180();
 
+        Step9180();
         Step1544();
         Step9631();
         Step9812();
         Step5728();
-        Step5923();
 
+        Step5923();
         Step9116();
         Step1618();
         Step7937();
         Step4845();
-        Step7222();
 
+        Step7222();
         Step2166();
         Step5894();
         Step4425();
         Step7290();
+
         Step8769();
     }
 
@@ -93,6 +95,21 @@ public class Lab13Task9701 {
                 System.out.printf("%.6f (%.6f)\n", result, outs2624[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    private static void Step1346(){
+        int[] in1346v = new int[]{3, 100, 0, 7411, 10, 19, -13};
+        int[] in1346t = new int[]{7, 5, 33, 7433, -15, 0, 80};
+        int[] in1346a = new int[]{11, -10, 17, 7417, 9, 23, 63};
+        double[] out1346 = new double[]{290.5, 375, 9256.5, 204947815919.5, 0, 0, 0};
+        for (int i = 0; i < in1346v.length; i++){
+            try {
+                double result = Lab02.task1346(in1346v[i], in1346t[i], in1346a[i]);
+                System.out.printf("%.4f (%.4f)\n", result, out1346[i]);
+            } catch (IllegalArgumentException ex){
+                System.out.println(ex.getMessage());
             }
         }
     }

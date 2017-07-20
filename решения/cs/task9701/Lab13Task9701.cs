@@ -52,6 +52,8 @@ namespace task9701
             Step7799();
             Step9180();
             Step1544();
+
+            Step1346();
         }
         
         static void Step9020()
@@ -155,6 +157,28 @@ namespace task9701
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        static void Step1346()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1346");
+            int[] in1346v = new int[] { 3, 100, 0, 7411, 10, 19, -13 };
+            int[] in1346t = new int[] { 7, 5, 33, 7433, -15, 0, 80 };
+            int[] in1346a = new int[] { 11, -10, 17, 7417, 9, 23, 63 };
+            double[] out1346 = new double[] { 290.5, 375, 9256.5, 204947815919.5, 0, 0, 0 };
+            for (int i = 0; i < in1346v.Length; i++)
+            {
+                try
+                {
+                    double result = Lab02.task1346(in1346v[i], in1346t[i], in1346a[i]);
+                    Console.WriteLine("{0:F4} ({1:F4})", result, out1346[i]);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }

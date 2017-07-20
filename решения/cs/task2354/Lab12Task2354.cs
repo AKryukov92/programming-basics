@@ -44,7 +44,6 @@ namespace tfa
             Step5063();
             Step7711();
             Step3832();
-            Step1346();
             Step9354();
 
             Step5895();
@@ -398,15 +397,6 @@ namespace tfa
             Console.WriteLine(Lab02.task3832(7451, 7433, 7417) - 165777911);
             Console.WriteLine(Lab02.task3832(3, 7, 11) - 131);
             Console.WriteLine(Lab02.task3832(-2, -2029, 0) - 4058);
-        }
-
-        static void Step1346()
-        {
-            Console.WriteLine();
-            Console.WriteLine("1346");
-            double result1346 = Lab02.task1346(7411, 7433, 7417);
-            Console.WriteLine("{0:F6}", result1346 - 204947815919.5);
-            Console.WriteLine("{0:F6}", Lab02.task1346(3, 7, 11) - 290.5);
         }
 
         static void Step9354()
