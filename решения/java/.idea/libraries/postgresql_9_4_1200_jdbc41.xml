@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="postgresql-9.4-1200-jdbc41">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-9.4-1200-jdbc41.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

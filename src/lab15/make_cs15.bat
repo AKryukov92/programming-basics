@@ -32,7 +32,7 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task8258" class="example"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task7186"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task1457"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task6875"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task6876"^>№ 10^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
