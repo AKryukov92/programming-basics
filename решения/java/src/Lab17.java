@@ -1,12 +1,13 @@
 import lab17.Client;
 import lab17.DataMapper;
-import lab17.Product;
+import lab17.Employee;
 import lab17.View;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,6 +36,10 @@ public class Lab17 {
             Step2(mapper, view, statement);
             Step3(mapper, view, statement);
             Step4(mapper, view, statement);
+            Step5(mapper, view, statement);
+            Step6(mapper, view, statement);
+            Step7(mapper, view, statement);
+            Step8(mapper, view, statement);
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -42,7 +47,7 @@ public class Lab17 {
     }
 
     public static void Step1(DataMapper mapper, View view, Statement statement) throws SQLException {
-        Map<String, Client> clientData = mapper.fillClientData(statement);
+        Map<String, Client> clientData = mapper.loadClientData(statement);
         view.setClientData(clientData);
 
         System.out.println("<h2>Избранные клиенты</h2>");
@@ -51,7 +56,7 @@ public class Lab17 {
     }
 
     public static void Step2(DataMapper mapper, View view, Statement statement) throws SQLException {
-        view.setProductData(mapper.fillProductData(statement));
+        view.setProductData(mapper.loadProductData(statement));
 
         System.out.println();
         System.out.println("<h2>Избранные товары</h2>");
@@ -61,8 +66,8 @@ public class Lab17 {
     }
 
     public static void Step3(DataMapper mapper, View view, Statement statement) throws SQLException {
-        view.setProductData(mapper.fillProductData(statement));
-        Map<String, String> productGroups = mapper.fillGroupData(statement);
+        view.setProductData(mapper.loadProductData(statement));
+        Map<String, String> productGroups = mapper.loadGroupData(statement);
 
         System.out.println();
         System.out.println("<h2>Избранные товары (с указанием группы)</h2>");
@@ -71,11 +76,46 @@ public class Lab17 {
     }
 
     public static void Step4(DataMapper mapper, View view, Statement statement) throws SQLException {
-        view.setProductData(mapper.fillProductData(statement));
-        Map<String, String> productGroups = mapper.fillGroupData(statement);
+        view.setProductData(mapper.loadProductData(statement));
+        Map<String, String> productGroups = mapper.loadGroupData(statement);
 
         System.out.println();
         System.out.println("<h2>Товары по группам</h2>");
         view.printProductData(productGroups);
+    }
+
+    public static void Step5(DataMapper mapper, View view, Statement statement) throws SQLException{
+        Map<String, List<Employee>> employeesByPosition = mapper.loadEmployeeDataByPosition(statement);
+        System.out.println();
+        System.out.println("<h2>Сотрудники каждой должности</h2>");
+        view.printEmployeesByPosition(employeesByPosition, mapper.loadPositionsData(statement));
+    }
+
+    public static void Step6(DataMapper mapper, View view, Statement statement) throws SQLException{
+        view.setClientData(mapper.loadClientData(statement));
+        view.setProductData(mapper.loadProductData(statement));
+        view.setOrderData(mapper.loadOrdersByClientData(statement));
+
+        System.out.println();
+        System.out.println("<h2>Открытые заказы по клиентам</h2>");
+        view.printOpenClientOrders();
+    }
+
+    public static void Step7(DataMapper mapper, View view, Statement statement) throws SQLException{
+        view.setClientData(mapper.loadClientData(statement));
+        view.setProductData(mapper.loadProductData(statement));
+        view.setOrderData(mapper.loadOrdersByClientData(statement));
+
+        System.out.println();
+        System.out.println("<h2>Закрытые заказы по клиентам</h2>");
+        view.printClosedClientOrders();
+    }
+
+    public static void Step8(DataMapper mapper, View view, Statement statement) throws SQLException {
+        view.setClientData(mapper.loadClientData(statement));
+        List<Employee> employeeList = mapper.loadEmployeeList(statement);
+        System.out.println();
+        System.out.println("<h2>Заказы по сотрудникам</h2>");
+        view.printEmployeesOrders(employeeList, mapper.loadOrdersDataByEmployee(statement), mapper.loadPositionsData(statement));
     }
 }
