@@ -33,6 +33,7 @@ php/*.pdf
 решения/cs/Classes/bin
 решения/cs/Methods/obj
 решения/cs/Methods/bin
+решения/cs/packages/*
 *.suo
 java/postcard/out
 java/postcard/.idea/workspace.xml
