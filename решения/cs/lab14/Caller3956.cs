@@ -1,4 +1,4 @@
-﻿using Classes.task3956;
+﻿using Classes.Task3956;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +12,11 @@ namespace lab14
         public static void Step1()
         {
             Shape s1 = new Rectangle(0, 0, 20, 20);
-            Point center = s1.getCenter();
-            Console.WriteLine(center.print());
+            Point center = s1.MakeCenter();
+            Console.WriteLine(center.Print());
             Shape s2 = new Circle(100, 100, 15);
-            Console.WriteLine(s2.getCenter().print());
-            if (s1.getCenter().Equals(s2.getCenter()))
+            Console.WriteLine(s2.MakeCenter().Print());
+            if (center.Equals(s2.MakeCenter()))
             {
                 Console.WriteLine("Совпадают");
             }
@@ -29,14 +29,14 @@ namespace lab14
         public static void Step2()
         {
             Shape s1 = new Rectangle(0, 0, 20, 20);
-            Console.WriteLine(s1.getCenter().print());
+            Console.WriteLine(s1.MakeCenter().Print());
             Shape s2 = new Circle(100, 100, 15);
-            Console.WriteLine(s2.getCenter().print());
-            s1.slide(90, 0);
-            Console.WriteLine(s1.getCenter().print());
-            s2.slide(0, -90);
-            Console.WriteLine(s2.getCenter().print());
-            if (s1.getCenter().Equals(s2.getCenter()))
+            Console.WriteLine(s2.MakeCenter().Print());
+            s1.Slide(90, 0);
+            Console.WriteLine(s1.MakeCenter().Print());
+            s2.Slide(0, -90);
+            Console.WriteLine(s2.MakeCenter().Print());
+            if (s1.MakeCenter().Equals(s2.MakeCenter()))
             {
                 Console.WriteLine("Совпадают");
             }
@@ -57,7 +57,7 @@ namespace lab14
             double areaSum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                areaSum += arr[i].area();
+                areaSum += arr[i].Area;
             }
             Console.WriteLine("{0:F4}", areaSum);
         }

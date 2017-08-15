@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Classes.task5242;
+using Classes.Task5242;
 
 namespace lab14
 {
@@ -16,7 +16,7 @@ namespace lab14
                 a = 23,
                 b = 29
             };
-            Console.WriteLine(range.print());
+            Console.WriteLine(range.Print());
         }
 
         public static void Step2()
@@ -26,7 +26,7 @@ namespace lab14
             range.b = 29;
             try
             {
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (InvalidOperationException ex)
             {

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task1379
+namespace Classes.Task1379
 {
     public class Interval
     {
         public int a;
         public int b;
 
-        public void slide(int value)
+        public void Slide(int value)
         {
             if (a > b)
             {
@@ -21,7 +21,7 @@ namespace Classes.task1379
             this.b += value;
         }
 
-        public String print()
+        public String Print()
         {
             if (a > b)
             {

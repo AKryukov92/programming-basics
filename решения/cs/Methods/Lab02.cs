@@ -17,7 +17,7 @@ namespace Methods
             {
                 try
                 {
-                    class2361 result = task2361(in2361t[i], in2361l[i]);
+                    class2361 result = Task2361(in2361t[i], in2361l[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -27,8 +27,8 @@ namespace Methods
             }
             Console.WriteLine();
             Console.WriteLine("9622");
-            Console.WriteLine(task9622(7351, 7349, 7333).print());
-            Console.WriteLine(task9622(19, 23, 29).print());
+            Console.WriteLine(Task9622(7351, 7349, 7333).print());
+            Console.WriteLine(Task9622(19, 23, 29).print());
 
             Console.WriteLine();
             Console.WriteLine("6522");
@@ -40,7 +40,7 @@ namespace Methods
             {
                 try
                 {
-                    class6522 result = task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]);
+                    class6522 result = Task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -58,7 +58,7 @@ namespace Methods
             {
                 try
                 {
-                    class9622 result = task9622(in9622m[i], in9622v[i], in9622h[i]);
+                    class9622 result = Task9622(in9622m[i], in9622v[i], in9622h[i]);
                     Console.WriteLine(result.print());
                 }
                 catch (Exception e)
@@ -68,12 +68,12 @@ namespace Methods
             }
         }
 
-        public static double task4411(double x)
+        public static double Task4411(double x)
         {
             return x + 7;
         }
 
-        public static int task9298(int a)
+        public static int Task9298(int a)
         {
             if (a <= 0) {
                 throw new Exception("Значение A должно быть положительным");
@@ -81,7 +81,7 @@ namespace Methods
             return 6 * a * a;
         }
 
-        public static int task3354(int a)
+        public static int Task3354(int a)
         {
             if (a <= 0) {
                 throw new Exception("Значение A должно быть положительным");
@@ -89,7 +89,7 @@ namespace Methods
             return a * a * a;
         }
 
-        public static double task5201(int r)
+        public static double Task5201(int r)
         {
             if (r <= 0) {
                 throw new Exception("Значение R должно быть положительным");
@@ -97,7 +97,7 @@ namespace Methods
             return 2 * Math.PI * r;
         }
 
-        public static double task2981(int r)
+        public static double Task2981(int r)
         {
             if (r <= 0) {
                 throw new Exception("Значение R должно быть положительным");
@@ -105,7 +105,7 @@ namespace Methods
             return 4 * Math.PI * r * r * r / 3;
         }
 
-        public static double task4312(int a, int h)
+        public static double Task4312(int a, int h)
         {
             if (a <= 0) {
                 throw new Exception("Значение A должно быть положительным");
@@ -116,7 +116,7 @@ namespace Methods
             return (double)a * (double)h / 2;
         }
 
-        public static double task8428(int a)
+        public static double Task8428(int a)
         {
             return a * Math.PI / 180;
         }
@@ -138,7 +138,7 @@ namespace Methods
             }
         }
 
-        public static class2361 task2361(int t, int l)
+        public static class2361 Task2361(int t, int l)
         {
             if (t <= 0) {
                 throw new Exception("Значение T должно быть положительным");
@@ -149,17 +149,17 @@ namespace Methods
             return new class2361(t * 100 / l, t * 100 % l);
         }
 
-        public static int task5063(int a)
+        public static int Task5063(int a)
         {
             return a % 360;
         }
 
-        public static double task7711(int x)
+        public static double Task7711(int x)
         {
             return Math.Sin(x * Math.PI / 180);
         }
 
-        public static double task8833(int x)
+        public static double Task8833(int x)
         {
             if (x < 0) {
                 throw new Exception("Значение X должно быть неотрицательным");
@@ -167,12 +167,12 @@ namespace Methods
             return Math.Sqrt(x);
         }
 
-        public static double task1262(int y)
+        public static double Task1262(int y)
         {
             return 5 * Math.Cos(y * Math.PI / 180);
         }
 
-        public static double task9020(int x)
+        public static double Task9020(int x)
         {
             if (x > 61)
             {
@@ -181,7 +181,7 @@ namespace Methods
             return 3 * Math.Sqrt(61 - x);
         }
 
-        public static double task1934(int a, int b)
+        public static double Task1934(int a, int b)
         {
             if (b > 0) {
                 throw new Exception("Значение B должно быть не положительным");
@@ -189,7 +189,7 @@ namespace Methods
             return a * Math.Sqrt(-7 * b);
         }
 
-        public static double task7237(double t)
+        public static double Task7237(double t)
         {
             if (t < -273.15) {
                 throw new Exception("Значение T должно быть не ниже абсолютного нуля");
@@ -197,7 +197,7 @@ namespace Methods
             return t * 1.8 + 32;
         }
 
-        public static double task3943(int x, int y)
+        public static double Task3943(int x, int y)
         {
             if (y < 0) {
                 throw new Exception("Значение y должно быть неотрицательным");
@@ -208,7 +208,7 @@ namespace Methods
             return -5 * Math.Sqrt(x + Math.Sqrt(y));
         }
 
-        public static double task7619(int v1, int v2, int s)
+        public static double Task7619(int v1, int v2, int s)
         {
             if (v1 < 0 || v2 < 0) {
                 throw new Exception("Скорость должна быть неотрицательна");
@@ -216,12 +216,12 @@ namespace Methods
             return (double)s / (v1 + v2);
         }
 
-        public static int task3832(int x1, int x2, int x3)
+        public static int Task3832(int x1, int x2, int x3)
         {
             return x1 * x2 + x1 * x3 + x2 * x3;
         }
 
-        public static double task1346(long v, long t, long a)
+        public static double Task1346(long v, long t, long a)
         {
             if (v < 0)
             {
@@ -251,7 +251,7 @@ namespace Methods
             }
         }
 
-        public static class9622 task9622(int m, int v, int h)
+        public static class9622 Task9622(int m, int v, int h)
         {
             if (m <= 0){
                 throw new Exception("Значение M должно быть положительным");
@@ -266,7 +266,7 @@ namespace Methods
             return new class9622((double)m * v * v / 2, (double)m * g * h);
         }
 
-        public static double task8873(int r1, int r2)
+        public static double Task8873(int r1, int r2)
         {
             if (r1 == 0) {
                 throw new Exception("Значение r1 должно быть не равно нулю");
@@ -277,7 +277,7 @@ namespace Methods
             return 1.0 / r1 + 1.0 / r2;
         }
 
-        public static double task7799(int m, int a)
+        public static double Task7799(int m, int a)
         {
             if (m <= 0)
             {
@@ -291,12 +291,12 @@ namespace Methods
             return m * g * Math.Cos(a * Math.PI / 180);
         }
 
-        public static double task9354(int a, int b, int c)
+        public static double Task9354(int a, int b, int c)
         {
             return b * b - 4 * a * c;
         }
 
-        public static double task9130(int m1, int m2, int r)
+        public static double Task9130(int m1, int m2, int r)
         {
             if (r == 0) {
                 throw new Exception("Значение r должно быть не равно нулю");
@@ -305,12 +305,12 @@ namespace Methods
             return (double)g * m1 * m2 / r / r;
         }
 
-        public static double task5895(int a, int b, int c)
+        public static double Task5895(int a, int b, int c)
         {
             return Math.Sqrt(a * a + b * b - 2 * a * b * Math.Cos(c * Math.PI / 180));
         }
 
-        public static double task2461(int a, int b, int c, int d)
+        public static double Task2461(int a, int b, int c, int d)
         {
             if (a == 0) {
                 throw new Exception("Значение a должно быть не равно нулю");
@@ -321,13 +321,13 @@ namespace Methods
             return (double)(a * d + b * c) / (a * d);
         }
 
-        public static double task2790(int x)
+        public static double Task2790(int x)
         {
             double Sin = Math.Sin(x * Math.PI / 180.0);
             return Math.Sqrt(1.0 - Sin * Sin);
         }
 
-        public static double task2624(long a, long b, long c, long x)
+        public static double Task2624(long a, long b, long c, long x)
         {
             if (a * x * x + b * x + c < 0) {
                 throw new Exception("Подкоренное выражение должно быть неотрицательным");
@@ -339,7 +339,7 @@ namespace Methods
             return 1.0 / denominator;
         }
 
-        public static double task5871(double x)
+        public static double Task5871(double x)
         {
             if (x < 5) {
                 throw new Exception("Подкоренное выражение должно быть неотрицательным");
@@ -347,24 +347,24 @@ namespace Methods
             return (Math.Sqrt(x + 5) + Math.Sqrt(x - 5)) / 2 / Math.Sqrt(x);
         }
 
-        public static double task9164(int a, int b)
+        public static double Task9164(int a, int b)
         {
             double ar = a * Math.PI / 180;
             double br = b * Math.PI / 180;
             return Math.Sin(ar) * Math.Cos(br) + Math.Cos(ar) * Math.Sin(br);
         }
 
-        public static double task7457(int x)
+        public static double Task7457(int x)
         {
             return 7 * x * x - 3 * x + 6;
         }
 
-        public static double task9865(double a)
+        public static double Task9865(double a)
         {
             return 12 * a * a + 7 * a - 16;
         }
 
-        public static double task3591(int h)
+        public static double Task3591(int h)
         {
             if (h < 0)
             {
@@ -375,19 +375,19 @@ namespace Methods
             return Math.Sqrt(c * c - r * r);
         }
 
-        public static double task3558(int a, int b)
+        public static double Task3558(int a, int b)
         {
             double ar = 2 * a * Math.PI / 180;
             double br = 3 * b * Math.PI / 180;
             return 3 * Math.Sin(ar) * Math.Cos(br);
         }
 
-        public static double task4366(int x1, int x2)
+        public static double Task4366(int x1, int x2)
         {
             return Math.Sqrt(x2 * x2 + x1 * x1);
         }
 
-        public static double task5789(int xa, int ya, int xb, int yb)
+        public static double Task5789(int xa, int ya, int xb, int yb)
         {
             double dx = xb - xa;
             double dy = yb - ya;
@@ -411,7 +411,7 @@ namespace Methods
             }
         }
 
-        public static class6522 task6522(int v1, int t1, int v2, int t2)
+        public static class6522 Task6522(int v1, int t1, int v2, int t2)
         {
             if (v1 < 0) {
                 throw new Exception("Значение v1 должно быть неотрицательным");

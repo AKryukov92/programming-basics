@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task2662
+namespace Classes.Task2662
 {
     public class Interval
     {

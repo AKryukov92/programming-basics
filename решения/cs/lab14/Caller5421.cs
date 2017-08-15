@@ -1,4 +1,4 @@
-﻿using Classes.task5421;
+﻿using Classes.Task5421;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,27 +22,27 @@ namespace lab14
         public static void Step2()
         {
             Point p = new Point();
-            p.setCoordinates(5, 7);
+            p.SetCoordinates(5, 7);
             Console.WriteLine(p);
         }
 
         public static void Step3()
         {
             Point p1 = new Point();
-            p1.setCoordinates(23, 29);
-            Console.WriteLine("Расстояние между {0} и (0;0) составляет {1:F4}", p1, p1.distanceTo(0, 0));
+            p1.SetCoordinates(23, 29);
+            Console.WriteLine("Расстояние между {0} и (0;0) составляет {1:F4}", p1, p1.DistanceTo(0, 0));
         }
 
         public static void Step4()
         {
             Point p1 = new Point();
-            p1.setCoordinates(11, 13);
+            p1.SetCoordinates(11, 13);
             Point p2 = new Point()
             {
                 x = 17,
                 y = 19
             };
-            Console.WriteLine("Расстояние между {0} и {1} составляет {2:F4}", p1, p2, p1.distanceTo(p2));
+            Console.WriteLine("Расстояние между {0} и {1} составляет {2:F4}", p1, p2, p1.DistanceTo(p2));
         }
     }
 }

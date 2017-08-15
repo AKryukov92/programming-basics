@@ -10,10 +10,10 @@ namespace Methods
         static void Main(string[] args)
         {
             Console.WriteLine("1662");
-            task1662();
+            Task1662();
         }
 
-        static void task1662()
+        static void Task1662()
         {
             Console.WriteLine("+---+\n" +
                 "|   |\n" +
@@ -58,63 +58,63 @@ namespace Methods
                 "</html>");
         }
 
-        public static void task1860(String a)
+        public static void Task1860(String a)
         {
             Console.WriteLine("Мы стремимся к " + a);
         }
 
-        public static void task4764(String a)
+        public static void Task4764(String a)
         {
             Console.WriteLine(a + " нас не остановят!");
         }
 
-        public static void task2429(String a)
+        public static void Task2429(String a)
         {
             Console.WriteLine("Программирование это " + a + "!");
         }
 
-        public static void task7472(String a, String b)
+        public static void Task7472(String a, String b)
         {
             Console.WriteLine(b + " " + a);
         }
 
-        public static void task3862()
+        public static void Task3862()
         {
             Console.WriteLine("{0:F4}\n{1:F4}", Math.PI, Math.E);
         }
 
-        public static void task9231(double a)
+        public static void Task9231(double a)
         {
             Console.WriteLine("{0:F4}", a);
         }
 
-        public static void task8624(int a)
+        public static void Task8624(int a)
         {
             Console.WriteLine("\"" + a + "\"");
         }
 
-        public static void task2959(String id)
+        public static void Task2959(String id)
         {
             Console.WriteLine("SELECT first_name, last_name, group");
             Console.WriteLine("FROM students WHERE student_id = '" + id + "';");
             Console.WriteLine();
         }
 
-        public static void task7271(int x, int y)
+        public static void Task7271(int x, int y)
         {
             Console.WriteLine("INSERT INTO points (x, y)");
             Console.WriteLine("VALUES ('" + x + "','" + y + "');");
             Console.WriteLine();
         }
 
-        public static void task2632(int cx, int cy, int r, String fill)
+        public static void Task2632(int cx, int cy, int r, String fill)
         {
             Console.WriteLine("<circle cx=\"" + cx + "\" cy=\"" + cy + "\"");
             Console.WriteLine("r=\"" + r + "\" fill=\"" + fill + "\"/>");
             Console.WriteLine();
         }
 
-        public static void task4343(String user, String pass, String host, String port, String db)
+        public static void Task4343(String user, String pass, String host, String port, String db)
         {
             Console.WriteLine("User ID=" + user + ";Password=" + pass + ";");
             Console.WriteLine("Host=" + host + ";Port=" + port + ";Database=" + db + ";");

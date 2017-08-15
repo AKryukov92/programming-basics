@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task1953
+namespace Classes.Task1953
 {
     public class Interval
     {
@@ -16,7 +16,7 @@ namespace Classes.task1953
             this.b = b;
         }
 
-        public String print()
+        public String Print()
         {
             if (a > b)
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task1953
+namespace Classes.Task1953
 {
     public class Circle
     {
@@ -19,17 +19,17 @@ namespace Classes.task1953
             this.r = r;
         }
 
-        public double area()
+        public double Area
         {
-            return Math.PI * r * r;
+            get { return Math.PI * r * r; }
         }
 
-        public Interval getProjectionX()
+        public Interval MakeProjectionX()
         {
             return new Interval(cx - r, cx + r);
         }
 
-        public Interval getProjectionY()
+        public Interval MakeProjectionY()
         {
             return new Interval(cy - r, cy + r);
         }

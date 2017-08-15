@@ -34,7 +34,7 @@ namespace tfa
             Console.WriteLine("8495");
             StringBuilder sb8495 = new StringBuilder();
             sb8495 = sb8495.Append("@");
-            sb8495 = Lab06.task8495(sb8495);
+            sb8495 = Lab06.Task8495(sb8495);
             sb8495 = sb8495.Append("#");
             Console.WriteLine(sb8495.ToString());
         }
@@ -45,7 +45,7 @@ namespace tfa
             Console.WriteLine("1315");
             StringBuilder sb1315 = new StringBuilder();
             sb1315.Append("@");
-            Lab06.task1315(sb1315);
+            Lab06.Task1315(sb1315);
             sb1315.Append("#");
             Console.WriteLine(sb1315);
         }
@@ -54,7 +54,7 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("3762");
-            String result3762 = Lab06.task3762(new StringBuilder()).ToString();
+            String result3762 = Lab06.Task3762(new StringBuilder()).ToString();
             Console.WriteLine(result3762);
         }
 
@@ -62,7 +62,7 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("3550");
-            StringBuilder sb3550 = Lab06.task3550(
+            StringBuilder sb3550 = Lab06.Task3550(
                 new StringBuilder()
                 .Append("@"))
                 .Append("#");
@@ -74,9 +74,9 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("6572");
             StringBuilder sb6572 = new StringBuilder();
-            Lab06.task6572(sb6572, 8, 13);
-            Lab06.task6572(sb6572, 691, 703);
-            Lab06.task6572(sb6572, 19, 3);
+            Lab06.Task6572(sb6572, 8, 13);
+            Lab06.Task6572(sb6572, 691, 703);
+            Lab06.Task6572(sb6572, 19, 3);
             Console.WriteLine(sb6572);
         }
 
@@ -85,15 +85,15 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("2084");
             String result2084;
-            result2084 = Lab06.task2084(new StringBuilder(), 20, 30).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 8, 13)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 571, 580)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 691, 703)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), -71, -90)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 64, 58)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 19, 7)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 401, 390)).Append("\n")
-                .Append(Lab06.task2084(new StringBuilder(), 800, 785)).Append("\n")
+            result2084 = Lab06.Task2084(new StringBuilder(), 20, 30).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 8, 13)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 571, 580)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 691, 703)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), -71, -90)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 64, 58)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 19, 7)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 401, 390)).Append("\n")
+                .Append(Lab06.Task2084(new StringBuilder(), 800, 785)).Append("\n")
                 .ToString();
             Console.WriteLine(result2084);
         }
@@ -102,9 +102,9 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("5411");
-            String result5411 = Lab06.task5411(
-                Lab06.task5411(
-                    Lab06.task5411(new StringBuilder(), 7, 11)
+            String result5411 = Lab06.Task5411(
+                Lab06.Task5411(
+                    Lab06.Task5411(new StringBuilder(), 7, 11)
                         .Append("\n")
                     , 211, 223).Append("\n")
                 , 37, 29).Append("\n")
@@ -141,7 +141,7 @@ namespace tfa
             };
             for (int i = 0; i < in7369left.Length; i++)
             {
-                String result = Lab08.task7369(in7369left[i], in7369top[i]);
+                String result = Lab08.Task7369(in7369left[i], in7369top[i]);
                 Console.WriteLine(result);
             }
         }
@@ -155,10 +155,10 @@ namespace tfa
                 "a\nb\nc\nd\ne\nf\ng\nh+\n\n" +
                 "a\nb\nc\nd\ne\nf\ng\nh\n\n";
             StringBuilder sb = new StringBuilder();
-            Lab05.task8518(sb, "a").Append("\n");
-            Lab05.task8518(sb, "d").Append("\n");
-            Lab05.task8518(sb, "h").Append("\n");
-            Lab05.task8518(sb, "i").Append("\n");
+            Lab05.Task8518(sb, "a").Append("\n");
+            Lab05.Task8518(sb, "d").Append("\n");
+            Lab05.Task8518(sb, "h").Append("\n");
+            Lab05.Task8518(sb, "i").Append("\n");
             if (out8518.Equals(sb.ToString()))
             {
                 Console.WriteLine("Задача решена верно");
@@ -183,7 +183,7 @@ namespace tfa
                 "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"};
             for (int i = 0; i < in7585.Length; i++)
             {
-                StringBuilder result = Lab06.task7585(new StringBuilder(), in7585[i]);
+                StringBuilder result = Lab06.Task7585(new StringBuilder(), in7585[i]);
                 if (out7585[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");
@@ -209,7 +209,7 @@ namespace tfa
                 "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n"};
             for (int i = 0; i < in8770.Length; i++)
             {
-                var result = Lab06.task8770(new StringBuilder(), in8770[i]);
+                var result = Lab06.Task8770(new StringBuilder(), in8770[i]);
                 if (out8770[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");
@@ -235,7 +235,7 @@ namespace tfa
                 "a\nb\nc\nd\ne\nf\ng\nh\n"};
             for (int i = 0; i < in5694.Length; i++)
             {
-                var result = Lab08.task5694(new StringBuilder(), in5694[i]);
+                var result = Lab08.Task5694(new StringBuilder(), in5694[i]);
                 if (out5694[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");
@@ -261,7 +261,7 @@ namespace tfa
                 "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"};
             for (int i = 0; i < in6806.Length; i++)
             {
-                var result = Lab08.task6806(new StringBuilder(), in6806[i]);
+                var result = Lab08.Task6806(new StringBuilder(), in6806[i]);
                 if (out6806[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task2000
+namespace Classes.Task2000
 {
     public class Interval
     {
@@ -21,13 +21,13 @@ namespace Classes.task2000
             this.b = b;
         }
 
-        public void slide(int value)
+        public void Slide(int value)
         {
             this.a += value;
             this.b += value;
         }
 
-        public void squeeze(int value)
+        public void Squeeze(int value)
         {
             if (a > b - value)
             {
@@ -36,12 +36,12 @@ namespace Classes.task2000
             this.b -= value;
         }
 
-        public int length()
+        public int Length
         {
-            return b - a;
+            get { return b - a; }
         }
 
-        public String print()
+        public String Print()
         {
             return "[" + a + ";" + b + "]";
         }

@@ -34,7 +34,7 @@ namespace Methods
             for (int i = 0; i < in5541.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                ISet<String> result = task5541(in5541[i]);
+                ISet<String> result = Task5541(in5541[i]);
                 foreach (String item in result)
                 {
                     sb.Append(item);
@@ -44,7 +44,7 @@ namespace Methods
             }
         }
 
-        public static String task4425(int a, String raw)
+        public static String Task4425(int a, String raw)
         {
             if (String.IsNullOrEmpty(raw))
             {
@@ -58,7 +58,7 @@ namespace Methods
             return arr[a];
         }
 
-        public static String task5683(String str)
+        public static String Task5683(String str)
         {
             if (String.IsNullOrEmpty(str))
             {
@@ -76,7 +76,7 @@ namespace Methods
             return sb.ToString();
         }
 
-        public static void task1223(String[] arr)
+        public static void Task1223(String[] arr)
         {
             for (int i = 0; i < arr.Length / 2; i++)
             {
@@ -86,18 +86,18 @@ namespace Methods
             }
         }
 
-        public static IList<String> task1223(String raw)
+        public static IList<String> Task1223(String raw)
         {
             if (raw.Length == 0)
             {
                 return new List<String>();
             }
             String[] arr = raw.Split(new char[] { ' ' });
-            task1223(arr);
+            Task1223(arr);
             return arr.ToList();
         }
 
-        public static double task3946(String raw)
+        public static double Task3946(String raw)
         {
             if (raw.Length == 0)
             {
@@ -112,7 +112,7 @@ namespace Methods
             return sum / arr.Length;
         }
 
-        public static IList<int> task3940(String left, String right)
+        public static IList<int> Task3940(String left, String right)
         {
             String[] larr = left.Split(new char[] { ' ' });
             String[] rarr = right.Split(new char[] { ' ' });
@@ -130,7 +130,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task8311(int b, int e, String raw)
+        public static IList<int> Task8311(int b, int e, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             if (b < 0 || b >= arr.Length)
@@ -161,7 +161,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<String> task3134(int p, int q, String raw)
+        public static IList<String> Task3134(int p, int q, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             if (p < 0 || p >= arr.Length)
@@ -183,7 +183,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task9774(int m, String raw)
+        public static IList<int> Task9774(int m, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -194,7 +194,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task9711(String raw)
+        public static IList<int> Task9711(String raw)
         {
             IList<int> ret = new List<int>();
             if (String.IsNullOrWhiteSpace(raw))
@@ -211,7 +211,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task3333(int s, String raw)
+        public static IList<int> Task3333(int s, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -235,7 +235,7 @@ namespace Methods
             return ret;
         }
 
-        public static int task7290(int b, String raw)
+        public static int Task7290(int b, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             if (b < 0 || b >= arr.Length)
@@ -254,7 +254,7 @@ namespace Methods
             return count;
         }
 
-        public static StringBuilder task5694(StringBuilder sb, String x)
+        public static StringBuilder Task5694(StringBuilder sb, String x)
         {
             String[] arr = "a b c d e f g h".Split(new char[] { ' ' });
             for (int i = 0; i < arr.Length; i++)
@@ -269,7 +269,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task6806(StringBuilder sb, int x)
+        public static StringBuilder Task6806(StringBuilder sb, int x)
         {
             int[] arr = { 11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20 };
             for (int i = 0; i < arr.Length; i++)
@@ -284,7 +284,7 @@ namespace Methods
             return sb;
         }
 
-        public static int task5894(String leftRaw, String topRaw)
+        public static int Task5894(String leftRaw, String topRaw)
         {
             if (String.IsNullOrWhiteSpace(leftRaw))
             {
@@ -310,7 +310,7 @@ namespace Methods
             return count;
         }
 
-        public static String task7369(String leftRaw, String topRaw)
+        public static String Task7369(String leftRaw, String topRaw)
         {
             if (String.IsNullOrWhiteSpace(leftRaw))
             {
@@ -350,7 +350,7 @@ namespace Methods
             return sb.ToString();
         }
 
-        public static bool task4515(String raw)
+        public static bool Task4515(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             for (int i = 0; i < arr.Length; i++)
@@ -366,7 +366,7 @@ namespace Methods
             return false;
         }
 
-        public static int task7035(String raw)
+        public static int Task7035(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             int min = int.Parse(arr[0]);
@@ -381,7 +381,7 @@ namespace Methods
             return min;
         }
 
-        public static IList<int> task9271(String raw)
+        public static IList<int> Task9271(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -405,7 +405,7 @@ namespace Methods
             return ret;
         }
 
-        public static int task8769(int p, int q, String raw)
+        public static int Task8769(int p, int q, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             int i, n;
@@ -440,7 +440,7 @@ namespace Methods
             return min;
         }
 
-        public static IList<int> task4497(int x, int y, String raw)
+        public static IList<int> Task4497(int x, int y, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -459,7 +459,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<String> task8820(String raw)
+        public static IList<String> Task8820(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<String> ret = new List<String>();
@@ -470,7 +470,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task3218(String raw)
+        public static IList<int> Task3218(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -497,7 +497,7 @@ namespace Methods
             return ret;
         }
 
-        public static int task4283(int k, String raw)
+        public static int Task4283(int k, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             int count = 0;
@@ -511,7 +511,7 @@ namespace Methods
             return count;
         }
 
-        public static IList<int> task7703(String raw)
+        public static IList<int> Task7703(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
@@ -530,7 +530,7 @@ namespace Methods
             return ret;
         }
 
-        public static ISet<String> task5541(String raw)
+        public static ISet<String> Task5541(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             ISet<String> data = new HashSet<String>();
@@ -541,7 +541,7 @@ namespace Methods
             return data;
         }
 
-        public static int task9182(String raw)
+        public static int Task9182(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             ISet<String> data = new HashSet<String>();

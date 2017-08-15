@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task1457
+namespace Classes.Task1457
 {
     public class Point
     {
@@ -16,7 +16,7 @@ namespace Classes.task1457
             this.y = y;
         }
 
-        public double distanceTo(Point p)
+        public double DistanceTo(Point p)
         {
             if (p == null)
             {

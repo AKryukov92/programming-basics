@@ -11,10 +11,10 @@ namespace Methods
         {
             Console.WriteLine();
             Console.WriteLine("3072");
-            Console.WriteLine(task3072(173, 179).print());
-            Console.WriteLine(task3072(359, 271).print());
-            Console.WriteLine(task3072(439, -761).print());
-            Console.WriteLine(task3072(0, -15).print());
+            Console.WriteLine(Task3072(173, 179).print());
+            Console.WriteLine(Task3072(359, 271).print());
+            Console.WriteLine(Task3072(439, -761).print());
+            Console.WriteLine(Task3072(0, -15).print());
             Console.WriteLine();
             Console.WriteLine("7178");
             int[] in7178m = { 36, 41, 15 };
@@ -23,7 +23,7 @@ namespace Methods
             {
                 try
                 {
-                    class7178 result7178 = task7178(in7178m[i], in7178p[i]);
+                    class7178 result7178 = Task7178(in7178m[i], in7178p[i]);
                     Console.WriteLine(result7178.print());
                 }
                 catch (Exception e)
@@ -43,9 +43,9 @@ namespace Methods
             {
                 try
                 {
-                    Point t = makePointByXY(in5635xt[i], in5635yt[i]);
-                    Rectangle r = makeRectangleByXYHW(in5635xp[i], in5635yp[i], in5635h[i], in5635w[i]);
-                    if (task5635(t, r))
+                    Point t = MakePointByXY(in5635xt[i], in5635yt[i]);
+                    Rectangle r = MakeRectangleByXYHW(in5635xp[i], in5635yp[i], in5635h[i], in5635w[i]);
+                    if (Task5635(t, r))
                     {
                         Console.WriteLine("точка внутри");
                     }
@@ -70,10 +70,10 @@ namespace Methods
             {
                 try
                 {
-                    Point t = makePointByXY(in3878xt[i], in3878yt[i]);
-                    Point p1 = makePointByXY(in3878xp1[i], in3878yp1[i]);
-                    Point p2 = makePointByXY(in3878xp2[i], in3878yp2[i]);
-                    if (task3878(t, p1, p2))
+                    Point t = MakePointByXY(in3878xt[i], in3878yt[i]);
+                    Point p1 = MakePointByXY(in3878xp1[i], in3878yp1[i]);
+                    Point p2 = MakePointByXY(in3878xp2[i], in3878yp2[i]);
+                    if (Task3878(t, p1, p2))
                     {
                         Console.WriteLine("Точка принадлежит прямой");
                     }
@@ -96,12 +96,12 @@ namespace Methods
             {
                 try
                 {
-                    Interval i1 = makeIntervalByEnds(in1217a1[i], in1217b1[i]);
-                    Interval i2 = makeIntervalByEnds(in1217a2[i], in1217b2[i]);
-                    if (task1217check(i1, i2))
+                    Interval i1 = MakeIntervalByEnds(in1217a1[i], in1217b1[i]);
+                    Interval i2 = MakeIntervalByEnds(in1217a2[i], in1217b2[i]);
+                    if (Task1217check(i1, i2))
                     {
                         Console.Write("Пересекаются ");
-                        Interval x = task1217intersection(i1, i2);
+                        Interval x = Task1217intersection(i1, i2);
                         Console.WriteLine("(" + x.a + "; " + x.b + ")");
                     }
                     else {
@@ -127,12 +127,12 @@ namespace Methods
             {
                 try
                 {
-                    Rectangle r1 = makeRectangleByXYHW(in1438x1[i], in1435y1[i], in1435h1[i], in1435w1[i]);
-                    Rectangle r2 = makeRectangleByXYHW(in1435x2[i], in1435y2[i], in1435h2[i], in1435w2[i]);
-                    if (task1438check(r1, r2))
+                    Rectangle r1 = MakeRectangleByXYHW(in1438x1[i], in1435y1[i], in1435h1[i], in1435w1[i]);
+                    Rectangle r2 = MakeRectangleByXYHW(in1435x2[i], in1435y2[i], in1435h2[i], in1435w2[i]);
+                    if (Task1438check(r1, r2))
                     {
                         Console.Write("Пересекаются");
-                        Rectangle rx = task1438intersect(r1, r2);
+                        Rectangle rx = Task1438intersect(r1, r2);
                         Console.WriteLine("{{\"x\":{0},\"y\":{1},\"w\":{2},\"h\":{3}}}", rx.x, rx.y, rx.w, rx.h);
                     }
                     else {
@@ -154,7 +154,7 @@ namespace Methods
             double[] result1186;
             for (int i = 0; i < in1186x.Length; i++)
             {
-                result1186 = task1186(in1186x[i], in1186y[i], in1186z[i]);
+                result1186 = Task1186(in1186x[i], in1186y[i], in1186z[i]);
                 foreach (double aResult in result1186)
                 {
                     Console.Write("{0:F4};\t", aResult);
@@ -163,7 +163,7 @@ namespace Methods
             }
         }
 
-        public static bool task8878(int a, int b)
+        public static bool Task8878(int a, int b)
         {
             return a < b;
         }
@@ -183,7 +183,7 @@ namespace Methods
             }
         }
 
-        public static class3072 task3072(int p, int q)
+        public static class3072 Task3072(int p, int q)
         {
             if (p > q)
             {
@@ -194,7 +194,7 @@ namespace Methods
             }
         }
 
-        public static double task5980(int k)
+        public static double Task5980(int k)
         {
             if (k > 0)
             {
@@ -205,7 +205,7 @@ namespace Methods
             }
         }
 
-        public static int task8174(int a)
+        public static int Task8174(int a)
         {
             if (a > 0)
             {
@@ -216,7 +216,7 @@ namespace Methods
             }
         }
 
-        public static bool task4257(double l, double p)
+        public static bool Task4257(double l, double p)
         {
             if (l < 0)
             {
@@ -229,7 +229,7 @@ namespace Methods
             return l * 1000 < p * 0.305;
         }
 
-        public static String task2291(double velocityInKmH, double velocityInMS)
+        public static String Task2291(double velocityInKmH, double velocityInMS)
         {
             if (velocityInKmH < 0)
             {
@@ -249,7 +249,7 @@ namespace Methods
             }
         }
 
-        public static String task1763(int r, int a)
+        public static String Task1763(int r, int a)
         {
             if (r <= 0)
             {
@@ -270,7 +270,7 @@ namespace Methods
             }
         }
 
-        public static String task5662(int a, int b, int c)
+        public static String Task5662(int a, int b, int c)
         {
             if (a == 0)
             {
@@ -291,7 +291,7 @@ namespace Methods
             }
         }
 
-        public static bool task1945(int sc, int ss)
+        public static bool Task1945(int sc, int ss)
         {
             if (sc <= 0)
             {
@@ -304,7 +304,7 @@ namespace Methods
             return Math.Sqrt(sc / Math.PI) < Math.Sqrt(ss) / 2;
         }
 
-        public static double[] task1186(double x, double y, double z)
+        public static double[] Task1186(double x, double y, double z)
         {
             return new double[] {
             x > 0 ? x * x : x,
@@ -313,12 +313,12 @@ namespace Methods
         };
         }
 
-        public static bool task8715(int a, int b, int c)
+        public static bool Task8715(int a, int b, int c)
         {
             return a < b && b < c;
         }
 
-        public static StringBuilder task8518(StringBuilder builder, String x)
+        public static StringBuilder Task8518(StringBuilder builder, String x)
         {
             String[] chars = { "a", "b", "c", "d", "e", "f", "g", "h" };
             for (int i = 0; i < chars.Length; i++)
@@ -333,12 +333,12 @@ namespace Methods
             return builder;
         }
 
-        public static bool task4847(int x, int y, int z)
+        public static bool Task4847(int x, int y, int z)
         {
             return x == y || y == z || x == z;
         }
 
-        public static IList<Double> task7991(double x, double y, double z)
+        public static IList<Double> Task7991(double x, double y, double z)
         {
             IList<Double> ret = new List<double>();
             if (-3 < x && x < 5)
@@ -356,7 +356,7 @@ namespace Methods
             return ret;
         }
 
-        public static bool task6291(int a, int b, int c)
+        public static bool Task6291(int a, int b, int c)
         {
             if (a < 0)
             {
@@ -373,7 +373,7 @@ namespace Methods
             return a == b || a == c || b == c;
         }
 
-        public static int task3770(int x, int y, int z)
+        public static int Task3770(int x, int y, int z)
         {
             if (x > y && x > z)
             {
@@ -410,7 +410,7 @@ namespace Methods
             }
         }
 
-        public static class7178 task7178(int m, int p)
+        public static class7178 Task7178(int m, int p)
         {
             if (p == 0)
             {
@@ -425,7 +425,7 @@ namespace Methods
             }
         }
 
-        public static bool task3883(int a)
+        public static bool Task3883(int a)
         {
             if (a < 1000 || a > 9999)
             {
@@ -436,7 +436,7 @@ namespace Methods
             return hundreds == units;
         }
 
-        public static String task4527(int a)
+        public static String Task4527(int a)
         {
             if (a < -10 || a > 100)
             {
@@ -467,7 +467,7 @@ namespace Methods
             return a.ToString();
         }
 
-        public static bool task6556(int a, int b, int c, int d)
+        public static bool Task6556(int a, int b, int c, int d)
         {
             if (a < 0)
             {
@@ -528,7 +528,7 @@ namespace Methods
             }
         }
 
-        public static Point makePointByXY(int x, int y)
+        public static Point MakePointByXY(int x, int y)
         {
             if (x < 0)
             {
@@ -541,7 +541,7 @@ namespace Methods
             return new Point(x, y);
         }
 
-        public static Rectangle makeRectangleByXYHW(int x, int y, int h, int w)
+        public static Rectangle MakeRectangleByXYHW(int x, int y, int h, int w)
         {
             if (x < 0)
             {
@@ -562,7 +562,7 @@ namespace Methods
             return new Rectangle(x, y, h, w);
         }
 
-        public static Interval makeIntervalByEnds(int a, int b)
+        public static Interval MakeIntervalByEnds(int a, int b)
         {
             if (a > b)
             {
@@ -571,7 +571,7 @@ namespace Methods
             return new Interval(a, b);
         }
 
-        public static bool task5635(Point t, Rectangle r)
+        public static bool Task5635(Point t, Rectangle r)
         {
             return r.x < t.x &&
                     t.x < r.x + r.w &&
@@ -579,17 +579,17 @@ namespace Methods
                     t.y < r.y + r.h;
         }
 
-        public static bool task3878(Point t, Point p1, Point p2)
+        public static bool Task3878(Point t, Point p1, Point p2)
         {
             return (t.x - p1.x) / (p2.x - p1.x) == (t.y - p1.y) / (p2.y - p1.y);
         }
 
-        public static bool task1217check(Interval i1, Interval i2)
+        public static bool Task1217check(Interval i1, Interval i2)
         {
             return !(i1.b <= i2.a || i2.b <= i1.a);
         }
 
-        public static Interval task1217intersection(Interval i1, Interval i2)
+        public static Interval Task1217intersection(Interval i1, Interval i2)
         {
             if (i1.a < i2.a && i2.a < i1.b)
             {
@@ -612,28 +612,28 @@ namespace Methods
             }
         }
 
-        public static bool task1438check(Rectangle r1, Rectangle r2)
+        public static bool Task1438check(Rectangle r1, Rectangle r2)
         {
             Interval r1x = new Interval(r1.x, r1.x + r1.w);
             Interval r2x = new Interval(r2.x, r2.x + r2.w);
             Interval r1y = new Interval(r1.y, r1.y + r1.h);
             Interval r2y = new Interval(r2.y, r2.y + r2.h);
-            return task1217check(r1x, r2x) && task1217check(r1y, r2y);
+            return Task1217check(r1x, r2x) && Task1217check(r1y, r2y);
         }
 
-        public static Rectangle task1438intersect(Rectangle r1, Rectangle r2)
+        public static Rectangle Task1438intersect(Rectangle r1, Rectangle r2)
         {
             Interval r1x = new Interval(r1.x, r1.x + r1.w);
             Interval r2x = new Interval(r2.x, r2.x + r2.w);
             Interval r1y = new Interval(r1.y, r1.y + r1.h);
             Interval r2y = new Interval(r2.y, r2.y + r2.h);
 
-            Interval xx = task1217intersection(r1x, r2x);
-            Interval xy = task1217intersection(r1y, r2y);
+            Interval xx = Task1217intersection(r1x, r2x);
+            Interval xy = Task1217intersection(r1y, r2y);
             return new Rectangle(xx.a, xy.a,  xy.b - xy.a, xx.b - xx.a);
         }
 
-        public static bool task2153(int t)
+        public static bool Task2153(int t)
         {
             if (t < 0 || 60 <= t)
             {
@@ -642,7 +642,7 @@ namespace Methods
             return t % 5 < 3;
         }
 
-        public static String task7937(int w, int h, int c, int d)
+        public static String Task7937(int w, int h, int c, int d)
         {
             if (w <= 0)
             {
@@ -671,42 +671,42 @@ namespace Methods
             }
         }
 
-        public static bool task1999(int x, int y)
+        public static bool Task1999(int x, int y)
         {
             return x <= -2 && y >= 1;
         }
 
-        public static bool task4042(double x, double y)
+        public static bool Task4042(double x, double y)
         {
             return y <= 1.5 && y >= -2;
         }
 
-        public static bool task6351(double x, double y)
+        public static bool Task6351(double x, double y)
         {
             return y <= 4 && x >= 1 && x <= 2;
         }
 
-        public static bool task5382(double x, double y)
+        public static bool Task5382(double x, double y)
         {
             return y <= 4 && y >= 2 && x >= 1;
         }
 
-        public static bool task7088(double x, double y)
+        public static bool Task7088(double x, double y)
         {
             return (x >= 2 && y >= 0) || (x >= 1 && y <= -1);
         }
 
-        public static bool task7250(double x, double y)
+        public static bool Task7250(double x, double y)
         {
             return x >= 2 && (y >= 1 || y <= -1.5);
         }
 
-        public static bool task6740(double x, double y)
+        public static bool Task6740(double x, double y)
         {
             return x >= 1 && x <= 3 && y >= -2 && y <= -1;
         }
 
-        public static bool task9038(double x, double y)
+        public static bool Task9038(double x, double y)
         {
             return x >= 2 || (y <= 1.5 && y >= 0.5);
         }

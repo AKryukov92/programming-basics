@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task7301
+namespace Classes.Task7301
 {
     public class Point
     {
@@ -17,25 +17,25 @@ namespace Classes.task7301
             this.y = y;
         }
 
-        public double distanceTo(Point p)
+        public double DistanceTo(Point p)
         {
             int dx = p.x - x;
             int dy = p.y - y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
-        public double distanceTo(int px, int py)
+        public double DistanceTo(int px, int py)
         {
             int dx = px - x;
             int dy = py - y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
-        public void setCoordinates(int x, int y)
+        public void SetCoordinates(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
 
-        public static double distanceBetween(Point p1, Point p2)
+        public static double DistanceBetween(Point p1, Point p2)
         {
             if (p1 == null)
             {
@@ -50,7 +50,7 @@ namespace Classes.task7301
             return Math.Sqrt(dx * dx + dy * dy);
         }
 
-        public String print()
+        public String Print()
         {
             return "(" + x + ";" + y + ")";
         }

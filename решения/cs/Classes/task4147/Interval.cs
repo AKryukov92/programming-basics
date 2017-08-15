@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task4147
+namespace Classes.Task4147
 {
     public class Interval
     {
@@ -21,14 +21,20 @@ namespace Classes.task4147
             this.b = b;
         }
 
-        public int Length()
+        public int Length
         {
-            return b - a;
+            get
+            {
+                return b - a;
+            }
         }
 
-        public int GetA()
+        public int A
         {
-            return a;
+            get
+            {
+                return a;
+            }
         }
 
         public bool Intersects(Interval i)

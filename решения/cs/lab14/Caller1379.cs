@@ -1,4 +1,4 @@
-﻿using Classes.task1379;
+﻿using Classes.Task1379;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +14,9 @@ namespace lab14
             Interval range = new Interval();
             range.a = 5;
             range.b = 11;
-            range.slide(7);
+            range.Slide(7);
             Console.WriteLine("Интервал успешно изменен");
-            Console.WriteLine(range.print());
+            Console.WriteLine(range.Print());
         }
 
         public static void Step2()
@@ -26,9 +26,9 @@ namespace lab14
                 a = 17,
                 b = 29
             };
-            range.slide(-4);
+            range.Slide(-4);
             Console.WriteLine("Интервал успешно изменен");
-            Console.WriteLine(range.print());
+            Console.WriteLine(range.Print());
         }
 
         public static void Step3()
@@ -40,9 +40,9 @@ namespace lab14
             };
             try
             {
-                range.slide(2);
+                range.Slide(2);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (InvalidOperationException ex)
             {
@@ -57,10 +57,10 @@ namespace lab14
             range.b = 47;
             try
             {
-                range.slide(-5);
+                range.Slide(-5);
                 Console.WriteLine("Интервал успешно изменен");
                 range.a = 53;
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (InvalidOperationException ex)
             {

@@ -1,4 +1,4 @@
-﻿using Classes.task1457;
+﻿using Classes.Task1457;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +34,9 @@ namespace lab15
             Console.WriteLine("Целевая точка " + target);
             foreach (Point p in points)
             {
-                Console.WriteLine("{0} {1:F4}", p, target.distanceTo(p));
+                Console.WriteLine("{0} {1:F4}", p, target.DistanceTo(p));
             }
-            Console.WriteLine("Произведено " + comparator1457.getCount() + " сравнений");
+            Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
         }
 
         public static void Step2()
@@ -46,12 +46,12 @@ namespace lab15
             Console.WriteLine("step2");
             Comparator1457 comparator1457 = new Comparator1457(new Point(5, 5));
             points.Sort(comparator1457);
-            Console.WriteLine("Целевая точка " + comparator1457.getTarget());
+            Console.WriteLine("Целевая точка " + comparator1457.Target);
             foreach (Point p in points)
             {
-                Console.WriteLine("{0} {1:F4}", p, comparator1457.getTarget().distanceTo(p));
+                Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
             }
-            Console.WriteLine("Произведено " + comparator1457.getCount() + " сравнений");
+            Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
         }
 
         public static void Step3()
@@ -65,9 +65,9 @@ namespace lab15
                 points.Sort(comparator1457);
                 foreach (Point p in points)
                 {
-                    Console.WriteLine("{0} {1:F4}", p, comparator1457.getTarget().distanceTo(p));
+                    Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
                 }
-                Console.WriteLine("Произведено " + comparator1457.getCount() + " сравнений");
+                Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
             }
             catch (ArgumentException ex)
             {

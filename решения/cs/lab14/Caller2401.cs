@@ -1,4 +1,4 @@
-﻿using Classes.task2401;
+﻿using Classes.Task2401;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +19,9 @@ namespace lab14
             };
             try
             {
-                range.squeeze(2);
+                range.Squeeze(2);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -38,9 +38,9 @@ namespace lab14
             };
             try
             {
-                range.squeeze(19);
+                range.Squeeze(19);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -55,9 +55,9 @@ namespace lab14
             range.b = 67;
             try
             {
-                range.squeeze(23);
+                range.Squeeze(23);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (InvalidOperationException ex)
             {
@@ -74,10 +74,10 @@ namespace lab14
             };
             try
             {
-                range.squeeze(17);
+                range.Squeeze(17);
                 Console.WriteLine("Интервал успешно изменен");
                 range.b = 7;
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (InvalidOperationException ex)
             {

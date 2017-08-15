@@ -1,4 +1,4 @@
-﻿using Classes.task7297;
+﻿using Classes.Task7297;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace lab14
             Interval l = new Interval();
             l.a = 11;
             l.b = 17;
-            bool fact = l.contains(0);
+            bool fact = l.Contains(0);
             if (fact)
             {
                 Console.WriteLine("Содержит");
@@ -32,7 +32,7 @@ namespace lab14
                 a = 31,
                 b = 37
             };
-            if (interval.contains(35))
+            if (interval.Contains(35))
             {
                 Console.WriteLine("Содержит");
             }
@@ -47,7 +47,7 @@ namespace lab14
             Interval i = new Interval();
             i.a = 41;
             i.b = 43;
-            Console.WriteLine(i.contains(50));
+            Console.WriteLine(i.Contains(50));
         }
 
         public static void Step4()
@@ -59,7 +59,7 @@ namespace lab14
             };
             try
             {
-                if (range.contains(18))
+                if (range.Contains(18))
                 {
                     Console.WriteLine("Содержит");
                 }

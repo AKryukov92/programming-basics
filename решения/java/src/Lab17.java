@@ -65,7 +65,7 @@ public class Lab17 {
         view.printProductData("4911b1d6-a1ae-45a2-8f51-3051d7338351");
     }
 
-    public static void Step3(DataMapper mapper, View view, Statement statement) throws SQLException {
+    public static void Step3(DataMapper mapper, View view, Statement statement) throws SQLException {l
         view.setProductData(mapper.loadProductData(statement));
         Map<String, String> productGroups = mapper.loadGroupData(statement);
 

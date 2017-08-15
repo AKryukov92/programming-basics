@@ -4,34 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task5421
+namespace Classes.Task5421
 {
     public class Point
     {
         public int x;
         public int y;
 
-        public double distanceTo(Point p)
+        public double DistanceTo(Point p)
         {
             int dx = p.x - x;
             int dy = p.y - y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
 
-        public double distanceTo(int px, int py)
+        public double DistanceTo(int px, int py)
         {
             int dx = px - x;
             int dy = py - y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
 
-        public void setCoordinates(int x, int y)
+        public void SetCoordinates(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
 
-        public String print()
+        public String Print()
         {
             return "(" + x + ";" + y + ")";
         }

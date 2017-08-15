@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task2401
+namespace Classes.Task2401
 {
     public class Interval
     {
         public int a;
         public int b;
 
-        public void squeeze(int value)
+        public void Squeeze(int value)
         {
             if (a > b)
             {
@@ -24,7 +24,7 @@ namespace Classes.task2401
             this.b -= value;
         }
 
-        public String print()
+        public String Print()
         {
             if (a > b)
             {

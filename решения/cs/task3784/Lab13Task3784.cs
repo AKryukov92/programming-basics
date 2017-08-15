@@ -34,7 +34,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task4257(in4257l[i], in4257p[i]))
+                    if (Lab05.Task4257(in4257l[i], in4257p[i]))
                     {
                         Console.WriteLine("Расстояние в километрах меньше");
                     }
@@ -60,7 +60,7 @@ namespace Task3784
             {
                 try
                 {
-                    String result = Lab05.task2291(in2291v1[i], in2291v2[i]);
+                    String result = Lab05.Task2291(in2291v1[i], in2291v2[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -80,7 +80,7 @@ namespace Task3784
             {
                 try
                 {
-                    String result = Lab05.task1763(in1763r[i], in1763a[i]);
+                    String result = Lab05.Task1763(in1763r[i], in1763a[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -100,7 +100,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task1945(in1945sc[i], in1945ss[i]))
+                    if (Lab05.Task1945(in1945sc[i], in1945ss[i]))
                     {
                         Console.WriteLine("Круг уместится в квадрате");
                     }
@@ -127,7 +127,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task6291(in6291a[i], in6291b[i], in6291c[i]))
+                    if (Lab05.Task6291(in6291a[i], in6291b[i], in6291c[i]))
                     {
                         Console.Write("Треугольник является ");
                     }
@@ -153,7 +153,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task3883(in3883[i]))
+                    if (Lab05.Task3883(in3883[i]))
                     {
                         Console.WriteLine("равно");
                     }
@@ -180,7 +180,7 @@ namespace Task3784
             {
                 try
                 {
-                    String result = Lab05.task4527(in4527[i]);
+                    String result = Lab05.Task4527(in4527[i]);
                     if (result.Equals(out4527[i]))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -209,7 +209,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task6556(in6556a[i], in6556b[i], in6556c[i], in6556d[i]))
+                    if (Lab05.Task6556(in6556a[i], in6556b[i], in6556c[i], in6556d[i]))
                     {
                         Console.WriteLine("Размещение возможно");
                     }
@@ -234,7 +234,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab05.task2153(in2153t[i]))
+                    if (Lab05.Task2153(in2153t[i]))
                     {
                         Console.WriteLine("Зеленый");
                     }
@@ -259,7 +259,7 @@ namespace Task3784
             {
                 try
                 {
-                    if (Lab06.task5170(in5170[i]))
+                    if (Lab06.Task5170(in5170[i]))
                     {
                         Console.WriteLine("Число простое");
                     }

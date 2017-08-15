@@ -1,4 +1,4 @@
-﻿using Classes.task2000;
+﻿using Classes.Task2000;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace lab14
             {
                 Interval range = new Interval(23, 29);
                 Console.WriteLine("Интервал инициализирован");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -29,7 +29,7 @@ namespace lab14
             {
                 Interval range = new Interval(41, 29);
                 Console.WriteLine("Интервал инициализирован");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -43,9 +43,9 @@ namespace lab14
             {
                 Interval range = new Interval(5, 11);
                 Console.WriteLine("Интервал инициализирован");
-                range.slide(7);
+                range.Slide(7);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -59,9 +59,9 @@ namespace lab14
             {
                 Interval range = new Interval(41, 29);
                 Console.WriteLine("Интервал инициализирован");
-                range.slide(20);
+                range.Slide(20);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -74,9 +74,9 @@ namespace lab14
             try
             {
                 Interval range = new Interval(211, 223);
-                range.squeeze(23);
+                range.Squeeze(23);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -89,9 +89,9 @@ namespace lab14
             try
             {
                 Interval range = new Interval(13, 151);
-                range.squeeze(41);
+                range.Squeeze(41);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine(range.print());
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {
@@ -104,11 +104,11 @@ namespace lab14
             try
             {
                 Interval range = new Interval(13, 151);
-                Console.WriteLine("Длина интервала: " + range.length());
-                range.squeeze(41);
+                Console.WriteLine("Длина интервала: " + range.Length);
+                range.Squeeze(41);
                 Console.WriteLine("Интервал успешно изменен");
-                Console.WriteLine("Длина интервала: " + range.length());
-                Console.WriteLine(range.print());
+                Console.WriteLine("Длина интервала: " + range.Length);
+                Console.WriteLine(range.Print());
             }
             catch (ArgumentException ex)
             {

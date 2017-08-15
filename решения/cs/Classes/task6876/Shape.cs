@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task6876
+namespace Classes.Task6876
 {
     public abstract class Shape
     {
@@ -18,16 +18,22 @@ namespace Classes.task6876
             this.fill = fill;
         }
 
-        public abstract double Area();
+        public abstract double Area { get; }
 
-        public static String GetHeader()
+        public static String Header
         {
-            return "<svg width=\"150\" height=\"150\">";
+            get
+            {
+                return "<svg width=\"150\" height=\"150\">";
+            }
         }
 
-        public static String GetFooter()
+        public static String Footer
         {
-            return "</svg>";
+            get
+            {
+                return "</svg>";
+            }
         }
     }
 }

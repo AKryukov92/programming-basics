@@ -32,7 +32,7 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("8878");
-            if (Lab05.task8878(5, 6))
+            if (Lab05.Task8878(5, 6))
             {
                 Console.WriteLine("Второе");
             }
@@ -41,7 +41,7 @@ namespace tfa
                 Console.WriteLine("Первое");
             }
 
-            if (Lab05.task8878(11, 7))
+            if (Lab05.Task8878(11, 7))
             {
                 Console.WriteLine("Второе");
             }
@@ -50,7 +50,7 @@ namespace tfa
                 Console.WriteLine("Первое");
             }
 
-            if (Lab05.task8878(-2, 3))
+            if (Lab05.Task8878(-2, 3))
             {
                 Console.WriteLine("Второе");
             }
@@ -59,7 +59,7 @@ namespace tfa
                 Console.WriteLine("Первое");
             }
 
-            if (Lab05.task8878(-13, -18))
+            if (Lab05.Task8878(-13, -18))
             {
                 Console.WriteLine("Второе");
             }
@@ -78,7 +78,7 @@ namespace tfa
             int[] in8718c = { 3, 5, -2, -7, 4, 3, 5, 7 };
             for (int i = 0; i < in8718a.Length; i++)
             {
-                if (Lab05.task8715(in8718a[i], in8718b[i], in8718c[i]))
+                if (Lab05.Task8715(in8718a[i], in8718b[i], in8718c[i]))
                 {
                     Console.WriteLine("Выполняется");
                 }
@@ -98,7 +98,7 @@ namespace tfa
             int[] in4847z = { 83, 41, 11, 67, 1 };
             for (int i = 0; i < in4847x.Length; i++)
             {
-                if (Lab05.task4847(in4847x[i], in4847y[i], in4847z[i]))
+                if (Lab05.Task4847(in4847x[i], in4847y[i], in4847z[i]))
                 {
                     Console.WriteLine("Среди чисел есть равные");
                 }
@@ -118,7 +118,7 @@ namespace tfa
             for (int i = 0; i < in1999x.Length; i++)
             {
                 Console.Write("{" + in1999x[i] + ";" + in1999y[i] + "} ");
-                if (Lab05.task1999(in1999x[i], in1999y[i]))
+                if (Lab05.Task1999(in1999x[i], in1999y[i]))
                 {
                     Console.WriteLine("принадлежит области");
                 }
@@ -139,7 +139,7 @@ namespace tfa
             String negativePattern = "{{{0};{1}}} не принадлежит области";
             for (int i = 0; i < in4042x.Length; i++)
             {
-                if (Lab05.task4042(in4042x[i], in4042y[i]))
+                if (Lab05.Task4042(in4042x[i], in4042y[i]))
                 {
                     Console.WriteLine(positivePattern, in4042x[i], in4042y[i]);
                 }
@@ -161,7 +161,7 @@ namespace tfa
             for (int i = 0; i < in6351x.Length; i++)
             {
                 String currentPattern;
-                if (Lab05.task6351(in6351x[i], in6351y[i]))
+                if (Lab05.Task6351(in6351x[i], in6351y[i]))
                 {
                     currentPattern = positivePattern;
                 }
@@ -183,7 +183,7 @@ namespace tfa
             String negativePattern = "{{{0};{1}}} не принадлежит области";
             for (int i = 0; i < in5382x.Length; i++)
             {
-                String currentPattern = Lab05.task5382(in5382x[i], in5382y[i]) ? positivePattern : negativePattern;
+                String currentPattern = Lab05.Task5382(in5382x[i], in5382y[i]) ? positivePattern : negativePattern;
                 Console.WriteLine(currentPattern, in5382x[i], in5382y[i]);
             }
         }
@@ -212,7 +212,7 @@ namespace tfa
                 -0.5, -0.5, -0.5, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2};
             for (int i = 0; i < in7088x.Length; i++)
             {
-                String currentPattern = getPattern(Lab05.task7088(in7088x[i], in7088y[i]));
+                String currentPattern = getPattern(Lab05.Task7088(in7088x[i], in7088y[i]));
                 Console.WriteLine(currentPattern, in7088x[i], in7088y[i]);
             }
         }
@@ -226,7 +226,7 @@ namespace tfa
             for (int i = 0; i < in7250x.Length; i++)
             {
                 Console.Write("{" + in7250x[i] + ";" + in7250y[i]);
-                if (Lab05.task7250(in7250x[i], in7250y[i]))
+                if (Lab05.Task7250(in7250x[i], in7250y[i]))
                 {
                     Console.WriteLine("} принадлежит области");
                 }
@@ -246,7 +246,7 @@ namespace tfa
             for (int i = 0; i < in6740x.Length; i++)
             {
                 Console.Write("{" + in6740x[i] + ";" + in6740y[i]);
-                if (Lab05.task6740(in6740x[i], in6740y[i]))
+                if (Lab05.Task6740(in6740x[i], in6740y[i]))
                 {
                     Console.WriteLine("} принадлежит области");
                 }
@@ -267,7 +267,7 @@ namespace tfa
             for (int i = 0; i < in9038x.Length; i++)
             {
                 Console.Write("{" + in9038x[i] + ";" + in9038y[i]);
-                if (Lab05.task9038(in9038x[i], in9038y[i]))
+                if (Lab05.Task9038(in9038x[i], in9038y[i]))
                 {
                     Console.WriteLine("} принадлежит области");
                 }
@@ -285,7 +285,7 @@ namespace tfa
             String[] in7491 = { "bx", "fw", "123" };
             for (int i = 0; i < in7491.Length; i++)
             {
-                if (Lab07.task7491(in7491[i]))
+                if (Lab07.Task7491(in7491[i]))
                 {
                     Console.WriteLine("Содержится");
                 }
@@ -306,7 +306,7 @@ namespace tfa
                 "1 2 3 1"};
             for (int i = 0; i < in4515.Length; i++)
             {
-                if (Lab08.task4515(in4515[i]))
+                if (Lab08.Task4515(in4515[i]))
                 {
                     Console.WriteLine("Повторения есть");
                 }

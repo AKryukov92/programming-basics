@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task5449
+namespace Classes.Task5449
 {
     public class Point
     {
@@ -17,7 +17,7 @@ namespace Classes.task5449
             this.y = y;
         }
 
-        public String print()
+        public String Print()
         {
             return "(" + x + ";" + y + ")";
         }

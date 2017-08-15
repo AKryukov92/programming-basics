@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task1457
+namespace Classes.Task1457
 {
     public class Comparator1457 : Comparer<Point>
     {
-        private Point target;
-        private int count;
+        public Point Target { private set; get; }
+        public int Count { private set; get; }
 
         public Comparator1457(Point target)
         {
@@ -16,25 +16,15 @@ namespace Classes.task1457
             {
                 throw new ArgumentException("Целевая точка не инициализирована");
             }
-            this.target = target;
-            this.count = 0;
-        }
-
-        public int getCount()
-        {
-            return count;
-        }
-
-        public Point getTarget()
-        {
-            return target;
+            this.Target = target;
+            this.Count = 0;
         }
 
         public override int Compare(Point o1, Point o2)
         {
-            double d1 = target.distanceTo(o1);
-            double d2 = target.distanceTo(o2);
-            count++;
+            double d1 = Target.DistanceTo(o1);
+            double d2 = Target.DistanceTo(o2);
+            Count++;
             if (d1 > d2)
             {
                 return 1;

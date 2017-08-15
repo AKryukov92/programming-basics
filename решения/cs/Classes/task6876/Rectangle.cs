@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task6876
+namespace Classes.Task6876
 {
     public class Rectangle : Shape
     {
@@ -21,12 +21,13 @@ namespace Classes.task6876
             this.h = h;
         }
 
-
-        public override double Area()
+        public override double Area
         {
-            return w * h;
+            get
+            {
+                return w * h;
+            }
         }
-
 
         public override String ToString()
         {

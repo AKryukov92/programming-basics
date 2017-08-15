@@ -1,4 +1,4 @@
-﻿using Classes.task4147;
+﻿using Classes.Task4147;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace lab14
         {
             Rectangle r = new Rectangle(5, 5, 20, 20);
             Point p = new Point(30, 30);
-            if (r.contains(p))
+            if (r.Contains(p))
             {
                 Console.WriteLine("Содержит");
             }
@@ -28,7 +28,7 @@ namespace lab14
             Point corner = new Point(10, 10);
             Rectangle r = new Rectangle(corner, 20, 20);
             Point p = new Point(30, 30);
-            if (r.contains(p))
+            if (r.Contains(p))
             {
                 Console.WriteLine("Содержит");
             }
@@ -42,7 +42,7 @@ namespace lab14
         {
             Point corner = new Point(10, 10);
             Rectangle r = new Rectangle(corner, 20, 20);
-            Console.WriteLine(r.area());
+            Console.WriteLine(r.area);
         }
 
         public static void Step4()
@@ -50,14 +50,14 @@ namespace lab14
             Interval projectionX = new Interval(15, 30);
             Interval projectionY = new Interval(20, 35);
             Rectangle r = new Rectangle(projectionX, projectionY);
-            Console.WriteLine(r.area());
+            Console.WriteLine(r.area);
         }
 
         public static void Step5()
         {
             Rectangle r = new Rectangle(100, 200, 300, 400);
             Interval i = new Interval(50, 75);
-            if (r.getProjectionX().Intersects(i))
+            if (r.MakeProjectionX().Intersects(i))
             {
                 Console.WriteLine("Пересекаются");
             }
@@ -71,7 +71,7 @@ namespace lab14
         {
             Rectangle r = new Rectangle(100, 200, 300, 400);
             Interval i = new Interval(100, 300);
-            if (r.getProjectionY().Intersects(i))
+            if (r.MakeProjectionY().Intersects(i))
             {
                 Console.WriteLine("Пересекаются");
             }

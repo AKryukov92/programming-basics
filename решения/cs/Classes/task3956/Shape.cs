@@ -4,40 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task3956
+namespace Classes.Task3956
 {
     public abstract class Shape
     {
-        private String stroke;
-        private int strokeWidth;
-        private String fill;
+        public String Stroke { private set; get; }
+        public int StrokeWidth { private set; get; }
+        public String Fill { private set; get; }
+        public abstract double Area { get; }
 
         public Shape(String stroke, int strokeWidth, String fill)
         {
-            this.stroke = stroke;
-            this.strokeWidth = strokeWidth;
-            this.fill = fill;
+            Stroke = stroke;
+            StrokeWidth = strokeWidth;
+            Fill = fill;
         }
 
-        public String getStroke()
-        {
-            return stroke;
-        }
+        public abstract void Slide(int dx, int dy);
 
-        public int getStrokeWidth()
-        {
-            return strokeWidth;
-        }
-
-        public String getFill()
-        {
-            return fill;
-        }
-
-        public abstract void slide(int dx, int dy);
-
-        public abstract Point getCenter();
-
-        public abstract double area();
+        public abstract Point MakeCenter();
     }
 }

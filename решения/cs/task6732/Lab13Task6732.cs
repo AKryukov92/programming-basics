@@ -41,7 +41,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task5238(new StringBuilder(), in5238w[i], in5238h[i]);
+                    StringBuilder result = Lab06.Task5238(new StringBuilder(), in5238w[i], in5238h[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -61,7 +61,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task5448(new StringBuilder(), in5448s[i], in5448h[i]);
+                    StringBuilder result = Lab06.Task5448(new StringBuilder(), in5448s[i], in5448h[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -90,7 +90,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task7517(new StringBuilder(), in7517w[i], in7517h[i]);
+                    StringBuilder result = Lab06.Task7517(new StringBuilder(), in7517w[i], in7517h[i]);
                     if (out7517[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -117,7 +117,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task4075(new StringBuilder(), in4075[i]);
+                    StringBuilder result = Lab06.Task4075(new StringBuilder(), in4075[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -147,7 +147,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task2592(new StringBuilder(), in2592s[i], in2592w[i], in2592h[i]);
+                    StringBuilder result = Lab06.Task2592(new StringBuilder(), in2592s[i], in2592w[i], in2592h[i]);
                     if (out2592[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -174,7 +174,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task5568(new StringBuilder(), in5568[i]);
+                    StringBuilder result = Lab06.Task5568(new StringBuilder(), in5568[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -193,7 +193,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task8395(new StringBuilder(), in8395[i]);
+                    StringBuilder result = Lab06.Task8395(new StringBuilder(), in8395[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -212,7 +212,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task4236(new StringBuilder(), in4236[i]);
+                    StringBuilder result = Lab06.Task4236(new StringBuilder(), in4236[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -231,7 +231,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task3983(new StringBuilder(), in3983[i]);
+                    StringBuilder result = Lab06.Task3983(new StringBuilder(), in3983[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -250,7 +250,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task1483(new StringBuilder(), in1483[i]);
+                    StringBuilder result = Lab06.Task1483(new StringBuilder(), in1483[i]);
                     Console.WriteLine(result.ToString());
                 }
                 catch (Exception e)
@@ -270,7 +270,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task2594(new StringBuilder(),in2594a[i], in2594b[i]);
+                    StringBuilder result = Lab06.Task2594(new StringBuilder(),in2594a[i], in2594b[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -290,7 +290,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task2565(new StringBuilder(), in2565a[i], in2565b[i]);
+                    StringBuilder result = Lab06.Task2565(new StringBuilder(), in2565a[i], in2565b[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -314,7 +314,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task6066(new StringBuilder(), in6066a[i], in6066b[i]);
+                    StringBuilder result = Lab06.Task6066(new StringBuilder(), in6066a[i], in6066b[i]);
                     if (out6066[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -344,7 +344,7 @@ namespace task6732
                 "q w e r a s d f z x c v"};
             for (int i = 0; i < in5683.Length; i++)
             {
-                String str = Lab08.task5683(in5683[i]);
+                String str = Lab08.Task5683(in5683[i]);
                 Console.WriteLine(str);
             }
         }
@@ -370,7 +370,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task1862(new StringBuilder(), in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
+                    StringBuilder result = Lab06.Task1862(new StringBuilder(), in1862s1[i], in1862s2[i], in1862w[i], in1862h[i]);
                     if (out1862[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");
@@ -409,7 +409,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.task5171(new StringBuilder(), in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
+                    StringBuilder result = Lab06.Task5171(new StringBuilder(), in5171s1[i], in5171s2[i], in5171w[i], in5171h[i]);
                     if (out5171[i].Equals(result.ToString()))
                     {
                         Console.WriteLine("Задача решена верно");

@@ -1,4 +1,4 @@
-﻿using Classes.task6876;
+﻿using Classes.Task6876;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +16,12 @@ namespace lab15
             circles.Add(new Circle(70, 50, 40));
             Comparator6876 comparator = new Comparator6876();
             circles.Sort(comparator);
-            Console.WriteLine(Circle.GetHeader());
+            Console.WriteLine(Circle.Header);
             foreach (Circle item in circles)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(Circle.GetFooter());
+            Console.WriteLine(Circle.Footer);
         }
 
         public static void Step2()
@@ -33,12 +33,12 @@ namespace lab15
                 new Rectangle(50, 30, 40, 40)
             };
             Array.Sort(figures, new Comparator6876());
-            Console.WriteLine(Rectangle.GetHeader());
+            Console.WriteLine(Rectangle.Header);
             foreach (Rectangle item in figures)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(Rectangle.GetFooter());
+            Console.WriteLine(Rectangle.Footer);
         }
 
         public static void Step3()
@@ -50,12 +50,12 @@ namespace lab15
             items.Add(new Rectangle(10, 60, 30, 20));
             items.Add(new Rectangle(50, 60, 20, 10));
             items.Sort(new Comparator6876());
-            Console.WriteLine(Shape.GetHeader());
+            Console.WriteLine(Shape.Header);
             foreach (Shape item in items)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(Shape.GetFooter());
+            Console.WriteLine(Shape.Footer);
         }
     }
 }

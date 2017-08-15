@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task7297
+namespace Classes.Task7297
 {
     public class Interval
     {
         public int a;
         public int b;
-        public bool contains(int t)
+        public bool Contains(int t)
         {
             if (a > b)
             {

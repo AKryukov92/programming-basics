@@ -11,7 +11,7 @@ namespace Methods
         {
         }
         
-        public static StringBuilder task8495(StringBuilder sb)
+        public static StringBuilder Task8495(StringBuilder sb)
         {
             int i = 0;
             while (i < 13)
@@ -22,7 +22,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task1315(StringBuilder sb)
+        public static StringBuilder Task1315(StringBuilder sb)
         {
             int a = 17;
             int b = 47;
@@ -35,7 +35,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task6066(StringBuilder sb, int a, int b)
+        public static StringBuilder Task6066(StringBuilder sb, int a, int b)
         {
             if (a > b) {
                 throw new Exception("Значение A должно быть не больше значения B");
@@ -49,7 +49,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task2565(StringBuilder sb, int a, int b)
+        public static StringBuilder Task2565(StringBuilder sb, int a, int b)
         {
             if (a > b) {
                 throw new Exception("Значение A должно быть не больше значения B");
@@ -63,7 +63,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task2594(StringBuilder sb, int a, String b)
+        public static StringBuilder Task2594(StringBuilder sb, int a, String b)
         {
             if (a < 0) {
                 throw new Exception("Значение A должно быть неотрицательным");
@@ -78,7 +78,7 @@ namespace Methods
             return sb;
         }
 
-        public static IList<int> task2321(int a, int b)
+        public static IList<int> Task2321(int a, int b)
         {
             int i, n;
             IList<int> ret = new List<int>();
@@ -99,7 +99,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> task5053(int a, int b)
+        public static IList<int> Task5053(int a, int b)
         {
             IList<int> ret = new List<int>();
             if (a < b)
@@ -120,7 +120,7 @@ namespace Methods
             return ret;
         }
 
-        public static StringBuilder task3762(StringBuilder sb)
+        public static StringBuilder Task3762(StringBuilder sb)
         {
             int i = 1;
             while (i <= 20)
@@ -134,7 +134,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task3550(StringBuilder sb)
+        public static StringBuilder Task3550(StringBuilder sb)
         {
             int i = 1;
             while (i <= 9)
@@ -148,7 +148,7 @@ namespace Methods
             return sb;
         }
 
-        public static int task2475()
+        public static int Task2475()
         {
             int a = 100, b = 500, sum = 0;
             while (a <= b)
@@ -159,7 +159,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task9180(int a)
+        public static int Task9180(int a)
         {
             if (a < -100 || a > 500) {
                 throw new Exception("Значение A должно быть в интервале [-100, 500]");
@@ -172,7 +172,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task1544(int b)
+        public static int Task1544(int b)
         {
             if (b < -10 || b > 10000) {
                 throw new Exception("Значение b должно быть в интервале [-10,10000]");
@@ -185,7 +185,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task9562(int a, int b)
+        public static int Task9562(int a, int b)
         {
             int n;
             int i;
@@ -207,7 +207,7 @@ namespace Methods
             return sum;
         }
 
-        public static long task3669(int a, int b)
+        public static long Task3669(int a, int b)
         {
             long mul = 1;
             long i, n;
@@ -228,7 +228,7 @@ namespace Methods
             return mul;
         }
 
-        public static int task5951()
+        public static int Task5951()
         {
             int i = 20;
             int n = 40;
@@ -241,7 +241,7 @@ namespace Methods
             return sum;
         }
 
-        public static double task2802(int n)
+        public static double Task2802(int n)
         {
             if (n <= 0) {
                 throw new Exception("Значение N должно быть положительным");
@@ -255,7 +255,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task2324(String str)
+        public static int Task2324(String str)
         {
             String[] raw = str.Split(' ');
             int sum = 0;
@@ -271,7 +271,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task8731(String str)
+        public static int Task8731(String str)
         {
             String[] raw = str.Split(' ');
             int sum = 0;
@@ -287,7 +287,7 @@ namespace Methods
             return index;
         }
 
-        public static String task4082(String str)
+        public static String Task4082(String str)
         {
             String[] raw = str.Split(' ');
             int leftSum = 0;
@@ -315,7 +315,7 @@ namespace Methods
             return String.Format("Сумма слева: {0}, сумма справа: {1}", leftSum, rightSum);
         }
 
-        public static long task6580(int a, int b)
+        public static long Task6580(int a, int b)
         {
             int i, n;
             long sum = 0;
@@ -336,7 +336,7 @@ namespace Methods
             return sum;
         }
 
-        public static StringBuilder task7585(StringBuilder sb, int x)
+        public static StringBuilder Task7585(StringBuilder sb, int x)
         {
             int i = 10;
             while (i <= 20)
@@ -352,7 +352,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task1483(StringBuilder sb, int n)
+        public static StringBuilder Task1483(StringBuilder sb, int n)
         {
             if (n < 0)
             {
@@ -371,7 +371,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task3983(StringBuilder sb, int n)
+        public static StringBuilder Task3983(StringBuilder sb, int n)
         {
             if (n < 0) {
                 throw new Exception("Значение N должно быть неотрицательным");
@@ -388,7 +388,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task8770(StringBuilder sb, int x)
+        public static StringBuilder Task8770(StringBuilder sb, int x)
         {
             int i = 30;
             while (i <= 40)
@@ -407,7 +407,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task4236(StringBuilder sb, int y)
+        public static StringBuilder Task4236(StringBuilder sb, int y)
         {
             if (y < 0 || y > 15) {
                 throw new Exception("Значение Y должно быть в интервале [0, 15]");
@@ -424,7 +424,7 @@ namespace Methods
             return sb;
         }
 
-        public static int task5969(int a, int b)
+        public static int Task5969(int a, int b)
         {
             int i, n;
             if (a < b)
@@ -448,7 +448,7 @@ namespace Methods
             return sum;
         }
 
-        public static int task8696()
+        public static int Task8696()
         {
             int i = 100, n = 1000;
             int count = 0;
@@ -463,7 +463,7 @@ namespace Methods
             return count;
         }
 
-        public static IList<int> task8418(int x)
+        public static IList<int> Task8418(int x)
         {
             if (x <= 0) {
                 throw new Exception("Значение X должно быть положительным");
@@ -479,7 +479,7 @@ namespace Methods
             return ret;
         }
 
-        public static bool task5170(int y)
+        public static bool Task5170(int y)
         {
             if (y <= 0) {
                 throw new Exception("Значение Y должно быть положительным");
@@ -495,7 +495,7 @@ namespace Methods
             return true;
         }
 
-        public static StringBuilder task8395(StringBuilder sb, int w)
+        public static StringBuilder Task8395(StringBuilder sb, int w)
         {
             if (w < 0 || w > 20) {
                 throw new Exception("Значение W должно быть в интервале [0, 20]");
@@ -534,7 +534,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task5568(StringBuilder sb, int w)
+        public static StringBuilder Task5568(StringBuilder sb, int w)
         {
             if (w < 0 || w > 20) {
                 throw new Exception("Значение W должно быть в интервале [0, 20]");
@@ -553,7 +553,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task2592(StringBuilder sb, String s, int w, int h)
+        public static StringBuilder Task2592(StringBuilder sb, String s, int w, int h)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");
@@ -574,7 +574,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task4075(StringBuilder sb, int w)
+        public static StringBuilder Task4075(StringBuilder sb, int w)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");
@@ -598,7 +598,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task7517(StringBuilder sb, int w, int h)
+        public static StringBuilder Task7517(StringBuilder sb, int w, int h)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");
@@ -629,7 +629,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task5448(StringBuilder sb, String s, int h)
+        public static StringBuilder Task5448(StringBuilder sb, String s, int h)
         {
             if (h < 0) {
                 throw new Exception("Значение H должно быть неотрицательно");
@@ -644,7 +644,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task6572(StringBuilder sb, int a, int b)
+        public static StringBuilder Task6572(StringBuilder sb, int a, int b)
         {
             int i = 0, n, min;
             if (a < b)
@@ -673,7 +673,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task5238(StringBuilder sb, int w, int h)
+        public static StringBuilder Task5238(StringBuilder sb, int w, int h)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");
@@ -701,7 +701,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task2084(StringBuilder sb, int a, int b)
+        public static StringBuilder Task2084(StringBuilder sb, int a, int b)
         {
             if (a == b)
             {
@@ -746,7 +746,7 @@ namespace Methods
             }
         }
 
-        public static StringBuilder task5411(StringBuilder sb, int p, int q)
+        public static StringBuilder Task5411(StringBuilder sb, int p, int q)
         {
             int i = 1, n, min;
             if (p < q)
@@ -774,7 +774,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task5171(StringBuilder sb, String s1, String s2, int w, int h)
+        public static StringBuilder Task5171(StringBuilder sb, String s1, String s2, int w, int h)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");
@@ -801,7 +801,7 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder task1862(StringBuilder sb, String s1, String s2, int w, int h)
+        public static StringBuilder Task1862(StringBuilder sb, String s1, String s2, int w, int h)
         {
             if (w < 0) {
                 throw new Exception("Значение W должно быть неотрицательно");

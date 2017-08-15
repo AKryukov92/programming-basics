@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task7186
+namespace Classes.Task7186
 {
     public class Comparator7186 : Comparer<int>
     {

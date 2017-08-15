@@ -14,7 +14,7 @@ namespace Methods
         public static String STR = "abcdefwxyz";
         public static String STR2 = "abcdacadbacdaabaadc";
 
-        public static int task9631(String s)
+        public static int Task9631(String s)
         {
             if (!STR.Contains(s))
             {
@@ -23,7 +23,7 @@ namespace Methods
             return STR.Length - STR.IndexOf(s) - 1;
         }
 
-        public static int task9812(String a, String b)
+        public static int Task9812(String a, String b)
         {
             if (!STR.Contains(a))
             {
@@ -44,7 +44,7 @@ namespace Methods
             }
         }
 
-        public static IList<int> task9279(string x)
+        public static IList<int> Task9279(string x)
         {
             if (x.Length != 2)
             {
@@ -61,7 +61,7 @@ namespace Methods
 
         }
 
-        public static String task4845(int a, int b) {
+        public static String Task4845(int a, int b) {
             if (a < 0 || a >= STR.Length){
                 throw new Exception("Значение A должно быть в интервале [0,длина строки)");
             }
@@ -78,7 +78,7 @@ namespace Methods
             }
         }
 
-        public static String task5728(String a, String b)
+        public static String Task5728(String a, String b)
         {
             if (!STR.Contains(a))
             {
@@ -99,12 +99,12 @@ namespace Methods
             }
         }
 
-        public static bool task7491(String x)
+        public static bool Task7491(String x)
         {
             return STR.Contains(x);
         }
 
-        public static String task7222(String code)
+        public static String Task7222(String code)
         {
             if (code.Length != 13)
             {
@@ -120,7 +120,7 @@ namespace Methods
                     "\nКонтрольное число: " + checksum;
         }
 
-        public static String task5923(int a, int b)
+        public static String Task5923(int a, int b)
         {
             if (a < 0 || a >= STR.Length)
             {
@@ -137,7 +137,7 @@ namespace Methods
             return STR.Substring(0, a) + STR.Substring(a + b);
         }
 
-        public static String task4265(String s)
+        public static String Task4265(String s)
         {
             if (s.StartsWith("s"))
             {
@@ -152,7 +152,7 @@ namespace Methods
             }
         }
 
-        public static String task2166(String s)
+        public static String Task2166(String s)
         {
             if (s.Length != 2)
             {
@@ -161,7 +161,7 @@ namespace Methods
             return STR2.Replace(s, " ");
         }
 
-        public static String task9116(String s)
+        public static String Task9116(String s)
         {
             if (!s.StartsWith("\"") || !s.EndsWith("\""))
             {
@@ -170,12 +170,12 @@ namespace Methods
             return s.Substring(1, s.Length - 2).Trim();
         }
 
-        public static int task9925(String s)
+        public static int Task9925(String s)
         {
             return s.Split(',').Length;
         }
 
-        public static void task1618(String line)
+        public static void Task1618(String line)
         {
             Console.WriteLine(line);
             int openIndex;

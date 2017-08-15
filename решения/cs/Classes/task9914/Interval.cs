@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task9914
+namespace Classes.Task9914
 {
     public class Interval
     {

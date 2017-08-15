@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task6011
+namespace Classes.Task6011
 {
     public class Point
     {
         public int x;
         public int y;
-        public static double distanceBetween(Point p1, Point p2)
+        public static double DistanceBetween(Point p1, Point p2)
         {
             if (p1 == null)
             {

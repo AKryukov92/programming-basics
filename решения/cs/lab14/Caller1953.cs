@@ -1,4 +1,4 @@
-﻿using Classes.task1953;
+﻿using Classes.Task1953;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,23 +18,23 @@ namespace lab14
         public static void Step2()
         {
             Circle c = new Circle(40, 50, 13);
-            Console.WriteLine("{0:F4}", c.area());
+            Console.WriteLine("{0:F4}", c.Area);
         }
 
         public static void Step3()
         {
             Circle c = new Circle(100, 120, 17);
-            Interval px = c.getProjectionX();
-            Interval py = c.getProjectionY();
-            Console.WriteLine(px.print());
-            Console.WriteLine(py.print());
+            Interval px = c.MakeProjectionX();
+            Interval py = c.MakeProjectionY();
+            Console.WriteLine(px.Print());
+            Console.WriteLine(py.Print());
         }
 
         public static void Step4()
         {
             Circle c = new Circle(100, 120, 31);
-            Console.WriteLine(c.getProjectionX().print());
-            Console.WriteLine(c.getProjectionY().print());
+            Console.WriteLine(c.MakeProjectionX().Print());
+            Console.WriteLine(c.MakeProjectionY().Print());
         }
     }
 }

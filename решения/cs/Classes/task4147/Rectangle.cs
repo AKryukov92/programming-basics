@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task4147
+namespace Classes.Task4147
 {
     public class Rectangle
     {
@@ -32,29 +32,32 @@ namespace Classes.task4147
 
         public Rectangle(Interval rangeX, Interval rangeY)
         {
-            this.x = rangeX.GetA();
-            this.w = rangeX.Length();
-            this.y = rangeY.GetA();
-            this.h = rangeY.Length();
+            this.x = rangeX.A;
+            this.w = rangeX.Length;
+            this.y = rangeY.A;
+            this.h = rangeY.Length;
         }
 
-        public bool contains(Point p)
+        public bool Contains(Point p)
         {
             return x <= p.X && p.X <= x + w
                 && y <= p.Y && p.Y <= y + h;
         }
 
-        public double area()
+        public double area
         {
-            return w * h;
+            get
+            {
+                return w * h;
+            }
         }
 
-        public Interval getProjectionX()
+        public Interval MakeProjectionX()
         {
             return new Interval(x, x + w);
         }
 
-        public Interval getProjectionY()
+        public Interval MakeProjectionY()
         {
             return new Interval(y, y + h);
         }

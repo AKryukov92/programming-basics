@@ -1,4 +1,4 @@
-﻿using Classes.task6011;
+﻿using Classes.Task6011;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ namespace lab14
             Point p2 = new Point();
             p2.x = 127;
             p2.y = 131;
-            double dist = Point.distanceBetween(p1, p2);
+            double dist = Point.DistanceBetween(p1, p2);
             Console.WriteLine("{0:F4}", dist);
         }
 
@@ -33,7 +33,7 @@ namespace lab14
                 x = 139,
                 y = 149
             };
-            Console.WriteLine("{0:F4}", Point.distanceBetween(p1, p2));
+            Console.WriteLine("{0:F4}", Point.DistanceBetween(p1, p2));
         }
 
         public static void Step3()
@@ -46,7 +46,7 @@ namespace lab14
             };
             try
             {
-                double dist = Point.distanceBetween(p1, p2);
+                double dist = Point.DistanceBetween(p1, p2);
             }
             catch (ArgumentException e)
             {
@@ -62,7 +62,7 @@ namespace lab14
             Point p2 = null;
             try
             {
-                double dist = Point.distanceBetween(p1, p2);
+                double dist = Point.DistanceBetween(p1, p2);
             }
             catch (ArgumentException e)
             {
@@ -76,7 +76,7 @@ namespace lab14
             Point p2 = null;
             try
             {
-                double dist = Point.distanceBetween(p1, p2);
+                double dist = Point.DistanceBetween(p1, p2);
             }
             catch (ArgumentException e)
             {

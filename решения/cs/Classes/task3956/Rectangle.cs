@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task3956
+namespace Classes.Task3956
 {
     public class Rectangle : Shape
     {
@@ -12,6 +12,14 @@ namespace Classes.task3956
         private int y;
         private int w;
         private int h;
+
+        public override double Area
+        {
+            get
+            {
+                return w * h;
+            }
+        }
 
         public Rectangle(int x, int y, int w, int h)
             : base("black", 0, "black")
@@ -31,20 +39,15 @@ namespace Classes.task3956
             this.h = h;
         }
 
-        public override void slide(int dx, int dy)
+        public override void Slide(int dx, int dy)
         {
             x += dx;
             y += dy;
         }
 
-        public override Point getCenter()
+        public override Point MakeCenter()
         {
             return new Point(x + w / 2, y + h / 2);
-        }
-
-        public override double area()
-        {
-            return w * h;
         }
 
         public override String ToString()
@@ -53,9 +56,9 @@ namespace Classes.task3956
                 "' y='" + y +
                 "' w='" + w +
                 "' h='" + h +
-                "' stroke='" + getStroke() +
-                "' stroke-width='" + getStrokeWidth() +
-                "' fill='" + getFill() +
+                "' stroke='" + Stroke +
+                "' stroke-width='" + StrokeWidth +
+                "' fill='" + Fill +
                 "'/>";
         }
     }

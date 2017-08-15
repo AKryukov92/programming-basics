@@ -1,4 +1,4 @@
-﻿using Classes.task2809;
+﻿using Classes.Task2809;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace lab14
             Point p = new Point();
             p.x = 127;
             p.y = 113;
-            String str = p.print();
+            String str = p.Print();
             Console.WriteLine(str);
         }
 
@@ -25,35 +25,35 @@ namespace lab14
                 x = 31,
                 y = 37
             };
-            Console.WriteLine(p.print());
+            Console.WriteLine(p.Print());
         }
 
         public static void Step3()
         {
             Point p = new Point();
-            p.setCoordinates(5, 7);
-            Console.WriteLine(p.print());
+            p.SetCoordinates(5, 7);
+            Console.WriteLine(p.Print());
         }
 
         public static void Step4()
         {
             Point p1 = new Point();
-            p1.setCoordinates(23, 29);
-            Console.WriteLine("Расстояние между {0} и (0;0) составляет {1:F4}", p1.print(), p1.distanceTo(0, 0));
+            p1.SetCoordinates(23, 29);
+            Console.WriteLine("Расстояние между {0} и (0;0) составляет {1:F4}", p1.Print(), p1.DistanceTo(0, 0));
         }
 
         public static void Step5()
         {
             Point p1 = new Point();
-            p1.setCoordinates(11, 13);
+            p1.SetCoordinates(11, 13);
             Point p2 = new Point();
             p2.x = 17;
             p2.y = 19;
             Console.WriteLine(
                 "Расстояние между {0} и {1} составляет {2:F4}",
-                p1.print(),
-                p2.print(),
-                p1.distanceTo(p2)
+                p1.Print(),
+                p2.Print(),
+                p1.DistanceTo(p2)
             );
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.task6876
+namespace Classes.Task6876
 {
     public class Circle : Shape
     {
@@ -18,10 +18,13 @@ namespace Classes.task6876
             this.cy = cy;
             this.r = r;
         }
-        
-        public override double Area()
+
+        public override double Area
         {
-            return Math.PI * r * r;
+            get
+            {
+                return Math.PI * r * r;
+            }
         }
 
         public override String ToString()

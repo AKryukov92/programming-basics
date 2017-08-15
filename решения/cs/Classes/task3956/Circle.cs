@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.task3956
+namespace Classes.Task3956
 {
     public class Circle : Shape
     {
         private int cx;
         private int cy;
         private int r;
+
+        public override double Area
+        {
+            get { return Math.PI * r * r; }
+        }
 
         public Circle(int cx, int cy, int r, String stroke, String fill, int strokeWidth)
             : base(stroke, strokeWidth, fill)
@@ -28,20 +33,15 @@ namespace Classes.task3956
             this.r = r;
         }
 
-        public override void slide(int dx, int dy)
+        public override void Slide(int dx, int dy)
         {
             cx += dx;
             cy += dy;
         }
 
-        public override Point getCenter()
+        public override Point MakeCenter()
         {
             return new Point(cx, cy);
-        }
-
-        public override double area()
-        {
-            return Math.PI * r * r;
         }
 
         public override String ToString()
@@ -49,9 +49,9 @@ namespace Classes.task3956
             return "<circle cx='" + cx +
                 "' cy='" + cy +
                 "' r='" + r +
-                "' stroke='" + getStroke() +
-                "' stroke-width='" + getStrokeWidth() +
-                "' fill='" + getFill() +
+                "' stroke='" + Stroke +
+                "' stroke-width='" + StrokeWidth +
+                "' fill='" + Fill +
                 "'/>";
         }
     }

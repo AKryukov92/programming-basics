@@ -66,7 +66,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task9020(in9020[i]);
+                    double result = Lab02.Task9020(in9020[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs9020[i]);
                 }
                 catch (Exception e)
@@ -86,7 +86,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task7237(in7237[i]);
+                    double result = Lab02.Task7237(in7237[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs7237[i]);
                 }
                 catch (Exception e)
@@ -107,7 +107,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task3943(in3943x[i], in3943y[i]);
+                    double result = Lab02.Task3943(in3943x[i], in3943y[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs3943[i]);
                 }
                 catch (Exception e)
@@ -128,7 +128,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task8873(in8873r1[i], in8873r2[i]);
+                    double result = Lab02.Task8873(in8873r1[i], in8873r2[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs8873[i]);
                 }
                 catch (Exception e)
@@ -151,7 +151,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task2624(in2624a[i], in2624b[i], in2624c[i], in2624x[i]);
+                    double result = Lab02.Task2624(in2624a[i], in2624b[i], in2624c[i], in2624x[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs2624[i]);
                 }
                 catch (Exception e)
@@ -173,7 +173,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task1346(in1346v[i], in1346t[i], in1346a[i]);
+                    double result = Lab02.Task1346(in1346v[i], in1346t[i], in1346a[i]);
                     Console.WriteLine("{0:F4} ({1:F4})", result, out1346[i]);
                 }
                 catch (ArgumentException ex)
@@ -193,7 +193,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task5871(in5871[i]);
+                    double result = Lab02.Task5871(in5871[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs5871[i]);
                 }
                 catch (Exception e)
@@ -213,7 +213,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task3591(in3591[i]);
+                    double result = Lab02.Task3591(in3591[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, out3591[i]);
                 }
                 catch (Exception e)
@@ -233,7 +233,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab02.task9298(in9298[i]);
+                    int result = Lab02.Task9298(in9298[i]);
                     Console.WriteLine("{0} ({1})", result, outs9298[i]);
                 }
                 catch (Exception e)
@@ -253,7 +253,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab02.task3354(in3354[i]);
+                    int result = Lab02.Task3354(in3354[i]);
                     Console.WriteLine("{0} ({1})", result, outs3354[i]);
                 }
                 catch (Exception e)
@@ -273,7 +273,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task5201(in5201[i]);
+                    double result = Lab02.Task5201(in5201[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs5201[i]);
                 }
                 catch (Exception e)
@@ -293,7 +293,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task2981(in2981[i]);
+                    double result = Lab02.Task2981(in2981[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs2981[i]);
                 }
                 catch (Exception e)
@@ -314,7 +314,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task4312(in4312a[i], in4312h[i]);
+                    double result = Lab02.Task4312(in4312a[i], in4312h[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs4312[i]);
                 }
                 catch (Exception e)
@@ -334,7 +334,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task8833(in8833[i]);
+                    double result = Lab02.Task8833(in8833[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs8833[i]);
                 }
                 catch (Exception e)
@@ -355,7 +355,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task1934(in1934a[i], in1934b[i]);
+                    double result = Lab02.Task1934(in1934a[i], in1934b[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs1934[i]);
                 }
                 catch (Exception e)
@@ -377,7 +377,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task7619(in7619v1[i], in7619v2[i], in7619s[i]);
+                    double result = Lab02.Task7619(in7619v1[i], in7619v2[i], in7619s[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs7619[i]);
                 }
                 catch (Exception e)
@@ -399,7 +399,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task9130(in9130m1[i], in9130m2[i], in9130r[i]);
+                    double result = Lab02.Task9130(in9130m1[i], in9130m2[i], in9130r[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs9130[i]);
                 }
                 catch (Exception e)
@@ -422,7 +422,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task2461(in2461a[i], in2461b[i], in2461c[i], in2461d[i]);
+                    double result = Lab02.Task2461(in2461a[i], in2461b[i], in2461c[i], in2461d[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs2461[i]);
                 }
                 catch (Exception e)
@@ -442,7 +442,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab06.task2802(in2802[i]);
+                    double result = Lab06.Task2802(in2802[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, out2802[i]);
                 }
                 catch (Exception e)
@@ -462,7 +462,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab07.task9631(in9631[i]);
+                    int result = Lab07.Task9631(in9631[i]);
                     Console.WriteLine("{0} ({1})", result, out9631[i]);
                 }
                 catch (Exception e)
@@ -483,7 +483,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab07.task9812(in9812a[i], in9812b[i]);
+                    int result = Lab07.Task9812(in9812a[i], in9812b[i]);
                     Console.WriteLine("{0} ({1})", result, out9812[i]);
                 }
                 catch (Exception e)
@@ -503,7 +503,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.task5728(in5728a[i], in5728b[i]));
+                    Console.WriteLine(Lab07.Task5728(in5728a[i], in5728b[i]));
                 }
                 catch (Exception e)
                 {
@@ -522,7 +522,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.task5923(in5923a[i], in5923b[i]));
+                    Console.WriteLine(Lab07.Task5923(in5923a[i], in5923b[i]));
                 }
                 catch (Exception e)
                 {
@@ -547,7 +547,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.task9116(in9116[i]));
+                    Console.WriteLine(Lab07.Task9116(in9116[i]));
                 }
                 catch (Exception e)
                 {
@@ -577,7 +577,7 @@ namespace task9701
             {
                 try
                 {
-                    Lab07.task1618(in1618[i]);
+                    Lab07.Task1618(in1618[i]);
                 }
                 catch (Exception e)
                 {
@@ -598,7 +598,7 @@ namespace task9701
             {
                 try
                 {
-                    String result = Lab05.task7937(in7937w[i], in7937h[i], in7937c[i], in7937d[i]);
+                    String result = Lab05.Task7937(in7937w[i], in7937h[i], in7937c[i], in7937d[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)
@@ -618,7 +618,7 @@ namespace task9701
             {
                 try
                 {
-                    String r = Lab07.task4845(in4845a[i], in4845b[i]);
+                    String r = Lab07.Task4845(in4845a[i], in4845b[i]);
                     Console.WriteLine(r);
                 }
                 catch (Exception e)
@@ -643,7 +643,7 @@ namespace task9701
             {
                 try
                 {
-                    String r = Lab07.task7222(in7222[i]);
+                    String r = Lab07.Task7222(in7222[i]);
                     Console.WriteLine(r);
                     Console.WriteLine();
                 }
@@ -663,7 +663,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.task2166(in2166[i]));
+                    Console.WriteLine(Lab07.Task2166(in2166[i]));
                 }
                 catch (Exception e)
                 {
@@ -682,7 +682,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab06.task9180(in9180[i]);
+                    int result = Lab06.Task9180(in9180[i]);
                     Console.WriteLine("{0} ({1})", result, outs9180[i]);
                 }
                 catch (Exception e)
@@ -702,7 +702,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab06.task1544(in1544[i]);
+                    int result = Lab06.Task1544(in1544[i]);
                     Console.WriteLine("{0} ({1})", result, outs1544[i]);
                 }
                 catch (Exception e)
@@ -734,7 +734,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.task5894(in5894left[i], in5894top[i]);
+                    int result = Lab08.Task5894(in5894left[i], in5894top[i]);
                     Console.WriteLine("Повторений: " + result);
                 }
                 catch (Exception e)
@@ -761,7 +761,7 @@ namespace task9701
             {
                 try
                 {
-                    String result = Lab08.task4425(in4425a[i], in4425data[i]);
+                    String result = Lab08.Task4425(in4425a[i], in4425data[i]);
                     Console.WriteLine("{0} ({1})", result, out4425[i]);
                 }
                 catch (Exception e)
@@ -790,7 +790,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.task7290(in7290b[i], in7290data[i]);
+                    int result = Lab08.Task7290(in7290b[i], in7290data[i]);
                     Console.WriteLine("{0} ({1})", result, out7290[i]);
                 }
                 catch (Exception e)
@@ -820,7 +820,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.task8769(in8769p[i], in8769q[i], in8769s[i]);
+                    int result = Lab08.Task8769(in8769p[i], in8769q[i], in8769s[i]);
                     Console.WriteLine("{0} ({1})", result, out8769[i]);
                 }
                 catch (Exception e)
@@ -841,7 +841,7 @@ namespace task9701
             {
                 try
                 {
-                    double result = Lab02.task7799(in7799mass[i], in7799a[i]);
+                    double result = Lab02.Task7799(in7799mass[i], in7799a[i]);
                     Console.WriteLine("{0:F6} ({1:F6})", result, outs7799[i]);
                 }
                 catch (Exception e)
