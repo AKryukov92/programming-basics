@@ -618,7 +618,7 @@ namespace Methods
                 sb.Append(j);
                 for (int i = 0; i < w; i++)
                 {
-                    sb.Append(" ");
+                    sb.Append(".");
                 }
                 sb.Append("|\n");
             }

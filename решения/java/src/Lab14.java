@@ -10,14 +10,13 @@ import java.util.Scanner;
  */
 public class Lab14 {
     public static void main(String[] args) {
-
+        Step3567();
     }
 
     public static void call(){
         Step6981();
         Step5032();
         Step5108();
-        Step3567();
         Step2033();
     }
 
@@ -114,6 +113,7 @@ public class Lab14 {
                 if (arr.length != 2){
                     System.out.print(count);
                     System.out.println(" действий: Некорректный формат");
+                    System.out.println("Последнее корректное состояние: " + rect);
                     scanner.close();
                     return;
                 }
@@ -129,6 +129,7 @@ public class Lab14 {
                     rect.stretchY(value);
                 } else {
                     System.out.println("Некорректное действие: " + action);
+                    System.out.println("Последнее корректное состояние: " + rect);
                     scanner.close();
                     return;
                 }
@@ -143,6 +144,7 @@ public class Lab14 {
             System.out.print(count);
             System.out.print(" действий: ");
             System.out.println(e.getMessage());
+            System.out.println("Последнее корректное состояние: " + rect);
         }
     }
 
@@ -268,19 +270,19 @@ public class Lab14 {
 
         public void shiftX(int value) throws Exception {
             if (this.cx - this.r < -value){
-                throw new Exception("Левая точка круга должна иметь неотрицательные координаты");
+                throw new Exception("Левая точка круга должна иметь неотрицательные координаты \nПоследнее корректное состояние: " + this);
             }
             this.cx += value;
         }
         public void shiftY(int value) throws Exception {
             if (this.cy - this.r < -value){
-                throw new Exception("Верхняя точка круга должна иметь неотрицательные координаты");
+                throw new Exception("Верхняя точка круга должна иметь неотрицательные координаты \nПоследнее корректное состояние: " + this);
             }
             this.cy += value;
         }
         public void stretchX(int value) throws Exception {
             if (this.r * 2 <= -value){
-                throw new Exception("Ширина должна быть положительной");
+                throw new Exception("Ширина должна быть положительной \nПоследнее корректное состояние: " + this);
             }
             this.r += value/2;
             this.cx += value/2;
@@ -288,7 +290,7 @@ public class Lab14 {
         }
         public void stretchY(int value) throws Exception {
             if (this.r * 2 <= -value){
-                throw new Exception("Ширина должна быть положительной");
+                throw new Exception("Ширина должна быть положительной \nПоследнее корректное состояние: " + this);
             }
             this.r += value/2;
             this.cx += value/2;
@@ -309,20 +311,20 @@ public class Lab14 {
             String line = scanner.nextLine();
             String[] arr = line.split(";");
             if (arr.length != 2){
-                throw new Exception("Действий:" + count + " Некорректный формат");
+                throw new Exception("Действий:" + count + " Некорректный формат\nПоследнее корректное состояние: " + circle);
             }
             String action = arr[0];
             int value = Integer.parseInt(arr[1]);
-            if (action.equals("shiftX")){
+            if (action.equals("shiftX")) {
                 circle.shiftX(value);
-            } else if (action.equals("shiftY")){
+            } else if (action.equals("shiftY")) {
                 circle.shiftY(value);
-            } else if (action.equals("stretchX")){
+            } else if (action.equals("stretchX")) {
                 circle.stretchX(value);
-            } else if (action.equals("stretchY")){
+            } else if (action.equals("stretchY")) {
                 circle.stretchY(value);
             } else {
-                throw new Exception("Некорректное действие: " + action);
+                throw new Exception("Некорректное действие: " + action + "\nПоследнее корректное состояние: " + circle);
             }
         }
         System.out.print(count);

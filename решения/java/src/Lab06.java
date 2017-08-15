@@ -545,7 +545,7 @@ public class Lab06 {
         for (int j = 0; j < h; j++){
             sb.append(j);
             for (int i = 0; i < w; i++){
-                sb.append(" ");
+                sb.append(".");
             }
             sb.append("|\n");
         }
