@@ -1,0 +1,62 @@
+<div class="task_block" id="task9713">
+	<div class="task_id">9713</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Инициализировать объекты так, чтобы при выполнении данных сценариев на экран был выведен указанный результат.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+            <th>Сценарий</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">range.a = 829;
+range.b = 857;
+console.log(range.print());</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">range.a = 593;
+range.b = 607;
+console.log(range.print());</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">left.a = 0;
+left.b = 15;
+right.a = 10;
+right.b = 20;
+var result;
+if (left.intersects(right))
+{
+	result = "пересекается";
+}
+else
+{
+	result = "не пересекается";
+}
+console.log("Интервал " + left + " " + result + " с интервалом " + right);</td>
+			<td class="preformatted">Интервал [0;15] пересекается с интервалом [10;20]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">left.a = 100;
+left.b = 200;
+right.a = 400;
+right.b = 300;
+var result;
+if (left.intersects(right))
+{
+	result = "пересекается";
+}
+else
+{
+	result = "не пересекается";
+}
+console.log("Интервал " + left + " " + result + " с интервалом " + right);</td>
+			<td class="preformatted">Интервал [100;200] не пересекается с интервалом [Некорректный интервал 400;300]</td>
+		</tr>
+	</table>
+</div>

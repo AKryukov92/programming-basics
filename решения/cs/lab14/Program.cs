@@ -70,6 +70,11 @@ namespace lab14
             Caller5421.Step3();
             Caller5421.Step4();
 
+            Caller9713.Step1();
+            Caller9713.Step2();
+            Caller9713.Step3();
+            Caller9713.Step4();
+
             Caller7301.Step1();
             Caller7301.Step2();
             Caller7301.Step3();
