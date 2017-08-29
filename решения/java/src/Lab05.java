@@ -16,20 +16,16 @@ public class Lab05 {
         System.out.println(task3072(0, -15).print());
         System.out.println();
         System.out.println("5635");
-        int[] in5635xt = {1, 5, 3, 3, 0, 1, 1, 1, 1};
-        int[] in5635yt = {1, 5, 2, 1, -1, 1, 1, 1, 1};
-        int[] in5635xp = {0, 0, 0, 0, 0, 2, 2, 2, 2};
-        int[] in5635yp = {0, 0, 0, 0, 0, 2, 2, 2, 2};
-        int[] in5635h = {2, 2, 2, 2, 1, 0, -1, 3, 3};
-        int[] in5635w = {3, 3, 3, 3, 1, 3, 3, 0, -1};
+        int[] in5635xt = {30, 120, 210, 50, 150, 200, 80, 160, 220, 100, 130, 190, 180, 100, 190, 100, 190, -10, 40};
+        int[] in5635yt = {20, 30, 40, 120, 130, 150, 190, 180, 200, 110, 100, 140, 170, 100, 100, 170, 170, 30, -20};
         for (int i = 0; i < in5635xt.length; i++){
             try {
                 Point t = makePointByXY(in5635xt[i], in5635yt[i]);
-                Rectangle r = makeRectangleByXYHW(in5635xp[i], in5635yp[i], in5635h[i], in5635w[i]);
+                Rectangle r = makeRectangleByXYHW(100, 100, 70, 90);
                 if (task5635(t, r)){
                     System.out.println("точка внутри");
                 } else {
-                    System.out.println("точка не внутри");
+                    System.out.println("точка снаружи");
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -421,10 +417,10 @@ public class Lab05 {
     }
 
     public static boolean task5635(Point t, Rectangle r) throws Exception {
-        return r.x < t.x &&
-                t.x < r.x + r.w &&
-                r.y < t.y &&
-                t.y < r.y + r.h;
+        return r.x <= t.x &&
+                t.x <= r.x + r.w &&
+                r.y <= t.y &&
+                t.y <= r.y + r.h;
     }
 
     public static boolean task3878(Point t, Point p1, Point p2) throws Exception {

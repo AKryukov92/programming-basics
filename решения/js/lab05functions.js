@@ -272,10 +272,10 @@ function task5635(t,r){
 	validatePoint(t);
 	validatePoint(r);
 	validateRectangle(r);
-	return r.x < t.x &&
-		t.x < r.x + r.w &&
-		r.y < t.y &&
-		t.y < r.y + r.h;
+	return r.x <= t.x &&
+		t.x <= r.x + r.w &&
+		r.y <= t.y &&
+		t.y <= r.y + r.h;
 }
 function task3878(t,p1,p2){
 	validatePoint(t);

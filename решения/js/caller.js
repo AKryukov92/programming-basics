@@ -81,20 +81,14 @@ for (var i = 0; i < in7178m.length; i++){
 	}
 }
 
-var in5635p = [{x:1,y:1},{x:5,y:5},{x:3,y:1},
-{x:3,y:1},{x:0,y:-1},{x:1,y:1},
-{x:1,y:1},{x:1,y:1},{x:1,y:1}];
-var in5635r = [
-{x:0,y:0,h:2,w:3},{x:0,y:0,h:2,w:3},{x:0,y:0,h:2,w:3},
-{x:0,y:0,h:2,w:3},{x:0,y:0,h:1,w:1},{x:2,y:2,h:0,w:3},
-{x:2,y:2,h:-1,w:3},{x:2,y:2,h:3,w:0},{x:2,y:2,h:3,w:-1}];
+var in5635p = [{x:30,y:20},{x:120,y:30},{x:210,y:40},{x:50,y:120},{x:150,y:130},{x:200,y:150},{x:80,y:190},{x:160,y:180},{x:220,y:200},{x:100,y:110},{x:130,y:100},{x:190,y:140},{x:180,y:170},{x:100,y:100},{x:190,y:100},{x:100,y:170},{x:190,y:170},{x:-10,y:30},{x:40,y:-20}];
 for (var i = 0; i < in5635p.length; i++){
 	var out = document.getElementById("5635t" + i);
 	try {
-		if (task5635(in5635p[i], in5635r[i])){
+		if (task5635(in5635p[i], {x:100,y:100,h:70,w:90})){
 			out.innerHTML = "точка внутри";
 		} else {
-			out.innerHTML = "точка не внутри";
+			out.innerHTML = "точка снаружи";
 		}
 	} catch(e){
 		out.innerHTML = e.message;
