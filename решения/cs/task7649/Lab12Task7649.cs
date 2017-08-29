@@ -11,21 +11,46 @@ namespace tfa
     {
         static void Main(string[] args)
         {
+            Step2475();
+            Step5951();
+            Step8696();
             Step8495();
             Step1315();
+
             Step3762();
             Step3550();
             Step6572();
-
             Step2084();
             Step5411();
+
             Step8518();
             Step7585();
             Step8770();
-
             Step5694();
             Step6806();
+
             Step7369();
+        }
+
+        static void Step2475()
+        {
+            Console.WriteLine();
+            Console.WriteLine("2475");
+            Console.WriteLine(Lab06.Task2475());
+        }
+
+        static void Step5951()
+        {
+            Console.WriteLine();
+            Console.WriteLine("5951");
+            Console.WriteLine(Lab06.Task5951());
+        }
+
+        static void Step8696()
+        {
+            Console.WriteLine();
+            Console.WriteLine("8696");
+            Console.WriteLine(Lab06.Task8696());
         }
 
         static void Step8495()

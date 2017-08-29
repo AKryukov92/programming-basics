@@ -128,13 +128,19 @@ public class Lab06 {
         return sb;
     }
 
-    public static int task2475(){
+    public static String task2475(){
+        StringBuilder sb = new StringBuilder();
         int a = 100, b = 500, sum = 0;
+        sb.append("Ход решения: ");
         while (a <= b){
             sum += a;
+            sb.append(sum);
+            sb.append(" ");
             a++;
         }
-        return sum;
+        sb.append("\nОтвет:");
+        sb.append(sum);
+        return sb.toString();
     }
 
     public static int task9180(int a) throws Exception {
@@ -196,15 +202,23 @@ public class Lab06 {
         return mul;
     }
 
-    public static int task5951(){
+    public static String task5951(){
+        StringBuilder sb = new StringBuilder();
         int i = 20;
         int n = 40;
         int sum = 0;
+        sb.append("Ход решения: ");
         while (i <= n){
-            sum += i;
+            sb.append(sum);
+            sb.append("+");
+            sb.append(i*i*i);
+            sb.append("= ");
+            sum += i*i*i;
             i++;
         }
-        return sum;
+        sb.append("\nОтвет: ");
+        sb.append(sum);
+        return sb.toString();
     }
 
     public static double task2802(int n) throws Exception {
@@ -389,16 +403,23 @@ public class Lab06 {
         return sum;
     }
 
-    public static int task8696(){
+    public static String task8696(){
+        StringBuilder sb = new StringBuilder();
         int i = 100, n = 1000;
         int count = 0;
+        sb.append("Ход решения: ");
         while(i <= n){
+            sb.append(i);
             if (i%13 == 0){
+                sb.append("+");
                 count++;
             }
+            sb.append(" ");
             i++;
         }
-        return count;
+        sb.append("\nОтвет: ");
+        sb.append(count);
+        return sb.toString();
     }
 
     public static List<Integer> task8418(int x) throws Exception {

@@ -47,8 +47,8 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3983"^>№ 20^</a^>^</li^> ^
  ^<li^>^<a href="#task8770"^>№ 21^</a^>^</li^> ^
  ^<li^>^<a href="#task4236" class="supervision"^>№ 22^</a^>^</li^> ^
- ^<li^>^<a href="#task5969" class="example"^>№ 23^</a^>^</li^> ^
- ^<li^>^<a href="#task8696"^>№ 24^</a^>^</li^> ^
+ ^<li^>^<a href="#task8696" class="example"^>№ 23^</a^>^</li^> ^
+ ^<li^>^<a href="#task5969"^>№ 24^</a^>^</li^> ^
  ^<li^>^<a href="#task8418"^>№ 25^</a^>^</li^> ^
  ^<li^>^<a href="#task5170"^>№ 26^</a^>^</li^> ^
  ^<li^>^<a href="#task8395" class="supervision"^>№ 27^</a^>^</li^> ^
@@ -92,8 +92,8 @@ type task1483.html>>%filename%
 type task3983.html>>%filename%
 type task8770.html>>%filename%
 type task4236.html>>%filename%
-type task5969.html>>%filename%
 type task8696.html>>%filename%
+type task5969.html>>%filename%
 type link_c3_p11.2.html>>%filename%
 type task8418.html>>%filename%
 type task5170.html>>%filename%

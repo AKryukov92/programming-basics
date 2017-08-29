@@ -140,7 +140,7 @@ public class Lab13Task9701 {
         int[] in9130m1 = {3, 7219, 7193, -5, 10};
         int[] in9130m2 = {7, 7213, 7187, 4, 0};
         int[] in9130r = {13, 7207, 0, 10, 15};
-        double[] outs9130 = {9.8312, 1.2186, 0, 0, 0};
+        double[] outs9130 = {1.2186, 9.8312, 0, 0, 0};
         for (int i = 0; i < in9130m1.length; i++){
             try {
                 double result = Lab02.task9130(

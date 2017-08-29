@@ -113,7 +113,6 @@ for (var i = 0; i < in3770x.length; i++){
 	var r = task3770(in3770x[i], in3770y[i], in3770z[i]);
 	out.innerHTML = r;
 }
-document.getElementById("2475t0").innerHTML = task2475();
 
 var in9562a = ["15","25","80","3000"];
 var in9562b = ["27","44","100","24"];
@@ -121,7 +120,6 @@ for (var i = 0; i < in9562a.length; i++){
 	var out = document.getElementById("9562t" + i);
 	out.innerHTML = task9562(in9562a[i],in9562b[i]);
 }
-document.getElementById("5951t0").innerHTML = task5951();
 
 var in6580a = ["15", "25", "80", "3000"];
 var in6580b = ["27", "44", "100", "24"];
@@ -129,7 +127,6 @@ for (var i = 0; i < in6580a.length; i++){
 	var out = document.getElementById("6580t" + i);
 	out.innerHTML = task6580(in6580a[i],in6580b[i]);
 }
-document.getElementById("8696t0").innerHTML = task8696();
 //2324 - не для js
 //8731 - не для js
 //4082 - не для js

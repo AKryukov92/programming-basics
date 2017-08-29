@@ -148,15 +148,21 @@ namespace Methods
             return sb;
         }
 
-        public static int Task2475()
+        public static String Task2475()
         {
+            StringBuilder sb = new StringBuilder();
             int a = 100, b = 500, sum = 0;
+            sb.Append("Ход решения: ");
             while (a <= b)
             {
                 sum += a;
+                sb.Append(sum);
+                sb.Append(" ");
                 a++;
             }
-            return sum;
+            sb.Append("\nОтвет:");
+            sb.Append(sum);
+            return sb.ToString();
         }
 
         public static int Task9180(int a)
@@ -194,7 +200,8 @@ namespace Methods
                 i = b;
                 n = a;
             }
-            else {
+            else
+            {
                 i = a;
                 n = b;
             }
@@ -216,7 +223,8 @@ namespace Methods
                 i = a;
                 n = b;
             }
-            else {
+            else
+            {
                 i = b;
                 n = a;
             }
@@ -228,17 +236,25 @@ namespace Methods
             return mul;
         }
 
-        public static int Task5951()
+        public static String Task5951()
         {
+            StringBuilder sb = new StringBuilder();
             int i = 20;
             int n = 40;
             int sum = 0;
+            sb.Append("Ход решения: ");
             while (i <= n)
             {
-                sum += i;
+                sb.Append(sum);
+                sb.Append("+");
+                sb.Append(i * i * i);
+                sb.Append("= ");
+                sum += i * i * i;
                 i++;
             }
-            return sum;
+            sb.Append("\nОтвет: ");
+            sb.Append(sum);
+            return sb.ToString();
         }
 
         public static double Task2802(int n)
@@ -448,19 +464,26 @@ namespace Methods
             return sum;
         }
 
-        public static int Task8696()
+        public static String Task8696()
         {
+            StringBuilder sb = new StringBuilder();
             int i = 100, n = 1000;
             int count = 0;
+            sb.Append("Ход решения: ");
             while (i <= n)
             {
+                sb.Append(i);
                 if (i % 13 == 0)
                 {
+                    sb.Append("+");
                     count++;
                 }
+                sb.Append(" ");
                 i++;
             }
-            return count;
+            sb.Append("\nОтвет: ");
+            sb.Append(count);
+            return sb.ToString();
         }
 
         public static IList<int> Task8418(int x)

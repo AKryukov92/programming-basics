@@ -217,7 +217,7 @@ public class Lab12Task2354 {
     private static void Step2475(){
         System.out.println();
         System.out.println("2475");
-        System.out.println(Lab06.task2475() - 120300);
+        System.out.println(Lab06.task2475());
     }
 
     private static void Step9562(){
@@ -232,7 +232,7 @@ public class Lab12Task2354 {
     private static void Step5951(){
         System.out.println();
         System.out.println("5951");
-        System.out.println(Lab06.task5951() - 630);
+        System.out.println(Lab06.task5951());
     }
 
     private static void Step6580(){
@@ -247,7 +247,7 @@ public class Lab12Task2354 {
     private static void Step8696(){
         System.out.println();
         System.out.println("8696");
-        System.out.println(Lab06.task8696() - 69);
+        System.out.println(Lab06.task8696());
     }
 
     private static void Step2324(){

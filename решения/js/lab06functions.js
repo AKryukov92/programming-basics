@@ -109,13 +109,18 @@ function task3550(){
 	return r;
 }
 function task2475(){
+	var result = "Ход решения: ";
 	var a = 100;
 	var sum = 0;
 	while (a <= 500){
 		sum += a;
+		result += sum;
+		result += " ";
 		a++;
 	}
-	return sum;
+	result += "</br>Ответ:";
+	result += sum;
+	return result;
 }
 function task9180(a){
 	a = parseInt(a);
@@ -172,13 +177,20 @@ function task3669(a,b){
 	return mul;
 }
 function task5951(){
+	var result = "Ход решения: ";
 	var i = 20;
 	var sum = 0;
 	while(i <= 40){
+		result += sum;
+		result += "+";
+		result += (i*i*i);
+		result += "= ";
 		sum += i*i*i;
 		i++;
 	}
-	return sum;
+	result += "</br>Ответ: ";
+	result += sum;
+	return result;
 }
 function task2802(n){
 	if (n <= 0){
@@ -294,13 +306,19 @@ function task5969(a,b){
 	return sum;
 }
 function task8696(){
+	var result = "Ход решения: ";
 	var count = 0;
 	for (var i = 100; i < 1000; i++){
+		result += i;
 		if (i%13 == 0){
+			result += "+";
 			count ++;
 		}
+		result += " ";
 	}
-	return count;
+	result += "</br>Ответ: ";
+	result += count;
+	return result;
 }
 function task8418(x){
 	x = parseInt(x);

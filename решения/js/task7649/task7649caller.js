@@ -1,3 +1,9 @@
+document.getElementById("2475t0").innerHTML = task2475();
+
+document.getElementById("5951t0").innerHTML = task5951();
+
+document.getElementById("8696t0").innerHTML = task8696();
+
 document.getElementById("8495t0").innerHTML = task8495();
 
 document.getElementById("1315t0").innerHTML = task1315();

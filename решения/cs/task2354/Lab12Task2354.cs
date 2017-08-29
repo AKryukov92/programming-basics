@@ -23,35 +23,31 @@ namespace tfa
             Step5662();
             Step3770();
 
-            Step2475();
             Step9562();
-            Step5951();
             Step6580();
-            Step8696();
-
             Step2324();
             Step8731();
             Step4082();
+
             Step3669();
             Step5969();
-
             Step4265();
             Step3946();
             Step7035();
+
             Step4283();
             Step9182();
-
             Step5063();
             Step7711();
             Step3832();
-            Step9354();
 
+            Step9354();
             Step5895();
             Step7457();
             Step9865();
             Step3558();
-            Step4366();
 
+            Step4366();
             Step9925();
         }
 
@@ -165,13 +161,6 @@ namespace tfa
             Console.WriteLine(Lab05.Task3770(0, 5, -7) - 5);
         }
 
-        static void Step2475()
-        {
-            Console.WriteLine();
-            Console.WriteLine("2475");
-            Console.WriteLine(Lab06.Task2475() - 120300);
-        }
-
         static void Step9562()
         {
             Console.WriteLine();
@@ -191,20 +180,6 @@ namespace tfa
             Console.WriteLine(Lab06.Task3669(648, 648) - 648);
             Console.WriteLine(Lab06.Task3669(-2, 600));
             Console.WriteLine(Lab06.Task3669(50, 24) - 2421409269157986304L);
-        }
-
-        static void Step5951()
-        {
-            Console.WriteLine();
-            Console.WriteLine("5951");
-            Console.WriteLine(Lab06.Task5951() - 630);
-        }
-
-        static void Step8696()
-        {
-            Console.WriteLine();
-            Console.WriteLine("8696");
-            Console.WriteLine(Lab06.Task8696() - 69);
         }
 
         static void Step2324()
