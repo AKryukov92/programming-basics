@@ -233,20 +233,23 @@ public class Lab06 {
         }
         return sum;
     }
-    public static int task2324(String str)
+
+    public static String task2324(String str)
     {
         String[] raw = str.split(" ");
         int sum = 0;
+        int count = 0;
         int i = 0;
         int current;
         do
         {
             current = Integer.parseInt(raw[i]);
             sum += current;
+            count++;
             i++;
         }
         while (current != 0);
-        return sum;
+        return String.format("Сумма чисел: %d, Количество чисел: %d", sum, count);
     }
 
     public static int task8731(String str)

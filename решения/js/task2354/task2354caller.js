@@ -114,8 +114,8 @@ for (var i = 0; i < in3770x.length; i++){
 	out.innerHTML = r;
 }
 
-var in9562a = ["15","25","80","3000"];
-var in9562b = ["27","44","100","24"];
+var in9562a = ["15","13","25","80","3000"];
+var in9562b = ["27","2","44","100","24"];
 for (var i = 0; i < in9562a.length; i++){
 	var out = document.getElementById("9562t" + i);
 	out.innerHTML = task9562(in9562a[i],in9562b[i]);

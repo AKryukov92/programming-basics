@@ -31,15 +31,14 @@ public class Lab12Task2354 {
         Step5951();
         Step6580();
         Step8696();
-        Step2324();
-
         Step8731();
+
         Step4082();
         Step3669();
         Step5969();
         Step9925();
-
         Step4265();
+
         Step3946();
         Step7035();
         Step4283();
@@ -224,6 +223,7 @@ public class Lab12Task2354 {
         System.out.println();
         System.out.println("9562");
         System.out.println(Lab06.task9562(15, 27) - 273);
+        System.out.println(Lab06.task9562(13, 2) - 90);
         System.out.println(Lab06.task9562(25, 44) - 690);
         System.out.println(Lab06.task9562(80, 100) - 1890);
         System.out.println(Lab06.task9562(3000, 24) - 4501224);
@@ -248,22 +248,6 @@ public class Lab12Task2354 {
         System.out.println();
         System.out.println("8696");
         System.out.println(Lab06.task8696());
-    }
-
-    private static void Step2324(){
-        System.out.println();
-        System.out.println("2324");
-        String[] in2324 = {
-                "1 2 3 4 5 0",
-                "0",
-                "-1 -2 0",
-                "1 1 1 1 1 1 1 1 1 1 1 1 0"};
-        int[] out2324 = { 15, 0, -3, 12 };
-        for (int i = 0; i < in2324.length; i++)
-        {
-            int result = Lab06.task2324(in2324[i]);
-            System.out.printf("%d (%d)\n", result, out2324[i]);
-        }
     }
 
     private static void Step8731(){

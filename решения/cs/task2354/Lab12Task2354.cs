@@ -11,44 +11,43 @@ namespace tfa
     {
         static void Main(string[] args)
         {
-            //Step4411();
-            //Step8428();
-            //Step1262();
-            //Step2790();
-            //Step9164();
+            Step4411();
+            Step8428();
+            Step1262();
+            Step2790();
+            Step9164();
 
-            //Step5789();
-            //Step5980();
-            //Step8174();
-            //Step5662();
-            //Step3770();
+            Step5789();
+            Step5980();
+            Step8174();
+            Step5662();
+            Step3770();
 
-            //Step9562();
-            //Step6580();
-            //Step2324();
-            //Step8731();
+            Step9562();
+            Step6580();
+            Step8731();
             Step4082();
+            Step3669();
 
-            //Step3669();
-            //Step5969();
-            //Step4265();
-            //Step3946();
-            //Step7035();
+            Step5969();
+            Step4265();
+            Step3946();
+            Step7035();
+            Step4283();
 
-            //Step4283();
-            //Step9182();
-            //Step5063();
-            //Step7711();
-            //Step3832();
+            Step9182();
+            Step5063();
+            Step7711();
+            Step3832();
+            Step9354();
 
-            //Step9354();
-            //Step5895();
-            //Step7457();
-            //Step9865();
-            //Step3558();
+            Step5895();
+            Step7457();
+            Step9865();
+            Step3558();
+            Step4366();
 
-            //Step4366();
-            //Step9925();
+            Step9925();
         }
 
         static void Step4411()
@@ -166,6 +165,7 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("9562");
             Console.WriteLine(Lab06.Task9562(15, 27) - 273);
+            Console.WriteLine(Lab06.Task9562(13, 2) - 90);
             Console.WriteLine(Lab06.Task9562(25, 44) - 690);
             Console.WriteLine(Lab06.Task9562(80, 100) - 1890);
             Console.WriteLine(Lab06.Task9562(3000, 24) - 4501224);
@@ -180,23 +180,6 @@ namespace tfa
             Console.WriteLine(Lab06.Task3669(648, 648) - 648);
             Console.WriteLine(Lab06.Task3669(-2, 600));
             Console.WriteLine(Lab06.Task3669(50, 24) - 2421409269157986304L);
-        }
-
-        static void Step2324()
-        {
-            Console.WriteLine();
-            Console.WriteLine("2324");
-            String[] in2324 = {
-                "1 2 3 4 5 0",
-                "0",
-                "-1 -2 0",
-                "1 1 1 1 1 1 1 1 1 1 1 1 0"};
-            int[] out2324 = { 15, 0, -3, 12 };
-            for (int i = 0; i < in2324.Length; i++)
-            {
-                int result = Lab06.Task2324(in2324[i]);
-                Console.WriteLine("{0} ({1})", result, out2324[i]);
-            }
         }
 
         static void Step8731()

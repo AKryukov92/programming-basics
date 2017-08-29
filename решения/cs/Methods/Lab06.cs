@@ -271,20 +271,22 @@ namespace Methods
             return sum;
         }
 
-        public static int Task2324(String str)
+        public static String Task2324(String str)
         {
             String[] raw = str.Split(' ');
             int sum = 0;
+            int count = 0;
             int i = 0;
             int current;
             do
             {
                 current = int.Parse(raw[i]);
                 sum += current;
+                count++;
                 i++;
             }
             while (current != 0);
-            return sum;
+            return String.Format("Сумма чисел: {0}, Количество чисел: {1}", sum, count);
         }
 
         public static int Task8731(String str)

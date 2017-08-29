@@ -7,15 +7,16 @@ public class Lab12Task7649 {
         Step8495();
         Step1315();
         Step3762();
+        Step2324();
         Step3550();
-        Step6572();
 
+        Step6572();
         Step2084();
         Step5411();
         Step8518();
         Step7585();
-        Step8770();
 
+        Step8770();
         Step5694();
         Step6806();
         Step7369();
@@ -47,6 +48,27 @@ public class Lab12Task7649 {
         System.out.println("3762");
         String result3762 = Lab06.task3762(new StringBuilder()).toString();
         System.out.println(result3762);
+    }
+
+
+    private static void Step2324(){
+        System.out.println();
+        System.out.println("2324");
+        String[] in2324 = {
+            "1 2 3 4 5 0",
+            "0",
+            "-1 -2 0",
+            "1 1 1 1 1 1 1 1 1 1 1 1 0"};
+        String[] out2324 = {
+            "Сумма чисел: 15, Количество чисел: 6",
+            "Сумма чисел: 0, Количество чисел: 1",
+            "Сумма чисел: -3, Количество чисел: 3",
+            "Сумма чисел: 12, Количество чисел: 13"};
+        for (int i = 0; i < in2324.length; i++)
+        {
+            String result = Lab06.task2324(in2324[i]);
+            System.out.printf("#%s\n>%s\n", result, out2324[i]);
+        }
     }
 
     private static void Step3550() {
