@@ -268,8 +268,8 @@ public class Lab06 {
     public static String task4082(String str)
     {
         String[] raw = str.split(" ");
-        int leftSum = 0;
-        int rightSum = 0;
+        int leftCount = 0;
+        int rightCount = 0;
         int current;
         int i = 0;
         do
@@ -277,11 +277,11 @@ public class Lab06 {
             current = Integer.parseInt(raw[i]);
             if (current <= 83)
             {
-                leftSum += current;
+                leftCount += 1;
             }
             else if (current >= 199)
             {
-                rightSum += current;
+                rightCount += 1;
             }
             else
             {
@@ -290,7 +290,7 @@ public class Lab06 {
             i++;
         }
         while (true);
-        return String.format("Сумма слева: %d, сумма справа: %d", leftSum, rightSum);
+        return String.format("Количество слева: %d, количество справа: %d", leftCount, rightCount);
     }
 
     public static long task6580(int a, int b){

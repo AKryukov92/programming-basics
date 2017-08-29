@@ -306,8 +306,8 @@ namespace Methods
         public static String Task4082(String str)
         {
             String[] raw = str.Split(' ');
-            int leftSum = 0;
-            int rightSum = 0;
+            int leftCount = 0;
+            int rightCount = 0;
             int current;
             int i = 0;
             do
@@ -315,11 +315,11 @@ namespace Methods
                 current = int.Parse(raw[i]);
                 if (current <= 83)
                 {
-                    leftSum += current;
+                    leftCount += 1;
                 }
                 else if (current >= 199)
                 {
-                    rightSum += current;
+                    rightCount += 1;
                 }
                 else
                 {
@@ -328,7 +328,7 @@ namespace Methods
                 i++;
             }
             while (true);
-            return String.Format("Сумма слева: {0}, сумма справа: {1}", leftSum, rightSum);
+            return String.Format("Количество слева: {0}, количество справа: {1}", leftCount, rightCount);
         }
 
         public static long Task6580(int a, int b)
