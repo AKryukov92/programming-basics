@@ -32,21 +32,19 @@ namespace tfa
             Step5969();
             Step4265();
             Step3946();
-            Step7035();
             Step4283();
-
             Step9182();
+
             Step5063();
             Step7711();
             Step3832();
             Step9354();
-
             Step5895();
+
             Step7457();
             Step9865();
             Step3558();
             Step4366();
-
             Step9925();
         }
 
@@ -268,25 +266,6 @@ namespace tfa
             {
                 double result = Lab08.Task3946(in3946[i]);
                 Console.WriteLine("{0:F6} ({0:F6})", result, out3946[i]);
-            }
-        }
-
-        static void Step7035()
-        {
-            Console.WriteLine();
-            Console.WriteLine("7035");
-            String[] in7035 = {
-                "1 2 3 4 5 6",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 8 9",
-                "4 4 4 4",
-                "4 3"};
-            int[] out7035 = { 1, 1, 2, 3, 4, 3 };
-            for (int i = 0; i < in7035.Length; i++)
-            {
-                int result = Lab08.Task7035(in7035[i]);
-                Console.WriteLine("{0} ({1})", result, out7035[i]);
             }
         }
 

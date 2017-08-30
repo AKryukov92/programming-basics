@@ -51,6 +51,19 @@ for (var i = 0; i < in8770.length; i++){
 	out.innerHTML = task8770(in8770[i]);
 }
 
+var in7035 = [
+	"6 5 5 7 3 3 1",
+	"1 2 3 4 5 6",
+	"3 4 1 2 3 4 1 2 3 1 2",
+	"4 2 3 4 3 2",
+	"4 4 4 4 4 3 8 9",
+	"4 4 4 4",
+	"4 3"];
+for (var i = 0; i < in7035.length; i++){
+	var out = document.getElementById("7035t" + i);
+	out.innerHTML = task7035(in7035[i]);
+}
+
 var in5694 = ["a", "d", "h", "i", "z"];
 for (var i = 0; i < in5694.length; i++){
 	var out = document.getElementById("5694t" + i);

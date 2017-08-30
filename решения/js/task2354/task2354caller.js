@@ -158,11 +158,6 @@ for (var i = 0; i < in3946.length; i++){
 	var out = document.getElementById("3946t" + i);
 	out.innerHTML = task3946(in3946[i]);
 }
-var in7035 = ["1 2 3 4 5 6", "3 4 1 2 3 4 1 2 3 1 2", "4 2 3 4 3 2", "4 4 4 4 4 3 8 9", "4 4 4 4", "4 3"];
-for (var i = 0; i < in7035.length; i++){
-	var out = document.getElementById("7035t" + i);
-	out.innerHTML = task7035(in7035[i]);
-}
 var in4283k = ["3","5","2","1"];
 var in4283data = ["1 2 3 4 1 2","1 2 3 4 1 2 3 4 1 2 3","3 2 2 2 2 2", "4 4 4 4 4 4"];
 for (var i = 0; i < in4283k.length; i++){

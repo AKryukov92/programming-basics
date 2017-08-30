@@ -239,13 +239,17 @@ function task4515(raw){
 function task7035(raw){
 	var arr = raw.split(" ");
 	var min = parseInt(arr[0]);
+	var result = "Ход решения:<br/>Начинаю с " + min;
 	for (var i = 1; i < arr.length; i++){
 		var current = parseInt(arr[i]);
+		result += "</br>Сравниваю " + min + " и " + current;
 		if (current < min){
+			result += "</br>Заменяю";
 			min = current;
 		}
 	}
-	return min;
+	result += "</br>Ответ: " + min;
+	return result;
 }
 function task9271(raw){
 	var arr = raw.split(" ");

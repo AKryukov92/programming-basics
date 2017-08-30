@@ -27,8 +27,9 @@ namespace tfa
             Step8518();
             Step7585();
             Step8770();
-            Step5694();
+            Step7035();
 
+            Step5694();
             Step6806();
             Step7369();
         }
@@ -266,6 +267,26 @@ namespace tfa
                     result.Insert(0, "Неверно. Результат:\n");
                     Console.WriteLine(result.ToString());
                 }
+            }
+        }
+
+        static void Step7035()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7035");
+            String[] in7035 = {
+                "6 5 5 7 3 3 1",
+                "1 2 3 4 5 6",
+                "3 4 1 2 3 4 1 2 3 1 2",
+                "4 2 3 4 3 2",
+                "4 4 4 4 4 3 8 9",
+                "4 4 4 4",
+                "4 3"};
+            int[] out7035 = { 1, 1, 1, 2, 3, 4, 3 };
+            for (int i = 0; i < in7035.Length; i++)
+            {
+                String result = Lab08.Task7035(in7035[i]);
+                Console.WriteLine("{0} ({1})\n", result, out7035[i]);
             }
         }
 

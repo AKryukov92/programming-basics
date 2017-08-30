@@ -366,19 +366,29 @@ namespace Methods
             return false;
         }
 
-        public static int Task7035(String raw)
+        public static String Task7035(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             int min = int.Parse(arr[0]);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Ход решения: \nНачинаю с ");
+            sb.Append(min);
             for (int i = 1; i < arr.Length; i++)
             {
+                sb.Append("\nСравниваю ");
+                sb.Append(min);
+                sb.Append(" и ");
                 int current = int.Parse(arr[i]);
+                sb.Append(current);
                 if (current < min)
                 {
+                    sb.Append("\nЗаменяю");
                     min = current;
                 }
             }
-            return min;
+            sb.Append("\nОтвет: ");
+            sb.Append(min);
+            return sb.ToString();
         }
 
         public static IList<int> Task9271(String raw)

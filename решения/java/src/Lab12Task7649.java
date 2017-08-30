@@ -17,6 +17,7 @@ public class Lab12Task7649 {
         Step7585();
 
         Step8770();
+        Step7035();
         Step5694();
         Step6806();
         Step7369();
@@ -42,14 +43,12 @@ public class Lab12Task7649 {
         System.out.println(sb1315);
     }
 
-
     private static void Step3762() {
         System.out.println();
         System.out.println("3762");
         String result3762 = Lab06.task3762(new StringBuilder()).toString();
         System.out.println(result3762);
     }
-
 
     private static void Step2324(){
         System.out.println();
@@ -110,6 +109,25 @@ public class Lab12Task7649 {
                 result.insert(0, "Неверно. Результат:\n");
                 System.out.println(result.toString());
             }
+        }
+    }
+
+    private static void Step7035(){
+        System.out.println();
+        System.out.println("7035");
+        String[] in7035 = {
+            "6 5 5 7 3 3 1",
+            "1 2 3 4 5 6",
+            "3 4 1 2 3 4 1 2 3 1 2",
+            "4 2 3 4 3 2",
+            "4 4 4 4 4 3 8 9",
+            "4 4 4 4",
+            "4 3"
+        };
+        int[] out7035 = {1, 1, 1, 2, 3, 4, 3};
+        for (int i = 0; i < in7035.length; i++) {
+            String result = Lab08.task7035(in7035[i]);
+            System.out.printf("%s (%s)\n\n", result, out7035[i]);
         }
     }
 

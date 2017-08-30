@@ -40,7 +40,6 @@ public class Lab12Task2354 {
         Step4265();
 
         Step3946();
-        Step7035();
         Step4283();
         Step9182();
     }
@@ -340,24 +339,6 @@ public class Lab12Task2354 {
         for (int i = 0; i < in3946.length; i++) {
             double result = Lab08.task3946(in3946[i]);
             System.out.printf("%.6f (%.6f)\n", result, out3946[i]);
-        }
-    }
-
-    private static void Step7035(){
-        System.out.println();
-        System.out.println("7035");
-        String[] in7035 = {
-                "1 2 3 4 5 6",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 8 9",
-                "4 4 4 4",
-                "4 3"
-        };
-        int[] out7035 = {1, 1, 2, 3, 4, 3};
-        for (int i = 0; i < in7035.length; i++) {
-            int result = Lab08.task7035(in7035[i]);
-            System.out.printf("%d (%d)\n", result, out7035[i]);
         }
     }
 
