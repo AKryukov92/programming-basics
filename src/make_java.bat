@@ -49,4 +49,7 @@ popd
 pushd lab15
 call make_java15 skip
 popd
+pushd lab16
+call make_java15 skip
+popd
 pause

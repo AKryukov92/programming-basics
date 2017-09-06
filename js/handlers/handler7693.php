@@ -23,12 +23,12 @@ if(count($obj->data) != $EXPECTED_AMOUNT){
 	die;
 }
 for($i = 0; $i < count($obj->data); $i++){
-	if (!property_exists($obj, "x"){
+	if (!property_exists($obj->data[$i], "x")){
 		http_response_code($UNPROCESSABLE_ENTITY);
 		echo "У объекта № $i отсутствует поле 'x'";
 		die;
 	}
-	if (!property_exists($obj, "y"){
+	if (!property_exists($obj->data[$i], "y")){
 		http_response_code($UNPROCESSABLE_ENTITY);
 		echo "У объекта № $i отсутствует поле 'y'";
 		die;

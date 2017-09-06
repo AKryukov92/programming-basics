@@ -1,7 +1,7 @@
 <?php
-$MAX_VALUE = 4000;
-$MIN_VALUE = 1000;
-$EXPECTED_AMOUNT = 3000;
+$MAX_VALUE = 2000;
+$MIN_VALUE = -2000;
+$EXPECTED_AMOUNT = 2000;
 $UNPROCESSABLE_ENTITY = 422;
 $raw = file_get_contents('php://input');
 $arr = explode(";", $raw);

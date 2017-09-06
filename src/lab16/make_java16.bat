@@ -1,5 +1,5 @@
 chcp 65001
-set lang=js
+set lang=java
 set index=16
 set chapter=HTTP клиент
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
@@ -18,7 +18,7 @@ echo ^</style^> ^
  ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
-type ..\nav_js.html>> %filename%
+type ..\nav_cs.html>> %filename%
 
 echo ^<div class="nav"^> ^
  ^<ul^> ^
