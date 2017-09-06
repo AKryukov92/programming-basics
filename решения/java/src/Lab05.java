@@ -33,12 +33,12 @@ public class Lab05 {
         }
         System.out.println();
         System.out.println("3878");
-        int[] in3878xt = {2, 1, 0, 0, 1, -1};
-        int[] in3878yt = {2, 3, 0, 1, 1, 1};
-        int[] in3878xp1 = {1, 0, 1, 1, 1, 1};
-        int[] in3878yp1 = {1, 0, 1, 1, 1, 1};
-        int[] in3878xp2 = {3, 2, 2, 2, 2, 2};
-        int[] in3878yp2 = {3, 6, 2, 2, 2, 2};
+        int[] in3878xt = {2, 1, 0, 0, 1, 2, -1};
+        int[] in3878yt = {2, 3, 0, 1, 1, 2, 1};
+        int[] in3878xp1 = {1, 0, 1, 1, 1, 0, 1};
+        int[] in3878yp1 = {1, 0, 1, 1, 1, 4, 1};
+        int[] in3878xp2 = {3, 2, 2, 2, 2, 4, 2};
+        int[] in3878yp2 = {3, 6, 2, 2, 2, 0, 2};
         for (int i = 0; i < in3878xt.length; i++){
             try {
                 Point t = makePointByXY(in3878xt[i], in3878yt[i]);

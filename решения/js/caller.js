@@ -95,9 +95,9 @@ for (var i = 0; i < in5635p.length; i++){
 	}
 }
 
-var in3878t = [{x:2,y:2},{x:1,y:3},{x:0,y:0},{x:0,y:1},{x:1,y:1},{x:-1,y:1}];
-var in3878p1 = [{x:1,y:1},{x:0,y:0},{x:1,y:1},{x:1,y:1},{x:1,y:1},{x:1,y:1}];
-var in3878p2 = [{x:3,y:3},{x:2,y:6},{x:2,y:2},{x:2,y:2},{x:2,y:2},{x:2,y:2}];
+var in3878t = [{x:2,y:2},{x:1,y:3},{x:0,y:0},{x:0,y:1},{x:1,y:1},{x:2,y:2},{x:-1,y:1}];
+var in3878p1 = [{x:1,y:1},{x:0,y:0},{x:1,y:1},{x:1,y:1},{x:1,y:1},{x:0,y:4},{x:1,y:1}];
+var in3878p2 = [{x:3,y:3},{x:2,y:6},{x:2,y:2},{x:2,y:2},{x:2,y:2},{x:4,y:0},{x:2,y:2}];
 for (var i = 0; i < in3878t.length; i++){
 	var out = document.getElementById("3878t" + i);
 	try {
