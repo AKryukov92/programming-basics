@@ -4,6 +4,7 @@ pushd ..\csharp
 rmdir files /s /q
 rmdir images /s /q
 rmdir конспекты /s /q
+rmdir handlers /s /q
 del *.html
 del *.docx
 mkdir files
@@ -48,5 +49,8 @@ call make_cs14 skip
 popd
 pushd lab15
 call make_cs15 skip
+popd
+pushd lab16
+call make_cs16 skip
 popd
 pause

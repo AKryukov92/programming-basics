@@ -47,6 +47,10 @@ echo ^</div^>>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
+pushd ..\..\%lang%\
+mkdir handlers
+popd
+
 copy "*.php" "..\..\%lang%\handlers\*.php"
 
 if x%1==x start "" %filename%

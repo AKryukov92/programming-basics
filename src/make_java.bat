@@ -4,6 +4,7 @@ pushd ..\java
 rmdir files /s /q
 rmdir images /s /q
 rmdir конспекты /s /q
+rmdir handlers /s /q
 del *.html
 del *.docx
 mkdir files
@@ -50,6 +51,6 @@ pushd lab15
 call make_java15 skip
 popd
 pushd lab16
-call make_java15 skip
+call make_java16 skip
 popd
 pause
