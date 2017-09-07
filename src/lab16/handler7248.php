@@ -85,12 +85,12 @@ for($i = 0; $i < count($obj->pairs); $i++){
 		continue;
 	}
 	if ($b1 < $a2){
-		$obj->pairs[$i]->r = "не пересекаются";
+		$obj->pairs[$i]->r = "Не пересекаются";
 		$countClass1++;
 		continue;
 	}
 	if ($b2 < $a1){
-		$obj->pairs[$i]->r = "не пересекаются";
+		$obj->pairs[$i]->r = "Не пересекаются";
 		$countClass2++;
 		continue;
 	}
