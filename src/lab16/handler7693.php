@@ -22,17 +22,17 @@ if(count($obj->data) != $EXPECTED_AMOUNT){
 	echo "Массив в поле 'data' должен содержать $EXPECTED_AMOUNT элементов. Пришло $length";
 	die;
 }
+function assert_field($i, $arr, $fieldname){
+	global $ERR_UNPROCESSABLE_ENTITY;
+	if (!property_exists($arr[$i], $fieldname)){
+		http_response_code($ERR_UNPROCESSABLE_ENTITY);
+		echo "У объекта № $i отсутствует поле '$fieldname'";
+		die;
+	}
+}
 for($i = 0; $i < count($obj->data); $i++){
-	if (!property_exists($obj->data[$i], "x")){
-		http_response_code($UNPROCESSABLE_ENTITY);
-		echo "У объекта № $i отсутствует поле 'x'";
-		die;
-	}
-	if (!property_exists($obj->data[$i], "y")){
-		http_response_code($UNPROCESSABLE_ENTITY);
-		echo "У объекта № $i отсутствует поле 'y'";
-		die;
-	}
+	assert_field($i, $obj->data, "x");
+	assert_field($i, $obj->data, "y");
 	$currentX = $obj->data[$i]->x;
 	$currentY = $obj->data[$i]->y;
 	for($j = $i + 1; $j < count($obj->data); $j++){
@@ -62,5 +62,5 @@ for($i = 0; $i < count($obj->data); $i++){
 	$r = -5 * sqrt($x+sqrt($y));
 	$obj->data[$i]->r = round($r, 4);
 }
-echo json_encode($obj);
+echo json_encode($obj,JSON_UNESCAPED_UNICODE);
 ?>

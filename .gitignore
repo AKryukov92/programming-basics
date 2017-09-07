@@ -25,6 +25,9 @@ php/*.pdf
 решения/java/out
 решения/java/.idea/workspace.xml
 решения/java/.idea/tasks.xml
+решения/java_lab16/target
+решения/java_lab16/.idea/workspace.xml
+решения/java_lab16/.idea/tasks.xml
 решения/cs/lab*/obj
 решения/cs/lab*/bin
 решения/cs/task*/obj

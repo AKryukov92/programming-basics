@@ -9,67 +9,69 @@
 	<div id="response"></div>
 	<div id="out"></div>
 	<script>
-var arr;
+var data;
 function generate(){
-	arr = [];
-	var min = 1;
-	var max = 10000;
-	var minNeg = -10000;
-	var dY = 10000;
+	data = {
+		possible:[],
+		impossible:[],
+		error_group_a:[],
+		error_group_b:[],
+		error_group_c:[],
+		error_group_d:[]
+	};
+	var MIN = 1;
+	var MAX = 10000;
 	var amountResultative = 200;
 	var amountError = 50;
-	var amount = amountResultative;
-	while(arr.length < amount){
-		var nextC = Math.round(Math.random() * (max - min) + min);
-		var nextD = Math.round(Math.random() * (max - min) + min);
-		var nextA = Math.round(Math.random() * (nextC-1 - min) + min);
-		var nextB = Math.round(Math.random() * (nextD-1 - min) + min);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	function randBetween(a,b){
+		return Math.round(Math.random() * (b - a) + a);
 	}
-	amount += amountResultative;
-	while(arr.length < amount){
-		var nextC = Math.round(Math.random() * (max - min) + min);
-		var nextD = Math.round(Math.random() * (max - min) + min);
-		var nextA = Math.round(Math.random() * (max - nextC+1) + nextC);
-		var nextB = Math.round(Math.random() * (nextD-1 - min) + min);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	while(data.possible.length < amountResultative){
+		var nextC = randBetween(MIN, MAX);
+		var nextD = randBetween(MIN, MAX);
+		var nextA = randBetween(MIN, nextC-1);
+		var nextB = randBetween(MIN, nextD-1);
+		data.possible.push({a:nextA, b:nextB, c:nextC, d:nextD});
 	}
-	amount += amountError;
-	while(arr.length < amount){
-		var nextA = Math.round(Math.random() * (min - minNeg) + minNeg);
-		var nextB = Math.round(Math.random() * (max - min) + min);
-		var nextC = Math.round(Math.random() * (max - min) + min);
-		var nextD = Math.round(Math.random() * (max - min) + min);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	while(data.impossible.length < amountResultative){
+		var nextC = randBetween(MIN, MAX);
+		var nextD = randBetween(MIN, MAX);
+		var nextA = randBetween(nextC+1, MAX);
+		var nextB = randBetween(MIN, nextD-1);
+		data.impossible.push({a:nextA, b:nextB, c:nextC, d:nextD});
 	}
-	amount += amountError;
-	while(arr.length < amount){
-		var nextA = Math.round(Math.random() * (max - min) + min);
-		var nextB = Math.round(Math.random() * (min - minNeg) + minNeg);
-		var nextC = Math.round(Math.random() * (max - min) + min);
-		var nextD = Math.round(Math.random() * (max - min) + min);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	while(data.error_group_a.length < amountError){
+		var nextA = randBetween(-MAX, MIN);
+		var nextB = randBetween(MIN, MAX);
+		var nextC = randBetween(MIN, MAX);
+		var nextD = randBetween(MIN, MAX);
+		data.error_group_a.push({a:nextA, b:nextB, c:nextC, d:nextD});
 	}
-	amount += amountError;
-	while(arr.length < amount){
-		var nextA = Math.round(Math.random() * (max - min) + min);
-		var nextB = Math.round(Math.random() * (max - min) + min);
-		var nextC = Math.round(Math.random() * (min - minNeg) + minNeg);
-		var nextD = Math.round(Math.random() * (max - min) + min);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	while(data.error_group_b.length < amountError){
+		var nextA = randBetween(MIN, MAX);
+		var nextB = randBetween(-MAX, MIN);
+		var nextC = randBetween(MIN, MAX);
+		var nextD = randBetween(MIN, MAX);
+		data.error_group_b.push({a:nextA, b:nextB, c:nextC, d:nextD});
 	}
-	amount += amountError;
-	while(arr.length < amount){
-		var nextA = Math.round(Math.random() * (max - min) + min);
-		var nextB = Math.round(Math.random() * (max - min) + min);
-		var nextC = Math.round(Math.random() * (max - min) + min);
-		var nextD = Math.round(Math.random() * (min - minNeg) + minNeg);
-		arr.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	while(data.error_group_c.length < amountError){
+		var nextA = randBetween(MIN, MAX);
+		var nextB = randBetween(MIN, MAX);
+		var nextC = randBetween(-MAX, MIN);
+		var nextD = randBetween(MIN, MAX);
+		data.error_group_c.push({a:nextA, b:nextB, c:nextC, d:nextD});
 	}
-	document.getElementById("out").innerHTML = JSON.stringify(arr);
+	while(data.error_group_d.length < amountError){
+		var nextA = randBetween(MIN, MAX);
+		var nextB = randBetween(MIN, MAX);
+		var nextC = randBetween(MIN, MAX);
+		var nextD = randBetween(-MAX, MIN);
+		data.error_group_d.push({a:nextA, b:nextB, c:nextC, d:nextD});
+	}
+	document.getElementById("out").innerHTML = JSON.stringify(data);
 }
 function send(){
-	var response = post('handler8718.php', JSON.stringify({data:arr}));
+	var response = post('handler8718.php', JSON.stringify(data));
 	document.getElementById("response").innerHTML = response;
 }
 	</script>

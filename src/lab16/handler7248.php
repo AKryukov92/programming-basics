@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json;');
 $RESULTATIVE_AMOUNT = 150;
 $ERROR_AMOUNT = 100;
 $ERR_BAD_REQUEST = 400;
@@ -10,36 +11,45 @@ if (json_last_error() != JSON_ERROR_NONE){
 	echo json_last_error_msg();
 	die;
 }
-if(!property_exists($obj,"data")){
+if(!property_exists($obj,"pairs")){
 	http_response_code($ERR_UNPROCESSABLE_ENTITY);
-	echo "Нужно прислать JSON-объект с полем 'data', содержащим массив.";
+	echo "Нужно прислать JSON-объект с полем 'pairs', содержащим массив.";
 	die;
 }
-function assert_field($i, $obj, $fieldname){
-	if (!property_exists($obj->data[$i], $fieldname)){
+function assert_pair($i, $obj, $fieldname){
+	if (!property_exists($obj->pairs[$i], $fieldname)){
 		http_response_code($ERR_UNPROCESSABLE_ENTITY);
-		echo "У объекта № $i отсутствует поле '$fieldname'";
+		echo "У пары № $i отсутствует поле '$fieldname'";
 		die;
 	}
 }
-for($i = 0; $i < count($obj->data); $i++){
-	assert_field($i, $obj, "a1");
-	assert_field($i, $obj, "b1");
-	assert_field($i, $obj, "a2");
-	assert_field($i, $obj, "b2");
-	$a1 = $obj->data[$i]->a1;
-	$b1 = $obj->data[$i]->b1;
-	$a2 = $obj->data[$i]->a2;
-	$b2 = $obj->data[$i]->b2;
+function assert_field($i, $obj, $property, $fieldname){
+	if (!property_exists($obj->pairs[$i]->$property, $fieldname)){
+		http_response_code($ERR_UNPROCESSABLE_ENTITY);
+		echo "У пары № $i в объекте $property отсутствует поле '$fieldname'";
+		die;
+	}
+}
+for($i = 0; $i < count($obj->pairs); $i++){
+	assert_pair($i, $obj, "first");
+	assert_pair($i, $obj, "second");
+	assert_field($i, $obj, "first", "a");
+	assert_field($i, $obj, "first", "b");
+	assert_field($i, $obj, "second", "a");
+	assert_field($i, $obj, "second", "b");
+	$a1 = $obj->pairs[$i]->first->a;
+	$b1 = $obj->pairs[$i]->first->b;
+	$a2 = $obj->pairs[$i]->second->a;
+	$b2 = $obj->pairs[$i]->second->b;
 	
-	for($j = $i + 1; $j < count($obj->data); $j++){
-		if($a1 == $obj->data[$j]->a1 &&
-		   $b1 == $obj->data[$j]->b1 &&
-		   $a2 == $obj->data[$j]->a2 &&
-		   $b2 == $obj->data[$j]->b2
+	for($j = $i + 1; $j < count($obj->pairs); $j++){
+		if($a1 == $obj->pairs[$j]->first->a &&
+		   $b1 == $obj->pairs[$j]->first->b &&
+		   $a2 == $obj->pairs[$j]->second->a &&
+		   $b2 == $obj->pairs[$j]->second->b
 		){
 			http_response_code($ERR_UNPROCESSABLE_ENTITY);
-			echo "Объект № $i совпадает с объектом № $j и равен {a1:$a1,b1:$b1,a2:$a2,b2:$b2}";
+			echo "Пара № $i совпадает с парой № $j и равен {a1:$a1,b1:$b1,a2:$a2,b2:$b2}";
 			die;
 		}
 	}
@@ -59,46 +69,46 @@ $countClass5 = 0;
 $countClass6 = 0;
 $countCaseErrorLeft = 0;
 $countCaseErrorRight = 0;
-for($i = 0; $i < count($obj->data); $i++){
-	$a1 = $obj->data[$i]->a1;
-	$b1 = $obj->data[$i]->b1;
-	$a2 = $obj->data[$i]->a2;
-	$b2 = $obj->data[$i]->b2;
+for($i = 0; $i < count($obj->pairs); $i++){
+	$a1 = $obj->pairs[$i]->first->a;
+	$b1 = $obj->pairs[$i]->first->b;
+	$a2 = $obj->pairs[$i]->second->a;
+	$b2 = $obj->pairs[$i]->second->b;
 	if ($a1 >= $b1){
-		$obj->data[$i]->r = "Значение A должно быть меньше значения B";
+		$obj->pairs[$i]->r = "Значение A должно быть меньше значения B";
 		$countCaseErrorLeft++;
 		continue;
 	}
 	if ($a2 >= $b2){
-		$obj->data[$i]->r = "Значение A должно быть меньше значения B";
+		$obj->pairs[$i]->r = "Значение A должно быть меньше значения B";
 		$countCaseErrorRight++;
 		continue;
 	}
 	if ($b1 < $a2){
-		$obj->data[$i]->r = "не пересекаются";
+		$obj->pairs[$i]->r = "не пересекаются";
 		$countClass1++;
 		continue;
 	}
 	if ($b2 < $a1){
-		$obj->data[$i]->r = "не пересекаются";
+		$obj->pairs[$i]->r = "не пересекаются";
 		$countClass2++;
 		continue;
 	}
 	if ($a1 < $a2 && $a2 < $b1){
 		if ($b2 > $b1){
 			$countClass3++;
-			$obj->data[$i]->r = "пересекаются ($a2;$b1)";
+			$obj->pairs[$i]->r = (object) array('a'=>$a2, 'b'=>$b1);
 		} else {
 			$countClass4++;
-			$obj->data[$i]->r = "пересекаются ($a2;$b2)";
+			$obj->pairs[$i]->r['a'] = (object) array('a'=>$a2, 'b'=>$b2);
 		}
 	} else {
 		if ($b2 > $b1){
 			$countClass5++;
-			$obj->data[$i]->r = "пересекаются ($a1;$b1)";
+			$obj->pairs[$i]->r['a'] = (object) array('a'=>$a1, 'b'=>$b2);
 		} else {
 			$countClass6++;
-			$obj->data[$i]->r = "пересекаются ($a1;$b2)";
+			$obj->pairs[$i]->r['a'] = (object) array('a'=>$a1, 'b'=>$b2);
 		}
 	}
 }
@@ -123,5 +133,5 @@ if($countClass1 != $RESULTATIVE_AMOUNT ||
 	echo "Один из классов эквивалентности представлен не полностью";
 	die;
 }
-echo json_encode($obj);
+echo json_encode($obj,JSON_UNESCAPED_UNICODE);
 ?>

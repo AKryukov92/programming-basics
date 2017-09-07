@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json;');
 $RESULTATIVE_AMOUNT = 200;
 $ERROR_AMOUNT = 50;
 $ERR_BAD_REQUEST = 400;
@@ -140,5 +141,5 @@ if($count != $ERROR_AMOUNT){
 	echo "В поле 'error_group_d' должно находиться $ERROR_AMOUNT случаев 'Значение D должно быть неотрицательным'. Пришло $count";
 	die;
 }
-echo json_encode($obj);
+echo json_encode($obj,JSON_UNESCAPED_UNICODE);
 ?>
