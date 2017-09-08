@@ -383,47 +383,47 @@ public class Lab05 {
         }
     }
 
-    public static Point makePointByXY(int x, int y) throws Exception {
+    public static Point makePointByXY(int x, int y) {
         if (x < 0){
-            throw new Exception("Координата X должна быть неотрицательной");
+            throw new IllegalArgumentException("Координата X должна быть неотрицательной");
         }
         if (y < 0){
-            throw new Exception("Координата Y должна быть неотрицательной");
+            throw new IllegalArgumentException("Координата Y должна быть неотрицательной");
         }
         return new Point(x, y);
     }
 
-    public static Rectangle makeRectangleByXYHW(int x, int y, int h, int w) throws Exception {
+    public static Rectangle makeRectangleByXYHW(int x, int y, int h, int w) {
         if (x < 0){
-            throw new Exception("Координата X должна быть неотрицательной");
+            throw new IllegalArgumentException("Координата X должна быть неотрицательной");
         }
         if (y < 0){
-            throw new Exception("Координата Y должна быть неотрицательной");
+            throw new IllegalArgumentException("Координата Y должна быть неотрицательной");
         }
         if (h <= 0){
-            throw new Exception("Высота должна быть положительна");
+            throw new IllegalArgumentException("Высота должна быть положительна");
         }
         if (w <= 0){
-            throw new Exception("Ширина должна быть положительна");
+            throw new IllegalArgumentException("Ширина должна быть положительна");
         }
         return new Rectangle(x, y, h, w);
     }
 
-    public static Interval makeIntervalByEnds(int a, int b) throws Exception {
+    public static Interval makeIntervalByEnds(int a, int b) {
         if (a > b){
-            throw new Exception("Значение A должно быть меньше значения B");
+            throw new IllegalArgumentException("Значение A должно быть меньше значения B");
         }
         return new Interval(a, b);
     }
 
-    public static boolean task5635(Point t, Rectangle r) throws Exception {
+    public static boolean task5635(Point t, Rectangle r) {
         return r.x <= t.x &&
                 t.x <= r.x + r.w &&
                 r.y <= t.y &&
                 t.y <= r.y + r.h;
     }
 
-    public static boolean task3878(Point t, Point p1, Point p2) throws Exception {
+    public static boolean task3878(Point t, Point p1, Point p2) {
         return (t.x - p1.x) / (p2.x - p1.x) == (t.y - p1.y) / (p2.y - p1.y);
     }
 
