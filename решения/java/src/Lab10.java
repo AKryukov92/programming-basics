@@ -109,7 +109,7 @@ public class Lab10 {
         }
     }
 
-    private static void writeToFile(String fn, String content) {
+    private static void writeToHtml(String fn, String content) {
         String filename = "out/" + fn;
         try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
             writer.println("<!DOCTYPE html>" +
@@ -159,7 +159,7 @@ public class Lab10 {
         String filename = "task6409_" + i + ".html";
         String result = line1 + line2 + line3;
         System.out.println(result);
-        writeToFile(filename, result);
+        writeToHtml(filename, result);
     }
 
     public static void task9300(int cx, int cy, int r, int strokeWidth, int testId) {
@@ -184,7 +184,7 @@ public class Lab10 {
         String str = String.format("<circle cx=\"%d\" cy=\"%d\" r=\"%d\" stroke=\"green\" stroke-width=\"%d\" fill=\"yellow\" />", cx, cy, r, strokeWidth);
         System.out.println(str);
         String filename = "task9300_" + testId + ".html";
-        writeToFile(filename, str);
+        writeToHtml(filename, str);
     }
 
     public static void task3951(int x, int y, int width, int height, int testId) {
@@ -202,7 +202,7 @@ public class Lab10 {
         }
         String filename = "task3951_" + testId + ".html";
         String str = String.format("<rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"red\" stroke=\"blue\"/>", x, y, width, height);
-        writeToFile(filename, str);
+        writeToHtml(filename, str);
     }
 
     public static void task7343(int x, int y, int width, int height, int r, int testId) {
@@ -237,7 +237,7 @@ public class Lab10 {
         String circle4 = String.format(circleString, x, y, r);
         String result = circle1 + "\n" + circle2 + "\n" + circle3 + "\n" + circle4 + "\n" + rect;
         System.out.println(result);
-        writeToFile(filename, result);
+        writeToHtml(filename, result);
     }
 
     public static void task7060(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2, int testId) {
@@ -269,6 +269,6 @@ public class Lab10 {
             Lab05.Rectangle r3 = Lab05.task1438intersect(r1, r2);
             result += String.format(rectangleString, r3.x, r3.y, r3.w, r3.h, "yellow");
         }
-        writeToFile(filename, result);
+        writeToHtml(filename, result);
     }
 }
