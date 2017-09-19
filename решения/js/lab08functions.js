@@ -26,7 +26,7 @@ function task1223(raw){
 	}
 	var arr = raw.split(" ");
 	for (var i = arr.length - 1; i >= 0; i--){
-		ret.push(parseInt(arr[i]));
+		ret.push(arr[i]);
 	}
 	return ret;
 }
@@ -75,7 +75,7 @@ function task8311(b, e, raw){
 		n = b;
 	}
 	while(i <= n){
-		ret.push(parseInt(arr[i]));
+		ret.push(arr[i]);
 		i++;
 	}
 	return ret;
@@ -98,9 +98,12 @@ function task3134(p, q, raw){
 	return ret;
 }
 function task9774(m, raw){
-	var arr = raw.split(" ");
 	var ret = [];
-	for (var i = arr.length - 1; i >= 0; i--){
+	if (raw == ""){
+		return ret;
+	}
+	var arr = raw.split(" ");
+	for (var i = 0; i < arr.length; i++){
 		ret.push(parseInt(arr[i]) * m);
 	}
 	return ret;

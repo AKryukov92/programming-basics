@@ -130,7 +130,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> Task8311(int b, int e, String raw)
+        public static IList<String> Task8311(int b, int e, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             if (b < 0 || b >= arr.Length)
@@ -141,7 +141,7 @@ namespace Methods
             {
                 throw new Exception("Число E должно быть в интервале [0, размер массива)");
             }
-            IList<int> ret = new List<int>();
+            IList<String> ret = new List<String>();
             int i, n;
             if (b < e)
             {
@@ -155,7 +155,7 @@ namespace Methods
             }
             while (i <= n)
             {
-                ret.Add(int.Parse(arr[i]));
+                ret.Add(arr[i]);
                 i++;
             }
             return ret;
@@ -185,9 +185,13 @@ namespace Methods
 
         public static IList<int> Task9774(int m, String raw)
         {
-            String[] arr = raw.Split(new char[] { ' ' });
             IList<int> ret = new List<int>();
-            for (int i = arr.Length - 1; i >= 0; i--)
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                return ret;
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
             {
                 ret.Add(int.Parse(arr[i]) * m);
             }

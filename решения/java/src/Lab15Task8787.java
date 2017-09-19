@@ -306,11 +306,14 @@ public class Lab15Task8787 {
     private static void Step9774() {
         System.out.println();
         System.out.println("9774");
-        int[] in9774m = {31, -3};
-        String in9774data = "1 2 3 4 1 2";
+        int[] in9774m = {31, -3, 11, 73};
+        String[] in9774data = {"9 8 7 6 5 4",
+            "9 8 7 6 5 4",
+            "98 76 54",
+            ""};
         for (int i = 0; i < in9774m.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task9774(in9774m[i], in9774data);
+            List<Integer> result = Lab08.task9774(in9774m[i], in9774data[i]);
             for (Integer item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -347,22 +350,22 @@ public class Lab15Task8787 {
         int[] in8311b = {0, 1, 2, 3, 2, 8, 11, -1, 8};
         int[] in8311e = {3, 3, 3, 10, 2, 2, 8, 5, 50};
         String[] in8311data = {
-            "1 2 3 4 1",
-            "1 2 3 4 1",
-            "1 2 3 4 1",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3",
-            "1 2 3 4 1 2 3 4 1 2 3"
+            "z x c v b",
+            "z x c v b",
+            "z x c v b",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h"
         };
         for (int i = 0; i < in8311b.length; i++) {
             try {
                 StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab08.task8311(
+                List<String> result = Lab08.task8311(
                         in8311b[i], in8311e[i], in8311data[i]);
-                for (Integer item : result) {
+                for (String item : result) {
                     sb.append(item);
                     sb.append(" ");
                 }
@@ -407,14 +410,15 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("1223");
         String[] in1223 = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 2 3 4 1 2",
+                "q w e r t y",
+                "q w e r t y q w e r",
+                "as df gh jk",
                 ""
         };
         for (int i = 0; i < in1223.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task1223(in1223[i]);
-            for (Integer item : result) {
+            List<String> result = Lab08.task1223(in1223[i]);
+            for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
             }

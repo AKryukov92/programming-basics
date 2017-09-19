@@ -275,7 +275,7 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("7035");
             String[] in7035 = {
-                "6 5 5 7 3 3 1",
+                "6 5 7 8 3 4 1",
                 "1 2 3 4 5 6",
                 "3 4 1 2 3 4 1 2 3 1 2",
                 "4 2 3 4 3 2",

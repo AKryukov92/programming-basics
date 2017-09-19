@@ -55,14 +55,14 @@ public class Lab08 {
         return sb.toString();
     }
 
-    public static List<Integer> task1223(String raw){
-        List<Integer> ret = new ArrayList<>();
-        if (raw.length() == 0){
+    public static List<String> task1223(String raw){
+        List<String> ret = new ArrayList<>();
+        if (raw.isEmpty()){
             return ret;
         }
         String[] arr = raw.split(" ");
         for (int i = arr.length - 1; i >= 0; i--){
-            ret.add(Integer.parseInt(arr[i]));
+            ret.add(arr[i]);
         }
         return ret;
     }
@@ -94,7 +94,7 @@ public class Lab08 {
         return ret;
     }
 
-    public static List<Integer> task8311(int b, int e, String raw) throws Exception {
+    public static List<String> task8311(int b, int e, String raw) throws Exception {
         String[] arr = raw.split(" ");
         if (b < 0 || b >= arr.length){
             throw new Exception("Число B должно быть в интервале [0, размер массива)");
@@ -102,7 +102,7 @@ public class Lab08 {
         if (e < 0 || e >= arr.length){
             throw new Exception("Число E должно быть в интервале [0, размер массива)");
         }
-        List<Integer> ret = new ArrayList<>();
+        List<String> ret = new ArrayList<>();
         int i, n;
         if (b < e){
             i = b;
@@ -112,7 +112,7 @@ public class Lab08 {
             n = b;
         }
         while(i <= n){
-            ret.add(Integer.parseInt(arr[i]));
+            ret.add(arr[i]);
             i++;
         }
         return ret;
@@ -137,9 +137,12 @@ public class Lab08 {
     }
 
     public static List<Integer> task9774(int m, String raw){
-        String[] arr = raw.split(" ");
         List<Integer> ret = new ArrayList<>();
-        for (int i = arr.length - 1; i >= 0; i--){
+        if (raw.isEmpty()){
+            return ret;
+        }
+        String[] arr = raw.split(" ");
+        for (int i = 0; i < arr.length; i++){
             ret.add(Integer.parseInt(arr[i]) * m);
         }
         return ret;

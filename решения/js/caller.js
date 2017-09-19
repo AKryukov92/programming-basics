@@ -183,7 +183,10 @@ for (var i = 0; i < in9279.length; i++){
 
 
 //Lab08
-var in1223 = ["1 2 3 4 1", "1 2 3 4 1 2 3 4 1 2", ""];
+var in1223 = ["q w e r t y",
+                "q w e r t y q w e r",
+                "as df gh jk",
+                ""];
 for (var i = 0; i < in1223.length; i++){
 	var out = document.getElementById("1223t" + i);
 	out.innerHTML = task1223(in1223[i]).join(" ");
@@ -202,9 +205,15 @@ for (var i = 0; i < in3940l.length; i++){
 
 var in8311b = ["0","1","2","3","2","8","11","-1","8"];
 var in8311e = ["3","3","3","10","2","2","8","5","50"];
-var in8311data = ["1 2 3 4 1", "1 2 3 4 1", "1 2 3 4 1", "1 2 3 4 1 2 3 4 1 2 3",
-"1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3",
-"1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3", "1 2 3 4 1 2 3 4 1 2 3"];
+var in8311data = ["z x c v b",
+            "z x c v b",
+            "z x c v b",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h",
+            "z x c v b a s d f g h"];
 for (var i = 0; i < in8311b.length; i++){
 	var out = document.getElementById("8311t" + i);
 	try {
@@ -226,8 +235,11 @@ for (var i = 0; i < in3134p.length; i++){
 	}
 }
 
-var in9774m = ["31","-3"];
-var in9774data = ["1 2 3 4 1 2", "1 2 3 4 1 2"];
+var in9774m = ["31","-3","11","73"];
+var in9774data = ["9 8 7 6 5 4",
+            "9 8 7 6 5 4",
+            "98 76 54",
+            ""];
 for (var i = 0; i < in9774m.length; i++){
 	var out = document.getElementById("9774t" + i);
 	out.innerHTML = task9774(in9774m[i], in9774data[i]).join(" ");

@@ -301,9 +301,12 @@ namespace tfa
             Console.WriteLine();
             Console.WriteLine("4515");
             String[] in4515 = {
-                "9 8 7 6 5",
-                "4 3 2 1 5 6 7 8 9 0",
-                "1 2 3 1"};
+                "q w e r",
+                "q w q r",
+                "q w e q",
+                "q w e w",
+                "r r r r",
+                "a b c d q w e r"};
             for (int i = 0; i < in4515.Length; i++)
             {
                 if (Lab08.Task4515(in4515[i]))

@@ -223,5 +223,52 @@ namespace Methods
             }
             Console.WriteLine();
         }
+
+
+        public static IList<int> Task3657(String a)
+        {
+            if (a.Length != 1){
+                throw new Exception("Нужно ввести ровно один символ");
+            }
+            String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
+            IList<int> ret = new List<int>();
+            int next = input.IndexOf(a);
+            while(next >= 0){
+                ret.Add(next);
+                next = input.IndexOf(a, next + 1);
+            }
+            return ret;
+        }
+
+        public static String Task6599(String s)
+        {
+            String escaped = s.Replace("[", "\\[").Replace("]", "\\]");
+            bool outside = true;
+            int next = escaped.IndexOf("\"");
+            int current = 0;
+            StringBuilder result = new StringBuilder();
+            while (next >= 0)
+            {
+                String part = escaped.Substring(current, next - current);
+                result.Append(part);
+                if (outside)
+                {
+                    result.Append("[");
+                }
+                else
+                {
+                    result.Append("]");
+                }
+                outside = !outside;
+                current = next + 1;
+                next = escaped.IndexOf("\"", current);
+            }
+            if (current < escaped.Length)
+            {
+                String part = escaped.Substring(current);
+                result.Append(part);
+            }
+            return result.ToString();
+        }
     }
 }
