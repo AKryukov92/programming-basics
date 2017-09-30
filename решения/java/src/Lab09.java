@@ -190,6 +190,10 @@ public class Lab09 {
             System.out.println("#" + i);
             task3226(".\\task3226\\test" + i + ".txt");
         }
+        System.out.println("3148");
+        for (int i = 1; i <= 6; i++){
+            task3148("task3148/list" + i + ".txt");
+        }
     }
 
     public static void task6175(String filename) {
@@ -641,5 +645,45 @@ public class Lab09 {
             }
         }
         System.out.println("Общая сумма: " + total);
+    }
+
+    public static void task3148(String filename){
+        long total = 0;
+        File index = new File(filename);
+        System.out.println();
+        System.out.println("Обработка списка " + filename);
+        try (Scanner indexScanner = new Scanner(index)){
+            while(indexScanner.hasNext()){
+                String line = indexScanner.nextLine();
+                String dataFilename = "task3148/" + line;
+                File dataFile = new File(dataFilename);
+                System.out.println("Обработка файла " + dataFilename);
+                long count = 0;
+                try (Scanner dataScanner = new Scanner(dataFile)){
+                    while(dataScanner.hasNext()) {
+                        String row = dataScanner.nextLine();
+                        String[] arr = row.split(";");
+                        if (arr.length != 2){
+                            throw new Exception("Некорректный формат");
+                        }
+                        int left = Integer.parseInt(arr[0]);
+                        int right = Integer.parseInt(arr[1]);
+                        if (left < right) {
+                            count++;
+                        }
+                    }
+                    total += count;
+                    System.out.println("Количество подходящих записей в файле: " + count);
+                }
+                catch (FileNotFoundException e){
+                    System.out.println("ОШИБКА: Файл данных не найден");
+                } catch (Exception e) {
+                    System.out.println("ОШИБКА: " + e.getMessage());
+                }
+            }
+            System.out.println("Общее количество подходящих записей: " + total);
+        } catch (FileNotFoundException e) {
+            System.out.println("ОШИБКА: Список не найден");
+        }
     }
 }
