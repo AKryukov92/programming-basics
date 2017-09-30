@@ -1,8 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
 import java.util.InputMismatchException;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -619,5 +617,29 @@ public class Lab09 {
         } catch (FileNotFoundException ex){
             System.out.println("Файл не существует");
         }
+    }
+
+    public static void task9417(){
+        long total = 0;
+        for(int i = 0; i <= 10; i++){
+            String filename = String.format("task9417/data%d.txt",i);
+            File target = new File(filename);
+            System.out.println("Обработка файла " + filename);
+            try (Scanner scanner = new Scanner(target)){
+                long sum = 0;
+                while(scanner.hasNext()){
+                    String line = scanner.nextLine();
+                    int number = Integer.parseInt(line);
+                    sum += number;
+                }
+                total += sum;
+                System.out.println("Сумма в файле: " + sum);
+            } catch (FileNotFoundException e) {
+                System.out.println("ОШИБКА: Файл не найден");
+            } catch (NumberFormatException e){
+                System.out.println("ОШИБКА: Данные некорректного формата");
+            }
+        }
+        System.out.println("Общая сумма: " + total);
     }
 }
