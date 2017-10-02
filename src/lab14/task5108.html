@@ -8,8 +8,8 @@
 		<li>Переместить по вертикали. Наименование shiftY. Значения: id, изменение Y. Высота прямоугольника остается прежней. </li>
 		<li>Изменить ширину. Наименование stretchX. Значения: id, изменение ширины. Координата верхнего-левого угла при этом не меняется.</li>
 		<li>Изменить высоту. Наименование stretchY. Значения: id, изменение высоты. Координата верхнего-левого угла при этом не меняется.</li>
-	</ul><!-- действий: {"id":1234, "x":100,"y":100,"w":100,"h":100}--->
-	Нужно вывести на экран: идентификатор каждого прямоугольника, количество корректных действий над ним, а также получившиеся координаты и размеры. Порядок вывода информации о прямоугольниках не важен. При попытке совершить некорректное действие, вывести сообщение об ошибке и прекратить обработку.</div>
+	</ul>
+	Нужно вывести в HTML файл: идентификатор каждого прямоугольника, количество корректных действий над ним, а также получившиеся фигуры в виде картинки. Порядок вывода информации о прямоугольниках не важен. При попытке совершить некорректное действие, прекратить обработку, вывести последний корректный результат и добавить в файл сообщение об ошибке.</div>
 	<table class="check_values">
 		<tr>
 			<th>Номер теста</th>
@@ -19,77 +19,90 @@
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test1.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">r2 действий:1 {"x":100,"y":217,"w":100,"h":100}
-r1 действий:1 {"x":113,"y":100,"w":100,"h":100}</td>
+			<td class="preformatted"><p>r2 действий: 1</p><p>r1 действий: 1</p>
+<svg width="800" height="600">
+<rect x='100' y='217' width='100' height='100' fill='transparent' stroke='black'/><rect x='113' y='100' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test2.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">r2 действий:2 {"x":100,"y":217,"w":100,"h":120}
-r1 действий:2 {"x":113,"y":100,"w":150,"h":100}</td>
+			<td class="preformatted"><p>r2 действий: 2</p><p>r1 действий: 2</p>
+<svg width="800" height="600">
+<rect x='100' y='217' width='100' height='120' fill='transparent' stroke='black'/><rect x='113' y='100' width='150' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test3.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">r2 действий:1 {"x":0,"y":10,"w":10,"h":10}
-r3 действий:1 {"x":0,"y":0,"w":10,"h":10}
-r4 действий:1 {"x":10,"y":10,"w":10,"h":10}
-r1 действий:1 {"x":10,"y":0,"w":10,"h":10}</td>
+			<td class="preformatted"><p>r2 действий: 1</p><p>r3 действий: 1</p><p>r4 действий: 1</p><p>r1 действий: 1</p>
+<svg width="800" height="600">
+<rect x='0' y='10' width='10' height='10' fill='transparent' stroke='black'/><rect x='0' y='0' width='10' height='10' fill='transparent' stroke='black'/><rect x='10' y='10' width='10' height='10' fill='transparent' stroke='black'/><rect x='10' y='0' width='10' height='10' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test4.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Идентификатор не должен повторяться</td>
+			<td class="preformatted"><p>Ошибка: Идентификатор не должен повторяться (r1)</p><p>r1 действий: 0</p>
+<svg width="800" height="600">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test5.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Операция над неопозанным объектом</td>
+			<td class="preformatted"><p>Ошибка: Операция над неопознанным объектом (r2)</p><p>r1 действий: 4</p>
+<svg width="800" height="600">
+<rect x='120' y='120' width='110' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test6.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Координата Y должна быть неотрицательной</td>
+			<td class="preformatted"><p>Ошибка: Координата Y должна быть неотрицательной</p><p>r1 действий: 2</p>
+<svg width="800" height="600">
+<rect x='110' y='80' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test7.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Координата X должна быть неотрицательной</td>
+			<td class="preformatted"><p>Ошибка: Координата X должна быть неотрицательной</p><p>r1 действий: 11</p>
+<svg width="800" height="600">
+<rect x='10' y='80' width='100' height='120' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test8.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Высота должна быть положительной</td>
+			<td class="preformatted"><p>Ошибка: Высота должна быть положительной</p><p>r1 действий: 8</p>
+<svg width="800" height="600">
+<rect x='130' y='120' width='50' height='60' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test9.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Ширина должна быть положительной</td>
+			<td class="preformatted"><p>Ошибка: Ширина должна быть положительной</p><p>r1 действий: 2</p>
+<svg width="800" height="600">
+<rect x='100' y='120' width='110' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test10.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">r0 действий:158 {"x":931,"y":713,"w":627,"h":910}
-r1 действий:161 {"x":518,"y":1116,"w":551,"h":617}
-r2 действий:170 {"x":1095,"y":564,"w":613,"h":1569}
-r3 действий:137 {"x":1189,"y":603,"w":1474,"h":1006}
-r4 действий:170 {"x":1637,"y":793,"w":596,"h":829}
-r5 действий:159 {"x":763,"y":816,"w":638,"h":396}
-r6 действий:149 {"x":1022,"y":430,"w":384,"h":788}
-r7 действий:168 {"x":1440,"y":1180,"w":592,"h":1253}
-r8 действий:163 {"x":760,"y":393,"w":1856,"h":696}
-r9 действий:174 {"x":1150,"y":557,"w":1624,"h":234}
-r10 действий:152 {"x":1513,"y":539,"w":1058,"h":1041}
-r11 действий:156 {"x":1917,"y":647,"w":792,"h":1154}
-r12 действий:139 {"x":1146,"y":801,"w":665,"h":822}
-r13 действий:176 {"x":1750,"y":349,"w":1493,"h":1380}
-r14 действий:155 {"x":1180,"y":319,"w":660,"h":885}
-r15 действий:178 {"x":1158,"y":1056,"w":1591,"h":1573}</td>
+			<td class="preformatted"><p>r2 действий: 110</p><p>r10 действий: 187</p><p>r3 действий: 119</p><p>r4 действий: 103</p><p>r5 действий: 181</p><p>r6 действий: 163</p><p>r7 действий: 141</p><p>r8 действий: 197</p><p>r9 действий: 184</p><p>r0 действий: 198</p><p>r1 действий: 195</p>
+<svg width="800" height="600">
+<rect x='297' y='170' width='3' height='69' fill='transparent' stroke='black'/><rect x='244' y='201' width='217' height='27' fill='transparent' stroke='black'/><rect x='76' y='161' width='11' height='1' fill='transparent' stroke='black'/><rect x='434' y='186' width='44' height='11' fill='transparent' stroke='black'/><rect x='76' y='144' width='200' height='27' fill='transparent' stroke='black'/><rect x='153' y='1' width='53' height='144' fill='transparent' stroke='black'/><rect x='189' y='86' width='269' height='199' fill='transparent' stroke='black'/><rect x='207' y='54' width='273' height='58' fill='transparent' stroke='black'/><rect x='310' y='4' width='145' height='275' fill='transparent' stroke='black'/><rect x='90' y='235' width='126' height='9' fill='transparent' stroke='black'/><rect x='28' y='87' width='63' height='185' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test11.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректное действие: destroy</td>
+			<td class="preformatted"><p>Ошибка: Некорректное действие: destroy</p><p>r1 действий: 3</p>
+<svg width="800" height="600">
+<rect x='100' y='100' width='80' height='120' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -99,12 +112,15 @@ r15 действий:178 {"x":1158,"y":1056,"w":1591,"h":1573}</td>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test13.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат</td>
+			<td class="preformatted"><p>Ошибка: Некорректный формат</p><p>r1 действий: 0</p>
+<svg width="800" height="600">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5108/test14.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат</td>
+			<td class="preformatted">Ошибка: Некорректный формат</td>
 		</tr>
 	</table>
 </div>

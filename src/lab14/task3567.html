@@ -8,7 +8,7 @@
 		<li>Изменить ширину. Наименование stretchX. Значение - целое число, указывает насколько изменится ширина круга (dw). При этом координаты центра x, y и радиус изменятся на dw/2.</li>
 		<li>Изменить высоту. Наименование stretchY. Значение - целое число, указывает насколько изменится ширина круга (dw). При этом координаты центра x, y и радиус изменятся на dw/2.</li>
 	</ul><!--{"cx":150,"cy":150,"r":100}--->
-	При попытке совершить некорректное действие, вывести количество корректных действий, сообщение об ошибке и прекратить обработку.
+	При попытке совершить некорректное действие, вывести количество корректных действий, сообщение об ошибке и прекратить обработку. Ответ вывести в html-файл. Ответ должен содержать количество действий, описание ошибки и два прямоугольника: красный показывает исходное состояние прямоугольника, черный - последнее корректное состояние.
 	</div>
 	<table class="check_values">
 		<tr>
@@ -19,51 +19,74 @@
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test1.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий: 2 {"cx":240,"cy":250,"r":100}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='240' cy='250' r='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test2.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий: 1 {"cx":200,"cy":200,"r":150}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='200' cy='200' r='150' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test3.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий: 1 {"cx":175,"cy":175,"r":125}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='175' cy='175' r='125' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test4.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий: 2 {"cx":225,"cy":125,"r":75}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='225' cy='125' r='75' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test5.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий: 3 {"cx":165,"cy":165,"r":115}</td>
+			<td class="preformatted"><p>Действий: 3</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='165' cy='165' r='115' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test6.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:2 Верхняя точка круга должна иметь неотрицательные координаты
-Последнее корректное состояние: {"cx":170,"y":150,"r":100}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Ошибка: Верхняя точка круга должна иметь неотрицательные координаты</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='170' cy='150' r='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test7.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:3 Левая точка круга должна иметь неотрицательные координаты
-Последнее корректное состояние: {"cx":140,"y":150,"r":90}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Ошибка: Левая точка круга должна иметь неотрицательные координаты </p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='140' cy='150' r='90' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test8.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:1 Высота должна быть положительной
-Последнее корректное состояние: {"cx":150,"y":150,"r":100}</td>
+			<td class="preformatted"><p>Действий: 0</p><p>Ошибка: Ширина должна быть положительной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='150' cy='150' r='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test9.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:2 Ширина должна быть положительной
-Последнее корректное состояние: {"cx":155,"y":155,"r":105}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Ошибка: Ширина должна быть положительной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='155' cy='155' r='105' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -73,25 +96,34 @@
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test11.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:37 {"cx":170,"y":332,"r":132}</td>
+			<td class="preformatted"><p>Действий: 37</p><p>Результат:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='170' cy='186' r='132' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test12.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректное действие: shitfX
-Последнее корректное состояние: {"cx":210,"y":175,"r":125}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Ошибка: Некорректное действие: shitfX</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='210' cy='175' r='125' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test13.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:1 Некорректный формат
-Последнее корректное состояние: {"cx":150,"y":150,"r":100}</td>
+			<td class="preformatted"><p>Действий: 0</p><p>Ошибка: Некорректный формат</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='150' cy='150' r='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task3567/test14.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Действий:2 Некорректный формат
-Последнее корректное состояние: {"cx":153,"y":153,"r":103}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Ошибка: Некорректный формат</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<circle cx='150' cy='150' r='100' fill='transparent' stroke='red'/><circle cx='153' cy='153' r='103' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 	</table>
 </div>

@@ -1,14 +1,14 @@
 <div class="task_block" id="task5032">
 	<div class="task_id">5032</div>
     <h3>Задача</h3>
-	<div class="task_desc">Дан прямоугольник с координатами x = 100, y = 100, width = 100, height = 100. Исходный файл содержит список действий над ним в формате CSV (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;. Каждое действие описывается на отдельной строчке: наименование и необходимые значения. Нужно вывести на экран количество обработанных действий, а также получившиеся координаты и размеры прямоугольника. Действия описываются в следующем формате:
+	<div class="task_desc">Дан прямоугольник с координатами x = 100, y = 100, width = 100, height = 100. Исходный файл содержит список действий над ним в формате CSV (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;. Каждое действие описывается на отдельной строчке: наименование и необходимые значения. Нужно посчитать количество обработанных действий, а также получившиеся координаты и размеры прямоугольника. Действия описываются в следующем формате:
 	<ul>
 		<li>Переместить по горизонтали. Наименование shiftX. Значение - целое число, указывает насколько изменится координата прямоугольника по оси Х. Ширина прямоугольника остается прежней.</li>
 		<li>Переместить по вертикали. Наименование shiftY. Значение - целое число, указывает насколько изменится координата прямоугольника по оси Y. Высота прямоугольника остается прежней. </li>
 		<li>Изменить ширину. Наименование stretchX. Значение - целое число, указывает насколько изменится ширина прямоугольника. Координата верхнего-левого угла при этом не меняется.</li>
 		<li>Изменить высоту. Наименование stretchY. Значение - целое число, указывает насколько изменится высота прямоугольника. Координата верхнего-левого угла при этом не меняется.</li>
 	</ul><!--{"x":100,"y":100,"w":100,"h":100}--->
-	При попытке совершить некорректное действие, вывести количество корректных действий, сообщение об ошибке и прекратить обработку.
+	При попытке совершить некорректное действие, вывести количество корректных действий, сообщение об ошибке и прекратить обработку. Ответ вывести в html-файл. Ответ должен содержать количество действий, описание ошибки и два прямоугольника: красный показывает исходное состояние прямоугольника, черный - последнее корректное состояние.
 	</div>
 	<table class="check_values">
 		<tr>
@@ -19,56 +19,82 @@
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test1.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:1 {"x":113,"y":100,"w":100,"h":100}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='113' y='100' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test2.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:1 {"x":100,"y":117,"w":100,"h":100}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='117' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test3.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:1 {"x":100,"y":100,"w":119,"h":100}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='100' width='119' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test4.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:1 {"x":100,"y":100,"w":100,"h":123}</td>
+			<td class="preformatted"><p>Действий: 1</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='100' width='100' height='123' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test5.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:5 {"x":120,"y":120,"w":110,"h":150}</td>
+			<td class="preformatted"><p>Действий: 5</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='120' y='120' width='110' height='150' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test6.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:2 Координата Y должна быть неотрицательной
-последнее корректное состояние: {"x":110,"y":80,"w":100,"h":100}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Ошибка: Координата Y должна быть неотрицательной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='110' y='80' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test7.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:11 Координата X должна быть неотрицательной
-последнее корректное состояние: {"x":10,"y":80,"w":100,"h":120}</td>
+			<td class="preformatted"><p>Действий: 11</p><p>Ошибка: Координата X должна быть неотрицательной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='10' y='80' width='100' height='120' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test8.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:8 Высота должна быть положительной
-последнее корректное состояние: {"x":130,"y":120,"w":50,"h":60}</td>
+			<td class="preformatted"><p>Действий: 8</p><p>Ошибка: Высота должна быть положительной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='130' y='120' width='50' height='60' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test9.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:2 Ширина должна быть положительной
-последнее корректное состояние: {"x":100,"y":120,"w":110,"h":100}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Ошибка: Ширина должна быть положительной</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='120' width='110' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test10.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">действий:80 {"x":66,"y":183,"w":388,"h":159}</td>
+			<td class="preformatted"><p>Действий: 80</p><p>Результат:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='66' y='183' width='388' height='159' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -78,20 +104,26 @@
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test12.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректное действие: stretchH
-последнее корректное состояние: {"x":100,"y":100,"w":80,"h":120}</td>
+			<td class="preformatted"><p>Действий: 3</p><p>Ошибка: Некорректное действие: stretchH</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='100' width='80' height='120' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test13.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат
-последнее корректное состояние: {"x":100,"y":120,"w":95,"h":120}</td>
+			<td class="preformatted"><p>Действий: 4</p><p>Ошибка: Некорректный формат</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='100' y='120' width='95' height='120' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><a href="files/task5032/test14.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат
-последнее корректное состояние: {"x":150,"y":115,"w":100,"h":100}</td>
+			<td class="preformatted"><p>Действий: 2</p><p>Ошибка: Некорректный формат</p><p>Последнее корректное состояние:</p>
+<svg width="500" height="350">
+<rect x='100' y='100' width='100' height='100' fill='transparent' stroke='red'/><rect x='150' y='115' width='100' height='100' fill='transparent' stroke='black'/>
+</svg></td>
 		</tr>
 	</table>
 </div>
