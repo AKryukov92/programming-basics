@@ -178,7 +178,7 @@ function task2790(x) {
 	return Math.sqrt(1-s*s);
 }
 function task2624(a,b,c,x){
-	var root = a * x * x + b * x + c;
+	var root = a * x * x + b * x + parseInt(c);
 	if (root < 0){
 		throw new Error("Подкоренное выражение должно быть неотрицательным");
 	}
