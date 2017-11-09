@@ -170,11 +170,11 @@ public class Lab02 {
     }
 
     public static double task7619(int v1, int v2, int s) throws Exception {
-        if (v1 < 0){
-            throw new Exception("Значение v1 должно быть неотрицательным");
+        if (v1 < 0 || v2 < 0){
+            throw new Exception("Скорость должна быть неотрицательна");
         }
-        if (v2 < 0){
-            throw new Exception("Значение v2 должно быть неотрицательным");
+        if (s < 0){
+            throw new Exception("Расстояние должно быть неотрицательным");
         }
         return (double)s / (v1+v2);
     }

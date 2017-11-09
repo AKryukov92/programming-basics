@@ -39,7 +39,8 @@ namespace Methods
             {
                 return indexB - indexA - 1;
             }
-            else {
+            else
+            {
                 return indexA - indexB - 1;
             }
         }
@@ -61,11 +62,14 @@ namespace Methods
 
         }
 
-        public static String Task4845(int a, int b) {
-            if (a < 0 || a >= STR.Length){
+        public static String Task4845(int a, int b)
+        {
+            if (a < 0 || a >= STR.Length)
+            {
                 throw new Exception("Значение A должно быть в интервале [0,длина строки)");
             }
-            if (b < 0 || b >= STR.Length){
+            if (b < 0 || b >= STR.Length)
+            {
                 throw new Exception("Значение B должно быть в интервале [0,длина строки)");
             }
             if (a > b)
@@ -227,13 +231,15 @@ namespace Methods
 
         public static IList<int> Task3657(String a)
         {
-            if (a.Length != 1){
+            if (a.Length != 1)
+            {
                 throw new Exception("Нужно ввести ровно один символ");
             }
             String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
             IList<int> ret = new List<int>();
             int next = input.IndexOf(a);
-            while(next >= 0){
+            while (next >= 0)
+            {
                 ret.Add(next);
                 next = input.IndexOf(a, next + 1);
             }

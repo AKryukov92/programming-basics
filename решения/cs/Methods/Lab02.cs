@@ -213,6 +213,10 @@ namespace Methods
             if (v1 < 0 || v2 < 0) {
                 throw new Exception("Скорость должна быть неотрицательна");
             }
+            if (s < 0)
+            {
+                throw new Exception("Расстояние должно быть неотрицательно");
+            }
             return (double)s / (v1 + v2);
         }
 

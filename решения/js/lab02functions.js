@@ -95,13 +95,13 @@ function task3943(x,y){
 	return -5 * Math.sqrt(t);
 }
 function task7619(v1, v2, s){
-	if (v1 < 0){
-		throw new Error("Значение v1 должно быть неотрицательным");
+	if (v1 < 0 || v2 < 0){
+		throw new Error("Скорость должна быть неотрицательна");
 	}
-	if (v2 < 0){
-		throw new Error("Значение v2 должно быть неотрицательным");
+	if (s < 0){
+		throw new Error("Расстояние должно быть неотрицательным");
 	}
-	return s/(parseInt(v1)+parseInt(v2));
+	return parseInt(s)/(parseInt(v1)+parseInt(v2));
 }
 function task3832(x1,x2,x3){
 	return x1*x2+x1*x3+x2*x3;
