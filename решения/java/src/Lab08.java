@@ -148,19 +148,19 @@ public class Lab08 {
         return ret;
     }
 
-    public static List<Integer> task9711(String raw){
+    public static List<String> task9711(String raw){
         String[] arr = raw.split(" ");
-        List<Integer> ret = new ArrayList<>();
-        ret.add(Integer.parseInt(arr[arr.length - 1]));
+        List<String> ret = new ArrayList<>();
+        ret.add(arr[arr.length - 1]);
         for (int i = 0; i < arr.length - 1; i++){
-            ret.add(Integer.parseInt(arr[i]));
+            ret.add(arr[i]);
         }
         return ret;
     }
 
-    public static List<Integer> task3333(int s, String raw){
+    public static List<String> task3333(int s, String raw){
         String[] arr = raw.split(" ");
-        List<Integer> ret = new ArrayList<>();
+        List<String> ret = new ArrayList<>();
         int ds;
         if (s < 0){
             ds = -s%arr.length;
@@ -168,10 +168,10 @@ public class Lab08 {
             ds = arr.length - s%arr.length;
         }
         for (int i = ds; i < arr.length; i++){
-            ret.add(Integer.parseInt(arr[i]));
+            ret.add(arr[i]);
         }
         for (int i = 0; i < ds; i++){
-            ret.add(Integer.parseInt(arr[i]));
+            ret.add(arr[i]);
         }
         return ret;
     }

@@ -245,14 +245,14 @@ for (var i = 0; i < in9774m.length; i++){
 	out.innerHTML = task9774(in9774m[i], in9774data[i]).join(" ");
 }
 
-var in9711 = ["1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 4", ""];
+var in9711 = ["q w e r t y", "a s d f g h j k l m", "zx cv bn m", ""];
 for (var i = 0; i < in9711.length; i++){
 	var out = document.getElementById("9711t" + i);
 	out.innerHTML = task9711(in9711[i]).join(" ");
 }
 
 var in3333s = ["1","3","6","8","99","-2","-9"];
-var in3333data = "1 2 3 4 1 2";
+var in3333data = "q w e r t y";
 for (var i = 0; i < in3333s.length; i++){
 	var out = document.getElementById("3333t" + i);
 	out.innerHTML = task3333(in3333s[i], in3333data).join(" ");

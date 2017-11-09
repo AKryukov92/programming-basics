@@ -198,27 +198,27 @@ namespace Methods
             return ret;
         }
 
-        public static IList<int> Task9711(String raw)
+        public static IList<String> Task9711(String raw)
         {
-            IList<int> ret = new List<int>();
+            IList<String> ret = new List<String>();
             if (String.IsNullOrWhiteSpace(raw))
             {
                 return ret;
             }
             String[] arr = raw.Split(new char[] { ' ' });
             
-            ret.Add(int.Parse(arr[arr.Length - 1]));
+            ret.Add(arr[arr.Length - 1]);
             for (int i = 0; i < arr.Length - 1; i++)
             {
-                ret.Add(int.Parse(arr[i]));
+                ret.Add(arr[i]);
             }
             return ret;
         }
 
-        public static IList<int> Task3333(int s, String raw)
+        public static IList<String> Task3333(int s, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
-            IList<int> ret = new List<int>();
+            IList<String> ret = new List<String>();
             int ds;
             if (s < 0)
             {
@@ -230,11 +230,11 @@ namespace Methods
             }
             for (int i = ds; i < arr.Length; i++)
             {
-                ret.Add(int.Parse(arr[i]));
+                ret.Add(arr[i]);
             }
             for (int i = 0; i < ds; i++)
             {
-                ret.Add(int.Parse(arr[i]));
+                ret.Add(arr[i]);
             }
             return ret;
         }

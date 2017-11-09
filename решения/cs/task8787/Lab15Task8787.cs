@@ -208,7 +208,7 @@ namespace task8787
             Console.WriteLine("3134");
             int[] in3134p = { 0, 2, 4, -1, 2, 19, 1 };
             int[] in3134q = { 3, 5, 2, 5, 17, 2, -5 };
-            String in3134data = "1 2 3 4 1 2";
+            String in3134data = "q w e r t y";
             for (int i = 0; i < in3134p.Length; i++)
             {
                 try
@@ -245,8 +245,9 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("9711");
             String[] in9711 = {
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 4",
+            "q w e r t y",
+            "a s d f g h j k l m",
+            "zx cv bn m",
                 ""};
             for (int i = 0; i < in9711.Length; i++)
             {
@@ -260,12 +261,12 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("3333");
             int[] in3333s = { 1, 3, 6, 8, 99, -2, -9 };
-            String in3333data = "1 2 3 4 1 2";
+            String in3333data = "q w e r t y";
             for (int i = 0; i < in3333s.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<int> result = Lab08.Task3333(in3333s[i], in3333data);
-                foreach (int item in result)
+                IList<String> result = Lab08.Task3333(in3333s[i], in3333data);
+                foreach (String item in result)
                 {
                     sb.Append(item);
                     sb.Append(" ");

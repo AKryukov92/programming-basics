@@ -273,11 +273,11 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("3333");
         int[] in3333s = {1, 3, 6, 8, 99, -2, -9};
-        String in3333data = "1 2 3 4 1 2";
+        String in3333data = "q w e r t y";
         for (int i = 0; i < in3333s.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task3333(in3333s[i], in3333data);
-            for (Integer item : result) {
+            List<String> result = Lab08.task3333(in3333s[i], in3333data);
+            for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
             }
@@ -289,13 +289,15 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("9711");
         String[] in9711 = {
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 4"
+            "q w e r t y",
+            "a s d f g h j k l m",
+            "zx cv bn m",
+            ""
         };
         for (int i = 0; i < in9711.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task9711(in9711[i]);
-            for (Integer item : result) {
+            List<String> result = Lab08.task9711(in9711[i]);
+            for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
             }
@@ -327,7 +329,7 @@ public class Lab15Task8787 {
         System.out.println("3134");
         int[] in3134p = {0, 2, 4, -1, 2, 19, 1};
         int[] in3134q = {3, 5, 2, 5, 17, 2, -5};
-        String in3134data = "1 2 3 4 1 2";
+        String in3134data = "q w e r t y";
         for (int i = 0; i < in3134p.length; i++) {
             try {
                 StringBuilder sb = new StringBuilder();
