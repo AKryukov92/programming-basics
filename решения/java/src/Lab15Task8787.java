@@ -215,8 +215,9 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("8820");
         String[] in8820 = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3"
+            "q w e r t y",
+            "as df gh",
+            "q w e r t y a s d f g"
         };
         for (int i = 0; i < in8820.length; i++) {
             StringBuilder sb = new StringBuilder();

@@ -4,16 +4,16 @@ for (var i = 0; i < in4257l.length; i++){
 	var out = document.getElementById("4257t" + i);
 	try {
 		if (task4257(in4257l[i], in4257p[i])){
-			out.innerHTML = "Расстояние в километрах меньше";
+			out.innerHTML = "Кабеля хватит. Расстояние меньше длины кабеля.";
 		} else {
-			out.innerHTML = "Расстояние в футах меньше";
+			out.innerHTML = "Кабеля не хватит. Длина кабеля меньше расстояния.";
 		}
 	} catch (e){
 		out.innerHTML = e.message;
 	}
 }
-var in2291v1 = ["60.5", "17950", "-0.6", "0.1004"];
-var in2291v2 = ["16.8", "5000", "0.2", "-0.028"];
+var in2291v1 = ["60.5", "17950", "0", "200", "-0.6", "0.1004"];
+var in2291v2 = ["16.8", "5000", "10", "0", "0.2", "-0.028"];
 for (var i = 0; i < in2291v1.length; i++){
 	var out = document.getElementById("2291t" + i);
 	try {

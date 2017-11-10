@@ -245,9 +245,9 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("9711");
             String[] in9711 = {
-            "q w e r t y",
-            "a s d f g h j k l m",
-            "zx cv bn m",
+                "q w e r t y",
+                "a s d f g h j k l m",
+                "zx cv bn m",
                 ""};
             for (int i = 0; i < in9711.Length; i++)
             {
@@ -328,11 +328,9 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("8820");
             String[] in8820 = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3"};
-            String[] out8820 = {
-                "2 1 4 3 2 1",
-                "3 2 1 4 3 2 1 4 3 2 1"};
+                "q w e r t y",
+                "as df gh",
+                "q w e r t y a s d f g"};
             for (int i = 0; i < in8820.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();

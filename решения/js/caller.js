@@ -258,7 +258,7 @@ for (var i = 0; i < in3333s.length; i++){
 	out.innerHTML = task3333(in3333s[i], in3333data).join(" ");
 }
 
-var in8820 = ["1 2 3 4 1 2", "1 2 3 4 1 2 3 4 1 2 3"];
+var in8820 = ["q w e r t y", "as df gh", "q w e r t y a s d f g"];
 for (var i = 0; i < in8820.length; i++){
 	var out = document.getElementById("8820t" + i);
 	out.innerHTML = task8820(in8820[i]).join(" ");

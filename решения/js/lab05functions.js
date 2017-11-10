@@ -24,21 +24,28 @@ function task8174(a){
 }
 function task4257(l,p){
 	if (l < 0){
-		throw new Error("Значение L должно быть неотрицательным");
+		throw new Error("Расстояние между деревнями должно быть неотрицательно");
 	}
 	if (p < 0){
-		throw new Error("Значение P должно быть неотрицательным");
+		throw new Error("Длина кабеля должна быть неотрицательна");
 	}
 	return l*1000<p*0.305;
 }
-function task2291(v1,v2){
-	if (v1 < 0){
-		throw new Error("Значение V1 должно быть неотрицательным");
+function task2291(shipInKmH,cometInMS){
+	if (shipInKmH < 0){
+		throw new Error("Скорость корабля должна быть неотрицательна");
 	}
-	if (v2 < 0){
-		throw new Error("Значение V2 должно быть неотрицательным");
+	if (cometInMS < 0){
+		throw new Error("Скорость кометы должна быть неотрицательна");
 	}
-	return v1 * 1000 / 60 / 60 < v2;
+	var shipInMS = shipInKmH * 1000 / 60 / 60;
+	if (shipInMS < cometInMS)
+	{
+		return "Комета улетит от корабля. Скорость корабля " + shipInKmH + " км/ч меньше скорости кометы " + cometInMS + " м/с";
+	}
+	else {
+		return "Корабль догонит комету. Скорость кометы " + cometInMS + " м/с меньше скорости корабля " + shipInKmH + " км/ч";
+	}
 }
 function task1763(r,a) {
 	if (r < 0){

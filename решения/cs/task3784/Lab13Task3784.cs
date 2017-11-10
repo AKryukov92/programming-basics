@@ -36,11 +36,11 @@ namespace Task3784
                 {
                     if (Lab05.Task4257(in4257l[i], in4257p[i]))
                     {
-                        Console.WriteLine("Расстояние в километрах меньше");
+                        Console.WriteLine("Кабеля хватит. Расстояние меньше длины кабеля.");
                     }
                     else
                     {
-                        Console.WriteLine("Расстояние в футах меньше");
+                        Console.WriteLine("Кабеля не хватит. Длина кабеля меньше расстояния.");
                     }
                 }
                 catch (Exception e)
@@ -54,8 +54,8 @@ namespace Task3784
         {
             Console.WriteLine();
             Console.WriteLine("2291");
-            double[] in2291v1 = { 60.5, 17950, -0.6, 0.1004 };
-            double[] in2291v2 = { 16.8, 5000, 0.2, -0.028 };
+            double[] in2291v1 = { 60.5, 17950, 0, 200, -0.6, 0.1004 };
+            double[] in2291v2 = { 16.8, 5000, 10, 0, 0.2, -0.028 };
             for (int i = 0; i < in2291v1.Length; i++)
             {
                 try

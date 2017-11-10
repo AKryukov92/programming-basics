@@ -217,32 +217,32 @@ namespace Methods
         {
             if (l < 0)
             {
-                throw new Exception("Значение L должно быть неотрицательным");
+                throw new Exception("Расстояние между деревнями должно быть неотрицательно");
             }
             if (p < 0)
             {
-                throw new Exception("Значение P должно быть неотрицательным");
+                throw new Exception("Длина кабеля должна быть неотрицательна");
             }
             return l * 1000 < p * 0.305;
         }
 
-        public static String Task2291(double velocityInKmH, double velocityInMS)
+        public static String Task2291(double shipInKmH, double cometInMS)
         {
-            if (velocityInKmH < 0)
+            if (shipInKmH < 0)
             {
-                throw new Exception("Значение velocityInKmH должно быть неотрицательным");
+                throw new Exception("Скорость корабля должна быть неотрицательна");
             }
-            if (velocityInMS < 0)
+            if (cometInMS < 0)
             {
-                throw new Exception("Значение velocityInMS должно быть неотрицательным");
+                throw new Exception("Скорость кометы должна быть неотрицательна");
             }
-            double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
-            if (velocityInMS1 < velocityInMS)
+            double shipInMS = shipInKmH * 1000 / 60 / 60;
+            if (shipInMS < cometInMS)
             {
-                return String.Format("{0:F2} км/ч меньше {0:F2} м/с", velocityInKmH, velocityInMS);
+                return String.Format("Комета улетит от корабля. Скорость корабля {0:F2} км/ч меньше скорости кометы {1:F2} м/с", shipInKmH, cometInMS);
             }
             else {
-                return String.Format("{0:F2} км/ч меньше {0:F2} м/с", velocityInMS, velocityInKmH);
+                return String.Format("Корабль догонит комету. Скорость кометы {0:F2} м/с меньше скорости корабля {1:F2} км/ч", cometInMS, shipInKmH);
             }
         }
 

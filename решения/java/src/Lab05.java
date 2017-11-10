@@ -143,26 +143,26 @@ public class Lab05 {
 
     public static boolean task4257(double l, double p) throws Exception {
         if(l < 0){
-            throw new Exception("Значение L должно быть неотрицательным");
+            throw new Exception("Расстояние между деревнями должно быть неотрицательно");
         }
         if(p < 0){
-            throw new Exception("Значение P должно быть неотрицательным");
+            throw new Exception("Длина кабеля должна быть неотрицательна");
         }
         return l * 1000 < p * 0.305;
     }
 
     public static String task2291(double velocityInKmH, double velocityInMS) throws Exception {
         if (velocityInKmH < 0){
-            throw new Exception("Значение velocityInKmH должно быть неотрицательным");
+            throw new Exception("Скорость корабля должна быть неотрицательна");
         }
         if (velocityInMS < 0){
-            throw new Exception("Значение velocityInMS должно быть неотрицательным");
+            throw new Exception("Скорость кометы должна быть неотрицательна");
         }
         double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
         if (velocityInMS1 < velocityInMS){
-            return String.format("%.2f км/ч меньше %.2f м/с", velocityInKmH, velocityInMS);
+            return String.format("Комета улетит от корабля. Скорость корабля %.2f км/ч меньше скорости кометы %.2f м/с", velocityInKmH, velocityInMS);
         } else {
-            return String.format("%.2f км/ч меньше %.2f м/с", velocityInMS, velocityInKmH);
+            return String.format("Корабль догонит комету. Скорость кометы %.2f км/ч меньше скорости корабля %.2f м/с", velocityInMS, velocityInKmH);
         }
     }
 

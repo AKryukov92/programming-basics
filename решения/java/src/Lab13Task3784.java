@@ -25,9 +25,9 @@ public class Lab13Task3784 {
         for (int i = 0; i < in4257l.length; i++){
             try {
                 if (Lab05.task4257(in4257l[i], in4257p[i])){
-                    System.out.println("Расстояние в километрах меньше");
+                    System.out.println("Кабеля хватит. Расстояние меньше длины кабеля.");
                 } else {
-                    System.out.println("Расстояние в футах меньше");
+                    System.out.println("Кабеля не хватит. Длина кабеля меньше расстояния.");
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -38,8 +38,8 @@ public class Lab13Task3784 {
     private static void Step2291(){
         System.out.println();
         System.out.println("2291");
-        double[] in2291v1 = { 60.5, 17950, -0.6, 0.1004 };
-        double[] in2291v2 = { 16.8, 5000, 0.2, -0.028 };
+        double[] in2291v1 = { 60.5, 17950, 0, 200, -0.6, 0.1004 };
+        double[] in2291v2 = { 16.8, 5000, 10, 0, 0.2, -0.028 };
         for (int i = 0; i < in2291v1.length; i++){
             try {
                 String result = Lab05.task2291(in2291v1[i], in2291v2[i]);
