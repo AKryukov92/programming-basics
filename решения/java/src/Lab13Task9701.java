@@ -119,11 +119,11 @@ public class Lab13Task9701 {
     private static void Step2461() {
         System.out.println();
         System.out.println("2461");
-        int[] in2461a = {7069, 0, 7019};
-        int[] in2461b = {7043, 7043, 7043};
-        int[] in2461c = {7039, 7039, 7001};
-        int[] in2461d = {7057, 7027, 0};
-        double[] outs2461 = {1.9938, 0, 0};
+        int[] in2461a = {11, 7069, 0, 7019};
+        int[] in2461b = {3000, 7043, 7043, 7043};
+        int[] in2461c = {5, 7039, 7039, 7001};
+        int[] in2461d = {7, 7057, 7027, 0};
+        double[] outs2461 = {195.8052, 1.9938, 0, 0};
         for (int i = 0; i < in2461a.length; i++){
             try {
                 double result = Lab02.task2461(
@@ -157,9 +157,9 @@ public class Lab13Task9701 {
     private static void Step8873() {
         System.out.println();
         System.out.println("8873");
-        int[] in8873r1 = {7331, 3, 0, 7309};
-        int[] in8873r2 = {7321, 5, 7307, 0};
-        double[] outs8873 = {0.0003, 0.5333, 0, 0};
+        int[] in8873r1 = { 7331, 3, 15, -11, 0, 7309 };
+        int[] in8873r2 = { 7321, 5, -7, 96, 7307, 0 };
+        double[] outs8873 = { 0.0003, 0.5333, -0.0762, -0.0805, 0, 0 };
         for (int i = 0; i < in8873r1.length; i++){
             try {
                 double result = Lab02.task8873(in8873r1[i], in8873r2[i]);

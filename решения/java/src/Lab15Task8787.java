@@ -182,6 +182,11 @@ public class Lab15Task8787 {
                 "3 2 2 2 2 2",
                 "4 4 4 4 4 4"
         };
+        String[] out7703 = {
+            "2 2 1 1 2 2",
+            "3 3 3 2 3 3 3 2 3 3 3",
+            "1 5 5 5 5 5",
+            "6 6 6 6 6 6"};
         for (int i = 0; i < in7703.length; i++) {
             StringBuilder sb = new StringBuilder();
             List<Integer> result = Lab08.task7703(in7703[i]);
@@ -190,6 +195,8 @@ public class Lab15Task8787 {
                 sb.append(" ");
             }
             System.out.println(sb.toString());
+            System.out.println(out7703[i]);
+            System.out.println();
         }
     }
 
@@ -197,9 +204,18 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("3218");
         String[] in3218 = {
+                "4 1 1 1",
+                "1 4 2 1",
+                "3 4 1 5",
                 "1 2 3 4 1 2",
                 "1 2 3 4 1 2 3 4 1 2 3"
         };
+        String[] out3218 = {
+            "1 1 1 4",
+            "1 1 2 4",
+            "1 3 4 5",
+            "1 1 2 2 3 4",
+            "1 1 1 2 2 2 3 3 3 4 4"};
         for (int i = 0; i < in3218.length; i++) {
             StringBuilder sb = new StringBuilder();
             List<Integer> result = Lab08.task3218(in3218[i]);
@@ -208,6 +224,8 @@ public class Lab15Task8787 {
                 sb.append(" ");
             }
             System.out.println(sb.toString());
+            System.out.println(out3218[i]);
+            System.out.println();
         }
     }
 
@@ -219,6 +237,11 @@ public class Lab15Task8787 {
             "as df gh",
             "q w e r t y a s d f g"
         };
+        String[] out8820 = {
+            "y t r e w q",
+            "gh df as",
+            "g f d s a y t r e w q"
+        };
         for (int i = 0; i < in8820.length; i++) {
             StringBuilder sb = new StringBuilder();
             List<String> result = Lab08.task8820(in8820[i]);
@@ -227,6 +250,8 @@ public class Lab15Task8787 {
                 sb.append(" ");
             }
             System.out.println(sb.toString());
+            System.out.println(out8820[i]);
+            System.out.println();
         }
     }
 

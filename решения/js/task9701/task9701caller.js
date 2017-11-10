@@ -70,8 +70,10 @@ for (var i = 0; i < in3943x.length; i++){
 		out.innerHTML = e.message;
 	}
 }
-var in8873r1 = ["7331","3","0","7309"];
-var in8873r2 = ["7321","5","7307","0"];
+
+
+var in8873r1 = ["7331","3","15","-11","0","7309"];
+var in8873r2 = ["7321","5","-7","96","7307","0"];
 for (var i = 0; i < in8873r1.length; i++){
 	var out = document.getElementById("8873t" + i);
 	try {
@@ -242,10 +244,10 @@ for (var i = 0; i < in9130m1.length; i++){
 }
 
 
-var in2461a = ["7069", "0", "7019"];
-var in2461b = ["7043", "7043", "7043"];
-var in2461c = ["7039", "7039","7001"];
-var in2461d = ["7057","7027","0"];
+var in2461a = ["11", "7069", "0", "7019"];
+var in2461b = ["3000", "7043", "7043", "7043"];
+var in2461c = ["5", "7039", "7039","7001"];
+var in2461d = ["7", "7057","7027","0"];
 for (var i = 0; i < in2461a.length; i++){
 	var out = document.getElementById("2461t" + i);
 	try {

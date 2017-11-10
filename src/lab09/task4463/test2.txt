@@ -5,6 +5,6 @@
 	</head>
 	<body>
 		Application loading script should be included at the end of body
-		<script scr="application.js">
+		<script src="application.js">
 	</body>
 </html>

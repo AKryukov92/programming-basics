@@ -349,9 +349,15 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("3218");
             String[] in3218 = {
+                "4 1 1 1",
+                "1 4 2 1",
+                "3 4 1 5",
                 "1 2 3 4 1 2",
                 "1 2 3 4 1 2 3 4 1 2 3"};
             String[] out3218 = {
+                "1 1 1 4",
+                "1 1 2 4",
+                "1 3 4 5",
                 "1 1 2 2 3 4",
                 "1 1 1 2 2 2 3 3 3 4 4"};
             for (int i = 0; i < in3218.Length; i++)
@@ -364,6 +370,8 @@ namespace task8787
                     sb.Append(" ");
                 }
                 Console.WriteLine(sb.ToString());
+                Console.WriteLine(out3218[i]);
+                Console.WriteLine();
             }
         }
 
@@ -391,6 +399,8 @@ namespace task8787
                     sb.Append(" ");
                 }
                 Console.WriteLine(sb.ToString());
+                Console.WriteLine(out7703[i]);
+                Console.WriteLine();
             }
         }
 

@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/jasmine.js"></script>
+		<meta name="description" content="Illustration of using scripts">
+	</head>
+	<body>
+		This file includes jquery and jasmine script
+	</body>
+</html>
