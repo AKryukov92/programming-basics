@@ -1,6 +1,9 @@
 //Lab01
 task1662();
-
+var x = 3, y = 5;
+if (x = y){
+	console.log(x);
+}
 
 //Lab02
 var in2361t = ["400","103","300","-800"];

@@ -482,7 +482,7 @@ namespace Methods
             {
                 throw new Exception("Значение D должно быть неотрицательным");
             }
-            return a < c && b < d;
+            return a < c && b < d || a < d && b < c;
         }
 
         public class Point

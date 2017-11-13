@@ -80,8 +80,8 @@ namespace task9701
         {
             Console.WriteLine();
             Console.WriteLine("7237");
-            double[] in7237 = { 0, 20.5, 691.9, -273.15, -300 };
-            double[] outs7237 = { 32, 68.9, 1277.4200, -459.67, 0 };
+            double[] in7237 = { 0, -5, -40, -100, -17.7777, 20.5, 691.9, -273.15, -300 };
+            double[] outs7237 = { 32, 23, -40, -148, 0, 68.9, 1277.4200, -459.67, 0 };
             for (int i = 0; i < in7237.Length; i++)
             {
                 try

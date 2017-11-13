@@ -143,10 +143,10 @@ public class Lab13Task3784 {
     static void Step6556() {
         System.out.println();
         System.out.println("6556");
-        int[] in6556a = {3, 13, 23, -2, 3, 13, 6911};
-        int[] in6556b = {5, 11, 3, 8, -4, 15, 5881};
-        int[] in6556c = {7, 7, 9, 9, 5, -17, 3203};
-        int[] in6556d = {9, 19, 11, 7, 6, 19, -4639};
+        int[] in6556a = { 3, 7, 2, 13, 23, -2, 3, 13, 6911 };
+        int[] in6556b = { 5, 1, 13, 11, 3, 8, -4, 15, 5881 };
+        int[] in6556c = { 7, 11, 5, 7, 9, 9, 5, -17, 3203 };
+        int[] in6556d = { 9, 3, 19, 19, 11, 7, 6, 19, -4639 };
         for (int i = 0; i < in6556a.length; i++){
             try {
                 if (Lab05.task6556(in6556a[i], in6556b[i],
