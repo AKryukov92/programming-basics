@@ -4,13 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.List;
 
 /**
  * @author akryukov
  *         26.04.2017
  */
 public class Lab14 {
-    public static void main(String[] args) {
+    private static final int SCREEN_WIDTH = 500;
+    private static final int SCREEN_HEIGHT = 350;
+
+    public static void main(String[] args) throws Throwable {
+        task2033(".\\task2033\\test14.csv");
+
+        //task2033prepare();
     }
 
     public static void call() {
@@ -121,22 +128,38 @@ public class Lab14 {
         }
     }
 
+    private static void writeToHtml(String filename, String content){
+        try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
+            writer.println("<!DOCTYPE html>" +
+                "<head>\n" +
+                "<meta charset=\"utf-8\"/>\n" +
+                "<head/>\n" +
+                "<body>");
+            writer.println(content);
+            writer.println("</body>\n" +
+                "</html>");
+            Desktop.getDesktop().open(new File(filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void writeToHtml(String filename, int width, int height, String description, String content) {
         try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
             writer.println("<!DOCTYPE html>" +
-                    "<head>\n" +
-                    "<meta charset=\"utf-8\"/>\n" +
-                    "<head/>\n" +
-                    "<body>\n" +
-                    "<h1>");
+                "<head>\n" +
+                "<meta charset=\"utf-8\"/>\n" +
+                "<head/>\n" +
+                "<body>\n" +
+                "<h1>");
             writer.println(filename);
             writer.println("</h1>");
             writer.println(description);
             writer.println(String.format("<svg width=\"%d\" height=\"%d\">", width, height));
             writer.println(content);
             writer.println("</svg>\n" +
-                    "</body>\n" +
-                    "</html>");
+                "</body>\n" +
+                "</html>");
             Desktop.getDesktop().open(new File(filename));
         } catch (IOException e) {
             e.printStackTrace();
@@ -173,14 +196,14 @@ public class Lab14 {
         try (Scanner scanner = new Scanner(target)) {
             logic5032(scanner, rect);
             String description = "<p>Действий: " + rect.getCount() + "</p>" +
-                    "<p>Результат:</p>";
+                "<p>Результат:</p>";
             writeToHtml(filename + ".html", 500, 350, description, example.toString() + rect.toString());
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {
             String description = "<p>Действий: " + rect.getCount() + "</p>" +
-                    "<p>Ошибка: " + e.getMessage() + "</p>" +
-                    "<p>Последнее корректное состояние:</p>";
+                "<p>Ошибка: " + e.getMessage() + "</p>" +
+                "<p>Последнее корректное состояние:</p>";
             writeToHtml(filename + ".html", 500, 350, description, example.toString() + rect.toString());
         }
     }
@@ -199,6 +222,47 @@ public class Lab14 {
             this.w = w;
         }
 
+        @Override
+        public int maxShiftX(int bound) {
+            return bound - x - w;
+        }
+
+        @Override
+        public int minShiftX() {
+            return 1 - x;
+        }
+
+        @Override
+        public int maxShiftY(int bound) {
+            return bound - y - h;
+        }
+
+        @Override
+        public int minShiftY() {
+            return 1 - y;
+        }
+
+        @Override
+        public int maxStretchX(int boundX, int boundY) {
+            return maxShiftX(boundX);
+        }
+
+        @Override
+        public int minStretchX() {
+            return -w + 1;
+        }
+
+        @Override
+        public int maxStretchY(int boundX, int boundY) {
+            return maxShiftY(boundY);
+        }
+
+        @Override
+        public int minStretchY() {
+            return -h + 1;
+        }
+
+        @Override
         public void shiftX(int value) throws Exception {
             if (this.x < -value) {
                 throw new Exception("Координата X должна быть неотрицательной");
@@ -207,6 +271,7 @@ public class Lab14 {
             this.x += value;
         }
 
+        @Override
         public void shiftY(int value) throws Exception {
             if (this.y < -value) {
                 throw new Exception("Координата Y должна быть неотрицательной");
@@ -215,6 +280,7 @@ public class Lab14 {
             this.y += value;
         }
 
+        @Override
         public void stretchX(int value) throws Exception {
             if (this.w <= -value) {
                 throw new Exception("Ширина должна быть положительной");
@@ -223,12 +289,18 @@ public class Lab14 {
             this.w += value;
         }
 
+        @Override
         public void stretchY(int value) throws Exception {
             if (this.h <= -value) {
                 throw new Exception("Высота должна быть положительной");
             }
             this.count++;
             this.h += value;
+        }
+
+        @Override
+        public int getCount() {
+            return count;
         }
 
         @Override
@@ -254,10 +326,10 @@ public class Lab14 {
                     throw new Exception("Идентификатор не должен повторяться (" + id + ")");
                 }
                 map.put(id, new class5108(
-                        Integer.parseInt(arr[2]),
-                        Integer.parseInt(arr[3]),
-                        Integer.parseInt(arr[4]),
-                        Integer.parseInt(arr[5])
+                    Integer.parseInt(arr[2]),
+                    Integer.parseInt(arr[3]),
+                    Integer.parseInt(arr[4]),
+                    Integer.parseInt(arr[5])
                 ));
                 continue;
             }
@@ -283,6 +355,10 @@ public class Lab14 {
     private static void task5108prepare(String id) {
         int MAX_HEIGHT = 300;
         int MAX_WIDTH = 500;
+        int SHIFT_X = 0;
+        int SHIFT_Y = 1;
+        int STRETCH_X = 2;
+        int STRETCH_Y = 3;
         Random rnd = new Random();
         int x = rnd.nextInt(MAX_WIDTH);
         int y = rnd.nextInt(MAX_HEIGHT);
@@ -294,22 +370,22 @@ public class Lab14 {
         try {
             for (int i = 0; i < n; i++) {
                 int action = rnd.nextInt(4);
-                if (action == 0) {//shiftX
+                if (action == SHIFT_X) {
                     int value = rnd.nextInt(MAX_WIDTH - rect.w) - rect.x;
                     System.out.print("shiftX;" + id + ";" + value);
                     rect.shiftX(value);
-                   // System.out.println(";" + (rect.x + rect.w));
-                } else if (action == 1) { //shiftY
+                    // System.out.println(";" + (rect.x + rect.w));
+                } else if (action == SHIFT_Y) {
                     int value = rnd.nextInt(MAX_HEIGHT - rect.h) - rect.y;
                     System.out.print("shiftY;" + id + ";" + value);
                     rect.shiftY(value);
                     //System.out.println(";" + (rect.y + rect.h));
-                } else if (action == 2) {//stretchX
+                } else if (action == STRETCH_X) {
                     int value = rnd.nextInt(MAX_WIDTH - rect.x) - rect.w + 1;
                     System.out.print("stretchX;" + id + ";" + value);
                     rect.stretchX(value);
                     //System.out.println(";" + (rect.y + rect.h));
-                } else if (action == 3) {//stretchY
+                } else if (action == STRETCH_Y) {
                     int value = rnd.nextInt(MAX_HEIGHT - rect.y) - rect.h + 1;
                     System.out.print("stretchY;" + id + ";" + value);
                     rect.stretchY(value);
@@ -442,14 +518,14 @@ public class Lab14 {
             System.out.println(filename);
             logic3567(scanner, circle);
             String description = "<p>Действий: " + circle.getCount() + "</p>" +
-                    "<p>Результат:</p>";
+                "<p>Результат:</p>";
             writeToHtml(filename + ".html", 500, 350, description, example.toString() + circle.toString());
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {
             String description = "<p>Действий: " + circle.getCount() + "</p>" +
-                    "<p>Ошибка: " + e.getMessage() + "</p>" +
-                    "<p>Последнее корректное состояние:</p>";
+                "<p>Ошибка: " + e.getMessage() + "</p>" +
+                "<p>Последнее корректное состояние:</p>";
             writeToHtml(filename + ".html", 500, 350, description, example.toString() + circle.toString());
         }
     }
@@ -462,6 +538,24 @@ public class Lab14 {
         void stretchX(int value) throws Exception;
 
         void stretchY(int value) throws Exception;
+
+        int maxShiftX(int bound);
+
+        int minShiftX();
+
+        int maxShiftY(int bound);
+
+        int minShiftY();
+
+        int maxStretchX(int boundX, int boundY);
+
+        int minStretchX();
+
+        int maxStretchY(int boundX, int boundY);
+
+        int minStretchY();
+
+        int getCount();
     }
 
     public static class class2033 implements interface2033 {
@@ -476,6 +570,7 @@ public class Lab14 {
             this.r = r;
         }
 
+        @Override
         public void shiftX(int value) throws Exception {
             if (this.cx - this.r < -value) {
                 throw new Exception("Левая точка круга должна иметь неотрицательные координаты");
@@ -484,6 +579,7 @@ public class Lab14 {
             count++;
         }
 
+        @Override
         public void shiftY(int value) throws Exception {
             if (this.cy - this.r < -value) {
                 throw new Exception("Верхняя точка круга должна иметь неотрицательные координаты");
@@ -492,6 +588,7 @@ public class Lab14 {
             count++;
         }
 
+        @Override
         public void stretchX(int value) throws Exception {
             if (this.r * 2 <= -value) {
                 throw new Exception("Ширина должна быть положительной");
@@ -502,6 +599,7 @@ public class Lab14 {
             count++;
         }
 
+        @Override
         public void stretchY(int value) throws Exception {
             if (this.r * 2 <= -value) {
                 throw new Exception("Высота должна быть положительной");
@@ -513,13 +611,142 @@ public class Lab14 {
         }
 
         @Override
+        public int maxShiftX(int bound) {
+            return bound - cx - r;
+        }
+
+        @Override
+        public int minShiftX() {
+            return 0 - cx + r;
+        }
+
+        @Override
+        public int maxShiftY(int bound) {
+            return bound - cy - r;
+        }
+
+        @Override
+        public int minShiftY() {
+            return 0 - cy + r;
+        }
+
+        @Override
+        public int maxStretchX(int boundX, int boundY) {
+            if (boundX-cx < boundY-cy) {
+                return maxShiftX(boundX);
+            } else {
+                return maxShiftY(boundY);
+            }
+        }
+
+        @Override
+        public int minStretchX() {
+            return -r - r + 1;
+        }
+
+        @Override
+        public int maxStretchY(int boundX, int boundY) {
+            return maxStretchX(boundX, boundY);
+        }
+
+        @Override
+        public int minStretchY() {
+            return -r - r + 1;
+        }
+
+        @Override
+        public int getCount() {
+            return count;
+        }
+
+        @Override
         public String toString() {
-            return String.format("Действий:%d {\"cx\":%d,\"y\":%d,\"r\":%d}", count, cx, cy, r);
+            return String.format("<circle cx='%d' cy='%d' r='%d' stroke='black' stroke-width='1' fill='transparent'/>", cx, cy, r);
+            //return String.format("Действий:%d {\"cx\":%d,\"y\":%d,\"r\":%d}", count, cx, cy, r);
         }
     }
 
-    public static void logic2033(Scanner scanner) throws Exception {
-        Map<String, interface2033> map = new HashMap<>();
+    public static void task2033prepare() throws Throwable {
+        int n = 1000000;
+        int totalElements = 10;
+        List<interface2033> elements = new ArrayList<>(10);
+        elements.add(new class2033(100, 100, 50));
+        System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), 100, 100, 50);
+        int i = 0;
+        Random rnd = new Random();
+        int SHIFT_X = 1;
+        int SHIFT_Y = 2;
+        int STRETCH_X = 3;
+        int STRETCH_Y = 4;
+        StringBuilder sb = new StringBuilder();
+        while (i < n) {
+            try {
+                int roll = rnd.nextInt(5);
+                if (roll == 0 && elements.size() < totalElements) {
+                    int type = rnd.nextInt(2);
+                    if (type == 1) {
+                        int r = rnd.nextInt(SCREEN_WIDTH/2) - 2;
+                        int cx = rnd.nextInt(SCREEN_WIDTH - r - r) + r;
+                        int cy = rnd.nextInt(SCREEN_HEIGHT - r - r) + r;
+                        System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), cx, cy, r);
+                        elements.add(new class2033(cx, cy, r));
+                    } else {
+                        int w = rnd.nextInt(SCREEN_WIDTH) - 2;
+                        int h = rnd.nextInt(SCREEN_HEIGHT) - 2;
+                        int x = rnd.nextInt(SCREEN_WIDTH - w);
+                        int y = rnd.nextInt(SCREEN_HEIGHT - h);
+                        System.out.printf("create;rectangle;f%s;%d;%d;%d;%d\n", elements.size(), x, y, h, w);
+                        elements.add(new class5108(x, y, h, w));
+                    }
+                } else {
+                    int id = rnd.nextInt(elements.size());
+                    interface2033 item = elements.get(id);
+                    if (roll == SHIFT_X) {
+                        int min = item.minShiftX();
+                        int max = item.maxShiftX(SCREEN_WIDTH);
+                        int value = rnd.nextInt(max - min) + min;
+                        System.out.printf("shiftX;f%s;%d\n", id, value);
+                        item.shiftX(value);
+                    } else if (roll == SHIFT_Y) {
+                        int min = item.minShiftY();
+                        int max = item.maxShiftY(SCREEN_HEIGHT);
+                        int value = rnd.nextInt(max - min) + min;
+                        System.out.printf("shiftY;f%s;%d\n", id, value);
+                        item.shiftY(value);
+                    } else if (roll == STRETCH_X) {
+                        int min = item.minStretchX();
+                        int max = item.maxStretchX(SCREEN_WIDTH, SCREEN_HEIGHT);
+                        int value = rnd.nextInt(max - min) + min;
+                        System.out.printf("stretchX;f%s;%d\n", id, value);
+                        item.stretchX(value);
+                    } else if (roll == STRETCH_Y) {
+                        int min = item.minStretchY();
+                        int max = item.maxStretchY(SCREEN_WIDTH, SCREEN_HEIGHT);
+                        int value = rnd.nextInt(max - min) + min;
+                        System.out.printf("stretchY;f%s;%d\n", id, value);
+                        item.stretchY(value);
+                    }
+                }
+            } catch (Exception ex){
+                sb.append(String.format("<svg width='%d' height='%d'>", SCREEN_WIDTH, SCREEN_HEIGHT));
+                for (interface2033 item : elements) {
+                    sb.append(item);
+                }
+                sb.append("</svg>");
+                //writeToHtml("data2033.html", sb.toString());
+                throw new Throwable(ex);
+            }
+            i++;
+        }
+        sb.append(String.format("<svg width='%d' height='%d'>", SCREEN_WIDTH, SCREEN_HEIGHT));
+        for (interface2033 item : elements) {
+            sb.append(item);
+        }
+        sb.append("</svg>");
+        writeToHtml("data2033.html", sb.toString());
+    }
+
+    public static void logic2033(Scanner scanner, Map<String, interface2033> map) throws Exception {
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
             String[] arr = line.split(";");
@@ -538,19 +765,19 @@ public class Lab14 {
                         throw new Exception("Некорректный формат");
                     }
                     map.put(id, new class2033(
-                            Integer.parseInt(arr[3]),
-                            Integer.parseInt(arr[4]),
-                            Integer.parseInt(arr[5])
+                        Integer.parseInt(arr[3]),
+                        Integer.parseInt(arr[4]),
+                        Integer.parseInt(arr[5])
                     ));
                 } else if (type.equals("rectangle")) {
                     if (arr.length != 7) {
                         throw new Exception("Некорректный формат");
                     }
                     map.put(id, new class5108(
-                            Integer.parseInt(arr[3]),
-                            Integer.parseInt(arr[4]),
-                            Integer.parseInt(arr[5]),
-                            Integer.parseInt(arr[6])
+                        Integer.parseInt(arr[3]),
+                        Integer.parseInt(arr[4]),
+                        Integer.parseInt(arr[5]),
+                        Integer.parseInt(arr[6])
                     ));
                 } else {
                     throw new Exception("Неизвестная фигура");
@@ -577,18 +804,22 @@ public class Lab14 {
                 return;
             }
         }
-        for (Map.Entry<String, interface2033> item : map.entrySet()) {
-            System.out.print(item.getKey());
-            System.out.print(" ");
-            System.out.println(item.getValue());
-        }
     }
 
     private static void task2033(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
             System.out.println(filename);
-            logic2033(scanner);
+            Map<String, interface2033> results = new HashMap<>();
+            logic2033(scanner, results);
+
+            StringBuilder description = new StringBuilder();
+            StringBuilder geometry = new StringBuilder();
+            for (Map.Entry<String, interface2033> item : results.entrySet()) {
+                description.append(item.getKey()).append(" Действий:").append(item.getValue().getCount()).append("<br/>");
+                geometry.append(item.getValue());
+            }
+            writeToHtml(filename + ".html", SCREEN_WIDTH, SCREEN_HEIGHT, description.toString(), geometry.toString());
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {
@@ -613,19 +844,19 @@ public class Lab14 {
                     throw new Exception("Некорректный формат");
                 }
                 map.put(id, new class2033(
-                        Integer.parseInt(arr[3]),
-                        Integer.parseInt(arr[4]),
-                        Integer.parseInt(arr[5])
+                    Integer.parseInt(arr[3]),
+                    Integer.parseInt(arr[4]),
+                    Integer.parseInt(arr[5])
                 ));
             } else if (type.equals("rectangle")) {
                 if (arr.length != 7) {
                     throw new Exception("Некорректный формат");
                 }
                 map.put(id, new class5108(
-                        Integer.parseInt(arr[3]),
-                        Integer.parseInt(arr[4]),
-                        Integer.parseInt(arr[5]),
-                        Integer.parseInt(arr[6])
+                    Integer.parseInt(arr[3]),
+                    Integer.parseInt(arr[4]),
+                    Integer.parseInt(arr[5]),
+                    Integer.parseInt(arr[6])
                 ));
             } else {
                 throw new Exception("Неизвестная фигура");
