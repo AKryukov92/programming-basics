@@ -13,10 +13,17 @@ import java.util.List;
 public class Lab14 {
     private static final int SCREEN_WIDTH = 500;
     private static final int SCREEN_HEIGHT = 350;
+    private static final int SHIFT_X = 0;
+    private static final int SHIFT_Y = 1;
+    private static final int STRETCH_X = 2;
+    private static final int STRETCH_Y = 3;
+    private static final int CIRCLE = 4;
+    private static final int RECTANGLE = 5;
 
     public static void main(String[] args) throws Throwable {
-        task2033(".\\task2033\\test14.csv");
-
+        //task2033(".\\task2033\\test14.csv");
+        //task6981prepare();
+        Step6981();
         //task2033prepare();
     }
 
@@ -128,7 +135,7 @@ public class Lab14 {
         }
     }
 
-    private static void writeToHtml(String filename, String content){
+    private static void writeToHtml(String filename, String content) {
         try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
             writer.println("<!DOCTYPE html>" +
                 "<head>\n" +
@@ -353,17 +360,11 @@ public class Lab14 {
     }
 
     private static void task5108prepare(String id) {
-        int MAX_HEIGHT = 300;
-        int MAX_WIDTH = 500;
-        int SHIFT_X = 0;
-        int SHIFT_Y = 1;
-        int STRETCH_X = 2;
-        int STRETCH_Y = 3;
         Random rnd = new Random();
-        int x = rnd.nextInt(MAX_WIDTH);
-        int y = rnd.nextInt(MAX_HEIGHT);
-        int w = rnd.nextInt(MAX_WIDTH - x);
-        int h = rnd.nextInt(MAX_HEIGHT - y);
+        int x = rnd.nextInt(SCREEN_WIDTH);
+        int y = rnd.nextInt(SCREEN_HEIGHT);
+        int w = rnd.nextInt(SCREEN_WIDTH - x);
+        int h = rnd.nextInt(SCREEN_HEIGHT - y);
         class5108 rect = new class5108(x, y, h, w);
         System.out.printf("create;%s;%d;%d;%d;%d\n", id, x, y, h, w);
         int n = rnd.nextInt(100) + 100;
@@ -371,22 +372,22 @@ public class Lab14 {
             for (int i = 0; i < n; i++) {
                 int action = rnd.nextInt(4);
                 if (action == SHIFT_X) {
-                    int value = rnd.nextInt(MAX_WIDTH - rect.w) - rect.x;
+                    int value = rnd.nextInt(SCREEN_WIDTH - rect.w) - rect.x;
                     System.out.print("shiftX;" + id + ";" + value);
                     rect.shiftX(value);
                     // System.out.println(";" + (rect.x + rect.w));
                 } else if (action == SHIFT_Y) {
-                    int value = rnd.nextInt(MAX_HEIGHT - rect.h) - rect.y;
+                    int value = rnd.nextInt(SCREEN_HEIGHT - rect.h) - rect.y;
                     System.out.print("shiftY;" + id + ";" + value);
                     rect.shiftY(value);
                     //System.out.println(";" + (rect.y + rect.h));
                 } else if (action == STRETCH_X) {
-                    int value = rnd.nextInt(MAX_WIDTH - rect.x) - rect.w + 1;
+                    int value = rnd.nextInt(SCREEN_WIDTH - rect.x) - rect.w + 1;
                     System.out.print("stretchX;" + id + ";" + value);
                     rect.stretchX(value);
                     //System.out.println(";" + (rect.y + rect.h));
                 } else if (action == STRETCH_Y) {
-                    int value = rnd.nextInt(MAX_HEIGHT - rect.y) - rect.h + 1;
+                    int value = rnd.nextInt(SCREEN_HEIGHT - rect.y) - rect.h + 1;
                     System.out.print("stretchY;" + id + ";" + value);
                     rect.stretchY(value);
                     //System.out.println(";" + (rect.y + rect.h));
@@ -632,7 +633,7 @@ public class Lab14 {
 
         @Override
         public int maxStretchX(int boundX, int boundY) {
-            if (boundX-cx < boundY-cy) {
+            if (boundX - cx < boundY - cy) {
                 return maxShiftX(boundX);
             } else {
                 return maxShiftY(boundY);
@@ -666,68 +667,125 @@ public class Lab14 {
         }
     }
 
+    public static void task6981prepare() {
+        int n = 100000;
+        int totalElements = 10;
+        List<interface2033> elements = new ArrayList<>(totalElements);
+        elements.add(new class2033(100, 100, 50));
+        System.out.printf("create;circle;f0;%d;%d;%d\n", 100, 100, 50);
+        Random rnd = new Random();
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        while (i < n) {
+            try {
+                int roll = rnd.nextInt(6);
+                int id = rnd.nextInt(elements.size());
+                interface2033 item = elements.get(id);
+                if (roll == SHIFT_X) {
+                    int min = -SCREEN_WIDTH;
+                    int max = item.maxShiftX(SCREEN_WIDTH);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("shiftX;f%d;%d\n", id, value);
+                    item.shiftX(value);
+                } else if (roll == SHIFT_Y){
+                    int min = -SCREEN_HEIGHT;
+                    int max = item.maxShiftY(SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("shiftY;f%d;%d\n", id, value);
+                    item.shiftY(value);
+                } else if (roll == STRETCH_X){
+                    int min = -1000;
+                    int max = item.maxStretchX(SCREEN_WIDTH, SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("stretchX;f%d;%d\n", id, value);
+                    item.stretchX(value);
+                } else if (roll == STRETCH_Y){
+                    int min = -1000;
+                    int max = item.maxStretchY(SCREEN_WIDTH, SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("stretchY;f%d;%d\n", id, value);
+                    item.stretchY(value);
+                } else if (roll == CIRCLE && elements.size() < totalElements) {
+                    int r = rnd.nextInt(SCREEN_WIDTH / 2) - 2;
+                    int cx = rnd.nextInt(SCREEN_WIDTH - r - r) + r;
+                    int cy = rnd.nextInt(SCREEN_HEIGHT - r - r) + r;
+                    System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), cx, cy, r);
+                    elements.add(new class2033(cx, cy, r));
+                } else if (roll == RECTANGLE && elements.size() < totalElements) {
+                    int w = rnd.nextInt(SCREEN_WIDTH) - 2;
+                    int h = rnd.nextInt(SCREEN_HEIGHT) - 2;
+                    int x = rnd.nextInt(SCREEN_WIDTH - w);
+                    int y = rnd.nextInt(SCREEN_HEIGHT - h);
+                    System.out.printf("create;rectangle;f%s;%d;%d;%d;%d\n", elements.size(), x, y, h, w);
+                    elements.add(new class5108(x, y, h, w));
+                }
+            } catch (Exception e) {
+                //System.out.println(e.getMessage());
+                //ignore and keep producing entries
+            }
+            i++;
+        }
+        sb.append(String.format("<svg width='%d' height='%d'>", SCREEN_WIDTH, SCREEN_HEIGHT));
+        for (interface2033 item : elements) {
+            sb.append(item);
+        }
+        sb.append("</svg>");
+        writeToHtml("data6981.html", sb.toString());
+    }
+
     public static void task2033prepare() throws Throwable {
         int n = 1000000;
         int totalElements = 10;
-        List<interface2033> elements = new ArrayList<>(10);
+        List<interface2033> elements = new ArrayList<>(totalElements);
         elements.add(new class2033(100, 100, 50));
         System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), 100, 100, 50);
         int i = 0;
         Random rnd = new Random();
-        int SHIFT_X = 1;
-        int SHIFT_Y = 2;
-        int STRETCH_X = 3;
-        int STRETCH_Y = 4;
         StringBuilder sb = new StringBuilder();
         while (i < n) {
             try {
-                int roll = rnd.nextInt(5);
-                if (roll == 0 && elements.size() < totalElements) {
-                    int type = rnd.nextInt(2);
-                    if (type == 1) {
-                        int r = rnd.nextInt(SCREEN_WIDTH/2) - 2;
-                        int cx = rnd.nextInt(SCREEN_WIDTH - r - r) + r;
-                        int cy = rnd.nextInt(SCREEN_HEIGHT - r - r) + r;
-                        System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), cx, cy, r);
-                        elements.add(new class2033(cx, cy, r));
-                    } else {
-                        int w = rnd.nextInt(SCREEN_WIDTH) - 2;
-                        int h = rnd.nextInt(SCREEN_HEIGHT) - 2;
-                        int x = rnd.nextInt(SCREEN_WIDTH - w);
-                        int y = rnd.nextInt(SCREEN_HEIGHT - h);
-                        System.out.printf("create;rectangle;f%s;%d;%d;%d;%d\n", elements.size(), x, y, h, w);
-                        elements.add(new class5108(x, y, h, w));
-                    }
-                } else {
-                    int id = rnd.nextInt(elements.size());
-                    interface2033 item = elements.get(id);
-                    if (roll == SHIFT_X) {
-                        int min = item.minShiftX();
-                        int max = item.maxShiftX(SCREEN_WIDTH);
-                        int value = rnd.nextInt(max - min) + min;
-                        System.out.printf("shiftX;f%s;%d\n", id, value);
-                        item.shiftX(value);
-                    } else if (roll == SHIFT_Y) {
-                        int min = item.minShiftY();
-                        int max = item.maxShiftY(SCREEN_HEIGHT);
-                        int value = rnd.nextInt(max - min) + min;
-                        System.out.printf("shiftY;f%s;%d\n", id, value);
-                        item.shiftY(value);
-                    } else if (roll == STRETCH_X) {
-                        int min = item.minStretchX();
-                        int max = item.maxStretchX(SCREEN_WIDTH, SCREEN_HEIGHT);
-                        int value = rnd.nextInt(max - min) + min;
-                        System.out.printf("stretchX;f%s;%d\n", id, value);
-                        item.stretchX(value);
-                    } else if (roll == STRETCH_Y) {
-                        int min = item.minStretchY();
-                        int max = item.maxStretchY(SCREEN_WIDTH, SCREEN_HEIGHT);
-                        int value = rnd.nextInt(max - min) + min;
-                        System.out.printf("stretchY;f%s;%d\n", id, value);
-                        item.stretchY(value);
-                    }
+                int roll = rnd.nextInt(6);
+                int id = rnd.nextInt(elements.size());
+                interface2033 item = elements.get(id);
+                if (roll == SHIFT_X) {
+                    int min = item.minShiftX();
+                    int max = item.maxShiftX(SCREEN_WIDTH);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("shiftX;f%s;%d\n", id, value);
+                    item.shiftX(value);
+                } else if (roll == SHIFT_Y) {
+                    int min = item.minShiftY();
+                    int max = item.maxShiftY(SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("shiftY;f%s;%d\n", id, value);
+                    item.shiftY(value);
+                } else if (roll == STRETCH_X) {
+                    int min = item.minStretchX();
+                    int max = item.maxStretchX(SCREEN_WIDTH, SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("stretchX;f%s;%d\n", id, value);
+                    item.stretchX(value);
+                } else if (roll == STRETCH_Y) {
+                    int min = item.minStretchY();
+                    int max = item.maxStretchY(SCREEN_WIDTH, SCREEN_HEIGHT);
+                    int value = rnd.nextInt(max - min) + min;
+                    System.out.printf("stretchY;f%s;%d\n", id, value);
+                    item.stretchY(value);
+                } else if (roll == CIRCLE && elements.size() < totalElements) {
+                    int r = rnd.nextInt(SCREEN_WIDTH / 2) - 2;
+                    int cx = rnd.nextInt(SCREEN_WIDTH - r - r) + r;
+                    int cy = rnd.nextInt(SCREEN_HEIGHT - r - r) + r;
+                    System.out.printf("create;circle;f%s;%d;%d;%d\n", elements.size(), cx, cy, r);
+                    elements.add(new class2033(cx, cy, r));
+                } else if (roll == RECTANGLE && elements.size() < totalElements) {
+                    int w = rnd.nextInt(SCREEN_WIDTH) - 2;
+                    int h = rnd.nextInt(SCREEN_HEIGHT) - 2;
+                    int x = rnd.nextInt(SCREEN_WIDTH - w);
+                    int y = rnd.nextInt(SCREEN_HEIGHT - h);
+                    System.out.printf("create;rectangle;f%s;%d;%d;%d;%d\n", elements.size(), x, y, h, w);
+                    elements.add(new class5108(x, y, h, w));
                 }
-            } catch (Exception ex){
+            } catch (Exception ex) {
                 sb.append(String.format("<svg width='%d' height='%d'>", SCREEN_WIDTH, SCREEN_HEIGHT));
                 for (interface2033 item : elements) {
                     sb.append(item);
@@ -882,8 +940,7 @@ public class Lab14 {
         }
     }
 
-    static void logic6981(Scanner scanner) {
-        Map<String, interface2033> map = new HashMap<>();
+    static int logic6981(Scanner scanner, Map<String, interface2033> map) {
         int count = 0;
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
@@ -893,19 +950,24 @@ public class Lab14 {
                 count++;
             }
         }
-        for (Map.Entry<String, interface2033> item : map.entrySet()) {
-            System.out.print(item.getKey());
-            System.out.print(" ");
-            System.out.println(item.getValue());
-        }
-        System.out.println("Некорректных записей: " + count);
+        return count;
     }
 
     public static void task6981(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
+            Map<String, interface2033> map = new HashMap<>();
             System.out.println(filename);
-            logic6981(scanner);
+            int errorCount = logic6981(scanner, map);
+            StringBuilder description = new StringBuilder();
+            StringBuilder geometry = new StringBuilder();
+            for (Map.Entry<String, interface2033> item : map.entrySet()) {
+                description.append(item.getKey()).append(" Действий:").append(item.getValue().getCount()).append("<br/>");
+                geometry.append(item.getValue());
+            }
+            description.append("Некорректных записей: ").append(errorCount);
+            writeToHtml(filename + ".html", SCREEN_WIDTH, SCREEN_HEIGHT, description.toString(), geometry.toString());
+
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         }

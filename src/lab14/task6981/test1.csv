@@ -2,13 +2,13 @@ create;rectangle;id422;100;100;100;100
 stretchY;id422;-14;-44
 create;rectangle;id780;100;100;100;100
 shiftY;id780;-16;41
-create;circle;id458;1000;1000;500
+create;circle;id458;100;100;500
 shiftY;id458;-7;-24
 create;rectangle;id986;100;100;100;100
 shiftX;id986;-18;24
 stretchX;id780;35;36
 shiftX;id458;-46;31
-create;circle;id498;1000;1000;500
+create;circle;id498;100;100;500
 stretchY;id498;40;-11
 stretchX;id458;13;18
 create;rectangle;id604;100;100;100;100
