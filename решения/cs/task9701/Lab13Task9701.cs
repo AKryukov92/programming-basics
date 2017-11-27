@@ -50,9 +50,10 @@ namespace task9701
             Step7290();
             Step8769();
             Step7799();
+            Step9354();
             Step9180();
-            Step1544();
 
+            Step1544();
             Step1346();
         }
         
@@ -848,6 +849,29 @@ namespace task9701
                 {
                     Console.WriteLine(e.Message);
                 }
+            }
+        }
+        
+        static void Step9354()
+        {
+            Console.WriteLine();
+            Console.WriteLine("9354");
+            Console.WriteLine("{0} ({1})", Lab02.Task9354(7247, 7243, 7229), -157093203);
+            Console.WriteLine("{0} ({1})", Lab02.Task9354(7, 1, 3), -83);
+            Console.WriteLine("{0} ({1})", Lab02.Task9354(-11, -13, -17), -579);
+            try
+            {
+                Lab02.Task9354(0, 1, 3);
+            } catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            try
+            {
+                Lab02.Task9354(0, 1000, 2000);
+            } catch(ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }

@@ -51,9 +51,9 @@ namespace Methods
 
             Console.WriteLine();
             Console.WriteLine("9622");
-            int[] in9622m = {7351,19,-1,2,3};
-            int[] in9622v = {7349,23,4,-5,6};
-            int[] in9622h = {7333,29,7,8,-9};
+            int[] in9622m = { 7351, 19, -1, 2, 3 };
+            int[] in9622v = { 7349, 23, 4, -5, 6 };
+            int[] in9622h = { 7333, 29, 7, 8, -9 };
             for (int i = 0; i < in9622m.Length; i++)
             {
                 try
@@ -75,7 +75,8 @@ namespace Methods
 
         public static int Task9298(int a)
         {
-            if (a <= 0) {
+            if (a <= 0)
+            {
                 throw new Exception("Значение A должно быть положительным");
             }
             return 6 * a * a;
@@ -83,7 +84,8 @@ namespace Methods
 
         public static int Task3354(int a)
         {
-            if (a <= 0) {
+            if (a <= 0)
+            {
                 throw new Exception("Значение A должно быть положительным");
             }
             return a * a * a;
@@ -91,7 +93,8 @@ namespace Methods
 
         public static double Task5201(int r)
         {
-            if (r <= 0) {
+            if (r <= 0)
+            {
                 throw new Exception("Значение R должно быть положительным");
             }
             return 2 * Math.PI * r;
@@ -99,7 +102,8 @@ namespace Methods
 
         public static double Task2981(int r)
         {
-            if (r <= 0) {
+            if (r <= 0)
+            {
                 throw new Exception("Значение R должно быть положительным");
             }
             return 4 * Math.PI * r * r * r / 3;
@@ -107,10 +111,12 @@ namespace Methods
 
         public static double Task4312(int a, int h)
         {
-            if (a <= 0) {
+            if (a <= 0)
+            {
                 throw new Exception("Значение A должно быть положительным");
             }
-            if (h <= 0) {
+            if (h <= 0)
+            {
                 throw new Exception("Значение H должно быть положительным");
             }
             return (double)a * (double)h / 2;
@@ -131,7 +137,7 @@ namespace Methods
                 this.amount = amount;
                 this.deficit = deficit;
             }
-            
+
             public override String ToString()
             {
                 return amount + " шт и " + deficit + " см";
@@ -140,10 +146,12 @@ namespace Methods
 
         public static class2361 Task2361(int t, int l)
         {
-            if (t <= 0) {
+            if (t <= 0)
+            {
                 throw new Exception("Значение T должно быть положительным");
             }
-            if (l <= 0) {
+            if (l <= 0)
+            {
                 throw new Exception("Значение L должно быть положительным");
             }
             return new class2361(t * 100 / l, t * 100 % l);
@@ -161,7 +169,8 @@ namespace Methods
 
         public static double Task8833(int x)
         {
-            if (x < 0) {
+            if (x < 0)
+            {
                 throw new Exception("Значение X должно быть неотрицательным");
             }
             return Math.Sqrt(x);
@@ -183,7 +192,8 @@ namespace Methods
 
         public static double Task1934(int a, int b)
         {
-            if (b > 0) {
+            if (b > 0)
+            {
                 throw new Exception("Значение B должно быть не положительным");
             }
             return a * Math.Sqrt(-7 * b);
@@ -191,7 +201,8 @@ namespace Methods
 
         public static double Task7237(double t)
         {
-            if (t < -273.15) {
+            if (t < -273.15)
+            {
                 throw new Exception("Значение T должно быть не ниже абсолютного нуля");
             }
             return t * 1.8 + 32;
@@ -199,10 +210,12 @@ namespace Methods
 
         public static double Task3943(int x, int y)
         {
-            if (y < 0) {
+            if (y < 0)
+            {
                 throw new Exception("Значение y должно быть неотрицательным");
             }
-            if (x + Math.Sqrt(y) < 0) {
+            if (x + Math.Sqrt(y) < 0)
+            {
                 throw new Exception("Подкоренное выражение должно быть неотрицательным");
             }
             return -5 * Math.Sqrt(x + Math.Sqrt(y));
@@ -210,7 +223,8 @@ namespace Methods
 
         public static double Task7619(int v1, int v2, int s)
         {
-            if (v1 < 0 || v2 < 0) {
+            if (v1 < 0 || v2 < 0)
+            {
                 throw new Exception("Скорость должна быть неотрицательна");
             }
             if (s < 0)
@@ -257,13 +271,16 @@ namespace Methods
 
         public static class9622 Task9622(int m, int v, int h)
         {
-            if (m <= 0){
+            if (m <= 0)
+            {
                 throw new Exception("Значение M должно быть положительным");
             }
-            if (v <= 0){
+            if (v <= 0)
+            {
                 throw new Exception("Значение V должно быть положительным");
             }
-            if (h < 0){
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательным");
             }
             double g = 9.8067;
@@ -272,10 +289,12 @@ namespace Methods
 
         public static double Task8873(int r1, int r2)
         {
-            if (r1 == 0) {
+            if (r1 == 0)
+            {
                 throw new Exception("Значение r1 должно быть не равно нулю");
             }
-            if (r2 == 0) {
+            if (r2 == 0)
+            {
                 throw new Exception("Значение r2 должно быть не равно нулю");
             }
             return 1.0 / r1 + 1.0 / r2;
@@ -297,12 +316,17 @@ namespace Methods
 
         public static double Task9354(int a, int b, int c)
         {
+            if (a == 0)
+            {
+                throw new ArgumentException(String.Format("Уравнение y={0}x^2+{1}x+{2} не является квадратным", a, b, c));
+            }
             return b * b - 4 * a * c;
         }
 
         public static double Task9130(int m1, int m2, int r)
         {
-            if (r == 0) {
+            if (r == 0)
+            {
                 throw new Exception("Значение r должно быть не равно нулю");
             }
             double g = 9.8067;
@@ -316,10 +340,12 @@ namespace Methods
 
         public static double Task2461(int a, int b, int c, int d)
         {
-            if (a == 0) {
+            if (a == 0)
+            {
                 throw new Exception("Значение a должно быть не равно нулю");
             }
-            if (d == 0) {
+            if (d == 0)
+            {
                 throw new Exception("Значение d должно быть не равно нулю");
             }
             return (double)(a * d + b * c) / (a * d);
@@ -333,11 +359,13 @@ namespace Methods
 
         public static double Task2624(long a, long b, long c, long x)
         {
-            if (a * x * x + b * x + c < 0) {
+            if (a * x * x + b * x + c < 0)
+            {
                 throw new Exception("Подкоренное выражение должно быть неотрицательным");
             }
             double denominator = Math.Sqrt(a * x * x + b * x + c);
-            if (denominator == 0) {
+            if (denominator == 0)
+            {
                 throw new Exception("Знаменатель не может быть равен нулю");
             }
             return 1.0 / denominator;
@@ -345,7 +373,8 @@ namespace Methods
 
         public static double Task5871(double x)
         {
-            if (x < 5) {
+            if (x < 5)
+            {
                 throw new Exception("Подкоренное выражение должно быть неотрицательным");
             }
             return (Math.Sqrt(x + 5) + Math.Sqrt(x - 5)) / 2 / Math.Sqrt(x);
@@ -408,7 +437,7 @@ namespace Methods
                 this.v = v;
                 this.t = t;
             }
-            
+
             public override String ToString()
             {
                 return String.Format("v {0:F4} t {1:F4}", v, t);
@@ -417,10 +446,12 @@ namespace Methods
 
         public static class6522 Task6522(int v1, int t1, int v2, int t2)
         {
-            if (v1 < 0) {
+            if (v1 < 0)
+            {
                 throw new Exception("Значение v1 должно быть неотрицательным");
             }
-            if (v2 < 0) {
+            if (v2 < 0)
+            {
                 throw new Exception("Значение v2 должно быть неотрицательным");
             }
             return new class6522(v1 + v2, (double)(t1 * v1 + t2 * v2) / (v1 + v2));

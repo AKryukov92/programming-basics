@@ -489,3 +489,15 @@ for (var i = 0; i < in1544.length; i++){
 		out.innerHTML = e.message;
 	}
 }
+
+var in9354a = ["7247", "7", "-11", "0", "0"];
+var in9354b = ["7243", "1", "-13", "1", "1000"];
+var in9354c = ["7229", "3", "-17", "3", "2000"];
+for (var i = 0; i < in9354a.length; i++){
+	try {
+		var out = document.getElementById("9354t" + i);
+		out.innerHTML = task9354(in9354a[i], in9354b[i], in9354c[i]).toFixed(4);
+	} catch (e) {
+		out.innerHTML = e.message;
+	}
+}
