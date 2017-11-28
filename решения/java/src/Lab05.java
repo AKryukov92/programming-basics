@@ -18,11 +18,11 @@ public class Lab05 {
         System.out.println("5635");
         int[] in5635xt = {30, 120, 210, 50, 150, 200, 80, 160, 220, 100, 130, 190, 180, 100, 190, 100, 190, -10, 40};
         int[] in5635yt = {20, 30, 40, 120, 130, 150, 190, 180, 200, 110, 100, 140, 170, 100, 100, 170, 170, 30, -20};
-        for (int i = 0; i < in5635xt.length; i++){
+        for (int i = 0; i < in5635xt.length; i++) {
             try {
                 Point t = makePointByXY(in5635xt[i], in5635yt[i]);
                 Rectangle r = makeRectangleByXYHW(100, 100, 70, 90);
-                if (task5635(t, r)){
+                if (task5635(t, r)) {
                     System.out.println("точка внутри");
                 } else {
                     System.out.println("точка снаружи");
@@ -39,12 +39,12 @@ public class Lab05 {
         int[] in3878yp1 = {1, 0, 1, 1, 1, 4, 1};
         int[] in3878xp2 = {3, 2, 2, 2, 2, 4, 2};
         int[] in3878yp2 = {3, 6, 2, 2, 2, 0, 2};
-        for (int i = 0; i < in3878xt.length; i++){
+        for (int i = 0; i < in3878xt.length; i++) {
             try {
                 Point t = makePointByXY(in3878xt[i], in3878yt[i]);
                 Point p1 = makePointByXY(in3878xp1[i], in3878yp1[i]);
                 Point p2 = makePointByXY(in3878xp2[i], in3878yp2[i]);
-                if (task3878(t, p1, p2)){
+                if (task3878(t, p1, p2)) {
                     System.out.println("Точка принадлежит прямой");
                 } else {
                     System.out.println("Точка не принадлежит прямой");
@@ -59,11 +59,11 @@ public class Lab05 {
         int[] in1217b1 = {3, 17, 37, 53, 15, 71, 73, 101};
         int[] in1217a2 = {5, 13, 29, 41, 0, 59, 83, 107};
         int[] in1217b2 = {7, 19, 31, 47, 30, 61, 89, 103};
-        for (int i = 0; i < in1217a1.length; i++){
+        for (int i = 0; i < in1217a1.length; i++) {
             try {
                 Interval i1 = makeIntervalByEnds(in1217a1[i], in1217b1[i]);
                 Interval i2 = makeIntervalByEnds(in1217a2[i], in1217b2[i]);
-                if (task1217check(i1,i2)){
+                if (task1217check(i1, i2)) {
                     System.out.print("Пересекаются ");
                     Interval x = task1217intersection(i1, i2);
                     System.out.println("(" + x.a + "; " + x.b + ")");
@@ -84,11 +84,11 @@ public class Lab05 {
         int[] in1435y2 = {50, 225, 500, 400, 50, 200, 150, 200, 5, 0, 100, 0, 200, 202, 100};
         int[] in1435h2 = {300, 200, 100, 100, 120, 50, 150, 700, 10, 10, 300, 610, 100, 61, 120};
         int[] in1435w2 = {350, 200, 120, 120, 200, 50, 300, 100, 10, 30, 200, 610, 10, 62, 220};
-        for (int i = 0; i < in1438x1.length; i++){
+        for (int i = 0; i < in1438x1.length; i++) {
             try {
                 Rectangle r1 = makeRectangleByXYHW(in1438x1[i], in1435y1[i], in1435h1[i], in1435w1[i]);
                 Rectangle r2 = makeRectangleByXYHW(in1435x2[i], in1435y2[i], in1435h2[i], in1435w2[i]);
-                if (task1438check(r1, r2)){
+                if (task1438check(r1, r2)) {
                     System.out.print("Пересекаются");
                     Rectangle rx = task1438intersect(r1, r2);
                     System.out.printf("{\"x\":%d,\"y\":%d,\"w\":%d,\"h\":%d}\n", rx.x, rx.y, rx.w, rx.h);
@@ -101,40 +101,42 @@ public class Lab05 {
         }
     }
 
-    public static boolean task8878(int a, int b){
+    public static boolean task8878(int a, int b) {
         return a < b;
     }
 
-    public static class class3072{
+    public static class class3072 {
         int max;
         int min;
-        public class3072(int max, int min){
+
+        public class3072(int max, int min) {
             this.max = max;
             this.min = min;
         }
-        public String print(){
+
+        public String print() {
             return "Максимальное " + max + ", минимальное " + min;
         }
     }
 
-    public static class3072 task3072(int p, int q){
-        if (p > q){
+    public static class3072 task3072(int p, int q) {
+        if (p > q) {
             return new class3072(p, q);
         } else {
             return new class3072(q, p);
         }
     }
 
-    public static double task5980(int k){
-        if(k > 0){
+    public static double task5980(int k) {
+        if (k > 0) {
             return Math.sqrt(k);
         } else {
             return k * k;
         }
     }
 
-    public static int task8174(int a){
-        if (a>0){
+    public static int task8174(int a) {
+        if (a > 0) {
             return a;
         } else {
             return -a;
@@ -142,24 +144,24 @@ public class Lab05 {
     }
 
     public static boolean task4257(double l, double p) throws Exception {
-        if(l < 0){
+        if (l < 0) {
             throw new Exception("Расстояние между деревнями должно быть неотрицательно");
         }
-        if(p < 0){
+        if (p < 0) {
             throw new Exception("Длина кабеля должна быть неотрицательна");
         }
         return l * 1000 < p * 0.305;
     }
 
     public static String task2291(double velocityInKmH, double velocityInMS) throws Exception {
-        if (velocityInKmH < 0){
+        if (velocityInKmH < 0) {
             throw new Exception("Скорость корабля должна быть неотрицательна");
         }
-        if (velocityInMS < 0){
+        if (velocityInMS < 0) {
             throw new Exception("Скорость кометы должна быть неотрицательна");
         }
         double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
-        if (velocityInMS1 < velocityInMS){
+        if (velocityInMS1 < velocityInMS) {
             return String.format("Комета улетит от корабля. Скорость корабля %.2f км/ч меньше скорости кометы %.2f м/с", velocityInKmH, velocityInMS);
         } else {
             return String.format("Корабль догонит комету. Скорость кометы %.2f км/ч меньше скорости корабля %.2f м/с", velocityInMS, velocityInKmH);
@@ -167,10 +169,10 @@ public class Lab05 {
     }
 
     public static String task1763(int r, int a) throws Exception {
-        if (r <= 0){
+        if (r <= 0) {
             throw new Exception("Радиус должен быть положительным");
         }
-        if (a <= 0){
+        if (a <= 0) {
             throw new Exception("Сторона квадрата должна быть положительна");
         }
         double areaSquare = a * a;
@@ -182,14 +184,14 @@ public class Lab05 {
         }
     }
 
-    public static String task5662(int a, int b, int c){
-        if (a == 0){
+    public static String task5662(int a, int b, int c) {
+        if (a == 0) {
             return "Данное уравнение не является квадратным";
         }
-        double d = b*b - 4*a*c;
-        if(d > 0){
-            return "У уравнения "+ a + "x^2 + " + b + "x + " + c + " два вещественных корня";
-        } else if (d == 0){
+        double d = b * b - 4 * a * c;
+        if (d > 0) {
+            return "У уравнения " + a + "x^2 + " + b + "x + " + c + " два вещественных корня";
+        } else if (d == 0) {
             return "Уравнение " + a + "x^2 + " + b + "x + " + c + " имеет один корень";
         } else {
             return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
@@ -197,32 +199,32 @@ public class Lab05 {
     }
 
     public static boolean task1945(int sc, int ss) throws Exception {
-        if (sc<=0){
+        if (sc <= 0) {
             throw new Exception("Площадь круга должна быть положительной");
         }
-        if (ss<=0){
+        if (ss <= 0) {
             throw new Exception("Площадь квадрата должна быть положительной");
         }
-        return Math.sqrt(sc/Math.PI) < Math.sqrt(ss)/2;
+        return Math.sqrt(sc / Math.PI) < Math.sqrt(ss) / 2;
     }
 
-    public static double[] task1186(double x, double y, double z){
-        return new double[] {
+    public static double[] task1186(double x, double y, double z) {
+        return new double[]{
             x > 0 ? x * x : x,
             y > 0 ? y * y : y,
             z > 0 ? z * z : z
         };
     }
 
-    public static boolean task8715(int a, int b, int c){
+    public static boolean task8715(int a, int b, int c) {
         return a < b && b < c;
     }
 
-    public static StringBuilder task8518(StringBuilder builder, String x){
-        String[] chars = {"a","b","c","d","e","f","g","h"};
-        for (int i = 0; i < chars.length; i++){
+    public static StringBuilder task8518(StringBuilder builder, String x) {
+        String[] chars = {"a", "b", "c", "d", "e", "f", "g", "h"};
+        for (int i = 0; i < chars.length; i++) {
             builder.append(chars[i]);
-            if(chars[i].equals(x)){
+            if (chars[i].equals(x)) {
                 builder.append("+");
             }
             builder.append("\n");
@@ -230,42 +232,42 @@ public class Lab05 {
         return builder;
     }
 
-    public static boolean task4847(int x, int y, int z){
+    public static boolean task4847(int x, int y, int z) {
         return x == y || y == z || x == z;
     }
 
-    public static List<Double> task7991(double x, double y, double z){
+    public static List<Double> task7991(double x, double y, double z) {
         List<Double> ret = new ArrayList<>();
-        if (-3 < x && x < 5){
+        if (-3 < x && x < 5) {
             ret.add(x);
         }
-        if (-3 < y && y < 5){
+        if (-3 < y && y < 5) {
             ret.add(y);
         }
-        if (-3 < z && z < 5){
+        if (-3 < z && z < 5) {
             ret.add(z);
         }
         return ret;
     }
 
     public static boolean task6291(int a, int b, int c) throws Exception {
-        if (a < 0){
+        if (a < 0) {
             throw new Exception("Значение A должно быть неотрицательным");
         }
-        if (b < 0){
+        if (b < 0) {
             throw new Exception("Значение B должно быть неотрицательным");
         }
-        if (c < 0){
+        if (c < 0) {
             throw new Exception("Значение C должно быть неотрицательным");
         }
         return a == b || a == c || b == c;
     }
 
-    public static int task3770(int x, int y, int z){
-        if (x > y && x > z){
+    public static int task3770(int x, int y, int z) {
+        if (x > y && x > z) {
             return x;
         }
-        if (y > x && y > z){
+        if (y > x && y > z) {
             return y;
         }
         return z;
@@ -274,14 +276,17 @@ public class Lab05 {
     public static class class7178 {
         int quotient;
         boolean empty;
-        public class7178(int quotient){
+
+        public class7178(int quotient) {
             this.quotient = quotient;
         }
-        public class7178(){
+
+        public class7178() {
             this.empty = true;
         }
-        public String print(){
-            if (empty){
+
+        public String print() {
+            if (empty) {
                 return "M не делится нацело на P";
             } else {
                 return Integer.toString(quotient);
@@ -289,19 +294,19 @@ public class Lab05 {
         }
     }
 
-    public static class7178 task7178 (int m, int p) throws Exception {
-        if (p == 0){
+    public static class7178 task7178(int m, int p) throws Exception {
+        if (p == 0) {
             throw new Exception("Значение P должно быть не равно нулю");
         }
-        if (m%p == 0){
-            return new class7178(m/p);
+        if (m % p == 0) {
+            return new class7178(m / p);
         } else {
             return new class7178();
         }
     }
 
     public static boolean task3883(int a) throws Exception {
-        if (a < 1000 || a > 9999){
+        if (a < 1000 || a > 9999) {
             throw new Exception("Значение A должно быть в интервале [1000, 9999]");
         }
         int hundreds = a / 100 % 10;
@@ -310,46 +315,46 @@ public class Lab05 {
     }
 
     public static String task4527(int a) throws Exception {
-        if (a < -10 || a > 100){
+        if (a < -10 || a > 100) {
             throw new Exception("Значение A должно быть в интервале [-10, 100]");
         }
-        if (a == 40){
+        if (a == 40) {
             return "40'ой";
         }
-        if (a == 0){
+        if (a == 0) {
             return "0'ой";
         }
         int abs = a < 0 ? -a : a;
-        if (abs%10 == 1 || abs%10 == 4 || abs%10 == 5 || abs%10 == 9 || a%10 == 0
-                || a == 12 || a == 13 || a == 16 || a == 17 || a == 18){
+        if (abs % 10 == 1 || abs % 10 == 4 || abs % 10 == 5 || abs % 10 == 9 || a % 10 == 0
+            || a == 12 || a == 13 || a == 16 || a == 17 || a == 18) {
             return a + "'ый";
         }
-        if (abs%10 == 2 || abs%10 == 6 || abs%10 == 7 || abs%10 == 8){
-            return a +"'ой";
+        if (abs % 10 == 2 || abs % 10 == 6 || abs % 10 == 7 || abs % 10 == 8) {
+            return a + "'ой";
         }
-        if (abs%10 == 3){
+        if (abs % 10 == 3) {
             return a + "'ий";
         }
         return Integer.toString(a);
     }
 
     public static boolean task6556(int a, int b, int c, int d) throws Exception {
-        if (a < 0){
+        if (a < 0) {
             throw new Exception("Значение A должно быть неотрицательным");
         }
-        if (b < 0){
+        if (b < 0) {
             throw new Exception("Значение B должно быть неотрицательным");
         }
-        if (c < 0){
+        if (c < 0) {
             throw new Exception("Значение C должно быть неотрицательным");
         }
-        if (d < 0){
+        if (d < 0) {
             throw new Exception("Значение D должно быть неотрицательным");
         }
         return a < c && b < d;
     }
 
-    public static class Point{
+    public static class Point {
         public final int x;
         public final int y;
 
@@ -359,7 +364,7 @@ public class Lab05 {
         }
     }
 
-    public static class Rectangle{
+    public static class Rectangle {
         public final int x;
         public final int y;
         public final int h;
@@ -373,44 +378,44 @@ public class Lab05 {
         }
     }
 
-    public static class Interval{
+    public static class Interval {
         public final int a;
         public final int b;
 
-        public Interval(int a, int b){
+        public Interval(int a, int b) {
             this.a = a;
             this.b = b;
         }
     }
 
     public static Point makePointByXY(int x, int y) {
-        if (x < 0){
+        if (x < 0) {
             throw new IllegalArgumentException("Координата X должна быть неотрицательной");
         }
-        if (y < 0){
+        if (y < 0) {
             throw new IllegalArgumentException("Координата Y должна быть неотрицательной");
         }
         return new Point(x, y);
     }
 
     public static Rectangle makeRectangleByXYHW(int x, int y, int h, int w) {
-        if (x < 0){
+        if (x < 0) {
             throw new IllegalArgumentException("Координата X должна быть неотрицательной");
         }
-        if (y < 0){
+        if (y < 0) {
             throw new IllegalArgumentException("Координата Y должна быть неотрицательной");
         }
-        if (h <= 0){
+        if (h <= 0) {
             throw new IllegalArgumentException("Высота должна быть положительна");
         }
-        if (w <= 0){
+        if (w <= 0) {
             throw new IllegalArgumentException("Ширина должна быть положительна");
         }
         return new Rectangle(x, y, h, w);
     }
 
     public static Interval makeIntervalByEnds(int a, int b) {
-        if (a > b){
+        if (a > b) {
             throw new IllegalArgumentException("Значение A должно быть меньше значения B");
         }
         return new Interval(a, b);
@@ -418,28 +423,28 @@ public class Lab05 {
 
     public static boolean task5635(Point t, Rectangle r) {
         return r.x <= t.x &&
-                t.x <= r.x + r.w &&
-                r.y <= t.y &&
-                t.y <= r.y + r.h;
+            t.x <= r.x + r.w &&
+            r.y <= t.y &&
+            t.y <= r.y + r.h;
     }
 
     public static boolean task3878(Point t, Point p1, Point p2) {
         return (t.x - p1.x) / (p2.x - p1.x) == (t.y - p1.y) / (p2.y - p1.y);
     }
 
-    public static boolean task1217check(Interval i1, Interval i2){
+    public static boolean task1217check(Interval i1, Interval i2) {
         return !(i1.b <= i2.a || i2.b <= i1.a);
     }
 
     public static Interval task1217intersection(Interval i1, Interval i2) {
-        if (i1.a < i2.a && i2.a < i1.b){
-            if (i2.b > i1.b){
+        if (i1.a < i2.a && i2.a < i1.b) {
+            if (i2.b > i1.b) {
                 return new Interval(i2.a, i1.b);
             } else {
                 return new Interval(i2.a, i2.b);
             }
         } else {
-            if (i2.b > i1.b){
+            if (i2.b > i1.b) {
                 return new Interval(i1.a, i1.b);
             } else {
                 return new Interval(i1.a, i2.b);
@@ -455,7 +460,7 @@ public class Lab05 {
         return task1217check(r1x, r2x) && task1217check(r1y, r2y);
     }
 
-    public static Rectangle task1438intersect(Rectangle r1, Rectangle r2){
+    public static Rectangle task1438intersect(Rectangle r1, Rectangle r2) {
         Interval r1x = new Interval(r1.x, r1.x + r1.w);
         Interval r2x = new Interval(r2.x, r2.x + r2.w);
         Interval r1y = new Interval(r1.y, r1.y + r1.h);
@@ -467,63 +472,63 @@ public class Lab05 {
     }
 
     public static boolean task2153(int t) throws Exception {
-        if (t < 0 || 60 <= t){
+        if (t < 0 || 60 <= t) {
             throw new Exception("Значение T должно быть в интервале [0, 59]");
         }
-        return t%5 < 3;
+        return t % 5 < 3;
     }
 
     public static String task7937(int w, int h, int c, int d) throws Exception {
-        if (w <=0){
+        if (w <= 0) {
             throw new Exception("Значение W должно быть положительным");
         }
-        if (h <= 0){
+        if (h <= 0) {
             throw new Exception("Значение H должно быть положительным");
         }
-        if (c <= 0){
+        if (c <= 0) {
             throw new Exception("Значение C должно быть положительным");
         }
-        if (d <= 0){
+        if (d <= 0) {
             throw new Exception("Значение D должно быть положительным");
         }
-        int cw = (w/c)*(h/d);
-        int ch = (h/c)*(w/d);
-        if (cw > ch){
+        int cw = (w / c) * (h / d);
+        int ch = (h / c) * (w / d);
+        if (cw > ch) {
             return cw + " при C вдоль W";
         } else {
             return ch + " при C вдоль H";
         }
     }
 
-    public static boolean task1999(int x, int y){
+    public static boolean task1999(int x, int y) {
         return x <= -2 && y >= 1;
     }
 
-    public static boolean task4042(double x, double y){
+    public static boolean task4042(double x, double y) {
         return y <= 1.5 && y >= -2;
     }
 
-    public static boolean task6351(double x, double y){
+    public static boolean task6351(double x, double y) {
         return y <= 4 && x >= 1 && x <= 2;
     }
 
-    public static boolean task5382(double x, double y){
+    public static boolean task5382(double x, double y) {
         return y <= 4 && y >= 2 && x >= 1;
     }
 
-    public static boolean task7088(double x, double y){
+    public static boolean task7088(double x, double y) {
         return (x >= 2 && y >= 0) || (x >= 1 && y <= -1);
     }
 
-    public static boolean task7250(double x, double y){
+    public static boolean task7250(double x, double y) {
         return x >= 2 && (y >= 1 || y <= -1.5);
     }
 
-    public static boolean task6740(double x, double y){
+    public static boolean task6740(double x, double y) {
         return x >= 1 && x <= 3 && y >= -2 && y <= -1;
     }
 
-    public static boolean task9038(double x, double y){
+    public static boolean task9038(double x, double y) {
         return x >= 2 || (y <= 1.5 && y >= 0.5);
     }
 }
