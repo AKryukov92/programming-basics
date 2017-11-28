@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.Task8258
+namespace Classes.Task8258example
 {
     public class Comparator8258 : Comparer<int>
     {

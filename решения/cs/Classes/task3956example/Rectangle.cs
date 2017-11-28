@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.Task3956
+namespace Classes.Task3956example
 {
     public class Rectangle : Shape
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classes.Task2809
+namespace Classes.Task2809example
 {
     public class Point
     {

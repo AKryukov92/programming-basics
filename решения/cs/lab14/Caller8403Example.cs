@@ -1,4 +1,4 @@
-﻿using Classes.Task8403;
+﻿using Classes.Task8403example;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lab14
 {
-    public class Caller8403
+    public class Caller8403Example
     {
         public static void Step1()
         {

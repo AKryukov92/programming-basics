@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lab14
 {
-    public class Caller6011
+    public class Caller6011Example
     {
         public static void Step1()
         {
