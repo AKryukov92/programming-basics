@@ -50,13 +50,6 @@ for (var i = 0; i < in3832x1.length; i++){
 	var out = document.getElementById("3832t" + i);
 	out.innerHTML = task3832(in3832x1[i], in3832x2[i], in3832x3[i]);
 }
-var in9354a = ["7247", "7"];
-var in9354b = ["7243", "1"];
-var in9354c = ["7229", "3"];
-for (var i = 0; i < in9354a.length; i++){
-	var out = document.getElementById("9354t" + i);
-	out.innerHTML = task9354(in9354a[i], in9354b[i], in9354c[i]).toFixed(4);
-}
 var in5895a = ["7109", "3"];
 var in5895b = ["7103", "7"];
 var in5895c = ["7079","13"];

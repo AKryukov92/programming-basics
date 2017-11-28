@@ -146,6 +146,9 @@ function task7799(m,a){
 	return m*g*Math.cos(a*Math.PI/180);
 }
 function task9354(a,b,c){
+	if (a == 0){
+		throw new Error("Уравнение " + a + "x^2+" + b + "x + " + c + " не является квадратным.");
+	}
 	return b*b-4*a*c;
 }
 function task9130(mass1,mass2,distance){

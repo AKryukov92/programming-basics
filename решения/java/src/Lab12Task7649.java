@@ -6,18 +6,22 @@ public class Lab12Task7649 {
     public static void main(String[] args) {
         Step8495();
         Step1315();
+        Step2475();
+        Step5951();
+        Step8696();
+
         Step3762();
         Step2324();
         Step3550();
-
         Step6572();
         Step2084();
+
         Step5411();
         Step8518();
         Step7585();
-
         Step8770();
         Step7035();
+
         Step5694();
         Step6806();
         Step7369();
@@ -43,11 +47,23 @@ public class Lab12Task7649 {
         System.out.println(sb1315);
     }
 
+    private static void Step8696() {
+        System.out.println();
+        System.out.println("8696");
+        System.out.println(Lab06.task8696());
+    }
+
     private static void Step3762() {
         System.out.println();
         System.out.println("3762");
         String result3762 = Lab06.task3762(new StringBuilder()).toString();
         System.out.println(result3762);
+    }
+
+    private static void Step2475() {
+        System.out.println();
+        System.out.println("2475");
+        System.out.println(Lab06.task2475());
     }
 
     private static void Step2324(){
@@ -268,5 +284,11 @@ public class Lab12Task7649 {
             String result = Lab08.task7369(in7369left[i], in7369top[i]);
             System.out.println(result);
         }
+    }
+
+    private static void Step5951() {
+        System.out.println();
+        System.out.println("5951");
+        System.out.println(Lab06.task5951());
     }
 }
