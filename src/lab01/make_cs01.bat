@@ -30,13 +30,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task4764" class="supervision"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task2429"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task7472"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task3862" class="example"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task9231" class="supervision"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task8624"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task2959"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task7271"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task2632"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task4343"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task2959"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task7271"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task2632"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task4343"^>№ 9^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -48,9 +45,6 @@ type task4764.html>>%filename%
 type task2429.html>>%filename%
 type link_c6_p30.2.html>>%filename%
 type task7472.html>>%filename%
-type task3862.html>>%filename%
-type task9231.html>>%filename%
-type task8624.html>>%filename%
 type link_c3_p10.2.html>>%filename%
 type task2959.html>>%filename%
 type task7271.html>>%filename%
@@ -68,4 +62,3 @@ if x%1==x start "" %filename%
 cd ..
 call prepare_theory csharp 1662 cs lab01
 call prepare_theory csharp 1860 cs lab01
-call prepare_theory csharp 3862 cs lab01
