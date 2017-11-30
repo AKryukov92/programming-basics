@@ -37,9 +37,9 @@ namespace task8787
         private static void Step7991() {
             Console.WriteLine();
             Console.WriteLine("7991");
-            double[] in7991x = { 6.35, 4.71, 19.99, -2.28 };
-            double[] in7991y = { 2.7, 2.59, -1.57, 16.92 };
-            double[] in7991z = { 5.08, -18.55, 2.75, 6.14 };
+            double[] in7991x = { 6.35, 4.71, 19.99, 10, -2.28 };
+            double[] in7991y = { 2.7, 2.59, -1.57, 10, 16.92 };
+            double[] in7991z = { 5.08, -18.55, 2.75, 10, 6.14 };
             for (int i = 0; i < in7991x.Length; i++)
             {
                 IList<double> result = Lab05.Task7991(in7991x[i], in7991y[i], in7991z[i]);

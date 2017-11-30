@@ -34,9 +34,9 @@ public class Lab15Task8787 {
     static void Step7991() {
         System.out.println();
         System.out.println("7991");
-        double[] in7991x = {6.35, 4.71, 19.99, -2.28};
-        double[] in7991y = {2.7, 2.59, -1.57, 16.92};
-        double[] in7991z = {5.08, -18.55, 2.75, 6.14};
+        double[] in7991x = {6.35, 4.71, 19.99, 10, -2.28};
+        double[] in7991y = {2.7, 2.59, -1.57, 10, 16.92};
+        double[] in7991z = {5.08, -18.55, 2.75, 10, 6.14};
         for (int i = 0; i < in7991x.length; i++) {
             StringBuilder sb = new StringBuilder();
             List<Double> result = Lab05.task7991(
