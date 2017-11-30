@@ -57,3 +57,7 @@ echo ^</body^> ^
 copy "Письменные задания к ЛР1.docx" "..\..\java\Письменные задания к ЛР1.docx"
 
 if x%1==x start "" %filename%
+
+cd ..
+call prepare_theory java 1662 java lab01
+call prepare_theory java 1860 java lab01

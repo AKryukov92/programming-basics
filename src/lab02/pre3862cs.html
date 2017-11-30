@@ -66,7 +66,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1860
+namespace Task3862
 {
     class Program
     {
@@ -87,7 +87,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1860
+namespace Task3862
 {
     class Program
     {
@@ -116,7 +116,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1860
+namespace Task3862
 {
     class Program
     {
@@ -136,7 +136,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1860
+namespace Task3862
 {
     class Program
     {
@@ -149,6 +149,26 @@ namespace Task1860
 <p>В результате получится</p>
 <p class="preformatted console">Значение пи: 3,1415
 Значение е: 2,7182</p>
+<p>На мой взгляд лучше золотая середина</p>
+
+<p>Программа 3</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task3862
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            Console.WriteLine("Значение пи: {0:F4}", Math.PI);
+            Console.WriteLine("Значение е: {0:F4}", Math.E);
+        <span class="comment">}
+    }
+}</span></p>
 <a href="#">К вступлению</a>
 </div>
 
@@ -158,8 +178,8 @@ namespace Task1860
 <p>В предыдущем разборе теории <a href="pre1860.html" target="_blank">(открыть в новой вкладке)</a> была рассмотрена команда для считывания значений, введенных пользователем в консоль.</p>
 <p>Возможностей простой команды вывода в консоль может не хватить в двух случаях:</p>
 <ul>
-	<li>Вывод сложных сообщений, состоящих из множества фрагментов и значений переменных.</li>
-	<li>Вывод чисел с определенным количеством знаков после запятой.</li>
+    <li>Вывод сложных сообщений, состоящих из множества фрагментов и значений переменных.</li>
+    <li>Вывод чисел с определенным количеством знаков после запятой.</li>
 </ul>
 <p>В этих случаях полезно использовать команду форматированного вывода. Она состоит из технического оформления, <span style="color:rgb(214,157,133)">шаблона сообщения</span> и списка переменных. Самый простой пример оформления такой команды указан ниже.</p>
 <p class="preformatted"><span class="comment">using System;

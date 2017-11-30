@@ -1,4 +1,4 @@
-<h1>Разбор теории к задаче 1662 на С#</h1>
+<h1>Разбор теории к задаче 1662 на Java</h1>
 <a href="../[1] лаб. ОСАЛП.html#task1662" target="_blank">открыть условие задачи в новой вкладке</a>
 
 
@@ -7,21 +7,12 @@
 <h4>Шаг 1/6</h4>
 <a href="#">К вступлению</a>
 <p>В самом начале мы будем использовать только одну команду - вывод в консоль. Она оформляется следующим образом:</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write("Ура! Заработало!");
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print("Ура! Заработало!");
+    <span class="comment">}
 }</span></p>
 <p>Обращайте особое внимание знакам препинания. Вот небольшая шпаргалка по расположению символов на клавиатуре.</p>
 <table>
@@ -77,7 +68,7 @@ namespace Task1662
         <zoom>ж</zoom> справа посередине</td>
     </tr>
 </table>
-<p>При запуске этой программы (Ctrl+F5), у вас откроется консоль и в ней будет отображен следующий текст</p>
+<p>При запуске этой программы (Ctrl+Shift+F10), у вас откроется консоль и в ней будет отображен следующий текст</p>
 <p class="preformatted console">Ура! Заработало!</p>
 <a href="#step2">К шагу 2</a>
 </div>
@@ -89,40 +80,22 @@ namespace Task1662
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
 <p>Команда вывода в консоль состоит из двух частей: технического оформления и <span style="color:rgb(214,157,133)">сообщения</span>. <span class="comment">Более корректный термин - "строковый литерал".</span> Одна команда - одно сообщение. Если нужно вывести несколько сообщений, напишите несколько команд или объедините сообщения в одно.</p>
 
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write(<span style="color:rgb(214,157,133)">"Ура! Заработало!"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"Ура! Заработало!"</span>);
+    <span class="comment">}
 }</span></p>
 <p>Компьютер определяет начало и конец сообщения по кавычкам <zoom>&quot;</zoom>. Из за того, что кавычки одинаковы, любая первая будет значить "начало сообщения", а следующая - "конец сообщения".</p>
 
 <p>Что если в вашей команде вывода будет всего одна кавычка?</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write(<span style="color:rgb(214,157,133)">"Ура! Заработало!);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"Ура! Заработало!);
+    <span class="comment">}
 }</span></span></p>
 <p>В этом случае компьютер обнаружит кучу ошибок:</p>
 <ul>
@@ -150,7 +123,7 @@ namespace Task1662
     </tr>
     <tr>
         <td><zoom>\</zoom></td>
-		<td>Вводится только на английской раскладке</td>
+        <td>Вводится только на английской раскладке</td>
         <td>Вводить с шифтом. Ищите символы 
         <zoom>|</zoom>
         <zoom>\</zoom>
@@ -158,21 +131,12 @@ namespace Task1662
     </tr>
 </table>
 <p>Добавьте к вашей программе вывод кавычек до и после слова "Заработало!".</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write(<span style="color:rgb(214,157,133)">"Ура! \"Заработало\"!"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"Ура! \"Заработало\"!"</span>);
+    <span class="comment">}
 }</span></p>
 <p>В результате получится:</p>
 <p class="preformatted console">Ура! "Заработало"!</p>
@@ -186,43 +150,25 @@ namespace Task1662
 <h4>Шаг 4/6</h4>
 <a href="#step3">К шагу 3</a> <a href="#">К вступлению</a>
 <p>С помощью обратного слеша можно оформить одно сообщение, которое займет две строки. Добавьте комбинацию <zoom>\n</zoom> как в примере.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write(<span style="color:rgb(214,157,133)">"Ура!\nЗаработало!"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"Ура!\nЗаработало!"</span>);
+    <span class="comment">}
 }</span></p>
 <p>В результате получится:</p>
 <p class="preformatted console">Ура!
 Заработало!</p>
 <p class="comment">На самом деле этот символ находится в конце каждой строки в текстовых документах. Мы его вводим когда нажимаем Enter. Подробнее на <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8" target="_blank">википедии</a></p>
 <p>Другой способ сделать то же самое - воспользоваться другой командой вывода в консоль.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"Ура!"</span>);
-            Console.Write(<span style="color:rgb(214,157,133)">"Заработало!"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.println(<span style="color:rgb(214,157,133)">"Ура!"</span>);
+        System.out.print(<span style="color:rgb(214,157,133)">"Заработало!"</span>);
+    <span class="comment">}
 }</span></p>
 <p class="preformatted console">Ура!
 Заработало!</p>
@@ -236,21 +182,12 @@ namespace Task1662
 <h4>Шаг 5/6</h4>
 <a href="#step4">К шагу 4</a> <a href="#">К вступлению</a>
 <p>Если вам вдруг понадобится выводить сам символ обратного слэша, воспользуйтесь комбинацией <zoom>\\</zoom>. Каждые два обратных слэша подряд в результате дадут один символ в консоли. Например у такой программы:</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write("\\\\\\\\");
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print("\\\\\\\\");
+    <span class="comment">}
 }</span></p>
 <p>Будет такой результат</p>
 <p class="preformatted console">\\\\</p>
@@ -269,41 +206,23 @@ namespace Task1662
 |   |
 +---+</p>
 <p>Весь этот текст можно втиснуть в одно сообщение как в следующем примере</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.Write(<span style="color:rgb(214,157,133)">"+---+\n|   |\n|   |\n+---+"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"+---+\n|   |\n|   |\n+---+"</span>);
+    <span class="comment">}
 }</span></p>
 <p>А можно расписать четырьмя командами:</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"+---+"</span>);
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"|   |"</span>);
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"|   |"</span>);
-            Console.WriteLine(<span style="color:rgb(214,157,133)">"+---+"</span>);
-        <span class="comment">}
-    }
+public class Task1662 {
+    public static void main(String[] args) {</span>
+        System.out.print(<span style="color:rgb(214,157,133)">"+---+"</span>);
+        System.out.print(<span style="color:rgb(214,157,133)">"|   |"</span>);
+        System.out.print(<span style="color:rgb(214,157,133)">"|   |"</span>);
+        System.out.print(<span style="color:rgb(214,157,133)">"+---+"</span>);
+    <span class="comment">}
 }</span></p>
 <p>В обоих вариантах результат будет таким:</p>
 <p class="preformatted console">+---+
@@ -324,20 +243,11 @@ namespace Task1662
 <p>Чтобы не отвлекать ваше внимание на ненужные детали, в разборе не будет объясняться каждая строчка программы.</p>
 <p>Поначалу в коде будет довольно много <span class="comment">магии</span>. По мере обучения, <span class="comment">магии</span> будет становиться все меньше и меньше.</p>
 <p>Когда вы создаете новый проект, то он целиком будет состоять из <span class="comment">магии</span></p>
-<p class="preformatted comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted comment">package lab01;
 
-namespace Task1662
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("Ура! Заработало!");
-        }
+public class Task1662 {
+    public static void main(String[] args) {
+        System.out.print("Ура! Заработало!");
     }
 }</p>
 <p>Первой командой, которую мы разберем будет команда вывода сообщений в консоль.</p>
