@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2354", "task2354\task2354.csproj", "{C201B96D-2D13-4F23-A7A3-84252CEBC784}"
 EndProject
@@ -44,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-Task7250", "Lab05-Task7250\Lab05-Task7250.csproj", "{6F3A17A7-A77C-4593-BF76-7EFA2F55456D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-Task9038", "Lab05-Task9038\Lab05-Task9038.csproj", "{B8B81D1E-E2B3-490E-A828-0B16B31E08B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caller", "Caller\Caller.csproj", "{91C9B310-4DC7-42A9-B210-76206194B065}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,8 +137,15 @@ Global
 		{B8B81D1E-E2B3-490E-A828-0B16B31E08B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8B81D1E-E2B3-490E-A828-0B16B31E08B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8B81D1E-E2B3-490E-A828-0B16B31E08B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C9B310-4DC7-42A9-B210-76206194B065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C9B310-4DC7-42A9-B210-76206194B065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C9B310-4DC7-42A9-B210-76206194B065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C9B310-4DC7-42A9-B210-76206194B065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7C0F596-411F-4739-9C42-51E1852D3FF1}
 	EndGlobalSection
 EndGlobal

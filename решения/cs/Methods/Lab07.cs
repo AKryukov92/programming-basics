@@ -7,10 +7,6 @@ namespace Methods
 {
     public class Lab07
     {
-        static void Main(string[] args)
-        {
-        }
-
         public static String STR = "abcdefwxyz";
         public static String STR2 = "abcdacadbacdaabaadc";
 
@@ -275,6 +271,71 @@ namespace Methods
                 result.Append(part);
             }
             return result.ToString();
+        }
+
+        public static String Task1703(String s)
+        {
+            int ltSignPos = s.IndexOf("<");
+            int ltSignPosEnd = s.LastIndexOf("<");
+            int gtSignPos = s.IndexOf(">");
+            int gtSignPosEnd = s.LastIndexOf(">");
+            int signPos;
+            String description;
+            if (ltSignPos >= 0)
+            {
+                if (gtSignPos > 0 || ltSignPosEnd != ltSignPos)
+                {
+                    throw new Exception("В выражении должен быть только один знак сравнения");
+                }
+                description = "меньше";
+                signPos = ltSignPos;
+            }
+            else if (gtSignPos >= 0)
+            {
+                if (gtSignPosEnd != gtSignPos)
+                {
+                    throw new Exception("В выражении должен быть только один знак сравнения");
+                }
+                description = "больше";
+                signPos = gtSignPos;
+            }
+            else
+            {
+                throw new Exception("Отсутствует знак сравнения");
+            }
+            String var = s.Substring(0, signPos).Trim();
+            if (String.IsNullOrEmpty(var))
+            {
+                throw new Exception("Слева от знака сравнения ожидается переменная");
+            }
+            if (var.Contains(" "))
+            {
+                String statement = var.Substring(0, var.LastIndexOf(" "));
+                String variable = var.Substring(var.LastIndexOf(" ") + 1);
+                throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+            }
+            String value, special;
+            if (s.Substring(signPos + 1).StartsWith("="))
+            {
+                value = s.Substring(signPos + 2).Trim();
+                special = "либо равно числу";
+            }
+            else
+            {
+                value = s.Substring(signPos + 1).Trim();
+                special = "числа";
+            }
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new Exception("Справа от знака сравнения ожидается ограничение");
+            }
+            if (value.Contains(" "))
+            {
+                String constraint = value.Substring(0, value.LastIndexOf(" "));
+                String statement = value.Substring(value.LastIndexOf(" ") + 1);
+                throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
+            }
+            return String.Format("Значение переменной {0} {1} {2} {3}", var, description, special, value);
         }
     }
 }

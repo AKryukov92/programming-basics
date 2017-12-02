@@ -184,6 +184,28 @@ for (var i = 0; i < in9279.length; i++){
 	}
 }
 
+var in1703 = [
+    "x>3",
+    "r >= 1000",
+    "value <=-2",
+    "y < 0",
+    "x <",
+    ">13",
+    "y   0",
+    "x+7",
+    "a < b < c",
+    "x < xA && x + w > xA",
+    "x > y > z",
+    "a x < 17",
+    "y > 19 23"];
+for (var i = 0; i < in1703.length; i++){
+	var out = document.getElementById("1703t" + i);
+	try {
+		out.innerHTML = task1703(in1703[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
 
 //Lab08
 var in1223 = ["q w e r t y",

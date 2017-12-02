@@ -37,6 +37,8 @@ php/*.pdf
 решения/cs/Methods/obj
 решения/cs/Methods/bin
 решения/cs/packages/*
+решения/cs/Caller/obj
+решения/cs/Caller/bin
 !решения/cs/packages/repositories.config
 *.suo
 java/postcard/out

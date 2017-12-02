@@ -157,3 +157,52 @@ function task1618(line){
 	}
 	return r;
 }
+function task1703(s){
+	var ltSignPos = s.indexOf("<");
+	var ltSignPosEnd = s.lastIndexOf("<");
+	var gtSignPos = s.indexOf(">");
+	var gtSignPosEnd = s.lastIndexOf(">");
+	var signPos;
+	var description;
+	if (ltSignPos >= 0) {
+		if (gtSignPos > 0 || ltSignPosEnd != ltSignPos) {
+			throw new Error("В выражении должен быть только один знак сравнения");
+		}
+		description = "меньше";
+		signPos = ltSignPos;
+	} else if (gtSignPos >= 0) {
+		if (gtSignPosEnd != gtSignPos) {
+			throw new Error("В выражении должен быть только один знак сравнения");
+		}
+		description = "больше";
+		signPos = gtSignPos;
+	} else {
+		throw new Error("Отсутствует знак сравнения");
+	}
+	var leftSide = s.substring(0, signPos).trim();
+	if (leftSide == ""){
+		throw new Error("Слева от знака сравнения ожидается переменная");
+	}
+	if (leftSide.includes(" ")){
+		var statement = leftSide.substring(0, leftSide.lastIndexOf(" "));
+		var variable = leftSide.substring(leftSide.lastIndexOf(" ") + 1);
+		throw new Error("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+	}
+	var rightSide, special;
+	if (s.substring(signPos+1).startsWith("=")){
+		rightSide = s.substring(signPos+2).trim();
+		special = "либо равно числу";
+	} else {
+		rightSide = s.substring(signPos+1).trim();
+		special = "числа";
+	}
+	if (rightSide == ""){
+		throw new Error("Справа от знака сравнения ожидается ограничение");
+	}
+	if (rightSide.includes(" ")){
+		var constraint = rightSide.substring(0, rightSide.lastIndexOf(" "));
+		var statement = rightSide.substring(rightSide.lastIndexOf(" ") + 1);
+		throw new Error("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
+	}
+	return "Значение переменной " + leftSide + " " + description + " " + special + " " + rightSide;
+}
