@@ -444,6 +444,18 @@ namespace Methods
             }
         }
 
+        public static String task5870(int timeInSeconds)
+        {
+            if (timeInSeconds < 0)
+            {
+                throw new ArgumentException("Количество времени должно быть неотрицательным");
+            }
+            int h = timeInSeconds / 3600;
+            int m = timeInSeconds / 60 % 60;
+            int s = timeInSeconds % 60;
+            return String.Format("{0} часов {1} минут {2} секунд", h, m, s);
+        }
+
         public static class6522 Task6522(int v1, int t1, int v2, int t2)
         {
             if (v1 < 0)

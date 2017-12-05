@@ -49,6 +49,16 @@ public class Lab02 {
         }
     }
 
+    public static String task5870(int timeInSeconds){
+        if (timeInSeconds < 0){
+            throw new IllegalArgumentException("Количество времени должно быть неотрицательным");
+        }
+        int h = timeInSeconds/3600;
+        int m = timeInSeconds/60%60;
+        int s = timeInSeconds%60;
+        return String.format("%d часов %d минут %d секунд", h,m,s);
+    }
+
     public static double task4411(double x) {
         return 2 * x;
     }

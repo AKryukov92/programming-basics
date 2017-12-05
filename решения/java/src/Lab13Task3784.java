@@ -4,18 +4,19 @@
  */
 public class Lab13Task3784 {
     public static void main(String[] args) {
+        Step5870();
         Step4257();
         Step2291();
         Step1763();
         Step1945();
-        Step6291();
 
+        Step6291();
         Step3883();
         Step4527();
         Step6556();
         Step2153();
-        Step5170();
 
+        Step5170();
         Step1703();
     }
 
@@ -238,6 +239,34 @@ public class Lab13Task3784 {
             } catch (Exception e) {
                 System.out.println("Получилось: " + e.getMessage());
                 System.out.println("Ожидалось : " + out1703[i]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Step5870(){
+        System.out.println();
+        System.out.println("5870");
+        int[] in5870 = {4000, 3603, 3599, 3660, 59, 61, 0, -1, -20};
+        String[] out5870 = {
+            "1 часов 6 минут 40 секунд",
+            "1 часов 0 минут 3 секунд",
+            "0 часов 59 минут 59 секунд",
+            "1 часов 1 минут 0 секунд",
+            "0 часов 0 минут 59 секунд",
+            "0 часов 1 минут 1 секунд",
+            "0 часов 0 минут 0 секунд",
+            "Количество времени должно быть неотрицательным",
+            "Количество времени должно быть неотрицательным"
+        };
+        for (int i = 0; i < in5870.length; i++){
+            try{
+                String result = Lab02.task5870(in5870[i]);
+                System.out.println("Получилось: " + result);
+                System.out.println("Ожидалось : " + out5870[i]);
+            } catch (IllegalArgumentException e){
+                System.out.println("Получилось: " + e.getMessage());
+                System.out.println("Ожидалось : " + out5870[i]);
             }
             System.out.println();
         }
