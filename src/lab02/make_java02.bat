@@ -123,3 +123,4 @@ copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%la
 if x%1==x start "" %filename%
 cd ..
 call prepare_theory java 3862 java lab02
+call prepare_theory java 9231 java lab02

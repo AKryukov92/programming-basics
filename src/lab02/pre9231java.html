@@ -1,4 +1,4 @@
-<h1>Руководство к задаче 9231 на С#</h1>
+<h1>Руководство к задаче 9231 на java</h1>
 <a href="../[2] лаб. ОСАЛП.html#task9231" target="_blank">открыть условие задачи в новой вкладке</a>
 
 
@@ -12,23 +12,16 @@
 <li>Для действительных чисел. Например double. Они нужны для измерения массы, расстояния, площади и других величин. Действительные числа еще называют дробными. Числа &pi; и <i>e</i> являются действительными.</li>
 </ul></p>
 <p>Ниже показан пример объявления переменной для дробного числа. Она имеет тип "double" и называется "a".</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double a;
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        String data;
+        double a;
+        data = scan.nextLine();
+    <span class="comment">}
 }</span></p>
 <p>Предположите как нужно объявлять переменную для целого числа. Допустим ее имя будет называться "b". Напоминаю что для хранения целых чисел вам потребуется тип "int".</p>
 <a href="#step2">К шагу 2</a>
@@ -40,48 +33,33 @@ namespace Example
 <h4>Шаг 2/3</h4>
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
 <p>Просто объявить переменную для чисел мало. Нужно записать в нее значение, введеное пользователем. Попробуйте написать тривиально, как во фрагменте ниже.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double a;
-            //Это вариант для иллюстрации ошибки!
-            a = data;
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        String data;
+        double a;
+        data = scan.nextLine();
+        //Это вариант для иллюстрации ошибки!
+        a = data;
+    <span class="comment">}
 }</span></p>
 <p>При попытке запустить программу, вы должны увидеть сообщение об ошибке.</p>
-<p class="preformatted">Ошибка: Не удается неявно преобразовать тип "string" в "double".</p>
-<p>Фрагмент кода выше был приведен для того, чтобы познакомить вас с сообщением об ошибке. В C# не предусмотрено автоматического преобразования из текста в числа. Для исправления ошибки, нужно воспользоваться командой явного преобразования.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted">Error:(15, 13) java: incompatible types: java.lang.String cannot be converted to double</p>
+<p>Фрагмент кода выше был приведен для того, чтобы познакомить вас с сообщением об ошибке. В java не предусмотрено автоматического преобразования из текста в числа. Для ее исправления нужно воспользоваться другой командой получения информации от пользователя. "nextDouble" сразу получает число, которое можно записать в переменную типа double.</p>
+<p>Переменная "data" становится не нужна</p>
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double a;
-            //Это корректный вариант!
-            a = double.Parse(data);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double a;
+        //Это корректный вариант!
+        a = scan.nextDouble();
+    <span class="comment">}
 }</span></p>
 <p>Ошибка исправлена, программа должна компилироваться успешно. Теперь нужно вывести значение этой переменной на экран.</p>
 <a href="#step3">К шагу 3</a>
@@ -93,46 +71,30 @@ namespace Example
 <h4>Шаг 3/3</h4>
 <a href="#step2">К шагу 2</a> <a href="#">К вступлению</a>
 <p>Для вывода значения числовой переменной достаточно просто написать команду вывода как в этом фрагменте кода.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double a;
-            a = double.Parse(data);
-            Console.WriteLine(a);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double a;
+        //Это корректный вариант!
+        a = scan.nextDouble();
+        System.out.println(a);
+    <span class="comment">}
 }</span></p>
 <p>Кроме того, вы можете воспользоваться командой форматированного вывода. Более подробно она была описана в предыдущем разборе теории <a href="pre3862.html" target="_blank">(открыть в новой вкладке)</a>.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double a;
-            a = double.Parse(data);
-            Console.Write("Значение a: {0:F4}", a);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double a;
+        //Это корректный вариант!
+        a = scan.nextDouble();
+        System.out.printf("%.4f", a);
+    <span class="comment">}
 }</span></p>
 <a href="#">К вступлению</a>
 </div>
@@ -144,22 +106,15 @@ namespace Example
 <p>В предыдущем разборе теории <a href="pre3862.html" target="_blank">(открыть в новой вкладке)</a> был рассмотрен способ вывода числа &pi; с нужной точностью.</p>
 <p>Сейчас будет разобран ввод и вывод чисел с клавиатуры.</p>
 <p>Вспомните как оформлялась команда получения исходных данных ранее.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        String data;
+        data = scan.nextLine();
+    <span class="comment">}
 }</span></p>
 <p>Обратите внимание на то, что в этом случае вы получаете текст. Даже если пользователь введет "17", то компьютер воспримет это как две буквы, а не как число 17. При этом переменные строкового типа String для вычислений не подходят. Что может получиться при умножении слова на букву? Вряд ли что-то полезное. Операция умножения имеет смысл для чисел, а не для слов и букв.</p>
 <a href="#step1">К шагу 1</a>
