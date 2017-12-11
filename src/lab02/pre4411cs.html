@@ -1,0 +1,136 @@
+<h1>Руководство к задаче 4411 на С#</h1>
+<a href="../[2] лаб. ОСАЛП.html#task4411" target="_blank">открыть условие задачи в новой вкладке</a>
+
+
+
+<div id="step1" class="step">
+<h4>Шаг 1/2</h4>
+<a href="#">К вступлению</a>
+<p>У вас должен получиться код, похожий на фрагмент ниже.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            double x;
+            x = double.Parse(data);
+            double result;
+            Console.Write("Результат: {0:F4}", result);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Следующим шагом нужно оформить вычисление результата. Команда выглядит вот так:</p>
+<p class="preformatted">result = x + 7;</p>
+<p>Выражение "result = ..." как и раньше это "присвоить переменной result значение ...". А значением тут является результат вычисления арифметического выражения "К значению переменной x прибавь число 7".</p>
+<p>Предположите что получится, если вычисление оформить так:</p>
+<p class="preformatted">data = x + 7;</p>
+<p>Или так:</p>
+<p class="preformatted">result = data + 7;</p>
+<p>Попробуйте написать такой код и запустить. Подтвердилось ли ваше предположение?</p>
+<a href="#step2">К шагу 2</a>
+</div>
+
+
+
+<div id="step2" class="step">
+<h4>Шаг 2/2</h4>
+<a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
+<p>Вернитесь к первому предложенному варианту решения.</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            double x;
+            x = double.Parse(data);
+            double result;
+            result = x + 7;
+            Console.Write("Результат: {0:F4}", result);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Отдельные части арифметического выражения названы терминами: <span style="color:red;">операторы</span> и <span style="color:green;">операнды</span>. Оператор это действие, а операнд - то над чем оно выполняется. Если отметить их цветом в решаемой задаче, то получится так:</p>
+<p><zoom>result = <span style="color:green">x</span>
+<span style="color:red;">+</span>
+<span style="color:green;">7</span>;</zoom> <span class="comment">Строго говоря, "result" это тоже операнд, а "=" это тоже оператор.</span></p>
+<p>Операторы бывают:
+<table>
+<tr>
+  <td><zoom>*</zoom></td><td>умножение</td>
+  <td><zoom>/</zoom></td><td>деление</td>
+  <td><zoom>+</zoom></td><td>сложение</td>
+  <td><zoom>-</zoom></td><td>вычитание</td>
+  <td><zoom>%</zoom></td><td>остаток от деления</td>
+</tr>
+</table>Умножение и деление вычисляются раньше сложения и вычитания. Одинаковые операторы вычисляются слева направо.</p>
+<p>Операнды намного более разнообразны. Ими могут быть:
+<ul>
+<li>Литералы. Т.е. числа, написанные в коде.</li>
+<li>Переменные.</li>
+<li>Выражения в круглых скобках.</li>
+<li>Вызовы методов. Такие операторы будут рассмотрены позже.</li>
+</ul></p>
+<p>Выражения в круглых скобках нужны для указания порядка вычисления. Сравните:</p>
+<p class="preformatted">//Вариант 1
+result = (1 + 2) * 3;
+//Вариант 2
+result = 1 + 2 * 3;</p>
+<p>В первом случае результат будет 9, а во втором 7.</p>
+<p>Как правило, операнды должны быть совместимого типа. Например "+" можно использовать для работы со строками, а "-", "*" и "/" нельзя. Строки и числа можно склеить в одну строку оператором "+", но оператор "*" в том же выражении приведет к синтаксической ошибке.</p>
+<p>Как вы думаете, есть ли подобные ограничения при работе с целыми и дробными (действительными) числами?</p>
+<a href="#">К вступлению</a>
+</div>
+
+
+
+<div id="initial" class="step">
+<h4>Вступление</h4>
+<p>В предыдущем разборе теории <a href="pre9231.html" target="_blank">(открыть в новой вкладке)</a> был рассмотрен ввод чисел с клавиатуры.</p>
+<p>Сейчас будет разобран пример оформления вычислений в программе.</p>
+<p>Прежде чем отдавать компьютеру команду "посчитай результат", нужно понять назначение каждой переменной.</p>
+<p>Какие переменные были объявлены в фрагменте программы ниже?</p>
+<p class="preformatted"><span class="comment">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {</span>
+            String data;
+            data = Console.ReadLine();
+            double x;
+            x = double.Parse(data);
+        <span class="comment">}
+    }
+}</span></p>
+<p>Их всего две:<ul>
+    <li>data - нужна чтобы получить значение от пользователя в текстовом виде.</li>
+    <li>x - нужна для хранения значения от пользователя в виде числа (действительного)</li>
+</ul></p>
+<p>Для хранения результата будет полезно создать еще одну переменную. В абстрактной задаче ее можно назвать просто "result". Если же в задаче, к примеру, дата плотность тела и его объем, а нужно найти массу, то переменным нужно дать более осмысленные названия: density, volume, mass.</p>
+<p>Добавьте команду переменную для результата и команду ее вывода в консоль с нужной точностью.</p>
+<a href="#step1">К шагу 1</a>
+</div>

@@ -9,7 +9,7 @@ echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>теория к %task%^</title^> ^
+ ^<title^>Рук-во к %task%^</title^> ^
  ^<style^>> %filename%
 
 type styles.css >> %filename%
