@@ -1,6 +1,6 @@
 chcp 65001
-set lang=php
-set index=8
+set lang=csharp
+set index=7
 set chapter=Работа с массивами
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
@@ -18,7 +18,7 @@ echo ^</style^> ^
  ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
-type ..\nav_php.html>> %filename%
+type ..\nav_cs.html>> %filename%
 
 echo ^<div class="nav"^> ^
  ^<ul^> ^
@@ -85,6 +85,6 @@ type task9182.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
+copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
 
 if x%1==x start "" %filename%

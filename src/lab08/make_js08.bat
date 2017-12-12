@@ -1,6 +1,6 @@
 chcp 65001
-set lang=php
-set index=7
+set lang=js
+set index=8
 set chapter=Строки
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
@@ -18,7 +18,7 @@ echo ^</style^> ^
  ^<body class="section"^> ^
  ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
-type ..\nav_php.html>> %filename%
+type ..\nav_js.html>> %filename%
 
 echo ^<div class="nav"^> ^
  ^<ul^> ^

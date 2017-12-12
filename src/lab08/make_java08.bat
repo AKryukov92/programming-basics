@@ -1,6 +1,6 @@
 chcp 65001
 set lang=java
-set index=7
+set index=8
 set chapter=Строки
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 

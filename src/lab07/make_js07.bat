@@ -1,6 +1,6 @@
 chcp 65001
 set lang=js
-set index=8
+set index=7
 set chapter=Работа с массивами
 set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
 
