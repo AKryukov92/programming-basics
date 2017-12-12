@@ -39,7 +39,9 @@ echo ^<div class="nav"^> ^
 
 type link_c1_p4.3.html>>%filename%
 type task1662.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre1662.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task1860.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre1860.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type link_c7_p33.html>>%filename%
 type task4764.html>>%filename%
 type task2429.html>>%filename%

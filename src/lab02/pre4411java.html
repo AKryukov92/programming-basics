@@ -1,4 +1,4 @@
-<h1>Руководство к задаче 4411 на С#</h1>
+<h1>Руководство к задаче 4411 на java</h1>
 <a href="../[2] лаб. ОСАЛП.html#task4411" target="_blank">открыть условие задачи в новой вкладке</a>
 
 
@@ -7,26 +7,17 @@
 <h4>Шаг 1/2</h4>
 <a href="#">К вступлению</a>
 <p>У вас должен получиться код, похожий на фрагмент ниже.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double x;
-            x = double.Parse(data);
-            double result;
-            Console.Write("Результат: {0:F4}", result);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double x;
+        x = scan.nextDouble();
+        double result;
+        System.out.printf("%.4f", result);
+    <span class="comment">}
 }</span></p>
 <p>Следующим шагом нужно оформить вычисление результата. Команда выглядит вот так:</p>
 <p class="preformatted">result = x + 7;</p>
@@ -45,27 +36,18 @@ namespace Example
 <h4>Шаг 2/2</h4>
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
 <p>Вернитесь к первому предложенному варианту решения.</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double x;
-            x = double.Parse(data);
-            double result;
-            result = x + 7;
-            Console.Write("Результат: {0:F4}", result);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double x;
+        x = scan.nextDouble();
+        double result;
+        result = x + 7;
+        System.out.printf("%.4f", result);
+    <span class="comment">}
 }</span></p>
 <p>Отдельные части арифметического выражения названы терминами: <span style="color:red;">операторы</span> и <span style="color:green;">операнды</span>. Оператор это действие, а операнд - то над чем оно выполняется. Если отметить их цветом в решаемой задаче, то получится так:</p>
 <p><zoom>result = <span style="color:green">x</span>
@@ -107,27 +89,18 @@ result = 1 + 2 * 3;</p>
 <p>Сейчас будет разобран пример оформления вычислений в программе.</p>
 <p>Прежде чем отдавать компьютеру команду "посчитай результат", нужно понять назначение каждой переменной.</p>
 <p>Какие переменные были объявлены в фрагменте программы ниже?</p>
-<p class="preformatted"><span class="comment">using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+<p class="preformatted"><span class="comment">package lab02;</span>
+import java.util.Scanner;
 
-namespace Example
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {</span>
-            String data;
-            data = Console.ReadLine();
-            double x;
-            x = double.Parse(data);
-        <span class="comment">}
-    }
+<span class="comment">public class Example {
+    public static void main(String[] args) {</span>
+        Scanner scan = new Scanner(System.in);
+        double x;
+        x = scan.nextDouble();
+    <span class="comment">}
 }</span></p>
 <p>Их всего две:<ul>
-    <li>data - нужна чтобы получить значение от пользователя в текстовом виде.</li>
+    <li>scan - нужна чтобы считывать данные из консоли.</li>
     <li>x - нужна для хранения значения от пользователя в виде числа (действительного)</li>
 </ul></p>
 <p>Для хранения результата будет полезно создать еще одну переменную. В абстрактной задаче ее можно назвать просто "result". Если же в задаче, к примеру, дата плотность тела и его объем, а нужно найти массу, то переменным нужно дать более осмысленные названия: density, volume, mass.</p>

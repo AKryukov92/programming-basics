@@ -71,8 +71,11 @@ echo ^<div class="nav"^> ^
  ^</div^>>>%filename%
 
 type task3862.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre3862.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task9231.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre9231.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task4411.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre4411.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task3832.html>>%filename%
 type task7457.html>>%filename%
 type task9865.html>>%filename%
@@ -124,3 +127,4 @@ if x%1==x start "" %filename%
 cd ..
 call prepare_theory java 3862 java lab02
 call prepare_theory java 9231 java lab02
+call prepare_theory java 4411 java lab02
