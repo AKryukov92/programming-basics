@@ -314,7 +314,7 @@ namespace Task3784
             {
                 try
                 {
-                    String result = Lab07.Task1703(in1703[i]);
+                    String result = Lab08.Task1703(in1703[i]);
                     Console.WriteLine("Получилось: " + result);
                     Console.WriteLine("Ожидалось : " + out1703[i]);
                 }

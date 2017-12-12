@@ -142,7 +142,7 @@ public class Lab12Task7649 {
         };
         int[] out7035 = {1, 1, 1, 2, 3, 4, 3};
         for (int i = 0; i < in7035.length; i++) {
-            String result = Lab08.task7035(in7035[i]);
+            String result = Lab07.task7035(in7035[i]);
             System.out.printf("%s (%s)\n\n", result, out7035[i]);
         }
     }
@@ -231,7 +231,7 @@ public class Lab12Task7649 {
                 "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
         };
         for (int i = 0; i < in6806.length; i++) {
-            StringBuilder result = Lab08.task6806(new StringBuilder(), in6806[i]);
+            StringBuilder result = Lab07.task6806(new StringBuilder(), in6806[i]);
             if (out6806[i].equals(result.toString())){
                 System.out.println("Задача решена верно");
             } else {
@@ -253,7 +253,7 @@ public class Lab12Task7649 {
             "a\nb\nc\nd\ne\nf\ng\nh\n"
         };
         for (int i = 0; i < in5694.length; i++) {
-            StringBuilder result = Lab08.task5694(new StringBuilder(), in5694[i]);
+            StringBuilder result = Lab07.task5694(new StringBuilder(), in5694[i]);
             if (out5694[i].equals(result.toString())){
                 System.out.println("Задача решена верно");
             } else {
@@ -281,7 +281,7 @@ public class Lab12Task7649 {
             "z x c v"
         };
         for (int i = 0; i < in7369left.length; i++){
-            String result = Lab08.task7369(in7369left[i], in7369top[i]);
+            String result = Lab07.task7369(in7369left[i], in7369top[i]);
             System.out.println(result);
         }
     }

@@ -463,7 +463,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab07.Task9631(in9631[i]);
+                    int result = Lab08.Task9631(in9631[i]);
                     Console.WriteLine("{0} ({1})", result, out9631[i]);
                 }
                 catch (Exception e)
@@ -484,7 +484,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab07.Task9812(in9812a[i], in9812b[i]);
+                    int result = Lab08.Task9812(in9812a[i], in9812b[i]);
                     Console.WriteLine("{0} ({1})", result, out9812[i]);
                 }
                 catch (Exception e)
@@ -504,7 +504,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.Task5728(in5728a[i], in5728b[i]));
+                    Console.WriteLine(Lab08.Task5728(in5728a[i], in5728b[i]));
                 }
                 catch (Exception e)
                 {
@@ -523,7 +523,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.Task5923(in5923a[i], in5923b[i]));
+                    Console.WriteLine(Lab08.Task5923(in5923a[i], in5923b[i]));
                 }
                 catch (Exception e)
                 {
@@ -548,7 +548,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.Task9116(in9116[i]));
+                    Console.WriteLine(Lab08.Task9116(in9116[i]));
                 }
                 catch (Exception e)
                 {
@@ -578,7 +578,7 @@ namespace task9701
             {
                 try
                 {
-                    Lab07.Task1618(in1618[i]);
+                    Lab08.Task1618(in1618[i]);
                 }
                 catch (Exception e)
                 {
@@ -619,7 +619,7 @@ namespace task9701
             {
                 try
                 {
-                    String r = Lab07.Task4845(in4845a[i], in4845b[i]);
+                    String r = Lab08.Task4845(in4845a[i], in4845b[i]);
                     Console.WriteLine(r);
                 }
                 catch (Exception e)
@@ -644,7 +644,7 @@ namespace task9701
             {
                 try
                 {
-                    String r = Lab07.Task7222(in7222[i]);
+                    String r = Lab08.Task7222(in7222[i]);
                     Console.WriteLine(r);
                     Console.WriteLine();
                 }
@@ -664,7 +664,7 @@ namespace task9701
             {
                 try
                 {
-                    Console.WriteLine(Lab07.Task2166(in2166[i]));
+                    Console.WriteLine(Lab08.Task2166(in2166[i]));
                 }
                 catch (Exception e)
                 {
@@ -735,7 +735,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.Task5894(in5894left[i], in5894top[i]);
+                    int result = Lab07.Task5894(in5894left[i], in5894top[i]);
                     Console.WriteLine("Повторений: " + result);
                 }
                 catch (Exception e)
@@ -762,7 +762,7 @@ namespace task9701
             {
                 try
                 {
-                    String result = Lab08.Task4425(in4425a[i], in4425data[i]);
+                    String result = Lab07.Task4425(in4425a[i], in4425data[i]);
                     Console.WriteLine("{0} ({1})", result, out4425[i]);
                 }
                 catch (Exception e)
@@ -791,7 +791,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.Task7290(in7290b[i], in7290data[i]);
+                    int result = Lab07.Task7290(in7290b[i], in7290data[i]);
                     Console.WriteLine("{0} ({1})", result, out7290[i]);
                 }
                 catch (Exception e)
@@ -821,7 +821,7 @@ namespace task9701
             {
                 try
                 {
-                    int result = Lab08.Task8769(in8769p[i], in8769q[i], in8769s[i]);
+                    int result = Lab07.Task8769(in8769p[i], in8769q[i], in8769s[i]);
                     Console.WriteLine("{0} ({1})", result, out8769[i]);
                 }
                 catch (Exception e)

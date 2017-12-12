@@ -2,340 +2,568 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Methods
 {
     public class Lab07
     {
-        public static String STR = "abcdefwxyz";
-        public static String STR2 = "abcdacadbacdaabaadc";
-
-        public static int Task9631(String s)
+        static void Main(string[] args)
         {
-            if (!STR.Contains(s))
-            {
-                throw new Exception("Значение S отсутствует в строке");
-            }
-            return STR.Length - STR.IndexOf(s) - 1;
+            Step5541();
         }
 
-        public static int Task9812(String a, String b)
+        public static void Step5541()
         {
-            if (!STR.Contains(a))
-            {
-                throw new Exception("Значение A отсутствует в строке");
-            }
-            if (!STR.Contains(b))
-            {
-                throw new Exception("Значение B отсутствует в строке");
-            }
-            int indexA = STR.IndexOf(a);
-            int indexB = STR.IndexOf(b);
-            if (indexA < indexB)
-            {
-                return indexB - indexA - 1;
-            }
-            else
-            {
-                return indexA - indexB - 1;
-            }
-        }
-
-        public static IList<int> Task9279(string x)
-        {
-            if (x.Length != 2)
-            {
-                throw new Exception("Вводимая строка должна содержать ровно 2 символа");
-            }
-            IList<int> ret = new List<int>();
-            int i = STR2.IndexOf(x);
-            while (i != -1)
-            {
-                ret.Add(i);
-                i = STR2.IndexOf(x, i + 1);
-            }
-            return ret;
-
-        }
-
-        public static String Task4845(int a, int b)
-        {
-            if (a < 0 || a >= STR.Length)
-            {
-                throw new Exception("Значение A должно быть в интервале [0,длина строки)");
-            }
-            if (b < 0 || b >= STR.Length)
-            {
-                throw new Exception("Значение B должно быть в интервале [0,длина строки)");
-            }
-            if (a > b)
-            {
-                return STR.Substring(b, a - b + 1);
-            }
-            else
-            {
-                return STR.Substring(a, b - a + 1);
-            }
-        }
-
-        public static String Task5728(String a, String b)
-        {
-            if (!STR.Contains(a))
-            {
-                throw new Exception("Значение A отсутствует в строке");
-            }
-            if (!STR.Contains(b))
-            {
-                throw new Exception("Значение B отсутствует в строке");
-            }
-            int indexA = STR.IndexOf(a);
-            int indexB = STR.IndexOf(b);
-            if (indexA < indexB)
-            {
-                return STR.Substring(indexA + 1, indexB - indexA - 1);
-            }
-            else {
-                return STR.Substring(indexB + 1, indexA - indexB - 1);
-            }
-        }
-
-        public static bool Task7491(String x)
-        {
-            return STR.Contains(x);
-        }
-
-        public static String Task7222(String code)
-        {
-            if (code.Length != 13)
-            {
-                throw new Exception("Некорректная длина штрих-кода");
-            }
-            String country = code.Substring(0, 2);
-            String manufacturer = code.Substring(3, 3);
-            String product = code.Substring(7, 4);
-            String checksum = code.Substring(12, 1);
-            return "Код страны: " + country +
-                    "\nКод изготовителя: " + manufacturer +
-                    "\nКод товара: " + product +
-                    "\nКонтрольное число: " + checksum;
-        }
-
-        public static String Task5923(int a, int b)
-        {
-            if (a < 0 || a >= STR.Length)
-            {
-                throw new Exception("Значение A должно быть в интервале [0, длина строки)");
-            }
-            if (b < 0)
-            {
-                throw new Exception("Значение B должно быть неотрицательно");
-            }
-            if ((a + b) >= STR.Length)
-            {
-                throw new Exception("Сумма значений A и B должна быть меньше длины строки");
-            }
-            return STR.Substring(0, a) + STR.Substring(a + b);
-        }
-
-        public static String Task4265(String s)
-        {
-            if (s.StartsWith("s"))
-            {
-                return s.ToLower();
-            }
-            else if (s.StartsWith("U"))
-            {
-                return s.ToUpper();
-            }
-            else {
-                return s;
-            }
-        }
-
-        public static String Task2166(String s)
-        {
-            if (s.Length != 2)
-            {
-                throw new Exception("Вводимая строка должна содержать ровно 2 символа");
-            }
-            return STR2.Replace(s, " ");
-        }
-
-        public static String Task9116(String s)
-        {
-            if (!s.StartsWith("\"") || !s.EndsWith("\""))
-            {
-                throw new Exception("Строка должна начинаться и заканчиваться кавычкой");
-            }
-            return s.Substring(1, s.Length - 2).Trim();
-        }
-
-        public static int Task9925(String s)
-        {
-            return s.Split(',').Length;
-        }
-
-        public static void Task1618(String line)
-        {
-            Console.WriteLine(line);
-            int openIndex;
-            int depth = 0;
-            int closeIndex;
-            int lastIndex = 0;
-            while (lastIndex < line.Length)
-            {
-                closeIndex = line.IndexOf("}", lastIndex);
-                openIndex = line.IndexOf("{", lastIndex);
-                if (openIndex >= 0 && openIndex < closeIndex)
-                {
-                    depth++;
-                    lastIndex = openIndex;
-                }
-                if (openIndex >= 0 && closeIndex < 0)
-                {
-                    depth++;
-                    lastIndex = openIndex;
-                }
-                if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0)
-                {
-                    depth--;
-                    lastIndex = closeIndex;
-                }
-                if (openIndex < 0 && closeIndex >= 0)
-                {
-                    depth--;
-                    lastIndex = closeIndex;
-                }
-                if (openIndex < 0 && closeIndex < 0)
-                {
-                    break;
-                }
-                if (depth < 0)
-                {
-                    throw new Exception("Неожиданный символ '}'");
-                }
-                Console.Write(depth);
-                lastIndex++;
-            }
-            if (depth > 0)
-            {
-                throw new Exception("Неожиданный конец строки");
-            }
             Console.WriteLine();
+            Console.WriteLine("5541");
+            String[] in5541 = {
+                "1 1 1 1",
+                "1 1 2 2",
+                "1 1 1 2",
+                "1 2 3 4",
+                "1 2 3 4 1 2",
+                "1 1 3 3 2 2"};
+            String[] out5541 = {
+                "1",
+                "1 2",
+                "1 2",
+                "1 2 3 4",
+                "1 2 3 4",
+                "1 3 2"};
+            for (int i = 0; i < in5541.Length; i++)
+            {
+                StringBuilder sb = new StringBuilder();
+                ISet<String> result = Task5541(in5541[i]);
+                foreach (String item in result)
+                {
+                    sb.Append(item);
+                    sb.Append(" ");
+                }
+                Console.WriteLine(sb.ToString());
+            }
         }
 
-
-        public static IList<int> Task3657(String a)
+        public static String Task4425(int a, String raw)
         {
-            if (a.Length != 1)
+            if (String.IsNullOrEmpty(raw))
             {
-                throw new Exception("Нужно ввести ровно один символ");
+                throw new Exception("Исходная строка пуста");
             }
-            String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
-            IList<int> ret = new List<int>();
-            int next = input.IndexOf(a);
-            while (next >= 0)
+            String[] arr = raw.Split(new char[] { ' ' });
+            if (a < 0 || a >= arr.Length)
             {
-                ret.Add(next);
-                next = input.IndexOf(a, next + 1);
+                throw new Exception("Число A должно быть в интервале [0, размер массива)");
+            }
+            return arr[a];
+        }
+
+        public static String Task5683(String str)
+        {
+            if (String.IsNullOrEmpty(str))
+            {
+                return "";
+            }
+            String[] arr = str.Split(' ');
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sb.Append(arr[i]);
+                sb.Append(" ");
+                sb.Append(i);
+                sb.Append("\n");
+            }
+            return sb.ToString();
+        }
+
+        public static void Task1223(String[] arr)
+        {
+            for (int i = 0; i < arr.Length / 2; i++)
+            {
+                String temp = arr[i];
+                arr[i] = arr[arr.Length - 1 - i];
+                arr[arr.Length - 1 - i] = temp;
+            }
+        }
+
+        public static IList<String> Task1223(String raw)
+        {
+            if (raw.Length == 0)
+            {
+                return new List<String>();
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            Task1223(arr);
+            return arr.ToList();
+        }
+
+        public static double Task3946(String raw)
+        {
+            if (raw.Length == 0)
+            {
+                return 0;
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            double sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += int.Parse(arr[i]);
+            }
+            return sum / arr.Length;
+        }
+
+        public static IList<int> Task3940(String left, String right)
+        {
+            String[] larr = left.Split(new char[] { ' ' });
+            String[] rarr = right.Split(new char[] { ' ' });
+            if (larr.Length != rarr.Length)
+            {
+                throw new Exception("Размеры массивов должны быть одинаковы");
+            }
+            IList<int> ret = new List<int>();
+            for (int i = 0; i < larr.Length; i++)
+            {
+                int l = int.Parse(larr[i]);
+                int r = int.Parse(rarr[i]);
+                ret.Add(l * r);
             }
             return ret;
         }
 
-        public static String Task6599(String s)
+        public static IList<String> Task8311(int b, int e, String raw)
         {
-            String escaped = s.Replace("[", "\\[").Replace("]", "\\]");
-            bool outside = true;
-            int next = escaped.IndexOf("\"");
-            int current = 0;
-            StringBuilder result = new StringBuilder();
-            while (next >= 0)
+            String[] arr = raw.Split(new char[] { ' ' });
+            if (b < 0 || b >= arr.Length)
             {
-                String part = escaped.Substring(current, next - current);
-                result.Append(part);
-                if (outside)
+                throw new Exception("Число B должно быть в интервале [0, размер массива)");
+            }
+            if (e < 0 || e >= arr.Length)
+            {
+                throw new Exception("Число E должно быть в интервале [0, размер массива)");
+            }
+            IList<String> ret = new List<String>();
+            int i, n;
+            if (b < e)
+            {
+                i = b;
+                n = e;
+            }
+            else
+            {
+                i = e;
+                n = b;
+            }
+            while (i <= n)
+            {
+                ret.Add(arr[i]);
+                i++;
+            }
+            return ret;
+        }
+
+        public static IList<String> Task3134(int p, int q, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            if (p < 0 || p >= arr.Length)
+            {
+                throw new Exception("Число P должно быть в интервале [0, размер массива)");
+            }
+            if (q < 0 || q >= arr.Length)
+            {
+                throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+            }
+            IList<String> ret = new List<String>();
+            String t = arr[p];
+            arr[p] = arr[q];
+            arr[q] = t;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ret.Add(arr[i]);
+            }
+            return ret;
+        }
+
+        public static IList<int> Task9774(int m, String raw)
+        {
+            IList<int> ret = new List<int>();
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                return ret;
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ret.Add(int.Parse(arr[i]) * m);
+            }
+            return ret;
+        }
+
+        public static IList<String> Task9711(String raw)
+        {
+            IList<String> ret = new List<String>();
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                return ret;
+            }
+            String[] arr = raw.Split(new char[] { ' ' });
+            
+            ret.Add(arr[arr.Length - 1]);
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                ret.Add(arr[i]);
+            }
+            return ret;
+        }
+
+        public static IList<String> Task3333(int s, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<String> ret = new List<String>();
+            int ds;
+            if (s < 0)
+            {
+                ds = -s % arr.Length;
+            }
+            else
+            {
+                ds = arr.Length - s % arr.Length;
+            }
+            for (int i = ds; i < arr.Length; i++)
+            {
+                ret.Add(arr[i]);
+            }
+            for (int i = 0; i < ds; i++)
+            {
+                ret.Add(arr[i]);
+            }
+            return ret;
+        }
+
+        public static int Task7290(int b, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            if (b < 0 || b >= arr.Length)
+            {
+                throw new Exception("Число B должно быть в интервале [0, размер массива)");
+            }
+            int t = int.Parse(arr[b]);
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (int.Parse(arr[i]) < t)
                 {
-                    result.Append("[");
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static StringBuilder Task5694(StringBuilder sb, String x)
+        {
+            String[] arr = "a b c d e f g h".Split(new char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sb.Append(arr[i]);
+                if (arr[i].Equals(x))
+                {
+                    sb.Append("+");
+                }
+                sb.Append("\n");
+            }
+            return sb;
+        }
+
+        public static StringBuilder Task6806(StringBuilder sb, int x)
+        {
+            int[] arr = { 11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20 };
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sb.Append(arr[i]);
+                if (arr[i] == x)
+                {
+                    sb.Append("+");
+                }
+                sb.Append("\n");
+            }
+            return sb;
+        }
+
+        public static int Task5894(String leftRaw, String topRaw)
+        {
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                throw new Exception("Данные слева отсутствуют");
+            }
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                throw new Exception("Данные сверху отсутствуют");
+            }
+            int count = 0;
+            String[] leftArr = leftRaw.Split(' ');
+            String[] topArr = topRaw.Split(' ');
+            for (int i = 0; i < leftArr.Length; i++)
+            {
+                for (int j = 0; j < topArr.Length; j++)
+                {
+                    if (leftArr[i].Equals(topArr[j]))
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public static String Task7369(String leftRaw, String topRaw)
+        {
+            if (String.IsNullOrWhiteSpace(leftRaw))
+            {
+                return "Данные слева отсутствуют";
+            }
+            if (String.IsNullOrWhiteSpace(topRaw))
+            {
+                return "Данные сверху отсутствуют";
+            }
+            StringBuilder sb = new StringBuilder();
+            String[] leftArr = leftRaw.Split(' ');
+            String[] topArr = topRaw.Split(' ');
+            sb.Append("  ");
+            sb.Append(topRaw);
+            sb.Append("\n");
+            for (int i = 0; i < leftArr.Length; i++)
+            {
+                sb.Append(leftArr[i]);
+                for (int j = 0; j < topArr.Length; j++)
+                {
+                    if (leftArr[i].Equals(topArr[j]))
+                    {
+                        sb.Append(" +");
+                    }
+                    else
+                    {
+                        sb.Append("  ");
+                    }
+                }
+                sb.Append("|\n");
+            }
+            sb.Append(" ");
+            for (int i = 0; i < topArr.Length; i++)
+            {
+                sb.Append("--");
+            }
+            return sb.ToString();
+        }
+
+        public static bool Task4515(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i].Equals(arr[j]))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static String Task7035(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            int min = int.Parse(arr[0]);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Ход решения: \nНачинаю с ");
+            sb.Append(min);
+            for (int i = 1; i < arr.Length; i++)
+            {
+                sb.Append("\nСравниваю ");
+                sb.Append(min);
+                sb.Append(" и ");
+                int current = int.Parse(arr[i]);
+                sb.Append(current);
+                if (current < min)
+                {
+                    sb.Append("\nЗаменяю");
+                    min = current;
+                }
+            }
+            sb.Append("\nОтвет: ");
+            sb.Append(min);
+            return sb.ToString();
+        }
+
+        public static IList<int> Task9271(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<int> ret = new List<int>();
+            if (arr.Length == 0)
+            {
+                return ret;
+            }
+            int min = int.Parse(arr[0]);
+            for (int i = 1; i < arr.Length; i++)
+            {
+                int current = int.Parse(arr[i]);
+                if (current < min)
+                {
+                    min = current;
+                }
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ret.Add(int.Parse(arr[i]) - min);
+            }
+            return ret;
+        }
+
+        public static int Task8769(int p, int q, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            int i, n;
+            if (p < 0 || p >= arr.Length)
+            {
+                throw new Exception("Число P должно быть в интервале [0, размер массива)");
+            }
+            if (q < 0 || q >= arr.Length)
+            {
+                throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+            }
+            if (p < q)
+            {
+                i = p;
+                n = q;
+            }
+            else
+            {
+                i = q;
+                n = p;
+            }
+            int min = int.Parse(arr[i]);
+            while (i <= n)
+            {
+                int current = int.Parse(arr[i]);
+                if (current < min)
+                {
+                    min = current;
+                }
+                i++;
+            }
+            return min;
+        }
+
+        public static IList<int> Task4497(int x, int y, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<int> ret = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int current = int.Parse(arr[i]);
+                if (current == x)
+                {
+                    ret.Add(y);
                 }
                 else
                 {
-                    result.Append("]");
+                    ret.Add(current);
                 }
-                outside = !outside;
-                current = next + 1;
-                next = escaped.IndexOf("\"", current);
             }
-            if (current < escaped.Length)
-            {
-                String part = escaped.Substring(current);
-                result.Append(part);
-            }
-            return result.ToString();
+            return ret;
         }
 
-        public static String Task1703(String s)
+        public static IList<String> Task8820(String raw)
         {
-            int ltSignPos = s.IndexOf("<");
-            int ltSignPosEnd = s.LastIndexOf("<");
-            int gtSignPos = s.IndexOf(">");
-            int gtSignPosEnd = s.LastIndexOf(">");
-            int signPos;
-            String description;
-            if (ltSignPos >= 0)
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<String> ret = new List<String>();
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                if (gtSignPos > 0 || ltSignPosEnd != ltSignPos)
+                ret.Add(arr[i]);
+            }
+            return ret;
+        }
+
+        public static IList<int> Task3218(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<int> ret = new List<int>();
+            int[] data = new int[arr.Length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                data[i] = int.Parse(arr[i]);
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int min = i;
+                for (int j = i; j < arr.Length; j++)
                 {
-                    throw new Exception("В выражении должен быть только один знак сравнения");
+                    if (data[j] < data[min])
+                    {
+                        min = j;
+                    }
                 }
-                description = "меньше";
-                signPos = ltSignPos;
+                int t = data[min];
+                data[min] = data[i];
+                data[i] = t;
+                ret.Add(t);
             }
-            else if (gtSignPos >= 0)
+            return ret;
+        }
+
+        public static int Task4283(int k, String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (gtSignPosEnd != gtSignPos)
+                if (int.Parse(arr[i]) == k)
                 {
-                    throw new Exception("В выражении должен быть только один знак сравнения");
+                    count++;
                 }
-                description = "больше";
-                signPos = gtSignPos;
             }
-            else
+            return count;
+        }
+
+        public static IList<int> Task7703(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            IList<int> ret = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
             {
-                throw new Exception("Отсутствует знак сравнения");
+                int count = 0;
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[j].Equals(arr[i]))
+                    {
+                        count++;
+                    }
+                }
+                ret.Add(count);
             }
-            String var = s.Substring(0, signPos).Trim();
-            if (String.IsNullOrEmpty(var))
+            return ret;
+        }
+
+        public static ISet<String> Task5541(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            ISet<String> data = new HashSet<String>();
+            for (int i = 0; i < arr.Length; i++)
             {
-                throw new Exception("Слева от знака сравнения ожидается переменная");
+                data.Add(arr[i]);
             }
-            if (var.Contains(" "))
+            return data;
+        }
+
+        public static int Task9182(String raw)
+        {
+            String[] arr = raw.Split(new char[] { ' ' });
+            ISet<String> data = new HashSet<String>();
+            for (int i = 0; i < arr.Length; i++)
             {
-                String statement = var.Substring(0, var.LastIndexOf(" "));
-                String variable = var.Substring(var.LastIndexOf(" ") + 1);
-                throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+                data.Add(arr[i]);
             }
-            String value, special;
-            if (s.Substring(signPos + 1).StartsWith("="))
-            {
-                value = s.Substring(signPos + 2).Trim();
-                special = "либо равно числу";
-            }
-            else
-            {
-                value = s.Substring(signPos + 1).Trim();
-                special = "числа";
-            }
-            if (String.IsNullOrEmpty(value))
-            {
-                throw new Exception("Справа от знака сравнения ожидается ограничение");
-            }
-            if (value.Contains(" "))
-            {
-                String constraint = value.Substring(0, value.LastIndexOf(" "));
-                String statement = value.Substring(value.LastIndexOf(" ") + 1);
-                throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
-            }
-            return String.Format("Значение переменной {0} {1} {2} {3}", var, description, special, value);
+            return data.Count;
         }
     }
 }

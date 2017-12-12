@@ -344,7 +344,7 @@ namespace task6732
                 "q w e r a s d f z x c v"};
             for (int i = 0; i < in5683.Length; i++)
             {
-                String str = Lab08.Task5683(in5683[i]);
+                String str = Lab07.Task5683(in5683[i]);
                 Console.WriteLine(str);
             }
         }

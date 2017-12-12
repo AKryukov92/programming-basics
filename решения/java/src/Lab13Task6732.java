@@ -349,7 +349,7 @@ public class Lab13Task6732 {
             "q w e r a s d f z x c v"
         };
         for (int i = 0; i < in5683.length; i++){
-            System.out.println(Lab08.task5683(in5683[i]));
+            System.out.println(Lab07.task5683(in5683[i]));
         }
     }
 }

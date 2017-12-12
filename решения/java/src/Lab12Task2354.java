@@ -279,20 +279,20 @@ public class Lab12Task2354 {
     private static void Step9925() {
         System.out.println();
         System.out.println("9925");
-        int result9925 = Lab07.task9925("один, два, три, четыре, пять");
+        int result9925 = Lab08.task9925("один, два, три, четыре, пять");
         System.out.printf("%d (%d)\n", result9925, 5);
-        System.out.printf("%d (%d)\n", Lab07.task9925("янв,фев,март"), 3);
-        System.out.printf("%d (%d)\n", Lab07.task9925("один"), 1);
+        System.out.printf("%d (%d)\n", Lab08.task9925("янв,фев,март"), 3);
+        System.out.printf("%d (%d)\n", Lab08.task9925("один"), 1);
     }
 
     private static void Step4265() {
         System.out.println();
         System.out.println("4265");
-        System.out.println(Lab07.task4265("sABCD"));
-        System.out.println(Lab07.task4265("Uxyz"));
-        System.out.println(Lab07.task4265("s"));
-        System.out.println(Lab07.task4265("F123"));
-        System.out.println(Lab07.task4265("Sopqr"));
+        System.out.println(Lab08.task4265("sABCD"));
+        System.out.println(Lab08.task4265("Uxyz"));
+        System.out.println(Lab08.task4265("s"));
+        System.out.println(Lab08.task4265("F123"));
+        System.out.println(Lab08.task4265("Sopqr"));
     }
 
     private static void Step3946() {
@@ -305,7 +305,7 @@ public class Lab12Task2354 {
         };
         double[] out3946 = {2.2, 3, 0};
         for (int i = 0; i < in3946.length; i++) {
-            double result = Lab08.task3946(in3946[i]);
+            double result = Lab07.task3946(in3946[i]);
             System.out.printf("%.6f (%.6f)\n", result, out3946[i]);
         }
     }
@@ -322,7 +322,7 @@ public class Lab12Task2354 {
         };
         int[] out4283 = {1, 0, 5, 0};
         for (int i = 0; i < in4283k.length; i++) {
-            int result = Lab08.task4283(in4283k[i], in4283s[i]);
+            int result = Lab07.task4283(in4283k[i], in4283s[i]);
             System.out.printf("%d (%d)\n", result, out4283[i]);
         }
     }
@@ -337,7 +337,7 @@ public class Lab12Task2354 {
         };
         int[] out9182 = {6, 4, 1};
         for (int i = 0; i < out9182.length; i++) {
-            int result = Lab08.task9182(in9182[i]);
+            int result = Lab07.task9182(in9182[i]);
             System.out.printf("%d (%d)\n", result, out9182[i]);
         }
     }

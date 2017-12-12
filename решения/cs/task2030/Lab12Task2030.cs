@@ -285,7 +285,7 @@ namespace tfa
             String[] in7491 = { "bx", "fw", "123" };
             for (int i = 0; i < in7491.Length; i++)
             {
-                if (Lab07.Task7491(in7491[i]))
+                if (Lab08.Task7491(in7491[i]))
                 {
                     Console.WriteLine("Содержится");
                 }
@@ -309,7 +309,7 @@ namespace tfa
                 "a b c d q w e r"};
             for (int i = 0; i < in4515.Length; i++)
             {
-                if (Lab08.Task4515(in4515[i]))
+                if (Lab07.Task4515(in4515[i]))
                 {
                     Console.WriteLine("Повторения есть");
                 }

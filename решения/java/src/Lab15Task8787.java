@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author akryukov
@@ -107,7 +106,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in9279.length; i++){
             try {
                 StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab07.task9279(in9279[i]);
+                List<Integer> result = Lab08.task9279(in9279[i]);
                 for(Integer item : result){
                     sb.append(item);
                     sb.append(" ");
@@ -134,7 +133,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in3657.length; i++){
             try {
                 StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab07.task3657(in3657[i]);
+                List<Integer> result = Lab08.task3657(in3657[i]);
                 for(Integer item : result){
                     sb.append(item);
                     sb.append(" ");
@@ -166,7 +165,7 @@ public class Lab15Task8787 {
         };
         for (int i = 0; i < in6599.length; i++) {
             try {
-                System.out.println(Lab07.task6599(in6599[i]));
+                System.out.println(Lab08.task6599(in6599[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -189,7 +188,7 @@ public class Lab15Task8787 {
             "6 6 6 6 6 6"};
         for (int i = 0; i < in7703.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task7703(in7703[i]);
+            List<Integer> result = Lab07.task7703(in7703[i]);
             for (Integer item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -218,7 +217,7 @@ public class Lab15Task8787 {
             "1 1 1 2 2 2 3 3 3 4 4"};
         for (int i = 0; i < in3218.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task3218(in3218[i]);
+            List<Integer> result = Lab07.task3218(in3218[i]);
             for (Integer item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -244,7 +243,7 @@ public class Lab15Task8787 {
         };
         for (int i = 0; i < in8820.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<String> result = Lab08.task8820(in8820[i]);
+            List<String> result = Lab07.task8820(in8820[i]);
             for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -263,7 +262,7 @@ public class Lab15Task8787 {
         String in4497data = "1 2 3 4 1 2";
         for (int i = 0; i < in4497x.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task4497(
+            List<Integer> result = Lab07.task4497(
                     in4497x[i], in4497y[i], in4497data);
             for (Integer item : result) {
                 sb.append(item);
@@ -286,7 +285,7 @@ public class Lab15Task8787 {
         };
         for (int i = 0; i < in9271.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task9271(in9271[i]);
+            List<Integer> result = Lab07.task9271(in9271[i]);
             for (Integer item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -302,7 +301,7 @@ public class Lab15Task8787 {
         String in3333data = "q w e r t y";
         for (int i = 0; i < in3333s.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<String> result = Lab08.task3333(in3333s[i], in3333data);
+            List<String> result = Lab07.task3333(in3333s[i], in3333data);
             for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -322,7 +321,7 @@ public class Lab15Task8787 {
         };
         for (int i = 0; i < in9711.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<String> result = Lab08.task9711(in9711[i]);
+            List<String> result = Lab07.task9711(in9711[i]);
             for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -341,7 +340,7 @@ public class Lab15Task8787 {
             ""};
         for (int i = 0; i < in9774m.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab08.task9774(in9774m[i], in9774data[i]);
+            List<Integer> result = Lab07.task9774(in9774m[i], in9774data[i]);
             for (Integer item : result) {
                 sb.append(item);
                 sb.append(" ");
@@ -359,7 +358,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in3134p.length; i++) {
             try {
                 StringBuilder sb = new StringBuilder();
-                List<String> result = Lab08.task3134(
+                List<String> result = Lab07.task3134(
                         in3134p[i], in3134q[i], in3134data);
                 for (String item : result) {
                     sb.append(item);
@@ -391,7 +390,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in8311b.length; i++) {
             try {
                 StringBuilder sb = new StringBuilder();
-                List<String> result = Lab08.task8311(
+                List<String> result = Lab07.task8311(
                         in8311b[i], in8311e[i], in8311data[i]);
                 for (String item : result) {
                     sb.append(item);
@@ -422,7 +421,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in3940l.length; i++) {
             try {
                 StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab08.task3940(in3940l[i], in3940r[i]);
+                List<Integer> result = Lab07.task3940(in3940l[i], in3940r[i]);
                 for (Integer item : result) {
                     sb.append(item);
                     sb.append(" ");
@@ -445,7 +444,7 @@ public class Lab15Task8787 {
         };
         for (int i = 0; i < in1223.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<String> result = Lab08.task1223(in1223[i]);
+            List<String> result = Lab07.task1223(in1223[i]);
             for (String item : result) {
                 sb.append(item);
                 sb.append(" ");

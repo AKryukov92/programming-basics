@@ -1,208 +1,378 @@
-var STR = "abcdefwxyz";
-var STR2 = "abcdacadbacdaabaadc";
-function task7491(s){
-	return STR.indexOf(s) != -1;
+function task4425(a, str){
+	if (str == ""){
+		throw new Error("Исходная строка пуста");
+	}
+	var arr = str.split(" ");
+	if (a < 0 || a >= arr.length){
+		throw new Error("Число A должно быть в интервале [0, размер массива)");
+	}
+	return arr[a];
 }
-function task9631(s){
-	if (STR.indexOf(s) == -1){
-		throw new Error("Значение отсутствует в строке");
+function task5683(str){
+	if (str === ""){
+		return "";
 	}
-	return STR.length - STR.indexOf(s) - 1;
+	var ret = "";
+	var arr = str.split(" ");
+	for (var i = 0; i < arr.length; i++){
+		ret += arr[i] + " " + i + "<br/>";
+	}
+	return ret;
 }
-function task9812(a,b){
-	if (STR.indexOf(a) == -1){
-		throw new Error("Значение A отсутствует в строке");
+function task1223(raw){
+	var ret = [];
+	if (raw == ""){
+		return ret;
 	}
-	if (STR.indexOf(b) == -1){
-		throw new Error("Значение B отсутствует в строке");
+	var arr = raw.split(" ");
+	for (var i = arr.length - 1; i >= 0; i--){
+		ret.push(arr[i]);
 	}
-	var ia = STR.indexOf(a);
-	var ib = STR.indexOf(b);
-	if (ia > ib){
-		return ia - ib - 1;
-	} else {
-		return ib - ia - 1;
-	}
+	return ret;
 }
-function task9279(x){
-	if (x.length != 2){
-		throw new Error("Вводимая строка должна содержать ровно 2 символа");
+function task3946(raw){
+	if (raw == ""){
+		return 0;
 	}
-	var r = "";
-	var i = STR2.indexOf(x);
-	while(i != -1){
-		r += i + " ";
-		i = STR2.indexOf(x,i+1);
+	var arr = raw.split(" ");
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++){
+		sum += parseInt(arr[i]);
 	}
-	return r;
+	return sum/arr.length;
 }
-function task4845(a,b){
-	a = parseInt(a);
+function task3940(left, right){
+	var larr = left.split(" ");
+	var rarr = right.split(" ");
+	if (larr.length != rarr.length){
+		throw new Error("Размеры массивов должны быть одинаковы");
+	}
+	var ret = [];
+	for (var i = 0; i < larr.length; i++){
+		var l = parseInt(larr[i]);
+		var r = parseInt(rarr[i]);
+		ret.push(l*r);
+	}
+	return ret;
+}
+function task8311(b, e, raw){
+	var arr = raw.split(" ");
+	if (b < 0 || b >= arr.length){
+		throw new Error("Число B должно быть в интервале [0, размер массива)");
+	}
+	if (e < 0 || e >= arr.length){
+		throw new Error("Число E должно быть в интервале [0, размер массива)");
+	}
+	var ret = [];
+	var i, n;
 	b = parseInt(b);
-	if (a < 0 || a >= STR.length){
-		throw new Error("Значение A должно быть в интервале [0,длина строки)");
-	}
-	if (b < 0 || b >= STR.length){
-		throw new Error("Значение B должно быть в интервале [0,длина строки)");
-	}
-	if (a < b){
-		return STR.substring(a, b + 1);
+	e = parseInt(e);
+	if (b < e){
+		i = b;
+		n = e;
 	} else {
-		return STR.substring(b, a + 1);
+		i = e;
+		n = b;
 	}
+	while(i <= n){
+		ret.push(arr[i]);
+		i++;
+	}
+	return ret;
 }
-function task5728(a,b){
-	if (STR.indexOf(a) == -1){
-		throw new Error("Значение A отсутствует в строке");
+function task3134(p, q, raw){
+	var arr = raw.split(" ");
+	if (p < 0 || p >= arr.length ){
+		throw new Error("Число P должно быть в интервале [0, размер массива)");
 	}
-	if (STR.indexOf(b) == -1){
-		throw new Error("Значение B отсутствует в строке");
+	if (q < 0 || q >= arr.length){
+		throw new Error("Число Q должно быть в интервале [0, размер массива)");
 	}
-	var ia = STR.indexOf(a);
-	var ib = STR.indexOf(b);
-	if (ia > ib){
-		return STR.substring(ib + 1, ia);
+	var ret = [];
+	var t = arr[p];
+	arr[p] = arr[q];
+	arr[q] = t;
+	for (var i = 0; i < arr.length; i++){
+		ret.push(arr[i]);
+	}
+	return ret;
+}
+function task9774(m, raw){
+	var ret = [];
+	if (raw == ""){
+		return ret;
+	}
+	var arr = raw.split(" ");
+	for (var i = 0; i < arr.length; i++){
+		ret.push(parseInt(arr[i]) * m);
+	}
+	return ret;
+}
+function task9711(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	ret.push(arr[arr.length - 1]);
+	for (var i = 0; i < arr.length - 1; i++){
+		ret.push(arr[i]);
+	}
+	return ret;
+}
+function task3333(s, raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	var ds;
+	if (s < 0){
+		ds = -s % arr.length;
 	} else {
-		return STR.substring(ia + 1, ib);
+		ds = arr.length - s % arr.length;
 	}
+	for (var i = ds; i < arr.length; i++){
+		ret.push(arr[i]);
+	}
+	for (var i = 0; i < ds; i++){
+		ret.push(arr[i]);
+	}
+	return ret;
 }
-function task7222(code){
-	if (code.length != 13)
-	{
-		throw new Error("Некорректная длина штрих-кода");
+function task8820(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	for (var i = arr.length - 1; i >= 0; i--){
+		ret.push(arr[i]);
 	}
-	var country = code.substring(0, 2);
-	var manufacturer = code.substring(3, 6);
-	var product = code.substring(7, 11);
-	var checksum = code.substring(12, 13);
-	return "Код страны: " + country +
-			"<br/>Код изготовителя: " + manufacturer +
-			"<br/>Код товара: " + product +
-			"<br/>Контрольное число: " + checksum;
+	return ret;
 }
-function task5923(a,b){
-	a = parseInt(a);
-	b = parseInt(b);
-	if (b < 0){
-		throw new Error("Значение B должно быть неотрицательно");
+function task7290(b, raw){
+	var arr = raw.split(" ");
+	if (b < 0 || b >= arr.length){
+		throw new Error("Число B должно быть в интервале [0, размер массива)");
 	}
-	if (a + b >= STR.length){
-		throw new Error("Сумма значений A и B должна быть меньше длины строки");
+	var t = parseInt(arr[b]);
+	var count = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (parseInt(arr[i]) < t){
+			count++;
+		}
 	}
-	if (a < 0 || a >= STR.length){
-		throw new Error("Значение A должно быть в интервале [0,длина строки)");
-	}
-	return STR.substring(0,a) + STR.substring(a+b);
+	return count;
 }
-function task4265(s){
-	if (s.startsWith("s")){
-		return s.toLowerCase();
+function task5694(x){
+	var arr = ["a", "b", "c", "d", "e", "f", "g", "h"];
+	var ret = "";
+	for (var i = 0; i < arr.length; i++){
+		ret += arr[i];
+		if (arr[i] == x){
+			ret += "+";
+		}
+		ret += "<br/>";
 	}
-	if (s.startsWith("U")){
-		return s.toUpperCase();
-	}
-	return s;
+	return ret;
 }
-function task2166(x){
-	if (x.length != 2){
-		throw new Error("Вводимая строка должна содержать ровно 2 символа");
+function task6806(x){
+	var arr = [11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20];
+	var ret = "";
+	for (var i = 0; i < arr.length; i++){
+		ret += arr[i];
+		if (arr[i] == x){
+			ret += "+";
+		}
+		ret += "\n";
 	}
-	return STR2.replace(new RegExp(x,'g')," ");
+	return ret;
 }
-function task9116(str){
-	if(!str.startsWith('"') || !str.endsWith('"')){
-		throw new Error("Строка должна начинаться и заканчиваться кавычкой");
+function task7369(leftRaw, topRaw){
+	if (leftRaw == ""){
+		return "Данные слева отсутствуют";
 	}
-	return str.substring(1,str.length-1).trim();
-}
-function task9925(str){
-	return str.split(",").length;
-}
-function task1618(line){
-	var openIndex;
-	var depth = 0;
-	var closeIndex;
-	var lastIndex = 0;
-	var r = "";
-	while(lastIndex < line.length){
-		closeIndex = line.indexOf("}", lastIndex);
-		openIndex = line.indexOf("{", lastIndex);
-		if (openIndex >= 0 && openIndex < closeIndex) {
-			depth++;
-			lastIndex = openIndex;
-		}
-		if (openIndex >= 0 && closeIndex < 0){
-			depth++;
-			lastIndex = openIndex;
-		}
-		if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0){
-			depth--;
-			lastIndex = closeIndex;
-		}
-		if (openIndex < 0 && closeIndex >=0){
-			depth--;
-			lastIndex = closeIndex;
-		}
-		if (openIndex < 0 && closeIndex < 0){
-			break;
-		}
-		if (depth < 0){
-			throw new Error(r + " Неожиданный символ '}'");
-		}
-		r += depth;
-		lastIndex++;
+	if(topRaw == ""){
+		return "Данные сверху отсутствуют";
 	}
-	if (depth > 0){
-		throw new Error(r + " Неожиданный конец строки");
+	var leftArr = leftRaw.split(" ");
+	var topArr = topRaw.split(" ");
+	var sb = "  ";
+	sb += topRaw;
+	sb += "\n";
+	for (var i = 0; i < leftArr.length; i++){
+		sb += leftArr[i];
+		for (var j = 0; j < topArr.length; j++){
+			if(leftArr[i] == topArr[j]){
+				sb += " +";
+			} else {
+				sb += "  ";
+			}
+		}
+		sb += "|\n";
 	}
-	return r;
+	sb += " ";
+	for(var i = 0; i < topArr.length;i++){
+		sb += "--";
+	}
+	return sb.toString();
 }
-function task1703(s){
-	var ltSignPos = s.indexOf("<");
-	var ltSignPosEnd = s.lastIndexOf("<");
-	var gtSignPos = s.indexOf(">");
-	var gtSignPosEnd = s.lastIndexOf(">");
-	var signPos;
-	var description;
-	if (ltSignPos >= 0) {
-		if (gtSignPos > 0 || ltSignPosEnd != ltSignPos) {
-			throw new Error("В выражении должен быть только один знак сравнения");
+function task5894(leftRaw, topRaw) {
+	if (leftRaw == ""){
+		throw new Error("Данные слева отсутствуют");
+	}
+	if(topRaw == ""){
+		throw new Error("Данные сверху отсутствуют");
+	}
+	var count = 0;
+	var leftArr = leftRaw.split(" ");
+	var topArr = topRaw.split(" ");
+	for (var i = 0; i < leftArr.length; i++){
+		for (var j = 0; j < topArr.length; j++){
+			if(leftArr[i] == topArr[j]){
+				count++;
+			}
 		}
-		description = "меньше";
-		signPos = ltSignPos;
-	} else if (gtSignPos >= 0) {
-		if (gtSignPosEnd != gtSignPos) {
-			throw new Error("В выражении должен быть только один знак сравнения");
+	}
+	return count;
+}
+function task4515(raw){
+	var arr = raw.split(" ");
+	for (var i = 0; i < arr.length; i++){
+		for (var j = i + 1; j < arr.length; j++){
+			if (arr[i] == arr[j]){
+				return true;
+			}
 		}
-		description = "больше";
-		signPos = gtSignPos;
+	}
+	return false;
+}
+function task7035(raw){
+	var arr = raw.split(" ");
+	var min = parseInt(arr[0]);
+	var result = "Ход решения:<br/>Начинаю с " + min;
+	for (var i = 1; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		result += "</br>Сравниваю " + min + " и " + current;
+		if (current < min){
+			result += "</br>Заменяю";
+			min = current;
+		}
+	}
+	result += "</br>Ответ: " + min;
+	return result;
+}
+function task9271(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	if (arr.length == 0){
+		return ret;
+	}
+	var min = parseInt(arr[0]);
+	for (var i = 1; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		if (current < min){
+			min = current;
+		}
+	}
+	for (var i = 0; i < arr.length; i++){
+		ret.push(parseInt(arr[i]) - min);
+	}
+	return ret;
+}
+function task8769(p,q,raw){
+	var arr = raw.split(" ");
+	var i, n;
+	if (p < 0 || p >= arr.length){
+		throw new Error("Число P должно быть в интервале [0, размер массива)");
+	}
+	if (q < 0 || q >= arr.length){
+		throw new Error("Число Q должно быть в интервале [0, размер массива)");
+	}
+	if (p < q){
+		i = p;
+		n = q;
 	} else {
-		throw new Error("Отсутствует знак сравнения");
+		i = q;
+		n = p;
 	}
-	var leftSide = s.substring(0, signPos).trim();
-	if (leftSide == ""){
-		throw new Error("Слева от знака сравнения ожидается переменная");
+	var min = parseInt(arr[i]);
+	while(i <= n){
+		var current = parseInt(arr[i]);
+		if (current < min){
+			min = current;
+		}
+		i++;
 	}
-	if (leftSide.includes(" ")){
-		var statement = leftSide.substring(0, leftSide.lastIndexOf(" "));
-		var variable = leftSide.substring(leftSide.lastIndexOf(" ") + 1);
-		throw new Error("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+	return min;
+}
+function task4497(x,y,raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	for (var i = 0; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		if (current == x){
+			ret.push(y);
+		} else {
+			ret.push(current);
+		}
 	}
-	var rightSide, special;
-	if (s.substring(signPos+1).startsWith("=")){
-		rightSide = s.substring(signPos+2).trim();
-		special = "либо равно числу";
-	} else {
-		rightSide = s.substring(signPos+1).trim();
-		special = "числа";
+	return ret;
+}
+function task3218(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	var data = [];
+	for (var i = 0; i < arr.length; i++){
+		data[i] = parseInt(arr[i]);
 	}
-	if (rightSide == ""){
-		throw new Error("Справа от знака сравнения ожидается ограничение");
+	for (var i = 0; i < arr.length; i++){
+		var min = i;
+		for (var j = i; j < arr.length; j++){
+			if (data[j] < data[min]){
+				min = j;
+			}
+		}
+		var t = data[min];
+		data[min] = data[i];
+		data[i] = t;
+		ret.push(t);
 	}
-	if (rightSide.includes(" ")){
-		var constraint = rightSide.substring(0, rightSide.lastIndexOf(" "));
-		var statement = rightSide.substring(rightSide.lastIndexOf(" ") + 1);
-		throw new Error("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
+	return ret;
+}
+function task4283(k,raw){
+	var arr = raw.split(" ");
+	var count = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (parseInt(arr[i]) == k){
+			count++;
+		}
 	}
-	return "Значение переменной " + leftSide + " " + description + " " + special + " " + rightSide;
+	return count;
+}
+function task7703(raw){
+	var arr = raw.split(" ");
+	var ret = [];
+	for (var i = 0; i < arr.length; i++){
+		var count = 0;
+		for (var j = 0; j < arr.length; j++){
+			if (arr[j] == arr[i]){
+				count++;
+			}
+		}
+		ret.push(count);
+	}
+	return ret;
+}
+function task5541(raw){
+	var arr = raw.split(" ");
+	var data = {};
+	for (var i = 0; i < arr.length; i++){
+		data[arr[i]] = true;
+	}
+	return data;
+}
+function task9182(raw){
+	var arr = raw.split(" ");
+	var data = {};
+	for (var i = 0; i < arr.length; i++){
+		data[arr[i]] = true;
+	}
+	var count = 0;
+	for (item in data){
+		count++;
+	}
+	return count;
 }

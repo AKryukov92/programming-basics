@@ -233,7 +233,7 @@ public class Lab13Task3784 {
         };
         for (int i = 0; i < in1703.length; i++){
             try {
-                String result = Lab07.task1703(in1703[i]);
+                String result = Lab08.task1703(in1703[i]);
                 System.out.println("Получилось: " + result);
                 System.out.println("Ожидалось : " + out1703[i]);
             } catch (Exception e) {

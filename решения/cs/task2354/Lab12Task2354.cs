@@ -246,11 +246,11 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("4265");
-            Console.WriteLine(Lab07.Task4265("sABCD"));
-            Console.WriteLine(Lab07.Task4265("Uxyz"));
-            Console.WriteLine(Lab07.Task4265("s"));
-            Console.WriteLine(Lab07.Task4265("F123"));
-            Console.WriteLine(Lab07.Task4265("Sopqr"));
+            Console.WriteLine(Lab08.Task4265("sABCD"));
+            Console.WriteLine(Lab08.Task4265("Uxyz"));
+            Console.WriteLine(Lab08.Task4265("s"));
+            Console.WriteLine(Lab08.Task4265("F123"));
+            Console.WriteLine(Lab08.Task4265("Sopqr"));
         }
 
         static void Step3946()
@@ -264,7 +264,7 @@ namespace tfa
             double[] out3946 = { 2.2, 3, 0 };
             for (int i = 0; i < in3946.Length; i++)
             {
-                double result = Lab08.Task3946(in3946[i]);
+                double result = Lab07.Task3946(in3946[i]);
                 Console.WriteLine("{0:F6} ({0:F6})", result, out3946[i]);
             }
         }
@@ -282,7 +282,7 @@ namespace tfa
             int[] out4283 = { 1, 0, 5, 0 };
             for (int i = 0; i < in4283k.Length; i++)
             {
-                int result = Lab08.Task4283(in4283k[i], in4283s[i]);
+                int result = Lab07.Task4283(in4283k[i], in4283s[i]);
                 Console.WriteLine("{0} ({1})", result, out4283[i]);
             }
         }
@@ -298,7 +298,7 @@ namespace tfa
             int[] out9182 = { 6, 4, 1 };
             for (int i = 0; i < out9182.Length; i++)
             {
-                int result = Lab08.Task9182(in9182[i]);
+                int result = Lab07.Task9182(in9182[i]);
                 Console.WriteLine("{0} ({1})", result, out9182[i]);
             }
         }
@@ -386,10 +386,10 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("9925");
-            int result9925 = Lab07.Task9925("один, два, три, четыре, пять");
+            int result9925 = Lab08.Task9925("один, два, три, четыре, пять");
             Console.WriteLine("{0} ({1})", result9925, 5);
-            Console.WriteLine("{0} ({1})", Lab07.Task9925("янв,фев,март"), 3);
-            Console.WriteLine("{0} ({1})", Lab07.Task9925("один"), 1);
+            Console.WriteLine("{0} ({1})", Lab08.Task9925("янв,фев,март"), 3);
+            Console.WriteLine("{0} ({1})", Lab08.Task9925("один"), 1);
         }
     }
 }

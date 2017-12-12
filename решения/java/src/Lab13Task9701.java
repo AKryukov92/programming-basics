@@ -440,7 +440,7 @@ public class Lab13Task9701 {
         };
         for (int i = 0; i < in1618.length; i++) {
             try {
-                Lab07.task1618(in1618[i]);
+                Lab08.task1618(in1618[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -461,7 +461,7 @@ public class Lab13Task9701 {
         };
         for (int i = 0; i < in9116.length; i++) {
             try {
-                System.out.println(Lab07.task9116(in9116[i]));
+                System.out.println(Lab08.task9116(in9116[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -474,7 +474,7 @@ public class Lab13Task9701 {
         String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
         for (int i = 0; i < in2166.length; i++) {
             try {
-                System.out.println(Lab07.task2166(in2166[i]));
+                System.out.println(Lab08.task2166(in2166[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -488,7 +488,7 @@ public class Lab13Task9701 {
         int[] in5923b = {3, 0, 7, 1, 3, -2};
         for (int i = 0; i < in5923a.length; i++) {
             try {
-                System.out.println(Lab07.task5923(in5923a[i], in5923b[i]));
+                System.out.println(Lab08.task5923(in5923a[i], in5923b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -507,7 +507,7 @@ public class Lab13Task9701 {
         };
         for (int i = 0; i < in7222.length; i++) {
             try {
-                System.out.println(Lab07.task7222(in7222[i]));
+                System.out.println(Lab08.task7222(in7222[i]));
                 System.out.println();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -522,7 +522,7 @@ public class Lab13Task9701 {
         String[] in5728b = {"z", "d", "d", "z", "l"};
         for (int i = 0; i < in5728a.length; i++) {
             try {
-                System.out.println(Lab07.task5728(in5728a[i], in5728b[i]));
+                System.out.println(Lab08.task5728(in5728a[i], in5728b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -536,7 +536,7 @@ public class Lab13Task9701 {
         int[] in4845b = {3, 9, 2, 4, 4, -2, 17};
         for (int i = 0; i < in4845a.length; i++) {
             try {
-                System.out.println(Lab07.task4845(in4845a[i], in4845b[i]));
+                System.out.println(Lab08.task4845(in4845a[i], in4845b[i]));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -551,7 +551,7 @@ public class Lab13Task9701 {
         int[] out9812 = {6, 2, 0, 0};
         for (int i = 0; i < in9812a.length; i++) {
             try {
-                int result = Lab07.task9812(in9812a[i], in9812b[i]);
+                int result = Lab08.task9812(in9812a[i], in9812b[i]);
                 System.out.printf("%d (%d)\n", result, out9812[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -566,7 +566,7 @@ public class Lab13Task9701 {
         int[] out9631 = {0, 9, 0};
         for (int i = 0; i < in9631.length; i++) {
             try {
-                int result = Lab07.task9631(in9631[i]);
+                int result = Lab08.task9631(in9631[i]);
                 System.out.printf("%d (%d)\n", result, out9631[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -593,7 +593,7 @@ public class Lab13Task9701 {
         };
         for (int i = 0; i < in5894left.length; i++) {
             try {
-                int result = Lab08.task5894(in5894left[i], in5894top[i]);
+                int result = Lab07.task5894(in5894left[i], in5894top[i]);
                 System.out.println("Повторений: " + result);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -619,7 +619,7 @@ public class Lab13Task9701 {
         int[] out8769 = {2, 1, 5, 2, 3, 0, 0, 0};
         for (int i = 0; i < in8769p.length; i++) {
             try {
-                int result = Lab08.task8769(in8769p[i], in8769q[i], in8769s[i]);
+                int result = Lab07.task8769(in8769p[i], in8769q[i], in8769s[i]);
                 System.out.printf("%d (%d)\n", result, out8769[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -644,7 +644,7 @@ public class Lab13Task9701 {
         int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
         for (int i = 0; i < in7290b.length; i++) {
             try {
-                int result = Lab08.task7290(in7290b[i], in7290data[i]);
+                int result = Lab07.task7290(in7290b[i], in7290data[i]);
                 System.out.printf("%d (%d)\n", result, out7290[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -667,7 +667,7 @@ public class Lab13Task9701 {
         String[] out4425 = {"q", "r", "p", "", "", ""};
         for (int i = 0; i < in4425a.length; i++) {
             try {
-                String result = Lab08.task4425(in4425a[i], in4425data[i]);
+                String result = Lab07.task4425(in4425a[i], in4425data[i]);
                 System.out.printf("%s (%s)\n", result, out4425[i]);
             } catch (Exception e) {
                 System.out.println(e.getMessage());

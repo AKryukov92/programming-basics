@@ -1,268 +1,437 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
- * Created by Александр on 02.04.2017.
+ * Created by Александр on 03.04.2017.
  */
 public class Lab07 {
-
     public static void main(String[] args) {
-    }
-
-    public static final String STR = "abcdefwxyz";
-    public static final String STR2 = "abcdacadbacdaabaadc";
-
-    public static int task9631(String s) throws Exception {
-        if (!STR.contains(s)) {
-            throw new Exception("Значение S отсутствует в строке");
-        }
-        return STR.length() - STR.indexOf(s) - 1;
-    }
-
-    public static int task9812(String ca, String cb) throws Exception {
-        if (!STR.contains(ca)) {
-            throw new Exception("Значение CA отсутствует в строке");
-        }
-        if (!STR.contains(cb)) {
-            throw new Exception("Значение CB отсутствует в строке");
-        }
-        int indexA = STR.indexOf(ca);
-        int indexB = STR.indexOf(cb);
-        if (indexA < indexB) {
-            return indexB - indexA - 1;
-        } else {
-            return indexA - indexB - 1;
-        }
-    }
-
-    public static List<Integer> task9279(String x) throws Exception {
-        if (x.length() != 2) {
-            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
-        }
-        List<Integer> ret = new ArrayList<>();
-        int i = STR2.indexOf(x);
-        while (i != -1) {
-            ret.add(i);
-            i = STR2.indexOf(x, i + 1);
-        }
-        return ret;
-    }
-
-    static String task4845(int ca, int cb) throws Exception {
-        if (ca < 0 || ca > STR.length()) {
-            throw new Exception("Значение CA должно быть в интервале [0,длина строки)");
-        }
-        if (cb < 0 || cb > STR.length()) {
-            throw new Exception("Значение CB должно быть в интервале [0,длина строки)");
-        }
-        if (ca > cb) {
-            return STR.substring(cb, ca + 1);
-        } else {
-            return STR.substring(ca, cb + 1);
-        }
-    }
-
-    public static String task5728(String ca, String cb) throws Exception {
-        if (!STR.contains(ca)) {
-            throw new Exception("Значение CA отсутствует в строке");
-        }
-        if (!STR.contains(cb)) {
-            throw new Exception("Значение CB отсутствует в строке");
-        }
-        int indexA = STR.indexOf(ca);
-        int indexB = STR.indexOf(cb);
-        if (indexA < indexB) {
-            return STR.substring(indexA + 1, indexB);
-        } else {
-            return STR.substring(indexB + 1, indexA);
-        }
-    }
-
-    public static String task7222(String code) throws Exception {
-        if (code.length() != 13) {
-            throw new Exception("Некорректная длина штрих-кода");
-        }
-        String country = code.substring(0, 2);
-        String manufacturer = code.substring(3, 6);
-        String product = code.substring(7, 11);
-        String checksum = code.substring(12);
-        return "Код страны: " + country +
-                "\nКод изготовителя: " + manufacturer +
-                "\nКод товара: " + product +
-                "\nКонтрольное число: " + checksum;
-    }
-
-    public static boolean task7491(String x) {
-        return STR.contains(x);
-    }
-
-    public static String task5923(int ca, int cb) throws Exception {
-        if (ca < 0 || ca > STR.length()) {
-            throw new Exception("Значение CA должно быть в интервале [0, длина строки)");
-        }
-        if (cb < 0) {
-            throw new Exception("Значение CB должно быть неотрицательно");
-        }
-        if ((ca + cb) > STR.length()) {
-            throw new Exception("Сумма значений CA и CB должна быть меньше длины строки");
-        }
-        return STR.substring(0, ca) + STR.substring(ca + cb);
-    }
-
-    public static String task4265(String s) {
-        if (s.startsWith("s")) {
-            return s.toLowerCase();
-        } else if (s.startsWith("U")) {
-            return s.toUpperCase();
-        } else {
-            return s;
-        }
-    }
-
-    public static String task2166(String s) throws Exception {
-        if (s.length() != 2) {
-            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
-        }
-        return STR2.replace(s, " ");
-    }
-
-    public static String task9116(String s) throws Exception {
-        if (!s.startsWith("\"") || !s.endsWith("\"")) {
-            throw new Exception("Строка должна начинаться и заканчиваться кавычкой");
-        }
-        return s.substring(1, s.length() - 1).trim();
-    }
-
-    public static int task9925(String s) {
-        return s.split(",").length;
-    }
-
-    public static void task1618(String line) throws Exception {
-        System.out.println(line);
-        int openIndex;
-        int depth = 0;
-        int closeIndex;
-        int lastIndex = 0;
-        while (lastIndex < line.length()) {
-            closeIndex = line.indexOf("}", lastIndex);
-            openIndex = line.indexOf("{", lastIndex);
-            if (openIndex >= 0 && openIndex < closeIndex) {
-                depth++;
-                lastIndex = openIndex;
-            }
-            if (openIndex >= 0 && closeIndex < 0) {
-                depth++;
-                lastIndex = openIndex;
-            }
-            if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0) {
-                depth--;
-                lastIndex = closeIndex;
-            }
-            if (openIndex < 0 && closeIndex >= 0) {
-                depth--;
-                lastIndex = closeIndex;
-            }
-            if (openIndex < 0 && closeIndex < 0) {
-                break;
-            }
-            if (depth < 0) {
-                throw new Exception("Неожиданный символ '}'");
-            }
-            System.out.print(depth);
-            lastIndex++;
-        }
-        if (depth > 0) {
-            throw new Exception("Неожиданный конец строки");
-        }
         System.out.println();
+        System.out.println("5541");
+        String[] in5541 = {
+            "1 1 1 1",
+            "1 1 2 2",
+            "1 1 1 2",
+            "1 2 3 4",
+            "1 2 3 4 1 2",
+            "1 1 3 3 2 2"
+        };
+        for (int i = 0; i < in5541.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            Set<String> result = Lab07.task5541(in5541[i]);
+            for (String item : result) {
+                sb.append(item);
+                sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
     }
 
-    public static List<Integer> task3657(String a) throws Exception {
-        if (a.length() != 1) {
-            throw new Exception("Нужно ввести ровно один символ");
+    static String task4425(int a, String raw) throws Exception {
+        if (raw.isEmpty()){
+            throw new Exception("Исходная строка пуста");
         }
-        String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
-        List<Integer> ret = new ArrayList<>();
-        int next = input.indexOf(a);
-        while (next >= 0) {
-            ret.add(next);
-            next = input.indexOf(a, next + 1);
+        String[] arr = raw.split(" ");
+        if (a < 0 || a >= arr.length){
+            throw new Exception("Число A должно быть в интервале [0, размер массива)");
+        }
+        return arr[a];
+    }
+
+    static String task5683(String str) {
+        if (str.isEmpty()){
+            return "";
+        }
+        String[] arr = str.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++){
+            sb.append(arr[i]);
+            sb.append(" ");
+            sb.append(i);
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+    public static List<String> task1223(String raw){
+        List<String> ret = new ArrayList<>();
+        if (raw.isEmpty()){
+            return ret;
+        }
+        String[] arr = raw.split(" ");
+        for (int i = arr.length - 1; i >= 0; i--){
+            ret.add(arr[i]);
         }
         return ret;
     }
 
-    public static String task6599(String s) throws Exception {
-        String escaped = s.replace("[", "\\[").replace("]", "\\]");
-        boolean outside = true;
-        int next = escaped.indexOf("\"");
-        int current = 0;
-        StringBuilder result = new StringBuilder();
-        while (next >= 0) {
-            String part = escaped.substring(current, next);
-            result.append(part);
-            if (outside) {
-                result.append("[");
-            } else {
-                result.append("]");
-            }
-            outside = !outside;
-            current = next + 1;
-            next = escaped.indexOf("\"", current);
+    public static double task3946(String raw){
+        if (raw.length() == 0){
+            return 0;
         }
-        if (current < escaped.length()) {
-            String part = escaped.substring(current);
-            result.append(part);
+        String[] arr = raw.split(" ");
+        double sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            sum += Integer.parseInt(arr[i]);
         }
-        return result.toString();
+        return sum/arr.length;
     }
 
-    public static String task1703(String s) throws Exception {
-        int ltSignPos = s.indexOf("<");
-        int ltSignPosEnd = s.lastIndexOf("<");
-        int gtSignPos = s.indexOf(">");
-        int gtSignPosEnd = s.lastIndexOf(">");
-        int signPos;
-        String description;
-        if (ltSignPos >= 0) {
-            if (gtSignPos > 0 || ltSignPosEnd != ltSignPos) {
-                throw new Exception("В выражении должен быть только один знак сравнения");
-            }
-            description = "меньше";
-            signPos = ltSignPos;
-        } else if (gtSignPos >= 0) {
-            if (gtSignPosEnd != gtSignPos) {
-                throw new Exception("В выражении должен быть только один знак сравнения");
-            }
-            description = "больше";
-            signPos = gtSignPos;
+    public static List<Integer> task3940(String left, String right) throws Exception {
+        String[] larr = left.split(" ");
+        String[] rarr = right.split(" ");
+        if (larr.length != rarr.length){
+            throw new Exception("Размеры массивов должны быть одинаковы");
+        }
+        List<Integer> ret = new ArrayList<>();
+        for (int i = 0; i < larr.length; i++){
+            int l = Integer.parseInt(larr[i]);
+            int r = Integer.parseInt(rarr[i]);
+            ret.add(l*r);
+        }
+        return ret;
+    }
+
+    public static List<String> task8311(int b, int e, String raw) throws Exception {
+        String[] arr = raw.split(" ");
+        if (b < 0 || b >= arr.length){
+            throw new Exception("Число B должно быть в интервале [0, размер массива)");
+        }
+        if (e < 0 || e >= arr.length){
+            throw new Exception("Число E должно быть в интервале [0, размер массива)");
+        }
+        List<String> ret = new ArrayList<>();
+        int i, n;
+        if (b < e){
+            i = b;
+            n = e;
         } else {
-            throw new Exception("Отсутствует знак сравнения");
+            i = e;
+            n = b;
         }
-        String var = s.substring(0, signPos).trim();
-        if (var.isEmpty()){
-            throw new Exception("Слева от знака сравнения ожидается переменная");
+        while(i <= n){
+            ret.add(arr[i]);
+            i++;
         }
-        if (var.contains(" ")){
-            String statement = var.substring(0, var.lastIndexOf(" "));
-            String variable = var.substring(var.lastIndexOf(" ")+1);
-            throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+        return ret;
+    }
+
+    public static List<String> task3134(int p, int q, String raw) throws Exception {
+        String[] arr = raw.split(" ");
+        if (p < 0 || p >= arr.length ){
+            throw new Exception("Число P должно быть в интервале [0, размер массива)");
         }
-        String value, special;
-        if (s.substring(signPos+1).startsWith("=")){
-            value = s.substring(signPos+2).trim();
-            special = "либо равно числу";
+        if (q < 0 || q >= arr.length){
+            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+        }
+        List<String> ret = new ArrayList<>();
+        String t = arr[p];
+        arr[p] = arr[q];
+        arr[q] = t;
+        for (int i = 0; i < arr.length; i++){
+            ret.add(arr[i]);
+        }
+        return ret;
+    }
+
+    public static List<Integer> task9774(int m, String raw){
+        List<Integer> ret = new ArrayList<>();
+        if (raw.isEmpty()){
+            return ret;
+        }
+        String[] arr = raw.split(" ");
+        for (int i = 0; i < arr.length; i++){
+            ret.add(Integer.parseInt(arr[i]) * m);
+        }
+        return ret;
+    }
+
+    public static List<String> task9711(String raw){
+        String[] arr = raw.split(" ");
+        List<String> ret = new ArrayList<>();
+        ret.add(arr[arr.length - 1]);
+        for (int i = 0; i < arr.length - 1; i++){
+            ret.add(arr[i]);
+        }
+        return ret;
+    }
+
+    public static List<String> task3333(int s, String raw){
+        String[] arr = raw.split(" ");
+        List<String> ret = new ArrayList<>();
+        int ds;
+        if (s < 0){
+            ds = -s%arr.length;
         } else {
-            value = s.substring(signPos+1).trim();
-            special = "числа";
+            ds = arr.length - s%arr.length;
         }
-        if (value.isEmpty()){
-            throw new Exception("Справа от знака сравнения ожидается ограничение");
+        for (int i = ds; i < arr.length; i++){
+            ret.add(arr[i]);
         }
-        if (value.contains(" ")){
-            String constraint = value.substring(0, value.lastIndexOf(" "));
-            String statement = value.substring(value.lastIndexOf(" ")+1);
-            throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
+        for (int i = 0; i < ds; i++){
+            ret.add(arr[i]);
         }
-        return String.format("Значение переменной %s %s %s %s", var, description, special, value);
+        return ret;
+    }
+
+    public static int task7290(int b, String raw) throws Exception {
+        String[] arr = raw.split(" ");
+        if (b < 0 || b >= arr.length){
+            throw new Exception("Число B должно быть в интервале [0, размер массива)");
+        }
+        int t = Integer.parseInt(arr[b]);
+        int count = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (Integer.parseInt(arr[i]) < t){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static StringBuilder task5694(StringBuilder sb, String x){
+        String[] arr = "a b c d e f g h".split(" ");
+        for (int i = 0; i < arr.length; i++){
+            sb.append(arr[i]);
+            if (arr[i].equals(x)){
+                sb.append("+");
+            }
+            sb.append("\n");
+        }
+        return sb;
+    }
+
+    public static StringBuilder task6806(StringBuilder sb, int x){
+        int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
+        for (int i = 0; i < arr.length; i++){
+            sb.append(arr[i]);
+            if (arr[i] == x){
+                sb.append("+");
+            }
+            sb.append("\n");
+        }
+        return sb;
+    }
+
+    public static String task7369(String leftRaw, String topRaw){
+        if (leftRaw.isEmpty()){
+            return "Данные слева отсутствуют";
+        }
+        if(topRaw.isEmpty()){
+            return "Данные сверху отсутствуют";
+        }
+        StringBuilder sb = new StringBuilder();
+        String[] leftArr = leftRaw.split(" ");
+        String[] topArr = topRaw.split(" ");
+        sb.append("  ");
+        sb.append(topRaw);
+        sb.append("\n");
+        for (int i = 0; i < leftArr.length; i++){
+            sb.append(leftArr[i]);
+            for (int j = 0; j < topArr.length; j++){
+                if(leftArr[i].equals(topArr[j])){
+                    sb.append(" +");
+                } else {
+                    sb.append("  ");
+                }
+            }
+            sb.append("|\n");
+        }
+        sb.append(" ");
+        for(int i = 0; i < topArr.length;i++){
+            sb.append("--");
+        }
+        return sb.toString();
+    }
+
+    public static int task5894(String leftRaw, String topRaw) throws Exception {
+        if (leftRaw.isEmpty()){
+            throw new Exception("Данные слева отсутствуют");
+        }
+        if(topRaw.isEmpty()){
+            throw new Exception("Данные сверху отсутствуют");
+        }
+        int count = 0;
+        String[] leftArr = leftRaw.split(" ");
+        String[] topArr = topRaw.split(" ");
+        for (int i = 0; i < leftArr.length; i++){
+            for (int j = 0; j < topArr.length; j++){
+                if(leftArr[i].equals(topArr[j])){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    public static boolean task4515(String raw){
+        String[] arr = raw.split(" ");
+        for (int i = 0; i < arr.length; i++){
+            for (int j = i + 1; j < arr.length; j++){
+                if (arr[i].equals(arr[j])){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static String task7035(String raw) {
+        String[] arr = raw.split(" ");
+        int min = Integer.parseInt(arr[0]);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Ход решения: \nНачинаю с ");
+        sb.append(min);
+        for (int i = 1; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            sb.append("\nСравниваю ");
+            sb.append(min);
+            sb.append(" и ");
+            sb.append(current);
+            if (current < min){
+                sb.append("\nЗаменяю");
+                min = current;
+            }
+        }
+        sb.append("\nОтвет: ");
+        sb.append(min);
+        return sb.toString();
+    }
+
+    public static List<Integer> task9271(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        if (arr.length == 0){
+            return ret;
+        }
+        int min = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            if (current < min){
+                min = current;
+            }
+        }
+        for (int i = 0; i < arr.length; i++){
+            ret.add(Integer.parseInt(arr[i]) - min);
+        }
+        return ret;
+    }
+
+    public static int task8769(int p, int q, String raw) throws Exception {
+        String[] arr = raw.split(" ");
+        int i, n;
+        if (p < 0 || p >= arr.length){
+            throw new Exception("Число P должно быть в интервале [0, размер массива)");
+        }
+        if (q < 0 || q >= arr.length){
+            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+        }
+        if (p < q){
+            i = p;
+            n = q;
+        } else {
+            i = q;
+            n = p;
+        }
+        int min = Integer.parseInt(arr[i]);
+        while(i <= n){
+            int current = Integer.parseInt(arr[i]);
+            if (current < min){
+                min = current;
+            }
+            i++;
+        }
+        return min;
+    }
+
+    public static List<Integer> task4497(int x, int y, String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++){
+            int current = Integer.parseInt(arr[i]);
+            if (current == x){
+                ret.add(y);
+            } else {
+                ret.add(current);
+            }
+        }
+        return ret;
+    }
+
+    public static List<String> task8820(String raw){
+        String[] arr = raw.split(" ");
+        List<String> ret = new ArrayList<>();
+        for (int i = arr.length - 1; i >= 0; i--){
+            ret.add(arr[i]);
+        }
+        return ret;
+    }
+
+    public static List<Integer> task3218(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        int[] data = new int[arr.length];
+        for (int i = 0; i < arr.length; i++){
+            data[i] = Integer.parseInt(arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++){
+            int min = i;
+            for (int j = i; j < arr.length; j++){
+                if (data[j] < data[min]){
+                    min = j;
+                }
+            }
+            int t = data[min];
+            data[min] = data[i];
+            data[i] = t;
+            ret.add(t);
+        }
+        return ret;
+    }
+
+    public static int task4283(int k, String raw){
+        String[] arr = raw.split(" ");
+        int count = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (Integer.parseInt(arr[i]) == k){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static List<Integer> task7703(String raw){
+        String[] arr = raw.split(" ");
+        List<Integer> ret = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++){
+            int count = 0;
+            for (int j = 0; j < arr.length; j++){
+                if (arr[j].equals(arr[i])){
+                    count++;
+                }
+            }
+            ret.add(count);
+        }
+        return ret;
+    }
+
+    public static Set<String> task5541(String raw){
+        String[] arr = raw.split(" ");
+        Set<String> data = new HashSet<>();
+        for (int i = 0; i < arr.length; i++){
+            data.add(arr[i]);
+        }
+        return data;
+    }
+
+    public static int task9182(String raw){
+        String[] arr = raw.split(" ");
+        Set<String> data = new HashSet<>();
+        for (int i = 0; i < arr.length; i++){
+            data.add(arr[i]);
+        }
+        return data.size();
     }
 }

@@ -189,7 +189,7 @@ namespace tfa
             };
             for (int i = 0; i < in7369left.Length; i++)
             {
-                String result = Lab08.Task7369(in7369left[i], in7369top[i]);
+                String result = Lab07.Task7369(in7369left[i], in7369top[i]);
                 Console.WriteLine(result);
             }
         }
@@ -285,7 +285,7 @@ namespace tfa
             int[] out7035 = { 1, 1, 1, 2, 3, 4, 3 };
             for (int i = 0; i < in7035.Length; i++)
             {
-                String result = Lab08.Task7035(in7035[i]);
+                String result = Lab07.Task7035(in7035[i]);
                 Console.WriteLine("{0} ({1})\n", result, out7035[i]);
             }
         }
@@ -303,7 +303,7 @@ namespace tfa
                 "a\nb\nc\nd\ne\nf\ng\nh\n"};
             for (int i = 0; i < in5694.Length; i++)
             {
-                var result = Lab08.Task5694(new StringBuilder(), in5694[i]);
+                var result = Lab07.Task5694(new StringBuilder(), in5694[i]);
                 if (out5694[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");
@@ -329,7 +329,7 @@ namespace tfa
                 "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"};
             for (int i = 0; i < in6806.Length; i++)
             {
-                var result = Lab08.Task6806(new StringBuilder(), in6806[i]);
+                var result = Lab07.Task6806(new StringBuilder(), in6806[i]);
                 if (out6806[i].Equals(result.ToString()))
                 {
                     Console.WriteLine("Задача решена верно");

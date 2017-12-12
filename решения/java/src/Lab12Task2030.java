@@ -198,7 +198,7 @@ public class Lab12Task2030 {
             "a b c d q w e r"
         };
         for (int i = 0; i < in4515.length; i++) {
-            if (Lab08.task4515(in4515[i])) {
+            if (Lab07.task4515(in4515[i])) {
                 System.out.println("Повторения есть");
             } else {
                 System.out.println("Повторений нет");
@@ -211,7 +211,7 @@ public class Lab12Task2030 {
         System.out.println("7491");
         String[] in7491 = {"bx", "fw", "123"};
         for (int i = 0; i < in7491.length; i++){
-            if (Lab07.task7491(in7491[i])){
+            if (Lab08.task7491(in7491[i])){
                 System.out.println("Содержится");
             } else {
                 System.out.println("Не содержится");

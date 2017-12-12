@@ -94,7 +94,7 @@ namespace task8787
                 try
                 {
                     StringBuilder sb = new StringBuilder();
-                    IList<int> result = Lab07.Task9279(in9279[i]);
+                    IList<int> result = Lab08.Task9279(in9279[i]);
                     foreach (int item in result)
                     {
                         sb.Append(item);
@@ -120,7 +120,7 @@ namespace task8787
                 ""};
             for (int i = 0; i < in1223.Length; i++)
             {
-                var result = String.Join(" ", Lab08.Task1223(in1223[i]));
+                var result = String.Join(" ", Lab07.Task1223(in1223[i]));
                 Console.WriteLine(result);
             }
 
@@ -128,19 +128,19 @@ namespace task8787
             Console.WriteLine("1223");
 
             String[] in1223t1 = { "q", "w", "e", "r", "t", "y" };
-            Lab08.Task1223(in1223t1);
+            Lab07.Task1223(in1223t1);
             Console.WriteLine(String.Join(" ", in1223t1));
 
             String[] in1223t2 = { "q", "w", "e", "r", "t", "y", "q", "w", "e", "r" };
-            Lab08.Task1223(in1223t2);
+            Lab07.Task1223(in1223t2);
             Console.WriteLine(String.Join(" ", in1223t2));
 
             String[] in1223t3 = { "as", "df", "gh", "jk"};
-            Lab08.Task1223(in1223t3);
+            Lab07.Task1223(in1223t3);
             Console.WriteLine(String.Join(" ", in1223t3));
 
             String[] in1223t4 = {  };
-            Lab08.Task1223(in1223t4);
+            Lab07.Task1223(in1223t4);
             Console.WriteLine(String.Join(" ", in1223t4));
         }
 
@@ -162,7 +162,7 @@ namespace task8787
             {
                 try
                 {
-                    var result = Lab08.Task3940(in3940l[i], in3940r[i]);
+                    var result = Lab07.Task3940(in3940l[i], in3940r[i]);
                     Console.WriteLine(String.Join(" ", result));
                 }
                 catch (Exception e)
@@ -192,7 +192,7 @@ namespace task8787
             {
                 try
                 {
-                    var result = Lab08.Task8311(in8311b[i], in8311e[i], in8311data[i]);
+                    var result = Lab07.Task8311(in8311b[i], in8311e[i], in8311data[i]);
                     Console.WriteLine(String.Join(" ", result));
                 }
                 catch (Exception e)
@@ -213,7 +213,7 @@ namespace task8787
             {
                 try
                 {
-                    var result = Lab08.Task3134(in3134p[i], in3134q[i], in3134data);
+                    var result = Lab07.Task3134(in3134p[i], in3134q[i], in3134data);
                     Console.WriteLine(String.Join(" ", result));
                 }
                 catch (Exception e)
@@ -235,7 +235,7 @@ namespace task8787
                 ""};
             for (int i = 0; i < in9774m.Length; i++)
             {
-                var result = Lab08.Task9774(in9774m[i], in9774data[i]);
+                var result = Lab07.Task9774(in9774m[i], in9774data[i]);
                 Console.WriteLine(String.Join(" ", result));
             }
         }
@@ -251,7 +251,7 @@ namespace task8787
                 ""};
             for (int i = 0; i < in9711.Length; i++)
             {
-                var result = Lab08.Task9711(in9711[i]);
+                var result = Lab07.Task9711(in9711[i]);
                 Console.WriteLine(String.Join(" ", result));
             }
         }
@@ -265,7 +265,7 @@ namespace task8787
             for (int i = 0; i < in3333s.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<String> result = Lab08.Task3333(in3333s[i], in3333data);
+                IList<String> result = Lab07.Task3333(in3333s[i], in3333data);
                 foreach (String item in result)
                 {
                     sb.Append(item);
@@ -289,7 +289,7 @@ namespace task8787
             for (int i = 0; i < in9271.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<int> result = Lab08.Task9271(in9271[i]);
+                IList<int> result = Lab07.Task9271(in9271[i]);
                 foreach (int item in result)
                 {
                     sb.Append(item);
@@ -313,7 +313,7 @@ namespace task8787
             for (int i = 0; i < in4497x.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<int> result = Lab08.Task4497(in4497x[i], in4497y[i], in4497data);
+                IList<int> result = Lab07.Task4497(in4497x[i], in4497y[i], in4497data);
                 foreach (int item in result)
                 {
                     sb.Append(item);
@@ -334,7 +334,7 @@ namespace task8787
             for (int i = 0; i < in8820.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<string> result = Lab08.Task8820(in8820[i]);
+                IList<string> result = Lab07.Task8820(in8820[i]);
                 foreach (string item in result)
                 {
                     sb.Append(item);
@@ -363,7 +363,7 @@ namespace task8787
             for (int i = 0; i < in3218.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<int> result = Lab08.Task3218(in3218[i]);
+                IList<int> result = Lab07.Task3218(in3218[i]);
                 foreach (int item in result)
                 {
                     sb.Append(item);
@@ -392,7 +392,7 @@ namespace task8787
             for (int i = 0; i < in7703.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<int> result = Lab08.Task7703(in7703[i]);
+                IList<int> result = Lab07.Task7703(in7703[i]);
                 foreach (int item in result)
                 {
                     sb.Append(item);
@@ -423,7 +423,7 @@ namespace task8787
                 try
                 {
                     StringBuilder sb = new StringBuilder();
-                    IList<int> result = Lab07.Task3657(in3657[i]);
+                    IList<int> result = Lab08.Task3657(in3657[i]);
                     foreach (int item in result)
                     {
                         sb.Append(item);
@@ -462,7 +462,7 @@ namespace task8787
             {
                 try
                 {
-                    Console.WriteLine(Lab07.Task6599(in6599[i]));
+                    Console.WriteLine(Lab08.Task6599(in6599[i]));
                 }
                 catch (Exception e)
                 {
