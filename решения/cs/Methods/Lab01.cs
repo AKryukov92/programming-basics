@@ -120,5 +120,11 @@ namespace Methods
             Console.WriteLine("Host=" + host + ";Port=" + port + ";Database=" + db + ";");
             Console.WriteLine();
         }
+
+        public static void Task7474(int a, int b, int c)
+        {
+            Console.WriteLine($"Квадратное уравнение {a}*x*x + {b}*x + {c} = 0.\n" +
+                $"Его дискриминант вычисляется по формуле: d = {b}*{b} - 4*{a}*{c}");
+        }
     }
 }

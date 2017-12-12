@@ -65,3 +65,7 @@ function task2632(cx, cy, r, fill) {
 function task4343(user, pass, host, port, db) {
 	return "User ID=" + user + ";Password=" + pass + ";<br/>Host=" + host + ";Port=" + port + ";Database=" + db + ";";
 }
+function task7474(a, b, c) {
+	return "Квадратное уравнение " + a + "*x*x + " + b + "*x + " + c + " = 0.</br>" +
+		"Его дискриминант вычисляется по формуле: d = " + b + "*" + b + " - 4*" + a + "*" + c;
+}

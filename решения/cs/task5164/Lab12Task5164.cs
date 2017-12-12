@@ -24,6 +24,7 @@ namespace tfa
             Step2632();
 
             Step4343();
+            Step7474();
         }
 
         static void Step1860()
@@ -118,6 +119,14 @@ namespace tfa
                     "5432",
                     "bank");
             Lab01.Task4343("akryukov", "123", "localhost", "dev-node1", "bank");
+        }
+
+        static void Step7474()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7474");
+            Lab01.Task7474(1, 2, 3);
+            Lab01.Task7474(-3, 0, 2);
         }
     }
 }

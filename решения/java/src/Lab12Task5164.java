@@ -18,6 +18,7 @@ public class Lab12Task5164 {
         Step2632();
 
         Step4343();
+        Step7474();
     }
 
     static void Step4343() {
@@ -39,10 +40,10 @@ public class Lab12Task5164 {
         Lab01.task2632(50, 50, 40, "yellow");
         Lab01.task2632(400, 300, 200, "green");
         Lab01.task2632(
-                254,
-                356,
-                100,
-                "#cc6600");
+            254,
+            356,
+            100,
+            "#cc6600");
     }
 
     static void Step7271() {
@@ -85,7 +86,7 @@ public class Lab12Task5164 {
         System.out.println("7472");
         Lab01.task7472("начало", "конец");
         Lab01.task7472("сила", "знание");
-        Lab01.task7472("курица","яйцо");
+        Lab01.task7472("курица", "яйцо");
         Lab01.task7472("шаг", "шаг");
     }
 
@@ -111,5 +112,12 @@ public class Lab12Task5164 {
         Lab01.task1860("знаниям");
         Lab01.task1860("цели");
         Lab01.task1860("результату");
+    }
+
+    static void Step7474() {
+        System.out.println();
+        System.out.println("7474");
+        Lab01.task7474(1, 2, 3);
+        Lab01.task7474(-3, 0, 2);
     }
 }

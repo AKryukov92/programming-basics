@@ -100,4 +100,9 @@ public class Lab01 {
         System.out.println("Host=" + host + ";Port=" + port + ";Database=" + db + ";");
         System.out.println();
     }
+
+    public static void task7474(int a, int b, int c){
+        System.out.printf("Квадратное уравнение %s*x*x + %s*x + %s = 0.\n" +
+            "Его дискриминант вычисляется по формуле: d = %s*%s - 4*%s*%s\n", a,b,c,b,b,a,c);
+    }
 }

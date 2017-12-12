@@ -94,3 +94,6 @@ for (var i = 0; i < in4343user.length; i++){
 	var out = document.getElementById("4343t" + i);
 	out.innerHTML = task4343(in4343user[i], in4343pass[i], in4343host[i], in4343port[i], in4343db[i]);
 }
+
+document.getElementById("7474t0").innerHTML = task7474(1, 2, 3);
+document.getElementById("7474t1").innerHTML = task7474(-3, 0, 2);
