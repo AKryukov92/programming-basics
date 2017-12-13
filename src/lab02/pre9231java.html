@@ -12,16 +12,16 @@
 <li>Для действительных чисел. Например double. Они нужны для измерения массы, расстояния, площади и других величин. Действительные числа еще называют дробными. Числа &pi; и <i>e</i> являются действительными.</li>
 </ul></p>
 <p>Ниже показан пример объявления переменной для дробного числа. Она имеет тип "double" и называется "a".</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String data;
+        String data;</span>
         double a;
-        data = scan.nextLine();
-    <span class="comment">}
+        <span class="comment">data = scan.nextLine();
+    }
 }</span></p>
 <p>Предположите как нужно объявлять переменную для целого числа. Допустим ее имя будет называться "b". Напоминаю что для хранения целых чисел вам потребуется тип "int".</p>
 <a href="#step2">К шагу 2</a>
@@ -33,15 +33,15 @@ import java.util.Scanner;
 <h4>Шаг 2/3</h4>
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
 <p>Просто объявить переменную для чисел мало. Нужно записать в нее значение, введеное пользователем. Попробуйте написать тривиально, как во фрагменте ниже.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String data;
         double a;
-        data = scan.nextLine();
+        data = scan.nextLine();</span>
         //Это вариант для иллюстрации ошибки!
         a = data;
     <span class="comment">}
@@ -50,13 +50,13 @@ import java.util.Scanner;
 <p class="preformatted">Error:(15, 13) java: incompatible types: java.lang.String cannot be converted to double</p>
 <p>Фрагмент кода выше был приведен для того, чтобы познакомить вас с сообщением об ошибке. В java не предусмотрено автоматического преобразования из текста в числа. Для ее исправления нужно воспользоваться другой командой получения информации от пользователя. "nextDouble" сразу получает число, которое можно записать в переменную типа double.</p>
 <p>Переменная "data" становится не нужна</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double a;
+        double a;</span>
         //Это корректный вариант!
         a = scan.nextDouble();
     <span class="comment">}
@@ -71,28 +71,26 @@ import java.util.Scanner;
 <h4>Шаг 3/3</h4>
 <a href="#step2">К шагу 2</a> <a href="#">К вступлению</a>
 <p>Для вывода значения числовой переменной достаточно просто написать команду вывода как в этом фрагменте кода.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         double a;
-        //Это корректный вариант!
-        a = scan.nextDouble();
+        a = scan.nextDouble();</span>
         System.out.println(a);
     <span class="comment">}
 }</span></p>
 <p>Кроме того, вы можете воспользоваться командой форматированного вывода. Более подробно она была описана в предыдущем разборе теории <a href="pre3862.html" target="_blank">(открыть в новой вкладке)</a>.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         double a;
-        //Это корректный вариант!
-        a = scan.nextDouble();
+        a = scan.nextDouble();</span>
         System.out.printf("%.4f", a);
     <span class="comment">}
 }</span></p>
@@ -106,12 +104,12 @@ import java.util.Scanner;
 <p>В предыдущем разборе теории <a href="pre3862.html" target="_blank">(открыть в новой вкладке)</a> был рассмотрен способ вывода в консоль числа &pi; с нужной точностью.</p>
 <p>Сейчас будет разобран ввод чисел с клавиатуры.</p>
 <p>Вспомните как оформлялась команда получения исходных данных ранее.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
-        Scanner scan = new Scanner(System.in);
+public class Example {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);</span>
         String data;
         data = scan.nextLine();
     <span class="comment">}

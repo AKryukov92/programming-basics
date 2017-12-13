@@ -7,21 +7,21 @@
 <h4>Шаг 1/2</h4>
 <a href="#">К вступлению</a>
 <p>У вас должен получиться код, похожий на фрагмент ниже.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         double x;
-        x = scan.nextDouble();
+        x = scan.nextDouble();</span>
         double result;
         System.out.printf("%.4f", result);
     <span class="comment">}
 }</span></p>
 <p>Следующим шагом нужно оформить вычисление результата. Команда выглядит вот так:</p>
 <p class="preformatted">result = x + 7;</p>
-<p>Выражение "result = ..." как и раньше это "присвоить переменной result значение ...". А значением тут является результат вычисления арифметического выражения "К значению переменной x прибавь число 7".</p>
+<p>Выражение "result = ..." как и раньше это "присвоить переменной result значение ...". А значение получается при сложении переменной x и числа 7"</p>
 <p>Предположите, что получится, если вычисление оформить так:</p>
 <p class="preformatted">data = x + 7;</p>
 <p>Или так:</p>
@@ -36,18 +36,18 @@ import java.util.Scanner;
 <h4>Шаг 2/2</h4>
 <a href="#step1">К шагу 1</a> <a href="#">К вступлению</a>
 <p>Вернитесь к первому предложенному варианту решения.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
-    public static void main(String[] args) {</span>
+public class Example {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         double x;
         x = scan.nextDouble();
-        double result;
+        double result;</span>
         result = x + 7;
-        System.out.printf("%.4f", result);
-    <span class="comment">}
+        <span class="comment">System.out.printf("%.4f", result);
+    }
 }</span></p>
 <p>Отдельные части арифметического выражения названы терминами: <span style="color:red;">операторы</span> и <span style="color:green;">операнды</span>. Оператор это действие, а операнд - то над чем оно выполняется. Если отметить их цветом в решаемой задаче, то получится так:</p>
 <p><zoom>result = <span style="color:green">x</span>
@@ -89,10 +89,10 @@ result = 1 + 2 * 3;</p>
 <p>Сейчас будет разобран пример оформления вычислений в программе.</p>
 <p>Прежде чем отдавать компьютеру команду "посчитай результат", нужно понять назначение каждой переменной.</p>
 <p>Какие переменные были объявлены в фрагменте программы ниже?</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Example {
+public class Example {
     public static void main(String[] args) {</span>
         Scanner scan = new Scanner(System.in);
         double x;
@@ -104,6 +104,6 @@ import java.util.Scanner;
     <li>x - нужна для хранения значения от пользователя в виде числа (действительного)</li>
 </ul></p>
 <p>Для хранения результата будет полезно создать еще одну переменную. В абстрактной задаче ее можно назвать просто "result". Если же в задаче, к примеру, дата плотность тела и его объем, а нужно найти массу, то переменным нужно дать более осмысленные названия: density, volume, mass.</p>
-<p>Добавьте команду переменную для результата и команду ее вывода в консоль с нужной точностью.</p>
+<p>Добавьте команду объявления переменной для результата и команду для вывода ее в консоль с нужной точностью.</p>
 <a href="#step1">К шагу 1</a>
 </div>

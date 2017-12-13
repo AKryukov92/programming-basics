@@ -18,11 +18,11 @@ namespace Example
     class Program
     {
         static void Main(string[] args)
-        {</span>
+        {
             String data;
             data = Console.ReadLine();
             double x;
-            x = double.Parse(data);
+            x = double.Parse(data);</span>
             double result;
             Console.Write("Результат: {0:F4}", result);
         <span class="comment">}
@@ -30,7 +30,7 @@ namespace Example
 }</span></p>
 <p>Следующим шагом нужно оформить вычисление результата. Команда выглядит вот так:</p>
 <p class="preformatted">result = x + 7;</p>
-<p>Выражение "result = ..." как и раньше это "присвоить переменной result значение ...". А значением тут является результат вычисления арифметического выражения "К значению переменной x прибавь число 7".</p>
+<p>Выражение "result = ..." как и раньше это "присвоить переменной result значение ...". А значение получается при сложении переменной x и числа 7.</p>
 <p>Предположите, что получится, если вычисление оформить так:</p>
 <p class="preformatted">data = x + 7;</p>
 <p>Или так:</p>
@@ -56,15 +56,15 @@ namespace Example
     class Program
     {
         static void Main(string[] args)
-        {</span>
+        {
             String data;
             data = Console.ReadLine();
             double x;
             x = double.Parse(data);
-            double result;
+            double result;</span>
             result = x + 7;
-            Console.Write("Результат: {0:F4}", result);
-        <span class="comment">}
+            <span class="comment">Console.Write("Результат: {0:F4}", result);
+        }
     }
 }</span></p>
 <p>Отдельные части арифметического выражения названы терминами: <span style="color:red;">операторы</span> и <span style="color:green;">операнды</span>. Оператор это действие, а операнд - то над чем оно выполняется. Если отметить их цветом в решаемой задаче, то получится так:</p>
@@ -131,6 +131,6 @@ namespace Example
     <li>x - нужна для хранения значения от пользователя в виде числа (действительного)</li>
 </ul></p>
 <p>Для хранения результата будет полезно создать еще одну переменную. В абстрактной задаче ее можно назвать просто "result". Если же в задаче, к примеру, дата плотность тела и его объем, а нужно найти массу, то переменным нужно дать более осмысленные названия: density, volume, mass.</p>
-<p>Добавьте команду переменную для результата и команду ее вывода в консоль с нужной точностью.</p>
+<p>Добавьте команду объявления переменной для результата и команду для вывода ее в консоль с нужной точностью.</p>
 <a href="#step1">К шагу 1</a>
 </div>

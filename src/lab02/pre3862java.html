@@ -1,4 +1,4 @@
-<h1>Руководство к задаче 3862 на С#</h1>
+<h1>Руководство к задаче 3862 на java</h1>
 <a href="../[2] лаб. ОСАЛП.html#task3862" target="_blank">открыть условие задачи в новой вкладке</a>
 
 
@@ -7,30 +7,30 @@
 <h4>Шаг 1/3</h4>
 <a href="#">К вступлению</a>
 <p>В примере ниже, сообщение будет склеено из <span style="color:rgb(214,157,133)">фрагментов строк</span> и значений переменных.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
-    public static void main(String[] args) {</span>
+public class Task3862 {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String x;
         x = scan.nextLine();
         String y;
-        y = scan.nextLine();
-        System.out.printf(<span style="color:rgb(214,157,133)">"&lt;point x=\""</span> + x + <span style="color:rgb(214,157,133)">"\" y=\""</span> + y + <span style="color:rgb(214,157,133)">"\"&gt;"</span>);
+        y = scan.nextLine();</span>
+        System.out.println(<span style="color:rgb(214,157,133)">"&lt;point x=\""</span> + x + <span style="color:rgb(214,157,133)">"\" y=\""</span> + y + <span style="color:rgb(214,157,133)">"\"&gt;"</span>);
     <span class="comment">}
 }</span></p>
 <p>В следующем примере, сообщение будет описано <span style="color:rgb(214,157,133)">шаблоном</span>. В нем с помощью символьной комбинации <zoom>%s</zoom> будут отмечены места для записи переменных. А после <span style="color:rgb(214,157,133)">шаблона</span> через запятую указаны переменные, значения которых нужно подставить на место этих комбинаций.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
-    public static void main(String[] args) {</span>
+public class Task3862 {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String x;
         x = scan.nextLine();
         String y;
-        y = scan.nextLine();
+        y = scan.nextLine();</span>
         System.out.printf(<span style="color:rgb(214,157,133)">"&lt;point x=\"%s\" y=\"%s\"&gt;"</span>, x, y);
     <span class="comment">}
 }</span></p>
@@ -47,10 +47,10 @@ import java.util.Scanner;
 <p>По условию задачи нужно вывести значения &pi; и <i>e</i>. Вы, конечно, можете найти в интернете значения этих математических констант и написать их вручную в код программы. Но намного проще применить встроенные в язык константы "Math.PI" и "Math.E". Если использовать их, то при опечатке, вы сразу же о ней узнаете, и программа не запустится. Опечататься в одной из цифр длинного числа намного легче, и при этом ошибка будет не заметна.</p>
 <p>В прошлом примере была использована комбинация <zoom>%s</zoom>. С ее помощью выводятся строковые значения. При этом Math.PI и Math.E являются числами. Для них нужна комбинация <zoom>%f</zoom></p>
 <p>Выведите в консоль сообщение, содержащее значение этих констант.</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
+public class Task3862 {
     public static void main(String[] args) {</span>
         System.out.printf("%f\n%f", Math.PI, Math.E);
     <span class="comment">}
@@ -60,10 +60,10 @@ import java.util.Scanner;
 2,71828182845905</p>
 <p>Обратите внимание, что возле Math.PI и Math.E не нужны <zoom>"</zoom>. Эти значения постоянны, но технически реализованы как переменные с именами и запретом на изменение.</p>
 <p>Теперь нужно ограничить эти значения четырьмя символами после запятой. Для этого нужно заменить <zoom>%f</zoom> на <zoom>%.4f</zoom>. Число "4" тут значит количество отображаемых символов после запятой. <span class="comment">Более подробную справку о форматированном выводе можно посмотреть в документации <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html" target="_blank">(открыть в новой вкладке)</a></span></p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
+public class Task3862 {
     public static void main(String[] args) {</span>
         System.out.printf("%.4f\n%.4f", Math.PI, Math.E);
     <span class="comment">}
@@ -81,10 +81,10 @@ import java.util.Scanner;
 <a href="#step2">К шагу 2</a> <a href="#">К вступлению</a>
 <p><span style="color:rgb(214,157,133)">Шаблон</span> может содержать не только отметки для записи переменных, но и другие символы. Сравните следующие программы. У них одинаковый результат. Какая из них выглядит проще?</p>
 <p>Программа 1</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
+public class Task3862 {
     public static void main(String[] args) {</span>
         System.out.print("Значение пи: ");
         System.out.printf("%.4f", Math.PI);
@@ -107,10 +107,10 @@ import java.util.Scanner;
 <p>На мой взгляд лучше золотая середина</p>
 
 <p>Программа 3</p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
+public class Task3862 {
     public static void main(String[] args) {</span>
         System.out.printf("Значение пи: %.4f", Math.PI);
         System.out.printf("Значение е: %.4f", Math.E);
@@ -129,14 +129,14 @@ import java.util.Scanner;
 	<li>Вывод чисел с определенным количеством знаков после запятой.</li>
 </ul>
 <p>В этих случаях полезно использовать команду форматированного вывода. Она состоит из технического оформления, <span style="color:rgb(214,157,133)">шаблона сообщения</span> и списка переменных. Самый простой пример оформления такой команды указан ниже. Будьте внимательны, в отличие от прошлой задачи для вывода используется не <zoom>print</zoom>, а <zoom>printf</zoom></p>
-<p class="preformatted"><span class="comment">package lab02;</span>
+<p class="preformatted"><span class="comment">package lab02;
 import java.util.Scanner;
 
-<span class="comment">public class Task3862 {
-    public static void main(String[] args) {</span>
+public class Task3862 {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String data;
-        data = scan.nextLine();
+        data = scan.nextLine();</span>
         System.out.printf(<span style="color:rgb(214,157,133)">"%s"</span>, data);
     <span class="comment">}
 }</span></p>
