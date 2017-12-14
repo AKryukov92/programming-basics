@@ -12,7 +12,6 @@ public class Example {
         String data;
         double a;
         data = scan.nextLine();
-        a = data;
     }
 
 }

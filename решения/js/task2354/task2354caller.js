@@ -124,7 +124,7 @@ for (var i = 0; i < in6580a.length; i++){
 //8731 - не для js
 //4082 - не для js
 
-var in3669a = ["8","159","648","-2","50"];
+var in3669a = ["8","159","648","-2","35"];
 var in3669b = ["13","161","648","600","24"];
 for (var i = 0; i < in3669a.length; i++){
 	var out = document.getElementById("3669t" + i);

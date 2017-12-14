@@ -99,11 +99,11 @@ function task3762(){
 	}
 	return r;
 }
-function task3550(){
+function task3550(v){
 	var i = 1;
 	var r = "";
-	while (i < 10){
-		r += i + " x 7 = " + i*7 + "<br/>";
+	while (i <= 9){
+		r += i + " x " + v + " = " + i*v + "<br/>";
 		i++;
 	}
 	return r;

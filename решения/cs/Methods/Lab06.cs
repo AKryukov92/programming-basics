@@ -134,15 +134,17 @@ namespace Methods
             return sb;
         }
 
-        public static StringBuilder Task3550(StringBuilder sb)
+        public static StringBuilder Task3550(StringBuilder sb, int v)
         {
             int i = 1;
             while (i <= 9)
             {
-                sb.Append(i);
-                sb.Append(" x 7 = ");
-                sb.Append(i * 7);
-                sb.Append("\n");
+                sb.Append(i)
+                    .Append(" x ")
+                    .Append(v)
+                    .Append(" = ")
+                    .Append(i * v)
+                    .Append("\n");
                 i++;
             }
             return sb;

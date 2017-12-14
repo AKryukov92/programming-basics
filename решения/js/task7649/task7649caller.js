@@ -10,7 +10,11 @@ document.getElementById("1315t0").innerHTML = task1315();
 
 document.getElementById("3762t0").innerHTML = task3762();
 
-document.getElementById("3550t0").innerHTML = task3550();
+var in3550 = ["2", "3", "-13", "0", "7", "11", "1027"];
+for (var i = 0; i < in3550.length; i++){
+	var out = document.getElementById("3550t" + i);
+	out.innerHTML = task3550(i);
+}
 
 var in6572a = ["8","691","19"];
 var in6572b = ["13", "703","3"];

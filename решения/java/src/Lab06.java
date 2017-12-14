@@ -116,13 +116,15 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task3550(StringBuilder sb){
+    public static StringBuilder task3550(StringBuilder sb, int v){
         int i = 1;
         while (i <= 9){
-            sb.append(i);
-            sb.append(" x 7 = ");
-            sb.append(i * 7);
-            sb.append("\n");
+            sb.append(i)
+                .append(" x ")
+                .append(v)
+                .append(" = ")
+                .append(i * v)
+                .append("\n");
             i++;
         }
         return sb;

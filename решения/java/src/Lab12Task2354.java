@@ -264,7 +264,7 @@ public class Lab12Task2354 {
         System.out.printf("%d (%d)\n", Lab06.task3669(159, 161), 4095840);
         System.out.printf("%d (%d)\n", Lab06.task3669(648, 648), 648);
         System.out.printf("%d (%d)\n", Lab06.task3669(-2, 600), 0);
-        System.out.printf("%d (%d)\n", Lab06.task3669(50, 24), 2421409269157986304L);
+        System.out.printf("%d (%d)\n", Lab06.task3669(35, 24), 399703747322880000L);
     }
 
     private static void Step5969() {

@@ -176,7 +176,7 @@ namespace tfa
             Console.WriteLine("{0} ({1})", Lab06.Task3669(159, 161), 4095840);
             Console.WriteLine("{0} ({1})", Lab06.Task3669(648, 648), 648);
             Console.WriteLine("{0} ({1})", Lab06.Task3669(-2, 600), 0);
-            Console.WriteLine("{0} ({1})", Lab06.Task3669(50, 24), 2421409269157986304L);
+            Console.WriteLine("{0} ({1})", Lab06.Task3669(35, 24), 399703747322880000);
         }
 
         static void Step8731()

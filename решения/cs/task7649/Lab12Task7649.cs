@@ -110,10 +110,14 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("3550");
-            StringBuilder sb3550 = Lab06.Task3550(
+            int[] in3550 = { 2, 3, -13, 0, 7, 11, 1027 };
+            for (int i = 0; i < in3550.Length; i++)
+            {
+                StringBuilder sb3550 = Lab06.Task3550(
                 new StringBuilder()
-                .Append("@"))
+                .Append("@"), in3550[i])
                 .Append("#");
+            }
             Console.WriteLine(sb3550.ToString());
         }
 
