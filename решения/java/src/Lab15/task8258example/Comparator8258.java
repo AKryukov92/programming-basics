@@ -1,4 +1,4 @@
-package Lab15.task8258;
+package Lab15.task8258example;
 
 import java.util.Comparator;
 
