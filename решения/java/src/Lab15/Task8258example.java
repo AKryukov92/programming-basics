@@ -1,6 +1,6 @@
 package Lab15;
 
-import Lab15.task8258.Comparator8258;
+import Lab15.task8258example.Comparator8258;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import java.util.List;
  * @author akryukov
  *         18.07.2017
  */
-public class Task8258 {
+public class Task8258example {
     //Отсортировать в порядке удаления от числа 6
     public static void main(String[] args) {
         Step1();
