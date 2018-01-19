@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			.border {
+				border:2px solid black;
+				height:104px;
+				clear:both;
+			}
+			img {
+				height:100px;
+				margin:2px;
+			}
+			.active:hover{
+				margin:0px;
+				border:2px solid red;
+			}
+			#river {
+				padding:2px;
+			}
+			#river img{
+				height:200px;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="game">
+			<div id="left_side" class="border">
+			</div>
+			<div id="river">
+				<img src="/images/river.jpg"/>
+				Крестьянину нужно перевезти через реку волка, козу и капусту. Но лодка такова, что в ней может поместиться только крестьянин, а с ним или только волк, или только коза, или только капуста. Но если оставить волка с козой, то волк съест козу, а если оставить козу с капустой, то коза съест капусту. Помогите крестьянину: нажимайте на того, кого нужно перевезти сейчас.
+			</div>
+			<div id="right_side" class="border">
+			</div>
+			<div id="tip"></div>
+		</div>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="game.js"></script>
+	</body>
+</html>
