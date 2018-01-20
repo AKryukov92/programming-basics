@@ -1,0 +1,33 @@
+﻿<Window x:Class="PropertyUpdateExample.PropertyUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PropertyUpdateExample"
+        mc:Ignorable="d"
+        Title="PropertyUpdateWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <!-- Создаем новый VM и соединяем его со View -->
+        <local:PropertyUpdateVM/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <!-- Обратите внимание на разницу 
+                Обновление Number1 происходит не по мере ввода
+                -->
+                <TextBox Width="120" Text="{Binding ChangeOnEnter}"/>
+                <!-- Обновление Number2 происходит сразу при вводе -->
+                <TextBox Width="120" Text="{Binding ChangeOnInput, UpdateSourceTrigger=PropertyChanged}"/>
+                <!-- Значение меняется при вводе (посмотрите в отладчике), но соответствующее поле меняться не будет-->
+                <TextBox Width="120" Text="{Binding WontDisplayChange, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="{Binding ChangeOnEnter}"/>
+                <Label Content="{Binding ChangeOnInput}"/>
+                <!-- Это поле меняться не будет -->
+                <Label Content="{Binding WontDisplayChange}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,62 @@
+﻿<Window x:Class="CollectionExample.CollectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollectionExample"
+        mc:Ignorable="d"
+        Title="CollectionWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <!-- Создаем новый VM и соединяем его со View -->
+        <local:CollectionVM/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBox Text="{Binding Item}"/>
+                <Button Content="Добавить" Command="{Binding AddCommand}" CommandParameter="{Binding Item}"/>
+                <Button Content="Удалить" Command="{Binding RemoveCommand}" CommandParameter="{Binding Item}"/>
+                <ListBox ItemsSource="{Binding Items}"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="X"/>
+                    <TextBox Text="{Binding X}" Width="30"/>
+                    <Label Content="Y"/>
+                    <TextBox Text="{Binding Y}" Width="30"/>
+                </StackPanel>
+                <Button Content="Добавить" Command="{Binding AddPointCommand}"/>
+                <Button Content="Удалить" Command="{Binding RemovePointCommand}"/>
+                <ListBox ItemsSource="{Binding Points}"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Cx"/>
+                    <TextBox Text="{Binding Circle.Cx}"/>
+                    <Label Content="Cy"/>
+                    <TextBox Text="{Binding Circle.Cy}"/>
+                    <Label Content="R"/>
+                    <TextBox Text="{Binding Circle.R}"/>
+                </StackPanel>
+                <Button Content="Добавить" Command="{Binding AddCircleCommand}"/>
+                <Button Content="Удалить" Command="{Binding RemoveCircleCommand}"/>
+                <ListBox ItemsSource="{Binding Circles}" SelectedItem="{Binding Circle}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBox Text="{Binding PolyLine.Name}"/>
+                <Button Content="Добавить" Command="{Binding AddPolyLineCommand}"/>
+                <Button Content="Удалить" Command="{Binding RemovePolyLineCommand}"/>
+                <ListBox ItemsSource="{Binding PolyLines}" SelectedItem="{Binding PolyLine}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="X"/>
+                    <TextBox Text="{Binding LinePointX}" Width="30"/>
+                    <Label Content="Y"/>
+                    <TextBox Text="{Binding LinePointY}" Width="30"/>
+                </StackPanel>
+                <Button Content="Добавить" Command="{Binding AddLinePointCommand}"/>
+                <Button Content="Удалить" Command="{Binding RemoveLinePointCommand}"/>
+                <ListBox ItemsSource="{Binding PolyLine.Points}" SelectedItem="{Binding LinePoint}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
