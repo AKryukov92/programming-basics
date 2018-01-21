@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			.task .content {
+				display:none;
+			}
+			.task:hover .content {
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="task" id="task1">
+			<h3>Задача 1</h3>
+			<div class="content">
+				<input name="data"/>
+				<div id="task1_out"></div>
+				<input name="btn" value="Результат" type="button" onclick="task1()"/>
+			</div>
+		</div>
+		<div class="task" id="task2">
+			<h3>Задача 2</h3>
+			<div class="content">
+				<input name="data">
+				<div id="task2_out"></div>
+				<input name="btn" value="Результат" type="button" onclick="task2()"/>
+			</div>
+		</div>
+		<script>
+			function task1(){
+				var data = $("#task1 input").val();
+				$("#task1_out").html("Мы стремимся к " + data);
+			}
+			function task2(){
+				var data = $("#task2 input").val();
+				$("#task2_out").html(data + " нас не остановят!");
+			}
+		</script>
+		
+		<script src="jquery-3.2.1.min.js"></script>
+	</body>
+</html>
