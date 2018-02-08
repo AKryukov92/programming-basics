@@ -1,0 +1,19 @@
+﻿<Window x:Class="EntityFrameworkExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EntityFrameworkExample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <!-- Создаем новый VM и соединяем его со View -->
+        <local:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+        <ListBox ItemsSource="{Binding Regions}" SelectedItem="{Binding SelectedRegion}"/>
+        <ListBox ItemsSource="{Binding Countries}"/>
+        </StackPanel>
+    </Grid>
+</Window>
