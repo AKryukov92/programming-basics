@@ -2,8 +2,8 @@ package Lab14;
 
 import Lab14.task3567.Circle3567;
 import common.Utils;
-import Lab14.task2033.Circle2033;
-import Lab14.task2033.Figure2033;
+import Lab15.task2033.Circle2033;
+import Lab15.task2033.Figure2033;
 import Lab14.task5108.Rectangle5108;
 
 import java.io.File;
@@ -15,7 +15,7 @@ import java.util.List;
  * @author akryukov
  *         26.04.2017
  */
-public class Task3567 {
+public class Task3567solution {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("3567");

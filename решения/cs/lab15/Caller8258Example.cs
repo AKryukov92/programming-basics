@@ -6,7 +6,7 @@ using System.Text;
 
 namespace lab15
 {
-    public class Caller8258
+    public class Caller8258Example
     {
         public static void Step1()
         {

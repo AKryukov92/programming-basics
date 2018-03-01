@@ -9,11 +9,11 @@ namespace lab15
     {
         static void Main(string[] args)
         {
-            Caller8258.Step1();
-            Caller8258.Step2();
-            Caller8258.Step3();
-            Caller8258.Step4();
-            Caller8258.Step5();
+            Caller8258Example.Step1();
+            Caller8258Example.Step2();
+            Caller8258Example.Step3();
+            Caller8258Example.Step4();
+            Caller8258Example.Step5();
 
             Console.WriteLine();
             Console.WriteLine("7186");

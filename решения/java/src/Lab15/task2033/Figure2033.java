@@ -1,4 +1,4 @@
-package Lab14.task2033;
+package Lab15.task2033;
 
 /**
  * @author akryukov

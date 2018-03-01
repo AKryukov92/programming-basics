@@ -1,13 +1,11 @@
-package Lab14;
+package Lab15;
 
-import Lab14.task1753.Edge1753;
-import Lab14.task1753.Route1753;
+import Lab15.task1753.Edge1753;
+import Lab15.task1753.Route1753;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +15,7 @@ import java.util.Set;
  * @author akryukov
  *         16.11.2017
  */
-public class Task1753 {
+public class Task1753solution {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("1753");
