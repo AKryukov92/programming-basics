@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author akryukov
  *         16.11.2017
  */
-public class Task5032 {
+public class Task5032solution {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("5032");

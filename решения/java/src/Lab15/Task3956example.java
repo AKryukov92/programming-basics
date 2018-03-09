@@ -1,6 +1,6 @@
-package Lab14;
+package Lab15;
 
-import Lab14.task3956example.*;
+import Lab15.task3956example.*;
 
 /**
  * @author akryukov

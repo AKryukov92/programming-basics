@@ -1,7 +1,7 @@
-package Lab14;
+package Lab15;
 
-import Lab14.task2033.Circle2033;
-import Lab14.task2033.Figure2033;
+import Lab15.task2033.Circle2033;
+import Lab15.task2033.Figure2033;
 import common.Utils;
 import Lab14.task5108.Rectangle5108;
 
@@ -18,7 +18,7 @@ import java.util.Scanner;
  * @author akryukov
  *         16.11.2017
  */
-public class Task2033 {
+public class Task2033solution {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("2033");

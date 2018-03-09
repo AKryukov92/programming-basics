@@ -1,6 +1,6 @@
 package Lab14.task5108;
 
-import Lab14.task2033.Figure2033;
+import Lab15.task2033.Figure2033;
 
 /**
  * @author akryukov

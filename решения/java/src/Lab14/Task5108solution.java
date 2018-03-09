@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author akryukov
  *         16.11.2017
  */
-public class Task5108 {
+public class Task5108solution {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("5108");

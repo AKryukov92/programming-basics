@@ -45,9 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caller1457.cs" />
+    <Compile Include="Caller3956Example.cs" />
     <Compile Include="Caller6876.cs" />
     <Compile Include="Caller7186.cs" />
-    <Compile Include="Caller8258.cs" />
+    <Compile Include="Caller8258Example.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
