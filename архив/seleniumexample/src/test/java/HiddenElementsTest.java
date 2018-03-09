@@ -31,7 +31,7 @@ public class HiddenElementsTest {
     @Test
     public void task1Test1() {
         Actions scenario = new Actions(driver);
-        WebElement taskElement = driver.findElement(By.id("testLocalFile"));
+        WebElement taskElement = driver.findElement(By.id("task1"));
         scenario
                 .moveToElement(taskElement)
                 .moveToElement(taskElement.findElement(By.name("data")))
@@ -45,7 +45,7 @@ public class HiddenElementsTest {
     @Test
     public void task1Test2(){
         Actions scenario = new Actions(driver);
-        WebElement taskElement = driver.findElement(By.id("testLocalFile"));
+        WebElement taskElement = driver.findElement(By.id("task1"));
         scenario
                 .moveToElement(taskElement)
                 .moveToElement(taskElement.findElement(By.name("data")))
@@ -59,7 +59,7 @@ public class HiddenElementsTest {
     @Test
     public void task1Test3(){
         Actions scenario = new Actions(driver);
-        WebElement taskElement = driver.findElement(By.id("testLocalFile"));
+        WebElement taskElement = driver.findElement(By.id("task1"));
         scenario
                 .moveToElement(taskElement)
                 .moveToElement(taskElement.findElement(By.name("data")))
@@ -84,7 +84,7 @@ public class HiddenElementsTest {
 
     @Test
     public void task2Test(){
-        WebElement taskElement = driver.findElement(By.id("downloadAndTest"));
+        WebElement taskElement = driver.findElement(By.id("task2"));
         runScenario(taskElement, "Трудности");
         Assert.assertEquals("Трудности нас не остановят!", driver.findElement(By.id("task2_out")).getText());
         runScenario(taskElement, "Загадки");
