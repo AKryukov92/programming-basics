@@ -15,15 +15,17 @@ public class Lab15Task8787 {
         Step3657();
         Step6599();
         Step1223();
+        Step6497();
+        Step5648();
         Step3940();
-        Step8311();
 
+        Step8311();
         Step3134();
         Step9774();
         Step9711();
         Step3333();
-        Step9271();
 
+        Step9271();
         Step4497();
         Step8820();
         Step3218();
@@ -450,6 +452,45 @@ public class Lab15Task8787 {
                 sb.append(" ");
             }
             System.out.println(sb.toString());
+        }
+    }
+
+    private static void Step6497(){
+        System.out.println();
+        System.out.println("6497");
+        String[] in6497 = {
+            "9 8 9 1 1 5 1 1",
+            "5 5 5 5 5",
+            "",
+            "1000000 1 1"
+        };
+        for (int i = 0; i < in6497.length; i++){
+            StringBuilder sb = new StringBuilder();
+            List<Double> result = Lab07.task6497(in6497[i]);
+            for (Double item : result){
+                sb.append(String.format("%.4f", item));
+                sb.append("  ");
+            }
+            System.out.println(sb.toString());
+        }
+    }
+
+    private static void Step5648(){
+        System.out.println();
+        System.out.println("5648");
+        String[] in5648 = {
+            "9 8 9 1 1 5 1 1",
+            "5 5 5 5 5",
+            "",
+            "1000000 1 1"
+        };
+        for (int i = 0; i < in5648.length; i++){
+            try {
+                double sigma = Lab07.task5648(in5648[i]);
+                System.out.printf("%.4f\n", sigma);
+            } catch (IllegalArgumentException e){
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

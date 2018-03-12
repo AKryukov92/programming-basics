@@ -112,6 +112,51 @@ namespace Methods
             return sum / arr.Length;
         }
 
+        public static List<Double> task6497(String raw)
+        {
+            if (raw.Length == 0)
+            {
+                return new List<double>();
+            }
+            String[] arr = raw.Split(' ');
+            double sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += Double.Parse(arr[i]);
+            }
+            double avg = sum / arr.Length;
+            List<Double> deltas = new List<double>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                deltas.Add(Math.Abs(Double.Parse(arr[i]) - avg));
+            }
+            return deltas;
+        }
+
+        public static double task5648(String raw)
+        {
+            if (raw.Length == 0)
+            {
+                throw new ArgumentException("Дана пустая последовательность");
+            }
+            String[] arr = raw.Split(' ');
+            double[] drr = new double[arr.Length];
+            double sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                drr[i] = Double.Parse(arr[i]);
+                sum += drr[i];
+            }
+            double avg = sum / arr.Length;
+            double sumOfD = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                double d = (drr[i] - avg);
+                sumOfD += d * d;
+            }
+            return Math.Sqrt(1.0 / (arr.Length - 1.0) * sumOfD);
+        }
+
         public static IList<int> Task3940(String left, String right)
         {
             String[] larr = left.Split(new char[] { ' ' });
