@@ -47,4 +47,13 @@ echo ^</body^> ^
 
 copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
 
+pushd ..\..\%lang%\
+rmdir lab12 /s /q
+mkdir lab12
+popd
+copy ..\..\решения\java\src\Lab12Task5164.java ..\..\%lang%\lab12\Lab12Task5164.java
+copy ..\..\решения\java\src\Lab12Task2354.java ..\..\%lang%\lab12\Lab12Task2354.java
+copy ..\..\решения\java\src\Lab12Task2030.java ..\..\%lang%\lab12\Lab12Task2030.java
+copy ..\..\решения\java\src\Lab12Task7649.java ..\..\%lang%\lab12\Lab12Task7649.java
+
 if x%1==x start "" %filename%

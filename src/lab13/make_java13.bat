@@ -67,4 +67,12 @@ pushd "task5081"
 copy "*" "..\..\..\%lang%\files\task5081\*"
 popd
 
+pushd ..\..\%lang%\
+rmdir lab13 /s /q
+mkdir lab13
+popd
+copy ..\..\решения\java\src\Lab13Task9701.java ..\..\%lang%\lab13\Lab12Task9701.java
+copy ..\..\решения\java\src\Lab13Task3784.java ..\..\%lang%\lab13\Lab12Task3784.java
+copy ..\..\решения\java\src\Lab13Task6732.java ..\..\%lang%\lab13\Lab12Task6732.java
+
 if x%1==x start "" %filename%

@@ -62,4 +62,12 @@ copy "task6732caller.js" "..\..\..\%lang%\files\task6732\task6732caller.js"
 copy "task6732layout.html" "..\..\..\%lang%\files\task6732\task6732layout.html"
 popd
 
+pushd ..\..\%lang%\
+rmdir lab13 /s /q
+mkdir lab13
+popd
+xcopy ..\..\решения\js\task9701 ..\..\%lang%\lab13\task9701 /s /I
+xcopy ..\..\решения\js\task3784 ..\..\%lang%\lab13\task3784 /s /I
+xcopy ..\..\решения\js\task6732 ..\..\%lang%\lab13\task6732 /s /I
+
 if x%1==x start "" %filename%
