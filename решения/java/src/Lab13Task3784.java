@@ -32,7 +32,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Кабеля не хватит. Длина кабеля меньше расстояния.");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -47,7 +47,7 @@ public class Lab13Task3784 {
             try {
                 String result = Lab05.task2291(in2291v1[i], in2291v2[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -62,7 +62,7 @@ public class Lab13Task3784 {
             try {
                 String result = Lab05.task1763(in1763r[i], in1763a[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -80,7 +80,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Круг не поместится в квадрате");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -100,7 +100,7 @@ public class Lab13Task3784 {
                     System.out.print("Треугольник не является");
                 }
                 System.out.println(" равнобедренным.");
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -117,7 +117,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("не равно");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -137,7 +137,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Ошибка. Результат:" + result);
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -158,7 +158,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Размещение невозможно");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -175,7 +175,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Красный");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -192,7 +192,7 @@ public class Lab13Task3784 {
                 } else {
                     System.out.println("Число не простое");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -236,7 +236,7 @@ public class Lab13Task3784 {
                 String result = Lab08.task1703(in1703[i]);
                 System.out.println("Получилось: " + result);
                 System.out.println("Ожидалось : " + out1703[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Получилось: " + e.getMessage());
                 System.out.println("Ожидалось : " + out1703[i]);
             }

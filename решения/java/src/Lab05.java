@@ -27,7 +27,7 @@ public class Lab05 {
                 } else {
                     System.out.println("точка снаружи");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -49,7 +49,7 @@ public class Lab05 {
                 } else {
                     System.out.println("Точка не принадлежит прямой");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -70,7 +70,7 @@ public class Lab05 {
                 } else {
                     System.out.println("Не пересекаются");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -95,7 +95,7 @@ public class Lab05 {
                 } else {
                     System.out.println("Не пересекаются");
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -143,22 +143,22 @@ public class Lab05 {
         }
     }
 
-    public static boolean task4257(double l, double p) throws Exception {
+    public static boolean task4257(double l, double p) throws IllegalArgumentException {
         if (l < 0) {
-            throw new Exception("Расстояние между деревнями должно быть неотрицательно");
+            throw new IllegalArgumentException("Расстояние между деревнями должно быть неотрицательно");
         }
         if (p < 0) {
-            throw new Exception("Длина кабеля должна быть неотрицательна");
+            throw new IllegalArgumentException("Длина кабеля должна быть неотрицательна");
         }
         return l * 1000 < p * 0.305;
     }
 
-    public static String task2291(double velocityInKmH, double velocityInMS) throws Exception {
+    public static String task2291(double velocityInKmH, double velocityInMS) throws IllegalArgumentException {
         if (velocityInKmH < 0) {
-            throw new Exception("Скорость корабля должна быть неотрицательна");
+            throw new IllegalArgumentException("Скорость корабля должна быть неотрицательна");
         }
         if (velocityInMS < 0) {
-            throw new Exception("Скорость кометы должна быть неотрицательна");
+            throw new IllegalArgumentException("Скорость кометы должна быть неотрицательна");
         }
         double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
         if (velocityInMS1 < velocityInMS) {
@@ -168,12 +168,12 @@ public class Lab05 {
         }
     }
 
-    public static String task1763(int r, int a) throws Exception {
+    public static String task1763(int r, int a) throws IllegalArgumentException {
         if (r <= 0) {
-            throw new Exception("Радиус должен быть положительным");
+            throw new IllegalArgumentException("Радиус должен быть положительным");
         }
         if (a <= 0) {
-            throw new Exception("Сторона квадрата должна быть положительна");
+            throw new IllegalArgumentException("Сторона квадрата должна быть положительна");
         }
         double areaSquare = a * a;
         double areaCircle = Math.PI * r * r;
@@ -198,12 +198,12 @@ public class Lab05 {
         }
     }
 
-    public static boolean task1945(int sc, int ss) throws Exception {
+    public static boolean task1945(int sc, int ss) throws IllegalArgumentException {
         if (sc <= 0) {
-            throw new Exception("Площадь круга должна быть положительной");
+            throw new IllegalArgumentException("Площадь круга должна быть положительной");
         }
         if (ss <= 0) {
-            throw new Exception("Площадь квадрата должна быть положительной");
+            throw new IllegalArgumentException("Площадь квадрата должна быть положительной");
         }
         return Math.sqrt(sc / Math.PI) < Math.sqrt(ss) / 2;
     }
@@ -250,15 +250,15 @@ public class Lab05 {
         return ret;
     }
 
-    public static boolean task6291(int a, int b, int c) throws Exception {
+    public static boolean task6291(int a, int b, int c) throws IllegalArgumentException {
         if (a < 0) {
-            throw new Exception("Значение A должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение A должно быть неотрицательным");
         }
         if (b < 0) {
-            throw new Exception("Значение B должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение B должно быть неотрицательным");
         }
         if (c < 0) {
-            throw new Exception("Значение C должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение C должно быть неотрицательным");
         }
         return a == b || a == c || b == c;
     }
@@ -294,9 +294,9 @@ public class Lab05 {
         }
     }
 
-    public static class7178 task7178(int m, int p) throws Exception {
+    public static class7178 task7178(int m, int p) throws IllegalArgumentException {
         if (p == 0) {
-            throw new Exception("Значение P должно быть не равно нулю");
+            throw new IllegalArgumentException("Значение P должно быть не равно нулю");
         }
         if (m % p == 0) {
             return new class7178(m / p);
@@ -305,18 +305,18 @@ public class Lab05 {
         }
     }
 
-    public static boolean task3883(int a) throws Exception {
+    public static boolean task3883(int a) throws IllegalArgumentException {
         if (a < 1000 || a > 9999) {
-            throw new Exception("Значение A должно быть в интервале [1000, 9999]");
+            throw new IllegalArgumentException("Значение A должно быть в интервале [1000, 9999]");
         }
         int hundreds = a / 100 % 10;
         int units = a % 10;
         return hundreds == units;
     }
 
-    public static String task4527(int a) throws Exception {
+    public static String task4527(int a) throws IllegalArgumentException {
         if (a < -10 || a > 100) {
-            throw new Exception("Значение A должно быть в интервале [-10, 100]");
+            throw new IllegalArgumentException("Значение A должно быть в интервале [-10, 100]");
         }
         if (a == 40) {
             return "40'ой";
@@ -338,18 +338,18 @@ public class Lab05 {
         return Integer.toString(a);
     }
 
-    public static boolean task6556(int a, int b, int c, int d) throws Exception {
+    public static boolean task6556(int a, int b, int c, int d) throws IllegalArgumentException {
         if (a < 0) {
-            throw new Exception("Значение A должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение A должно быть неотрицательным");
         }
         if (b < 0) {
-            throw new Exception("Значение B должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение B должно быть неотрицательным");
         }
         if (c < 0) {
-            throw new Exception("Значение C должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение C должно быть неотрицательным");
         }
         if (d < 0) {
-            throw new Exception("Значение D должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение D должно быть неотрицательным");
         }
         return a < c && b < d;
     }
@@ -471,25 +471,25 @@ public class Lab05 {
         return new Rectangle(xx.a, xy.a, xy.b - xy.a, xx.b - xx.a);
     }
 
-    public static boolean task2153(int t) throws Exception {
+    public static boolean task2153(int t) throws IllegalArgumentException {
         if (t < 0 || 60 <= t) {
-            throw new Exception("Значение T должно быть в интервале [0, 59]");
+            throw new IllegalArgumentException("Значение T должно быть в интервале [0, 59]");
         }
         return t % 5 < 3;
     }
 
-    public static String task7937(int w, int h, int c, int d) throws Exception {
+    public static String task7937(int w, int h, int c, int d) throws IllegalArgumentException {
         if (w <= 0) {
-            throw new Exception("Значение W должно быть положительным");
+            throw new IllegalArgumentException("Значение W должно быть положительным");
         }
         if (h <= 0) {
-            throw new Exception("Значение H должно быть положительным");
+            throw new IllegalArgumentException("Значение H должно быть положительным");
         }
         if (c <= 0) {
-            throw new Exception("Значение C должно быть положительным");
+            throw new IllegalArgumentException("Значение C должно быть положительным");
         }
         if (d <= 0) {
-            throw new Exception("Значение D должно быть положительным");
+            throw new IllegalArgumentException("Значение D должно быть положительным");
         }
         int cw = (w / c) * (h / d);
         int ch = (h / c) * (w / d);

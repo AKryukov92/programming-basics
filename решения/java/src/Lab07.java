@@ -29,13 +29,13 @@ public class Lab07 {
         }
     }
 
-    static String task4425(int a, String raw) throws Exception {
+    static String task4425(int a, String raw) throws IllegalArgumentException {
         if (raw.isEmpty()) {
-            throw new Exception("Исходная строка пуста");
+            throw new IllegalArgumentException("Исходная строка пуста");
         }
         String[] arr = raw.split(" ");
         if (a < 0 || a >= arr.length) {
-            throw new Exception("Число A должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число A должно быть в интервале [0, размер массива)");
         }
         return arr[a];
     }
@@ -116,11 +116,11 @@ public class Lab07 {
         return Math.sqrt(1.0 / (arr.length - 1.0) * sumOfD);
     }
 
-    public static List<Integer> task3940(String left, String right) throws Exception {
+    public static List<Integer> task3940(String left, String right) throws IllegalArgumentException {
         String[] larr = left.split(" ");
         String[] rarr = right.split(" ");
         if (larr.length != rarr.length) {
-            throw new Exception("Размеры массивов должны быть одинаковы");
+            throw new IllegalArgumentException("Размеры массивов должны быть одинаковы");
         }
         List<Integer> ret = new ArrayList<>();
         for (int i = 0; i < larr.length; i++) {
@@ -131,13 +131,13 @@ public class Lab07 {
         return ret;
     }
 
-    public static List<String> task8311(int b, int e, String raw) throws Exception {
+    public static List<String> task8311(int b, int e, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         if (b < 0 || b >= arr.length) {
-            throw new Exception("Число B должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число B должно быть в интервале [0, размер массива)");
         }
         if (e < 0 || e >= arr.length) {
-            throw new Exception("Число E должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число E должно быть в интервале [0, размер массива)");
         }
         List<String> ret = new ArrayList<>();
         int i, n;
@@ -155,13 +155,13 @@ public class Lab07 {
         return ret;
     }
 
-    public static List<String> task3134(int p, int q, String raw) throws Exception {
+    public static List<String> task3134(int p, int q, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         if (p < 0 || p >= arr.length) {
-            throw new Exception("Число P должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число P должно быть в интервале [0, размер массива)");
         }
         if (q < 0 || q >= arr.length) {
-            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число Q должно быть в интервале [0, размер массива)");
         }
         List<String> ret = new ArrayList<>();
         String t = arr[p];
@@ -213,10 +213,10 @@ public class Lab07 {
         return ret;
     }
 
-    public static int task7290(int b, String raw) throws Exception {
+    public static int task7290(int b, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         if (b < 0 || b >= arr.length) {
-            throw new Exception("Число B должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число B должно быть в интервале [0, размер массива)");
         }
         int t = Integer.parseInt(arr[b]);
         int count = 0;
@@ -283,12 +283,12 @@ public class Lab07 {
         return sb.toString();
     }
 
-    public static int task5894(String leftRaw, String topRaw) throws Exception {
+    public static int task5894(String leftRaw, String topRaw) throws IllegalArgumentException {
         if (leftRaw.isEmpty()) {
-            throw new Exception("Данные слева отсутствуют");
+            throw new IllegalArgumentException("Данные слева отсутствуют");
         }
         if (topRaw.isEmpty()) {
-            throw new Exception("Данные сверху отсутствуют");
+            throw new IllegalArgumentException("Данные сверху отсутствуют");
         }
         int count = 0;
         String[] leftArr = leftRaw.split(" ");
@@ -356,14 +356,14 @@ public class Lab07 {
         return ret;
     }
 
-    public static int task8769(int p, int q, String raw) throws Exception {
+    public static int task8769(int p, int q, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         int i, n;
         if (p < 0 || p >= arr.length) {
-            throw new Exception("Число P должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число P должно быть в интервале [0, размер массива)");
         }
         if (q < 0 || q >= arr.length) {
-            throw new Exception("Число Q должно быть в интервале [0, размер массива)");
+            throw new IllegalArgumentException("Число Q должно быть в интервале [0, размер массива)");
         }
         if (p < q) {
             i = p;

@@ -14,20 +14,21 @@ namespace task6732
             Step6066();
             Step2594();
             Step1483();
-            Step3983();
+            Step4264();
 
+            Step3983();
             Step4236();
             Step8395();
             Step5568();
             Step2592();
-            Step4075();
 
+            Step4075();
             Step7517();
             Step5448();
             Step5238();
             Step5171();
-            Step1862();
 
+            Step1862();
             Step5683();
         }
 
@@ -241,6 +242,26 @@ namespace task6732
             }
         }
 
+        private static void Step4264()
+        {
+            Console.WriteLine();
+            Console.WriteLine("4264");
+            int[] in4264 = { 7, 12, 2, 9, 0, -1 };
+            for (int i = 0; i < in4264.Length; i++)
+            {
+                try
+                {
+                    StringBuilder result = Lab06.Task4264(
+                            new StringBuilder(), in4264[i]);
+                    Console.WriteLine(result.ToString());
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
         private static void Step1483()
         {
             Console.WriteLine();
@@ -270,7 +291,7 @@ namespace task6732
             {
                 try
                 {
-                    StringBuilder result = Lab06.Task2594(new StringBuilder(),in2594a[i], in2594b[i]);
+                    StringBuilder result = Lab06.Task2594(new StringBuilder(), in2594a[i], in2594b[i]);
                     Console.WriteLine(result);
                 }
                 catch (Exception e)

@@ -59,7 +59,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task3591(in3591[i]);
                 System.out.printf("%.6f (%.6f)\n", result, out3591[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -74,7 +74,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task5871(in5871[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs5871[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -94,7 +94,7 @@ public class Lab13Task9701 {
                         in2624a[i], in2624b[i],
                         in2624c[i], in2624x[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs2624[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -131,7 +131,7 @@ public class Lab13Task9701 {
                         in2461a[i], in2461b[i],
                         in2461c[i], in2461d[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs2461[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -149,7 +149,7 @@ public class Lab13Task9701 {
                 double result = Lab02.task9130(
                         in9130m1[i], in9130m2[i], in9130r[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs9130[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -165,7 +165,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task8873(in8873r1[i], in8873r2[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs8873[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -183,7 +183,7 @@ public class Lab13Task9701 {
                 double result = Lab02.task7619(
                         in7619v1[i], in7619v2[i], in7619s[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs7619[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -199,7 +199,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task3943(in3943x[i], in3943y[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs3943[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -214,7 +214,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task7237(in7237[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs7237[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -230,7 +230,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task1934(in1934a[i], in1934b[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs1934[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -245,7 +245,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task9020(in9020[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs9020[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -260,7 +260,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task8833(in8833[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs8833[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -276,7 +276,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task4312(in4312a[i], in4312h[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs4312[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -291,7 +291,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task2981(in2981[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs2981[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -306,7 +306,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task5201(in5201[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs5201[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -321,7 +321,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab02.task3354(in3354[i]);
                 System.out.printf("%d (%d)\n", result, outs3354[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -336,7 +336,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab02.task9298(in9298[i]);
                 System.out.printf("%d (%d)\n", result, outs9298[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -352,7 +352,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task7799(in7799mass[i], in7799a[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs7799[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -385,7 +385,7 @@ public class Lab13Task9701 {
             try {
                 double result = Lab06.task2802(in2802[i]);
                 System.out.printf("%.6f (%.6f)\n", result, out2802[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -400,7 +400,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab06.task9180(in9180[i]);
                 System.out.printf("%d (%d)\n", result, outs9180[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -415,7 +415,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab06.task1544(in1544[i]);
                 System.out.printf("%d (%d)\n", result, outs1544[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -441,7 +441,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in1618.length; i++) {
             try {
                 Lab08.task1618(in1618[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -462,7 +462,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in9116.length; i++) {
             try {
                 System.out.println(Lab08.task9116(in9116[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -475,7 +475,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in2166.length; i++) {
             try {
                 System.out.println(Lab08.task2166(in2166[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -489,7 +489,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in5923a.length; i++) {
             try {
                 System.out.println(Lab08.task5923(in5923a[i], in5923b[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -509,7 +509,7 @@ public class Lab13Task9701 {
             try {
                 System.out.println(Lab08.task7222(in7222[i]));
                 System.out.println();
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -523,7 +523,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in5728a.length; i++) {
             try {
                 System.out.println(Lab08.task5728(in5728a[i], in5728b[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -537,7 +537,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in4845a.length; i++) {
             try {
                 System.out.println(Lab08.task4845(in4845a[i], in4845b[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -553,7 +553,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab08.task9812(in9812a[i], in9812b[i]);
                 System.out.printf("%d (%d)\n", result, out9812[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -568,7 +568,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab08.task9631(in9631[i]);
                 System.out.printf("%d (%d)\n", result, out9631[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -595,7 +595,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab07.task5894(in5894left[i], in5894top[i]);
                 System.out.println("Повторений: " + result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -621,7 +621,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab07.task8769(in8769p[i], in8769q[i], in8769s[i]);
                 System.out.printf("%d (%d)\n", result, out8769[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -646,7 +646,7 @@ public class Lab13Task9701 {
             try {
                 int result = Lab07.task7290(in7290b[i], in7290data[i]);
                 System.out.printf("%d (%d)\n", result, out7290[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -669,7 +669,7 @@ public class Lab13Task9701 {
             try {
                 String result = Lab07.task4425(in4425a[i], in4425data[i]);
                 System.out.printf("%s (%s)\n", result, out4425[i]);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -687,7 +687,7 @@ public class Lab13Task9701 {
                 String result = Lab05.task7937(in7937w[i], in7937h[i],
                         in7937c[i], in7937d[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }

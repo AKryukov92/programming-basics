@@ -1,5 +1,10 @@
 package Lab15.example;
 
+import Lab15.example.task3956.Circle;
+import Lab15.example.task3956.Point;
+import Lab15.example.task3956.Rectangle;
+import Lab15.example.task3956.Shape;
+
 /**
  * @author akryukov
  *         17.07.2017
@@ -17,10 +22,10 @@ public class Task3956 {
     }
 
     private static void Step1(){
-        Lab15.task3956example.Shape s1 = new Lab15.task3956example.Rectangle(0,0,20,20);
-        Lab15.task3956example.Point center = s1.getCenter();
+        Shape s1 = new Rectangle(0,0,20,20);
+        Point center = s1.getCenter();
         System.out.println(center.print());
-        Lab15.task3956example.Shape s2 = new Lab15.task3956example.Circle(100,100,15);
+        Shape s2 = new Circle(100,100,15);
         System.out.println(s2.getCenter().print());
         if (s1.getCenter().equals(s2.getCenter())){
             System.out.println("Совпадают");
@@ -30,9 +35,9 @@ public class Task3956 {
     }
 
     private static void Step2(){
-        Lab15.task3956example.Shape s1 = new Lab15.task3956example.Rectangle(0,0,20,20);
+        Shape s1 = new Rectangle(0,0,20,20);
         System.out.println(s1.getCenter().print());
-        Lab15.task3956example.Shape s2 = new Lab15.task3956example.Circle(100,100,15);
+        Shape s2 = new Circle(100,100,15);
         System.out.println(s2.getCenter().print());
         s1.slide(90,0);
         System.out.println(s1.getCenter().print());
@@ -46,11 +51,11 @@ public class Task3956 {
     }
 
     private static void Step3(){
-        Lab15.task3956example.Shape[] arr = new Lab15.task3956example.Shape[] {
-            new Lab15.task3956example.Rectangle(0,0,20,20),
-            new Lab15.task3956example.Circle(100,100,15),
-            new Lab15.task3956example.Rectangle(13,17,19,23),
-            new Lab15.task3956example.Circle(73,79,83)
+        Shape[] arr = new Shape[] {
+            new Rectangle(0,0,20,20),
+            new Circle(100,100,15),
+            new Rectangle(13,17,19,23),
+            new Circle(73,79,83)
         };
         double areaSum = 0;
         for (int i = 0; i < arr.length; i++){
@@ -60,8 +65,8 @@ public class Task3956 {
     }
 
     private static void Step4(){
-        Lab15.task3956example.Shape r = new Lab15.task3956example.Rectangle(0, 0, 10, 10, "blue", "red", 5);
-        Lab15.task3956example.Shape c = new Lab15.task3956example.Circle(50, 50, 40, "green", "yellow", 4);
+        Shape r = new Rectangle(0, 0, 10, 10, "blue", "red", 5);
+        Shape c = new Circle(50, 50, 40, "green", "yellow", 4);
         System.out.println(r);
         System.out.println(c);
     }

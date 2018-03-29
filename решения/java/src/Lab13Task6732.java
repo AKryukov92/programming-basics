@@ -7,21 +7,22 @@ public class Lab13Task6732 {
         Step2565();
         Step6066();
         Step2594();
+        Step4264();
         Step1483();
-        Step3983();
 
+        Step3983();
         Step4236();
         Step8395();
         Step5568();
         Step2592();
-        Step4075();
 
+        Step4075();
         Step7517();
         Step5448();
         Step5238();
         Step5171();
-        Step1862();
 
+        Step1862();
         Step5683();
     }
 
@@ -52,7 +53,7 @@ public class Lab13Task6732 {
                     result.insert(0, "Неверно. Результат:\n");
                     System.out.println(result.toString());
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -85,7 +86,7 @@ public class Lab13Task6732 {
                     result.insert(0, "Неверно. Результат:\n");
                     System.out.println(result.toString());
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -101,7 +102,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task5238(new StringBuilder(),
                         in5238w[i], in5238h[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -117,7 +118,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task5448(new StringBuilder(),
                         in5448s[i], in5448h[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -148,7 +149,7 @@ public class Lab13Task6732 {
                     result.insert(0, "Неверно. Результат:\n");
                     System.out.println(result.toString());
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -163,7 +164,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task4075(
                         new StringBuilder(), in4075[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -198,7 +199,7 @@ public class Lab13Task6732 {
                     result.insert(0, "Неверно. Результат:\n");
                     System.out.println(result.toString());
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -213,7 +214,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task5568(
                         new StringBuilder(), in5568[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -228,7 +229,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task8395(
                         new StringBuilder(), in8395[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -243,7 +244,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task4236(
                         new StringBuilder(), in4236[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -258,7 +259,22 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task3983(
                         new StringBuilder(), in3983[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    private static void Step4264() {
+        System.out.println();
+        System.out.println("4264");
+        int[] in4264 = {7, 12, 2, 9, 0, -1};
+        for (int i = 0; i < in4264.length; i++){
+            try {
+                StringBuilder result = Lab06.task4264(
+                        new StringBuilder(), in4264[i]);
+                System.out.println(result.toString());
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -273,7 +289,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task1483(
                         new StringBuilder(), in1483[i]);
                 System.out.println(result.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -289,7 +305,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task2594(new StringBuilder(),
                         in2594a[i], in2594b[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -305,7 +321,7 @@ public class Lab13Task6732 {
                 StringBuilder result = Lab06.task2565(new StringBuilder(),
                         in2565a[i], in2565b[i]);
                 System.out.println(result);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -332,7 +348,7 @@ public class Lab13Task6732 {
                     result.insert(0, "Неверно. Результат:\n");
                     System.out.println(result);
                 }
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }

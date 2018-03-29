@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassesExample\ClassesExample.csproj">
-      <Project>{20e5545f-b281-41ae-a219-773cf116aa59}</Project>
+      <Project>{b53fad4f-4c92-4ba1-bb64-ae0d9a4ec1d3}</Project>
       <Name>ClassesExample</Name>
     </ProjectReference>
     <ProjectReference Include="..\Classes\Classes.csproj">

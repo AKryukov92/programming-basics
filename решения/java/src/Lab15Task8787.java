@@ -63,7 +63,7 @@ public class Lab15Task8787 {
                     sb.append(" ");
                 }
                 System.out.println(sb.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -168,7 +168,7 @@ public class Lab15Task8787 {
         for (int i = 0; i < in6599.length; i++) {
             try {
                 System.out.println(Lab08.task6599(in6599[i]));
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -367,7 +367,7 @@ public class Lab15Task8787 {
                     sb.append(" ");
                 }
                 System.out.println(sb.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -399,7 +399,7 @@ public class Lab15Task8787 {
                     sb.append(" ");
                 }
                 System.out.println(sb.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -429,7 +429,7 @@ public class Lab15Task8787 {
                     sb.append(" ");
                 }
                 System.out.println(sb.toString());
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
         }

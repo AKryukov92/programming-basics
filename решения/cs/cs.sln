@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2354", "task2354\task2354.csproj", "{C201B96D-2D13-4F23-A7A3-84252CEBC784}"
 EndProject
@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-Task9038", "Lab05-Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caller", "Caller\Caller.csproj", "{91C9B310-4DC7-42A9-B210-76206194B065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesExample", "ClassesExample\ClassesExample.csproj", "{20E5545F-B281-41AE-A219-773CF116AA59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesExample", "ClassesExample\ClassesExample.csproj", "{B53FAD4F-4C92-4BA1-BB64-AE0D9A4EC1D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,10 +143,10 @@ Global
 		{91C9B310-4DC7-42A9-B210-76206194B065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91C9B310-4DC7-42A9-B210-76206194B065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91C9B310-4DC7-42A9-B210-76206194B065}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20E5545F-B281-41AE-A219-773CF116AA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20E5545F-B281-41AE-A219-773CF116AA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20E5545F-B281-41AE-A219-773CF116AA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20E5545F-B281-41AE-A219-773CF116AA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53FAD4F-4C92-4BA1-BB64-AE0D9A4EC1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53FAD4F-4C92-4BA1-BB64-AE0D9A4EC1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53FAD4F-4C92-4BA1-BB64-AE0D9A4EC1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53FAD4F-4C92-4BA1-BB64-AE0D9A4EC1D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

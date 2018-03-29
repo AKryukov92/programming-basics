@@ -117,8 +117,8 @@ namespace tfa
                 new StringBuilder()
                 .Append("@"), in3550[i])
                 .Append("#");
+                Console.WriteLine(sb3550.ToString());
             }
-            Console.WriteLine(sb3550.ToString());
         }
 
         static void Step6572()
