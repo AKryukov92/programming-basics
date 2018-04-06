@@ -195,13 +195,16 @@ public class Lab12Task7649 {
     private static void Step5411() {
         System.out.println();
         System.out.println("5411");
-        String result5411 = Lab06.task5411(
+        StringBuilder sb = Lab06.task5411(
                 Lab06.task5411(
                         Lab06.task5411(new StringBuilder(), 7, 11)
                                 .append("\n")
                         , 211, 223).append("\n")
-                , 37, 29).append("\n")
-                .toString();
+                , 37, 29).append("\n");
+        Lab06.task5411(sb, 16, 20).append("\n");
+        Lab06.task5411(sb, 9, 0).append("\n");
+        Lab06.task5411(sb, 600, 600).append("\n");
+        String result5411 = sb.toString();
         System.out.println(result5411);
     }
 

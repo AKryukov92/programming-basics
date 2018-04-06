@@ -30,8 +30,8 @@ for (var i = 0; i < in2084a.length; i++){
 	out.innerHTML = task2084(in2084a[i],in2084b[i]).join(", ");
 }
 
-var in5411p = ["7","211","37"];
-var in5411q = ["11","223","29"];
+var in5411p = ["7","211","37","16","9","600"];
+var in5411q = ["11","223","29","20","0","600"];
 for (var i = 0; i < in5411p.length; i++){
 	var out = document.getElementById("5411t" + i);
 	out.innerHTML = task5411(in5411p[i],in5411q[i]);

@@ -154,13 +154,16 @@ namespace tfa
         {
             Console.WriteLine();
             Console.WriteLine("5411");
-            String result5411 = Lab06.Task5411(
+            StringBuilder sb = Lab06.Task5411(
                 Lab06.Task5411(
                     Lab06.Task5411(new StringBuilder(), 7, 11)
                         .Append("\n")
                     , 211, 223).Append("\n")
-                , 37, 29).Append("\n")
-                .ToString();
+                , 37, 29).Append("\n");
+            Lab06.Task5411(sb, 16, 20).Append("\n");
+            Lab06.Task5411(sb, 9, 0).Append("\n");
+            Lab06.Task5411(sb, 600, 600).Append("\n");
+            String result5411 = sb.ToString();
             Console.WriteLine(result5411);
         }
 
