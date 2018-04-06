@@ -232,6 +232,24 @@ function task7585(x){
 	}
 	return r;
 }
+function task4264(n){
+	n = parseInt(n);
+	if (n < 0){
+		throw new Error("Значение N должно быть неотрицательным");
+	}
+	var r = "";
+	var i = 0;
+	var j = 0;
+	while (i <= n){
+		j++;
+		if(j == 4){
+			j = 0;
+		}
+		r += i + " - " + j + "<br>";
+		i++;
+	}
+	return r;
+}
 function task1483(n){
 	n = parseInt(n);
 	if (n < 0){

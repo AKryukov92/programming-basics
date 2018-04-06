@@ -63,40 +63,40 @@ public class Lab02 {
         return 2 * x;
     }
 
-    public static int task9298(int a) throws Exception {
+    public static int task9298(int a) throws IllegalArgumentException {
         if (a <= 0) {
-            throw new Exception("Значение A должно быть положительным");
+            throw new IllegalArgumentException("Значение A должно быть положительным");
         }
         return 6 * a * a;
     }
 
-    public static int task3354(int a) throws Exception {
+    public static int task3354(int a) throws IllegalArgumentException {
         if (a <= 0) {
-            throw new Exception("Значение A должно быть положительным");
+            throw new IllegalArgumentException("Значение A должно быть положительным");
         }
         return a * a * a;
     }
 
-    public static double task5201(int r) throws Exception {
+    public static double task5201(int r) throws IllegalArgumentException {
         if (r <= 0) {
-            throw new Exception("Значение R должно быть положительным");
+            throw new IllegalArgumentException("Значение R должно быть положительным");
         }
         return 2 * Math.PI * r;
     }
 
-    public static double task2981(int r) throws Exception {
+    public static double task2981(int r) throws IllegalArgumentException {
         if (r <= 0) {
-            throw new Exception("Значение R должно быть положительным");
+            throw new IllegalArgumentException("Значение R должно быть положительным");
         }
         return 4 * Math.PI * r * r * r / 3;
     }
 
-    public static double task4312(int a, int h) throws Exception {
+    public static double task4312(int a, int h) throws IllegalArgumentException {
         if (a <= 0) {
-            throw new Exception("Значение A должно быть положительным");
+            throw new IllegalArgumentException("Значение A должно быть положительным");
         }
         if (h <= 0) {
-            throw new Exception("Значение H должно быть положительным");
+            throw new IllegalArgumentException("Значение H должно быть положительным");
         }
         return (double) a * (double) h / 2;
     }
@@ -120,12 +120,12 @@ public class Lab02 {
         }
     }
 
-    public static class2361 task2361(int t, int l) throws Exception {
+    public static class2361 task2361(int t, int l) throws IllegalArgumentException {
         if (t <= 0) {
-            throw new Exception("Значение T должно быть положительным");
+            throw new IllegalArgumentException("Значение T должно быть положительным");
         }
         if (l <= 0) {
-            throw new Exception("Значение L должно быть положительным");
+            throw new IllegalArgumentException("Значение L должно быть положительным");
         }
         return new class2361(t * 100 / l, t * 100 % l);
     }
@@ -138,9 +138,9 @@ public class Lab02 {
         return Math.sin(x * Math.PI / 180);
     }
 
-    public static double task8833(int x) throws Exception {
+    public static double task8833(int x) throws IllegalArgumentException {
         if (x < 0) {
-            throw new Exception("Значение X должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение X должно быть неотрицательным");
         }
         return Math.sqrt(x);
     }
@@ -149,43 +149,43 @@ public class Lab02 {
         return 5 * Math.cos(y * Math.PI / 180);
     }
 
-    public static double task9020(int x) throws Exception {
+    public static double task9020(int x) throws IllegalArgumentException {
         if (x > 61) {
-            throw new Exception("Подкоренное выражение должно быть неотрицательным");
+            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
         }
         return 3 * Math.sqrt(61 - x);
     }
 
-    public static double task1934(int a, int b) throws Exception {
+    public static double task1934(int a, int b) throws IllegalArgumentException {
         if (b > 0) {
-            throw new Exception("Значение B должно быть не положительным");
+            throw new IllegalArgumentException("Значение B должно быть не положительным");
         }
         return a * Math.sqrt(-7 * b);
     }
 
-    public static double task7237(double t) throws Exception {
+    public static double task7237(double t) throws IllegalArgumentException {
         if (t < -273.15) {
-            throw new Exception("Значение T должно быть не ниже абсолютного нуля");
+            throw new IllegalArgumentException("Значение T должно быть не ниже абсолютного нуля");
         }
         return t * 1.8 + 32;
     }
 
-    public static double task3943(int x, int y) throws Exception {
+    public static double task3943(int x, int y) throws IllegalArgumentException {
         if (y < 0) {
-            throw new Exception("Значение y должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение y должно быть неотрицательным");
         }
         if (x + Math.sqrt(y) < 0) {
-            throw new Exception("Подкоренное выражение должно быть неотрицательным");
+            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
         }
         return -5 * Math.sqrt(x + Math.sqrt(y));
     }
 
-    public static double task7619(int v1, int v2, int s) throws Exception {
+    public static double task7619(int v1, int v2, int s) throws IllegalArgumentException {
         if (v1 < 0 || v2 < 0) {
-            throw new Exception("Скорость должна быть неотрицательна");
+            throw new IllegalArgumentException("Скорость должна быть неотрицательна");
         }
         if (s < 0) {
-            throw new Exception("Расстояние должно быть неотрицательным");
+            throw new IllegalArgumentException("Расстояние должно быть неотрицательным");
         }
         return (double) s / (v1 + v2);
     }
@@ -218,33 +218,33 @@ public class Lab02 {
         }
     }
 
-    public static class9622 task9622(int m, int v, int h) throws Exception {
+    public static class9622 task9622(int m, int v, int h) throws IllegalArgumentException {
         if (m <= 0) {
-            throw new Exception("Значение M должно быть положительным");
+            throw new IllegalArgumentException("Значение M должно быть положительным");
         }
         if (v <= 0) {
-            throw new Exception("Значение V должно быть положительным");
+            throw new IllegalArgumentException("Значение V должно быть положительным");
         }
         if (h < 0) {
-            throw new Exception("Значение H должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательным");
         }
         double g = 9.8067;
         return new class9622((double) m * v * v / 2, (double) m * g * h);
     }
 
-    public static double task8873(int r1, int r2) throws Exception {
+    public static double task8873(int r1, int r2) throws IllegalArgumentException {
         if (r1 == 0) {
-            throw new Exception("Значение r1 должно быть не равно нулю");
+            throw new IllegalArgumentException("Значение r1 должно быть не равно нулю");
         }
         if (r2 == 0) {
-            throw new Exception("Значение r2 должно быть не равно нулю");
+            throw new IllegalArgumentException("Значение r2 должно быть не равно нулю");
         }
         return 1.0 / r1 + 1.0 / r2;
     }
 
-    public static double task7799(int m, int a) throws Exception {
+    public static double task7799(int m, int a) throws IllegalArgumentException {
         if (m <= 0) {
-            throw new Exception("Масса должна быть положительной");
+            throw new IllegalArgumentException("Масса должна быть положительной");
         }
         double g = 9.8067;
         if (a >= 90) {
@@ -260,12 +260,12 @@ public class Lab02 {
         return b * b - 4 * a * c;
     }
 
-    public static double task9130(int m1, int m2, int distance) throws Exception {
+    public static double task9130(int m1, int m2, int distance) throws IllegalArgumentException {
         if (distance <= 0) {
-            throw new Exception("Значение distance должно быть положительным");
+            throw new IllegalArgumentException("Значение distance должно быть положительным");
         }
         if (m1 <= 0 || m2 <= 0) {
-            throw new Exception("Значение mass должно быть положительным");
+            throw new IllegalArgumentException("Значение mass должно быть положительным");
         }
         double g = 9.8067;
         return g * m1 * m2 / distance / distance;
@@ -275,12 +275,12 @@ public class Lab02 {
         return Math.sqrt(a * a + b * b - 2 * a * b * Math.cos(c * Math.PI / 180));
     }
 
-    public static double task2461(int a, int b, int c, int d) throws Exception {
+    public static double task2461(int a, int b, int c, int d) throws IllegalArgumentException {
         if (a == 0) {
-            throw new Exception("Значение a должно быть не равно нулю");
+            throw new IllegalArgumentException("Значение a должно быть не равно нулю");
         }
         if (d == 0) {
-            throw new Exception("Значение d должно быть не равно нулю");
+            throw new IllegalArgumentException("Значение d должно быть не равно нулю");
         }
         return (double) (a * d + b * c) / (a * d);
     }
@@ -290,20 +290,20 @@ public class Lab02 {
         return Math.sqrt(1.0 - sin * sin);
     }
 
-    public static double task2624(long a, long b, long c, long x) throws Exception {
+    public static double task2624(long a, long b, long c, long x) throws IllegalArgumentException {
         if (a * x * x + b * x + c < 0) {
-            throw new Exception("Подкоренное выражение должно быть неотрицательным");
+            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
         }
         double denominator = Math.sqrt(a * x * x + b * x + c);
         if (denominator == 0) {
-            throw new Exception("Знаменатель не может быть равен нулю");
+            throw new IllegalArgumentException("Знаменатель не может быть равен нулю");
         }
         return 1.0 / denominator;
     }
 
-    public static double task5871(double x) throws Exception {
+    public static double task5871(double x) throws IllegalArgumentException {
         if (x < 5) {
-            throw new Exception("Подкоренное выражение должно быть неотрицательным");
+            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
         }
         return (Math.sqrt(x + 5) + Math.sqrt(x - 5)) / 2 / Math.sqrt(x);
     }
@@ -322,9 +322,9 @@ public class Lab02 {
         return 12 * a * a + 7 * a - 16;
     }
 
-    public static double task3591(int h) throws Exception {
+    public static double task3591(int h) throws IllegalArgumentException {
         if (h < 0) {
-            throw new Exception("Высота над уровнем Земли должна быть неотрицательна");
+            throw new IllegalArgumentException("Высота над уровнем Земли должна быть неотрицательна");
         }
         double r = 6350;
         double c = r + h;
@@ -362,12 +362,12 @@ public class Lab02 {
         }
     }
 
-    public static class6522 task6522(int v1, int t1, int v2, int t2) throws Exception {
+    public static class6522 task6522(int v1, int t1, int v2, int t2) throws IllegalArgumentException {
         if (v1 < 0) {
-            throw new Exception("Значение v1 должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение v1 должно быть неотрицательным");
         }
         if (v2 < 0) {
-            throw new Exception("Значение v2 должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение v2 должно быть неотрицательным");
         }
         return new class6522(v1 + v2, (double) (t1 * v1 + t2 * v2) / (v1 + v2));
     }

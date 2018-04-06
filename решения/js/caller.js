@@ -364,3 +364,36 @@ for (var i = 0; i < in5541.length; i++){
 	}
 	out.innerHTML = result;
 }
+
+var in6497 = [
+	"9 8 9 1 1 5 1 1",
+	"5 5 5 5 5",
+	"",
+	"1000000 1 1"
+];
+for (var j = 0; j < in6497.length; j++){
+	var out = document.getElementById("6497t" + j);
+	var sb = ""
+	var result = task6497(in6497[j]);
+	for (var i = 0; i < result.length; i++){
+		sb += result[i].toFixed(4);
+		sb += "  ";
+	}
+	out.innerHTML = sb;
+}
+
+var in5648 = [
+	"9 8 9 1 1 5 1 1",
+	"5 5 5 5 5",
+	"",
+	"1000000 1 1"
+];
+for (var i = 0; i < in5648.length; i++){
+	var out = document.getElementById("5648t" + i);
+	try {
+		var sigma = task5648(in5648[i]);
+		out.innerHTML = sigma.toFixed(4);
+	} catch (e){
+		out.innerHTML = e.message;
+	}
+}

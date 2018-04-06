@@ -326,10 +326,10 @@ public class Lab09 {
         }
     }
 
-    public static int square6431(String line) throws Exception {
+    public static int square6431(String line) throws IllegalArgumentException {
         String[] values = line.split(";");
         if (values.length < 4){
-            throw new Exception("Некорректный формат данных");
+            throw new IllegalArgumentException("Некорректный формат данных");
         }
         int width = Integer.parseInt(values[2]);
         int height = Integer.parseInt(values[3]);
@@ -360,26 +360,26 @@ public class Lab09 {
         }
     }
 
-    public static double area7193(String line) throws Exception {
+    public static double area7193(String line) throws IllegalArgumentException {
         String[] values = line.split(";");
         if (values.length < 1){
-            throw new Exception("Некорректный формат данных");
+            throw new IllegalArgumentException("Некорректный формат данных");
         }
         if (values[0].equals("rect")){
             if (values.length < 5){
-                throw new Exception("Некорректный формат данных");
+                throw new IllegalArgumentException("Некорректный формат данных");
             }
             int width = Integer.parseInt(values[3]);
             int height = Integer.parseInt(values[4]);
             return width*height;
         } else if (values[0].equals("circle")){
             if (values.length < 4){
-                throw new Exception("Некорректный формат данных");
+                throw new IllegalArgumentException("Некорректный формат данных");
             }
             double r = Double.parseDouble(values[3]);
             return Math.PI * r * r;
         } else {
-            throw new Exception("Некорректный формат данных");
+            throw new IllegalArgumentException("Некорректный формат данных");
         }
     }
 
@@ -461,7 +461,7 @@ public class Lab09 {
         }
     }
 
-    public static String logic9930(String line) throws Exception {
+    public static String logic9930(String line) throws IllegalArgumentException {
         int start = line.lastIndexOf("\\");
         int end = line.lastIndexOf(".");
         String name;
@@ -473,7 +473,7 @@ public class Lab09 {
         String[] check = {"*", "|", ":", "\"", "<", ">", "?", "/"};
         for (int i = 0; i < check.length; i++){
             if (name.contains(check[i])){
-                throw new Exception("Некорректное имя файла");
+                throw new IllegalArgumentException("Некорректное имя файла");
             }
         }
         return name;
@@ -495,11 +495,11 @@ public class Lab09 {
         }
     }
 
-    public static String logic6861(String line) throws Exception {
+    public static String logic6861(String line) throws IllegalArgumentException {
         int start = line.lastIndexOf("@");
         int end = line.lastIndexOf(".");
         if (line.indexOf("@") != start || start == 0 || start > end || !line.contains("@")){
-            throw new Exception("Некорректный почтовый адрес");
+            throw new IllegalArgumentException("Некорректный почтовый адрес");
         }
         return line.substring(0, start);
     }
@@ -520,9 +520,9 @@ public class Lab09 {
         }
     }
 
-    public static int logic2205(String line) throws Exception {
+    public static int logic2205(String line) throws IllegalArgumentException {
         if (line.isEmpty()){
-            throw new Exception("Строка пуста");
+            throw new IllegalArgumentException("Строка пуста");
         }
         String[] values = line.split(",");
         int sum = 0;
@@ -664,7 +664,7 @@ public class Lab09 {
                         String row = dataScanner.nextLine();
                         String[] arr = row.split(";");
                         if (arr.length != 2){
-                            throw new Exception("Некорректный формат");
+                            throw new IllegalArgumentException("Некорректный формат");
                         }
                         int left = Integer.parseInt(arr[0]);
                         int right = Integer.parseInt(arr[1]);

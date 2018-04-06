@@ -41,6 +41,46 @@ function task3946(raw){
 	}
 	return sum/arr.length;
 }
+
+function task6497(raw) {
+	if (typeof(raw) == "undefined"){
+		return [];
+	}
+	if (raw.length == 0) {
+		return [];
+	}
+	var arr = raw.split(" ");
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++) {
+		sum += parseFloat(arr[i]);
+	}
+	var avg = sum / arr.length;
+	var deltas = [];
+	for (var i = 0; i < arr.length; i++) {
+		deltas.push(Math.abs(parseFloat(arr[i]) - avg));
+	}
+	return deltas;
+}
+
+function task5648(raw) {
+	if (raw == "") {
+		throw new Error("Дана пустая последовательность");
+	}
+	var arr = raw.split(" ");
+	var drr = [];
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++) {
+		drr[i] = parseFloat(arr[i]);
+		sum += drr[i];
+	}
+	var avg = sum / arr.length;
+	var sumOfD = 0;
+	for (var i = 0; i < arr.length; i++) {
+		var d = (drr[i] - avg);
+		sumOfD += d * d;
+	}
+	return Math.sqrt(1.0 / (arr.length - 1.0) * sumOfD);
+}
 function task3940(left, right){
 	var larr = left.split(" ");
 	var rarr = right.split(" ");

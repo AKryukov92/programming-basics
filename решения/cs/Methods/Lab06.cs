@@ -10,7 +10,7 @@ namespace Methods
         static void Main(string[] args)
         {
         }
-        
+
         public static StringBuilder Task8495(StringBuilder sb)
         {
             int i = 0;
@@ -37,11 +37,13 @@ namespace Methods
 
         public static StringBuilder Task6066(StringBuilder sb, int a, int b)
         {
-            if (a > b) {
+            if (a > b)
+            {
                 throw new Exception("Значение A должно быть не больше значения B");
             }
             int i = a;
-            while (i <= b) {
+            while (i <= b)
+            {
                 sb.Append(i);
                 sb.Append("\n");
                 i++;
@@ -51,11 +53,13 @@ namespace Methods
 
         public static StringBuilder Task2565(StringBuilder sb, int a, int b)
         {
-            if (a > b) {
+            if (a > b)
+            {
                 throw new Exception("Значение A должно быть не больше значения B");
             }
             int i = b;
-            while (i >= a) {
+            while (i >= a)
+            {
                 sb.Append(i);
                 sb.Append(" ");
                 i--;
@@ -65,12 +69,14 @@ namespace Methods
 
         public static StringBuilder Task2594(StringBuilder sb, int a, String b)
         {
-            if (a < 0) {
+            if (a < 0)
+            {
                 throw new Exception("Значение A должно быть неотрицательным");
             }
             int i = 0;
             sb.Append("\"");
-            while (i < a) {
+            while (i < a)
+            {
                 sb.Append(b);
                 i++;
             }
@@ -87,7 +93,8 @@ namespace Methods
                 i = a;
                 n = b;
             }
-            else {
+            else
+            {
                 i = b;
                 n = a;
             }
@@ -110,7 +117,8 @@ namespace Methods
                     a++;
                 }
             }
-            else {
+            else
+            {
                 while (b <= a)
                 {
                     ret.Add(a);
@@ -129,6 +137,30 @@ namespace Methods
                 sb.Append(" ");
                 sb.Append(i * 453);
                 sb.Append("\n");
+                i++;
+            }
+            return sb;
+        }
+
+        public static StringBuilder Task4264(StringBuilder sb, int n)
+        {
+            if (n < 0)
+            {
+                throw new ArgumentException("Значение N должно быть неотрицательным");
+            }
+            int i = 0;
+            int j = 0;
+            while (i <= n)
+            {
+                sb.Append(i);
+                sb.Append(" - ");
+                sb.Append(j);
+                sb.Append("\n");
+                j++;
+                if (j == 4)
+                {
+                    j = 0;
+                }
                 i++;
             }
             return sb;
@@ -169,11 +201,13 @@ namespace Methods
 
         public static int Task9180(int a)
         {
-            if (a < -100 || a > 500) {
+            if (a < -100 || a > 500)
+            {
                 throw new Exception("Значение A должно быть в интервале [-100, 500]");
             }
             int b = 500, sum = 0;
-            while (a <= b) {
+            while (a <= b)
+            {
                 sum += a;
                 a++;
             }
@@ -182,11 +216,13 @@ namespace Methods
 
         public static int Task1544(int b)
         {
-            if (b < -10 || b > 10000) {
+            if (b < -10 || b > 10000)
+            {
                 throw new Exception("Значение b должно быть в интервале [-10,10000]");
             }
             int a = -10, sum = 0;
-            while (a <= b) {
+            while (a <= b)
+            {
                 sum += a;
                 a++;
             }
@@ -261,12 +297,14 @@ namespace Methods
 
         public static double Task2802(int n)
         {
-            if (n <= 0) {
+            if (n <= 0)
+            {
                 throw new Exception("Значение N должно быть положительным");
             }
             int i = 1;
             double sum = 0;
-            while (i <= n) {
+            while (i <= n)
+            {
                 sum += 1.0 / i;
                 i++;
             }
@@ -344,7 +382,8 @@ namespace Methods
                 i = a;
                 n = b;
             }
-            else {
+            else
+            {
                 i = b;
                 n = a;
             }
@@ -393,11 +432,13 @@ namespace Methods
 
         public static StringBuilder Task3983(StringBuilder sb, int n)
         {
-            if (n < 0) {
+            if (n < 0)
+            {
                 throw new Exception("Значение N должно быть неотрицательным");
             }
             int i = 1;
-            while (i <= n) {
+            while (i <= n)
+            {
                 sb.Append("#");
                 if (i % 20 == 0)
                 {
@@ -418,7 +459,8 @@ namespace Methods
                 {
                     sb.Append("+");
                 }
-                else {
+                else
+                {
                     sb.Append("-");
                 }
                 sb.Append("\n");
@@ -429,15 +471,18 @@ namespace Methods
 
         public static StringBuilder Task4236(StringBuilder sb, int y)
         {
-            if (y < 0 || y > 15) {
+            if (y < 0 || y > 15)
+            {
                 throw new Exception("Значение Y должно быть в интервале [0, 15]");
             }
             int i = 0;
-            while (i < y) {
+            while (i < y)
+            {
                 sb.Append("#");
                 i++;
             }
-            while (i < 15) {
+            while (i < 15)
+            {
                 sb.Append(".");
                 i++;
             }
@@ -452,7 +497,8 @@ namespace Methods
                 i = a;
                 n = b;
             }
-            else {
+            else
+            {
                 i = b;
                 n = a;
             }
@@ -492,13 +538,16 @@ namespace Methods
 
         public static IList<int> Task8418(int x)
         {
-            if (x <= 0) {
+            if (x <= 0)
+            {
                 throw new Exception("Значение X должно быть положительным");
             }
             int i = 1;
             IList<int> ret = new List<int>();
-            while (i < x / 2 + 1) {
-                if (x % i == 0) {
+            while (i < x / 2 + 1)
+            {
+                if (x % i == 0)
+                {
                     ret.Add(i);
                 }
                 i++;
@@ -508,11 +557,13 @@ namespace Methods
 
         public static bool Task5170(int y)
         {
-            if (y <= 0) {
+            if (y <= 0)
+            {
                 throw new Exception("Значение Y должно быть положительным");
             }
             int i = 2;
-            while (i < y / 2 + 1) {
+            while (i < y / 2 + 1)
+            {
                 if (y % i == 0)
                 {
                     return false;
@@ -524,38 +575,47 @@ namespace Methods
 
         public static StringBuilder Task8395(StringBuilder sb, int w)
         {
-            if (w < 0 || w > 20) {
+            if (w < 0 || w > 20)
+            {
                 throw new Exception("Значение W должно быть в интервале [0, 20]");
             }
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("a");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("b");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("c");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("d");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("e");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("f");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("g");
             }
             sb.Append("\n");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("h");
             }
             return sb;
@@ -563,11 +623,13 @@ namespace Methods
 
         public static StringBuilder Task5568(StringBuilder sb, int w)
         {
-            if (w < 0 || w > 20) {
+            if (w < 0 || w > 20)
+            {
                 throw new Exception("Значение W должно быть в интервале [0, 20]");
             }
             int i = 0;
-            while (i <= 9) {
+            while (i <= 9)
+            {
                 int j = 0;
                 while (j < w)
                 {
@@ -582,16 +644,20 @@ namespace Methods
 
         public static StringBuilder Task2592(StringBuilder sb, String s, int w, int h)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            if (w == 0 || h == 0) {
+            if (w == 0 || h == 0)
+            {
                 return sb;
             }
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < h; i++)
+            {
                 for (int j = 0; j < w; j++)
                 {
                     sb.Append(s);
@@ -603,22 +669,27 @@ namespace Methods
 
         public static StringBuilder Task4075(StringBuilder sb, int w)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (w < 2) {
+            if (w < 2)
+            {
                 return sb.Append("\n\n");
             }
             sb.Append("+");
-            for (int i = 1; i < w - 1; i++) {
+            for (int i = 1; i < w - 1; i++)
+            {
                 sb.Append("-");
             }
             sb.Append("+\n|");
-            for (int i = 1; i < w - 1; i++) {
+            for (int i = 1; i < w - 1; i++)
+            {
                 sb.Append(".");
             }
             sb.Append("|\n+");
-            for (int i = 1; i < w - 1; i++) {
+            for (int i = 1; i < w - 1; i++)
+            {
                 sb.Append("-");
             }
             sb.Append("+");
@@ -627,21 +698,26 @@ namespace Methods
 
         public static StringBuilder Task7517(StringBuilder sb, int w, int h)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            if (w == 0 || h == 0) {
+            if (w == 0 || h == 0)
+            {
                 return sb;
             }
             sb.Append(" ");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append(i);
             }
             sb.Append("\n");
-            for (int j = 0; j < h; j++) {
+            for (int j = 0; j < h; j++)
+            {
                 sb.Append(j);
                 for (int i = 0; i < w; i++)
                 {
@@ -650,7 +726,8 @@ namespace Methods
                 sb.Append("|\n");
             }
             sb.Append(" ");
-            for (int i = 0; i < w; i++) {
+            for (int i = 0; i < w; i++)
+            {
                 sb.Append("-");
             }
             return sb;
@@ -658,10 +735,12 @@ namespace Methods
 
         public static StringBuilder Task5448(StringBuilder sb, String s, int h)
         {
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            for (int i = 1; i <= h; i++) {
+            for (int i = 1; i <= h; i++)
+            {
                 for (int j = 0; j < i; j++)
                 {
                     sb.Append(s);
@@ -679,7 +758,8 @@ namespace Methods
                 n = b - a;
                 min = a;
             }
-            else {
+            else
+            {
                 n = a - b;
                 min = b;
             }
@@ -702,16 +782,20 @@ namespace Methods
 
         public static StringBuilder Task5238(StringBuilder sb, int w, int h)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            if (w == 0 || h == 0) {
+            if (w == 0 || h == 0)
+            {
                 return sb;
             }
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < h; i++)
+            {
                 int j = 0;
                 while (j < w - i)
                 {
@@ -742,7 +826,8 @@ namespace Methods
                     sb.Append(a + 1);
                     i++;
                 }
-                else {
+                else
+                {
                     sb.Append(a);
                 }
                 while (i <= b)
@@ -753,14 +838,16 @@ namespace Methods
                 }
                 return sb;
             }
-            else {
+            else
+            {
                 int i = a - 2;
                 if (a % 2 == 0)
                 {
                     sb.Append(a - 1);
                     i--;
                 }
-                else {
+                else
+                {
                     sb.Append(a);
                 }
                 while (i >= b)
@@ -781,7 +868,8 @@ namespace Methods
                 min = p;
                 n = q - p;
             }
-            else {
+            else
+            {
                 min = q;
                 n = p - q;
             }
@@ -803,23 +891,28 @@ namespace Methods
 
         public static StringBuilder Task5171(StringBuilder sb, String s1, String s2, int w, int h)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            if (w == 0 || h == 0) {
+            if (w == 0 || h == 0)
+            {
                 return sb;
             }
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < h; i++)
+            {
                 for (int j = 0; j < w; j++)
                 {
                     if (i % 2 == 0)
                     {
                         sb.Append(s1);
                     }
-                    else {
+                    else
+                    {
                         sb.Append(s2);
                     }
                 }
@@ -830,23 +923,28 @@ namespace Methods
 
         public static StringBuilder Task1862(StringBuilder sb, String s1, String s2, int w, int h)
         {
-            if (w < 0) {
+            if (w < 0)
+            {
                 throw new Exception("Значение W должно быть неотрицательно");
             }
-            if (h < 0) {
+            if (h < 0)
+            {
                 throw new Exception("Значение H должно быть неотрицательно");
             }
-            if (w == 0 || h == 0) {
+            if (w == 0 || h == 0)
+            {
                 return sb;
             }
-            for (int i = 0; i < h; i++) {
+            for (int i = 0; i < h; i++)
+            {
                 for (int j = 0; j < w; j++)
                 {
                     if (j % 2 == 0)
                     {
                         sb.Append(s1);
                     }
-                    else {
+                    else
+                    {
                         sb.Append(s2);
                     }
                 }

@@ -12,19 +12,19 @@ public class Lab08 {
     public static final String STR = "abcdefwxyz";
     public static final String STR2 = "abcdacadbacdaabaadc";
 
-    public static int task9631(String s) throws Exception {
+    public static int task9631(String s) throws IllegalArgumentException {
         if (!STR.contains(s)) {
-            throw new Exception("Значение S отсутствует в строке");
+            throw new IllegalArgumentException("Значение S отсутствует в строке");
         }
         return STR.length() - STR.indexOf(s) - 1;
     }
 
-    public static int task9812(String ca, String cb) throws Exception {
+    public static int task9812(String ca, String cb) throws IllegalArgumentException {
         if (!STR.contains(ca)) {
-            throw new Exception("Значение CA отсутствует в строке");
+            throw new IllegalArgumentException("Значение CA отсутствует в строке");
         }
         if (!STR.contains(cb)) {
-            throw new Exception("Значение CB отсутствует в строке");
+            throw new IllegalArgumentException("Значение CB отсутствует в строке");
         }
         int indexA = STR.indexOf(ca);
         int indexB = STR.indexOf(cb);
@@ -35,9 +35,9 @@ public class Lab08 {
         }
     }
 
-    public static List<Integer> task9279(String x) throws Exception {
+    public static List<Integer> task9279(String x) throws IllegalArgumentException {
         if (x.length() != 2) {
-            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
+            throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
         }
         List<Integer> ret = new ArrayList<>();
         int i = STR2.indexOf(x);
@@ -48,12 +48,12 @@ public class Lab08 {
         return ret;
     }
 
-    static String task4845(int ca, int cb) throws Exception {
+    static String task4845(int ca, int cb) throws IllegalArgumentException {
         if (ca < 0 || ca > STR.length()) {
-            throw new Exception("Значение CA должно быть в интервале [0,длина строки)");
+            throw new IllegalArgumentException("Значение CA должно быть в интервале [0,длина строки)");
         }
         if (cb < 0 || cb > STR.length()) {
-            throw new Exception("Значение CB должно быть в интервале [0,длина строки)");
+            throw new IllegalArgumentException("Значение CB должно быть в интервале [0,длина строки)");
         }
         if (ca > cb) {
             return STR.substring(cb, ca + 1);
@@ -62,12 +62,12 @@ public class Lab08 {
         }
     }
 
-    public static String task5728(String ca, String cb) throws Exception {
+    public static String task5728(String ca, String cb) throws IllegalArgumentException {
         if (!STR.contains(ca)) {
-            throw new Exception("Значение CA отсутствует в строке");
+            throw new IllegalArgumentException("Значение CA отсутствует в строке");
         }
         if (!STR.contains(cb)) {
-            throw new Exception("Значение CB отсутствует в строке");
+            throw new IllegalArgumentException("Значение CB отсутствует в строке");
         }
         int indexA = STR.indexOf(ca);
         int indexB = STR.indexOf(cb);
@@ -78,9 +78,9 @@ public class Lab08 {
         }
     }
 
-    public static String task7222(String code) throws Exception {
+    public static String task7222(String code) throws IllegalArgumentException {
         if (code.length() != 13) {
-            throw new Exception("Некорректная длина штрих-кода");
+            throw new IllegalArgumentException("Некорректная длина штрих-кода");
         }
         String country = code.substring(0, 2);
         String manufacturer = code.substring(3, 6);
@@ -96,15 +96,15 @@ public class Lab08 {
         return STR.contains(x);
     }
 
-    public static String task5923(int ca, int cb) throws Exception {
+    public static String task5923(int ca, int cb) throws IllegalArgumentException {
         if (ca < 0 || ca > STR.length()) {
-            throw new Exception("Значение CA должно быть в интервале [0, длина строки)");
+            throw new IllegalArgumentException("Значение CA должно быть в интервале [0, длина строки)");
         }
         if (cb < 0) {
-            throw new Exception("Значение CB должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение CB должно быть неотрицательно");
         }
         if ((ca + cb) > STR.length()) {
-            throw new Exception("Сумма значений CA и CB должна быть меньше длины строки");
+            throw new IllegalArgumentException("Сумма значений CA и CB должна быть меньше длины строки");
         }
         return STR.substring(0, ca) + STR.substring(ca + cb);
     }
@@ -119,16 +119,16 @@ public class Lab08 {
         }
     }
 
-    public static String task2166(String s) throws Exception {
+    public static String task2166(String s) throws IllegalArgumentException {
         if (s.length() != 2) {
-            throw new Exception("Вводимая строка должна содержать ровно 2 символа");
+            throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
         }
         return STR2.replace(s, " ");
     }
 
-    public static String task9116(String s) throws Exception {
+    public static String task9116(String s) throws IllegalArgumentException {
         if (!s.startsWith("\"") || !s.endsWith("\"")) {
-            throw new Exception("Строка должна начинаться и заканчиваться кавычкой");
+            throw new IllegalArgumentException("Строка должна начинаться и заканчиваться кавычкой");
         }
         return s.substring(1, s.length() - 1).trim();
     }
@@ -137,7 +137,7 @@ public class Lab08 {
         return s.split(",").length;
     }
 
-    public static void task1618(String line) throws Exception {
+    public static void task1618(String line) throws IllegalArgumentException {
         System.out.println(line);
         int openIndex;
         int depth = 0;
@@ -166,20 +166,20 @@ public class Lab08 {
                 break;
             }
             if (depth < 0) {
-                throw new Exception("Неожиданный символ '}'");
+                throw new IllegalArgumentException("Неожиданный символ '}'");
             }
             System.out.print(depth);
             lastIndex++;
         }
         if (depth > 0) {
-            throw new Exception("Неожиданный конец строки");
+            throw new IllegalArgumentException("Неожиданный конец строки");
         }
         System.out.println();
     }
 
-    public static List<Integer> task3657(String a) throws Exception {
+    public static List<Integer> task3657(String a) throws IllegalArgumentException {
         if (a.length() != 1) {
-            throw new Exception("Нужно ввести ровно один символ");
+            throw new IllegalArgumentException("Нужно ввести ровно один символ");
         }
         String input = "jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf";
         List<Integer> ret = new ArrayList<>();
@@ -191,7 +191,7 @@ public class Lab08 {
         return ret;
     }
 
-    public static String task6599(String s) throws Exception {
+    public static String task6599(String s) throws IllegalArgumentException {
         String escaped = s.replace("[", "\\[").replace("]", "\\]");
         boolean outside = true;
         int next = escaped.indexOf("\"");
@@ -216,7 +216,7 @@ public class Lab08 {
         return result.toString();
     }
 
-    public static String task1703(String s) throws Exception {
+    public static String task1703(String s) throws IllegalArgumentException {
         int ltSignPos = s.indexOf("<");
         int ltSignPosEnd = s.lastIndexOf("<");
         int gtSignPos = s.indexOf(">");
@@ -225,27 +225,27 @@ public class Lab08 {
         String description;
         if (ltSignPos >= 0) {
             if (gtSignPos > 0 || ltSignPosEnd != ltSignPos) {
-                throw new Exception("В выражении должен быть только один знак сравнения");
+                throw new IllegalArgumentException("В выражении должен быть только один знак сравнения");
             }
             description = "меньше";
             signPos = ltSignPos;
         } else if (gtSignPos >= 0) {
             if (gtSignPosEnd != gtSignPos) {
-                throw new Exception("В выражении должен быть только один знак сравнения");
+                throw new IllegalArgumentException("В выражении должен быть только один знак сравнения");
             }
             description = "больше";
             signPos = gtSignPos;
         } else {
-            throw new Exception("Отсутствует знак сравнения");
+            throw new IllegalArgumentException("Отсутствует знак сравнения");
         }
         String var = s.substring(0, signPos).trim();
         if (var.isEmpty()){
-            throw new Exception("Слева от знака сравнения ожидается переменная");
+            throw new IllegalArgumentException("Слева от знака сравнения ожидается переменная");
         }
         if (var.contains(" ")){
             String statement = var.substring(0, var.lastIndexOf(" "));
             String variable = var.substring(var.lastIndexOf(" ")+1);
-            throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
+            throw new IllegalArgumentException("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + variable + "\"");
         }
         String value, special;
         if (s.substring(signPos+1).startsWith("=")){
@@ -256,12 +256,12 @@ public class Lab08 {
             special = "числа";
         }
         if (value.isEmpty()){
-            throw new Exception("Справа от знака сравнения ожидается ограничение");
+            throw new IllegalArgumentException("Справа от знака сравнения ожидается ограничение");
         }
         if (value.contains(" ")){
             String constraint = value.substring(0, value.lastIndexOf(" "));
             String statement = value.substring(value.lastIndexOf(" ")+1);
-            throw new Exception("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
+            throw new IllegalArgumentException("Неожиданное выражение \"" + statement + "\" слева от переменной \"" + constraint + "\"");
         }
         return String.format("Значение переменной %s %s %s %s", var, description, special, value);
     }

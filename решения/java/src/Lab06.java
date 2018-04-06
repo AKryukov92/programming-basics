@@ -31,9 +31,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task6066(StringBuilder sb, int a, int b) throws Exception {
+    public static StringBuilder task6066(StringBuilder sb, int a, int b) throws IllegalArgumentException {
         if (a > b){
-            throw new Exception("Значение A должно быть не больше значения B");
+            throw new IllegalArgumentException("Значение A должно быть не больше значения B");
         }
         int i = a;
         while(i <= b){
@@ -44,9 +44,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task2565(StringBuilder sb, int a, int b) throws Exception {
+    public static StringBuilder task2565(StringBuilder sb, int a, int b) throws IllegalArgumentException {
         if (a > b){
-            throw new Exception("Значение A должно быть не больше значения B");
+            throw new IllegalArgumentException("Значение A должно быть не больше значения B");
         }
         int i = b;
         while(i >= a){
@@ -57,9 +57,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task2594(StringBuilder sb, int a, String b) throws Exception {
+    public static StringBuilder task2594(StringBuilder sb, int a, String b) throws IllegalArgumentException {
         if (a < 0){
-            throw new Exception("Значение A должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение A должно быть неотрицательным");
         }
         int i = 0;
         sb.append("\"");
@@ -145,9 +145,9 @@ public class Lab06 {
         return sb.toString();
     }
 
-    public static int task9180(int a) throws Exception {
+    public static int task9180(int a) throws IllegalArgumentException {
         if (a < -100 || a > 500){
-            throw new Exception("Значение A должно быть в интервале [-100, 500]");
+            throw new IllegalArgumentException("Значение A должно быть в интервале [-100, 500]");
         }
         int b = 500, sum = 0;
         while (a <= b) {
@@ -157,9 +157,9 @@ public class Lab06 {
         return sum;
     }
 
-    public static int task1544(int b) throws Exception {
+    public static int task1544(int b) throws IllegalArgumentException {
         if (b < -10 || b > 10000){
-            throw new Exception("Значение b должно быть в интервале [-10,10000]");
+            throw new IllegalArgumentException("Значение b должно быть в интервале [-10,10000]");
         }
         int a = -10, sum = 0;
         while (a <= b){
@@ -223,9 +223,9 @@ public class Lab06 {
         return sb.toString();
     }
 
-    public static double task2802(int n) throws Exception {
+    public static double task2802(int n) throws IllegalArgumentException {
         if (n <= 0){
-            throw new Exception("Значение N должно быть положительным");
+            throw new IllegalArgumentException("Значение N должно быть положительным");
         }
         int i = 1;
         double sum = 0;
@@ -328,9 +328,29 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task1483(StringBuilder sb, int n) throws Exception {
+    public static StringBuilder task4264(StringBuilder sb, int n) throws IllegalArgumentException {
         if (n < 0){
-            throw new Exception("Значение N должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
+        }
+        int i = 0;
+        int j = 0;
+        while(i <= n){
+            sb.append(i);
+            sb.append(" - ");
+            sb.append(j);
+            sb.append("\n");
+            j++;
+            if (j == 4){
+                j = 0;
+            }
+            i++;
+        }
+        return sb;
+    }
+
+    public static StringBuilder task1483(StringBuilder sb, int n) throws IllegalArgumentException {
+        if (n < 0){
+            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
         }
         int i = 1;
         while (i <= n){
@@ -343,9 +363,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task3983(StringBuilder sb, int n) throws Exception {
+    public static StringBuilder task3983(StringBuilder sb, int n) throws IllegalArgumentException {
         if (n < 0){
-            throw new Exception("Значение N должно быть неотрицательным");
+            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
         }
         int i = 1;
         while (i <= n){
@@ -373,9 +393,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task4236(StringBuilder sb, int y) throws Exception {
+    public static StringBuilder task4236(StringBuilder sb, int y) throws IllegalArgumentException {
         if (y < 0 || y > 15){
-            throw new Exception("Значение Y должно быть в интервале [0, 15]");
+            throw new IllegalArgumentException("Значение Y должно быть в интервале [0, 15]");
         }
         int i = 0;
         while (i < y){
@@ -427,9 +447,9 @@ public class Lab06 {
         return sb.toString();
     }
 
-    public static List<Integer> task8418(int x) throws Exception {
+    public static List<Integer> task8418(int x) throws IllegalArgumentException {
         if (x <= 0){
-            throw new Exception("Значение X должно быть положительным");
+            throw new IllegalArgumentException("Значение X должно быть положительным");
         }
         int i = 1;
         List<Integer> ret = new ArrayList<>();
@@ -442,9 +462,9 @@ public class Lab06 {
         return ret;
     }
 
-    public static boolean task5170(int y) throws Exception {
+    public static boolean task5170(int y) throws IllegalArgumentException {
         if (y <= 0){
-            throw new Exception("Значение Y должно быть положительным");
+            throw new IllegalArgumentException("Значение Y должно быть положительным");
         }
         int i = 2;
         while (i < y/2+1){
@@ -456,9 +476,9 @@ public class Lab06 {
         return true;
     }
 
-    public static StringBuilder task8395(StringBuilder sb, int w) throws Exception {
+    public static StringBuilder task8395(StringBuilder sb, int w) throws IllegalArgumentException {
         if (w < 0 || w > 20){
-            throw new Exception("Значение W должно быть в интервале [0, 20]");
+            throw new IllegalArgumentException("Значение W должно быть в интервале [0, 20]");
         }
         for (int i = 0; i < w; i++){
             sb.append("a");
@@ -494,9 +514,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task5568(StringBuilder sb, int w) throws Exception {
+    public static StringBuilder task5568(StringBuilder sb, int w) throws IllegalArgumentException {
         if (w < 0 || w > 20){
-            throw new Exception("Значение W должно быть в интервале [0, 20]");
+            throw new IllegalArgumentException("Значение W должно быть в интервале [0, 20]");
         }
         int i = 0;
         while (i <= 9){
@@ -511,12 +531,12 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task2592(StringBuilder sb, String s, int w, int h) throws Exception {
+    public static StringBuilder task2592(StringBuilder sb, String s, int w, int h) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         if (w == 0 || h == 0){
             return sb;
@@ -530,9 +550,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task4075(StringBuilder sb, int w) throws Exception {
+    public static StringBuilder task4075(StringBuilder sb, int w) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (w < 2){
             return sb.append("\n\n");
@@ -553,12 +573,12 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task7517(StringBuilder sb, int w, int h) throws Exception {
+    public static StringBuilder task7517(StringBuilder sb, int w, int h) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         if (w == 0 || h == 0){
             return sb;
@@ -582,9 +602,9 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task5448(StringBuilder sb, String s, int h) throws Exception {
+    public static StringBuilder task5448(StringBuilder sb, String s, int h) throws IllegalArgumentException {
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         for (int i = 1; i <= h; i++){
             for (int j = 0; j < i; j++){
@@ -618,12 +638,12 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task5238(StringBuilder sb, int w, int h) throws Exception {
+    public static StringBuilder task5238(StringBuilder sb, int w, int h) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         if (w == 0 || h == 0){
             return sb;
@@ -700,12 +720,12 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task5171(StringBuilder sb, String s1, String s2, int w, int h) throws Exception {
+    public static StringBuilder task5171(StringBuilder sb, String s1, String s2, int w, int h) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         if (w == 0 || h == 0){
             return sb;
@@ -723,12 +743,12 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task1862(StringBuilder sb, String s1, String s2, int w, int h) throws Exception {
+    public static StringBuilder task1862(StringBuilder sb, String s1, String s2, int w, int h) throws IllegalArgumentException {
         if (w < 0){
-            throw new Exception("Значение W должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение W должно быть неотрицательно");
         }
         if (h < 0){
-            throw new Exception("Значение H должно быть неотрицательно");
+            throw new IllegalArgumentException("Значение H должно быть неотрицательно");
         }
         if (w == 0 || h == 0){
             return sb;

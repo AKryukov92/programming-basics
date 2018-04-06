@@ -12,7 +12,7 @@ echo ^<!DOCTYPE html^> ^
  ^<title^>%index% %title%^</title^> ^
  ^<style^>> %filename%
 
-type ..\styles.css >> %filename%
+type ..\styles.css>>%filename%
 
 echo ^</style^> ^
  ^</head^> ^
@@ -46,5 +46,14 @@ echo ^</body^> ^
  ^</html^>>> %filename%
 
 copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
+
+pushd ..\..\%lang%\
+rmdir lab12 /s /q
+mkdir lab12
+popd
+xcopy ..\..\решения\cs\task5164 ..\..\%lang%\lab12\task5164 /s /I
+xcopy ..\..\решения\cs\task2354 ..\..\%lang%\lab12\task2354 /s /I
+xcopy ..\..\решения\cs\task2030 ..\..\%lang%\lab12\task2030 /s /I
+xcopy ..\..\решения\cs\task7649 ..\..\%lang%\lab12\task7649 /s /I
 
 if x%1==x start "" %filename%

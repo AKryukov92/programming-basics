@@ -86,4 +86,16 @@ pushd "task3567"
 copy "*" "..\..\..\%lang%\files\task3567\*"
 popd
 
+pushd ..\..\%lang%\
+rmdir Lab14 /s /q
+mkdir Lab14
+pushd Lab14
+mkdir example
+mkdir tasks
+popd
+popd
+xcopy ..\..\решения\java\src\Lab14\example ..\..\%lang%\Lab14\example /s /I
+xcopy ..\..\решения\java\src\Lab14\tasks ..\..\%lang%\Lab14\tasks /s /I
+
+
 if x%1==x start "" %filename%

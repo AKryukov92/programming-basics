@@ -34,6 +34,16 @@ for (var i = 0; i < in2594a.length; i++){
 }
 
 
+var in4264 = ["7", "12", "2", "9", "0", "-1"];
+for (var i = 0; i < in4264.length; i++){
+	var out = document.getElementById("4264t" + i);
+	try {
+		out.innerHTML = task4264(in4264[i]);
+	} catch (e) {
+		out.innerHTML = e.message;
+	}
+}
+
 var in1483 = ["4","18","42","0","-9"];
 for (var i = 0; i < in1483.length; i++){
 	var out = document.getElementById("1483t" + i);

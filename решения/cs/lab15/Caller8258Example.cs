@@ -1,4 +1,4 @@
-﻿using Classes.Task8258example;
+﻿using ClassesExample.Task8258;
 using System;
 using System.Collections.Generic;
 using System.Linq;
