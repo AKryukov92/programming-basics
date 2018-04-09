@@ -490,6 +490,7 @@ for (var i = 0; i < in1544.length; i++){
 	}
 }
 
+
 var in9354a = ["7247", "7", "-11", "0", "0"];
 var in9354b = ["7243", "1", "-13", "1", "1000"];
 var in9354c = ["7229", "3", "-17", "3", "2000"];
@@ -497,6 +498,18 @@ for (var i = 0; i < in9354a.length; i++){
 	try {
 		var out = document.getElementById("9354t" + i);
 		out.innerHTML = task9354(in9354a[i], in9354b[i], in9354c[i]).toFixed(4);
+	} catch (e) {
+		out.innerHTML = e.message;
+	}
+}
+
+
+var in3490y = ["3", "10", "0", "13", "-10", "11"];
+var in3490w = ["2", "300", "15", "0", "100", "-500"];
+for (var i = 0; i < in3490y.length; i++){
+	try {
+		var out = document.getElementById("3490t" + i);
+		out.innerHTML = task3490(in3490y[i], in3490w[i]) + "см";
 	} catch (e) {
 		out.innerHTML = e.message;
 	}

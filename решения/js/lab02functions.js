@@ -256,3 +256,12 @@ function task5870(timeInSeconds){
     var s = timeInSeconds%60;
     return h + " часов " + m + " минут " + s + " секунд";
 }
+function task3490(yarnDiameterCm, wireCoils){
+	if (yarnDiameterCm <= 0){
+		throw new Error("Длина проволоки должна быть неотрицательна");
+	}
+	if (wireCoils <= 0){
+		throw new Error("Количество витков должно быть неотрицательно");
+	}
+	return Math.floor(2 * yarnDiameterCm * Math.PI * wireCoils);
+}
