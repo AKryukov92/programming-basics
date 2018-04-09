@@ -364,11 +364,21 @@ public class Lab02 {
 
     public static class6522 task6522(int v1, int t1, int v2, int t2) throws IllegalArgumentException {
         if (v1 < 0) {
-            throw new IllegalArgumentException("Значение v1 должно быть неотрицательным");
+            throw new IllegalArgumentException("Объем должен быть неотрицательным");
         }
         if (v2 < 0) {
-            throw new IllegalArgumentException("Значение v2 должно быть неотрицательным");
+            throw new IllegalArgumentException("Объем должен быть неотрицательным");
         }
         return new class6522(v1 + v2, (double) (t1 * v1 + t2 * v2) / (v1 + v2));
+    }
+
+    public static int task3490(double yarnDiameterCm, int wireCoils){
+        if (yarnDiameterCm <= 0){
+            throw new IllegalArgumentException("Длина проволоки должна быть неотрицательна");
+        }
+        if (wireCoils <= 0){
+            throw new IllegalArgumentException("Количество витков должно быть неотрицательно");
+        }
+        return (int)Math.floor(2 * yarnDiameterCm * Math.PI * wireCoils);
     }
 }

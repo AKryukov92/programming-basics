@@ -460,13 +460,26 @@ namespace Methods
         {
             if (v1 < 0)
             {
-                throw new Exception("Значение v1 должно быть неотрицательным");
+                throw new Exception("Объем должен быть неотрицательным");
             }
             if (v2 < 0)
             {
-                throw new Exception("Значение v2 должно быть неотрицательным");
+                throw new Exception("Объем должен быть неотрицательным");
             }
             return new class6522(v1 + v2, (double)(t1 * v1 + t2 * v2) / (v1 + v2));
+        }
+
+        public static int Task3490(double yarnDiameterCm, int wireCoils)
+        {
+            if (yarnDiameterCm <= 0)
+            {
+                throw new ArgumentException("Длина проволоки должна быть неотрицательна");
+            }
+            if (wireCoils <= 0)
+            {
+                throw new ArgumentException("Количество витков должно быть неотрицательно");
+            }
+            return (int)Math.Floor(2 * yarnDiameterCm * Math.PI * wireCoils);
         }
     }
 }

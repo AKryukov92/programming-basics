@@ -55,6 +55,7 @@ namespace task9701
 
             Step1544();
             Step1346();
+            Step3490();
         }
         
         static void Step9020()
@@ -872,6 +873,27 @@ namespace task9701
             } catch(ArgumentException e)
             {
                 Console.WriteLine(e.Message);
+            }
+        }
+        
+        static void Step3490()
+        {
+            Console.WriteLine();
+            Console.WriteLine("3490");
+            double[] in3490y = { 3, 10, 0, 13, -10, 11 };
+            int[] in3490w = { 2, 300, 15, 0, 100, -500 };
+            int[] out3490 = { 37, 18849 };
+            for (int i = 0; i < in3490y.Length; i++)
+            {
+                try
+                {
+                    int result = Lab02.Task3490(in3490y[i], in3490w[i]);
+                    Console.WriteLine("{0} ({1})", result, out3490[i]);
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
     }

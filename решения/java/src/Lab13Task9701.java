@@ -48,6 +48,7 @@ public class Lab13Task9701 {
 
         Step8769();
         Step9354();
+        Step3490();
     }
 
     private static void Step3591() {
@@ -686,6 +687,21 @@ public class Lab13Task9701 {
             try {
                 String result = Lab05.task7937(in7937w[i], in7937h[i],
                         in7937c[i], in7937d[i]);
+                System.out.println(result);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    static void Step3490(){
+        System.out.println();
+        System.out.println("3490");
+        double[] in3490y = {3, 10, 0, 13, -10, 11};
+        int[] in3490w = {2, 300, 15, 0, 100, -500};
+        for (int i = 0; i < in3490y.length; i++){
+            try {
+                int result = Lab02.task3490(in3490y[i], in3490w[i]);
                 System.out.println(result);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
