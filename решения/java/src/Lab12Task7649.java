@@ -25,6 +25,7 @@ public class Lab12Task7649 {
         Step5694();
         Step6806();
         Step7369();
+        Step1292();
     }
 
     private static void Step8495() {
@@ -296,5 +297,17 @@ public class Lab12Task7649 {
         System.out.println();
         System.out.println("5951");
         System.out.println(Lab06.task5951());
+    }
+
+    private static void Step1292(){
+        System.out.println();
+        System.out.println("1292");
+        String[] in1292 = {"a","b","d","h","i"};
+        String[] out1292 = {"a", "ab", "abcd", "abcdefgh", "abcdefgh"};
+        for (int i = 0; i < in1292.length; i++){
+            String result = Lab05.task1292(new StringBuilder(), in1292[i]).toString();
+            System.out.println("Ожидалось : " + out1292[i]);
+            System.out.println("Получилось: " + result);
+        }
     }
 }

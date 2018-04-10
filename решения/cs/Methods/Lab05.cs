@@ -433,6 +433,23 @@ namespace Methods
             return hundreds == units;
         }
 
+        public static StringBuilder task1292(StringBuilder sb, String x)
+        {
+            String[] chars = { "a", "b", "c", "d", "e", "f", "g", "h" };
+            int i = 0;
+            while (i < chars.Length)
+            {
+                sb.Append(chars[i]);
+                if (chars[i].Equals(x))
+                {
+                    break;
+                }
+                i++;
+            }
+            return sb;
+        }
+
+
         public static String Task4527(int a)
         {
             if (a < -10 || a > 100)

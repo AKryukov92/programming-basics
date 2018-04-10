@@ -217,6 +217,19 @@ function task6740(x, y){
 function task9038(x, y){
 	return x >= 2 || (y <= 1.5 && y >= 0.5);
 }
+function task1292(x){
+	var chars = ["a", "b", "c", "d", "e", "f", "g", "h"];
+	var i = 0;
+	var r = "";
+	while (i < chars.length){
+		r += chars[i];
+		if (chars[i] == x){
+			break;
+		}
+		i++;
+	}
+	return r;
+}
 function task4527(a){
 	if (a < -10 || a > 100){
 		throw new Error("Значение A должно быть в интервале [-10, 100]");

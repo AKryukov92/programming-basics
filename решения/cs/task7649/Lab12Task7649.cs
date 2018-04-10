@@ -32,6 +32,7 @@ namespace tfa
             Step5694();
             Step6806();
             Step7369();
+            Step1292();
         }
 
         static void Step2475()
@@ -346,6 +347,20 @@ namespace tfa
                     result.Insert(0, "Неверно. Результат:\n");
                     Console.WriteLine(result.ToString());
                 }
+            }
+        }
+
+        static void Step1292()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1292");
+            String[] in1292 = { "a", "b", "d", "h", "i" };
+            String[] out1292 = { "a", "ab", "abcd", "abcdefgh", "abcdefgh" };
+            for (int i = 0; i < in1292.Length; i++)
+            {
+                String result = Lab05.task1292(new StringBuilder(), in1292[i]).ToString();
+                Console.WriteLine("Ожидалось : " + out1292[i]);
+                Console.WriteLine("Получилось: " + result);
             }
         }
     }

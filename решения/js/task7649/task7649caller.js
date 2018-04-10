@@ -98,3 +98,8 @@ for (var i = 0; i < in7369left.length; i++){
 	var out = document.getElementById("7369t" + i);
 	out.innerHTML = task7369(in7369left[i], in7369top[i]);
 }
+var in1292 = ["a","b","d","h","i"];
+for (var i = 0; i < in1292.length; i++){
+	var out = document.getElementById("1292t" + i);
+	out.innerHTML = task1292(in1292[i]);
+}
