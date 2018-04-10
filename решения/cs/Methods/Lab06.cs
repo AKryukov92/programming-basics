@@ -128,6 +128,32 @@ namespace Methods
             return ret;
         }
 
+        public static StringBuilder Task4338(StringBuilder sb, int a, int b)
+        {
+            int begin, end;
+            if (a < b)
+            {
+                begin = a;
+                end = b;
+            }
+            else
+            {
+                begin = b;
+                end = a;
+            }
+            int i = begin, j = end;
+            while (i <= end)
+            {
+                sb.Append(i);
+                sb.Append(" ");
+                sb.Append(j);
+                sb.Append("\n");
+                i++;
+                j--;
+            }
+            return sb;
+        }
+
         public static StringBuilder Task3762(StringBuilder sb)
         {
             int i = 1;

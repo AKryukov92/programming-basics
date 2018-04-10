@@ -26,6 +26,7 @@ public class Lab12Task7649 {
         Step6806();
         Step7369();
         Step1292();
+        Step4338();
     }
 
     private static void Step8495() {
@@ -65,6 +66,15 @@ public class Lab12Task7649 {
         System.out.println();
         System.out.println("2475");
         System.out.println(Lab06.task2475());
+    }
+
+    private static void Step4338(){
+        System.out.println();
+        System.out.println("4338");
+        System.out.println(Lab06.task4338(new StringBuilder(), 3, 11));
+        System.out.println(Lab06.task4338(new StringBuilder(), 587, 613));
+        System.out.println(Lab06.task4338(new StringBuilder(), 50, 41));
+        System.out.println(Lab06.task4338(new StringBuilder(), 1000, 1000));
     }
 
     private static void Step2324(){

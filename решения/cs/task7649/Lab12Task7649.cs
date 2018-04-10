@@ -33,6 +33,7 @@ namespace tfa
             Step6806();
             Step7369();
             Step1292();
+            Step4338();
         }
 
         static void Step2475()
@@ -84,6 +85,16 @@ namespace tfa
             Console.WriteLine("3762");
             String result3762 = Lab06.Task3762(new StringBuilder()).ToString();
             Console.WriteLine(result3762);
+        }
+
+        private static void Step4338()
+        {
+            Console.WriteLine();
+            Console.WriteLine("4338");
+            Console.WriteLine(Lab06.Task4338(new StringBuilder(), 3, 11));
+            Console.WriteLine(Lab06.Task4338(new StringBuilder(), 587, 613));
+            Console.WriteLine(Lab06.Task4338(new StringBuilder(), 50, 41));
+            Console.WriteLine(Lab06.Task4338(new StringBuilder(), 1000, 1000));
         }
 
         static void Step2324()

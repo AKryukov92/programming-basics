@@ -23,6 +23,11 @@ for (var i = 0; i < in6572a.length; i++){
 	out.innerHTML = task6572(in6572a[i],in6572b[i]);
 }
 
+document.getElementById("4338t0").innerHTML = task4338(3, 11);
+document.getElementById("4338t1").innerHTML = task4338(587, 613);
+document.getElementById("4338t2").innerHTML = task4338(50, 41);
+document.getElementById("4338t3").innerHTML = task4338(1000, 1000);
+
 var in2084a = ["20","8","571","691","-71","64","19","401","800"];
 var in2084b = ["30","13","580","703","-96","58","7","390","785"];
 for (var i = 0; i < in2084a.length; i++){

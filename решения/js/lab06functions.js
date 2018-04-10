@@ -612,3 +612,21 @@ function task1862(s1,s2,w,h){
 	}
 	return r;
 }
+function task4338(a, b){
+	var begin, end;
+	if (a < b){
+		begin = a;
+		end = b;
+	} else {
+		begin = b;
+		end = a;
+	}
+	var i = begin, j = end;
+	var r = "";
+	while(i <= end){
+		r += i + " " + j + "\n";
+		i++;
+		j--;
+	}
+	return r;
+}
