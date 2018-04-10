@@ -1,0 +1,79 @@
+<div class="task_block" id="task2092">
+    <div class="task_id">2092</div>
+    <h3>Задача</h3>
+    <div class="task_desc">Инициализировать объект interval так, чтобы при выполнении данных сценарев на экран был выведен указанный результат.</div>
+    <table class="check_values">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Сценарий</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 0;
+interval.b = 10;
+bool fact = interval.contains(5);
+if (fact) {
+    console.log("Содержит");
+} else {
+    console.log("Не содержит");
+}</td>
+            <td class="preformatted">Содержит</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 100;
+interval.b = 1000;
+if (interval.contains(100)) {
+    console.log("Содержит");
+} else {
+    console.log("Не содержит");
+}</td>
+            <td class="preformatted">Содержит</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 13;
+interval.b = 17;
+if (interval.contains(17)) {
+    console.log("Содержит");
+} else {
+    console.log("Не содержит");
+}</td>
+            <td class="preformatted">Содержит</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 23;
+interval.b = 29;
+if (interval.contains(0)) {
+    console.log("Содержит");
+} else {
+    console.log("Не содержит");
+}</td>
+            <td class="preformatted">Не содержит</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 31;
+interval.b = 43;
+if (interval.contains(50)) {
+    console.log("Содержит");
+} else {
+    console.log("Не содержит");
+}</td>
+            <td class="preformatted">Не содержит</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="preformatted">interval.a = 100;
+interval.b = 0;
+try {
+    interval.contains(10);
+} catch (e) {
+    console.log(e.Message);
+}</td>
+            <td class="preformatted">Корректность интервала была нарушена</td>
+        </tr>
+    </table>
+</div>

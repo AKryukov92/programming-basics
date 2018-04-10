@@ -63,6 +63,7 @@
     <Compile Include="task1953\Circle.cs" />
     <Compile Include="task1953\Interval.cs" />
     <Compile Include="task2000\Interval.cs" />
+    <Compile Include="task2092\Interval.cs" />
     <Compile Include="task2401\Interval.cs" />
     <Compile Include="task2662\Interval.cs" />
     <Compile Include="task5242\Interval.cs" />

@@ -25,24 +25,26 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#task8403" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task3185" class="supervision"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task9914"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task2809" class="supervision"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task7297"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task5242"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task1379"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task2401"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task5421"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task9713"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task7301" class="example"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task2000"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task4147"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task1953"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task3956"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task2092"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task9914"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task2809" class="supervision"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task7297"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task5242"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task1379"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task2401"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task5421"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9713"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task7301" class="example"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task2000"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task4147"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task1953"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task3956"^>№ 16^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
 type taskjs8403.html>>%filename%
 type taskjs3185.html>>%filename%
+type taskjs2092.html>>%filename%
 type taskjs9914.html>>%filename%
 type taskjs2809.html>>%filename%
 type taskjs7297.html>>%filename%

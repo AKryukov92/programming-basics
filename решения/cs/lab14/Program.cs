@@ -114,6 +114,13 @@ namespace lab14
             Caller3956Example.Step2();
             Caller3956Example.Step3();
             Caller3956Example.Step4();
+
+            Caller2092.Step1();
+            Caller2092.Step2();
+            Caller2092.Step3();
+            Caller2092.Step4();
+            Caller2092.Step5();
+            Caller2092.Step6();
         }
     }
 }

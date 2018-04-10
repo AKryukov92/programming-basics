@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caller2092.cs" />
     <Compile Include="Caller9713.cs" />
     <Compile Include="Caller1379.cs" />
     <Compile Include="Caller1953.cs" />
