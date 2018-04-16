@@ -82,6 +82,7 @@ type task9865.html>>%filename%
 type task8428.html>>%filename%
 type link_c7_p32.5.html>>%filename%
 type task7711.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre7711.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task1262.html>>%filename%
 type task9164.html>>%filename%
 type task3558.html>>%filename%
@@ -129,3 +130,4 @@ cd ..
 call prepare_theory csharp 3862 cs lab02
 call prepare_theory csharp 9231 cs lab02
 call prepare_theory csharp 4411 cs lab02
+call prepare_theory csharp 7711 cs lab02
