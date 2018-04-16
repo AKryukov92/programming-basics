@@ -38,12 +38,15 @@ function task8428(a){
     return a * Math.PI/180;
 }
 function task2361(t,l){
-    if (t <= 0){
-        throw new Error("Значение T должно быть положительным");
-    }
-    if (l <= 0){
-        throw new Error("Значение L должно быть положительным");
-    }
+	if (t <= 0) {
+		throw new Error("Длина рулона должна быть положительна");
+	}
+	if (l <= 0) {
+		throw new Error("Расход материала должен быть положительным");
+	}
+	if (t * 100 < l){
+		throw new Error("Материала не хватат даже на одно изделие");
+	}
     t = parseInt(t) * 100;
     l = parseInt(l);
     return {

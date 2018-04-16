@@ -332,7 +332,9 @@ public class Lab07 {
                 min = current;
             }
         }
-        sb.append("\nОтвет: ");
+        sb.append("\nВ массиве {");
+        sb.append(raw);
+        sb.append("} минимальный элемент это ");
         sb.append(min);
         return sb.toString();
     }

@@ -157,7 +157,7 @@ public class Lab12Task7649 {
         int[] out7035 = {1, 1, 1, 2, 3, 4, 3};
         for (int i = 0; i < in7035.length; i++) {
             String result = Lab07.task7035(in7035[i]);
-            System.out.printf("%s (%s)\n\n", result, out7035[i]);
+            System.out.printf("%s (%d)\n\n", result, out7035[i]);
         }
     }
 

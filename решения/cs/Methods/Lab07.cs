@@ -435,7 +435,9 @@ namespace Methods
                     min = current;
                 }
             }
-            sb.Append("\nОтвет: ");
+            sb.Append("\nВ массиве {");
+            sb.Append(raw);
+            sb.Append("} минимальный элемент это ");
             sb.Append(min);
             return sb.ToString();
         }

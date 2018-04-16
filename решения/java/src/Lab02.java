@@ -5,12 +5,10 @@
 public class Lab02 {
 
     public static void main(String[] args) {
-
-
         System.out.println();
         System.out.println("2361");
-        int[] in2361t = {400, 103, 300, -800};
-        int[] in2361l = {17, 29, -70, 20};
+        int[] in2361t = {400, 103, 2, 300, -800};
+        int[] in2361l = {17, 29, 313, -70, 20};
         for (int i = 0; i < in2361l.length; i++) {
             try {
                 class2361 result = task2361(in2361t[i], in2361l[i]);
@@ -122,10 +120,13 @@ public class Lab02 {
 
     public static class2361 task2361(int t, int l) throws IllegalArgumentException {
         if (t <= 0) {
-            throw new IllegalArgumentException("Значение T должно быть положительным");
+            throw new IllegalArgumentException("Длина рулона должна быть положительна");
         }
         if (l <= 0) {
-            throw new IllegalArgumentException("Значение L должно быть положительным");
+            throw new IllegalArgumentException("Расход материала должен быть положительным");
+        }
+        if (t * 100 < l){
+            throw new IllegalArgumentException("Материала не хватат даже на одно изделие");
         }
         return new class2361(t * 100 / l, t * 100 % l);
     }

@@ -281,6 +281,7 @@ namespace task8787
             Console.WriteLine();
             Console.WriteLine("9271");
             String[] in9271 = {
+                "5 4 6 2 3 1",
                 "1 2 3 4 1 2",
                 "3 4 1 2 3 4 1 2 3 1 2",
                 "4 2 3 4 3 2",

@@ -291,7 +291,7 @@ function task7035(raw){
 			min = current;
 		}
 	}
-	result += "</br>Ответ: " + min;
+	result += "</br>В массиве {" + raw + "} минимальный элемент это " + min;
 	return result;
 }
 function task9271(raw){

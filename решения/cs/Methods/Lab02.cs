@@ -11,8 +11,8 @@ namespace Methods
         {
             Console.WriteLine();
             Console.WriteLine("2361");
-            int[] in2361t = { 400, 103, 300, -800 };
-            int[] in2361l = { 17, 29, -70, 20 };
+            int[] in2361t = { 400, 103, 2, 300, -800 };
+            int[] in2361l = { 17, 29, 313, -70, 20 };
             for (int i = 0; i < in2361l.Length; i++)
             {
                 try
@@ -20,7 +20,7 @@ namespace Methods
                     class2361 result = Task2361(in2361t[i], in2361l[i]);
                     Console.WriteLine(result);
                 }
-                catch (Exception e)
+                catch (ArgumentException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -43,7 +43,7 @@ namespace Methods
                     class6522 result = Task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]);
                     Console.WriteLine(result);
                 }
-                catch (Exception e)
+                catch (ArgumentException e)
                 {
                     Console.WriteLine(e.Message);
                 }
@@ -148,11 +148,15 @@ namespace Methods
         {
             if (t <= 0)
             {
-                throw new Exception("Значение T должно быть положительным");
+                throw new ArgumentException("Длина рулона должна быть положительна");
             }
             if (l <= 0)
             {
-                throw new Exception("Значение L должно быть положительным");
+                throw new ArgumentException("Расход материала должен быть положительным");
+            }
+            if(t * 100 < l)
+            {
+                throw new ArgumentException("Материала не хватат даже на одно изделие");
             }
             return new class2361(t * 100 / l, t * 100 % l);
         }
@@ -460,11 +464,11 @@ namespace Methods
         {
             if (v1 < 0)
             {
-                throw new Exception("Объем должен быть неотрицательным");
+                throw new ArgumentException("Объем должен быть неотрицательным");
             }
             if (v2 < 0)
             {
-                throw new Exception("Объем должен быть неотрицательным");
+                throw new ArgumentException("Объем должен быть неотрицательным");
             }
             return new class6522(v1 + v2, (double)(t1 * v1 + t2 * v2) / (v1 + v2));
         }

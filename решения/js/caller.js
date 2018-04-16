@@ -6,8 +6,8 @@ if (x = y){
 }
 
 //Lab02
-var in2361t = ["400","103","300","-800"];
-var in2361l = ["17","29","-70","20"];
+var in2361t = ["400","103","2", "300","-800"];
+var in2361l = ["17","29","313", "-70","20"];
 for (var i = 0; i < in2361t.length; i++){
 	var out = document.getElementById("2361t" + i);
 	try {
