@@ -702,7 +702,7 @@ public class Lab13Task9701 {
         for (int i = 0; i < in3490y.length; i++){
             try {
                 int result = Lab02.task3490(in3490y[i], in3490w[i]);
-                System.out.println(result);
+                System.out.println(result + " см");
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
