@@ -92,7 +92,9 @@ namespace tfa
             Console.WriteLine("2790");
             Console.WriteLine("{0:F6} ({1:F6})", Lab02.Task2790(6997), 0.9205);
             Console.WriteLine("{0:F6} ({1:F6})", Lab02.Task2790(31), 0.8572);
+            Console.WriteLine("{0:F6} ({1:F6})", Lab02.Task2790(90), 0.0000);
             Console.WriteLine("{0:F6} ({1:F6})", Lab02.Task2790(0), 1.0000);
+            Console.WriteLine("{0:F6} ({1:F6})", Lab02.Task2790(180), 1.0000);
         }
 
         static void Step9164()

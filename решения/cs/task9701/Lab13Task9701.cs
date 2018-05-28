@@ -888,7 +888,7 @@ namespace task9701
                 try
                 {
                     int result = Lab02.Task3490(in3490y[i], in3490w[i]);
-                    Console.WriteLine("{0} ({1})", result, out3490[i]);
+                    Console.WriteLine("{0} см ({1})", result, out3490[i]);
                 }
                 catch (ArgumentException e)
                 {

@@ -58,7 +58,7 @@ public class Lab02 {
     }
 
     public static double task4411(double x) {
-        return 2 * x;
+        return x + 7;
     }
 
     public static int task9298(int a) throws IllegalArgumentException {

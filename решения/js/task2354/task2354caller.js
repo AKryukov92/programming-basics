@@ -13,7 +13,7 @@ for (var i = 0; i < in1262.length; i++){
 	var out = document.getElementById("1262t" + i);
 	out.innerHTML = task1262(in1262[i]).toFixed(4);
 }
-var in2790 = ["6997", "31", "0"];
+var in2790 = ["6997", "31", "90", "0", "180"];
 for (var i = 0; i < in2790.length; i++){
 	var out = document.getElementById("2790t" + i);
 	out.innerHTML = task2790(in2790[i]).toFixed(4);
