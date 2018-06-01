@@ -150,7 +150,7 @@ public class Lab02 {
         return 5 * Math.cos(y * Math.PI / 180);
     }
 
-    public static double task9020(int x) throws IllegalArgumentException {
+    public static double task9020(int x) {
         if (x > 61) {
             throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
         }

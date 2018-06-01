@@ -4,13 +4,24 @@
  */
 public class Runner9020 {
     public static void main(String[] args) {
-        int[] in = {0, -9, 61, 60, 62, 7573, 75};
-        for (int item : in) {
-            try {
-                System.out.printf("%.4f\n", Lab02.task9020(item));
-            } catch (IllegalArgumentException e){
-                System.out.println(e.getMessage());
-            }
+        System.out.printf("%.4f\n", Lab02.task9020(0));
+        System.out.printf("%.4f\n", Lab02.task9020(-9));
+        System.out.printf("%.4f\n", Lab02.task9020(61));
+        System.out.printf("%.4f\n", Lab02.task9020(60));
+        try {
+            Lab02.task9020(62);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            Lab02.task9020(7573);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            Lab02.task9020(75);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
         }
     }
 }
