@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -79,9 +80,9 @@ public class Lab07 {
         return sum / arr.length;
     }
 
-    public static List<Double> task6497(String raw) {
+    public static double[] task6497(String raw) {
         if (raw.length() == 0) {
-            return new ArrayList<>();
+            return new double[0];
         }
         String[] arr = raw.split(" ");
         double sum = 0;
@@ -89,9 +90,9 @@ public class Lab07 {
             sum += Double.parseDouble(arr[i]);
         }
         double avg = sum / arr.length;
-        List<Double> deltas = new ArrayList<>();
+        double[] deltas = new double[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            deltas.add(Math.abs(Double.parseDouble(arr[i]) - avg));
+            deltas[i] = Math.abs(Double.parseDouble(arr[i]) - avg);
         }
         return deltas;
     }
@@ -183,6 +184,12 @@ public class Lab07 {
             ret.add(Integer.parseInt(arr[i]) * m);
         }
         return ret;
+    }
+
+    public static void task9774(double m, double[] arr){
+        for (int i = 0; i < arr.length; i++){
+            arr[i] *= m;
+        }
     }
 
     public static List<String> task9711(String raw) {
@@ -356,6 +363,18 @@ public class Lab07 {
             ret.add(Integer.parseInt(arr[i]) - min);
         }
         return ret;
+    }
+
+    public static void task9271(double[] arr){
+        double min = arr[0];
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] < min){
+                min = arr[i];
+            }
+        }
+        for (int i = 0; i < arr.length; i++){
+            arr[i] -= min;
+        }
     }
 
     public static int task8769(int p, int q, String raw) throws IllegalArgumentException {
