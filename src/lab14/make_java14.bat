@@ -27,8 +27,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6011" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task8403" class="example"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task3185" class="example"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task2092"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task9914"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task6589"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6037"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task9914"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task2092"^>№ ^</a^>^</li^> ^
  ^<li^>^<a href="#task6037"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task2809" class="example"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task7297"^>№ 8^</a^>^</li^> ^
@@ -52,9 +54,10 @@ type taskjava5789.html>>%filename%
 type taskjava6011.html>>%filename%
 type taskjava8403.html>>%filename%
 type taskjava3185.html>>%filename%
+type taskjava6589.html>>%filename%
+type taskjava6037.html>>%filename%
+type taskjava9914.html>>%filename%
 type task2092.html>>%filename%
-type task9914.html>>%filename%
-type task6037.html>>%filename%
 type task2809.html>>%filename%
 type task7297.html>>%filename%
 type task5242.html>>%filename%
