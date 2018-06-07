@@ -5,7 +5,7 @@
 <ul>
 <li>В классе Point создайте публичный метод equals и пометьте его аннотацией @Override.</li>
 <li>Он должен возвращать логическое значение и принимать в качестве аргумента экземпляр типа Object.</li>
-<li>В теле метода верните значение false</li>
+<li>В теле метода верните значение false.</li>
 </ul>
 
 <h4>Проверьте, что экземпляр точки эквивалентен сам себе</h4>
@@ -28,13 +28,11 @@
 <li>Проверьте с помощью метода assertFalse, что все комбинации вызова метода equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь.</li>
 <li>Должно получиться 14 сравнений.</li>
 <li>При запуске тестов, юнит-тест pointInstanceComparison должен быть отмечен красным знаком.</li>
-<li>Замените в теле метода equals выражение "return false" на выражение:
+<li>Добавьте в тело метода equals выражение:
 <div class="check_single preformatted">Point point = (Point) o;
-
-if (x != point.x) return false;
-return y == point.y;</div>
+if (x == point.x && y == point.y) return true;</div>
 <li>Теперь pointEqualsItself при запуске должен быть отмечен зеленым знаком.</li>
-</ul>
+</ul> 
 
 <h4>Проверьте, что сравнение со значением null возвращает false и не выбрасывает исключение NullPointerException</h4>
 <ul>
@@ -52,7 +50,7 @@ return y == point.y;</div>
 <li>Проверьте результат вызова equals с помощью метода assertFalse</li>
 <li>При запуске тестов, юнит-тест pointNotEqualOther должен быть отмечен красным знаком.</li>
 <li>Добавьте в тело метода equals выражение:</li>
-<div class="check_single preformatted">if (o == null) return false;</div>
+<div class="check_single preformatted">if (getClass() != o.getClass()) return false;</div>
 <li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
 </ul>
 </div>
