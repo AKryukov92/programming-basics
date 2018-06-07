@@ -1,4 +1,4 @@
-package Lab14.solution;
+package Lab14.stage2;
 
 /**
  * @author AKryukov
@@ -23,5 +23,17 @@ public class Range {
             throw new IllegalStateException("Некорректный интервал");
         }
         return hasIntersection(from, to, a, b);
+    }
+
+    public boolean intersects(Range right){
+        if (from > to){
+            throw new IllegalStateException("Некорректный интервал");
+        }
+        return hasIntersection(this, right);
+    }
+
+    public void init(int a, int b){
+        this.from = a;
+        this.to = b;
     }
 }

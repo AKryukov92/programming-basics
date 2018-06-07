@@ -1,4 +1,4 @@
-package Lab14.example;
+package Lab14.stage1;
 
 /**
  * @author AKryukov

@@ -24,11 +24,11 @@
 <h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
 <ul>
 <li>В классе RangeSuite создайте 2 публичных нестатических метода intersectsIntWrongLeftTest и intersectsIntWrongRightTest.</li>
-<li>Пометьте их аннотацией @Test с элементом expected равным IllegalArgumentException.class</li>
+<li>Пометьте метод intersectsIntWrongLeftTest аннотацией @Test с элементом expected равным IllegalStateException.class</li>
 <li>В теле метода intersectsIntWrongLeftTest инициализируйте экземпляра класса Range.</li>
 <li>Заполните значения его полей так, чтобы этот экземпляр получился некорректным.</li>
 <li>Вызовите у экземпляра класса метод intersects и передайте ему в качестве аргументов корректные значения интервала.</li>
-<li>В теле метода intersectsIntWrongRightTest проверьте что метод hasIntersection выбрасывает исключение в случае, когда экземпляр класса корректный, а переданные аргументы - нет.</li>
+<li>В теле метода intersectsIntWrongRightTest проверьте что метод hasIntersection выбрасывает исключение IllegalArgumentException в случае, когда экземпляр класса корректный, а переданные аргументы - нет.</li>
 <li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li>
 </ul>
 </div>

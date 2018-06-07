@@ -1,4 +1,6 @@
-import Lab14.example.Point;
+package lab14.stage1;
+
+import Lab14.stage1.Point;
 import org.junit.Assert;
 import org.junit.Test;
 
