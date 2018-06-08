@@ -46,8 +46,9 @@ if (x == point.x && y == point.y) return true;</div>
 
 <h4>Проверьте, что сравнение с экземпляром другого класса возвращает false и не выбрасывает никаких исключений</h4>
 <ul>
-<li>Добавьте юнит-тест pointNotEqualOther. В нем создайте экземпляр класса Point и экземпляр класса Range.</li>
-<li>Проверьте результат вызова equals с помощью метода assertFalse</li>
+<li>Добавьте юнит-тест pointNotEqualOther. В нем создайте экземпляр класса Point.</li>
+<li>Вызовите метод equals и передайте ему в качестве аргументов строку "not a point".</li>
+<li>Проверьте результат вызова с помощью метода assertFalse</li>
 <li>При запуске тестов, юнит-тест pointNotEqualOther должен быть отмечен красным знаком.</li>
 <li>Добавьте в тело метода equals выражение:</li>
 <div class="check_single preformatted">if (getClass() != o.getClass()) return false;</div>
