@@ -124,4 +124,11 @@ public class PointSuite {
         Point p = new Point(0, 0);
         Assert.assertFalse(p.equals("not a point"));
     }
+
+    @Test
+    public void pointToString(){
+        Point p = new Point(1234, 5678);
+        Assert.assertEquals("(1234;5678)", p.toString());
+        System.out.println(p);
+    }
 }

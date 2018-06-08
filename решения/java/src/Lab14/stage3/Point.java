@@ -50,4 +50,9 @@ public class Point {
         if (x == point.x && y == point.y) return true;
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "(" + x + ";" + y + ")";
+    }
 }

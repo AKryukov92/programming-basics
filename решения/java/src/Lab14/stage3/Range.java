@@ -57,4 +57,9 @@ public class Range {
         if (from == point.from && to == point.to) return true;
         return false;
     }
+
+    @Override
+    public String toString(){
+        return "[" + from + ";" + to + "]";
+    }
 }
