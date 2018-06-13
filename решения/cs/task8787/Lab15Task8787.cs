@@ -70,7 +70,7 @@ namespace task8787
         {
             Console.WriteLine();
             Console.WriteLine("8418");
-            int[] in8418 = { 6, 385, -9 };
+            int[] in8418 = { 6, 385, 0, -9 };
             for (int i = 0; i < in8418.Length; i++)
             {
                 try

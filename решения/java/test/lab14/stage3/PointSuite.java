@@ -4,6 +4,8 @@ import Lab14.stage3.Point;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashSet;
+
 /**
  * @author AKryukov
  * 05.06.2018
@@ -126,9 +128,72 @@ public class PointSuite {
     }
 
     @Test
-    public void pointToString(){
+    public void pointToString() {
         Point p = new Point(1234, 5678);
         Assert.assertEquals("(1234;5678)", p.toString());
         System.out.println(p);
+    }
+
+    @Test
+    public void samePointsHaveSameHashcode() {
+        Point l = new Point(0, 0);
+        Point r = new Point(0, 0);
+        Assert.assertEquals(l.hashCode(), r.hashCode());
+        Assert.assertTrue(l.equals(r));
+        Assert.assertTrue(r.equals(l));
+    }
+
+    @Test
+    public void differentPointsHaveDifferentHashcode() {
+        Point l = new Point(0, 0);
+        Point r = new Point(5, 5);
+        Assert.assertNotEquals(l.hashCode(), r.hashCode());
+        Assert.assertFalse(l.equals(r));
+        Assert.assertFalse(r.equals(l));
+    }
+
+    @Test
+    public void hashSetContainsOnlyOneOfSamePoints() {
+        Point l = new Point(0, 0);
+        Point r = new Point(0, 0);
+        HashSet<Point> pts = new HashSet<>();
+        pts.add(l);
+        pts.add(r);
+        Assert.assertEquals(1, pts.size());
+        Assert.assertTrue(pts.contains(l));
+        Assert.assertTrue(pts.contains(r));
+    }
+
+    @Test
+    public void hashSetContainsAllDifferentPoints() {
+        Point l = new Point(0, 0);
+        Point r = new Point(5, 5);
+        HashSet<Point> pts = new HashSet<>();
+        pts.add(l);
+        pts.add(r);
+        Assert.assertEquals(2, pts.size());
+        Assert.assertTrue(pts.contains(l));
+        Assert.assertTrue(pts.contains(r));
+    }
+
+    @Test
+    public void differentPointsMightHaveSameHashcode() {
+        Point l = new Point(0, 1);
+        Point r = new Point(31, 0);
+        Assert.assertEquals(l.hashCode(), r.hashCode());
+        Assert.assertFalse(l.equals(r));
+        Assert.assertFalse(r.equals(l));
+    }
+
+    @Test
+    public void hashSetContainsAllDifferentPointsWithSameHashcode() {
+        Point l = new Point(0, 1);
+        Point r = new Point(31, 0);
+        HashSet<Point> pts = new HashSet<>();
+        pts.add(l);
+        pts.add(r);
+        Assert.assertEquals(2, pts.size());
+        Assert.assertTrue(pts.contains(l));
+        Assert.assertTrue(pts.contains(r));
     }
 }

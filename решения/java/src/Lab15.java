@@ -1,7 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -18,11 +21,46 @@ public class Lab15 {
         Step7657();
     }
 
+    public static String task1056(String raw){
+        String[] parts = raw.split(" ");
+        Map<String, Integer> stats = new HashMap<>();
+        for (int i = 0; i < parts.length; i++){
+            if(stats.containsKey(parts[i])){
+                Integer count = stats.get(parts[i]);
+                count++;
+                stats.put(parts[i], count);
+            } else {
+                stats.put(parts[i], 1);
+            }
+        }
+        StringBuilder result = new StringBuilder();
+        for (Map.Entry<String, Integer> entry : stats.entrySet()){
+            result
+                .append(entry.getKey())
+                .append(" ")
+                .append(entry.getValue())
+                .append("\n");
+        }
+        return result.toString();
+    }
+
+    public static String task5087(String raw) {
+        String[] parts = raw.split(" ");
+        List<String> stringList = new ArrayList<>();
+        Set<String> stringSet = new HashSet<>();
+        for (int i = 0; i < parts.length; i++) {
+            stringList.add(parts[i]);
+            stringSet.add(parts[i]);
+        }
+        return "Set: " + String.join(" ", stringSet) +
+            "\nList: " + String.join(" ", stringList);
+    }
+
     private static void Step7738() {
         System.out.println();
         System.out.println("7738");
         for (int i = 1; i <= 4; i++){
-            task7738(".\\task7738\\test" + i + ".txt");
+            task7738("..\\..\\java\\files\\task7738\\test" + i + ".txt");
         }
     }
 
@@ -193,28 +231,32 @@ public class Lab15 {
         }
     }
 
-    static void logic7738(Scanner scanner){
-        Map<String, Integer> result = new HashMap<>();
+    static String logic7738(Scanner scanner){
+        Map<String, Integer> stats = new HashMap<>();
         while(scanner.hasNext()){
             String line = scanner.next();
-            if(result.containsKey(line)){
-                Integer count = result.get(line);
+            if(stats.containsKey(line)){
+                Integer count = stats.get(line);
                 count++;
-                result.put(line, count);
+                stats.put(line, count);
             } else {
-                result.put(line, 1);
+                stats.put(line, 1);
             }
         }
-        for(Map.Entry<String, Integer> entry : result.entrySet()){
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        Map.Entry<String, Integer> max = stats.entrySet().iterator().next();
+        for(Map.Entry<String, Integer> entry : stats.entrySet()){
+            if (entry.getValue() > max.getValue()){
+                max = entry;
+            }
         }
+        return max.getKey();
     }
 
     static void task7738(String filename){
         File target = new File(filename);
         System.out.println(target.getAbsolutePath());
         try(Scanner scanner = new Scanner(target)){
-            logic7738(scanner);
+            System.out.println(logic7738(scanner));
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {

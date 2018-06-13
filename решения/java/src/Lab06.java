@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Александр on 31.03.2017.
@@ -474,7 +476,7 @@ public class Lab06 {
         }
         int i = 1;
         List<Integer> ret = new ArrayList<>();
-        while (i < x/2+1){
+        while (i <= x){
             if (x%i == 0){
                 ret.add(i);
             }
