@@ -47,19 +47,16 @@ mkdir task3784
 mkdir task6732
 popd
 
-pushd task9701
-copy "task9701caller.js" "..\..\..\%lang%\files\task9701\task9701caller.js"
-copy "task9701layout.html" "..\..\..\%lang%\files\task9701\task9701layout.html"
+pushd "..\..\решения\js\task9701"
+copy "*" "..\..\..\%lang%\files\task9701\*"
 popd
 
-pushd task3784
-copy "task3784caller.js" "..\..\..\%lang%\files\task3784\task3784caller.js"
-copy "task3784layout.html" "..\..\..\%lang%\files\task3784\task3784layout.html"
+pushd "..\..\решения\js\task3784"
+copy "*" "..\..\..\%lang%\files\task3784\*"
 popd
 
-pushd task6732
-copy "task6732caller.js" "..\..\..\%lang%\files\task6732\task6732caller.js"
-copy "task6732layout.html" "..\..\..\%lang%\files\task6732\task6732layout.html"
+pushd "..\..\решения\js\task6732"
+copy "*" "..\..\..\%lang%\files\task6732\*"
 popd
 
 pushd ..\..\%lang%\
