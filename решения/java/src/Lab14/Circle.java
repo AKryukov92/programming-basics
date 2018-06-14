@@ -1,17 +1,17 @@
-package Lab14.solution.task3567;
+package Lab14;
 
 /**
  * @author akryukov
  *         16.11.2017
  */
-public class Circle3567 {
+public class Circle {
     private int cx;
     private int cy;
     private int r;
     private String stroke;
     private int count;
 
-    public Circle3567(int cx, int cy, int r, String stroke) {
+    public Circle(int cx, int cy, int r, String stroke) {
         this.cx = cx;
         this.cy = cy;
         this.r = r;

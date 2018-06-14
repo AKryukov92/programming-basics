@@ -1,10 +1,10 @@
 package Lab14.solution;
 
-import Lab14.solution.task3567.Circle3567;
+import Lab14.Circle;
 import common.Utils;
 import Lab15.solution.task2033.Circle2033;
 import Lab15.solution.task2033.Figure2033;
-import Lab14.solution.task5108.Rectangle5108;
+import Lab15.solution.task5108.Rectangle5108;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,7 +24,7 @@ public class Task3567solution {
         }
     }
 
-    private static void logic3567(Scanner scanner, Circle3567 circle) throws Exception {
+    private static void logic3567(Scanner scanner, Circle circle) throws Exception {
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
             String[] arr = line.split(";");
@@ -49,8 +49,8 @@ public class Task3567solution {
 
     private static void task3567(String filename) {
         File target = new File(filename);
-        Circle3567 circle = new Circle3567(150, 150, 100, "black");
-        Circle3567 example = new Circle3567(150, 150, 100, "red");
+        Circle circle = new Circle(150, 150, 100, "black");
+        Circle example = new Circle(150, 150, 100, "red");
         try (Scanner scanner = new Scanner(target)) {
             System.out.println(filename);
             logic3567(scanner, circle);

@@ -1,4 +1,4 @@
-package Lab14.solution.task5108;
+package Lab15.solution.task5108;
 
 import Lab15.solution.task2033.Figure2033;
 

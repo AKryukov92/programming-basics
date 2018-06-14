@@ -1,6 +1,6 @@
-package Lab14.solution;
+package Lab15.solution;
 
-import Lab14.solution.task5108.Rectangle5108;
+import Lab15.solution.task5108.Rectangle5108;
 import common.Utils;
 
 import java.io.File;

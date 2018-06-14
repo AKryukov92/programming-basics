@@ -1,6 +1,6 @@
 package Lab14.solution;
 
-import Lab14.solution.task5032.Rectangle5032;
+import Lab14.Rectangle;
 import common.Utils;
 
 import java.io.File;
@@ -22,8 +22,8 @@ public class Task5032solution {
 
     public static void task5032(String filename) {
         File target = new File(filename);
-        Rectangle5032 rect = new Rectangle5032(100, 100, 100, 100, "black");
-        Rectangle5032 example = new Rectangle5032(100, 100, 100, 100, "red");
+        Rectangle rect = new Rectangle(100, 100, 100, 100, "black");
+        Rectangle example = new Rectangle(100, 100, 100, 100, "red");
         try (Scanner scanner = new Scanner(target)) {
             logic5032(scanner, rect);
             String description = "<p>Действий: " + rect.getCount() + "</p>" +
@@ -39,7 +39,7 @@ public class Task5032solution {
         }
     }
 
-    private static void logic5032(Scanner scanner, Rectangle5032 rect) throws Exception {
+    private static void logic5032(Scanner scanner, Rectangle rect) throws Exception {
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
             String[] arr = line.split(";");

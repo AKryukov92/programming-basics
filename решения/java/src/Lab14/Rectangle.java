@@ -1,10 +1,10 @@
-package Lab14.solution.task5032;
+package Lab14;
 
 /**
  * @author akryukov
  *         24.11.2017
  */
-public class Rectangle5032 {
+public class Rectangle {
     int x;
     int y;
     int h;
@@ -12,7 +12,7 @@ public class Rectangle5032 {
     String stroke;
     int count;
 
-    public Rectangle5032(int x, int y, int h, int w, String stroke) {
+    public Rectangle(int x, int y, int h, int w, String stroke) {
         this.x = x;
         this.y = y;
         this.h = h;

@@ -3,7 +3,7 @@ package Lab15.solution;
 import Lab15.solution.task2033.Circle2033;
 import Lab15.solution.task2033.Figure2033;
 import common.Utils;
-import Lab14.solution.task5108.Rectangle5108;
+import Lab15.solution.task5108.Rectangle5108;
 
 import java.io.File;
 import java.io.FileNotFoundException;
