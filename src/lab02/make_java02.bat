@@ -81,6 +81,7 @@ type task3832.html>>%filename%
 type task7457.html>>%filename%
 type task9865.html>>%filename%
 type task8428.html>>%filename%
+echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre8428.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type link_c7_p32.5.html>>%filename%
 type task7711.html>>%filename%
 type task1262.html>>%filename%
@@ -130,3 +131,4 @@ cd ..
 call prepare_theory java 3862 java lab02
 call prepare_theory java 9231 java lab02
 call prepare_theory java 4411 java lab02
+call prepare_theory java 8428 java lab02
