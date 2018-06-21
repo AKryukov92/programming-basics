@@ -34,3 +34,37 @@ function task3669(a,b){
 	}
 	return mul;
 }
+function task3946(arr){
+	if (arr.length == 0){
+		return 0;
+	}
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++){
+		sum += arr[i];
+	}
+	return sum/arr.length;
+}
+function task4283(k, arr){
+	var count = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i] == k){
+			count++;
+		}
+	}
+	return count;
+}
+function task6497(arr) {
+	if (arr.length == 0) {
+		return [];
+	}
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	var avg = sum / arr.length;
+	var deltas = [];
+	for (var i = 0; i < arr.length; i++) {
+		deltas.push(Math.abs(arr[i]- avg));
+	}
+	return deltas;
+}

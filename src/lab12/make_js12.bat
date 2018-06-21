@@ -61,6 +61,9 @@ type taskjs2790.html>>%filename%
 type taskjs5662.html>>%filename%
 type taskjs3669.html>>%filename%
 type link_c2_p7.2.html>>%filename%
+type taskjs3946.html>>%filename%
+type taskjs4283.html>>%filename%
+type taskjs6497.html>>%filename%
 echo ^</div^>>>%filename%
 
 echo ^</body^> ^
