@@ -34,6 +34,19 @@ function task3669(a,b){
 	}
 	return mul;
 }
+
+function task1292(x){
+	var arr = "a,b,c,d,e,f,g,h".split(',');
+	var result = "";
+	for (var i = 0; i < arr.length; i++){
+		result += arr[i];
+		if (x == arr[i]){
+			return result;
+		}
+	}
+	return result;
+}
+
 function task3946(arr){
 	if (arr.length == 0){
 		return 0;
@@ -67,4 +80,30 @@ function task6497(arr) {
 		deltas.push(Math.abs(arr[i]- avg));
 	}
 	return deltas;
+}
+
+function task9774(m, arr){
+	for (var i = 0; i < arr.length; i++){
+		arr[i] = arr[i] * m;
+	}
+}
+
+function task9271(arr){
+	var min = arr[0];
+	for (var i = 1; i < arr.length; i++){
+		if (min > arr[i]){
+			min = arr[i];
+		}
+	}
+	for (var i = 0; i < arr.length; i++){
+		arr[i] = arr[i] - min;
+	}
+}
+
+function task4847(x, y, z){
+	return x == y || y == z || x == z;
+}
+
+function task6740(x, y){
+	return x >= 1 && x <= 3 && y >= -2 && y <= -1;
 }

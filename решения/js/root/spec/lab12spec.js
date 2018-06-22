@@ -40,6 +40,14 @@ it("в задаче 3669 должен получиться корректный 
 	expect(task3669(35, 24)).toBeCloseTo(399703747322880000, 4);
 });
 
+it("в задаче 3669 должен получиться корректный результат", function(){
+	expect(task1292("a")).toEqual("a");
+	expect(task1292("b")).toEqual("ab");
+	expect(task1292("d")).toEqual("abcd");
+	expect(task1292("h")).toEqual("abcdefgh");
+	expect(task1292("i")).toEqual("abcdefgh");
+});
+
 it("в задаче 3946 должен получиться корректный результат", function(){
 	expect(task3946([1, 2, 3, 4, 1])).toBeCloseTo(2.2, 4);
 	expect(task3946([1, 2, 3, 4, 1, 3, 4, 4, 4, 4])).toBeCloseTo(3, 4);
@@ -58,4 +66,66 @@ it("в задаче 6497 должен получиться корректный 
 	expect(task6497([5, 5, 5, 5, 5])).toEqual([0, 0, 0, 0, 0]);
 	expect(task6497([])).toEqual([]);
 	expect(task6497([1000000, 1, 1])).toEqual([666666.0000, 333333.0000, 333333.0000]);
+});
+
+it("в задаче 9774 должен получиться корректный результат", function(){
+	var data1 = [9, 8, 7, 6, 5, 4];
+	task9774(31, data1);
+	expect(data1).toEqual([279, 248, 217, 186, 155, 124]);
+	var data2 = [9, 8, 7, 6, 5, 4];
+	task9774(-3, data2);
+	expect(data2).toEqual([-27, -24, -21, -18, -15, -12]);
+	var data3 = [98, 76, 54];
+	task9774(11, data3);
+	expect(data3).toEqual([1078, 836, 594]);
+	var data4 = [];
+	task9774(73, data4);
+	expect(data4).toEqual([]);
+});
+
+it("в задаче 9271 должен получиться корректный результат", function(){
+	var data1 = [5, 4, 6, 2, 3, 1];
+	task9271(data1);
+	expect(data1).toEqual([4, 3, 5, 1, 2, 0]);
+	var data2 = [1, 2, 3, 4, 1, 2];
+	task9271(data2);
+	expect(data2).toEqual([0, 1, 2, 3, 0, 1]);
+	var data3 = [3, 4, 1, 2, 3, 4, 1, 2, 3, 1, 2];
+	task9271(data3);
+	expect(data3).toEqual([2, 3, 0, 1, 2, 3, 0, 1, 2, 0, 1]);
+	var data4 = [4, 2, 3, 4, 3, 2];
+	task9271(data4);
+	expect(data4).toEqual([2, 0, 1, 2, 1, 0]);
+	var data5 = [4, 4, 4, 4, 4, 3, 2, 1];
+	task9271(data5);
+	expect(data5).toEqual([3, 3, 3, 3, 3, 2, 1, 0]);
+	var data6 = [4, 4, 4, 4];
+	task9271(data6);
+	expect(data6).toEqual([0, 0, 0, 0]);
+	var data7 = [4, 3];
+	task9271(data7);
+	expect(data7).toEqual([1, 0]);
+});
+
+it("в задаче 4847 должен получиться корректный результат", function(){
+	expect(task4847(31, 59, 83)).toBeFalsy();
+	expect(task4847(19, 19, 41)).toBeTruthy();
+	expect(task4847(7, 11, 11)).toBeTruthy();
+	expect(task4847(67, -67, 67)).toBeTruthy();
+	expect(task4847(1, 1, 1)).toBeTruthy();
+});
+
+it("в задаче 6740 должен получиться корректный результат", function(){
+	var f6740x = [0, 1, 2, 3, 4, 0, 4, 0, 4, 0, 4, 0, 1, 2, 3, 4];
+	var f6740y = [0, 0, 0, 0, 0, -1, -1, -1.5, -1.5, -2, -2, -3, -3, -3, -3, -3]
+	
+	var t6740x = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+	var t6740y = [-1, -1, -1, -1.5, -1.5, -1.5, -2, -2, -2];
+	
+	for (var i = 0; i < f6740x.length; i++){
+		expect(task6740(f6740x[i], f6740y[i])).toBeFalsy();
+	}
+	for (var i = 0; i < t6740x.length; i++){
+		expect(task6740(t6740x[i], t6740y[i])).toBeTruthy();
+	}
 });
