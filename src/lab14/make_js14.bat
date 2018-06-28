@@ -23,8 +23,10 @@ type ..\nav_js.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#task8403" class="example"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task3185" class="supervision"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task5789" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task6011" class="example"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task8403" class="example"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task3185" class="example"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task2092"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task9914"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task2809" class="supervision"^>№ 5^</a^>^</li^> ^
@@ -42,8 +44,11 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
+type taskjs5789.html>>%filename%
+type taskjs6011.html>>%filename%
 type taskjs8403.html>>%filename%
 type taskjs3185.html>>%filename%
+
 type taskjs2092.html>>%filename%
 type taskjs9914.html>>%filename%
 type taskjs2809.html>>%filename%
