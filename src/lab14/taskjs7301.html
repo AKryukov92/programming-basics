@@ -1,61 +1,24 @@
 <div class="task_block" id="task7301">
 	<div class="task_id">7301</div>
     <h3>Задача</h3>
-    <div class="task_desc">Реализовать код так, чтобы при выполнении данных сценариев на экран был выведен указанный результат.</div>
-    <table class="check_values">
-        <tr>
-            <th>Номер по порядку</th>
-            <th>Сценарий</th>
-            <th>Результат</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">var p = new Point(53, 59);
-console.log(p.print());</td>
-            <td>(53;59)</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">var p1 = new Point(53, 59);
-var p2 = new Point(61,67);
-console.log("Distance between " + p1.print()
-    + " and " + p2.print() + " is " + p1.distanceTo(p2));</td>
-            <td>Distance between (53;59) and (61;67) is 11.3137</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">var dist = new Point(79, 83)
-    .distanceTo(new Point(89, 97));
-console.log(dist);</td>
-            <td>8.4853</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">var p = new Point(71, 73);
-console.log("Distance between " + p.print()
-    + " to zero is " + p.distanceTo(new Point(0, 0)));</td>
-            <td>Distance between (71;73) to zero is 101.8332</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">console.log(new Point(79, 83)
-    .distanceTo(new Point(89, 97)));</td>
-            <td>17.2047</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">var dist = distanceBetween(
-    new Point(151, 157),
-    new Point(163, 167));
-console.log(dist);</td>
-            <td>15.6204</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">console.log(distanceBetween(
-    new Point(173, 179),
-    new Point(181, 191)));</td>
-            <td>14.4222</td>
-        </tr>
-    </table>
+    <h4>Реализуйте прототип Point для решения задачи <a href="[2] лаб. ОСАЛП.html#task5789" target="_blank">ЛР2#5789 (открыть в новой вкладке)</a>.</h4>
+<ul>
+<li>В файле для исходного кода "lab14.js" реализуйте функцию Point (конструктор прототипа). Она принимает 2 аргумента.</li>
+<li>В теле функции нужно присвоить значения из аргументов полям "x" и "y" этого объекта.</li>
+<li>Инициализируйте поле distanceTo прототипа Point функцией. Реализуйте эту функцию так, чтобы она возвращала результат решения задачи.</li>
+</ul>
+
+<h4>Воспользуйтесь конструктором прототипа Point для инициализации объектов и функциями прототипа для решения задачи</h4>
+<ul>
+<li>Создайте юнит-тест для проверки задачи и подпишите его словами "вычисление расстояния между точками. Координаты заданы 2 экземплярами прототипа".</li>
+<li>Для каждого теста из задачи создайте экземпляры прототипа Point и поместите их в переменные p1 и p2.
+	<ul>
+	<li>Инициализируйте переменные p1 и p2 результатом вызова функции Point. В качестве аргументов передайте значения "x" и "y" из соответствующих столбцов тестов к задаче.</li>
+	<li>При каждой инициализации добавьте ключевое слово "new" после оператора присваивания и перед вызовом функции Point.</li>
+	</ul>
+</li>
+<li>Вызовите функцию distanceTo сначала у объекта p1 и передайте ей в качестве аргумента объект p2. После этого вызовите функцию у объекта p2 и передайте ей объект p1.</li>
+<li>Проверьте корректность результатов каждого вызова функции distanceTo c помощью функции expect в сочетании с функцией toBeCloseTo. Достаточная точность 4 знака после запятой.</li>
+<li>Проверьте, что при создании экземпляра прототипа выбрасывается исключение при создании некорректных значениях аргументов. Воспользуйтесь функцией expect в сочетании с функцией toThrow.</li>
+<li>При открытии файла SpecRunner.html, в нем должна быть зеленая строка "вычисление расстояния между точками. Координаты заданы 2 экземплярами прототипа".</li>
 </div>

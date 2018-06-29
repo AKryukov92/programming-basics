@@ -27,20 +27,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6011" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task8403" class="example"^>№ 3^</a^>^</li^> ^
  ^<li^>^<a href="#task3185" class="example"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task2092"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task9914"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task2809" class="supervision"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task7297"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task5242"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task1379"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task2401"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task5421"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task9713"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task7301" class="example"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task2000"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task4147"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task1953"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task3956"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task6589"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6037"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task9914"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task4916"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task7301" class="example"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task2000"^>№ 10^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -48,21 +40,19 @@ type taskjs5789.html>>%filename%
 type taskjs6011.html>>%filename%
 type taskjs8403.html>>%filename%
 type taskjs3185.html>>%filename%
-
-type taskjs2092.html>>%filename%
+type taskjs6589.html>>%filename%
+type taskjs6037.html>>%filename%
 type taskjs9914.html>>%filename%
-type taskjs2809.html>>%filename%
-type taskjs7297.html>>%filename%
-type taskjs5242.html>>%filename%
-type taskjs1379.html>>%filename%
-type taskjs2401.html>>%filename%
-type taskjs5421.html>>%filename%
-type taskjs9713.html>>%filename%
+type taskjs4916.html>>%filename%
+REM type taskjs2809.html>>%filename% пропущены, потому что equals не требуется для понимания коллекций 
+REM type taskjs5449.html>>%filename% и не поддерживается языком из коробки
+REM type taskjs2662.html>>%filename%
+
+REM type taskjs8265.html>>%filename% может быть оставить ради тренировки реализации методов в прототипе
 type taskjs7301.html>>%filename%
 type taskjs2000.html>>%filename%
-type taskjs4147.html>>%filename%
-type taskjs1953.html>>%filename%
-type taskjs3956.html>>%filename%
+REM type taskjs5421.html>>%filename% Сделать через JSON.parse и JSON.stringify
+REM type taskjs9713.html>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%

@@ -1,87 +1,15 @@
 <div class="task_block" id="task9914">
 	<div class="task_id">9914</div>
     <h3>Задача</h3>
-    <div class="task_desc">Инициализировать объекты l и r так, чтобы при выполнении данных сценарев на экран был выведен указанный результат c точностью 0.0001.</div>
-    <table class="check_values">
-        <tr>
-            <th>Номер по порядку</th>
-            <th>Сценарий</th>
-            <th>Результат</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 2;
-l.b = 3;
-r.a = 5;
-r.b = 7;
-var fact = l.intersects(r);
-console.log(fact);</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 11;
-l.b = 17;
-r.a = 13;
-r.b = 19;
-console.log(r.intersects(l));</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 5;
-l.b = 15;
-r.a = 0;
-r.b = 30;
-console.log(l.intersects(r));</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 67;
-l.b = 71;
-r.a = 59;
-r.b = 61;
-console.log(l.intersects(r));</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 79;
-l.b = 73;
-r.a = 83;
-r.b = 89;
-try {
-    console.log(l.intersects(r));
-} catch(ex){
-    console.log(ex.message);
-}</td>
-            <td>Некорректный интервал</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 97;
-l.b = 101;
-r.a = 107;
-r.b = 103;
-try {
-    console.log(l.intersects(r));
-} catch(ex){
-    console.log(ex.message);
-}</td>
-            <td>Некорректный интервал</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td class="preformatted">l.a = 127;
-l.b = 131;
-r = null;
-try {
-    console.log(l.intersects(r));
-} catch(ex){
-    console.log(ex.message);
-}</td>
-            <td>Данный интервал не инициализирован</td>
-        </tr>
-    </table>
+	<h4>Реализуйте функцию для решения задачи <a href="[5] лаб. ОСАЛП.html#task6589" target="_blank">ЛР5#6589 (открыть в новой вкладке)</a> как поле объекты</h4>
+<ul>
+<li>Создайте юнит-тест для проверки задачи и подпишите его словами "проверка пересечения одного интервала с другим. Границы другого интервала заданы 2 числами".</li>
+<li>Инициализируйте объект с полями "a" и "b" в теле юнит-теста. Значения полей возьмите из 1 и 2 столбца исходных данных первого теста.</li>
+<li>Инициализируйте у объекта поле intersects анонимной функцией, которая принимает 2 аргумента.</li>
+<li>Реализуйте функцию intersects так, чтобы она возвращала результат решения задачи. В качестве исходных данных используйте поля "a" и "b" этого же объекта и значения из аргументов.</li>
+<li>Вызовите функцию intersects у объекта и передайте ей значения из 3 и 4 столбца исходных данных первого теста.</li>
+<li>Проверьте корректность результатов каждого вызова функции intersects с помощью функции expect в сочетании с функцией toBeFalsy или toBeTruthy.</li>
+<li>Проверьте что функция intersects выбрасывает исключение в случае с некорректными исходными данными. Воспользуйтесь функцией expect в сочетании с toThrow.</li>
+<li>При открытии файла SpecRunner.html, в нем должна быть зеленая строка "проверка пересечения интервалов. Границы заданы 2 объектами".</li>
+</ul>
 </div>
