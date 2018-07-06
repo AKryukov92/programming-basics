@@ -51,10 +51,10 @@ type infojava01.html>>%filename%
 echo ^</div^>>>%filename%
 
 echo ^<div class="section"^>>>%filename%
-type taskjava1860.html>>%filename%
-type taskjava4140.html>>%filename%
-type taskjava2632.html>>%filename%
-type taskjava7474.html>>%filename%
+type task1860.html>>%filename%
+type task4140.html>>%filename%
+type task2632.html>>%filename%
+type task7474.html>>%filename%
 type link_c2_p7.1.html>>%filename%
 type taskjava4411.html>>%filename%
 type taskjava2790.html>>%filename%

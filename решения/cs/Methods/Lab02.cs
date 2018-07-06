@@ -357,6 +357,7 @@ namespace Methods
 
         public static double Task2790(int x)
         {
+            //return Math.Abs(Math.Cos(x * Math.PI / 180.0));
             double Sin = Math.Sin(x * Math.PI / 180.0);
             return Math.Sqrt(1.0 - Sin * Sin);
         }
