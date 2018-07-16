@@ -160,5 +160,35 @@ namespace MethodTests
                 Assert.IsFalse(Lab05.Task6740(in6740xNeg[i], in6740yNeg[i]));
             }
         }
+
+        [TestMethod]
+        public void Task9020Test()
+        {
+            Assert.AreEqual(23.4307, Lab02.Task9020(0), 0.0001);
+            Assert.AreEqual(25.0998, Lab02.Task9020(-9), 0.0001);
+            Assert.AreEqual(0, Lab02.Task9020(61), 0.0001);
+            Assert.AreEqual(3, Lab02.Task9020(60), 0.0001);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020Assertion1()
+        {
+            Lab02.Task9020(62);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020Assertion2()
+        {
+            Lab02.Task9020(7573);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020Assertion3()
+        {
+            Lab02.Task9020(75);
+        }
     }
 }

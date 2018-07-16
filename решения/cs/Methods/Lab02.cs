@@ -189,7 +189,7 @@ namespace Methods
         {
             if (x > 61)
             {
-                throw new Exception("Подкоренное выражение должно быть неотрицательным");
+                throw new ArgumentException("Подкоренное выражение должно быть неотрицательным");
             }
             return 3 * Math.Sqrt(61 - x);
         }
