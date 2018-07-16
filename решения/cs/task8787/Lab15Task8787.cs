@@ -487,7 +487,7 @@ namespace task8787
             for (int i = 0; i < in6497.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                List<Double> result = Lab07.task6497(in6497[i]);
+                List<Double> result = Lab07.Task6497(in6497[i]);
                 foreach (Double item in result)
                 {
                     sb.Append(String.Format("{0}", item));

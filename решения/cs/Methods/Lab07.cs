@@ -97,6 +97,15 @@ namespace Methods
             return arr.ToList();
         }
 
+        public static double Task3946(int[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                return 0;
+            }
+            return arr.Average();
+        }
+
         public static double Task3946(String raw)
         {
             if (raw.Length == 0)
@@ -112,7 +121,27 @@ namespace Methods
             return sum / arr.Length;
         }
 
-        public static List<Double> task6497(String raw)
+        public static double[] Task6497(int[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                return new double[0];
+            }
+            double sum = 0;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            double avg = sum / arr.Length;
+            double[] result = new double[arr.Length];
+            for(int i = 0; i < arr.Length; i++)
+            {
+                result[i] = Math.Abs(arr[i] - avg);
+            }
+            return result;
+        }
+
+        public static List<Double> Task6497(String raw)
         {
             if (raw.Length == 0)
             {
@@ -228,6 +257,14 @@ namespace Methods
             return ret;
         }
 
+        public static void Task9774(int m, int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = arr[i] * m;
+            }
+        }
+
         public static IList<int> Task9774(int m, String raw)
         {
             IList<int> ret = new List<int>();
@@ -316,6 +353,20 @@ namespace Methods
                 sb.Append("\n");
             }
             return sb;
+        }
+
+        public static String Task1292(Char x)
+        {
+            String arr = "abcdefgh";
+            int index = arr.IndexOf(x);
+            if (index >= 0)
+            {
+                return arr.Substring(0, index + 1);
+            }
+            else
+            {
+                return arr;
+            }
         }
 
         public static StringBuilder Task6806(StringBuilder sb, int x)
@@ -442,6 +493,26 @@ namespace Methods
             return sb.ToString();
         }
 
+        public static void Task9271(double[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                return;
+            }
+
+            double min = arr[0];
+            for (int i = 1; i < arr.Length; i++) {
+                if(arr[i] < min)
+                {
+                    min = arr[i];
+                }
+            }
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = arr[i] - min;
+            }
+        }
+
         public static IList<int> Task9271(String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
@@ -556,6 +627,19 @@ namespace Methods
                 ret.Add(t);
             }
             return ret;
+        }
+
+        public static int Task4283(int k, int[] arr)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == k)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public static int Task4283(int k, String raw)
