@@ -216,11 +216,11 @@ namespace Methods
         {
             if (y < 0)
             {
-                throw new Exception("Значение y должно быть неотрицательным");
+                throw new ArgumentException("Значение y должно быть неотрицательным");
             }
             if (x + Math.Sqrt(y) < 0)
             {
-                throw new Exception("Подкоренное выражение должно быть неотрицательным");
+                throw new ArgumentException("Подкоренное выражение должно быть неотрицательным");
             }
             return -5 * Math.Sqrt(x + Math.Sqrt(y));
         }
@@ -308,7 +308,7 @@ namespace Methods
         {
             if (m <= 0)
             {
-                throw new Exception("Масса должна быть положительной");
+                throw new ArgumentException("Масса должна быть положительной");
             }
             double g = 9.8067;
             if (a >= 90)

@@ -585,7 +585,7 @@ namespace Methods
         {
             if (y <= 0)
             {
-                throw new Exception("Значение Y должно быть положительным");
+                throw new ArgumentException("Значение Y должно быть положительным");
             }
             int i = 2;
             while (i < y / 2 + 1)

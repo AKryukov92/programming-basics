@@ -190,5 +190,81 @@ namespace MethodTests
         {
             Lab02.Task9020(75);
         }
+
+        [TestMethod]
+        public void Task3943Test()
+        {
+            Assert.AreEqual(-10, Lab02.Task3943(-5, 81));
+            Assert.AreEqual(-435.7062, Lab02.Task3943(7507, 7499));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task3943Assertion1()
+        {
+            Lab02.Task3943(7489, -7487);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task3943Assertion2()
+        {
+            Lab02.Task3943(-7481, 7477);
+        }
+
+        [TestMethod]
+        public void Task7799Test()
+        {
+            Assert.AreEqual(34.671920, Lab02.Task7799(5, 45), 0.0001);
+            Assert.AreEqual(61972.336135, Lab02.Task7799(7297, 30), 0.0001);
+            Assert.AreEqual(0, Lab02.Task7799(10, 90), 0.0001);
+            Assert.AreEqual(0, Lab02.Task7799(7, 91), 0.0001);
+            Assert.AreEqual(0, Lab02.Task7799(9, 100), 0.0001);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task7799Assertion()
+        {
+            Lab02.Task7799(0, 30);
+        }
+
+        [TestMethod]
+        public void Task9354Test()
+        {
+            Assert.AreEqual(-83, Lab02.Task9354(7, 1, 3), 0.0001);
+            Assert.AreEqual(-157093203, Lab02.Task9354(7247, 7243, 7229), 0.0001);
+            Assert.AreEqual(-579, Lab02.Task9354(-11, -13, -17), 0.0001);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354Assertion1()
+        {
+            Lab02.Task9354(0, 1, 3);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354Assertion2()
+        {
+            Lab02.Task9354(0, 1000, 2000);
+        }
+
+        [TestMethod]
+        public void Task5170Test()
+        {
+            Assert.IsFalse(Lab06.Task5170(6));
+            Assert.IsFalse(Lab06.Task5170(3219));
+            Assert.IsTrue(Lab06.Task5170(7));
+            Assert.IsTrue(Lab06.Task5170(2017));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5170Assertion2()
+        {
+            Lab06.Task5170(-10);
+        }
     }
 }

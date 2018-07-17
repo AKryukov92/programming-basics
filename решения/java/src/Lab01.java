@@ -53,6 +53,10 @@ public class Lab01 {
         System.out.println("Мы стремимся к " + a);
     }
 
+    public static void task4140(String firstName, String lastName){
+        System.out.println("Меня зовут " + lastName + ", " + firstName + " " + lastName);
+    }
+
     public static void task4764(String a){
         System.out.println(a + " нас не остановят!");
     }
@@ -90,9 +94,8 @@ public class Lab01 {
     }
 
     public static void task2632(int cx, int cy, int r, String fill){
-        System.out.println("<circle cx=\"" + cx + "\" cy=\"" + cy + "\"");
+        System.out.print("<circle cx=\"" + cx + "\" cy=\"" + cy + "\"");
         System.out.println("r=\"" + r + "\" fill=\"" + fill + "\"/>");
-        System.out.println();
     }
 
     public static void task4343(String user, String pass, String host, String port, String db){
