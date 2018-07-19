@@ -189,20 +189,24 @@ namespace Methods
                 if (openIndex >= 0 && openIndex < closeIndex)
                 {
                     depth++;
+                    Console.Write(depth);
                     lastIndex = openIndex;
                 }
                 if (openIndex >= 0 && closeIndex < 0)
                 {
                     depth++;
+                    Console.Write(depth);
                     lastIndex = openIndex;
                 }
                 if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0)
                 {
+                    Console.Write(depth);
                     depth--;
                     lastIndex = closeIndex;
                 }
                 if (openIndex < 0 && closeIndex >= 0)
                 {
+                    Console.Write(depth);
                     depth--;
                     lastIndex = closeIndex;
                 }
@@ -214,7 +218,6 @@ namespace Methods
                 {
                     throw new Exception("Неожиданный символ '}'");
                 }
-                Console.Write(depth);
                 lastIndex++;
             }
             if (depth > 0)

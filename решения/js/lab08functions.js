@@ -129,17 +129,21 @@ function task1618(line){
 		openIndex = line.indexOf("{", lastIndex);
 		if (openIndex >= 0 && openIndex < closeIndex) {
 			depth++;
+			r += depth;
 			lastIndex = openIndex;
 		}
 		if (openIndex >= 0 && closeIndex < 0){
 			depth++;
+			r += depth;
 			lastIndex = openIndex;
 		}
 		if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0){
+			r += depth;
 			depth--;
 			lastIndex = closeIndex;
 		}
 		if (openIndex < 0 && closeIndex >=0){
+			r += depth;
 			depth--;
 			lastIndex = closeIndex;
 		}
@@ -149,7 +153,6 @@ function task1618(line){
 		if (depth < 0){
 			throw new Error(r + " Неожиданный символ '}'");
 		}
-		r += depth;
 		lastIndex++;
 	}
 	if (depth > 0){

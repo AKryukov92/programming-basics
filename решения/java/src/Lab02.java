@@ -91,10 +91,10 @@ public class Lab02 {
 
     public static double task4312(int a, int h) throws IllegalArgumentException {
         if (a <= 0) {
-            throw new IllegalArgumentException("Значение A должно быть положительным");
+            throw new IllegalArgumentException("Длина основания треугольника должна быть положительна");
         }
         if (h <= 0) {
-            throw new IllegalArgumentException("Значение H должно быть положительным");
+            throw new IllegalArgumentException("Высота треугольника должна быть положительна");
         }
         return (double) a * (double) h / 2;
     }

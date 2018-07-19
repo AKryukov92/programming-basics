@@ -113,11 +113,11 @@ namespace Methods
         {
             if (a <= 0)
             {
-                throw new Exception("Значение A должно быть положительным");
+                throw new Exception("Длина основания треугольника должна быть положительна");
             }
             if (h <= 0)
             {
-                throw new Exception("Значение H должно быть положительным");
+                throw new Exception("Высота треугольника должна быть положительна");
             }
             return (double)a * (double)h / 2;
         }

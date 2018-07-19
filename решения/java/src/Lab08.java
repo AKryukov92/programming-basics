@@ -148,17 +148,21 @@ public class Lab08 {
             openIndex = line.indexOf("{", lastIndex);
             if (openIndex >= 0 && openIndex < closeIndex) {
                 depth++;
+                System.out.print(depth);
                 lastIndex = openIndex;
             }
             if (openIndex >= 0 && closeIndex < 0) {
                 depth++;
+                System.out.print(depth);
                 lastIndex = openIndex;
             }
             if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0) {
+                System.out.print(depth);
                 depth--;
                 lastIndex = closeIndex;
             }
             if (openIndex < 0 && closeIndex >= 0) {
+                System.out.print(depth);
                 depth--;
                 lastIndex = closeIndex;
             }
@@ -168,7 +172,6 @@ public class Lab08 {
             if (depth < 0) {
                 throw new IllegalArgumentException("Неожиданный символ '}'");
             }
-            System.out.print(depth);
             lastIndex++;
         }
         if (depth > 0) {
