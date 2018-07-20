@@ -44,19 +44,19 @@ echo ^<div class="nav"^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
-type taskjava5789.html>>%filename%
-type taskjava6011.html>>%filename%
-type taskjava8403.html>>%filename%
-type taskjava3185.html>>%filename%
+type task5789.html>>%filename%
+type task6011.html>>%filename%
+type task8403.html>>%filename%
+type task3185.html>>%filename%
 type taskjava6589.html>>%filename%
 type taskjava6037.html>>%filename%
 type taskjava9914.html>>%filename%
 type taskjava4916.html>>%filename%
-type taskjava2809.html>>%filename%
+type task2809.html>>%filename%
 type taskjava5449.html>>%filename%
 type taskjava2662.html>>%filename%
-type taskjava8265.html>>%filename%
-type taskjava7301.html>>%filename%
+type task8265.html>>%filename%
+type task7301.html>>%filename%
 type taskjava2000.html>>%filename%
 type taskjava5421.html>>%filename%
 type taskjava9713.html>>%filename%

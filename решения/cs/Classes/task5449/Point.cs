@@ -22,15 +22,14 @@ namespace Classes.Task5449
             return "(" + x + ";" + y + ")";
         }
         
-        public override bool Equals(Object o)
+        public override bool Equals(Object other)
         {
-            if (this == o) return true;
-            if (o == null || GetType() != o.GetType()) return false;
-
-            Point point = (Point)o;
-
-            if (x != point.x) return false;
-            return y == point.y;
+            if (other == null) return false;
+            if (this == other) return true;
+            if (GetType() != other.GetType()) return false;
+            Point point = (Point) other;
+            if (x == point.x && y == point.y) return true;
+            return false;
         }
         
         public override int GetHashCode()

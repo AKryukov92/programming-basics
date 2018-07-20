@@ -49,12 +49,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lab12Suite.cs" />
+    <Compile Include="PointSuite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Classes\Classes.csproj">
+      <Project>{16449066-52f4-44d4-b85f-d21aea41cab6}</Project>
+      <Name>Classes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Methods\Methods.csproj">
       <Project>{144a76c2-13c2-46ba-a63b-901ef8630b5a}</Project>
       <Name>Methods</Name>
