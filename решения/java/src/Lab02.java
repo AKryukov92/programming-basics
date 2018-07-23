@@ -380,6 +380,6 @@ public class Lab02 {
         if (wireCoils <= 0){
             throw new IllegalArgumentException("Количество витков должно быть неотрицательно");
         }
-        return (int)Math.floor(2 * yarnDiameterCm * Math.PI * wireCoils);
+        return (int)Math.floor(yarnDiameterCm * Math.PI * wireCoils);
     }
 }

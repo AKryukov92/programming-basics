@@ -266,5 +266,5 @@ function task3490(yarnDiameterCm, wireCoils){
 	if (wireCoils <= 0){
 		throw new Error("Количество витков должно быть неотрицательно");
 	}
-	return Math.floor(2 * yarnDiameterCm * Math.PI * wireCoils);
+	return Math.floor(yarnDiameterCm * Math.PI * wireCoils);
 }

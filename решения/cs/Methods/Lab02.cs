@@ -484,7 +484,7 @@ namespace Methods
             {
                 throw new ArgumentException("Количество витков должно быть неотрицательно");
             }
-            return (int)Math.Floor(2 * yarnDiameterCm * Math.PI * wireCoils);
+            return (int)Math.Floor(yarnDiameterCm * Math.PI * wireCoils);
         }
     }
 }

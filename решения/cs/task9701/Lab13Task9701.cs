@@ -882,7 +882,7 @@ namespace task9701
             Console.WriteLine("3490");
             double[] in3490y = { 3, 10, 0, 13, -10, 11 };
             int[] in3490w = { 2, 300, 15, 0, 100, -500 };
-            int[] out3490 = { 37, 18849 };
+            int[] out3490 = { 18, 9424 };
             for (int i = 0; i < in3490y.Length; i++)
             {
                 try
