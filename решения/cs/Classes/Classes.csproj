@@ -57,6 +57,7 @@
     <Compile Include="lab17\Product.cs" />
     <Compile Include="lab17\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="step3\Point.cs" />
     <Compile Include="task1379\Interval.cs" />
     <Compile Include="task1457\Comparator1457.cs" />
     <Compile Include="task1457\Point.cs" />

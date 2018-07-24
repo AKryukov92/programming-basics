@@ -476,12 +476,13 @@ public class Lab06 {
         }
         int i = 1;
         List<Integer> ret = new ArrayList<>();
-        while (i <= x){
+        while (i < x / 2 + 1){
             if (x%i == 0){
                 ret.add(i);
             }
             i++;
         }
+        ret.add(x);
         return ret;
     }
 

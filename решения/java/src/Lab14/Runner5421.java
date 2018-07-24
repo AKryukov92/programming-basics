@@ -8,7 +8,7 @@ import Lab14.stage3.Point;
  */
 public class Runner5421 {
     public static void main(String[] args) {
-        Point p = new Point(31, 37);
+        Point p = new Point(31, 37, "red");
         System.out.println(p);
         Point p1 = new Point(11, 13);
         Point p2 = new Point(17, 19);

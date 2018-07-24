@@ -1,11 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Methods;
+using System.Collections.Generic;
+using Classes.step3;
 
 namespace MethodTests
 {
     [TestClass]
-    public class Lab12Suite
+    public class TestSuite
     {
         [TestMethod]
         public void Task4411test()
@@ -194,8 +196,8 @@ namespace MethodTests
         [TestMethod]
         public void Task3943Test()
         {
-            Assert.AreEqual(-10, Lab02.Task3943(-5, 81));
-            Assert.AreEqual(-435.7062, Lab02.Task3943(7507, 7499));
+            Assert.AreEqual(-10, Lab02.Task3943(-5, 81), 0.0001);
+            Assert.AreEqual(-435.7062, Lab02.Task3943(7507, 7499), 0.0001);
         }
 
         [TestMethod]
@@ -265,6 +267,138 @@ namespace MethodTests
         public void Task5170Assertion2()
         {
             Lab06.Task5170(-10);
+        }
+
+        [TestMethod]
+        public void Task8418Test()
+        {
+            List<int> expected = new List<int> { 1, 2, 3, 6 };
+            List<int> actual = Lab06.Task8418(6);
+            CollectionAssert.AreEqual(expected, actual);
+
+            expected = new List<int> { 1, 5, 7, 11, 35, 55, 77, 385 };
+            actual = Lab06.Task8418(385);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptNegativeArg()
+        {
+            Lab06.Task8418(-9);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptZero()
+        {
+            Lab06.Task8418(0);
+        }
+
+
+        [TestMethod]
+        public void SamePointsWithSameHashcode()
+        {
+            Point a = new Point(0, 0, "green");
+            Point b = new Point(0, 0, "green");
+            Point c = new Point(0, 0, "red");
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
+            Assert.IsTrue(a.Equals(b));
+            Assert.IsTrue(b.Equals(a));
+            Assert.AreEqual(b.GetHashCode(), c.GetHashCode());
+            Assert.IsTrue(b.Equals(c));
+            Assert.IsTrue(c.Equals(b));
+            Assert.AreEqual(a.GetHashCode(), c.GetHashCode());
+            Assert.IsTrue(a.Equals(c));
+            Assert.IsTrue(c.Equals(a));
+        }
+
+        [TestMethod]
+        public void HashSetContainsOnlyOneOfSamePoints()
+        {
+            HashSet<Point> pts = new HashSet<Point>();
+            Point red = new Point(0, 0, "red");
+            Point red2 = new Point(0, 0, "red");
+            Point green = new Point(0, 0, "green");
+            pts.Add(red);
+            pts.Add(red2);
+            pts.Add(green);
+            Assert.AreEqual(1, pts.Count);
+            Assert.IsTrue(pts.Contains(red));
+            Assert.IsTrue(pts.Contains(red2));
+            Assert.IsTrue(pts.Contains(green));
+        }
+
+        [TestMethod]
+        public void DifferentPointsHaveDifferentHashcode()
+        {
+            Point a = new Point(0, 0);
+            Point b = new Point(0, 5);
+            Point c = new Point(5, 0);
+            Point d = new Point(5, 5);
+            Assert.AreNotEqual(a.GetHashCode(), b.GetHashCode());
+            Assert.IsFalse(a.Equals(b));
+            Assert.IsFalse(a.Equals(b));
+            Assert.AreNotEqual(a.GetHashCode(), c.GetHashCode());
+            Assert.IsFalse(a.Equals(c));
+            Assert.IsFalse(a.Equals(c));
+            Assert.AreNotEqual(a.GetHashCode(), d.GetHashCode());
+            Assert.IsFalse(a.Equals(d));
+            Assert.IsFalse(a.Equals(d));
+
+            Assert.AreNotEqual(b.GetHashCode(), c.GetHashCode());
+            Assert.IsFalse(b.Equals(c));
+            Assert.IsFalse(b.Equals(c));
+            Assert.AreNotEqual(b.GetHashCode(), d.GetHashCode());
+            Assert.IsFalse(b.Equals(d));
+            Assert.IsFalse(b.Equals(d));
+
+            Assert.AreNotEqual(c.GetHashCode(), d.GetHashCode());
+            Assert.IsFalse(c.Equals(d));
+            Assert.IsFalse(c.Equals(d));
+        }
+
+        [TestMethod]
+        public void DifferentPointsWithSameHashcode()
+        {
+            Point a = new Point(0, 1);
+            Point b = new Point(31, 0);
+            Assert.AreEqual(a.GetHashCode(), b.GetHashCode());
+            Assert.IsFalse(a.Equals(b));
+        }
+
+        [TestMethod]
+        public void HashSetContainsAllDifferentPointsWithDifferentHashcode()
+        {
+            Point[] points =
+            {
+                new Point(0,0),
+                new Point(0,5),
+                new Point(5,0),
+                new Point(5,5)
+            };
+            HashSet<Point> pts = new HashSet<Point>();
+            foreach (Point p in points)
+            {
+                pts.Add(p);
+            }
+            foreach (Point p in points)
+            {
+                Assert.IsTrue(pts.Contains(p));
+            }
+        }
+
+        [TestMethod]
+        public void HashSetCOntainsAllDifferentPointsWithSameHashcode()
+        {
+            Point a = new Point(0, 1);
+            Point b = new Point(31, 0);
+            HashSet<Point> pts = new HashSet<Point>();
+            pts.Add(a);
+            pts.Add(b);
+            Assert.AreEqual(2, pts.Count);
+            Assert.IsTrue(pts.Contains(a));
+            Assert.IsTrue(pts.Contains(b));
         }
     }
 }

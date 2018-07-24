@@ -562,14 +562,14 @@ namespace Methods
             return sb.ToString();
         }
 
-        public static IList<int> Task8418(int x)
+        public static List<int> Task8418(int x)
         {
             if (x <= 0)
             {
-                throw new Exception("Значение X должно быть положительным");
+                throw new ArgumentException("Значение X должно быть положительным");
             }
             int i = 1;
-            IList<int> ret = new List<int>();
+            List<int> ret = new List<int>();
             while (i < x / 2 + 1)
             {
                 if (x % i == 0)
@@ -578,6 +578,7 @@ namespace Methods
                 }
                 i++;
             }
+            ret.Add(x);
             return ret;
         }
 

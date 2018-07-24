@@ -90,6 +90,7 @@ public class PointSuite {
         Assert.assertEquals(12.3693, a.distanceTo(b), 0.001);
     }
 
+
     @Test
     public void pointEqualsItself() {
         Point p = new Point(0, 0);
@@ -127,6 +128,7 @@ public class PointSuite {
         Assert.assertFalse(p.equals("not a point"));
     }
 
+
     @Test
     public void pointToString() {
         Point p = new Point(1234, 5678);
@@ -134,55 +136,90 @@ public class PointSuite {
         System.out.println(p);
     }
 
-    @Test
-    public void samePointsHaveSameHashcode() {
-        Point l = new Point(0, 0);
-        Point r = new Point(0, 0);
-        Assert.assertEquals(l.hashCode(), r.hashCode());
-        Assert.assertTrue(l.equals(r));
-        Assert.assertTrue(r.equals(l));
-    }
 
+    
     @Test
-    public void differentPointsHaveDifferentHashcode() {
-        Point l = new Point(0, 0);
-        Point r = new Point(5, 5);
-        Assert.assertNotEquals(l.hashCode(), r.hashCode());
-        Assert.assertFalse(l.equals(r));
-        Assert.assertFalse(r.equals(l));
+    public void samePointsWithSameHashcode() {
+        Point a = new Point(0, 0, "green");
+        Point b = new Point(0, 0, "green");
+        Point c = new Point(0, 0, "red");
+        Assert.assertEquals(a.hashCode(), b.hashCode());
+        Assert.assertTrue(a.equals(b));
+        Assert.assertTrue(b.equals(a));
+        Assert.assertEquals(a.hashCode(), c.hashCode());
+        Assert.assertTrue(a.equals(c));
+        Assert.assertTrue(c.equals(a));
+        Assert.assertEquals(b.hashCode(), c.hashCode());
+        Assert.assertTrue(b.equals(c));
+        Assert.assertTrue(c.equals(b));
     }
 
     @Test
     public void hashSetContainsOnlyOneOfSamePoints() {
-        Point l = new Point(0, 0);
-        Point r = new Point(0, 0);
+        Point red = new Point(0, 0, "red");
+        Point red2 = new Point(0, 0, "red");
+        Point green = new Point(0, 0, "green");
         HashSet<Point> pts = new HashSet<>();
-        pts.add(l);
-        pts.add(r);
+        pts.add(red);
+        pts.add(red2);
+        pts.add(green);
         Assert.assertEquals(1, pts.size());
-        Assert.assertTrue(pts.contains(l));
-        Assert.assertTrue(pts.contains(r));
+        Assert.assertTrue(pts.contains(red));
+        Assert.assertTrue(pts.contains(red2));
+        Assert.assertTrue(pts.contains(green));
     }
 
     @Test
-    public void hashSetContainsAllDifferentPoints() {
-        Point l = new Point(0, 0);
-        Point r = new Point(5, 5);
-        HashSet<Point> pts = new HashSet<>();
-        pts.add(l);
-        pts.add(r);
-        Assert.assertEquals(2, pts.size());
-        Assert.assertTrue(pts.contains(l));
-        Assert.assertTrue(pts.contains(r));
+    public void differentPointsWithDifferentHashcode() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 5);
+        Point c = new Point(5, 0);
+        Point d = new Point(5, 5);
+        Assert.assertNotEquals(a.hashCode(), b.hashCode());
+        Assert.assertFalse(a.equals(b));
+        Assert.assertFalse(a.equals(b));
+        Assert.assertNotEquals(a.hashCode(), c.hashCode());
+        Assert.assertFalse(a.equals(c));
+        Assert.assertFalse(a.equals(c));
+        Assert.assertNotEquals(a.hashCode(), d.hashCode());
+        Assert.assertFalse(a.equals(d));
+        Assert.assertFalse(a.equals(d));
+
+        Assert.assertNotEquals(b.hashCode(), c.hashCode());
+        Assert.assertFalse(b.equals(c));
+        Assert.assertFalse(b.equals(c));
+        Assert.assertNotEquals(b.hashCode(), d.hashCode());
+        Assert.assertFalse(b.equals(d));
+        Assert.assertFalse(b.equals(d));
+
+        Assert.assertNotEquals(c.hashCode(), d.hashCode());
+        Assert.assertFalse(c.equals(d));
+        Assert.assertFalse(c.equals(d));
     }
 
     @Test
-    public void differentPointsMightHaveSameHashcode() {
-        Point l = new Point(0, 1);
-        Point r = new Point(31, 0);
+    public void differentPointsWithSameHashcode() {
+        Point l = new Point(0, 1, "green");
+        Point r = new Point(31, 0, "green");
         Assert.assertEquals(l.hashCode(), r.hashCode());
         Assert.assertFalse(l.equals(r));
         Assert.assertFalse(r.equals(l));
+    }
+
+    @Test
+    public void hashSetContainsAllDifferentPointsWithDifferentHashcode() {
+        Point[] points = {
+                new Point(0, 0),
+                new Point(0, 5),
+                new Point(5, 0),
+                new Point(5, 5)};
+        HashSet<Point> pts = new HashSet<>();
+        for (Point p : points) {
+            pts.add(p);
+        }
+        for (Point p : points) {
+            Assert.assertTrue(pts.contains(p));
+        }
     }
 
     @Test

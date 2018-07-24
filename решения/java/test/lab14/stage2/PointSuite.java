@@ -92,6 +92,8 @@ public class PointSuite {
         Assert.assertEquals(12.3693, a.distanceTo(b), 0.001);
     }
 
+
+
     @Test
     public void pointEqualsItself(){
         Point p = new Point();
@@ -101,21 +103,33 @@ public class PointSuite {
     @Test
     public void pointInstanceComparison() {
         Point a1 = new Point(), a2 = new Point();
-        Point b1 = new Point(), b2 = new Point(), b3 = new Point();
-        Point[] b = {b1, b2, b3};
-        a1.setCoordinates(10, 15);
-        a2.setCoordinates(10, 15);
-        b1.setCoordinates(10, 3);
-        b2.setCoordinates(1, 15);
-        b3.setCoordinates(0, 0);
+        Point b1 = new Point(), b2 = new Point(), b3 = new Point(),
+                b4 = new Point(), b5 = new Point(), b6 = new Point(), b7 = new Point();
+        Point[] b = {b1, b2, b3, b4, b5, b6, b7};
+        a1.setCoordinates(10, 15); a1.setColor("red");
+        a2.setCoordinates(10, 15); a2.setColor("red");
+
+        b1.setCoordinates(0, 0); b3.setColor("green");
+
+        b2.setCoordinates(10, 3); b1.setColor("green");
+        b3.setCoordinates(1, 15); b2.setColor("green");
+        b4.setCoordinates(5, 7); b4.setColor("red");
+
+        b5.setCoordinates(10, 15); b5.setColor("green");
+        b6.setCoordinates(10, 3); b6.setColor("red");
+        b7.setCoordinates(2, 15); b7.setColor("red");
+
         Assert.assertTrue(a1.equals(a2));
         Assert.assertTrue(a2.equals(a1));
+        int count = 0;
         for (Point bx : b){
+            count += 4;
             Assert.assertFalse(bx.equals(a1));
             Assert.assertFalse(a1.equals(bx));
             Assert.assertFalse(bx.equals(a2));
             Assert.assertFalse(a2.equals(bx));
         }
+        Assert.assertEquals(28, count);
     }
 
     @Test

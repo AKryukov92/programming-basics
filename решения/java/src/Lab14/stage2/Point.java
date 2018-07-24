@@ -5,12 +5,21 @@ package Lab14.stage2;
  * 05.06.2018
  */
 public class Point {
-    public int x;
-    public int y;
+    private int x;
+    private int y;
+    private String color;
 
     public void setCoordinates(int x, int y){
         this.x = x;
         this.y = y;
+    }
+
+    public void setColor(String value){
+        this.color = value;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public static double distanceBetween(int ax, int ay, int bx, int by) {
@@ -41,13 +50,13 @@ public class Point {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null) return false;
-        if (getClass() != o.getClass()) return false;
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null) return false;
+        if (getClass() != other.getClass()) return false;
 
-        Point point = (Point) o;
-        if (x == point.x && y == point.y) return true;
+        Point point = (Point) other;
+        if (x == point.x && y == point.y && color.equals(point.color)) return true;
         return false;
     }
 }
