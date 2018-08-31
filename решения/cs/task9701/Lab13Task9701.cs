@@ -56,6 +56,8 @@ namespace task9701
             Step1544();
             Step1346();
             Step3490();
+            Step1433();
+            Step7085();
         }
         
         static void Step9020()
@@ -767,6 +769,64 @@ namespace task9701
                     Console.WriteLine("{0} ({1})", result, out4425[i]);
                 }
                 catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        static void Step1433()
+        { 
+            Console.WriteLine();
+            Console.WriteLine("1433");
+            String[] in1433in = {
+                "q;w;e",
+                "q;w;e;r",
+                "q;w;e;r;t;y;u;i;o",
+                "q;w;e;r;t;y;u;i;o;p",
+                "q",
+                ""
+        };
+            String[] out1433 = { "w", "w", "t", "t", "q", "" };
+            for (int i = 0; i < in1433in.Length; i++)
+            {
+                try
+                {
+                    String result = Lab07.Task1433(in1433in[i]);
+                    Console.WriteLine("{0} ({1})\n", result, out1433[i]);
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        static void Step7085()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7085");
+            String[] in7085 = {
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f"
+            };
+            int[] in7085s = { 1, 3, 2, 5, 3, 6, 0, 8, -2, 5 };
+            for (int i = 0; i < in7085.Length; i++)
+            {
+                try
+                {
+                    String result = Lab07.Task7085(in7085s[i], in7085[i]);
+                    Console.WriteLine(result);
+                }
+                catch (ArgumentException e)
                 {
                     Console.WriteLine(e.Message);
                 }

@@ -58,6 +58,17 @@ namespace Methods
             return arr[a];
         }
 
+        public static String Task1433(String raw)
+        {
+            if (String.IsNullOrEmpty(raw))
+            {
+                throw new ArgumentException("Исходная строка пуста");
+            }
+            String[] arr = raw.Split(';');
+            int index = (arr.Length - 1) / 2;
+            return String.Format("Индекс: {0}, элемент: {1}", index, arr[index]);
+        }
+
         public static String Task5683(String str)
         {
             if (String.IsNullOrEmpty(str))
@@ -319,6 +330,32 @@ namespace Methods
                 ret.Add(arr[i]);
             }
             return ret;
+        }
+
+        public static String Task7085(int s, String raw)
+        {
+            String[] arr = raw.Split(' ');
+            if (s <= 0 || arr.Length <= s)
+            {
+                throw new ArgumentException("Количество позиций при сдвиге должно быть в интервале [0, длина массива)");
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < s; j++)
+            {
+                String t = arr[arr.Length - 1];
+                for (int i = arr.Length - 1; i > 0; i--)
+                {
+                    arr[i] = arr[i - 1];
+                }
+                arr[0] = t;
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sb.Append(arr[i]);
+                    sb.Append(' ');
+                }
+                sb.Append('\n');
+            }
+            return sb.ToString();
         }
 
         public static int Task7290(int b, String raw)

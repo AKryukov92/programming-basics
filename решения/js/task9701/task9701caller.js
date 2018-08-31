@@ -442,6 +442,44 @@ for (var i = 0; i < in4425a.length; i++){
 	}
 }
 
+var in1433 = [
+	"q;w;e",
+	"q;w;e;r",
+	"q;w;e;r;t;y;u;i;o",
+	"q;w;e;r;t;y;u;i;o;p",
+	"q",
+	""
+];
+for (var i = 0; i < in1433.length; i++){
+	var out = document.getElementById("1433t" + i);
+	try {
+		out.innerHTML = task1433(in1433[i]);
+	} catch(e){
+		out.innerHTML = e.message;
+	}
+}
+
+var in7085 = [
+	"q w e r t y",
+	"q w e r t y",
+	"a s d f",
+	"q w e r t y",
+	"a s d f",
+	"q w e r t y",
+	"a s d f",
+	"q w e r t y",
+	"q w e r t y",
+	"a s d f"
+];
+var in7085s = [1, 3, 2, 5, 3, 6, 0, 8, -2, 5];
+for (var i = 0; i < in7085.length; i++){
+	var out = document.getElementById("7085t" + i);
+	try {
+		out.innerHTML = task7085(in7085s[i], in7085[i]);
+	} catch (e){
+		out.innerHTML = e.message;
+	}
+}
 
 var in7290b = ["3", "2", "0", "4", "7", "1", "-5", "10"];
 var in7290data = ["1 1 1 3 4 1", "1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 1 2",

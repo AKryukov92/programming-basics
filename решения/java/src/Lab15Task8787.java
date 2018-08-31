@@ -441,9 +441,10 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("1223");
         String[] in1223 = {
-                "q w e r t y",
-                "q w e r t y q w e r",
-                "as df gh jk",
+                "q,w,e,r,t,y",
+                "q,w,e,r,t,y,q,w,e,r",
+                "as,df,gh,jk",
+                "zxcv",
                 ""
         };
         for (int i = 0; i < in1223.length; i++) {
@@ -494,5 +495,9 @@ public class Lab15Task8787 {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    private static void Step1433(){
+
     }
 }

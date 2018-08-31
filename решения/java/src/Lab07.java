@@ -68,6 +68,15 @@ public class Lab07 {
         return ret;
     }
 
+    public static String task1433(String raw) {
+        if (raw.isEmpty()) {
+            throw new IllegalArgumentException("Исходная строка пуста");
+        }
+        String[] arr = raw.split(";");
+        int index = (arr.length-1)/2;
+        return String.format("Индекс %d, элемент %s", index, arr[index]);
+    }
+
     public static double task3946(String raw) {
         if (raw.length() == 0) {
             return 0;
@@ -218,6 +227,27 @@ public class Lab07 {
             ret.add(arr[i]);
         }
         return ret;
+    }
+
+    public static String task7085(int s, String raw) {
+        String[] arr = raw.split(" ");
+        if (s <= 0 || arr.length <= s) {
+            throw new IllegalArgumentException("Количество позиций при сдвиге должно быть в интервале [0, длина массива)");
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < s; j++) {
+            String t = arr[arr.length - 1];
+            for (int i = arr.length - 1; i > 0; i--) {
+                arr[i] = arr[i - 1];
+            }
+            arr[0] = t;
+            for (int i = 0; i < arr.length; i++) {
+                sb.append(arr[i]);
+                sb.append(' ');
+            }
+            sb.append('\n');
+        }
+        return sb.toString();
     }
 
     public static int task7290(int b, String raw) throws IllegalArgumentException {

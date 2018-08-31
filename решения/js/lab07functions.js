@@ -8,6 +8,14 @@ function task4425(a, str){
 	}
 	return arr[a];
 }
+function task1433(str){
+	if(str == ""){
+		throw new Error("Исходная строка пуста");
+	}
+	var arr = str.split(";");
+	var index = Math.floor((arr.length-1)/2);
+	return "Индекс: " + index + ", элемент: " + arr[index];
+}
 function task5683(str){
 	if (str === ""){
 		return "";
@@ -156,6 +164,26 @@ function task9711(raw){
 		ret.push(arr[i]);
 	}
 	return ret;
+}
+function task7085(s, raw){
+	var arr = raw.split(" ");
+	if (s <= 0 || arr.length <= s) {
+		throw new Error("Количество позиций при сдвиге должно быть в интервале [0, длина массива)");
+	}
+	var sb = "";
+	for (var j = 0; j < s; j++) {
+		var t = arr[arr.length - 1];
+		for (var i = arr.length - 1; i > 0; i--) {
+			arr[i] = arr[i - 1];
+		}
+		arr[0] = t;
+		for (var i = 0; i < arr.length; i++) {
+			sb += arr[i];
+			sb += ' ';
+		}
+		sb += '\n';
+	}
+	return sb;
 }
 function task3333(s, raw){
 	var arr = raw.split(" ");
