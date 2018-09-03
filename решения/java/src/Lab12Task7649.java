@@ -27,6 +27,9 @@ public class Lab12Task7649 {
         Step7369();
         Step1292();
         Step4338();
+
+        Step7534();
+        Step6492();
     }
 
     private static void Step8495() {
@@ -277,6 +280,58 @@ public class Lab12Task7649 {
                 result.insert(0, "Неверно. Результат:\n");
                 System.out.println(result.toString());
             }
+        }
+    }
+
+    static void Step7534(){
+        System.out.println();
+        System.out.println("7534");
+        String[] in7534chars = {
+                "q a z",
+                "q w e r t y",
+                "a s d f",
+                "a s d f",
+                "z x c",
+                "",
+                "a a a"
+        };
+        String[] in7534amounts = {
+                "3 2 5",
+                "3 3 1 7 2 6",
+                "9 0 7 2",
+                "3 3 3",
+                "1 2 3 4",
+                "1 1 1",
+                ""
+        };
+        for (int i = 0; i < in7534chars.length; i++){
+            System.out.println(Lab07.task7534(in7534chars[i], in7534amounts[i]));
+        }
+    }
+
+    static void Step6492(){
+        System.out.println();
+        System.out.println("6492");
+        String[] in6492chars = {
+                "a s d",
+                "z x c v b",
+                "q w e r t y",
+                "a s d f",
+                "z x c",
+                "",
+                "f d s a"
+        };
+        String[] in6492amounts = {
+                "3 2 1",
+                "1 3 5 0 4",
+                "6 2 8 3 1 5",
+                "3 3 3",
+                "1 2 3 4",
+                "1 2 3 4",
+                ""
+        };
+        for (int i = 0; i < in6492chars.length; i++){
+            System.out.println(Lab07.task6492(in6492chars[i], in6492amounts[i]));
         }
     }
 

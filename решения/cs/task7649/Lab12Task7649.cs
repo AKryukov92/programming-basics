@@ -34,6 +34,8 @@ namespace tfa
             Step7369();
             Step1292();
             Step4338();
+
+            Step7534();
         }
 
         static void Step2475()
@@ -177,6 +179,36 @@ namespace tfa
             Lab06.Task5411(sb, 600, 600).Append("\n");
             String result5411 = sb.ToString();
             Console.WriteLine(result5411);
+        }
+
+        private static void Step7534()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7534");
+            String[] in7534chars =
+            {
+                "q a z",
+                "q w e r t y",
+                "a s d f",
+                "a s d f",
+                "z x c",
+                "",
+                "a a a"
+            };
+            String[] in7534amounts =
+            {
+                "3 2 5",
+                "3 3 1 7 2 6",
+                "9 0 7 2",
+                "3 3 3",
+                "1 2 3 4",
+                "1 1 1",
+                ""
+            };
+            for (int i = 0; i < in7534chars.Length; i++)
+            {
+                Console.WriteLine(Lab07.Task7534(in7534chars[i], in7534amounts[i]));
+            }
         }
 
         private static void Step7369()

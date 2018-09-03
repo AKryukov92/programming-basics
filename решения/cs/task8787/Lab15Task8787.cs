@@ -25,13 +25,13 @@ namespace task8787
             Step3134();
             Step9774();
             Step9711();
-            Step3333();
             Step9271();
 
             Step4497();
             Step8820();
             Step3218();
             Step7703();
+            Step3333();
         }
 
         private static void Step7991()
@@ -261,12 +261,23 @@ namespace task8787
         {
             Console.WriteLine();
             Console.WriteLine("3333");
-            int[] in3333s = { 1, 3, 6, 8, 99, -2, -9 };
-            String in3333data = "q w e r t y";
+            int[] in3333s = { 1, 3, 2, 6, 8, 5, 99, 10, -2, -9 };
+            String[] in3333 = {
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "q w e r t y"
+        };
             for (int i = 0; i < in3333s.Length; i++)
             {
                 StringBuilder sb = new StringBuilder();
-                IList<String> result = Lab07.Task3333(in3333s[i], in3333data);
+                IList<String> result = Lab07.Task3333(in3333s[i], in3333[i]);
                 foreach (String item in result)
                 {
                     sb.Append(item);

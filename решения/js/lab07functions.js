@@ -248,6 +248,28 @@ function task6806(x){
 	}
 	return ret;
 }
+function task7534(charsRaw, amountsRaw){
+	if (charsRaw == ""){
+		return "Отсутствуют данные о символах";
+	}
+	if (amountsRaw == ""){
+		return "Отсутствуют данные о количествах";
+	}
+	var chars = charsRaw.split(" ");
+	var amounts = amountsRaw.split(" ");
+	if (chars.length != amounts.length){
+		return "Длины массивов не совпадают";
+	}
+	var sb = "";
+	for (var i = 0; i < chars.length; i++){
+		var amount = parseInt(amounts[i]);
+		for (var j = 0; j < amount; j++){
+			sb += chars[i];
+		}
+		sb += "\n";
+	}
+	return sb;
+}
 function task7369(leftRaw, topRaw){
 	if (leftRaw == ""){
 		return "Данные слева отсутствуют";
@@ -443,4 +465,35 @@ function task9182(raw){
 		count++;
 	}
 	return count;
+}
+function task6492(charsRaw, amountsRaw){
+	if (charsRaw == ""){
+		return "Отсутствуют данные о символах";
+	}
+	if (amountsRaw == ""){
+		return "Отсутствуют данные о количествах";
+	}
+	var chars = charsRaw.split(" ");
+	var amounts = amountsRaw.split(" ");
+	if (chars.length != amounts.length){
+		return "Длины массивов не совпадают";
+	}
+	var max = amounts[0];
+	for (var i = 1; i < amounts.length; i++) {
+		if (max < amounts[i]){
+			max = amounts[i];
+		}
+	}
+	var sb = "";
+	for (var i = 0; i < max; i++){
+		for (var j = 0; j < chars.length; j++){
+			if (i < amounts[j]){
+				sb += chars[j];
+			} else {
+				sb += " ";
+			}
+		}
+		sb += "\n";
+	}
+	return sb;
 }

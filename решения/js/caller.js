@@ -288,11 +288,22 @@ for (var i = 0; i < in9711.length; i++){
 	out.innerHTML = task9711(in9711[i]).join(" ");
 }
 
-var in3333s = ["1","3","6","8","99","-2","-9"];
-var in3333data = "q w e r t y";
+var in3333s = ["1","3","2","6","8","5","99","10","-2","-9"];
+var in3333 = [
+  "q w e r t y",
+  "q w e r t y",
+  "a s d f",
+  "q w e r t y",
+  "q w e r t y",
+  "a s d f",
+  "q w e r t y",
+  "a s d f",
+  "q w e r t y",
+  "q w e r t y"
+];
 for (var i = 0; i < in3333s.length; i++){
 	var out = document.getElementById("3333t" + i);
-	out.innerHTML = task3333(in3333s[i], in3333data).join(" ");
+	out.innerHTML = task3333(in3333s[i], in3333[i]).join(" ");
 }
 
 var in8820 = [

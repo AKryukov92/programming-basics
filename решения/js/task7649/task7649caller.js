@@ -108,3 +108,49 @@ for (var i = 0; i < in1292.length; i++){
 	var out = document.getElementById("1292t" + i);
 	out.innerHTML = task1292(in1292[i]);
 }
+
+var in7534chars = [
+	"q a z",
+	"q w e r t y",
+	"a s d f",
+	"a s d f",
+	"z x c",
+	"",
+	"a a a"
+];
+var in7534amounts = [
+	"3 2 5",
+	"3 3 1 7 2 6",
+	"9 0 7 2",
+	"3 3 3",
+	"1 2 3 4",
+	"1 1 1",
+	""
+];
+for (var i = 0; i < in7534chars.length; i++){
+	var out = document.getElementById("7534t" + i);
+	out.innerHTML = task7534(in7534chars[i], in7534amounts[i]);
+}
+
+var in6492chars = [
+	"a s d",
+	"z x c v b",
+	"q w e r t y",
+	"a s d f",
+	"z x c",
+	"",
+	"f d s a"
+];
+var in6492amounts = [
+	"3 2 1",
+	"1 3 5 0 4",
+	"6 2 8 3 1 5",
+	"3 3 3",
+	"1 2 3 4",
+	"1 2 3 4",
+	""
+];
+for (var i = 0; i < in6492chars.length; i++){
+	var out = document.getElementById("6492t" + i);
+	out.innerHTML = task6492(in6492chars[i], in6492amounts[i]);
+}

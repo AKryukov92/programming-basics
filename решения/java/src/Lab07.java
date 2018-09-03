@@ -289,6 +289,65 @@ public class Lab07 {
         return sb;
     }
 
+    public static String task7534(String charsRaw, String amountsRaw){
+        if (charsRaw.isEmpty()){
+            return "Отсутствуют данные о символах";
+        }
+        if (amountsRaw.isEmpty()){
+            return "Отсутствуют данные о количествах";
+        }
+        String[] chars = charsRaw.split(" ");
+        String[] amounts = amountsRaw.split(" ");
+        if (chars.length != amounts.length){
+            return "Длины массивов не совпадают";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < chars.length; i++){
+            int amount = Integer.parseInt(amounts[i]);
+            for (int j = 0; j < amount; j++){
+                sb.append(chars[i]);
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+    public static String task6492(String charsRaw, String amountsRaw){
+        if (charsRaw.isEmpty()){
+            return "Отсутствуют данные о символах";
+        }
+        if (amountsRaw.isEmpty()){
+            return "Отсутствуют данные о количествах";
+        }
+        String[] chars = charsRaw.split(" ");
+        String[] amountsStr = amountsRaw.split(" ");
+        if (chars.length != amountsStr.length){
+            return "Длины массивов не совпадают";
+        }
+        int[] amounts = new int[amountsStr.length];
+        for (int i = 0; i < amountsStr.length; i++){
+            amounts[i] = Integer.parseInt(amountsStr[i]);
+        }
+        int max = amounts[0];
+        for (int i = 1; i < amounts.length; i++) {
+            if (max < amounts[i]){
+                max = amounts[i];
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < max; i++){
+            for (int j = 0; j < chars.length; j++){
+                if (i < amounts[j]){
+                    sb.append(chars[j]);
+                } else {
+                    sb.append(" ");
+                }
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
     public static String task7369(String leftRaw, String topRaw) {
         if (leftRaw.isEmpty()) {
             return "Данные слева отсутствуют";

@@ -447,6 +447,35 @@ namespace Methods
             return count;
         }
 
+        public static String Task7534(String charsRaw, String amountsRaw)
+        {
+            if (String.IsNullOrWhiteSpace(charsRaw))
+            {
+                return "Отсутствуют данные о символах";
+            }
+            if (String.IsNullOrWhiteSpace(amountsRaw))
+            {
+                return "Отсутствуют данные о количествах";
+            }
+            String[] chars = charsRaw.Split(' ');
+            String[] amounts = amountsRaw.Split(' ');
+            if (chars.Length != amounts.Length)
+            {
+                return "Длины массивов не совпадают";
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < chars.Length; i++)
+            {
+                int amount = int.Parse(amounts[i]);
+                for (int j = 0; j < amount; j++)
+                {
+                    sb.Append(chars[i]);
+                }
+                sb.Append("\n");
+            }
+            return sb.ToString();
+        }
+
         public static String Task7369(String leftRaw, String topRaw)
         {
             if (String.IsNullOrWhiteSpace(leftRaw))

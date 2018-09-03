@@ -301,11 +301,22 @@ public class Lab15Task8787 {
     private static void Step3333() {
         System.out.println();
         System.out.println("3333");
-        int[] in3333s = {1, 3, 6, 8, 99, -2, -9};
-        String in3333data = "q w e r t y";
+        int[] in3333s = {1, 3, 2, 6, 8, 5, 99, 10, -2, -9};
+        String[] in3333 = {
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "a s d f",
+                "q w e r t y",
+                "q w e r t y"
+        };
         for (int i = 0; i < in3333s.length; i++) {
             StringBuilder sb = new StringBuilder();
-            List<String> result = Lab07.task3333(in3333s[i], in3333data);
+            List<String> result = Lab07.task3333(in3333s[i], in3333[i]);
             for (String item : result) {
                 sb.append(item);
                 sb.append(" ");
