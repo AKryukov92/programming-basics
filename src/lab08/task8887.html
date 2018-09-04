@@ -1,0 +1,105 @@
+<div id="task8887" class="task_block empty_on_print">
+	<div class="task_id">8887</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит вычислимое выражение с вызовом метода. Выражение может содержать несколько вызовов методов. При вызове метода в качестве аргумента другого метода нужно вывести "Вложенные вызовы методов не поддерживаются". Нужно вывести список вызванных методов и их аргументы.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = Math.Sqrt(x);</td>
+			<td class="preformatted">Метод Sqrt был вызван у Math
+В качестве аргумента было передано
+x</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = Math.Pow(a, n);</td>
+			<td class="preformatted">Метод Pow был вызван у Math
+В качестве аргумента было передано
+a
+n</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = String.Format("{0} шт и {1} см", amount, remainder);</td>
+			<td class="preformatted">Метод Format был вызван у String
+В качестве аргумента было передано
+"{0} шт и {1} см"
+amount
+remainder</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">str = Console.ReadLine();</td>
+			<td class="preformatted">Метод ReadLine был вызван у Console
+В качестве аргумента ничего не передавалось</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Console.WriteLine();</td>
+			<td class="preformatted">Метод WriteLine был вызван у Console
+В качестве аргумента ничего не передавалось</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = 3 * Math.Sin(2*aRad) * Math.Cos(3*bRad);</td>
+			<td class="preformatted">Метод Sin был вызван у Math
+В качестве аргумента было передано
+2*aRad
+Метод Cos был вызван у Math
+В качестве аргумента было передано
+3*bRad.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">r = 3 * Math.Sqrt(61-x);</td>
+			<td class="preformatted">Метод Sqrt был вызван у Math
+В качестве аргумента было передано
+61-x.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">y = x+7;</td>
+			<td class="preformatted">Отсутствует вызов метода</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">last = arr.Length;</td>
+			<td class="preformatted">Отсутствует вызов метода</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">idx = "abcdacadbacdaabaadc".IndexOf("cd";</td>
+			<td class="preformatted">Неожиданный конец строки.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = raw.Trim());</td>
+			<td class="preformatted">Неожиданный символ ')'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">answer = -5 * Math.Sqrt(x + Math.Sqrt(y));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">distance = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = Math.Sqrt(Math.Pow(x, 2 + Math.Pow(y, 2));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = Math.Sqrt(1-Math.Pow(Math.Sin(xRad), 2)));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+	</table>
+</div>

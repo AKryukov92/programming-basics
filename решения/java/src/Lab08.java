@@ -180,6 +180,16 @@ public class Lab08 {
         System.out.println();
     }
 
+    public static String task8887(String line) throws IllegalArgumentException {
+        String[] parts = line.split("[.]");
+        StringBuilder sb = new StringBuilder();
+        if (parts.length == 1){
+            throw new IllegalArgumentException("Отсутствует вызов метода");
+        }
+        
+        return sb.toString();
+    }
+
     public static List<Integer> task3657(String a) throws IllegalArgumentException {
         if (a.length() != 1) {
             throw new IllegalArgumentException("Нужно ввести ровно один символ");

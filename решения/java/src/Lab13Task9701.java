@@ -51,6 +51,7 @@ public class Lab13Task9701 {
 //        Step3490();
 //        Step1433();
         Step7085();
+        Step8887();
     }
 
     private static void Step3591() {
@@ -445,6 +446,35 @@ public class Lab13Task9701 {
             try {
                 Lab08.task1618(in1618[i]);
             } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    static void Step8887(){
+        System.out.println();
+        System.out.println("8887");
+        String[] in8887 = {
+                "a = Math.Sqrt(x);",
+                "a = Math.Pow(a, n);",
+                "result = String.Format(\"{0} шт и {1} см\", amount, remainder);",
+                "str = Console.ReadLine();",
+                "Console.WriteLine();",
+                "result = 3 * Math.Sin(2*aRad) * Math.Cos(3*bRad);",
+                "r = 3 * Math.Sqrt(61-x);",
+                "y = x+7;",
+                "last = arr.Length;",
+                "idx = \"abcdacadbacdaabaadc\".IndexOf(\"cd\";",
+                "a = raw.Trim());",
+                "answer = -5 * Math.Sqrt(x + Math.Sqrt(y));",
+                "distance = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));",
+                "result = Math.Sqrt(Math.Pow(x, 2 + Math.Pow(y, 2));",
+                "result = Math.Sqrt(1-Math.Pow(Math.Sin(xRad), 2)));"
+        };
+        for (int i = 0; i < in8887.length; i++){
+            try {
+                Lab08.task8887(in8887[i]);
+            } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
             }
         }
