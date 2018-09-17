@@ -312,6 +312,25 @@ public class Lab07 {
         return sb.toString();
     }
 
+    public static String task2173(String data){
+        if (data.isEmpty()){
+            return "Исходная строка пуста";
+        }
+        if (!data.contains(";")){
+            return "Значения отсортированы по возрастанию";
+        }
+        String[] parts = data.split(";");
+        int prev = Integer.parseInt(parts[0]);
+        for (int i = 1; i < parts.length; i++){
+            int current =  Integer.parseInt(parts[i]);
+            if(current < prev){
+                return "Элемент со значением " + current + " на индексе " + i + " нарушает закономерность";
+            }
+            prev = current;
+        }
+        return "Значения отсортированы по возрастанию";
+    }
+
     public static String task6492(String charsRaw, String amountsRaw){
         if (charsRaw.isEmpty()){
             return "Отсутствуют данные о символах";

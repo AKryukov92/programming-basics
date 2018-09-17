@@ -132,6 +132,20 @@ for (var i = 0; i < in7534chars.length; i++){
 	out.innerHTML = task7534(in7534chars[i], in7534amounts[i]);
 }
 
+var in2173 = [
+	"5;6;7;8;9",
+	"2;3;3;3;3;4",
+	"5",
+	"4;5;6;7;3;2;1",
+	"9;8",
+	"4;5;6;7;6;7;8",
+	""
+];
+for (var i = 0; i < in2173.length; i++){
+	var out = document.getElementById("2173t" + i);
+	out.innerHTML = task2173(in2173[i]);
+}
+
 var in6492chars = [
 	"a s d",
 	"z x c v b",

@@ -476,6 +476,30 @@ namespace Methods
             return sb.ToString();
         }
 
+        public static String Task2173(String data)
+        {
+            if (String.IsNullOrWhiteSpace(data))
+            {
+                return "Исходная строка пуста";
+            }
+            if (!data.Contains(";"))
+            {
+                return "Значения отсортированы по возрастанию";
+            }
+            String[] parts = data.Split(';');
+            int prev = int.Parse(parts[0]);
+            for (int i = 1; i < parts.Length; i++)
+            {
+                int current = int.Parse(parts[i]);
+                if (current < prev)
+                {
+                    return "Элемент со значением " + current + " на индексе " + i + " нарушает закономерность";
+                }
+                prev = current;
+            }
+            return "Значения отсортированы по возрастанию";
+        }
+
         public static String Task7369(String leftRaw, String topRaw)
         {
             if (String.IsNullOrWhiteSpace(leftRaw))

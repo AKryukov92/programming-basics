@@ -270,6 +270,24 @@ function task7534(charsRaw, amountsRaw){
 	}
 	return sb;
 }
+function task2173(raw){
+	if (raw == ""){
+		return "Исходная строка пуста";
+	}
+	if (!raw.includes(';')){
+        return "Значения отсортированы по возрастанию";
+	}
+	var arr = raw.split(";");
+	var prev = parseInt(arr[0]);
+	for (var i = 0; i < arr.length; i++){
+		var current = parseInt(arr[i]);
+		if (current < prev){
+			return "Элемент со значением " + current + " на индексе " + i + " нарушает закономерность";
+		}
+		prev = current;
+	}
+	return "Значения отсортированы по возрастанию";
+}
 function task7369(leftRaw, topRaw){
 	if (leftRaw == ""){
 		return "Данные слева отсутствуют";

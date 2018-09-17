@@ -36,6 +36,7 @@ namespace tfa
             Step4338();
 
             Step7534();
+            Step2173();
         }
 
         static void Step2475()
@@ -208,6 +209,25 @@ namespace tfa
             for (int i = 0; i < in7534chars.Length; i++)
             {
                 Console.WriteLine(Lab07.Task7534(in7534chars[i], in7534amounts[i]));
+            }
+        }
+
+        static void Step2173()
+        {
+            Console.WriteLine();
+            Console.WriteLine("2173");
+            String[] in2173 = {
+                "5;6;7;8;9",
+                "2;3;3;3;3;4",
+                "5",
+                "4;5;6;7;3;2;1",
+                "9;8",
+                "4;5;6;7;6;7;8",
+                ""
+        };
+            for (int i = 0; i < in2173.Length; i++)
+            {
+                Console.WriteLine(Lab07.Task2173(in2173[i]));
             }
         }
 
