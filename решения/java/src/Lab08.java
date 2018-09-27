@@ -39,11 +39,12 @@ public class Lab08 {
         if (x.length() != 2) {
             throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
         }
+        String data = "abcabcabbacbacbaaac";
         List<Integer> ret = new ArrayList<>();
-        int i = STR2.indexOf(x);
+        int i = data.indexOf(x);
         while (i != -1) {
             ret.add(i);
-            i = STR2.indexOf(x, i + 1);
+            i = data.indexOf(x, i + 1);
         }
         return ret;
     }
@@ -123,7 +124,7 @@ public class Lab08 {
         if (s.length() != 2) {
             throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
         }
-        return STR2.replace(s, " ");
+        return "abcdacadbacdaabaadc".replace(s, " ");
     }
 
     public static String task9116(String s) throws IllegalArgumentException {

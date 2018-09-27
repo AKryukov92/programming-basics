@@ -4,52 +4,52 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-//        Step9020();
-//        Step7237();
-//        Step3943();
-//        Step8873();
-//        Step2624();
-//
-//        Step1346();
-//        Step5871();
-//        Step3591();
-//        Step9298();
-//        Step3354();
-//
-//        Step5201();
-//        Step2981();
-//        Step4312();
-//        Step8833();
-//        Step1934();
-//
-//        Step7619();
-//        Step9130();
-//        Step2461();
-//        Step7799();
-//        Step2802();
-//
-//        Step9180();
-//        Step1544();
-//        Step9631();
-//        Step9812();
-//        Step5728();
-//
-//        Step5923();
-//        Step9116();
-//        Step1618();
-//        Step7937();
-//        Step4845();
-//
-//        Step7222();
-//        Step2166();
-//        Step5894();
-//        Step4425();
-//        Step7290();
-//
-//        Step8769();
-//        Step9354();
-//        Step3490();
-//        Step1433();
+        Step9020();
+        Step7237();
+        Step3943();
+        Step8873();
+        Step2624();
+
+        Step1346();
+        Step5871();
+        Step3591();
+        Step9298();
+        Step3354();
+
+        Step5201();
+        Step2981();
+        Step4312();
+        Step8833();
+        Step1934();
+
+        Step7619();
+        Step9130();
+        Step2461();
+        Step7799();
+        Step2802();
+
+        Step9180();
+        Step1544();
+        Step9631();
+        Step9812();
+        Step5728();
+
+        Step5923();
+        Step9116();
+        Step1618();
+        Step7937();
+        Step4845();
+
+        Step7222();
+        Step2166();
+        Step5894();
+        Step4425();
+        Step7290();
+
+        Step8769();
+        Step9354();
+        Step3490();
+        Step1433();
         Step7085();
         Step8887();
     }
@@ -637,23 +637,23 @@ public class Lab13Task9701 {
     static void Step8769() {
         System.out.println();
         System.out.println("8769");
-        int[] in8769p = {1, 8, 1, 0, 0, 1, -1, 5};
-        int[] in8769q = {3, 10, 4, 5, 5, 7, 0, 10};
+        int[] in8769p = {1, 8, 1, 0, 0, 4, 1, -1, 5};
+        int[] in8769q = {3, 10, 4, 5, 5, 2, 7, 0, 10};
         String[] in8769s = {
                 "1 2 3 4 1 2",
                 "3 4 4 2 3 4 1 2 3 1 2",
                 "11 12 13 5 11 12",
                 "4 2 3 4 3 2",
                 "4 4 4 4 4 3 2 1",
+                "1 2 3 4 1 2",
                 "4 4 4 4",
                 "4 3",
                 "1 2 3 4"
         };
-        int[] out8769 = {2, 1, 5, 2, 3, 0, 0, 0};
         for (int i = 0; i < in8769p.length; i++) {
             try {
-                int result = Lab07.task8769(in8769p[i], in8769q[i], in8769s[i]);
-                System.out.printf("%d (%d)\n", result, out8769[i]);
+                String result = Lab07.task8769(in8769p[i], in8769q[i], in8769s[i]);
+                System.out.println(result);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }

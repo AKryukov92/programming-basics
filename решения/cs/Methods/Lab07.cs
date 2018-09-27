@@ -627,7 +627,7 @@ namespace Methods
             return ret;
         }
 
-        public static int Task8769(int p, int q, String raw)
+        public static String Task8769(int p, int q, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             int i, n;
@@ -649,9 +649,13 @@ namespace Methods
                 i = q;
                 n = p;
             }
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Фрагмент массива:");
             int min = int.Parse(arr[i]);
             while (i <= n)
             {
+                sb.Append(" ");
+                sb.Append(arr[i]);
                 int current = int.Parse(arr[i]);
                 if (current < min)
                 {
@@ -659,7 +663,9 @@ namespace Methods
                 }
                 i++;
             }
-            return min;
+            sb.Append("\nМинимальное среди них: ");
+            sb.Append(min);
+            return sb.ToString();
         }
 
         public static IList<int> Task4497(int x, int y, String raw)

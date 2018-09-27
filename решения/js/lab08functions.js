@@ -1,5 +1,5 @@
 var STR = "abcdefwxyz";
-var STR2 = "abcdacadbacdaabaadc";
+
 function task7491(s){
 	return STR.indexOf(s) != -1;
 }
@@ -29,6 +29,7 @@ function task9279(x){
 		throw new Error("Вводимая строка должна содержать ровно 2 символа");
 	}
 	var r = "";
+	var STR2 = "abcabcabbacbacbaaac";
 	var i = STR2.indexOf(x);
 	while(i != -1){
 		r += i + " ";
@@ -107,7 +108,7 @@ function task2166(x){
 	if (x.length != 2){
 		throw new Error("Вводимая строка должна содержать ровно 2 символа");
 	}
-	return STR2.replace(new RegExp(x,'g')," ");
+	return "abcdacadbacdaabaadc".replace(new RegExp(x,'g')," ");
 }
 function task9116(str){
 	if(!str.startsWith('"') || !str.endsWith('"')){

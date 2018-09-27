@@ -89,7 +89,7 @@ namespace task8787
         {
             Console.WriteLine();
             Console.WriteLine("9279");
-            String[] in9279 = { "ab", "bc", "ac", "xz", "cde", "a" };
+            String[] in9279 = { "ab", "bc", "ac", "bb", "xz", "cde", "a" };
             for (int i = 0; i < in9279.Length; i++)
             {
                 try

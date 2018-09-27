@@ -866,24 +866,24 @@ namespace task9701
         {
             Console.WriteLine();
             Console.WriteLine("8769");
-            int[] in8769p = { 1, 8, 1, 0, 0, 1, -1, 5 };
-            int[] in8769q = { 3, 10, 4, 5, 5, 7, 0, 10 };
+            int[] in8769p = { 1, 8, 1, 0, 0, 4, 1, -1, 5 };
+            int[] in8769q = { 3, 10, 4, 5, 5, 2, 7, 0, 10 };
             String[] in8769s = {
                 "1 2 3 4 1 2",
                 "3 4 4 2 3 4 1 2 3 1 2",
                 "11 12 13 5 11 12",
                 "4 2 3 4 3 2",
                 "4 4 4 4 4 3 2 1",
+                "1 2 3 4 1 2",
                 "4 4 4 4",
                 "4 3",
                 "1 2 3 4"};
-            int[] out8769 = { 2, 1, 5, 2, 3, 0, 0, 0 };
             for (int i = 0; i < in8769p.Length; i++)
             {
                 try
                 {
-                    int result = Lab07.Task8769(in8769p[i], in8769q[i], in8769s[i]);
-                    Console.WriteLine("{0} ({1})", result, out8769[i]);
+                    String result = Lab07.Task8769(in8769p[i], in8769q[i], in8769s[i]);
+                    Console.WriteLine(result);
                 }
                 catch (Exception e)
                 {

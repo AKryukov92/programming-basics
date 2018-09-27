@@ -8,7 +8,6 @@ namespace Methods
     public class Lab08
     {
         public static String STR = "abcdefwxyz";
-        public static String STR2 = "abcdacadbacdaabaadc";
 
         public static int Task9631(String s)
         {
@@ -47,6 +46,7 @@ namespace Methods
             {
                 throw new Exception("Вводимая строка должна содержать ровно 2 символа");
             }
+            String STR2 = "abcabcabbacbacbaaac";
             IList<int> ret = new List<int>();
             int i = STR2.IndexOf(x);
             while (i != -1)
@@ -158,7 +158,7 @@ namespace Methods
             {
                 throw new Exception("Вводимая строка должна содержать ровно 2 символа");
             }
-            return STR2.Replace(s, " ");
+            return "abcdacadbacdaabaadc".Replace(s, " ");
         }
 
         public static String Task9116(String s)

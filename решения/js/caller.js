@@ -174,7 +174,7 @@ for (var i = 0; i < in8418.length; i++){
 
 
 //Lab07
-var in9279 = ["ab","bc","ac","cde","a"];
+var in9279 = ["ab","bc","ac","bb","cde","a"];
 for (var i = 0; i < in9279.length; i++){
 	var out = document.getElementById("9279t" + i);
 	try {

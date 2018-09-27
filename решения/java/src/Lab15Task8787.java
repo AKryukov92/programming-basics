@@ -105,7 +105,7 @@ public class Lab15Task8787 {
     private static void Step9279() {
         System.out.println();
         System.out.println("9279");
-        String[] in9279 = {"ab","bc","ac","xz","cde","a"};
+        String[] in9279 = {"ab","bc","ac","bb","xz","cde","a"};
         for (int i = 0; i < in9279.length; i++){
             try {
                 StringBuilder sb = new StringBuilder();

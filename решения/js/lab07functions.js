@@ -396,15 +396,18 @@ function task8769(p,q,raw){
 		i = q;
 		n = p;
 	}
+	var result = "Фрагмент массива:";
 	var min = parseInt(arr[i]);
 	while(i <= n){
+		result += " " + arr[i];
 		var current = parseInt(arr[i]);
 		if (current < min){
 			min = current;
 		}
 		i++;
 	}
-	return min;
+	result += "</br>Минимальное среди них: " + min;
+	return result;
 }
 function task4497(x,y,raw){
 	var arr = raw.split(" ");

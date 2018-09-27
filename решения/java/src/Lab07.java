@@ -485,7 +485,7 @@ public class Lab07 {
         }
     }
 
-    public static int task8769(int p, int q, String raw) throws IllegalArgumentException {
+    public static String task8769(int p, int q, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         int i, n;
         if (p < 0 || p >= arr.length) {
@@ -501,15 +501,21 @@ public class Lab07 {
             i = q;
             n = p;
         }
+        StringBuilder sb = new StringBuilder();
+        sb.append("Фрагмент массива:");
         int min = Integer.parseInt(arr[i]);
         while (i <= n) {
+            sb.append(" ");
+            sb.append(arr[i]);
             int current = Integer.parseInt(arr[i]);
             if (current < min) {
                 min = current;
             }
             i++;
         }
-        return min;
+        sb.append("\nМинимальное среди них: ");
+        sb.append(min);
+        return sb.toString();
     }
 
     public static List<Integer> task4497(int x, int y, String raw) {
