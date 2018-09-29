@@ -69,3 +69,37 @@ function task7474(a, b, c) {
 	return "Квадратное уравнение " + a + "*x*x + " + b + "*x + " + c + " = 0.</br>" +
 		"Его дискриминант вычисляется по формуле: d = " + b + "*" + b + " - 4*" + a + "*" + c;
 }
+function task8693(){
+	var result = "Вот дом,\n";
+	var repeat = "Который построил Джек.\n";
+	result += repeat;
+	result += "\nА это пшеница,\n";
+	repeat = "Которая в тёмном чулане хранится\n"
+		+ "В доме,\n"
+		+ repeat;
+	result += repeat;
+	result += "\nА это весёлая птица-синица,\n";
+	repeat = "Которая часто ворует пшеницу,\n" + repeat;
+	result += repeat;
+	result += "\nВот кот,\n";
+	repeat = "Который пугает и ловит синицу,\n" + repeat;
+	result += repeat;
+	result += "\nВот пёс без хвоста,\n";
+	repeat = "Который за шиворот треплет кота,\n" + repeat;
+	result += repeat;
+	result += "\nА это корова безрогая,\n" +
+		"Лягнувшая старого пса без хвоста,\n";
+	result += repeat;
+	result += "\nА это старушка, седая и строгая,\n";
+	repeat = "Которая доит корову безрогую,\n"
+		+ "Лягнувшую старого пса без хвоста,\n"
+		+ repeat;
+	result += repeat;
+	result += "\nА это ленивый и толстый пастух,\n";
+	repeat = "Который бранится с коровницей строгою,\n" + repeat;
+	result += repeat;
+	result += "\nВот два петуха,\n"
+		+ "Которые будят того пастуха,\n";
+	result += repeat;
+	return result;
+}
