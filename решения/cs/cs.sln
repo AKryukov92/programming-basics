@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesExample", "ClassesEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodTests", "MethodTests\MethodTests.csproj", "{5AA0EAF9-8DAB-4ADB-BC8F-2F4DE61EA9DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01Dictation", "Lab01Dictation\Lab01Dictation.csproj", "{AE8F34F5-7713-442A-B011-BAC6EB20FE45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{5AA0EAF9-8DAB-4ADB-BC8F-2F4DE61EA9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA0EAF9-8DAB-4ADB-BC8F-2F4DE61EA9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA0EAF9-8DAB-4ADB-BC8F-2F4DE61EA9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
