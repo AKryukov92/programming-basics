@@ -31,6 +31,7 @@ public class Lab12Task7649 {
         Step7534();
         Step6492();
         Step2173();
+        Step8613();
     }
 
     private static void Step8495() {
@@ -281,6 +282,32 @@ public class Lab12Task7649 {
                 result.insert(0, "Неверно. Результат:\n");
                 System.out.println(result.toString());
             }
+        }
+    }
+
+    static void Step8613(){
+        System.out.println();
+        System.out.println("8613");
+        String[] in8613fragments = {
+            "a s d f g h j k",
+            "qaz wsx edc",
+            "as df gh jk",
+            "q w e r t y u i o p",
+            "asdf qwer",
+            "",
+            "v c x z"
+        };
+        String[] in8613indexes = {
+            "0 2 3 5",
+            "0 2 3 5",
+            "3 1",
+            "9 7 3 5",
+            "9 8",
+            "2 1 5",
+            ""
+        };
+        for (int i = 0; i < in8613fragments.length; i++){
+            System.out.println(Lab07.task8613(in8613fragments[i], in8613indexes[i]));
         }
     }
 

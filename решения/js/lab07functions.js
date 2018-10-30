@@ -16,6 +16,23 @@ function task1433(str){
 	var index = Math.floor((arr.length-1)/2);
 	return "Индекс: " + index + ", элемент: " + arr[index];
 }
+function task7834(raw){
+	if (raw === ""){
+		throw new Error("Исходная строка пуста");
+	}
+	var arr = raw.split(",");
+	var r = "";
+	var indexes = [0,2,3,5];
+	for (var i = 0; i < indexes.length; i++){
+		if (arr.length > indexes[i]){
+			r += arr[indexes[i]];
+		} else {
+			r += "Элемент на индексе " + indexes[i] + " отсутствует";
+		}
+		r+= "</br>";
+	}
+	return r;
+}
 function task5683(str){
 	if (str === ""){
 		return "";
@@ -247,6 +264,27 @@ function task6806(x){
 		ret += "\n";
 	}
 	return ret;
+}
+function task8613(fragmentsRaw, indexesRaw){
+	if (fragmentsRaw == ""){
+		return "Отсутствуют данные о фрагментах";
+	}
+	if (indexesRaw == ""){
+		return "Отсутствуют данные об индексах";
+	}
+	var fragments = fragmentsRaw.split(" ");
+	var indexes = indexesRaw.split(" ");
+	var r = "";
+	for (var i = 0; i < indexes.length; i++){
+		var j = parseInt(indexes[i]);
+		if (fragments.length > j){
+			r += fragments[j];
+		} else {
+			r += "Фрагмент на индексе " + j + " тсутствует";
+		}
+		r += "</br>";
+	}
+	return r;
 }
 function task7534(charsRaw, amountsRaw){
 	if (charsRaw == ""){

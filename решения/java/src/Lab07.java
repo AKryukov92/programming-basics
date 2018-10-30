@@ -77,6 +77,26 @@ public class Lab07 {
         return String.format("Индекс %d, элемент %s", index, arr[index]);
     }
 
+    public static String task7834(String raw){
+        if (raw.isEmpty()){
+            throw new IllegalArgumentException("Исходная строка пуста");
+        }
+        String[] arr = raw.split(",");
+        StringBuilder sb = new StringBuilder();
+        int[] indexes = new int[] {0, 2, 3, 5};
+        for (int i = 0; i < indexes.length; i++){
+            if (arr.length > indexes[i]){
+                sb.append(arr[indexes[i]]);
+            } else {
+                sb.append("Элемент на индексе ");
+                sb.append(indexes[i]);
+                sb.append(" отсутствует");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
     public static double task3946(String raw) {
         if (raw.length() == 0) {
             return 0;
@@ -287,6 +307,30 @@ public class Lab07 {
             sb.append("\n");
         }
         return sb;
+    }
+
+    public static String task8613(String fragmentsRaw, String indexesRaw){
+        if (fragmentsRaw.isEmpty()){
+            return "Отсутствуют данные о фрагментах";
+        }
+        if (indexesRaw.isEmpty()){
+            return "Отсутствуют данные об индексах";
+        }
+        String[] fragments = fragmentsRaw.split(" ");
+        String[] indexes = indexesRaw.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < indexes.length; i++){
+            int j = Integer.parseInt(indexes[i]);
+            if (fragments.length > j){
+                sb.append(fragments[j]);
+            } else {
+                sb.append("Фрагмент на индексе ");
+                sb.append(j);
+                sb.append(" отсутствует");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
     public static String task7534(String charsRaw, String amountsRaw){

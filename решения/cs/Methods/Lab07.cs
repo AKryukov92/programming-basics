@@ -58,6 +58,33 @@ namespace Methods
             return arr[a];
         }
 
+
+        public static String Task7834(String raw)
+        {
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                throw new ArgumentException("Исходная строка пуста");
+            }
+            String[] arr = raw.Split(',');
+            StringBuilder sb = new StringBuilder();
+            int[] indexes = new int[] { 0, 2, 3, 5 };
+            for (int i = 0; i < indexes.Length; i++)
+            {
+                if (arr.Length > indexes[i])
+                {
+                    sb.Append(arr[indexes[i]]);
+                }
+                else
+                {
+                    sb.Append("Элемент на индексе ");
+                    sb.Append(indexes[i]);
+                    sb.Append(" отсутствует");
+                }
+                sb.Append("\n");
+            }
+            return sb.ToString();
+        }
+
         public static String Task1433(String raw)
         {
             if (String.IsNullOrEmpty(raw))
@@ -445,6 +472,38 @@ namespace Methods
                 }
             }
             return count;
+        }
+
+
+        public static String Task8613(String charsRaw, String indexesRaw)
+        {
+            if (String.IsNullOrWhiteSpace(charsRaw))
+            {
+                return "Отсутствуют данные о фрагментах";
+            }
+            if (String.IsNullOrWhiteSpace(indexesRaw))
+            {
+                return "Отсутствуют данные об индексах";
+            }
+            String[] fragments = charsRaw.Split(' ');
+            String[] indexes = indexesRaw.Split(' ');
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < indexes.Length; i++)
+            {
+                int j = Int32.Parse(indexes[i]);
+                if (fragments.Length > j)
+                {
+                    sb.Append(fragments[j]);
+                }
+                else
+                {
+                    sb.Append("Фрагмент на индексе ");
+                    sb.Append(j);
+                    sb.Append(" отсутствует");
+                }
+                sb.Append("\n");
+            }
+            return sb.ToString();
         }
 
         public static String Task7534(String charsRaw, String amountsRaw)

@@ -481,6 +481,26 @@ for (var i = 0; i < in7085.length; i++){
 	}
 }
 
+var in7834 = [
+	"a,s,d,f,g,h,j,k",
+	"q,w,e,r,t,y,u",
+	"q,w,e,r,t,y",
+	"qa,ws,ed,rf,tg",
+	"za,xs,cd,vf",
+	"qaz,wsx,edc",
+	"qwerty,asdfg",
+	"zxcvbnm",
+	""
+];
+for (var i = 0; i < in7834.length; i++){
+	var out = document.getElementById("7834t" + i);
+	try {
+		out.innerHTML = task7834(in7834[i]);
+	} catch (e){
+		out.innerHTML = e.message;
+	}
+}
+
 var in7290b = ["3", "2", "0", "4", "7", "1", "-5", "10"];
 var in7290data = ["1 1 1 3 4 1", "1 2 3 4 1 2", "3 4 1 2 3 4 1 2 3 1 2",
 "4 2 3 4 3 2", "4 4 4 4 4 3 2 1", "4 4 4 4", "1 1 1 3 4 1", "1 2 3"];

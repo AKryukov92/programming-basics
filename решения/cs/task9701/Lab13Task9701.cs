@@ -58,6 +58,8 @@ namespace task9701
             Step3490();
             Step1433();
             Step7085();
+
+            Step7834();
         }
         
         static void Step9020()
@@ -798,6 +800,35 @@ namespace task9701
                 catch (ArgumentException e)
                 {
                     Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        static void Step7834()
+        {
+            Console.WriteLine();
+            Console.WriteLine("7834");
+            String[] in7834in =
+            {
+                "a,s,d,f,g,h,j,k",
+                "q,w,e,r,t,y,u",
+                "q,w,e,r,t,y",
+                "qa,ws,ed,rf,tg",
+                "za,xs,cd,vf",
+                "qaz,wsx,edc",
+                "qwerty,asdfg",
+                "zxcvbnm",
+                ""
+            };
+            for (int i = 0; i < in7834in.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(Lab07.Task7834(in7834in[i]));
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }

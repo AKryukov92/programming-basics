@@ -168,3 +168,26 @@ for (var i = 0; i < in6492chars.length; i++){
 	var out = document.getElementById("6492t" + i);
 	out.innerHTML = task6492(in6492chars[i], in6492amounts[i]);
 }
+
+var in8613fragments = [
+	"a s d f g h j k",
+	"qaz wsx edc",
+	"as df gh jk",
+	"q w e r t y u i o p",
+	"asdf qwer",
+	"",
+	"v c x z"
+];
+var in8613indexes = [
+	"0 2 3 5",
+	"0 2 3 5",
+	"3 1",
+	"9 7 3 5",
+	"9 8",
+	"2 1 5",
+	""
+];
+for (var i = 0; i < in8613fragments.length; i++){
+	var out = document.getElementById("8613t" + i);
+	out.innerHTML = task8613(in8613fragments[i], in8613indexes[i]);
+}

@@ -51,7 +51,9 @@ public class Lab13Task9701 {
         Step3490();
         Step1433();
         Step7085();
+
         Step8887();
+        Step7834();
     }
 
     private static void Step3591() {
@@ -726,6 +728,29 @@ public class Lab13Task9701 {
                 System.out.printf("%s (%s)\n", result, out1433[i]);
             } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    static void Step7834(){
+        System.out.println();
+        System.out.println("7834");
+        String[] in7834in = {
+            "a,s,d,f,g,h,j,k",
+            "q,w,e,r,t,y,u",
+            "q,w,e,r,t,y",
+            "qa,ws,ed,rf,tg",
+            "za,xs,cd,vf",
+            "qaz,wsx,edc",
+            "qwerty,asdfg",
+            "zxcvbnm",
+            ""
+        };
+        for (int i = 0; i < in7834in.length;i++){
+            try {
+                System.out.println(Lab07.task7834(in7834in[i]));
+            } catch (IllegalArgumentException ex){
+                System.out.println(ex.getMessage());
             }
         }
     }
