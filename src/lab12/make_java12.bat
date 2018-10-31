@@ -86,4 +86,8 @@ copy ..\..\решения\java\src\Lab12Task2354.java ..\..\%lang%\lab12\Lab12Ta
 copy ..\..\решения\java\src\Lab12Task2030.java ..\..\%lang%\lab12\Lab12Task2030.java
 copy ..\..\решения\java\src\Lab12Task7649.java ..\..\%lang%\lab12\Lab12Task7649.java
 
+pushd images
+copy "maven_project_structure.png" "..\..\..\%lang%\images\maven_project_structure.png"
+popd
+
 if x%1==x start "" %filename%
