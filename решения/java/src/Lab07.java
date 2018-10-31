@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Александр on 03.04.2017.
@@ -649,5 +645,26 @@ public class Lab07 {
             data.add(arr[i]);
         }
         return data.size();
+    }
+
+    public static String task3095(String raw){
+        if (raw.isEmpty()){
+            throw new IllegalArgumentException("Исходная строка пуста");
+        }
+        String[] arr = raw.split(",");
+        Set<String> data = new HashSet<>(Arrays.asList(arr));
+        StringBuilder sb = new StringBuilder();
+        data.toArray(arr);
+        for (int i = 0; i < arr.length; i++){
+            for (int j = i+1; j < arr.length; j++){
+                sb.append(arr[i]);
+                sb.append(arr[j]);
+                sb.append("\n");
+                sb.append(arr[j]);
+                sb.append(arr[i]);
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
     }
 }

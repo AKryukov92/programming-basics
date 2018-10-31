@@ -54,6 +54,7 @@ public class Lab13Task9701 {
 
         Step8887();
         Step7834();
+        Step3095();
     }
 
     private static void Step3591() {
@@ -809,6 +810,25 @@ public class Lab13Task9701 {
                 int result = Lab02.task3490(in3490y[i], in3490w[i]);
                 System.out.println(result + " см");
             } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    static void Step3095(){
+        System.out.println();
+        System.out.println("3095");
+        String[] in3095 = {
+                "q,w,e,r",
+                "as,df,gh",
+                "zx,cv",
+                "p,o,o,t,p",
+                ""
+        };
+        for (int i = 0; i < in3095.length; i++){
+            try {
+                System.out.println(Lab07.task3095(in3095[i]));
+            } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
             }
         }

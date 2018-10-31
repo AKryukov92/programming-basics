@@ -60,6 +60,7 @@ namespace task9701
             Step7085();
 
             Step7834();
+            Step3095();
         }
         
         static void Step9020()
@@ -982,6 +983,29 @@ namespace task9701
                     Console.WriteLine("{0} см ({1})", result, out3490[i]);
                 }
                 catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        static void Step3095()
+        {
+            Console.WriteLine();
+            Console.WriteLine("3095");
+            String[] in3095 = {
+                "q,w,e,r",
+                "as,df,gh",
+                "zx,cv",
+                "p,o,o,t,p",
+                ""
+            };
+            for (int i = 0; i < in3095.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(Lab07.Task3095(in3095[i]));
+                } catch (ArgumentException e)
                 {
                     Console.WriteLine(e.Message);
                 }

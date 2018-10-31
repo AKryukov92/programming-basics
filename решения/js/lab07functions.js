@@ -556,3 +556,25 @@ function task6492(charsRaw, amountsRaw){
 	}
 	return sb;
 }
+function task3095(raw){
+	if (raw == ""){
+		throw new Error("Исходная строка пуста");
+	}
+	var arr = raw.split(",");
+	var data = {};
+	for (var i = 0; i < arr.length; i++){
+		data[arr[i]] = true;
+	}
+	var items = [];
+	for(item in data){
+		items.push(item);
+	}
+	var r = "";
+	for (var i=0; i<items.length; i++){
+		for (var j=i+1; j<items.length; j++){
+			r += items[i] + items[j] + "</br>";
+			r += items[j] + items[i] + "</br>";
+		}
+	}
+	return r;
+}

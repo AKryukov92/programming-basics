@@ -851,5 +851,31 @@ namespace Methods
             }
             return data.Count;
         }
+
+
+        public static String Task3095(String raw)
+        {
+            if (String.IsNullOrWhiteSpace(raw))
+            {
+                throw new ArgumentException("Исходная строка пуста");
+            }
+            String[] arr = raw.Split(',');
+            ISet<String> data = new HashSet<String>(arr);
+            StringBuilder sb = new StringBuilder();
+            arr = data.ToArray<String>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    sb.Append(arr[i]);
+                    sb.Append(arr[j]);
+                    sb.Append("\n");
+                    sb.Append(arr[j]);
+                    sb.Append(arr[i]);
+                    sb.Append("\n");
+                }
+            }
+            return sb.ToString();
+        }
     }
 }
