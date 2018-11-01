@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodTests", "MethodTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01Dictation", "Lab01Dictation\Lab01Dictation.csproj", "{AE8F34F5-7713-442A-B011-BAC6EB20FE45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13Task7740", "Lab13Task7740\Lab13Task7740.csproj", "{A3F2F413-D364-423F-A23D-E84533F98BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13Task1439", "Lab13Task1439\Lab13Task1439.csproj", "{C1560C44-B5F3-4C16-A503-78E267EAEA55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,14 @@ Global
 		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE8F34F5-7713-442A-B011-BAC6EB20FE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F2F413-D364-423F-A23D-E84533F98BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F2F413-D364-423F-A23D-E84533F98BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F2F413-D364-423F-A23D-E84533F98BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F2F413-D364-423F-A23D-E84533F98BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1560C44-B5F3-4C16-A503-78E267EAEA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1560C44-B5F3-4C16-A503-78E267EAEA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1560C44-B5F3-4C16-A503-78E267EAEA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1560C44-B5F3-4C16-A503-78E267EAEA55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+	div {
+		font-family:monospace;
+		white-space:pre;
+		border:1px solid black;
+		margin:5px;
+		padding:5px;
+	}
+</style>
+</head>
+<body>
+<input id="in_x"></input>
+<input type="button" onclick="work()" value="Работай"></input>
+<div id="out"></div>
+<script>
+function work(){
+	var x = parseInt(document.getElementById("in_x").value);
+	if (isNaN(x)){
+		document.getElementById("out").innerHTML = "Не удается считать число";
+	} else {
+		var result = x + 7;
+		document.getElementById("out").innerHTML = result.toFixed(4);
+	}
+}
+</script>
+</body>
+</html>

@@ -23,15 +23,19 @@ type ..\nav_%lang%.html>> %filename%
 echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
- ^<li^>^<a href="#task9020" class="example"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task3943"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task7799"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task9354"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5170"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task7740" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task1439"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task9020" class="example"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task3943"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task7799"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task9354"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task5170"^>№ 7^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
 type link_c2_p8.4.html>>%filename%
+type taskjs7740.html>>%filename%
+type taskjs1439.html>>%filename%
 type taskjs9020.html>>%filename%
 type taskjs3943.html>>%filename%
 type taskjs7799.html>>%filename%

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+	div {
+		font-family:monospace;
+		white-space:pre;
+		border:1px solid black;
+		margin:5px;
+		padding:5px;
+	}
+</style>
+</head>
+<body>
+<input id="in_data"></input>
+<input type="button" onclick="work()" value="Работай"></input>
+<div id="out"></div>
+<script>
+function work(){
+	var x = document.getElementById("in_data").value;
+	var arr = x.split(" ");
+	var sum = 0;
+	var count = 0;
+	var r = "";
+	for (var i = 0; i < arr.length; i++){
+		var x = parseInt(arr[i]);
+		if (isNaN(x)){
+			r += "Элемент №" + i + " со значением " + arr[i] + " не число</br>";
+		} else {
+			sum += x;
+			count += 1;
+		}
+	}
+	if (count > 0){
+		r += (sum / count).toFixed(2);
+	} else {
+		r += "В исходном массиве отсутствовали числа";
+	}
+	document.getElementById("out").innerHTML = r;
+}
+</script>
+</body>
+</html>
