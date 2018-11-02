@@ -181,7 +181,7 @@ public class Lab07 {
         return ret;
     }
 
-    public static List<String> task3134(int p, int q, String raw) throws IllegalArgumentException {
+    public static String task3134(int p, int q, String raw) throws IllegalArgumentException {
         String[] arr = raw.split(" ");
         if (p < 0 || p >= arr.length) {
             throw new IllegalArgumentException("Число P должно быть в интервале [0, размер массива)");
@@ -189,14 +189,20 @@ public class Lab07 {
         if (q < 0 || q >= arr.length) {
             throw new IllegalArgumentException("Число Q должно быть в интервале [0, размер массива)");
         }
-        List<String> ret = new ArrayList<>();
         String t = arr[p];
         arr[p] = arr[q];
         arr[q] = t;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Меняю ");
+        sb.append(arr[q]);
+        sb.append(" на ");
+        sb.append(arr[p]);
+        sb.append("\n");
         for (int i = 0; i < arr.length; i++) {
-            ret.add(arr[i]);
+            sb.append(arr[i]);
+            sb.append(" ");
         }
-        return ret;
+        return sb.toString();
     }
 
     public static List<Integer> task9774(int m, String raw) {

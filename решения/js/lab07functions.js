@@ -153,12 +153,13 @@ function task3134(p, q, raw){
 	if (q < 0 || q >= arr.length){
 		throw new Error("Число Q должно быть в интервале [0, размер массива)");
 	}
-	var ret = [];
+	var ret = "";
 	var t = arr[p];
 	arr[p] = arr[q];
 	arr[q] = t;
+	ret += "Меняю " + arr[q] + " на " + arr[p] + "</br>";
 	for (var i = 0; i < arr.length; i++){
-		ret.push(arr[i]);
+		ret += arr[i] + " ";
 	}
 	return ret;
 }

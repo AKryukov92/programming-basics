@@ -18,18 +18,19 @@ public class Lab15Task8787 {
         Step1223();
         Step6497();
         Step5648();
-        Step3940();
 
+        Step3940();
         Step8311();
         Step3134();
         Step9774();
         Step9711();
-        Step3333();
 
+        Step3333();
         Step9271();
         Step4497();
         Step8820();
         Step3218();
+
         Step7703();
     }
 
@@ -369,17 +370,10 @@ public class Lab15Task8787 {
         System.out.println("3134");
         int[] in3134p = {0, 2, 4, -1, 2, 19, 1};
         int[] in3134q = {3, 5, 2, 5, 17, 2, -5};
-        String in3134data = "q w e r t y";
+        String in3134data = "a s d f g h";
         for (int i = 0; i < in3134p.length; i++) {
             try {
-                StringBuilder sb = new StringBuilder();
-                List<String> result = Lab07.task3134(
-                        in3134p[i], in3134q[i], in3134data);
-                for (String item : result) {
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb.toString());
+                System.out.println(Lab07.task3134( in3134p[i], in3134q[i], in3134data));
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }

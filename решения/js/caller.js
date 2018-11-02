@@ -342,11 +342,11 @@ for (var i = 0; i < in8311b.length; i++){
 
 var in3134p = ["0","2","4","-1","2","19","1"];
 var in3134q = ["3","5","2","5","17","2","-5"];
-var in3134data = "1 2 3 4 1 2";
+var in3134data = "a s d f g h";
 for (var i = 0; i < in3134p.length; i++){
 	var out = document.getElementById("3134t" + i);
 	try {
-		out.innerHTML = task3134(in3134p[i], in3134q[i], in3134data).join(" ");
+		out.innerHTML = task3134(in3134p[i], in3134q[i], in3134data);
 	} catch(e){
 		out.innerHTML = e.message;
 	}

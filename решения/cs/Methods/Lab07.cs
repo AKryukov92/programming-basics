@@ -273,7 +273,7 @@ namespace Methods
             return ret;
         }
 
-        public static IList<String> Task3134(int p, int q, String raw)
+        public static String Task3134(int p, int q, String raw)
         {
             String[] arr = raw.Split(new char[] { ' ' });
             if (p < 0 || p >= arr.Length)
@@ -284,15 +284,21 @@ namespace Methods
             {
                 throw new Exception("Число Q должно быть в интервале [0, размер массива)");
             }
-            IList<String> ret = new List<String>();
             String t = arr[p];
             arr[p] = arr[q];
             arr[q] = t;
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Меняю ");
+            sb.Append(arr[q]);
+            sb.Append(" на ");
+            sb.Append(arr[p]);
+            sb.Append("\n");
             for (int i = 0; i < arr.Length; i++)
             {
-                ret.Add(arr[i]);
+                sb.Append(arr[i]);
+                sb.Append(" ");
             }
-            return ret;
+            return sb.ToString();
         }
 
         public static void Task9774(int m, int[] arr)

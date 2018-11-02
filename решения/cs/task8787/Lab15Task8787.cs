@@ -10,28 +10,28 @@ namespace task8787
     {
         static void Main(string[] args)
         {
-            Step7991();
-            Step2321();
-            Step5053();
-            Step8418();
-            Step9279();
+            //Step7991();
+            //Step2321();
+            //Step5053();
+            //Step8418();
+            //Step9279();
 
-            Step3657();
-            Step6599();
-            Step1223();
-            Step3940();
-            Step8311();
+            //Step3657();
+            //Step6599();
+            //Step1223();
+            //Step3940();
+            //Step8311();
 
             Step3134();
-            Step9774();
-            Step9711();
-            Step9271();
+            //Step9774();
+            //Step9711();
+            //Step9271();
 
-            Step4497();
-            Step8820();
-            Step3218();
-            Step7703();
-            Step3333();
+            //Step4497();
+            //Step8820();
+            //Step3218();
+            //Step7703();
+            //Step3333();
         }
 
         private static void Step7991()
@@ -209,13 +209,12 @@ namespace task8787
             Console.WriteLine("3134");
             int[] in3134p = { 0, 2, 4, -1, 2, 19, 1 };
             int[] in3134q = { 3, 5, 2, 5, 17, 2, -5 };
-            String in3134data = "q w e r t y";
+            String in3134data = "a s d f g h";
             for (int i = 0; i < in3134p.Length; i++)
             {
                 try
                 {
-                    var result = Lab07.Task3134(in3134p[i], in3134q[i], in3134data);
-                    Console.WriteLine(String.Join(" ", result));
+                    Console.WriteLine(Lab07.Task3134(in3134p[i], in3134q[i], in3134data));
                 }
                 catch (Exception e)
                 {
