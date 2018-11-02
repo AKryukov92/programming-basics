@@ -126,6 +126,9 @@ echo ^</body^> ^
 
 copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
 
+pushd images
+copy "task7799.png" "..\..\..\%lang%\images\task7799.png"
+popd
 
 if x%1==x start "" %filename%
 cd ..
