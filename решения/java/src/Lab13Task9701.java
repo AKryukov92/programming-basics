@@ -568,8 +568,8 @@ public class Lab13Task9701 {
     static void Step4845() {
         System.out.println();
         System.out.println("4845");
-        int[] in4845a = {0, 5, 7, -1, 20, 5, 7};
-        int[] in4845b = {3, 9, 2, 4, 4, -2, 17};
+        int[] in4845a = {0, 3, 3, 2, 6, 0, -1, 20, 5, 7};
+        int[] in4845b = {3, 0, 3, 6, 2, 9, 4, 4, -2, 17};
         for (int i = 0; i < in4845a.length; i++) {
             try {
                 System.out.println(Lab08.task4845(in4845a[i], in4845b[i]));

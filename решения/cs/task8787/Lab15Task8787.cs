@@ -10,28 +10,28 @@ namespace task8787
     {
         static void Main(string[] args)
         {
-            //Step7991();
-            //Step2321();
-            //Step5053();
-            //Step8418();
-            //Step9279();
+            Step7991();
+            Step2321();
+            Step5053();
+            Step8418();
+            Step9279();
 
-            //Step3657();
-            //Step6599();
-            //Step1223();
-            //Step3940();
-            //Step8311();
+            Step3657();
+            Step6599();
+            Step1223();
+            Step3940();
+            Step8311();
 
             Step3134();
-            //Step9774();
-            //Step9711();
-            //Step9271();
+            Step9774();
+            Step9711();
+            Step9271();
+            Step4497();
 
-            //Step4497();
-            //Step8820();
-            //Step3218();
-            //Step7703();
-            //Step3333();
+            Step8820();
+            Step3218();
+            Step7703();
+            Step3333();
         }
 
         private static void Step7991()

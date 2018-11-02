@@ -619,8 +619,8 @@ namespace task9701
         {
             Console.WriteLine();
             Console.WriteLine("4845");
-            int[] in4845a = { 0, 5, 7, -1, 20, 5, 7 };
-            int[] in4845b = { 3, 9, 2, 4, 4, -2, 17 };
+            int[] in4845a = { 0, 3, 3, 2, 6, 0, -1, 20, 5, 7 };
+            int[] in4845b = { 3, 0, 3, 6, 2, 9, 4, 4, -2, 17 };
             for (int i = 0; i < in4845a.Length; i++)
             {
                 try
