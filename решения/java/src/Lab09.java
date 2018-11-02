@@ -65,20 +65,21 @@ public class Lab09 {
             task4642(".\\task4642\\test" + (i+1) + ".txt");
         }
         System.out.println();
-        System.out.println("9765");
-        String[] out9765 = {
+        System.out.println("6882");
+        String[] out6882 = {
             "0",
             "0",
             "5",
+            "1023",
             "Не удается считать число",
             "Не удается считать число",
             "Файл пуст",
             "Файл не существует",
             "Не удается считать число"
         };
-        for (int i = 0; i < out9765.length; i++){
-            System.out.println("-->" + out9765[i] + "<--");
-            task9765(".\\task9765\\test" + (i+1) + ".txt");
+        for (int i = 0; i < out6882.length; i++){
+            System.out.println("-->" + out6882[i] + "<--");
+            task6882(".\\task6882\\test" + (i+1) + ".txt");
         }
         System.out.println();
         System.out.println("5537");
@@ -277,7 +278,7 @@ public class Lab09 {
         }
     }
 
-    public static void task9765(String filename) {
+    public static void task6882(String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)){
             if (!scanner.hasNext()){
