@@ -69,7 +69,7 @@ public class Lab13Task3943 {
             System.out.println("Не удалось вычислить результат");
             System.out.println(ex.getMessage());
         } catch (InputMismatchException ex) {
-            System.out.println("Не удалось считать число");
+            System.out.println("Не удалось преобразовать строку в число");
         }
     }
 }

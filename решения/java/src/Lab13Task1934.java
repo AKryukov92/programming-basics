@@ -36,7 +36,7 @@ public class Lab13Task1934 {
             step1934();
             System.out.println("Программа завершена успешно");
         } catch (InputMismatchException ex){
-            System.out.println("Не удалось считать число");
+            System.out.println("Не удалось преобразовать строку в число");
         } catch (IllegalArgumentException ex){
             System.out.println(ex.getMessage());
         }

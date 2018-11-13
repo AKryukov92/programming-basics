@@ -52,6 +52,8 @@ php/*.pdf
 решения/cs/Caller/bin
 решения/cs/MethodTests/obj
 решения/cs/MethodTests/bin
+решения/cs/CodeProject/obj
+решения/cs/CodeProject/bin
 !решения/cs/packages/repositories.config
 *.suo
 java/postcard/out

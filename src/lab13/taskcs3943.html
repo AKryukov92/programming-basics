@@ -1,34 +1,162 @@
 <div class="task_block" id="task3943">
-	<div class="task_id">3943</div>
+    <div class="task_id">3943</div>
     <h3>Задача</h3>
-
 <ol>
 <li>В классе Methods реализуйте публичный статический метод Task3943 для решения задачи <a href="[2] лаб. ОСАЛП.html#task3943" target="_blank">ЛР2#3943 (открыть в новой вкладке)</a>.</li>
 <li>Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
 <li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
-<li>Проверьте с помощью юнит-теста результат работы метода Task3943 в случаях с корректными данными.</li>
-<li>Проверьте с помощью вспомогательной программы результат работы метода Task3943 в случаях с корректными данными.</li>
+<li>Создайте проект Lab13Task3943.</li>
+<li>В проекте Lab13Task3943 добавьте ссылку на проект CodeProject.</li>
+<li>Добавьте команду using пространства имен из проекта CodeProject.</li>
+<li>Создайте еще один метод в классе Program проекта Lab13Task3943. Назовите его Step3943. Он ничего не возвращает и не принимает аргументов.</li>
+<li>В теле метода Step1934:
+    <ol type="a">
+    <li>Выведите в консоль сообщение "Введите значения x и y".</li>
+    <li>Объявите переменные x и y для хранения целых чисел.</li>
+    <li>Инициализируйте переменные x и y значениями, полученными из консоли.</li>
+    <li>Объявите переменную result для хранения действительных чисел.</li>
+    <li>Вызовите метод Task1934 класса Methods и передайте ему x и y в качестве аргументов.</li>
+    <li>Результат вызова метода запишите в переменную result.</li>
+    <li>Выведите на экран сообщение "Результат равен " и значение переменной result с точностью 4 знака после запятой.</li>
+    </ol>
+</li>
+<li>В теле метода main:
+    <ol type="a">
+    <li>Выведите сообщение "Начало работы программы".</li>
+    <li>Вызовите метод Step1934.</li>
+    <li>Выведите сообщение "Программа завершена успешно".</li>
+    </ol>
+</li>
+<li>В результате запуска проекта Lab13Task3943, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки "Исходный результат". Возможны отличия в номерах строк.</li>
 </ol>
-<div class="check_single preformatted">-10,000000
--435,706230</div>
-
-<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
-<ol start="6">
-<li>В классе TestSuite создайте еще 2 юнит-теста. Назовите их как Task3943assertionX, где X - цифра от 1 до 2.</li>
-<li>Добавьте им атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
-<li>В теле метода Task3943assertionX вызовите метод Task3943 класса Methods и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
-<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
-</ol>
-
-<h4>Добавьте во вспомогательную программу обработку исключений</h4>
-<ol start="10">
-<li>Вызовите метод Task3943 с аргументами из каждого теста, указанного в задаче.</li>
-<li>В случае успешного выполнения метода Task3943, выведите в консоль результат с точностью до 6 знаков после запятой.</li>
-<li>В случае возникновения исключения, перехватите его и выведите в консоль сообщение об ошибке.</li>
-<li>В результате запуска метода main класса Program, в консоли должен появиться текст.</li>
-</ol>
-<div class="check_single preformatted">-10,000000
--435,706230
-Значение y должно быть неотрицательным
-Подкоренное выражение должно быть неотрицательным</div>
+<h4>Обработайте исключения</h4>
+<div class="task_desc">Обработайте исключения так, чтобы при вводе тестовых данных, в консоль выводился соответствующий текст.</div>
+<table class="check_values">
+    <tr>
+        <th rowspan="2">Номер теста</th>
+        <th colspan="2">Вводимые данные</th>
+        <th rowspan="2">Исходный результат</th>
+        <th rowspan="2">Желаемый результат</th>
+    </tr>
+    <tr>
+        <th>X</th>
+        <th>Y</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td>-5</td>
+        <td>81</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+-5
+81
+Результат равен -10.0000
+Конец работы программы</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+-5
+81
+Результат равен -10.0000
+Конец работы программы</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7507</td>
+        <td>7499</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+7507
+7499
+Результат равен -435.7062
+Конец работы программы</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+7507
+7499
+Результат равен -435.7062
+Конец работы программы</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7489</td>
+        <td>-7487</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+7489
+-7487
+Unhandled Exception: System.ArgumentException: Значение y должно быть неотрицательным
+   at CodeProject.Methods.Task3943(Int32 x, Int32 y) in E:\tfa\решения\cs\CodeProject\Methods.cs:line 24
+   at Lab13Task3943.Program.Step3943() in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 25
+   at Lab13Task3943.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 15</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+7489
+-7487
+Не удалось вычислить результат
+Подкоренное выражение должно быть неотрицательно
+Конец работы программы</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>-7481</td>
+        <td>7477</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+-7481
+7477
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательным
+   at CodeProject.Methods.Task3943(Int32 x, Int32 y) in E:\tfa\решения\cs\CodeProject\Methods.cs:line 28
+   at Lab13Task3943.Program.Step3943() in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 25
+   at Lab13Task3943.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 15</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+-7481
+7477
+Не удалось вычислить результат
+Подкоренное выражение должно быть неотрицательно
+Конец работы программы</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>word</td>
+        <td></td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options,
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Lab13Task3943.Program.Step3943() in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 23
+   at Lab13Task3943.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 15</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+word
+Не удалось преобразовать строку в число
+Конец работы программы</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>9</td>
+        <td>word</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+9
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options,
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Lab13Task3943.Program.Step3943() in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 24
+   at Lab13Task3943.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task3943\Program.cs:line 15</td>
+        <td class="preformatted">Начало работы программы
+Введите значения x и y
+9
+word
+Не удалось преобразовать строку в число
+Конец работы программы</td>
+    </tr>
+</table>
 </div>
