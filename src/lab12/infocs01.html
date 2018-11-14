@@ -1,14 +1,18 @@
 <div class="task_block" id="info01">
     <h3>Подготовка проекта</h3>
     <div class="task_desc">
-<ul>
+<ol>
 <li>Создайте новое решение Stage2 типа "консольное приложение .NET Framework". Имя проекта укажите как CodeProject.</li>
 <li>Убедитесь, что в проекте CodeProject присутствует класс Program. Он автоматически создается вместе с проектом типа "консольное приложение".</li>
 <li>Добавьте в проекте CodeProject класс Methods. Он будет содержать методы для решения задач.</li>
 <li>Добавьте к решению Stage2 проект типа "Проект модульного тестирования". Назовите его TestingProject.</li>
-<li>Добавьте в проекте TestingProject класс TestSuite. Он будет содержать юнит-тесты для методов из класса Methods.</li>
-<li>Пометьте класс TestSuite атрибутом TestClass.</li>
+<li>В проекте TestingProject переименуйте файл UnitTest1 на TestSuite. Аналогично переименуйте имя класса в этом файле.</li>
+<li>Класс TestSuite будет содержать юнит-тесты для методов из класса Methods. Убедитесь, что класс TestSuite помечен атрибутом TestClass.</li>
+</ol>
+Настройте проект TestingProject так, чтобы он мог пользоваться кодом из проекта CodeProject.
+<ol start="7">
 <li>В проекте TestingProject добавьте ссылку на проект CodeProject.</li>
-</ul>
+<li>В файле TestSuite добавьте директиву using CodeProject;</li>
+</ol>
 </div>
 </div>
