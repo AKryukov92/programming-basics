@@ -9,7 +9,7 @@ public class Lab13Task7740 {
             double result = x + 7;
             System.out.printf("%.4f", result);
         } catch (InputMismatchException ex){
-            System.out.println("Не удается считать число");
+            System.out.println("Не удалось преобразовать строку в число");
         }
     }
 }

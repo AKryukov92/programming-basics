@@ -4,7 +4,7 @@
 <ol>
 <li>В классе Methods реализуйте публичный статический метод Task1934 для решения задачи <a href="[2] лаб. ОСАЛП.html#task1934" target="_blank">ЛР2#1934 (открыть в новой вкладке)</a>.</li>
 <li>Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
-<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.</li>
 <li>Создайте проект Lab13Task1934.</li>
 <li>В проекте Lab13Task1934 добавьте ссылку на проект CodeProject.</li>
 <li>Добавьте команду using пространства имен из проекта CodeProject.</li>
@@ -84,11 +84,10 @@
 Введите значения A и B
 13
 15
- Exception in thread "main" java.lang.IllegalArgumentException:
-    Подкоренное выражение должно быть неотрицательно
-    at Methods.task1934(Methods.java:6)
-    at Lab13Task1934.step1934(Lab13Task1934.java:44)
-    at Lab13Task1934.main(Lab13Task1934.java:35)</td>
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно
+   at CodeProject.Methods.Task1934(Int32 a, Int32 b) in E:\Stage2\CodeProject\Methods.cs:line 197
+   at Lab13Task1934.Program.Step1934() in E:\Stage2\Lab13Task1934\Program.cs:line 24
+   at Lab13Task1934.Program.Main(String[] args) in E:\Stage2\Lab13Task1934\Program.cs:line 15</td>
         <td class="preformatted">Начало работы программы
 Введите значения A и B
 13
@@ -107,8 +106,8 @@ Unhandled Exception: System.FormatException: Input string was not in a correct f
        NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
    at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
    at System.Int32.Parse(String s)
-   at Lab13Task1934.Program.Step1934() in E:\tfa\решения\cs\Lab13Task1934\Program.cs:line 23
-   at Lab13Task1934.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task1934\Program.cs:line 15</td>
+   at Lab13Task1934.Program.Step1934() in E:\Stage2\Lab13Task1934\Program.cs:line 23
+   at Lab13Task1934.Program.Main(String[] args) in E:\Stage2\Lab13Task1934\Program.cs:line 15</td>
         <td class="preformatted">Начало работы программы
 Введите значения A и B
 word
@@ -127,8 +126,8 @@ Unhandled Exception: System.FormatException: Input string was not in a correct f
        NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
    at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
    at System.Int32.Parse(String s)
-   at Lab13Task1934.Program.Step1934() in E:\tfa\решения\cs\Lab13Task1934\Program.cs:line 24
-   at Lab13Task1934.Program.Main(String[] args) in E:\tfa\решения\cs\Lab13Task1934\Program.cs:line 15</td>
+   at Lab13Task1934.Program.Step1934() in E:\Stage2\Lab13Task1934\Program.cs:line 24
+   at Lab13Task1934.Program.Main(String[] args) in E:\Stage2\Lab13Task1934\Program.cs:line 15</td>
         <td class="preformatted">Начало работы программы
 Введите значения A и B
 11
