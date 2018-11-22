@@ -99,21 +99,28 @@ public class PointSuite {
 
     @Test
     public void pointInstanceComparison() {
-        Point a1, a2, b1, b2, b3;
+        Point a1, a2, b1, b2, b3, b4, b5, b6, b7;
         a1 = new Point(10, 15);
         a2 = new Point(10, 15);
-        b1 = new Point(10, 3);
-        b2 = new Point(1, 15);
-        b3 = new Point(0, 0);
-        Point[] b = {b1, b2, b3};
+        b1 = new Point(0,0); b1.setColor("green");
+        b2 = new Point(10, 3); b2.setColor("green");
+        b3 = new Point(1, 15); b3.setColor("green");
+        b4 = new Point(5, 7); b4.setColor("red");
+        b5 = new Point(10, 15); b5.setColor("green");
+        b6 = new Point(10, 3); b6.setColor("red");
+        b7 = new Point(2, 15); b7.setColor("red");
+        Point[] b = {b1, b2, b3, b4, b5, b6, b7};
         Assert.assertTrue(a1.equals(a2));
         Assert.assertTrue(a2.equals(a1));
+        int count = 0;
         for (Point bx : b) {
+            count += 4;
             Assert.assertFalse(bx.equals(a1));
             Assert.assertFalse(a1.equals(bx));
             Assert.assertFalse(bx.equals(a2));
             Assert.assertFalse(a2.equals(bx));
         }
+        Assert.assertEquals(28, count);
     }
 
     @Test

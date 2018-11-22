@@ -56,7 +56,7 @@ public class Point {
         if (getClass() != other.getClass()) return false;
 
         Point point = (Point) other;
-        if (x == point.x && y == point.y && color.equals(point.color)) return true;
+        if (x == point.x && y == point.y) return true;
         return false;
     }
 }

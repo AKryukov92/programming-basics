@@ -13,6 +13,7 @@
 <h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
 <ol start="6">
 <li>В папке для юнит-тестов создайте класс RangeSuite.</li>
+<li>В файле RangeSuite добавьте директиву using CodeProject;</li>
 <li>В классе RangeSuite создайте юнит-тест HasIntersectionIntsTest.</li>
 <li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
 	<ol type="a">
@@ -25,7 +26,7 @@
 </ol>
 
 <h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
-<ol start="10">
+<ol start="11">
 <li>В классе RangeSuite создайте 2 юнит-теста HasIntersectionIntsWrongLeftTest и HasIntersectionIntsWrongRightTest.</li>
 <li>Они должны проверять факт возникновения исключения ArgumentException.</li>
 <li>В теле метода HasIntersectionIntsWrongLeftTest вызовите метод HasIntersection и укажите такие значения, в которых левый интервал будет некорректным.</li>

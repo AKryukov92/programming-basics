@@ -6,9 +6,33 @@
 <li>Убедитесь, что у класса Range объявлены поля для целочисленных значений "from" и "to".</li>
 <li>В классе Range реализуйте публичный метод, который принимает в качестве аргументов 2 целых числа и называется Range (как класс). У него должно отсутствовать указание типа возвращаемого значения.</li>
 <li>В теле метода нужно инициализировать поля класса значениями, которые были переданы в качестве аргументов. Если конструктору были переданы некорректные данные, нужно выбросить ArgumentException.</li>
-<li>Во всех тестовых методах перенесите инициализацию объектов из метода Init в конструктор.</li>
-<li>В юнит-тестах IntersectsIntWrongLeftTest, IntersectsRangeWrongLeftTest замените ожидаемое исключение на ArgumentException.</li>
-<li>В тестовых методах RangeEqualsItself, RangeNotEqualNull, RangeNotEqualOther, укажите в аргументах конструктора значения 0 и 0.</li>
+<li>Перенесите инициализацию объектов из метода Init в конструктор в тестовых методах:
+	<ol type="a">
+	<li>HasIntersectionRangesTest</li>
+	<li>HasIntersectionRangesAssertionWrongLeft</li>
+	<li>HasIntersectionRangesAssertionWrongRight</li>
+	<li>IntersectsIntsTest</li>
+	<li>IntersectsIntWrongLeftTest</li>
+	<li>IntersectsIntWrongRightTest</li>
+	<li>IntersectsRangeTest</li>
+	<li>IntersectsRangeTestWrongLeftTest</li>
+	<li>IntersectsRangeTestWrongRightTest</li>
+	<li>RangeInstanceComparison</li>
+	<li>Task8265test1</li>
+	<li>Task8265test2</li>
+	<li>Task8265test3</li>
+	<li>Task8265test4</li>
+	<li>Task8265test5</li>
+	</ol>
+</li>
+<li>Укажите в аргументах конструктора значения 0 и 0 в тестовых методах:
+	<ol type="a">
+	<li>InitWrongTest</li>
+	<li>RangeEqualsItself</li>
+	<li>RangeNotEqualNull</li>
+	<li>RangeNotEqualOtherClass</li>
+	</ol>
+</li>
 <li>После запуска тестовых методов, все они должны быть отмечены зеленым знаком в списке методов.</li>
 </ol>
 </div>

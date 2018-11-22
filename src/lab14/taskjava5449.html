@@ -22,34 +22,32 @@
 
 <h4>Проверьте, что эквивалентность точек зависит от значения их полей</h4>
 <ol start="11">
-<li>Добавьте юнит-тест pointInstanceComparison. В нем объявите переменные типа Point: "a1", "a2", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8".</li>
+<li>Добавьте юнит-тест pointInstanceComparison. В нем объявите переменные типа Point: "a1", "a2", "b1", "b2", "b3".</li>
 <li>Инициализируйте эти переменные экземплярами класса Point. Инициализируйте их поля значениями по таблице.
 	<table>
-	<tr><th>Имя переменной</th><th>x</th><th>y</th><th>color</th></tr>
-	<tr><td>a1</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
-	<tr><td>a2</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
-	<tr><td>b1</td>  <td>0</td>   <td>0</td>   <td>green</td></tr>
-	<tr><td>b2</td>  <td>10</td>  <td>3</td>   <td>green</td></tr>
-	<tr><td>b3</td>  <td>1</td>   <td>15</td>  <td>green</td></tr>
-	<tr><td>b4</td>  <td>5</td>   <td>7</td>   <td>red</td></tr>
-	<tr><td>b5</td>  <td>10</td>  <td>15</td>  <td>green</td></tr>
-	<tr><td>b6</td>  <td>10</td>  <td>3</td>   <td>red</td></tr>
-	<tr><td>b7</td>  <td>2</td>   <td>15</td>  <td>red</td></tr>
-	<!-- <tr><td></td>  <td></td>  <td></td>  <td></td></tr> -->
+	<tr><th>Имя переменной</th><th>x</th><th>y</th></tr>
+	<tr><td>a1</td>  <td>10</td>  <td>15</td>  </tr>
+	<tr><td>a2</td>  <td>10</td>  <td>15</td>  </tr>
+	<tr><td>b1</td>  <td>0</td>   <td>0</td>   </tr>
+	<tr><td>b2</td>  <td>10</td>  <td>3</td>   </tr>
+	<tr><td>b3</td>  <td>1</td>   <td>15</td>  </tr>
+	<!-- <tr><td></td>  <td></td>  <td></td>   </tr> -->
 	</table>
 </li>
 <li>Проверьте с помощью метода assertTrue, что все комбинации вызова метода equals для сравнения "a1" и "a2" возвращают истину. Всего 2 сравнения.</li>
-<li>Проверьте с помощью метода assertFalse, что все комбинации вызова метода equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь. Всего 28 сравнений.</li>
+<li>Проверьте с помощью метода assertFalse, что все комбинации вызова метода equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь. Всего 16 сравнений.</li>
 <li>При запуске тестов, юнит-тест pointInstanceComparison должен быть отмечен красным знаком.</li>
 <li>Добавьте в тело метода equals выражение:
 <div class="check_single preformatted">Point point = (Point) other;
 if (x == point.x && y == point.y && color.equals(point.color)) return true;</div>
-<li>Теперь pointEqualsItself при запуске должен быть отмечен зеленым знаком.</li>
+<li>Теперь pointInstanceComparison при запуске должен быть отмечен зеленым знаком.</li>
 </ol>
 
 <h4>Проверьте, что сравнение со значением null возвращает false и не выбрасывает исключение NullPointerException</h4>
 <ol start="18">
-<li>Добавьте юнит-тест pointNotEqualNull. В нем создайте экземпляр класса Point.</li>
+<li>Добавьте юнит-тест pointNotEqualNull.</li>
+<li>В нем объявите переменную типа Point с именем p. Инициализируйте ее экземпляром класса Point.</li>
+<li>Вызовите метод equals и передайте ему в качестве аргумента значение null.</li>
 <li>Проверьте результат вызова equals с помощью метода assertFalse.</li>
 <li>При запуске тестов, юнит-тест pointNotEqualNull должен быть отмечен красным знаком.</li>
 <li>Добавьте в тело метода equals выражение:</li>
@@ -58,7 +56,7 @@ if (x == point.x && y == point.y && color.equals(point.color)) return true;</div
 </ol>
 
 <h4>Проверьте, что сравнение с экземпляром другого класса возвращает false и не выбрасывает никаких исключений</h4>
-<ol start="23">
+<ol start="25">
 <li>Добавьте юнит-тест pointNotEqualOtherClass. В нем создайте экземпляр класса Point.</li>
 <li>Вызовите метод equals и передайте ему в качестве аргументов строку "not a point".</li>
 <li>Проверьте результат вызова с помощью метода assertFalse</li>

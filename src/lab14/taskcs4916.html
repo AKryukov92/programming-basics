@@ -12,7 +12,7 @@
 </ol>
 
 <h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start="6">
+<ol start="7">
 <li>В классе RangeSuite создайте юнит-тест IntersectsRangeTest.</li>
 <li>В теле метода IntersectsRangeTest создайте 2 переменных типа Range: left и right. Инициализируйте их экземплярами класса Range.</li>
 <li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
@@ -28,10 +28,10 @@
 </ol>
 
 <h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
-<ol start="10">
-<li>В классе RangeSuite создайте 2 публичных нестатических метода IntersectsIntWrongLeftTest и IntersectsIntWrongRightTest.</li>
-<li>В теле метода IntersectsIntWrongLeftTest проверьте что метод Intersects выбрасывает исключение InvalidOperationException в случае, когда метод вызван у некорректного экземпляра, а в качестве аргументов был передан корректный.</li>
-<li>В теле метода IntersectsIntWrongRightTest проверьте что метод Intersects выбрасывает исключение ArgumentException в случае, когда метод вызван у корректного экземпляра, а в качестве аргументов был передан некорректный.</li>
+<ol start="11">
+<li>В классе RangeSuite создайте 2 публичных нестатических метода IntersectsRangeWrongLeftTest и IntersectsRangeWrongRightTest.</li>
+<li>В теле метода IntersectsRangeWrongLeftTest проверьте что метод Intersects выбрасывает исключение InvalidOperationException в случае, когда метод вызван у некорректного экземпляра, а в качестве аргументов был передан корректный.</li>
+<li>В теле метода IntersectsRangeWrongRightTest проверьте что метод Intersects выбрасывает исключение ArgumentException в случае, когда метод вызван у корректного экземпляра, а в качестве аргументов был передан некорректный.</li>
 <li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li>
 </ol>
 </div>

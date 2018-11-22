@@ -1,7 +1,7 @@
 <div class="task_block" id="task5449">
 	<div class="task_id">5449</div>
 	<h3>Задача</h3>
-<h4>Переопределите стандартный метод equals для проверки эквивалентности двух экземпляров класса Point.</h4>
+<h4>Переопределите стандартный метод Equals для проверки эквивалентности двух экземпляров класса Point.</h4>
 <ol>
 <li>В классе Point создайте публичный метод Equals и добавьте перед типом возвращаемого значения ключевое слово override.</li>
 <li>Он должен возвращать логическое значение и принимать в качестве аргумента экземпляр типа Object.</li>
@@ -15,50 +15,48 @@
 <li>Проверьте результат вызова Equals с помощью метода IsTrue класса Assert.</li>
 <li>При запуске тестов, юнит-тест PointEqualsItself должен быть отмечен красным знаком.</li>
 <li>Укажите, что имя аргумента типа Object в методе Equals будет "other".</li>
-<li>Добавьте в тело метода equals выражение:
+<li>Добавьте в тело метода Equals выражение:
 <div class="check_single preformatted">if (this == other) return true;</div>
 <li>Теперь PointEqualsItself при запуске должен быть отмечен зеленым знаком.</li>
 </ol>
 
 <h4>Проверьте, что эквивалентность точек зависит от значения их полей</h4>
 <ol start="11">
-<li>Добавьте юнит-тест PointInstanceComparison. В нем объявите переменные типа Point: "a1", "a2", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8".</li>
+<li>Добавьте юнит-тест PointInstanceComparison. В нем объявите переменные типа Point: "a1", "a2", "b1", "b2", "b3".</li>
 <li>Инициализируйте эти переменные экземплярами класса Point. Инициализируйте их поля значениями по таблице.
 	<table>
-	<tr><th>Имя переменной</th><th>x</th><th>y</th><th>color</th></tr>
-	<tr><td>a1</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
-	<tr><td>a2</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
-	<tr><td>b1</td>  <td>0</td>   <td>0</td>   <td>green</td></tr>
-	<tr><td>b2</td>  <td>10</td>  <td>3</td>   <td>green</td></tr>
-	<tr><td>b3</td>  <td>1</td>   <td>15</td>  <td>green</td></tr>
-	<tr><td>b4</td>  <td>5</td>   <td>7</td>   <td>red</td></tr>
-	<tr><td>b5</td>  <td>10</td>  <td>15</td>  <td>green</td></tr>
-	<tr><td>b6</td>  <td>10</td>  <td>3</td>   <td>red</td></tr>
-	<tr><td>b7</td>  <td>2</td>   <td>15</td>  <td>red</td></tr>
-	<!-- <tr><td></td>  <td></td>  <td></td>  <td></td></tr> -->
+	<tr><th>Имя переменной</th><th>x</th><th>y</th></tr>
+	<tr><td>a1</td>  <td>10</td>  <td>15</td></tr>
+	<tr><td>a2</td>  <td>10</td>  <td>15</td></tr>
+	<tr><td>b1</td>  <td>0</td>   <td>0</td> </tr>
+	<tr><td>b2</td>  <td>10</td>  <td>3</td> </tr>
+	<tr><td>b3</td>  <td>1</td>   <td>15</td></tr>
+	<!-- <tr><td></td>  <td></td>  <td></td> </tr> -->
 	</table>
 </li>
 <li>Проверьте с помощью метода IsTrue, что все комбинации вызова метода Equals для сравнения "a1" и "a2" возвращают истину. Всего 2 сравнения.</li>
-<li>Проверьте с помощью метода IsFalse, что все комбинации вызова метода Equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь. Всего 28 сравнений.</li>
+<li>Проверьте с помощью метода IsFalse, что все комбинации вызова метода Equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь. Всего 16 сравнений.</li>
 <li>При запуске тестов, юнит-тест PointInstanceComparison должен быть отмечен красным знаком.</li>
-<li>Добавьте в тело метода equals выражение:
+<li>Добавьте в тело метода Equals выражение:
 <div class="check_single preformatted">Point point = (Point) other;
 if (x == point.x && y == point.y) return true;</div>
-<li>Теперь PointEqualsItself при запуске должен быть отмечен зеленым знаком.</li>
+<li>Теперь PointInstanceComparison при запуске должен быть отмечен зеленым знаком.</li>
 </ol> 
 
 <h4>Проверьте, что сравнение со значением null возвращает false и не выбрасывает исключение NullPointerException</h4>
 <ol start="18">
-<li>Добавьте юнит-тест PointNotEqualNull. В нем создайте экземпляр класса Point.</li>
+<li>Добавьте юнит-тест PointNotEqualNull.</li>
+<li>В нем объявите переменную типа Point с именем p. Инициализируйте ее экземпляром класса Point.</li>
+<li>Вызовите метод Equals и передайте ему в качестве аргумента значение null.</li>
 <li>Проверьте результат вызова Equals с помощью метода IsFalse.</li>
 <li>При запуске тестов, юнит-тест PointNotEqualNull должен быть отмечен красным знаком.</li>
-<li>Добавьте в тело метода equals выражение:</li>
+<li>Добавьте в тело метода Equals выражение:</li>
 <div class="check_single preformatted">if (other == null) return false;</div>
 <li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
 </ol>
 
 <h4>Проверьте, что сравнение с экземпляром другого класса возвращает false и не выбрасывает никаких исключений</h4>
-<ol start="23">
+<ol start="25">
 <li>Добавьте юнит-тест PointNotEqualOtherClass. В нем создайте экземпляр класса Point.</li>
 <li>Вызовите метод Equals и передайте ему в качестве аргументов строку "not a point".</li>
 <li>Проверьте результат вызова с помощью метода IsFalse</li>

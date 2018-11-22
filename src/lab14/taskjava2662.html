@@ -1,16 +1,42 @@
 <div class="task_block" id="task2662">
 	<div class="task_id">2662</div>
 	<h3>Задача</h3>
-	<h4>Реализуйте сеттеры для полей класса Range</h4>
+	<h4>Реализуйте сеттер для полей класса Range</h4>
 <ol>
 <li>Убедитесь, что у класса Range объявлены поля для целочисленных значений "from" и "to".</li>
-<li>В классе Range реализуйте метод init ("инициализировать"). Он принимает 2 целых числа и ничего не возвращает. В теле метода инициализируйте поля класса значениями из аргументов.</li>
-<li>В тестовых методах hasIntersectionRangesTest, hasIntersectionRangesWrongLeftTest, hasIntersectionRangesWrongRightTest, intersectsIntsTest, intersectsIntWrongLeftTest, intersectsIntsWrongRightTest, intersectsRangeTest, intersectsRangeWrongLeftTest, intersectsRangesWrongRightTest замените инициализацию полей класса на вызов метода init.</li>
-<li>Проверьте, что передача некорректных данных в метод init приводит к выбрасыванию исключения IllegalArgumentException.</li>
+<li>В классе Range замените модификатор доступа к полям "from" и "to". Вместо "public" укажите "private".</li>
+<li>В классе Range реализуйте метод init. Он принимает 2 целых числа и ничего не возвращает. В теле метода init инициализируйте поля класса значениями из аргументов.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Замените инициализацию полей класса на вызов метода init в тестовых методах:
+	<ol type="a">
+	<li>hasIntersectionRangesTest</li>
+	<li>hasIntersectionRangesWrongLeftTest</li>
+	<li>hasIntersectionRangesWrongRightTest</li>
+	<li>intersectsIntsTest</li>
+	<li>intersectsIntsWrongRightTest</li>
+	<li>intersectsRangeTest</li>
+	<li>intersectsRangesWrongRightTest</li>
+	</ol>
+</li>
+<li>Измените тип ожидаемого исключения с IllegalStateException на IllegalArgumentException в юнит-тестах:
+	<ol type="a">
+	<li>intersectsIntWrongLeftTest</li>
+	<li>intersectsRangeWrongLeftTest</li>
+	</ol>
+</li>
+<li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+
+<h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
+<ol start="8">
+<li>В классе RangeSuite создайте юнит-тест initWrongTest.</li>
+<li>В теле юнит-теста создайте экземпляр класса Range.</li>
+<li>Вызовите метод init и передайте ему в качестве аргументов значения 79 и 73.</li>
+<li>Проверьте, что в юнит-тесте возникло исключение IllegalArgumentException.</li>
 </ol>
 
 <h4>Переопредилите стандартный метод equals для проверки эквивалентности двух экземпляров класса Range.</h4>
-<ol start="5">
+<ol start="12">
 <li>В классе Range создайте публичный метод equals и пометьте его аннотацией @Override.</li>
 <li>Он должен возвращать логическое значение и принимать в качестве аргумента экземпляр типа Object.</li>
 <li>Метод equals должен возвращать истину при сравнении экземпляра класса с самим собой.</li>

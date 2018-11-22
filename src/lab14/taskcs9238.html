@@ -1,0 +1,31 @@
+<div class="task_block" id="task9238">
+	<div class="task_id">9238</div>
+	<h3>Задача</h3>
+	<h4>Измените метод Equals так, чтобы он учитывал цвет точки.</h4>
+<div class="task_desc">Эквивалентными должны считаться точки, которые имеют одинаковые координаты и одинаковый цвет.
+<ol>
+<li>Добавьте в юнит-тест PointInstanceComparison точки b4, b5, b6, b7.</li>
+<li>Инициализируйте поля точек согласно таблице:
+	<table>
+	<tr><th colspan="4">Данные для проверки</th></tr>
+	<tr><th>Имя переменной</th><th>x</th><th>y</th><th>color</th></tr>
+	<tr><td>a1</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
+	<tr><td>a2</td>  <td>10</td>  <td>15</td>  <td>red</td></tr>
+	<tr><td>b1</td>  <td>0</td>   <td>0</td>   <td>green</td></tr>
+	<tr><td>b2</td>  <td>10</td>  <td>3</td>   <td>green</td></tr>
+	<tr><td>b3</td>  <td>1</td>   <td>15</td>  <td>green</td></tr>
+	<tr><td>b4</td>  <td>5</td>   <td>7</td>   <td>red</td></tr>
+	<tr><td>b5</td>  <td>10</td>  <td>15</td>  <td>green</td></tr>
+	<tr><td>b6</td>  <td>10</td>  <td>3</td>   <td>red</td></tr>
+	<tr><td>b7</td>  <td>2</td>   <td>15</td>  <td>red</td></tr>
+	<!-- <tr><td></td>  <td></td>  <td></td>  <td></td></tr> -->
+	</table>
+</li>
+<li>Проверьте с помощью метода IsFalse, что все комбинации вызова метода Equals для сравнения каждой из точек "b" и каждой из точек "a" возвращают ложь. Всего 28 сравнений.</li>
+<li>Запустите юнит-тест PointInstanceComparison и убедитесь, что он отмечен красным знаком.</li>
+<li>Измените реализацию метода Equals так, чтобы он возвращал истину при равных координатах и одинаковых цветах.</li>
+<li>Теперь юнит-тест PointInstanceComparison при запуске должен быть отмечен зеленым знаком.</li>
+<li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
+</ol>
+</div>
+</div>

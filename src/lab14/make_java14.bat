@@ -55,9 +55,9 @@ type taskjava9914.html>>%filename%
 type taskjava4916.html>>%filename%
 type task2809.html>>%filename%
 type taskjava5449.html>>%filename%
-type task9238.html>>%filename%
+type taskjava9238.html>>%filename%
 type taskjava2662.html>>%filename%
-type task8265.html>>%filename%
+type taskjava8265.html>>%filename%
 type task7301.html>>%filename%
 type taskjava2000.html>>%filename%
 type taskjava5421.html>>%filename%

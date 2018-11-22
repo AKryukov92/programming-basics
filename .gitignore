@@ -54,6 +54,10 @@ php/*.pdf
 решения/cs/MethodTests/bin
 решения/cs/CodeProject/obj
 решения/cs/CodeProject/bin
+решения/Stage2 cs/*/obj
+решения/Stage2 cs/*/bin
+решения/Stage2 cs/packages/*
+решения/Stage2 cs/.vs/*
 !решения/cs/packages/repositories.config
 *.suo
 java/postcard/out

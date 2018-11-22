@@ -55,9 +55,9 @@ type taskcs9914.html>>%filename%
 type taskcs4916.html>>%filename%
 type task2809.html>>%filename%
 type taskcs5449.html>>%filename%
-type task9238.html>>%filename%
+type taskcs9238.html>>%filename%
 type taskcs2662.html>>%filename%
-type task8265.html>>%filename%
+type taskcs8265.html>>%filename%
 type task7301.html>>%filename%
 type taskcs2000.html>>%filename%
 type taskcs5421.html>>%filename%
