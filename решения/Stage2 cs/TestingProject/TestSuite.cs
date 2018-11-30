@@ -206,10 +206,14 @@ namespace TestingProject
         [TestMethod]
         public void Task9020test()
         {
-            Assert.AreEqual(23.4307, Methods.Task9020(0), 0.0001);
-            Assert.AreEqual(25.0998, Methods.Task9020(-9), 0.0001);
-            Assert.AreEqual(0, Methods.Task9020(61), 0.0001);
-            Assert.AreEqual(3, Methods.Task9020(60), 0.0001);
+            double result = Methods.Task9020(0);
+            Assert.AreEqual(23.4307, result, 0.0001);
+            result = Methods.Task9020(-9);
+            Assert.AreEqual(25.0998, result, 0.0001);
+            result = Methods.Task9020(61);
+            Assert.AreEqual(0, result, 0.0001);
+            result = Methods.Task9020(60);
+            Assert.AreEqual(3, result, 0.0001);
         }
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]

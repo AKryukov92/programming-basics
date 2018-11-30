@@ -17,6 +17,10 @@ namespace Task6882
             int i = 0;
             try
             {
+                //Исключение может возникнуть при создании класса для чтения файла
+                //В этот момент происходит открытие файла
+                //Если папки с файлом нет, то возникает DirectoryNotFoundException
+                //Если папка есть, а файла в ней нет - FileNotFoundException
                 StreamReader reader = new StreamReader(filename);
                 if (reader.EndOfStream)
                 {
@@ -29,6 +33,7 @@ namespace Task6882
                 while (!reader.EndOfStream)
                 {
                     row = reader.ReadLine();
+                    //Кроме того, может возникнуть исключение при чтении данных
                     int current = int.Parse(row);
                     if (current < min)
                     {

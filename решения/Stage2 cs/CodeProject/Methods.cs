@@ -194,9 +194,12 @@ namespace CodeProject
         {
             if (b > 0)
             {
-                throw new ArgumentException("Подкоренное выражение должно быть неотрицательно");
+                ArgumentException exception = new ArgumentException("Подкоренное выражение должно быть неотрицательно");
+                throw exception;
             }
-            return a * Math.Sqrt(-7 * b);
+            double result;
+            result = a * Math.Sqrt(-7 * b);
+            return result;
         }
 
         public static double Task3943(int x, int y)
@@ -212,12 +215,13 @@ namespace CodeProject
             double result = -5 * Math.Sqrt(x + Math.Sqrt(y));
             return result;
         }
-
+        
         public static double Task9020(int x)
         {
             if (x > 61)
             {
-                throw new ArgumentException("Подкоренное выражение должно быть неотрицательным");
+                ArgumentException exception = new ArgumentException("Подкоренное выражение должно быть неотрицательным");
+                throw exception;
             }
             double result = 3 * Math.Sqrt(61 - x);
             return result;
