@@ -5,11 +5,11 @@ package Lab14.stage2;
  * 05.06.2018
  */
 public class Point {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private String color;
 
-    public void setCoordinates(int x, int y){
+    public void setCoordinates(double x, double y){
         this.x = x;
         this.y = y;
     }
@@ -22,9 +22,9 @@ public class Point {
         return color;
     }
 
-    public static double distanceBetween(int ax, int ay, int bx, int by) {
-        int dx = ax - bx;
-        int dy = ay - by;
+    public static double distanceBetween(double ax, double ay, double bx, double by) {
+        double dx = ax - bx;
+        double dy = ay - by;
         return Math.sqrt(dx * dx + dy * dy);
     }
 

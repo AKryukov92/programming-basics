@@ -5,17 +5,17 @@ package Lab14.stage3;
  * 05.06.2018
  */
 public class Point {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private String color;
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
         this.color = "white";
     }
 
-    public Point(int x, int y, String color) {
+    public Point(double x, double y, String color) {
         this.x = x;
         this.y = y;
         this.color = color;
@@ -29,9 +29,9 @@ public class Point {
         return color;
     }
 
-    public static double distanceBetween(int ax, int ay, int bx, int by) {
-        int dx = ax - bx;
-        int dy = ay - by;
+    public static double distanceBetween(double ax, double ay, double bx, double by) {
+        double dx = ax - bx;
+        double dy = ay - by;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
@@ -69,11 +69,11 @@ public class Point {
 
     @Override
     public int hashCode() {
-        return x + 31 * y;
+        return (int) (x + 31 * y);
     }
 
     @Override
     public String toString() {
-        return "(" + x + ";" + y + ";" + color + ")";
+        return String.format("(%.0f;%.0f;%s)", x, y, color);
     }
 }

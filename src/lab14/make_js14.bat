@@ -25,10 +25,10 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#task5789" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task6011" class="example"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task8403" class="example"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task3185" class="example"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task6589"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6037"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task6589"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task6037"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task8403" class="example"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task3185" class="example"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task9914"^>№ 7^</a^>^</li^> ^
  ^<li^>^<a href="#task4916"^>№ 8^</a^>^</li^> ^
  ^<li^>^<a href="#task7301" class="example"^>№ 9^</a^>^</li^> ^
@@ -38,10 +38,11 @@ echo ^<div class="nav"^> ^
 
 type taskjs5789.html>>%filename%
 type taskjs6011.html>>%filename%
-type taskjs8403.html>>%filename%
-type taskjs3185.html>>%filename%
 type taskjs6589.html>>%filename%
 type taskjs6037.html>>%filename%
+type taskjs8403.html>>%filename%
+REM type taskjs4913.html>>%filename% надо просто доделать. Пока отложил
+type taskjs3185.html>>%filename%
 type taskjs9914.html>>%filename%
 type taskjs4916.html>>%filename%
 REM type taskjs2809.html>>%filename% пропущены, потому что equals не требуется для понимания коллекций 

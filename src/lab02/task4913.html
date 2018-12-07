@@ -1,0 +1,123 @@
+<div id="task4913" class="task_block empty_on_print">
+	<div class="task_id">4913</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу. Координата X<sub>b</sub> новой точки вычисляется по формуле <formula>X<sub>a</sub> + distance * cos(angleRad)</formula>. Координата Y<sub>b</sub> новой точки вычисляется по формуле <formula>Y<sub>a</sub> + distance * sin(angleRad)</formula>. Выведите на экран приращение координат и координаты X<sub>b</sub> и Y<sub>b</sub> новой точки с точностью 4 знака после запятой.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат (result)</th>
+		</tr>
+		<tr>
+			<th>X<sub>a</sub></th>
+			<th>Y<sub>a</sub></th>
+			<th>distance</th>
+			<th>angleDeg</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>5</td>
+			<td>30</td>
+			<td class="preformatted">Приращение координат: &Delta;x = 4.3301; &Delta;y = 2.5000
+Координаты второй точки (5.3301;3.5000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>11</td>
+			<td>13</td>
+			<td>110</td>
+			<td class="preformatted">Приращение координат: &Delta;x = -4.4463; &Delta;y = 12.2160
+Координаты второй точки (2.5537;23.2160)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>17</td>
+			<td>19</td>
+			<td>23</td>
+			<td>230</td>
+			<td class="preformatted">Приращение координат: &Delta;x = -14.7841; &Delta;y = -17.6190
+Координаты второй точки (2.2159;1.3810)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>29</td>
+			<td>31</td>
+			<td>3</td>
+			<td>290</td>
+			<td class="preformatted">Приращение координат: &Delta;x = 1.0261; &Delta;y = -2.8191
+Координаты второй точки (30.0261;28.1809)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>33</td>
+			<td>37</td>
+			<td>10</td>
+			<td>90</td>
+			<td class="preformatted">Приращение координат: &Delta;x = 0.0000; &Delta;y = 10.0000
+Координаты второй точки (33.0000;47.0000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>33</td>
+			<td>37</td>
+			<td>10</td>
+			<td>180</td>
+			<td class="preformatted">Приращение координат: &Delta;x = -10.0000; &Delta;y = 0.0000
+Координаты второй точки (23.0000;37.0000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>33</td>
+			<td>37</td>
+			<td>10</td>
+			<td>270</td>
+			<td class="preformatted">Приращение координат: &Delta;x = -0.0000; &Delta;y = -10.0000
+Координаты второй точки (33.0000;27.0000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>33</td>
+			<td>37</td>
+			<td>10</td>
+			<td>360</td>
+			<td class="preformatted">Приращение координат: &Delta;x = 10.0000; &Delta;y = -0.0000
+Координаты второй точки (43.0000;37.0000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>10</td>
+			<td>0</td>
+			<td class="preformatted">Приращение координат: &Delta;x = 10.0000; &Delta;y = 0.0000
+Координаты второй точки (11.0000;1.0000)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>-5</td>
+			<td>45</td>
+			<td class="preformatted">Горизонтальное проложение линии должно быть положительно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>0</td>
+			<td>45</td>
+			<td class="preformatted">Горизонтальное проложение линии должно быть положительно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td>10</td>
+			<td>-5</td>
+			<td class="preformatted">Угол должен быть неотрицательным</td>
+		</tr>
+	</table>
+</div>

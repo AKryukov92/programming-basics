@@ -5,12 +5,12 @@ package Lab14.stage1;
  * 05.06.2018
  */
 public class Point {
-    public int x;
-    public int y;
+    public double x;
+    public double y;
 
-    public static double distanceBetween(int ax, int ay, int bx, int by) {
-        int dx = ax - bx;
-        int dy = ay - by;
+    public static double distanceBetween(double ax, double ay, double bx, double by) {
+        double dx = ax - bx;
+        double dy = ay - by;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
