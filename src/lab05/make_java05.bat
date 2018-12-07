@@ -34,12 +34,12 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task1945"^>№ 9^</a^>^</li^> ^
  ^<li^>^<a href="#task1186"^>№ 10^</a^>^</li^> ^
  ^<li^>^<a href="#task8715" class="example"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task8518" class="supervision"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task4847"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task6589"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task7991"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task6291"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task3770"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task4847"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task6589"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task7991"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task6291"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task3770"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task3864"^>№ 17^</a^>^</li^> ^
  ^<li^>^<a href="#task7178"^>№ 18^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
@@ -52,15 +52,16 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task7250"^>№ 25^</a^>^</li^> ^
  ^<li^>^<a href="#task6740"^>№ 26^</a^>^</li^> ^
  ^<li^>^<a href="#task9038"^>№ 27^</a^>^</li^> ^
- ^<li^>^<a href="#task1292"^>№ 28^</a^>^</li^> ^
- ^<li^>^<a href="#task4527"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#task6556"^>№ 30^</a^>^</li^> ^
- ^<li^>^<a href="#task5635"^>№ 31^</a^>^</li^> ^
- ^<li^>^<a href="#task3878"^>№ 32^</a^>^</li^> ^
- ^<li^>^<a href="#task1217"^>№ 33^</a^>^</li^> ^
- ^<li^>^<a href="#task1438"^>№ 34^</a^>^</li^> ^
- ^<li^>^<a href="#task2153"^>№ 35^</a^>^</li^> ^
- ^<li^>^<a href="#task7937"^>№ 36^</a^>^</li^> ^
+ ^<li^>^<a href="#task8518" class="example"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task1292"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task4527"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task6556"^>№ 31^</a^>^</li^> ^
+ ^<li^>^<a href="#task5635"^>№ 32^</a^>^</li^> ^
+ ^<li^>^<a href="#task3878"^>№ 33^</a^>^</li^> ^
+ ^<li^>^<a href="#task1217"^>№ 34^</a^>^</li^> ^
+ ^<li^>^<a href="#task1438"^>№ 35^</a^>^</li^> ^
+ ^<li^>^<a href="#task2153"^>№ 36^</a^>^</li^> ^
+ ^<li^>^<a href="#task7937"^>№ 37^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -80,13 +81,12 @@ type task1945.html>>%filename%
 type task1186.html>>%filename%
 type task8715.html>>%filename%
 type link_c4_p19.3.html>>%filename%
-type task8518.html>>%filename%
-type link_c4_p15.2.html>>%filename%
 type task4847.html>>%filename%
 type task6589.html>>%filename%
 type task7991.html>>%filename%
 type task6291.html>>%filename%
 type task3770.html>>%filename%
+type task3864.html>>%filename%
 type task7178.html>>%filename%
 type task3883.html>>%filename%
 type task1999.html>>%filename%
@@ -97,6 +97,8 @@ type task7088.html>>%filename%
 type task7250.html>>%filename%
 type task6740.html>>%filename%
 type task9038.html>>%filename%
+type task8518.html>>%filename%
+type link_c4_p15.2.html>>%filename%
 type task1292.html>>%filename%
 type task4527.html>>%filename%
 type task6556.html>>%filename%

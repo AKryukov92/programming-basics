@@ -55,22 +55,38 @@ public class Methods {
         return p;
     }
 
+    public static void backwardTask(int ax, int ay, int bx, int by){
+        Point src = new Point(), dest = new Point();
+        src.x = ax;
+        src.y = ay;
+        dest.x = bx;
+        dest.y = by;
+        Direction dir = backwardTask(src, dest);
+        System.out.printf("Горизонтальное проложение %.4f\nДирекционный угол %.4f\n", dir.distance, dir.angle);
+    }
+
     public static Direction backwardTask(Point src, Point dest) {
         double dx = dest.x - src.x;
         double dy = dest.y - src.y;
         Direction dir = new Direction();
         dir.distance = Math.sqrt(dx * dx + dy * dy);
 
-        double rumb = Math.toDegrees(Math.atan(dy / dx));
-        if (dx >= 0 && dy >= 0){
+        double rumb = Math.toDegrees(Math.atan(Math.abs(dy / dx)));
+        int quarter;
+        if (dx >= 0 && dy > 0){
             dir.angle = rumb;
+            quarter = 1;
         } else if (dx < 0 && dy >= 0){
-            dir.angle = 180 + rumb;
-        } else if (dx < 0 && dy < 0){
+            dir.angle = 180 - rumb;
+            quarter = 2;
+        } else if (dx <= 0 && dy < 0){
             dir.angle = rumb + 180;
+            quarter = 3;
         } else {
-            dir.angle = 360 + rumb;
+            dir.angle = 360 - rumb;
+            quarter = 4;
         }
+        System.out.printf("Угол в %d четверти\n", quarter);
         return dir;
     }
 }

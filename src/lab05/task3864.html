@@ -1,0 +1,140 @@
+<div id="task3864" class="task_block empty_on_print">
+	<div class="task_id">3864</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, а также X<sub>b</sub> и Y<sub>b</sub> точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах. 
+	<ul>
+	<li>Вычислите приращение координат. <formula>&Delta;x = X<sub>b</sub> - X<sub>a</sub></formula>; <formula>&Delta;y = Y<sub>b</sub> - Y<sub>a</sub></formula></li>
+	<li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>&Delta;Y</numerator><denominator>&Delta;X</denominator></fraction></formula>. Арктангенс из частного по модулю.</li>
+	<li>Выберите формулу для вычисления угла по знакам приращения координат и определите дирекционный угол по ней
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Четверть</th>
+			<th colspan="2">Знаки приращения координат</th>
+			<th rowspan="2">Связь между румбами и дирекционными углами</th>
+		</tr>
+		<tr>
+			<th>&Delta;X</th>
+			<th>&Delta;Y</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>0+</td>
+			<td>+</td>
+			<td>angle = r</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>-</td>
+			<td>0+</td>
+			<td>angle = 180 - r</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>-0</td>
+			<td>-</td>
+			<td>angle = 180 + r</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>+</td>
+			<td>-0</td>
+			<td>angle = 360 - r</td>
+		</tr>
+	</table></li>
+	<li>Определите горизонтальное проложение (расстояние между точками)</li>
+	</ul>
+	Выведите на экран четверть угла, горизонтальное проложение и дирекционный угол в градусах, с точностью до 4 знаков после запятой.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат (result)</th>
+		</tr>
+		<tr>
+			<th>X<sub>a</sub></th>
+			<th>Y<sub>a</sub></th>
+			<th>X<sub>b</sub></th>
+			<th>Y<sub>b</sub></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10</td>
+			<td>10</td>
+			<td>13</td>
+			<td>14</td>
+			<td class="preformatted">Угол в 1 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 53,1301</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>24</td>
+			<td>4</td>
+			<td>3</td>
+			<td>17</td>
+			<td class="preformatted">Угол в 2 четверти
+Горизонтальное проложение 24,6982
+Дирекционный угол 148,2405</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>23</td>
+			<td>25</td>
+			<td>12</td>
+			<td>16</td>
+			<td class="preformatted">Угол в 3 четверти
+Горизонтальное проложение 14,2127
+Дирекционный угол 219,2894</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>11</td>
+			<td>13</td>
+			<td>5</td>
+			<td class="preformatted">Угол в 4 четверти
+Горизонтальное проложение 11,6619
+Дирекционный угол 329,0362</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td>5</td>
+			<td>10</td>
+			<td class="preformatted">Угол в 1 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 90,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10</td>
+			<td>5</td>
+			<td>5</td>
+			<td>5</td>
+			<td class="preformatted">Угол в 2 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 180,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>10</td>
+			<td>5</td>
+			<td>5</td>
+			<td class="preformatted">Угол в 3 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 270,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td>10</td>
+			<td>5</td>
+			<td class="preformatted">Угол в 4 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 360,0000</td>
+		</tr>
+	</table>
+</div>

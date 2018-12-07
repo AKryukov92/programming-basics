@@ -107,6 +107,11 @@ fraction {
 	vertical-align:middle;
 	font-weight:bold;
 }
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
 numerator {
 	display:block;
 	border-bottom:2px solid black;

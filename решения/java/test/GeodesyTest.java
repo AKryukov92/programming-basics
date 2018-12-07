@@ -14,10 +14,22 @@ public class GeodesyTest {
         Methods.forwardTask(33,37, 10, 180);
         Methods.forwardTask(33,37, 10, 270);
         Methods.forwardTask(33,37, 10, 360);
+        Methods.forwardTask(1,1,10,0);
         Methods.forwardTask(1,1, -5, 45);
         Methods.forwardTask(1,1,0, 45);
         Methods.forwardTask(1,1,10,-5);
-        Methods.forwardTask(1,1,10,0);
+    }
+
+    @Test
+    public void task3864(){
+        Methods.backwardTask(10, 10, 13, 14);
+        Methods.backwardTask(24, 4, 3, 17);
+        Methods.backwardTask(23, 25, 12, 16);
+        Methods.backwardTask(3, 11, 13, 5);
+        Methods.backwardTask(5,5,5,10);
+        Methods.backwardTask(10,5,5,5);
+        Methods.backwardTask(5,10,5,5);
+        Methods.backwardTask(5,5,10,5);
     }
 
     @Test
