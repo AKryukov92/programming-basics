@@ -29,21 +29,22 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task6037"^>№ 4^</a^>^</li^> ^
  ^<li^>^<a href="#task3864"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task4913"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task8403" class="example"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task3185" class="example"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task9914"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task4916"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task2809" class="example"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task5449" class="example"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task9238" class="supervision"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task2662"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task8265"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task7301" class="example"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task2000"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task5421" class="example"^>№ 18^</a^>^</li^> ^
- ^<li^>^<a href="#task9713"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task5032" class="example"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task3567"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task6522"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task8403" class="example"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task3185" class="example"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task9914"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task4916"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task2809" class="example"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task5449" class="example"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task9238" class="supervision"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task2662"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task8265"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task7301" class="example"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task2000"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task5421" class="example"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task9713"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task5032" class="example"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task3567"^>№ 22^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -53,6 +54,7 @@ type taskcs6589.html>>%filename%
 type taskcs6037.html>>%filename%
 type taskcs3864.html>>%filename%
 type taskcs4913.html>>%filename%
+type taskcs6522.html>>%filename%
 type task8403.html>>%filename%
 type task3185.html>>%filename%
 type taskcs9914.html>>%filename%
