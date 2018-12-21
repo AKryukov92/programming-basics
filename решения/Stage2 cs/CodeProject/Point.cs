@@ -10,14 +10,6 @@ namespace CodeProject
     {
         private int x;
         private int y;
-        private String color;
-
-        public Point(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-            this.color = "white";
-        }
 
         public static double DistanceBetween(int ax, int ay, int bx, int by)
         {
@@ -28,7 +20,17 @@ namespace CodeProject
 
         public static double DistanceBetween(Point a, Point b)
         {
-            return DistanceBetween(a.x, a.y, b.x, b.y);
+            int dx = a.x - b.x;
+            int dy = a.y - b.y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+        private String color;
+
+        public Point(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+            this.color = "white";
         }
 
         public double DistanceTo(int bx, int by)
