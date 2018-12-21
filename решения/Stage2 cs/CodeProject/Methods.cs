@@ -279,5 +279,56 @@ namespace CodeProject
             }
             return true;
         } 
+
+        public static Direction BackwardTask(Point src, Point dest)
+        {
+            double dx = dest.GetX() - src.GetX();
+            double dy = dest.GetY() - src.GetY();
+            Direction dir = new Direction(0, 0);
+            dir.distance = Math.Sqrt(dx * dx + dy * dy);
+            
+            double rumb = Math.Atan(Math.Abs(dy / dx)) / Math.PI * 180;
+            int quarter;
+            if (dx >= 0 && dy > 0)
+            {
+                dir.angle = rumb;
+                quarter = 1;
+            }
+            else if (dx < 0 && dy >= 0)
+            {
+                dir.angle = 180 - rumb;
+                quarter = 2;
+            }
+            else if (dx <= 0 && dy < 0)
+            {
+                dir.angle = rumb + 180;
+                quarter = 3;
+            }
+            else
+            {
+                dir.angle = 360 - rumb;
+                quarter = 4;
+            }
+            Console.WriteLine("Угол в {0} четверти\n", quarter);
+            return dir;
+        }
+
+        public static Point ForwardTask(Point src, Direction direction)
+        {
+            if (direction.distance <= 0)
+            {
+                throw new ArgumentException("Горизонтальное проложение линии должно быть положительно");
+            }
+            if (direction.angle < 0)
+            {
+                throw new ArgumentException("Угол должен быть неотрицательным");
+            }
+            double dx = direction.distance * Math.Cos(direction.angle * Math.PI / 180);
+            double dy = direction.distance * Math.Sin(direction.angle * Math.PI / 180);
+            Console.WriteLine("Приращение координат:");
+            Console.WriteLine("\u0394x = {0:F4}\n\u0394y = {0:F4}\n", dx, dy);
+            Point p = new Point(src.GetX() + dx, src.GetY() + dy);
+            return p;
+        }
     }
 }

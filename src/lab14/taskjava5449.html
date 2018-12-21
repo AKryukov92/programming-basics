@@ -63,6 +63,7 @@ if (x == point.x && y == point.y && color.equals(point.color)) return true;</div
 <li>При запуске тестов, юнит-тест pointNotEqualOtherClass должен быть отмечен красным знаком.</li>
 <li>Добавьте в тело метода equals выражение:</li>
 <div class="check_single preformatted">if (getClass() != other.getClass()) return false;</div>
+<li>Тест pointNotEqualOtherClass может быть провален из за возникшего исключения java.lang.ClassCastException. В этом случае нужно изменить порядок действий.</li>
 <li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
 </ol>
 </div>

@@ -8,32 +8,42 @@ namespace CodeProject
 {
     public class Point
     {
-        private int x;
-        private int y;
-
-        public static double DistanceBetween(int ax, int ay, int bx, int by)
-        {
-            int dx = ax - bx;
-            int dy = ay - by;
-            return Math.Sqrt(dx * dx + dy * dy);
-        }
-
-        public static double DistanceBetween(Point a, Point b)
-        {
-            int dx = a.x - b.x;
-            int dy = a.y - b.y;
-            return Math.Sqrt(dx * dx + dy * dy);
-        }
+        private double x;
+        private double y;
         private String color;
 
-        public Point(int x, int y)
+        public Point(double x, double y)
         {
             this.x = x;
             this.y = y;
             this.color = "white";
         }
 
-        public double DistanceTo(int bx, int by)
+        public double GetX()
+        {
+            return x;
+        }
+
+        public double GetY()
+        {
+            return y;
+        }
+
+        public static double DistanceBetween(double ax, double ay, double bx, double by)
+        {
+            double dx = ax - bx;
+            double dy = ay - by;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        public static double DistanceBetween(Point a, Point b)
+        {
+            double dx = a.x - b.x;
+            double dy = a.y - b.y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        public double DistanceTo(double bx, double by)
         {
             return DistanceBetween(this.x, this.y, bx, by);
         }
@@ -43,7 +53,7 @@ namespace CodeProject
             return DistanceBetween(this.x, this.y, dest.x, dest.y);
         }
 
-        public void SetCoordinates(int x, int y)
+        public void SetCoordinates(double x, double y)
         {
             this.x = x;
             this.y = y;

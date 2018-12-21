@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Direction.cs" />
     <Compile Include="Range.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Point.cs" />
