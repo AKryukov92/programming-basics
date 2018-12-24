@@ -24,38 +24,43 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#task5087" class="example"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task1056" class="example"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task9990"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task7738"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task8418"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task9512" class="example"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task9924"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task7657"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task8258" class="example"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task7186"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task1457"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task6876"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task5108"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task3956" class="example"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task2033"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task6981"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task1753"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task8418"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task8258"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task7186"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task1457"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task6876"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task4568" class="example"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task9990"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task9512" class="example"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task9924"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task1056" class="example"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task7738"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task7657"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task5108"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task3956" class="example"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task2033"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task6981"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task1753"^>№ 18^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
 type task5087.html>>%filename%
-type task1056.html>>%filename%
-type task9990.html>>%filename%
-type task7738.html>>%filename%
 type taskjava8418.html>>%filename%
-type taskjava9512.html>>%filename%
-type task9924.html>>%filename%
-type task7657.html>>%filename%
-type task8258.html>>%filename%
-type task7186.html>>%filename%
+type taskjava8258.html>>%filename%
+type taskjava7186.html>>%filename%
 type task1457.html>>%filename%
 type task6876.html>>%filename%
+
+type task4568.html>>%filename%
+type task9990.html>>%filename%
+type taskjava9512.html>>%filename%
+type task9924.html>>%filename%
+
+type task1056.html>>%filename%
+type task7738.html>>%filename%
+type task7657.html>>%filename%
 type task5108.html>>%filename%
+
 type task3956.html>>%filename%
 type task2033.html>>%filename%
 type task6981.html>>%filename%

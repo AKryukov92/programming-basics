@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4101DA3D-32C6-4D02-AB10-2A02B0DE4BEC}</ProjectGuid>
+    <ProjectGuid>{B3F8B69E-C52A-48D8-B3EA-D4221DD21F72}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CodeProject</RootNamespace>
-    <AssemblyName>CodeProject</AssemblyName>
+    <RootNamespace>Lab15Task5087</RootNamespace>
+    <AssemblyName>Lab15Task5087</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comparator7186.cs" />
-    <Compile Include="Comparator8258.cs" />
-    <Compile Include="Direction.cs" />
-    <Compile Include="Range.cs" />
-    <Compile Include="Methods.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

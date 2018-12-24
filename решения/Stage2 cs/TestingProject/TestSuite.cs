@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CodeProject;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TestingProject
 {
@@ -321,6 +323,31 @@ namespace TestingProject
         public void Task5170assertion()
         {
             Methods.Task5170(-10);
+        }
+
+        [TestMethod]
+        public void Task8418test()
+        {
+            List<int> expected, actual;
+            expected = new List<int>() { 1, 2, 3, 6 };
+            actual = Methods.Task8418(6);
+            CollectionAssert.AreEqual(expected, actual);
+
+            expected = new List<int>() { 1, 5, 7, 11, 35, 55, 77, 385 };
+            actual = Methods.Task8418(385);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptNegativeArg()
+        {
+            Methods.Task8418(-9);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptZero()
+        {
+            Methods.Task8418(0);
         }
     }
 }

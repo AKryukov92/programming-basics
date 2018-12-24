@@ -330,5 +330,26 @@ namespace CodeProject
             Point p = new Point(src.GetX() + dx, src.GetY() + dy);
             return p;
         }
+
+        public static List<int> Task8418(int x)
+        {
+            if(x <= 0)
+            {
+                throw new ArgumentException("Значение X должно быть положительным");
+            }
+            List<int> list = new List<int>();
+            list.Add(1);
+            int i = 2;
+            while (i <= x / 2)
+            {
+                if (x % i == 0)
+                {
+                    list.Add(i);
+                }
+                i++;
+            }
+            list.Add(x);
+            return list;
+        }
     }
 }

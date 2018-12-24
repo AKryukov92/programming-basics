@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComparatorSuite.cs" />
     <Compile Include="GeodesyTest.cs" />
     <Compile Include="PointsSuite.cs" />
     <Compile Include="RangeSuite.cs" />
