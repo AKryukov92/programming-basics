@@ -75,5 +75,22 @@ namespace TestingProject
             actual.Sort(new Comparator7186(-50));
             CollectionAssert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Comparator4061Test()
+        {
+            List<int> expected, actual;
+            actual = new List<int>() { -10, 1, -3, 7, 5 };
+            expected = new List<int>() { 1, -3, 5, 7, -10 };
+            actual.Sort(new Comparator4061());
+            CollectionAssert.AreEqual(expected, actual);
+            actual = new List<int>() { 3, -3, 3, -3, 3, -3 };
+            expected = new List<int>() { -3, -3, -3, 3, 3, 3 };
+            actual.Sort(new Comparator4061());
+            CollectionAssert.AreEqual(expected, actual);
+            actual = new List<int>() { 13, -2, 25, -37, 10000, 0, 2 };
+            expected = new List<int>() { 0, -2, 2, 13, 25, -37, 10000 };
+            actual.Sort(new Comparator4061());
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }

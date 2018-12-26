@@ -26,27 +26,29 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task5087" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task8418"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task8258"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task7186"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task1457"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task6876"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task4568" class="example"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task9990"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task9512" class="example"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task9924"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task1056" class="example"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task7738"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task7657"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task5108"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task3956" class="example"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task2033"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task6981"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task1753"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task4061"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task7186"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task1457"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task6876"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task4568" class="example"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task9990"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task9512" class="example"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9924"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task1056" class="example"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task7738"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task7657"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task5108"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task3956" class="example"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task2033"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task6981"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task1753"^>№ 19^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
 type task5087.html>>%filename%
 type taskjava8418.html>>%filename%
 type taskjava8258.html>>%filename%
+type task4061.html>>%filename%
 type taskjava7186.html>>%filename%
 type task1457.html>>%filename%
 type task6876.html>>%filename%

@@ -1,3 +1,4 @@
+import Lab14.Comparator4061;
 import Lab14.Comparator7186;
 import Lab14.Comparator8258;
 import org.junit.Assert;
@@ -65,6 +66,24 @@ public class ComparatorSuite {
     expected = Arrays.asList(-49, -47, -55, -55, -60, -60, -39, -65, -28,
             -16, -14, -12, 1, 4, 15, 22, 61, 66, 74, 80);
     actual.sort(new Comparator7186(-50));
+    Assert.assertEquals(expected, actual);
+  }
+
+  @Test
+  public void comparator4061Test(){
+    Comparator4061 cmp = new Comparator4061();
+    List<Integer> expected, actual;
+    actual = Arrays.asList(-10, 1, -3, 7, 5);
+    expected = Arrays.asList(1, -3, 5, 7, -10);
+    actual.sort(cmp);
+    Assert.assertEquals(expected, actual);
+    actual = Arrays.asList(3, -3, 3, -3, -3, 3);
+    expected = Arrays.asList(-3, -3, -3, 3, 3, 3);
+    actual.sort(cmp);
+    Assert.assertEquals(expected, actual);
+    actual = Arrays.asList(13, -2, 25, -37, 10000, 0, 2);
+    expected = Arrays.asList(0, -2, 2, 13, 25, -37, 10000);
+    actual.sort(cmp);
     Assert.assertEquals(expected, actual);
   }
 }

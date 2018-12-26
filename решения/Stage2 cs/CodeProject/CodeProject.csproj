@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comparator4061.cs" />
     <Compile Include="Comparator7186.cs" />
     <Compile Include="Comparator8258.cs" />
     <Compile Include="Direction.cs" />
