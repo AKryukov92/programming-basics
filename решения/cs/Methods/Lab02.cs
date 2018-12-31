@@ -486,5 +486,21 @@ namespace Methods
             }
             return (int)Math.Floor(yarnDiameterCm * Math.PI * wireCoils);
         }
+
+        public static String Task6924(double ax, double ay, double bx, double by)
+        {
+            Console.WriteLine(ax + " " + ay + " " + bx + " " + by);
+            String result;
+            double aModule = Math.Sqrt(ax * ax + ay * ay);
+            double bModule = Math.Sqrt(bx * bx + by * by);
+            result = String.Format("Модуль вектора a = {0:F4}\n", aModule);
+            result += String.Format("Модуль вектора b = {0:F4}\n", bModule);
+            double scalarProduct = ax * bx + ay * by;
+            result += String.Format("Скалярное произведение векторов равно {0:F4}\n", scalarProduct);
+            double angleRad = Math.Acos(scalarProduct / aModule / bModule);
+            double angleDeg = angleRad * 180 / Math.PI;
+            result += String.Format("Угол между векторами составляет {0:F4} градусов", angleDeg);
+            return result;
+        }
     }
 }

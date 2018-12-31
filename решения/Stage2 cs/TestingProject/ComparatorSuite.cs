@@ -83,7 +83,7 @@ namespace TestingProject
             expected = new List<int>() { 1, -3, 5, 7, -10 };
             actual.Sort(new Comparator4061());
             CollectionAssert.AreEqual(expected, actual);
-            actual = new List<int>() { 3, -3, 3, -3, 3, -3 };
+            actual = new List<int>() { 3, -3, 3, -3, -3, 3 };
             expected = new List<int>() { -3, -3, -3, 3, 3, 3 };
             actual.Sort(new Comparator4061());
             CollectionAssert.AreEqual(expected, actual);

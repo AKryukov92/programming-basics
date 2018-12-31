@@ -46,6 +46,7 @@
     <Compile Include="Comparator7186.cs" />
     <Compile Include="Comparator8258.cs" />
     <Compile Include="Direction.cs" />
+    <Compile Include="Force.cs" />
     <Compile Include="Range.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Point.cs" />

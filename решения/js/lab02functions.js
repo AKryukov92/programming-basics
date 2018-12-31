@@ -268,3 +268,16 @@ function task3490(yarnDiameterCm, wireCoils){
 	}
 	return Math.floor(yarnDiameterCm * Math.PI * wireCoils);
 }
+function task6924(ax, ay, bx, by){
+	var result = ax + " " + ay + " " + bx + " " + by + "</br>";
+	var aModule = Math.sqrt(ax * ax + ay * ay);
+	var bModule = Math.sqrt(bx * bx + by * by);
+	result += "Модуль вектора a = " + aModule.toFixed(4) + "</br>";
+	result += "Модуль вектора b = " + bModule.toFixed(4) + "</br>";
+	var scalarProduct = ax * bx + ay * by;
+	result += "Скалярное произведение векторов равно " + scalarProduct.toFixed(4) + "</br>";
+	var angleRad = Math.acos(scalarProduct / aModule / bModule);
+	var angleDeg = angleRad * 180 / Math.PI;
+	result += "Угол между векторами составляет " + angleDeg.toFixed(4) + " градусов";
+	return result;
+}

@@ -3,6 +3,7 @@
  */
 public class Caller {
     public static void main(String[] args) {
+      Step6924();
     }
 
     private static void Step1186(){
@@ -20,5 +21,14 @@ public class Caller {
             }
             System.out.println();
         }
+    }
+
+    private static void Step6924(){
+      System.out.println(Lab02.task6924(-50, -86.6025, 60, 0));
+      System.out.println(Lab02.task6924(10, 0, 0, 10));
+      System.out.println(Lab02.task6924(11, 13, 7, 17));
+      System.out.println(Lab02.task6924(-70.7106, 50, 60, 0));
+      System.out.println(Lab02.task6924(-86.6025, 50, 60, 0));
+      System.out.println(Lab02.task6924(3, 4, 4, 3));
     }
 }

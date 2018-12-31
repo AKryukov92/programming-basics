@@ -351,5 +351,15 @@ namespace CodeProject
             list.Add(x);
             return list;
         }
+
+        public static double ToRadians(double deg)
+        {
+            return deg * Math.PI / 180;
+        }
+
+        public static double ToDegrees(double rad)
+        {
+            return rad * 180 / Math.PI;
+        }
     }
 }

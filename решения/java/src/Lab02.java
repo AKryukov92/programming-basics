@@ -382,4 +382,19 @@ public class Lab02 {
         }
         return (int)Math.floor(yarnDiameterCm * Math.PI * wireCoils);
     }
+
+    public static String task6924(double ax, double ay, double bx, double by){
+        System.out.println(ax + " " + ay + " " + bx + " " + by);
+        String result;
+        double aModule = Math.sqrt(ax * ax + ay * ay);
+        double bModule = Math.sqrt(bx * bx + by * by);
+        result = String.format("Модуль вектора a = %.4f\n", aModule);
+        result += String.format("Модуль вектора b = %.4f\n", bModule);
+        double scalarProduct = ax * bx + ay * by;
+        result += String.format("Скалярное произведение векторов равно %.4f\n", scalarProduct);
+        double angleRad = Math.acos(scalarProduct / aModule / bModule);
+        double angleDeg = angleRad * 180 / Math.PI;
+        result += String.format("Угол между векторами составляет %.4f градусов", angleDeg);
+        return result;
+    }
 }

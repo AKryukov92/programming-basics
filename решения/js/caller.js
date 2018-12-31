@@ -492,3 +492,17 @@ for (var i = 0; i < in5648.length; i++){
 		out.innerHTML = e.message;
 	}
 }
+
+var tuples6924 = [
+	[-50, -86.6025, 60, 0],
+	[10, 0, 0, 10],
+	[11, 13, 7, 17],
+	[-70.7106, 50, 60, 0],
+	[-86.6025, 50, 60, 0],
+	[3, 4, 4, 3]
+];
+for (var i = 0; i < tuples6924.length; i++){
+	var out = document.getElementById("6924t" + i);
+	var arr = tuples6924[i];
+	out.innerHTML = task6924(arr[0], arr[1], arr[2], arr[3]);
+}
