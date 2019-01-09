@@ -8,7 +8,8 @@ namespace Classes.Task1457
     public class Comparator1457 : Comparer<Point>
     {
         public Point Target { private set; get; }
-        public int Count { private set; get; }
+        
+        public Comparator1457() { }
 
         public Comparator1457(Point target)
         {
@@ -17,14 +18,12 @@ namespace Classes.Task1457
                 throw new ArgumentException("Целевая точка не инициализирована");
             }
             this.Target = target;
-            this.Count = 0;
         }
 
         public override int Compare(Point o1, Point o2)
         {
             double d1 = Target.DistanceTo(o1);
             double d2 = Target.DistanceTo(o2);
-            Count++;
             if (d1 > d2)
             {
                 return 1;

@@ -24,9 +24,51 @@ namespace lab15
 
         public static void Step1()
         {
-            List<Point> points = SetUp();
             Console.WriteLine();
             Console.WriteLine("step1");
+            List<Point> points = new List<Point>()
+            {
+                new Point(5, 7),
+                new Point(5, 5),
+                new Point(5, 9),
+                new Point(5, 8),
+                new Point(5, 6)
+            };
+            Comparator1457 comparator1457 = new Comparator1457(new Point(5, 4));
+            points.Sort(comparator1457);
+            Console.WriteLine("Целевая точка " + comparator1457.Target);
+            foreach (Point p in points)
+            {
+                Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
+            }
+        }
+
+        public static void Step2()
+        {
+            Console.WriteLine();
+            Console.WriteLine("step2");
+            List<Point> points = new List<Point>()
+            {
+                new Point(7, 7),
+                new Point(5, 7),
+                new Point(4, 7),
+                new Point(6, 7),
+                new Point(3, 7)
+            };
+            Comparator1457 comparator1457 = new Comparator1457(new Point(2, 7));
+            points.Sort(comparator1457);
+            Console.WriteLine("Целевая точка " + comparator1457.Target);
+            foreach (Point p in points)
+            {
+                Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
+            }
+        }
+
+        public static void Step3()
+        {
+            Console.WriteLine();
+            Console.WriteLine("step3");
+            List<Point> points = SetUp();
             Point target = new Point(0, 0);
             Comparator1457 comparator1457 = new Comparator1457(target);
 
@@ -36,14 +78,13 @@ namespace lab15
             {
                 Console.WriteLine("{0} {1:F4}", p, target.DistanceTo(p));
             }
-            Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
         }
 
-        public static void Step2()
+        public static void Step4()
         {
-            List<Point> points = SetUp();
             Console.WriteLine();
-            Console.WriteLine("step2");
+            Console.WriteLine("step4");
+            List<Point> points = SetUp();
             Comparator1457 comparator1457 = new Comparator1457(new Point(5, 5));
             points.Sort(comparator1457);
             Console.WriteLine("Целевая точка " + comparator1457.Target);
@@ -51,71 +92,16 @@ namespace lab15
             {
                 Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
             }
-            Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
-        }
-
-        public static void Step3()
-        {
-            List<Point> points = SetUp();
-            Console.WriteLine();
-            Console.WriteLine("step3");
-            try
-            {
-                Comparator1457 comparator1457 = new Comparator1457(null);
-                points.Sort(comparator1457);
-                foreach (Point p in points)
-                {
-                    Console.WriteLine("{0} {1:F4}", p, comparator1457.Target.DistanceTo(p));
-                }
-                Console.WriteLine("Произведено " + comparator1457.Count + " сравнений");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        public static void Step4()
-        {
-            try
-            {
-                Console.WriteLine();
-                Console.WriteLine("step4");
-                Comparator1457 comparator1457 = new Comparator1457(new Point(0, 0));
-                int result = comparator1457.Compare(new Point(1, 1), null);
-                Console.WriteLine(result);
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
 
         public static void Step5()
         {
-            try
-            {
-                Console.WriteLine();
-                Console.WriteLine("step5");
-                Comparator1457 comparator1457 = new Comparator1457(new Point(0, 0));
-                int result = comparator1457.Compare(null, new Point(1, 1));
-                Console.WriteLine(result);
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
-        public static void Step6()
-        {
+            Console.WriteLine();
+            Console.WriteLine("step5");
             List<Point> points = SetUp();
-            points.Add(null);
             try
             {
-                Console.WriteLine();
-                Console.WriteLine("step6");
-                points.Sort(new Comparator1457(new Point(0, 0)));
+                points.Sort(new Comparator1457());
                 foreach (Point p in points)
                 {
                     Console.WriteLine(p);
@@ -123,7 +109,7 @@ namespace lab15
             }
             catch (InvalidOperationException ex)
             {
-                Console.WriteLine(ex.InnerException.Message);
+                Console.WriteLine("Целевая точка не указана");
             }
         }
     }
