@@ -1,0 +1,134 @@
+<div id="task8225" class="task_block empty_on_print">
+	<div class="task_id">8225</div>
+	<h3>Задача</h3>
+	<h4>Реализуйте статический метод для вычисления равнодействующей двух сил под произвольным углом</h4>
+<div class="task_desc">Для нахождения равнодействующей, нужно вычислить:
+</div>
+<ol>
+<li>В папке для исходного кода создайте класс Force.</li>
+<li>Объявите у класса Force поля для действительных значений x, y и value.</li>
+<li>В классе Methods реализуйте публичный статический метод FindResultant.</li>
+<li>Он принимает в качестве аргумента два экземпляра класса Force и возвращает экземпляр класса Force.</li>
+<li>В теле метода вычислите
+<ol type="a">
+<li>Скалярное произведение векторов приложения сил (<b>product<sub>a,b</sub></b>) как в задаче <a href="[2] лаб. ОСАЛП.html#task6924" target="_blank">ЛР2#6924 (открыть в новой вкладке)</a></li>
+<li>Угол между векторами (<b>angle<sub>a,b</sub></b>) как в задаче <a href="[2] лаб. ОСАЛП.html#task6924" target="_blank">ЛР2#6924 (открыть в новой вкладке)</a></li>
+<li>Координаты вектора равнодействующей сил по формулам <formula>x<sub>равн</sub>=x<sub>a</sub>+x<sub>b</sub></formula>; <formula>y<sub>равн</sub>=y<sub>a</sub>+y<sub>b</sub></formula></li>
+<li>Значение равнодействующей силы по формуле <formula>value<sub>равн</sub> = <sqrt><val>value<sub>a</sub><sup>2</sup>+value<sub>b</sub><sup>2</sup> + 2 * value<sub>a</sub> * value<sub>b</sub> * cos(angle<sub>a,b</sub>)</val></sqrt></formula></li>
+</ol></li>
+<li>Сформируйте ответ в виде экземпляра класса Force и верните его в качестве результата.</li>
+<li>Если методу был передан экземпляр класса Force с некорректными значениями полей, метод должен выбросить исключение содержащее текст ошибки из задачи.</li>
+<li>В классе TestSuite создайте юнит тесты для проверки корректности работы метода.</li>
+<li>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных.</li>
+</ol>
+<table class="check_values">
+	<tr>
+		<th rowspan="2">Номер теста</th>
+		<th colspan="6">Вводимые данные </th>
+		<th colspan="3">Результат</th>
+	</tr>
+	<tr>
+		<th>x<sub>a</sub></th>
+		<th>y<sub>a</sub></th>
+		<th>value<sub>a</sub></th>
+		<th>x<sub>b</sub></th>
+		<th>y<sub>b</sub></th>
+		<th>value<sub>b</sub></th>
+		<th>x<sub>равн</sub></th>
+		<th>y<sub>равн</sub></th>
+		<th>value<sub>равн</sub></th>
+	</tr>
+	<tr>
+		<td></td>
+		<td>-50</td>
+		<td>-86.6025</td>
+		<td>100</td>
+		<td>60</td>
+		<td>0</td>
+		<td>100</td>
+		<td>10</td>
+		<td>-86.6025</td>
+		<td>100</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>10</td>
+		<td>0</td>
+		<td>40</td>
+		<td>0</td>
+		<td>10</td>
+		<td>30</td>
+		<td>10</td>
+		<td>10</td>
+		<td>50</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>11</td>
+		<td>13</td>
+		<td>50</td>
+		<td>7</td>
+		<td>17</td>
+		<td>30</td>
+		<td>18</td>
+		<td>30</td>
+		<td>79.0916</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>-70.7106</td>
+		<td>50</td>
+		<td>100</td>
+		<td>60</td>
+		<td>0</td>
+		<td>100</td>
+		<td>-10.7106</td>
+		<td>50</td>
+		<td>60.5811</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>-86.6025</td>
+		<td>50</td>
+		<td>100</td>
+		<td>60</td>
+		<td>0</td>
+		<td>100</td>
+		<td>-26.6025</td>
+		<td>50</td>
+		<td>51.7638</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>3</td>
+		<td>4</td>
+		<td>1</td>
+		<td>4</td>
+		<td>3</td>
+		<td>1</td>
+		<td>7</td>
+		<td>7</td>
+		<td>1.9799</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>5</td>
+		<td>7</td>
+		<td>11</td>
+		<td>7</td>
+		<td>3</td>
+		<td>-20</td>
+		<td colspan="3">Сила не может быть отрицательной</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>15</td>
+		<td>17</td>
+		<td>-4</td>
+		<td>19</td>
+		<td>13</td>
+		<td>5</td>
+		<td colspan="3">Сила не может быть отрицательной</td>
+	</tr>
+</table>
+</div>

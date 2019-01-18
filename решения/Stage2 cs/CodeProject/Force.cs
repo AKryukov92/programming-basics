@@ -28,6 +28,16 @@ namespace CodeProject
             return value;
         }
 
+        public double getX()
+        {
+            return x;
+        }
+
+        public double getY()
+        {
+            return y;
+        }
+
         public static Force Resultant(Force a, Force b)
         {
             Force result = new Force(

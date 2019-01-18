@@ -358,35 +358,47 @@ namespace TestingProject
             b = new Force(60, 0, 100);
             result = Force.Resultant(a, b);
             Assert.AreEqual(120, Force.AngleDeg(a, b), 0.0001);
+            Assert.AreEqual(10, result.getX(), 0.0001);
+            Assert.AreEqual(-86.6025, result.getY(), 0.0001);
             Assert.AreEqual(100, result.getValue(), 0.0001);
 
             a = new Force(10, 0, 40);
             b = new Force(0, 10, 30);
             result = Force.Resultant(a, b);
+            Assert.AreEqual(10, result.getX(), 0.0001);
+            Assert.AreEqual(10, result.getY(), 0.0001);
             Assert.AreEqual(50, result.getValue(), 0.0001);
 
             a = new Force(11, 13, 50);
             b = new Force(7, 17, 30);
             result = Force.Resultant(a, b);
             Assert.AreEqual(17.8562, Force.AngleDeg(a, b), 0.0001);
+            Assert.AreEqual(18, result.getX(), 0.0001);
+            Assert.AreEqual(30, result.getY(), 0.0001);
             Assert.AreEqual(79.0916, result.getValue(), 0.0001);
 
             a = new Force(-70.7106, 50, 100);
             b = new Force(60, 0, 100);
             result = Force.Resultant(a, b);
             Assert.AreEqual(144.7356, Force.AngleDeg(a, b), 0.0001);
+            Assert.AreEqual(-10.7106, result.getX(), 0.0001);
+            Assert.AreEqual(50, result.getY(), 0.0001);
             Assert.AreEqual(60.5811, result.getValue(), 0.0001);
 
             a = new Force(-86.6025, 50, 100);
             b = new Force(60, 0, 100);
             result = Force.Resultant(a, b);
             Assert.AreEqual(150, Force.AngleDeg(a, b), 0.0001);
+            Assert.AreEqual(-26.6025, result.getX(), 0.0001);
+            Assert.AreEqual(50, result.getY(), 0.0001);
             Assert.AreEqual(51.7638, result.getValue(), 0.0001);
 
             a = new Force(3, 4, 1);
             b = new Force(4, 3, 1);
             result = Force.Resultant(a, b);
             Assert.AreEqual(16.2602, Force.AngleDeg(a, b), 0.0001);
+            Assert.AreEqual(7, result.getX(), 0.0001);
+            Assert.AreEqual(7, result.getY(), 0.0001);
             Assert.AreEqual(1.9799, result.getValue(), 0.0001);
         }
     }
