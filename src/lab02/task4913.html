@@ -1,7 +1,16 @@
 <div id="task4913" class="task_block empty_on_print">
 	<div class="task_id">4913</div>
 	<h3>Задача</h3>
-	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка. Координата X<sub>b</sub> другой точки вычисляется по формуле <formula>X<sub>a</sub> + distance * cos(angleRad)</formula>. Координата Y<sub>b</sub> другой точки вычисляется по формуле <formula>Y<sub>a</sub> + distance * sin(angleRad)</formula>. Выведите на экран приращение координат и координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой.</div>
+	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.
+<ol>
+<li>Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula></li>
+<li>Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula></li>
+<li>Координату X<sub>b</sub> другой точки по формуле <formula>X<sub>b</sub> = X<sub>a</sub> + dX</formula>.</li>
+<li>Координату Y<sub>b</sub> другой точки по формуле <formula>Y<sub>b</sub> = Y<sub>a</sub> + dY</formula></li>
+</ol>
+Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.</div>
+<div class="check_single preformatted">Приращение координат: &Delta;x = $dx; &Delta;y = $dy
+Координаты второй точки ($bx;$by)</div>
 	<table class="check_values">
 		<tr>
 			<th rowspan="2">Номер теста</th>

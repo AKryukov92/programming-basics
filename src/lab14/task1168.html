@@ -1,0 +1,83 @@
+<div class="task_block" id="task1168">
+	<div class="task_id">1168</div>
+	<h3>Задача</h3>
+<h4>Реализуйте статический метод AreSame для сравнения экземпляров класса Direction.</h4>
+<ol>
+<li>В классе Direction создайте публичный статический метод AreSame.</li>
+<li>Он должен возвращать логическое значение и принимать в качестве аргумента два экземпляра типа Point.</li>
+<li>В теле метода AreSame верните истину, если углы и расстояния у объектов эквивалентны.</li>
+<li>Нужно учесть, что угол более 360 или менее 0 равен углу в интервале от 0 до 360.</li>
+<li>В классе GeodesySuite реализуйте юнит-тест AreSameTest.</li>
+<li>Проверьте с помощью юнит-теста, что метод AreSame возвращает корректные данные во всех случаях.</li>
+</ol>
+
+<table class="check_values">
+	<tr>
+		<th rowspan="2">Номер по порядку</th>
+		<th colspan="4">Исходные данные</th>
+		<th rowspan="2">Результат</th>
+	</tr>
+	<tr>
+		<th>topAngle</th>
+		<th>topDistance</th>
+		<th>bottomAngle</th>
+		<th>bottomDistance</th>
+	</tr>
+	<tr>
+		<td></td>
+		<td>53,1301</td>
+		<td>5</td>
+		<td>53,1301</td>
+		<td>5</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>53,1301</td>
+		<td>5</td>
+		<td>148,2405</td>
+		<td>24,6982</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>53,1301</td>
+		<td>5</td>
+		<td>53,1301</td>
+		<td>7</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>53,1301</td>
+		<td>5</td>
+		<td>148,2405</td>
+		<td>5</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>90</td>
+		<td>5</td>
+		<td>450</td>
+		<td>5</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>-450</td>
+		<td>5</td>
+		<td>90</td>
+		<td>5</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>450</td>
+		<td>5</td>
+		<td>-810</td>
+		<td>5</td>
+		<td>true</td>
+	</tr>
+</table>
+</div>
