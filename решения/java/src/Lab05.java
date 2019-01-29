@@ -54,6 +54,20 @@ public class Lab05 {
             }
         }
         System.out.println();
+        System.out.println("4858");
+        int[] in4858a1 = {2, 11, 23, 43, 5, 67, 79, 97};
+        int[] in4858b1 = {3, 17, 37, 53, 15, 71, 73, 101};
+        int[] in4858a2 = {5, 13, 29, 41, 0, 59, 83, 107};
+        int[] in4858b2 = {7, 19, 31, 47, 30, 61, 89, 103};
+        for (int i = 0; i < in4858a1.length; i++){
+            try {
+                String value = task4858(in4858a1[i], in4858b1[i], in4858a2[i], in4858b2[i]);
+                System.out.println(value);
+            } catch (IllegalArgumentException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        System.out.println();
         System.out.println("1217");
         int[] in1217a1 = {2, 11, 23, 43, 5, 67, 79, 97};
         int[] in1217b1 = {3, 17, 37, 53, 15, 71, 73, 101};
@@ -543,5 +557,23 @@ public class Lab05 {
 
     public static boolean task9038(double x, double y) {
         return x >= 2 || (y <= 1.5 && y >= 0.5);
+    }
+
+    public static String task4858(int redA, int redB, int greenA, int greenB){
+        if(redA > redB){
+            throw new IllegalArgumentException("Интервал задан некорректно. Левая граница должна быть меньше правой.");
+        }
+        if (greenA > greenB){
+            throw new IllegalArgumentException("Интервал задан некорректно. Левая граница должна быть меньше правой.");
+        }
+        double redCenter = (redA + redB) / 2.0;
+        double greenCenter = (greenA + greenB) / 2.0;
+        if (redCenter < greenCenter){
+            return "Красный слева, зеленый справа";
+        } else if (redCenter > greenCenter) {
+            return "Зеленый слева, красный справа";
+        } else {
+            return "Середины интервалов совпадают";
+        }
     }
 }
