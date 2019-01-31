@@ -113,6 +113,24 @@ public class Lab05 {
                 System.out.println(e.getMessage());
             }
         }
+        System.out.println();
+        System.out.println("8867");
+        int[] in8867a = {1, -4, -2, 0, 4, 4};
+        int[] in8867b = {3, 5, 7, 5, 4, -2};
+        int[] in8867x = {2, 0, -10, 7, 4, 3};
+        for (int i = 0; i < in8867a.length; i++){
+            try {
+                System.out.println(task8867(in8867a[i], in8867b[i], in8867x[i]));
+            } catch (IllegalArgumentException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        System.out.println();
+        System.out.println("7865");
+        int[] in7865= {-5, -11, -3, 10, 5, 19, 0, -20, 20};
+        for (int i = 0; i < in7865.length; i++){
+            System.out.println(task7865(in7865[i]));
+        }
     }
 
     public static boolean task8878(int a, int b) {
@@ -557,6 +575,27 @@ public class Lab05 {
 
     public static boolean task9038(double x, double y) {
         return x >= 2 || (y <= 1.5 && y >= 0.5);
+    }
+
+    public static String task8867(int a, int b, int x){
+        if(a > b){
+            throw new IllegalArgumentException("Некорректный интервал. Левая граница должна быть меньше правой.");
+        }
+        if (a <= x && x <= b){
+            return x + " попадает в интервал от " + a + " до " + b;
+        } else {
+            return x + " за пределами интервала от " + a + " до " + b;
+        }
+    }
+
+    public static String task7865(int x){
+        if (-11 <= x && x <= -3){
+            return "Красный";
+        } else if (5 <= x && x <= 19){
+            return "Зеленый";
+        } else {
+            return "X не попадает ни в зеленый, ни в красный интервал";
+        }
     }
 
     public static String task4858(int redA, int redB, int greenA, int greenB){

@@ -724,5 +724,37 @@ namespace Methods
         {
             return x >= 2 || (y <= 1.5 && y >= 0.5);
         }
+
+        public static String Task8867(int a, int b, int x)
+        {
+            if (a > b)
+            {
+                throw new ArgumentException("Некорректный интервал. Левая граница должна быть меньше правой.");
+            }
+            if (a <= x && x <= b)
+            {
+                return x + " попадает в интервал от " + a + " до " + b;
+            }
+            else
+            {
+                return x + " за пределами интервала от " + a + " до " + b;
+            }
+        }
+
+        public static String Task7865(int x)
+        {
+            if (-11 <= x && x <= -3)
+            {
+                return "Красный";
+            }
+            else if (5 <= x && x <= 19)
+            {
+                return "Зеленый";
+            }
+            else
+            {
+                return "X не попадает ни в зеленый, ни в красный интервал";
+            }
+        }
     }
 }

@@ -506,3 +506,27 @@ for (var i = 0; i < tuples6924.length; i++){
 	var arr = tuples6924[i];
 	out.innerHTML = task6924(arr[0], arr[1], arr[2], arr[3]);
 }
+
+var tuples8867 = [
+	[1, 3, 2],
+	[-4, 5, 0],
+	[-2, 7, -10],
+	[0, 5, 7],
+	[4, 4, 4],
+	[4, -2, 3]
+];
+for (var i = 0; i < tuples8867.length; i++){
+	var out = document.getElementById("8867t" + i);
+	try {
+		var arr = tuples8867[i];
+		out.innerHTML = task8867(arr[0], arr[1], arr[2]);
+	} catch (e) {
+		out.innerHTML = e.message;
+	}
+}
+
+var in7865 = [-5, -11, -3, 10, 5, 19, 0, -20, 20];
+for (var i = 0; i < in7865.length; i++){
+	var out = document.getElementById("7865t" + i);
+	out.innerHTML = task7865(in7865[i]);
+}
