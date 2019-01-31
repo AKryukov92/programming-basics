@@ -131,6 +131,16 @@ public class Lab05 {
         for (int i = 0; i < in7865.length; i++){
             System.out.println(task7865(in7865[i]));
         }
+        System.out.println();
+        System.out.println("8751");
+        double[] in8751 = {-273, -10, -1, 0, 99, 100, 101, -274};
+        for (int i = 0; i < in8751.length; i++){
+            try {
+                System.out.println(task8751(in8751[i]));
+            } catch (IllegalArgumentException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
     }
 
     public static boolean task8878(int a, int b) {
@@ -614,5 +624,34 @@ public class Lab05 {
         } else {
             return "Середины интервалов совпадают";
         }
+    }
+
+    public static String task8751(double tC){
+        if (tC <= -273.15){
+            throw new IllegalArgumentException("Некорректная температура");
+        }
+        String result = "";
+        double Q;
+        double c = 4.2E3;
+        double r = 2.26E6;
+        double lambda = 3.3E5;
+        double m = 17;
+        double tK = tC + 273.15;
+        if (tC <= 0){
+            result += "Агрегатное состояние: кристалл\n";
+            Q = m * tK * c;
+            result += String.format("Внутренняя энергия: %.2f Дж\n", Q);
+        }
+        if (0 <= tC && tC <= 100){
+            result += "Агрегатное состояние: жидкость\n";
+            Q = m * (tK * c + r);
+            result += String.format("Внутренняя энергия: %.2f Дж\n", Q);
+        }
+        if (100 <= tC) {
+            result += "Агрегатное состояние: газ\n";
+            Q = m * (tK * c + r + lambda);
+            result += String.format("Внутренняя энергия: %.2f Дж\n", Q);
+        }
+        return result;
     }
 }
