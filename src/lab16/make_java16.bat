@@ -2,7 +2,7 @@ chcp 65001
 set lang=java
 set index=16
 set chapter=HTTP клиент
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

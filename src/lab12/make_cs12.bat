@@ -3,7 +3,7 @@ set lang=csharp
 set index=12
 set title=Методы
 set chapter=Оформление подпрограмм с помощью методов
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

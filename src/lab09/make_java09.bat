@@ -2,7 +2,7 @@ chcp 65001
 set lang=java
 set index=9
 set chapter=Чтение файлов
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

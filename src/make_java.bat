@@ -17,6 +17,12 @@ popd
 pushd lab02
 call make_java02 skip
 popd
+pushd lab03
+call make_java03 skip
+popd
+pushd lab04
+call make_java04 skip
+popd
 pushd lab05
 call make_java05 skip
 popd

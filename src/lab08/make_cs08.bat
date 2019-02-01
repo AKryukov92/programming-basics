@@ -2,7 +2,7 @@ chcp 65001
 set lang=csharp
 set index=8
 set chapter=Строки
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

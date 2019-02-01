@@ -1,15 +1,14 @@
 chcp 65001
 set lang=csharp
 set index=1
-set title=Ввод и вывод информации
-set chapter=Линейные алгоритмы
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set chapter=Заполнение шаблона текстом
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>%index% %title%^</title^> ^
+ ^<title^>%index% %chapter%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -17,8 +16,7 @@ type ..\styles.css >> %filename%
 echo ^</style^> ^
  ^</head^> ^
  ^<body class="section"^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
- ^<h2^>%title%^</h2^>>> %filename%
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
 
@@ -70,11 +68,9 @@ type task8693.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-
-copy "Письменные задания к ЛР1.docx" "..\..\%lang%\Письменные задания к ЛР1.docx"
-
 if x%1==x start "" %filename%
 
-cd ..
+pushd ..
 call prepare_theory csharp 1662 cs lab01
 call prepare_theory csharp 1860 cs lab01
+popd

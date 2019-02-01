@@ -1,15 +1,14 @@
 chcp 65001
 set lang=java
 set index=2
-set title=Арифметические операторы
-set chapter=Линейные алгоритмы
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set chapter=Вычисления и ограничения
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^
  ^<head^> ^
  ^<meta charset=^"utf-8^"/^> ^
- ^<title^>%index% %title%^</title^> ^
+ ^<title^>%index% %chapter%^</title^> ^
  ^<style^>> %filename%
 
 type ..\styles.css >> %filename%
@@ -17,8 +16,7 @@ type ..\styles.css >> %filename%
 echo ^</style^> ^
  ^</head^> ^
  ^<body class="section"^> ^
- ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^> ^
- ^<h2^>%title%^</h2^>>> %filename%
+ ^<a name="heading"^>^<h1^>%chapter%^</h1^>^</a^>>> %filename%
 
 type ..\nav_cs.html>> %filename%
 
@@ -134,9 +132,11 @@ pushd images
 copy "task7799.png" "..\..\..\%lang%\images\task7799.png"
 popd
 
-if x%1==x start "" %filename%
-cd ..
+pushd ..
 call prepare_theory java 3862 java lab02
 call prepare_theory java 9231 java lab02
 call prepare_theory java 4411 java lab02
 call prepare_theory java 8428 java lab02
+popd
+
+if x%1==x start "" %filename%

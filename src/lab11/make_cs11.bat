@@ -3,7 +3,7 @@ set lang=csharp
 set index=11
 set title=Двумерные массивы
 set chapter=Алгоритмы работы с двумерными массивами
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

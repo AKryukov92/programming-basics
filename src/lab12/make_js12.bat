@@ -3,7 +3,7 @@ set lang=js
 set index=12
 set title=Функции
 set chapter=Оформление подпрограмм с помощью функций
-set filename="..\..\%lang%\[%index%] лаб. ОСАЛП.html"
+set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
  ^<html^> ^

@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 chcp 65001
 pushd ..\csharp
 rmdir files /s /q
@@ -16,6 +16,12 @@ call make_cs01 skip
 popd
 pushd lab02
 call make_cs02 skip
+popd
+pushd lab03
+call make_cs03 skip
+popd
+pushd lab04
+call make_cs04 skip
 popd
 pushd lab05
 call make_cs05 skip
