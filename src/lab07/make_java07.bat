@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=7
+if "%1"=="" (
+  set index=7
+) else (
+  set index=%1
+)
 set chapter=Работа с массивами
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -107,6 +111,4 @@ type task3095.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

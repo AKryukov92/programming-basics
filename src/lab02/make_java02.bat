@@ -1,7 +1,11 @@
 chcp 65001
 set lang=java
-set index=2
-set chapter=Вычисления и ограничения
+if "%1"=="" (
+  set index=2
+) else (
+  set index=%1
+)
+set chapter=Организация вычислений
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
@@ -139,4 +143,4 @@ call prepare_theory java 4411 java lab02
 call prepare_theory java 8428 java lab02
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

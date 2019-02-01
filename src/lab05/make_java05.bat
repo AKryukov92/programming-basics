@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=5
+if "%1"=="" (
+  set index=5
+) else (
+  set index=%1
+)
 set chapter=Работа с интервалами значений
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -61,4 +65,4 @@ pushd images
 copy "example5635.png" "..\..\..\%lang%\images\example5635.png"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

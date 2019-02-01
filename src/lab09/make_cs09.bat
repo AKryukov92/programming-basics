@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=9
+if "%1"=="" (
+  set index=9
+) else (
+  set index=%1
+)
 set chapter=Чтение файлов
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -142,4 +146,4 @@ pushd "task2137"
 copy "*" "..\..\..\%lang%\files\task2137\*"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

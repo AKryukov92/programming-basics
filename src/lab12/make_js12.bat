@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=12
+if "%1"=="" (
+  set index=9
+) else (
+  set index=%1
+)
 set title=Функции
 set chapter=Оформление подпрограмм с помощью функций
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
@@ -74,8 +78,6 @@ echo ^</div^>>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\
 rmdir lab12 /s /q
 mkdir lab12
@@ -85,4 +87,4 @@ xcopy ..\..\решения\js\task2354 ..\..\%lang%\lab12\task2354 /s /I
 xcopy ..\..\решения\js\task2030 ..\..\%lang%\lab12\task2030 /s /I
 xcopy ..\..\решения\js\task7649 ..\..\%lang%\lab12\task7649 /s /I
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

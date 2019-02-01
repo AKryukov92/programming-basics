@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=12
+if "%1"=="" (
+  set index=11
+) else (
+  set index=%1
+)
 set title=Методы
 set chapter=Оформление подпрограмм с помощью методов
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
@@ -75,8 +79,6 @@ echo ^</div^>>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\
 rmdir lab12 /s /q
 mkdir lab12
@@ -86,4 +88,4 @@ xcopy ..\..\решения\cs\task2354 ..\..\%lang%\lab12\task2354 /s /I
 xcopy ..\..\решения\cs\task2030 ..\..\%lang%\lab12\task2030 /s /I
 xcopy ..\..\решения\cs\task7649 ..\..\%lang%\lab12\task7649 /s /I
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

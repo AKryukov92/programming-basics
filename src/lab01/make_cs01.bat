@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=1
+if "%1"=="" (
+  set index=1
+) else (
+  set index=%1
+)
 set chapter=Заполнение шаблона текстом
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -68,9 +72,9 @@ type task8693.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-if x%1==x start "" %filename%
-
 pushd ..
 call prepare_theory csharp 1662 cs lab01
 call prepare_theory csharp 1860 cs lab01
 popd
+
+if "%2"=="" start "" %filename%

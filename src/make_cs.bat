@@ -1,4 +1,4 @@
-REM @echo off
+@echo off
 chcp 65001
 pushd ..\csharp
 rmdir files /s /q
@@ -12,51 +12,51 @@ mkdir images
 mkdir конспекты
 popd
 pushd lab01
-call make_cs01 skip
+call make_cs01 1 skip
 popd
 pushd lab02
-call make_cs02 skip
+call make_cs02 2 skip
 popd
 pushd lab03
-call make_cs03 skip
+call make_cs03 3 skip
 popd
 pushd lab04
-call make_cs04 skip
+call make_cs04 4 skip
 popd
 pushd lab05
-call make_cs05 skip
+call make_cs05 5 skip
 popd
 pushd lab06
-call make_cs06 skip
+call make_cs06 6 skip
 popd
 pushd lab07
-call make_cs07 skip
+call make_cs07 7 skip
 popd
 pushd lab08
-call make_cs08 skip
+call make_cs08 8 skip
 popd
 pushd lab09
-call make_cs09 skip
+call make_cs09 9 skip
 popd
 pushd lab10
-call make_cs10 skip
+call make_cs10 10 skip
 popd
-pushd lab11
-call make_cs11 skip
-popd
+REM pushd lab11
+REM call make_cs11 -1 skip
+REM popd
 pushd lab12 
-call make_cs12 skip
+call make_cs12 11 skip
 popd
 pushd lab13
-call make_cs13 skip
+call make_cs13 12 skip
 popd
 pushd lab14
-call make_cs14 skip
+call make_cs14 13 skip
 popd
 pushd lab15
-call make_cs15 skip
+call make_cs15 14 skip
 popd
-pushd lab16
-call make_cs16 skip
-popd
+REM pushd lab16
+REM call make_cs16 -2 skip
+REM popd
 pause

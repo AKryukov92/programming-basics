@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=13
+if "%1"=="" (
+  set index=12
+) else (
+  set index=%1
+)
 set chapter=Исключения
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -57,8 +61,6 @@ type task5081.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\files\
 mkdir task6882
 mkdir task1212
@@ -87,4 +89,4 @@ copy ..\..\решения\java\src\Lab13Task9701.java ..\..\%lang%\lab13\Lab12Ta
 copy ..\..\решения\java\src\Lab13Task3784.java ..\..\%lang%\lab13\Lab12Task3784.java
 copy ..\..\решения\java\src\Lab13Task6732.java ..\..\%lang%\lab13\Lab12Task6732.java
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

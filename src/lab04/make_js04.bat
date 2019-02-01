@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=4
+if "%1"=="" (
+  set index=4
+) else (
+  set index=%1
+)
 set chapter=Взаимоисключающие случаи
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -80,4 +84,4 @@ pushd images
 copy "example6556.png" "..\..\..\%lang%\images\example6556.png"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

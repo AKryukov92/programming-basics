@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=14
+if "%1"=="" (
+  set index=11
+) else (
+  set index=%1
+)
 set chapter=Объекты
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -58,6 +62,4 @@ REM type taskjs9713.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

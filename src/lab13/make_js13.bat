@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=13
+if "%1"=="" (
+  set index=10
+) else (
+  set index=%1
+)
 set chapter=Исключения
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -45,8 +49,6 @@ type taskjs5170.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\files\
 mkdir task9701
 mkdir task3784
@@ -73,4 +75,4 @@ xcopy ..\..\решения\js\task9701 ..\..\%lang%\lab13\task9701 /s /I
 xcopy ..\..\решения\js\task3784 ..\..\%lang%\lab13\task3784 /s /I
 xcopy ..\..\решения\js\task6732 ..\..\%lang%\lab13\task6732 /s /I
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

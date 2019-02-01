@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=12
+if "%1"=="" (
+  set index=11
+) else (
+  set index=%1
+)
 set title=Методы
 set chapter=Оформление подпрограмм с помощью методов
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
@@ -75,8 +79,6 @@ echo ^</div^>>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\
 rmdir lab12 /s /q
 mkdir lab12
@@ -90,4 +92,4 @@ pushd images
 copy "maven_project_structure.png" "..\..\..\%lang%\images\maven_project_structure.png"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

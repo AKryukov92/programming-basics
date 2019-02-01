@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=15
+if "%1"=="" (
+  set index=14
+) else (
+  set index=%1
+)
 set chapter=Коллекции
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -75,8 +79,6 @@ type task1753.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\files
 mkdir task9990
 mkdir task7738
@@ -113,4 +115,4 @@ pushd "task1753"
 copy "*" "..\..\..\%lang%\files\task1753\*"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

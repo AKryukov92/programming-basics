@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=10
+if "%1"=="" (
+  set index=10
+) else (
+  set index=%1
+)
 set chapter=Запись в файлы
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -95,4 +99,4 @@ pushd "task7060"
 copy "*.png" "..\..\..\%lang%\images\task7060\*.png"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

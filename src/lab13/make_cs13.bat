@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=13
+if "%1"=="" (
+  set index=12
+) else (
+  set index=%1
+)
 set chapter=Исключения
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -57,8 +61,6 @@ type task5081.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd ..\..\%lang%\files\
 mkdir task6882
 mkdir task1212
@@ -87,4 +89,4 @@ xcopy ..\..\решения\cs\task9701 ..\..\%lang%\lab13\task9701 /s /I
 xcopy ..\..\решения\cs\task3784 ..\..\%lang%\lab13\task3784 /s /I
 xcopy ..\..\решения\cs\task6732 ..\..\%lang%\lab13\task6732 /s /I
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

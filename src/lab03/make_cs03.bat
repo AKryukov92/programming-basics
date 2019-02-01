@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=3
+if "%1"=="" (
+  set index=3
+) else (
+  set index=%1
+)
 set chapter=Проверка исходных данных
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -102,4 +106,4 @@ pushd images
 copy "task7799.png" "..\..\..\%lang%\images\task7799.png"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

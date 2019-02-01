@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=11
+if "%1"=="" (
+  set index=0
+) else (
+  set index=%1
+)
 set title=Двумерные массивы
 set chapter=Алгоритмы работы с двумерными массивами
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
@@ -82,4 +86,4 @@ pushd "task2048"
 copy "*" "..\..\..\%lang%\files\task2048\*"
 popd
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

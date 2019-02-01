@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=6
+if "%1"=="" (
+  set index=6
+) else (
+  set index=%1
+)
 set chapter=Циклические алгоритмы
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -126,4 +130,4 @@ echo ^</body^> ^
 
 copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

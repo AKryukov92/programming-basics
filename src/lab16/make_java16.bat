@@ -1,6 +1,10 @@
 chcp 65001
 set lang=java
-set index=16
+if "%1"=="" (
+  set index=15
+) else (
+  set index=%1
+)
 set chapter=HTTP клиент
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -53,4 +57,4 @@ popd
 
 copy "*.php" "..\..\%lang%\handlers\*.php"
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

@@ -1,6 +1,10 @@
 chcp 65001
 set lang=csharp
-set index=8
+if "%1"=="" (
+  set index=8
+) else (
+  set index=%1
+)
 set chapter=Строки
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -64,6 +68,4 @@ type task8887.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%

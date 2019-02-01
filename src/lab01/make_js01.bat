@@ -1,6 +1,10 @@
 chcp 65001
 set lang=js
-set index=1
+if "%1"=="" (
+  set index=1
+) else (
+  set index=%1
+)
 set chapter=Заполнение шаблона текстом
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
@@ -66,4 +70,4 @@ type task8693.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-if x%1==x start "" %filename%
+if "%2"=="" start "" %filename%
