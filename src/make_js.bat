@@ -36,20 +36,23 @@ popd
 pushd lab07
 call make_js07 7 skip
 popd
+pushd lab061
+call make_js061 8 skip
+popd
 pushd lab08
-call make_js08 8 skip
+call make_js08 9 skip
 popd
 pushd lab12
-call make_js12 9 skip
+call make_js12 10 skip
 popd
 pushd lab13
-call make_js13 10 skip
+call make_js13 11 skip
 popd
 pushd lab14
-call make_js14 11 skip
+call make_js14 12 skip
 popd
-pushd lab16
-call make_js16 12 skip
-popd
+REM pushd lab16
+REM call make_js16 13 skip
+REM popd
 copy /Y base.html ..\js 
 pause

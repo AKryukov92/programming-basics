@@ -59,8 +59,6 @@ type task6924.html>>%filename%
 echo ^</body^> ^
  ^</html^>>> %filename%
 
-copy "Письменные задания к ЛР%index% %lang%.docx" "..\..\%lang%\Письменные задания к ЛР%index%.docx"
-
 pushd images
 copy "task7799.png" "..\..\..\%lang%\images\task7799.png"
 popd

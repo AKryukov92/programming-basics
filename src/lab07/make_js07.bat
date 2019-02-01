@@ -40,32 +40,26 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task3333"^>№ 11^</a^>^</li^> ^
  ^<li^>^<a href="#task9774" class="example"^>№ 12^</a^>^</li^> ^
  ^<li^>^<a href="#task3940"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task3946"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task6497"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task5648"^>№ 16^</a^>^</li^> ^
- ^<li^>^<a href="#task5694" class="example"^>№ 17^</a^>^</li^> ^
- ^<li^>^<a href="#task1292"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task5694" class="example"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task1292"^>№ 15^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
- ^<li^>^<a href="#task6806"^>№ 19^</a^>^</li^> ^
- ^<li^>^<a href="#task8613"^>№ 20^</a^>^</li^> ^
- ^<li^>^<a href="#task7534"^>№ 21^</a^>^</li^> ^
- ^<li^>^<a href="#task2173"^>№ 22^</a^>^</li^> ^
- ^<li^>^<a href="#task7369" class="supervision"^>№ 23^</a^>^</li^> ^
- ^<li^>^<a href="#task5894"^>№ 24^</a^>^</li^> ^
- ^<li^>^<a href="#task4515"^>№ 25^</a^>^</li^> ^
- ^<li^>^<a href="#task7290" class="example"^>№ 26^</a^>^</li^> ^
- ^<li^>^<a href="#task7035"^>№ 27^</a^>^</li^> ^
- ^<li^>^<a href="#task9271"^>№ 28^</a^>^</li^> ^
- ^<li^>^<a href="#task8769"^>№ 29^</a^>^</li^> ^
- ^<li^>^<a href="#task4497"^>№ 30^</a^>^</li^> ^
- ^<li^>^<a href="#task3218"^>№ 31^</a^>^</li^> ^
- ^<li^>^<a href="#task6492"^>№ 32^</a^>^</li^> ^
- ^<li^>^<a href="#task4283" class="supervision"^>№ 33^</a^>^</li^> ^
- ^<li^>^<a href="#task7703"^>№ 34^</a^>^</li^> ^
- ^<li^>^<a href="#task5541"^>№ 35^</a^>^</li^> ^
- ^<li^>^<a href="#task9182"^>№ 36^</a^>^</li^> ^
- ^<li^>^<a href="#task3095"^>№ 37^</a^>^</li^> ^
+ ^<li^>^<a href="#task6806"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task8613"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task7534"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task2173"^>№ 19^</a^>^</li^> ^
+ ^<li^>^<a href="#task7369" class="supervision"^>№ 20^</a^>^</li^> ^
+ ^<li^>^<a href="#task5894"^>№ 21^</a^>^</li^> ^
+ ^<li^>^<a href="#task4515"^>№ 22^</a^>^</li^> ^
+ ^<li^>^<a href="#task7290" class="example"^>№ 23^</a^>^</li^> ^
+ ^<li^>^<a href="#task4497"^>№ 24^</a^>^</li^> ^
+ ^<li^>^<a href="#task3218"^>№ 25^</a^>^</li^> ^
+ ^<li^>^<a href="#task6492"^>№ 26^</a^>^</li^> ^
+ ^<li^>^<a href="#task4283" class="supervision"^>№ 27^</a^>^</li^> ^
+ ^<li^>^<a href="#task7703"^>№ 28^</a^>^</li^> ^
+ ^<li^>^<a href="#task5541"^>№ 29^</a^>^</li^> ^
+ ^<li^>^<a href="#task9182"^>№ 30^</a^>^</li^> ^
+ ^<li^>^<a href="#task3095"^>№ 31^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
 
@@ -83,9 +77,6 @@ type task8820.html>>%filename%
 type task3333.html>>%filename%
 type task9774.html>>%filename%
 type task3940.html>>%filename%
-type task3946.html>>%filename%
-type task6497.html>>%filename%
-type task5648.html>>%filename%
 type task5694.html>>%filename%
 type task1292.html>>%filename%
 type task6806.html>>%filename%
@@ -96,9 +87,6 @@ type task7369.html>>%filename%
 type task5894.html>>%filename%
 type task4515.html>>%filename%
 type task7290.html>>%filename%
-type task7035.html>>%filename%
-type task9271.html>>%filename%
-type task8769.html>>%filename%
 type task4497.html>>%filename%
 type task3218.html>>%filename%
 type task6492.html>>%filename%

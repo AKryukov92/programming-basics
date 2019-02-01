@@ -32,29 +32,32 @@ popd
 pushd lab07
 call make_java07 7 skip
 popd
+pushd lab061
+call make_java061 8 skip
+popd
 pushd lab08
-call make_java08 8 skip
+call make_java08 9 skip
 popd
 pushd lab09
-call make_java09 9 skip
+call make_java09 10 skip
 popd
 pushd lab10
-call make_java10 10 skip
+call make_java10 11 skip
 popd
 REM pushd lab11
 REM call make_java11 -1 skip
 REM popd
 pushd lab12 
-call make_java12 11 skip
+call make_java12 12 skip
 popd
 pushd lab13
-call make_java13 12 skip
+call make_java13 13 skip
 popd
 pushd lab14
-call make_java14 13 skip
+call make_java14 14 skip
 popd
 pushd lab15
-call make_java15 14 skip
+call make_java15 15 skip
 popd
 REM pushd lab16
 REM call make_java16 -2 skip

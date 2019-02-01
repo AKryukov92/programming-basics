@@ -1,11 +1,11 @@
 chcp 65001
 set lang=csharp
 if "%1"=="" (
-  set index=9
+  set index=10
 ) else (
   set index=%1
 )
-set chapter=Чтение файлов
+set chapter=Обработка неизвестного объема данных
 set filename="..\..\%lang%\Задания к %index% практической работе.html"
 
 echo ^<!DOCTYPE html^> ^
@@ -28,22 +28,25 @@ echo ^<div class="nav"^> ^
  ^<ul^> ^
  ^<li^>^<a href="#heading"^>^^^</a^>^</li^> ^
  ^<li^>^<a href="#quiz"^>?^</a^>^</li^> ^
- ^<li^>^<a href="#task6175" class="example"^>№ 1^</a^>^</li^> ^
- ^<li^>^<a href="#task4488" class="supervision"^>№ 2^</a^>^</li^> ^
- ^<li^>^<a href="#task4954" class="supervision"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task4642"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task5537"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task5847"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task4769"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task9930"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task6861"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task3226"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task4372"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task4463"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task1668"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task9417"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task3148"^>№ 15^</a^>^</li^> ^
- ^<li^>^<a href="#task2137"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task2324" class="example"^>№ 1^</a^>^</li^> ^
+ ^<li^>^<a href="#task8731"^>№ 2^</a^>^</li^> ^
+ ^<li^>^<a href="#task4082"^>№ 3^</a^>^</li^> ^
+ ^<li^>^<a href="#task6175" class="example"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task4488" class="supervision"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task4954" class="supervision"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task4642"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task5537"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task5847"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task4769"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task9930"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task6861"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task3226"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task4372"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task4463"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task1668"^>№ 16^</a^>^</li^> ^
+ ^<li^>^<a href="#task9417"^>№ 17^</a^>^</li^> ^
+ ^<li^>^<a href="#task3148"^>№ 18^</a^>^</li^> ^
+ ^<li^>^<a href="#task2137"^>№ 19^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
  
@@ -53,6 +56,10 @@ type info.html>>%filename%
 
 echo ^<div class="section"^>>>%filename%
 
+type task2324.html>>%filename%
+type link_c4_p16.1.html>>%filename%
+type task8731.html>>%filename%
+type task4082.html>>%filename%
 type task6175.html>>%filename%
 type task4488.html>>%filename%
 type task4954.html>>%filename%
