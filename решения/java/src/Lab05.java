@@ -210,7 +210,7 @@ public class Lab05 {
         }
     }
 
-    public static String task1763(int r, int a) throws IllegalArgumentException {
+    public static String task1763(double r, double a) throws IllegalArgumentException {
         if (r <= 0) {
             throw new IllegalArgumentException("Радиус должен быть положительным");
         }
@@ -240,14 +240,16 @@ public class Lab05 {
         }
     }
 
-    public static boolean task1945(int sc, int ss) throws IllegalArgumentException {
+    public static boolean task1945(double sc, double ss) throws IllegalArgumentException {
         if (sc <= 0) {
             throw new IllegalArgumentException("Площадь круга должна быть положительной");
         }
         if (ss <= 0) {
             throw new IllegalArgumentException("Площадь квадрата должна быть положительной");
         }
-        return Math.sqrt(sc / Math.PI) < Math.sqrt(ss) / 2;
+        double edge = Math.sqrt(ss);
+        double diameter = Math.sqrt(sc / Math.PI) * 2;
+        return diameter < edge;
     }
 
     public static double[] task1186(double x, double y, double z) {

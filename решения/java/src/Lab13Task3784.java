@@ -4,20 +4,20 @@
  */
 public class Lab13Task3784 {
     public static void main(String[] args) {
-        Step5870();
-        Step4257();
-        Step2291();
-        Step1763();
+//        Step5870();
+//        Step4257();
+//        Step2291();
+//        Step1763();
         Step1945();
-
-        Step6291();
-        Step3883();
-        Step4527();
-        Step6556();
-        Step2153();
-
-        Step5170();
-        Step1703();
+//
+//        Step6291();
+//        Step3883();
+//        Step4527();
+//        Step6556();
+//        Step2153();
+//
+//        Step5170();
+//        Step1703();
     }
 
     private static void Step4257(){
@@ -56,8 +56,19 @@ public class Lab13Task3784 {
     static void Step1763() {
         System.out.println();
         System.out.println("1763");
-        int[] in1763r = {15, 29, -17, 37};
-        int[] in1763a = {31, 41, 23, -5};
+        double[] in1763r = {15, 29, -17, 37};
+        double[] in1763a = {31, 41, 23, -5};
+        System.out.println(Lab05.task1763(2.3261, 4.1230));
+        System.out.println(Lab05.task1763(2.3262, 4.1230));
+        System.out.println(Lab05.task1763(2.3263, 4.1230));
+        //System.out.println(Lab05.task1763(2.3262, 4.1228));
+        System.out.println(Lab05.task1763(2.3262, 4.1229));
+        System.out.println(Lab05.task1763(2.3262, 4.1230));
+        System.out.println(Lab05.task1763(2.3262, 4.1231));
+        System.out.println(Lab05.task1763(2.3262, 4.1232));
+//        System.out.println(Lab05.task1763(2.3262, 4.1234));
+//        System.out.println(Lab05.task1763(2.3262, 4.1235));
+        System.out.println(Lab05.task1763(3, 5.3173));
         for (int i = 0; i < in1763r.length; i++){
             try {
                 String result = Lab05.task1763(in1763r[i], in1763a[i]);
@@ -71,6 +82,10 @@ public class Lab13Task3784 {
     static void Step1945() {
         System.out.println();
         System.out.println("1945");
+        System.out.println(Lab05.task1945(28.2733, 36));
+        System.out.println(Lab05.task1945(28.2735, 36));
+        System.out.println(Lab05.task1945(28.2752, 36));
+        System.out.println(Lab05.task1945(28.2754, 36));
         int[] in1945sc = {17, 13, 7854, 5808, -20, 300};
         int[] in1945ss = {19, 19, 8100, 8100, 4, -200};
         for (int i = 0; i < in1945sc.length; i++) {

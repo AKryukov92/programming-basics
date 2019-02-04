@@ -34,14 +34,14 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task1186"^>№ 5^</a^>^</li^> ^
  ^<li^>^<a href="#task4257"^>№ 6^</a^>^</li^> ^
  ^<li^>^<a href="#task3883"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task8878" class="example"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task6291"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task5662"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task1763"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task1945"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task2291"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task1763"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task1945"^>№ 9^</a^>^</li^> ^
  ^</ul^> ^
  ^<ul^> ^
+ ^<li^>^<a href="#task8878" class="example"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task6291"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task5662"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task2291"^>№ 13^</a^>^</li^> ^
  ^<li^>^<a href="#task8518" class="example"^>№ 14^</a^>^</li^> ^
  ^<li^>^<a href="#task1292"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task4527"^>№ 16^</a^>^</li^> ^
@@ -63,12 +63,13 @@ type task7178.html>>%filename%
 type task1186.html>>%filename%
 type task4257.html>>%filename%
 type task3883.html>>%filename%
+REM Формулы для вычисления таковы, что площади могут быть равны только если вводит понятие погрешности
+type task1763.html>>%filename%
+type task1945.html>>%filename%
 REM Несколько взаимоисключающих случаев if() {} else if() {} else {}
 type task8878.html>>%filename%
 type task6291.html>>%filename%
 type task5662.html>>%filename%
-type task1763.html>>%filename%
-type task1945.html>>%filename%
 type link_c4_p19.2.html>>%filename%
 type task2291.html>>%filename%
 REM Одна задача, решение которой нужно для объяснения циклов и массивов потом
