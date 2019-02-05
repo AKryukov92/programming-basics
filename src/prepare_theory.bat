@@ -3,6 +3,7 @@ set lang=%1
 set task=%2
 set abbreviation=%3
 set lab=%4
+set old_filename=%filename%
 set filename="..\%lang%\конспекты\pre%task%.html"
 
 echo ^<!DOCTYPE html^> ^
@@ -22,3 +23,5 @@ type %lab%\pre%task%%abbreviation%.html>>%filename%
 
 echo ^</body^> ^
  ^</html^>>> %filename%
+
+set filename=%old_filename%
