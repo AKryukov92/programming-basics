@@ -48,9 +48,9 @@ echo ^<div class="nav"^> ^
 
 type link_c1_p4.3.html>>%filename%
 type task1662.html>>%filename%
-type task4131js.html>>%filename%
-type task7365js.html>>%filename%
-type task1910js.html>>%filename%
+type task4131.html>>%filename%
+type task7365.html>>%filename%
+type task1910.html>>%filename%
 type task1640js.html>>%filename%
 type task1860.html>>%filename%
 type link_c7_p33.html>>%filename%

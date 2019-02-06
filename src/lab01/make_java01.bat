@@ -49,7 +49,7 @@ echo ^<div class="nav"^> ^
 type link_c1_p4.3.html>>%filename%
 type task1662.html>>%filename%
 echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre1662.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
-type task4131java.html>>%filename%
+type task4131.html>>%filename%
 type task7365.html>>%filename%
 type task1910.html>>%filename%
 type task1640.html>>%filename%

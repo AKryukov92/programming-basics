@@ -52,7 +52,7 @@ echo ^<div^>Руководство по самостоятельному вып�
 type task3832.html>>%filename%
 type task7457.html>>%filename%
 type task9865.html>>%filename%
-type task1976cs.html>>%filename%
+type task1976.html>>%filename%
 type task8428.html>>%filename%
 type link_c7_p32.5.html>>%filename%
 type task7711.html>>%filename%
