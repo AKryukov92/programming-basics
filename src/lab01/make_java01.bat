@@ -30,18 +30,18 @@ echo ^<div class="nav"^> ^
  ^<li^>^<a href="#task1662" class="example"^>№ 1^</a^>^</li^> ^
  ^<li^>^<a href="#task4131" class="example"^>№ 2^</a^>^</li^> ^
  ^<li^>^<a href="#task7365"^>№ 3^</a^>^</li^> ^
- ^<li^>^<a href="#task1910"^>№ 4^</a^>^</li^> ^
- ^<li^>^<a href="#task1640"^>№ 5^</a^>^</li^> ^
- ^<li^>^<a href="#task1860" class="example"^>№ 6^</a^>^</li^> ^
- ^<li^>^<a href="#task4764" class="supervision"^>№ 7^</a^>^</li^> ^
- ^<li^>^<a href="#task2429"^>№ 8^</a^>^</li^> ^
- ^<li^>^<a href="#task7472"^>№ 9^</a^>^</li^> ^
- ^<li^>^<a href="#task4140" class="example"^>№ 10^</a^>^</li^> ^
- ^<li^>^<a href="#task2959"^>№ 11^</a^>^</li^> ^
- ^<li^>^<a href="#task7271"^>№ 12^</a^>^</li^> ^
- ^<li^>^<a href="#task2632"^>№ 13^</a^>^</li^> ^
- ^<li^>^<a href="#task4343"^>№ 14^</a^>^</li^> ^
- ^<li^>^<a href="#task7474"^>№ 15^</a^>^</li^> ^
+ ^<li^>^<a href="#task1860" class="example"^>№ 4^</a^>^</li^> ^
+ ^<li^>^<a href="#task4764"^>№ 5^</a^>^</li^> ^
+ ^<li^>^<a href="#task1910"^>№ 6^</a^>^</li^> ^
+ ^<li^>^<a href="#task2429"^>№ 7^</a^>^</li^> ^
+ ^<li^>^<a href="#task7472"^>№ 8^</a^>^</li^> ^
+ ^<li^>^<a href="#task4140" class="example"^>№ 9^</a^>^</li^> ^
+ ^<li^>^<a href="#task2959"^>№ 10^</a^>^</li^> ^
+ ^<li^>^<a href="#task7271"^>№ 11^</a^>^</li^> ^
+ ^<li^>^<a href="#task2632"^>№ 12^</a^>^</li^> ^
+ ^<li^>^<a href="#task4343"^>№ 13^</a^>^</li^> ^
+ ^<li^>^<a href="#task7474"^>№ 14^</a^>^</li^> ^
+ ^<li^>^<a href="#task1640"^>№ 15^</a^>^</li^> ^
  ^<li^>^<a href="#task8693"^>№ 16^</a^>^</li^> ^
  ^</ul^> ^
  ^</div^>>>%filename%
@@ -51,12 +51,11 @@ type task1662.html>>%filename%
 echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre1662.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type task4131.html>>%filename%
 type task7365.html>>%filename%
-type task1910.html>>%filename%
-type task1640.html>>%filename%
 type task1860.html>>%filename%
 echo ^<div^>Руководство по самостоятельному выполнению задачи ^<a href="конспекты\pre1860.html" target="_blank"^>(открыть в новой вкладке)^</a^>^</div^>>>%filename%
 type link_c7_p33.html>>%filename%
 type task4764.html>>%filename%
+type task1910.html>>%filename%
 type task2429.html>>%filename%
 type link_c6_p30.2.html>>%filename%
 type task7472.html>>%filename%
@@ -67,6 +66,7 @@ type task7271.html>>%filename%
 type task2632.html>>%filename%
 type task4343.html>>%filename%
 type task7474.html>>%filename%
+type task1640.html>>%filename%
 type task8693.html>>%filename%
 
 echo ^</body^> ^
