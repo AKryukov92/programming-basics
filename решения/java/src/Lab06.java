@@ -9,8 +9,59 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
+        task0000(3, 4);
+        System.out.println("-----------");
+        task0000(3, 7);
+        System.out.println("-----------");
+        task0000(3, 17);
+        System.out.println("-----------");
+        task0000(2, 6);
+        System.out.println("-----------");
+        task0000(5, 3);
+        System.out.println("-----------");
+        task0000(11, 3);
+        System.out.println("-----------");
+        task0000(19, 4);
+        System.out.println("-----------");
+        task0000(10, 5);
+        System.out.println("-----------");
+        task0000(99, 99);
+        System.out.println("-----------");
+        task0000(2, -1);
+        System.out.println("-----------");
+        task0000(-11, 11);
+        System.out.println("-----------");
+        task0000(0, 0);
+        System.out.println("-----------");
+        task0000(0, 3);
+        System.out.println("-----------");
+        task0000(4, 0);
+    }
 
-
+    public static void task0000(int leftStep, int rightStep){
+        if (leftStep <= 0 && rightStep > 0) {
+            System.out.println("Ряды чисел не сойдутся");
+            return;
+        }
+        if(leftStep > 0 && rightStep <= 0){
+            System.out.println("Ряды чисел не сойдутся");
+            return;
+        }
+        int i = leftStep, j = rightStep;
+        System.out.println(i + " " + j);
+        while(i != j){
+            if (i < j){
+                while (i < j){
+                    i+=leftStep;
+                    System.out.println(i + " " + j);
+                }
+            } else {
+                while(j < i){
+                    j += rightStep;
+                    System.out.println(i + " " + j);
+                }
+            }
+        }
     }
 
     public static StringBuilder task8495(StringBuilder sb){
