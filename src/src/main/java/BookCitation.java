@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.Optional;
 
 /**
@@ -13,6 +14,11 @@ public class BookCitation implements LabFragment {
     @Override
     public String loadText() {
         return "";
+    }
+
+    @Override
+    public void appendTextTo(PrintWriter writer) {
+        writer.write("<div>" + id + "</div>");
     }
 
     @Override

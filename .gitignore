@@ -84,3 +84,5 @@ csharp/postcard/postcard/obj
 /решения/cs/.vs/cs/v15/Server/sqlite3/storage.ide
 /решения/cs/.vs/cs/v15/Server/sqlite3/storage.ide-shm
 /решения/cs/.vs/cs/v15/Server/sqlite3/storage.ide-wal
+/src/target/classes
+/src/.idea/workspace.xml

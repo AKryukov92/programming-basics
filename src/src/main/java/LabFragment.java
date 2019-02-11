@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.util.Optional;
 
 /**
@@ -5,5 +6,6 @@ import java.util.Optional;
  */
 public interface LabFragment {
     String loadText();
+    void appendTextTo(PrintWriter writer);
     Optional<String> makeNavItem(String navTitle);
 }
