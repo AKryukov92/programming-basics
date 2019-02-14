@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Optional;
 
@@ -27,9 +28,9 @@ public class TaskGroup {
         return result;
     }
 
-    public void appendContentTo(PrintWriter writer) {
+    public void appendContentTo(PrintWriter writer) throws IOException {
         for (int i = 0; i < fragments.length; i++) {
-            fragments[i].appendTextTo(writer);
+            fragments[i].appendContentTo(writer);
         }
     }
 

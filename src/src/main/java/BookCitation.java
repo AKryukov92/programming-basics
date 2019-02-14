@@ -1,4 +1,9 @@
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Optional;
 
 /**
@@ -6,19 +11,19 @@ import java.util.Optional;
  */
 public class BookCitation implements LabFragment {
     private String id;
+    private String directory;
 
-    public BookCitation(String id) {
+    public BookCitation(String directory, String id) {
         this.id = id;
+        this.directory = directory;
     }
 
     @Override
-    public String loadText() {
-        return "";
-    }
-
-    @Override
-    public void appendTextTo(PrintWriter writer) {
-        writer.write("<div>" + id + "</div>");
+    public void appendContentTo(PrintWriter writer) throws IOException {
+        String path = String.format("%s/link_%s.html", directory, id);
+        Path p = Paths.get(path);
+        System.out.println("Reading citation content from '" + p.toAbsolutePath().toString());
+        writer.write(new String(Files.readAllBytes(p), StandardCharsets.UTF_8));
     }
 
     @Override
