@@ -13,6 +13,7 @@ public class LabTask implements LabFragment {
     private int id;
     private String directory;
     private boolean isExample;
+    private String langAbbreviation;
     private boolean hasManual = false;
 
     LabTask(int id, String directory, boolean isExample) {
@@ -28,29 +29,37 @@ public class LabTask implements LabFragment {
         return id;
     }
 
-    public boolean hasManual() {
-        return hasManual;
-    }
-
     public LabTask withManual() {
         this.hasManual = true;
+        return this;
+    }
+
+    public LabTask withLangAbbreviation(String langAbbreviation){
+        this.langAbbreviation = langAbbreviation;
         return this;
     }
 
     @Override
     public Optional<String> makeNavItem(String navTitle) {
         if (isExample) {
-            return Optional.of(String.format("<li><a href='#task%d' class='example'>%s</a>", id, navTitle));
+            return Optional.of(String.format("<li><a href='#task%d' class='example'>%s*</a>", id, navTitle));
         } else {
             return Optional.of(String.format("<li><a href='#task%d'>%s</a>", id, navTitle));
         }
     }
 
+    private String getSrcFilename() {
+        String langSpecificPath = String.format("%s/task%4d%s.html", directory, id, langAbbreviation);
+        if (Files.exists(Paths.get(langSpecificPath))) {
+            return langSpecificPath;
+        } else {
+            return String.format("%s/task%4d.html", directory, id);
+        }
+    }
+
     @Override
     public void appendContentTo(PrintWriter writer) throws IOException {
-        //TODO: учесть возможность наличия специальных задач для определенных языков
-        String path = String.format("%s/task%4d.html", directory, id);
-        Path p = Paths.get(path);
+        Path p = Paths.get(getSrcFilename());
         System.out.println("Reading task content from '" + p.toAbsolutePath().toString());
         writer.write(new String(Files.readAllBytes(p), StandardCharsets.UTF_8));
         if (hasManual) {
@@ -59,13 +68,5 @@ public class LabTask implements LabFragment {
                     "<a href='конспекты/pre%4d.html' target='_blank'>(открыть в новом файле)</a>" +
                     "</div>", id));
         }
-    }
-
-    public static LabTask makeExample(String directory, int id) {
-        return new LabTask(id, directory, true);
-    }
-
-    public static LabTask make(String directory, int id) {
-        return new LabTask(id, directory, false);
     }
 }

@@ -26,43 +26,38 @@ public class Application {
                 "Классы и объекты",
                 "Коллекции"
         };
-        String LAB_01_DIR = "lab01";
         String css = loadCss("styles.css");
-        TaskBook[] taskBooks = makeNav(themeList);
-        Manual man1662 = Manual.builder()
-                .withDirectory(LAB_01_DIR)
-                .forTask(LabTask.makeExample(LAB_01_DIR, 1662))
-                .withLangAbbreviation("cs");
+        TaskBook[] taskBooks = makeNav(themeList, "cs");
+        taskBooks[0].withGroup("Печать текста на экране")
+                .addCitation("c1_p4.3")
+                .addExampleWithManual(1662)
 
-        taskBooks[0].withGroups(
-                        new TaskGroup("Печать текста на экране",
-                                new BookCitation(LAB_01_DIR, "c1_p4.3"),
-                                man1662.getTask()),
-                        new TaskGroup("Диктант по присваиванию",
-                                LabTask.makeExample(LAB_01_DIR, 4131),
-                                LabTask.make(LAB_01_DIR, 7365)),
-                        new TaskGroup("Получение строк от пользователя",
-                                LabTask.makeExample(LAB_01_DIR, 1860).withManual(),
-                                new BookCitation(LAB_01_DIR, "c7_p33"),
-                                LabTask.make(LAB_01_DIR, 4764),
-                                LabTask.make(LAB_01_DIR, 1910),
-                                LabTask.make(LAB_01_DIR, 2429),
-                                new BookCitation(LAB_01_DIR, "c6_p30.2"),
-                                LabTask.make(LAB_01_DIR, 7472)),
-                        new TaskGroup("Оформление текста по шаблону",
-                                new BookCitation(LAB_01_DIR, "c3_p10.2"),
-                                LabTask.makeExample(LAB_01_DIR, 4140),
-                                LabTask.make(LAB_01_DIR, 2959),
-                                LabTask.make(LAB_01_DIR, 7271),
-                                LabTask.make(LAB_01_DIR, 2632),
-                                LabTask.make(LAB_01_DIR, 4343),
-                                LabTask.make(LAB_01_DIR, 7474)),
-                        new TaskGroup("Уменьшение дублей повторяющихся фрагментов текста",
-                                LabTask.make(LAB_01_DIR, 1640),
-                                LabTask.make(LAB_01_DIR, 8693)));
-        taskBooks[0].make(css);
-        man1662.make(css);
+                .withGroup("Диктант по присваиванию")
+                .addExample(4131)
+                .addTask(7365)
 
+                .withGroup("Получение строк от пользователя")
+                .addExampleWithManual(1860)
+                .addCitation("c7_p33")
+                .addTask(4764)
+                .addTask(1910)
+                .addTask(2429)
+                .addCitation("c6_p30.2")
+                .addTask(7472)
+
+                .withGroup("Оформление текста по шаблону")
+                .addCitation("c3_p10.2")
+                .addExample(4140)
+                .addTask(2959)
+                .addTask(7271)
+                .addTask(2632)
+                .addTask(4343)
+                .addTask(7474)
+
+                .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
+                .addTask(1640)
+                .addTask(8693)
+                .make(css);
     }
 
     private static String loadCss(String path) throws IOException {
@@ -71,8 +66,10 @@ public class Application {
         return new String(Files.readAllBytes(p), StandardCharsets.UTF_8);
     }
 
-    //TODO: Формировать массив тем за пределами метода, а тут только указывать индекс практической и добавлять заголовок для навигации
-    private static TaskBook[] makeNav(String[] themeList) {
+    //TODO: Формировать массив тем за пределами метода,
+    // а тут только указывать индекс практической и добавлять заголовок для навигации
+    // Зачем?
+    private static TaskBook[] makeNav(String[] themeList, String langAbbreviation) {
         TaskBook[] taskBooks = new TaskBook[themeList.length];
         StringBuilder themeNavContent = new StringBuilder();
         themeNavContent.append("<div class='lab_nav'>Другие темы<ol>");
@@ -80,12 +77,14 @@ public class Application {
             int labIndex = i + 1;
             taskBooks[i] = TaskBook.builder()
                     .withIndex(labIndex)
+                    .withLangAbbreviation(langAbbreviation)
                     .withTheme(themeList[i]);
-            themeNavContent.append(String.format("<li>%d<a href='%s'>%s</a></li>", labIndex, taskBooks[i].getFilename(), themeList[i]));
+            themeNavContent.append(String.format("<li>%d <a href='%s'>%s</a></li>",
+                    labIndex, taskBooks[i].getFilenameForLink(), themeList[i]));
         }
         themeNavContent.append("</ol></div>");
         String navContent = themeNavContent.toString();
-        for (int i = 0; i < themeList.length; i++){
+        for (int i = 0; i < themeList.length; i++) {
             taskBooks[i].withThemeNav(navContent);
         }
         return taskBooks;

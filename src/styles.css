@@ -119,12 +119,6 @@ numerator {
 denominator {
 	display:block;
 }
-.example::after{
-	content:"*";
-}
-.supervision::after{
-	content:"!";
-}
 spoiler {
 	color:darkgrey;
 }
