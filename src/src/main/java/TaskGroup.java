@@ -9,9 +9,11 @@ import java.util.Optional;
 public class TaskGroup {
     private final List<LabFragment> fragments;
     private final String name;
+    private final String srcDirectory;
 
-    public TaskGroup(String name, List<LabFragment> fragments) {
+    public TaskGroup(String name, String srcDirectory, List<LabFragment> fragments) {
         this.fragments = fragments;
+        this.srcDirectory = srcDirectory;
         this.name = name;
     }
 
@@ -31,10 +33,16 @@ public class TaskGroup {
         }
     }
 
+    public void copyRequiredFiles(String targetDirectory) throws IOException {
+        for (LabFragment fragment : fragments) {
+            fragment.copyRequiredFilesTo(targetDirectory);
+        }
+    }
+
     public int addToNav(StringBuilder sb, int beginIndex) {
         int index = beginIndex;
         for (LabFragment fragment : fragments) {
-            Optional<String> navItem = fragment.makeNavItem("№ " + index);
+            Optional<String> navItem = fragment.makeNavItem(String.valueOf(index));
             if (navItem.isPresent()) {
                 sb.append(navItem.get());
                 index++;

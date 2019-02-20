@@ -4,6 +4,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -30,4 +32,10 @@ public class BookCitation implements LabFragment {
     public Optional<String> makeNavItem(String navTitle) {
         return Optional.empty();
     }
+
+    @Override
+    public void copyRequiredFilesTo(String targetDirectory) throws IOException {
+
+    }
+
 }

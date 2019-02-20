@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -8,4 +9,5 @@ import java.util.Optional;
 public interface LabFragment {
     void appendContentTo(PrintWriter writer) throws IOException;
     Optional<String> makeNavItem(String navTitle);
+    void copyRequiredFilesTo(String targetDirectory) throws IOException;
 }

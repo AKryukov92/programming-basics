@@ -13,6 +13,7 @@ import java.util.List;
 public class TaskBook {
     private String theme;
     private int labIndex;
+    private String sourceDirectory;
     private String langAbbreviation;
     private List<TaskGroup> groups = new ArrayList<>();
     private String themeNav;
@@ -20,6 +21,11 @@ public class TaskBook {
 
     private String lastGroupName = null;
     private List<LabFragment> fragmentsOfLastGroup = new ArrayList<>();
+
+    public TaskBook withSourceDirectory(String directory) {
+        this.sourceDirectory = directory;
+        return this;
+    }
 
     public TaskBook withTheme(String theme) {
         this.theme = theme;
@@ -79,7 +85,7 @@ public class TaskBook {
     }
 
     private void finalizeLastGroup() {
-        groups.add(new TaskGroup(lastGroupName, fragmentsOfLastGroup));
+        groups.add(new TaskGroup(lastGroupName, sourceDirectory, fragmentsOfLastGroup));
         fragmentsOfLastGroup = new ArrayList<>();
     }
 
@@ -93,11 +99,13 @@ public class TaskBook {
     }
 
     public String getResultFilename() {
-        return "..//" + langAbbreviation + "//" + getFilenameForLink();
+        return getTargetDirectory() + "//" + getFilenameForLink();
     }
 
+    public String getTargetDirectory() { return "..//" + langAbbreviation; }
+
     public String getSourceDirectory() {
-        return String.format("lab%02d", labIndex);
+        return sourceDirectory;
     }
 
     private String makePageTop(String css) {
@@ -129,10 +137,8 @@ public class TaskBook {
         }
     }
 
-    public void make(String css) throws IOException {
-        finalizeLastGroup();
-        File result = new File(getResultFilename());
-        File targetDirectory = result.getParentFile();
+    public void prepareTargetDirectory() throws IOException {
+        File targetDirectory = new File(getTargetDirectory());
         System.out.println("Checking target directory");
         if (targetDirectory.exists()) {
             File[] listFiles = targetDirectory.listFiles();
@@ -142,23 +148,28 @@ public class TaskBook {
             }
         }
         System.out.println("Creating fresh target directory");
-        if (targetDirectory.mkdirs()) {
-            //TODO: move creation of target directory to upper level.
-            // It should be created once for multiple taskbooks
-            System.out.println("Making taskbook file with name: " + result.getAbsolutePath());
-            PrintWriter writer = new PrintWriter(result);
-            writer.write(makePageTop(css));
-            writer.write(makeHeading());
-            writer.write(themeNav);
-            writer.write(makeTaskNav());
-            for (TaskGroup group : groups) {
-                group.appendContentTo(writer);
-            }
-            writer.write("</body></html>");
-            writer.close();
-            for (Manual man : manuals) {
-                man.make(css);
-            }
+        if (!targetDirectory.mkdirs()) {
+            throw new RuntimeException("Failed to create target directory");
+        }
+    }
+
+    public void make(String css) throws IOException {
+        finalizeLastGroup();
+        File result = new File(getResultFilename());
+        System.out.println("Making taskbook file with name: " + result.getAbsolutePath());
+        PrintWriter writer = new PrintWriter(result);
+        writer.write(makePageTop(css));
+        writer.write(makeHeading());
+        writer.write(themeNav);
+        writer.write(makeTaskNav());
+        for (TaskGroup group : groups) {
+            group.appendContentTo(writer);
+            group.copyRequiredFiles(Paths.get(getTargetDirectory()).toAbsolutePath().toString());
+        }
+        writer.write("</body></html>");
+        writer.close();
+        for (Manual man : manuals) {
+            man.make(css);
         }
     }
 
