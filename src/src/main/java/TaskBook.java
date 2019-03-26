@@ -5,7 +5,9 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Александр on 14.02.2019.
@@ -18,6 +20,7 @@ public class TaskBook {
     private List<TaskGroup> groups = new ArrayList<>();
     private String themeNav;
     private List<Manual> manuals = new ArrayList<>();
+    private Set<Integer> taskIds = new HashSet<>();
 
     private String lastGroupName = null;
     private List<LabFragment> fragmentsOfLastGroup = new ArrayList<>();
@@ -56,8 +59,15 @@ public class TaskBook {
         fragmentsOfLastGroup.add(new BookCitation(getSourceDirectory(), citationId));
         return this;
     }
+    private void checkIfAlreadyPresent(int id){
+        if (taskIds.contains(id)){
+            throw new IllegalStateException("Task " + id + " already present in taskbook");
+        }
+        taskIds.add(id);
+    }
 
     public TaskBook addTask(int id) {
+        checkIfAlreadyPresent(id);
         LabTask task = new LabTask(id, getSourceDirectory(), false)
                 .withLangAbbreviation(langAbbreviation);
         fragmentsOfLastGroup.add(task);
@@ -65,6 +75,7 @@ public class TaskBook {
     }
 
     public TaskBook addExample(int id) {
+        checkIfAlreadyPresent(id);
         LabTask task = new LabTask(id, getSourceDirectory(), true)
                 .withLangAbbreviation(langAbbreviation);
         fragmentsOfLastGroup.add(task);
