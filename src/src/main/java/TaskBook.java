@@ -56,7 +56,9 @@ public class TaskBook {
     }
 
     public TaskBook addCitation(String citationId) {
-        fragmentsOfLastGroup.add(new BookCitation(getSourceDirectory(), citationId));
+        BookCitation citation = new BookCitation(getSourceDirectory(), citationId)
+                .withLangAbbreviation(langAbbreviation);
+        fragmentsOfLastGroup.add(citation);
         return this;
     }
     private void checkIfAlreadyPresent(int id){

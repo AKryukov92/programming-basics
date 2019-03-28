@@ -51,8 +51,9 @@ public class LabTask extends LabFragment {
     }
 
     protected String getSrcFilename() {
-        String langSpecificPath = String.format("%s/task%4d%s.html", srcDirectory, id, langAbbreviation);
+        String langSpecificPath = String.format("%s/task%s%4d.html", srcDirectory, langAbbreviation, id);
         if (Files.exists(Paths.get(langSpecificPath))) {
+            System.out.println("Task " + id + " has language-specific file");
             return langSpecificPath;
         } else {
             return String.format("%s/task%4d.html", srcDirectory, id);
@@ -66,7 +67,10 @@ public class LabTask extends LabFragment {
         Matcher dataMatcher = Pattern.compile("<a href=\"files(.*?)\" target=\"_blank\">").matcher(content);
         while (dataMatcher.find()) {
             String dataName = dataMatcher.group(1);
-            System.out.println("Task " + id + " links to data file" + dataName);
+            System.out.println("Task " + id + " links to data file '" + dataName + "'");
+            if (!dataName.contains(String.valueOf(id))){
+                throw new IllegalArgumentException("Task " + id + " links to data file of other task");
+            }
             Path src = Paths.get(srcDirectory + "\\" + dataName).toAbsolutePath();
             if (Files.exists(src)) {
                 copyFileTo(dataName, targetDirectory + "\\files");

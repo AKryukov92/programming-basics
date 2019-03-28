@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
@@ -17,7 +18,11 @@ public class BookCitation extends LabFragment {
     BookCitation(String srcDirectory, String id) {
         super(srcDirectory);
         this.id = id;
-        this.srcDirectory = srcDirectory;
+    }
+
+    public BookCitation withLangAbbreviation(String langAbbreviation) {
+        this.langAbbreviation = langAbbreviation;
+        return this;
     }
 
     @Override
@@ -32,8 +37,9 @@ public class BookCitation extends LabFragment {
 
     @Override
     protected String getSrcFilename() {
-        String langSpecificPath = String.format("%s/%s.html", srcDirectory, id);
+        String langSpecificPath = String.format("%s/%s%s.html", srcDirectory, id, langAbbreviation);
         if (Files.exists(Paths.get(langSpecificPath))) {
+            System.out.println("Fragment " + id + " has language-specific file");
             return langSpecificPath;
         } else {
             return String.format("%s/%s.html", srcDirectory, id);
