@@ -152,7 +152,7 @@ public class TaskBook {
 
     public void prepareTargetDirectory() throws IOException {
         File targetDirectory = new File(getTargetDirectory());
-        System.out.println("Checking target directory");
+        System.out.println("Checking target directory " + targetDirectory.getAbsolutePath());
         if (targetDirectory.exists()) {
             File[] listFiles = targetDirectory.listFiles();
             if (listFiles != null && listFiles.length > 0) {
@@ -162,7 +162,7 @@ public class TaskBook {
         }
         System.out.println("Creating fresh target directory");
         if (!targetDirectory.mkdirs()) {
-            throw new RuntimeException("Failed to create target directory");
+            throw new RuntimeException("Failed to create target directory " + targetDirectory.getAbsolutePath());
         }
     }
 

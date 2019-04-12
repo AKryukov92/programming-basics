@@ -1,3 +1,5 @@
+import javafx.concurrent.Task;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -29,9 +31,75 @@ public class Application {
                 "Коллекции"
         };
         String css = loadCss("styles.css");
-        TaskBook[] taskBooks = makeNav(themeList, "cs");
-        taskBooks[0].prepareTargetDirectory();
-        taskBooks[0].withSourceDirectory("lab01")
+        TaskBook[] taskBooksCs = makeNav(themeList, "cs");
+        taskBooksCs[0].prepareTargetDirectory();
+        fillPrintingTemplates(taskBooksCs[0], css);
+        fillBasicCalculations(taskBooksCs[1], css);
+        fillPreliminaryAssertions(taskBooksCs[2], css);
+        fillMutualExclusives(taskBooksCs[3], css);
+        fillRanges(taskBooksCs[4], css);
+        fillLoops(taskBooksCs[5], css);
+        fillArrayHandling(taskBooksCs[6], css);
+        fillAggregateCalculation(taskBooksCs[7], css);
+        fillStringMethods(taskBooksCs[8], css);
+        fillReadingFiles(taskBooksCs[9], css);
+        fillWritingFiles(taskBooksCs[10], css);
+        fillMethods(taskBooksCs[11], css);
+        fillExceptions(taskBooksCs[12], css);
+        fillAbstractDataStructures(taskBooksCs[13], css);
+        fillCollections(taskBooksCs[14], css);
+
+        TaskBook[] taskBooksJava = makeNav(themeList, "java");
+        taskBooksJava[0].prepareTargetDirectory();
+        fillPrintingTemplates(taskBooksJava[0], css);
+        fillBasicCalculations(taskBooksJava[1], css);
+        fillPreliminaryAssertions(taskBooksJava[2], css);
+        fillMutualExclusives(taskBooksJava[3], css);
+        fillRanges(taskBooksJava[4], css);
+        fillLoops(taskBooksJava[5], css);
+        fillArrayHandling(taskBooksJava[6], css);
+        fillAggregateCalculation(taskBooksJava[7], css);
+        fillStringMethods(taskBooksJava[8], css);
+        fillReadingFiles(taskBooksJava[9], css);
+        fillWritingFiles(taskBooksJava[10], css);
+        fillMethods(taskBooksJava[11], css);
+        fillExceptions(taskBooksJava[12], css);
+        fillAbstractDataStructures(taskBooksJava[13], css);
+        fillCollections(taskBooksJava[14], css);
+
+        String[] themeListJs = new String[] {
+                "Заполнение шаблона текстом",
+                "Организация вычислений",
+                "Проверка исходных данных",
+                "Взаимоисключающие случаи",
+                "Работа с интервалами значений",
+
+                "Реорганизация повторяющихся действий",
+                "Массивы",
+                "Вычисление агрегатов",
+                "Строки",
+                "Функции",
+                "Исключения",
+                "Объекты"
+        };
+        TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
+        taskBooksJs[0].prepareTargetDirectory();
+        fillPrintingTemplates(taskBooksJs[0], css);
+        fillBasicCalculations(taskBooksJs[1], css);
+        fillPreliminaryAssertions(taskBooksJs[2], css);
+        fillMutualExclusives(taskBooksJs[3], css);
+        fillRanges(taskBooksJs[4], css);
+        fillLoops(taskBooksJs[5], css);
+        fillArrayHandling(taskBooksJs[6], css);
+        fillAggregateCalculation(taskBooksJs[7], css);
+        fillStringMethods(taskBooksJs[8], css);
+        fillMethods(taskBooksJs[9], css);
+        fillExceptionJs(taskBooksJs[10], css);
+        fillAbstractDataStructuresJs(taskBooksJs[11], css);
+    }
+
+    private static void fillPrintingTemplates(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab01")
                 .withGroup("Печать текста на экране")
                 .addCitation("link_c1_p4.3")
                 .addExampleWithManual(1662)
@@ -63,7 +131,10 @@ public class Application {
                 .addTask(8693)
                 .make(css)
         ;
-        taskBooks[1].withSourceDirectory("lab02")
+    }
+
+    private static void fillBasicCalculations(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab02")
                 .withGroup("Вывод на экран действительных чисел с заданной точностью")
                 .addExampleWithManual(3862)
                 .addExampleWithManual(9231)
@@ -85,7 +156,10 @@ public class Application {
                 .addTask(6924)
                 .make(css)
         ;
-        taskBooks[2].withSourceDirectory("lab03")
+    }
+
+    private static void fillPreliminaryAssertions(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
                 .addCitation("link_c2_p8.1")
                 .addExample(9298)
@@ -130,7 +204,10 @@ public class Application {
                 .addTask(3490)
                 .make(css)
         ;
-        taskBooks[3].withSourceDirectory("lab04")
+    }
+
+    private static void fillMutualExclusives(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab04")
                 .withGroup("Взаимоисключающие случаи")
                 .addTask(3072)
                 .addCitation("link_c4_p15.1")
@@ -165,7 +242,10 @@ public class Application {
                 .addTask(8135)
                 .make(css)
         ;
-        taskBooks[4].withSourceDirectory("lab05")
+    }
+
+    private static void fillRanges(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab05")
                 .withGroup("Работа с интервалами значений")
                 .addExample(8715)
                 .addTask(3770)
@@ -183,7 +263,10 @@ public class Application {
                 .addTask(1438)
                 .make(css)
         ;
-        taskBooks[5].withSourceDirectory("lab06")
+    }
+
+    private static void fillLoops(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
                 .addExample(1315)
                 .addTask(1631)
@@ -237,7 +320,10 @@ public class Application {
                 .addTask(1862)
                 .make(css)
         ;
-        taskBooks[6].withSourceDirectory("lab07")
+    }
+
+    private static void fillArrayHandling(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab07")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
                 .addTask(1433)
@@ -287,7 +373,10 @@ public class Application {
                 .addTask(3095)
                 .make(css)
         ;
-        taskBooks[7].withSourceDirectory("lab061")
+    }
+
+    private static void fillAggregateCalculation(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab061")
                 .withGroup("Вычисление агрегатов")
                 .addExample(2475)
                 .addTask(9180)
@@ -308,7 +397,10 @@ public class Application {
                 .addTask(8769)
                 .make(css)
         ;
-        taskBooks[8].withSourceDirectory("lab08")
+    }
+
+    private static void fillStringMethods(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab08")
                 .withGroup("Строковые методы")
                 .addExample(7491)
                 .addTask(9631)
@@ -329,7 +421,10 @@ public class Application {
                 .addTask(8887)
                 .make(css)
         ;
-        taskBooks[9].withSourceDirectory("lab09")
+    }
+
+    private static void fillReadingFiles(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab09")
                 .withGroup("Обработка неизвестного объема данны")
                 .addExample(2324)
                 .addCitation("link_c4_p16.1")
@@ -356,7 +451,10 @@ public class Application {
                 .addTask(2137)
                 .make(css)
         ;
-        taskBooks[10].withSourceDirectory("lab10")
+    }
+
+    private static void fillWritingFiles(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab10")
                 .addCitation("info01")
                 .withGroup("Запись в файлы")
                 .addExample(9300)
@@ -376,7 +474,10 @@ public class Application {
                 .addTask(6812)
                 .make(css)
         ;
-        taskBooks[11].withSourceDirectory("lab12")
+    }
+
+    private static void fillMethods(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
                 .addCitation("info01")
                 .withGroup("Проверка вспомогательной программой")
@@ -409,7 +510,10 @@ public class Application {
                 .addCitation("link_c2_p7.3")
                 .make(css)
         ;
-        taskBooks[12].withSourceDirectory("lab13")
+    }
+
+    private static void fillExceptions(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab13")
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(7740)
@@ -433,7 +537,26 @@ public class Application {
                 .addTask(5081)
                 .make(css)
         ;
-        taskBooks[13].withSourceDirectory("lab14")
+    }
+
+    private static void fillExceptionJs(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab13")
+                .addCitation("link_c2_p8.4")
+                .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
+                .addExample(7740)
+                .addTask(1439)
+
+                .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
+                .addExample(9020)
+                .addTask(3943)
+                .addTask(7799)
+                .addTask(9354)
+                .addTask(5170)
+                .make(css);
+    }
+
+    private static void fillAbstractDataStructures(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab14")
                 .withGroup("Классы как контейнеры данных (АТД)")
                 .addExample(5789)
                 .addExample(6011)
@@ -473,7 +596,30 @@ public class Application {
                 .addTask(3567)
                 .make(css)
         ;
-        taskBooks[14].withSourceDirectory("lab15")
+    }
+
+    private static void fillAbstractDataStructuresJs(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab14")
+                .withGroup("Объекты как контейнеры данных (АТД)")
+                .addExample(5789)
+                .addExample(6011)
+                .addTask(6589)
+                .addTask(6037)
+
+                .withGroup("функции экземпляров объектов")
+                .addExample(8403)
+                .addExample(3185)
+                .addTask(9914)
+                .addTask(4916)
+
+                .withGroup("Параметризованный конструктор")
+                .addExample(7301)
+                .addTask(2000)
+                .make(css);
+    }
+
+    private static void fillCollections(TaskBook taskBook, String css) throws IOException {
+        taskBook.withSourceDirectory("lab15")
                 .withGroup("Формирование листа")
                 .addExample(5087)
                 .addTask(8418)

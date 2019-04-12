@@ -60,14 +60,18 @@ public class Manual {
     public void make(String css) throws IOException {
         File result = new File(getResultFilename());
         System.out.println("Making manual file with name: " + result.getAbsolutePath());
-        if (result.getParentFile().exists() || result.getParentFile().mkdirs()) {
-            PrintWriter writer = new PrintWriter(result);
-            writer.write(makePageTop(css));
-            Path p = Paths.get(getSrcFilename());
-            System.out.println("Reading manual content from '" + p.toAbsolutePath().toString());
-            writer.write(new String(Files.readAllBytes(p), StandardCharsets.UTF_8));
-            writer.write("</body></html>");
-            writer.close();
+        Path p = Paths.get(getSrcFilename());
+        if (Files.exists(p)) {
+            if (!result.getParentFile().exists() && result.getParentFile().mkdirs()) {
+                PrintWriter writer = new PrintWriter(result);
+                writer.write(makePageTop(css));
+                System.out.println("Reading manual content from '" + p.toAbsolutePath().toString());
+                writer.write(new String(Files.readAllBytes(p), StandardCharsets.UTF_8));
+                writer.write("</body></html>");
+                writer.close();
+            }
+        } else {
+            System.out.println("Manual with name " + p.toAbsolutePath().toString() + " not found");
         }
     }
 }
