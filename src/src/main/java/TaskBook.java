@@ -2,12 +2,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Александр on 14.02.2019.
@@ -20,10 +16,10 @@ public class TaskBook {
     private List<TaskGroup> groups = new ArrayList<>();
     private String themeNav;
     private List<Manual> manuals = new ArrayList<>();
-    private Set<Integer> taskIds = new HashSet<>();
 
     private String lastGroupName = null;
     private List<LabFragment> fragmentsOfLastGroup = new ArrayList<>();
+    private Map<Integer, LabTask> taskById = new HashMap<>();
 
     public TaskBook withSourceDirectory(String directory) {
         this.sourceDirectory = directory;
@@ -38,6 +34,10 @@ public class TaskBook {
     public TaskBook withIndex(int index) {
         this.labIndex = index;
         return this;
+    }
+
+    public int getLabIndex(){
+        return this.labIndex;
     }
 
     public TaskBook withLangAbbreviation(String langAbbreviation) {
@@ -61,17 +61,22 @@ public class TaskBook {
         fragmentsOfLastGroup.add(citation);
         return this;
     }
-    private void checkIfAlreadyPresent(int id){
-        if (taskIds.contains(id)){
+
+    public boolean hasTask(int id) {
+        return taskById.containsKey(id);
+    }
+
+    private void checkIfAlreadyPresent(int id) {
+        if (taskById.containsKey(id)) {
             throw new IllegalStateException("Task " + id + " already present in taskbook");
         }
-        taskIds.add(id);
     }
 
     public TaskBook addTask(int id) {
         checkIfAlreadyPresent(id);
         LabTask task = new LabTask(id, getSourceDirectory(), false)
                 .withLangAbbreviation(langAbbreviation);
+        taskById.put(id, task);
         fragmentsOfLastGroup.add(task);
         return this;
     }
@@ -80,6 +85,7 @@ public class TaskBook {
         checkIfAlreadyPresent(id);
         LabTask task = new LabTask(id, getSourceDirectory(), true)
                 .withLangAbbreviation(langAbbreviation);
+        taskById.put(id, task);
         fragmentsOfLastGroup.add(task);
         return this;
     }
@@ -88,6 +94,7 @@ public class TaskBook {
         LabTask task = new LabTask(taskId, getSourceDirectory(), true)
                 .withLangAbbreviation(langAbbreviation)
                 .withManual();
+        taskById.put(taskId, task);
         fragmentsOfLastGroup.add(task);
         Manual man = Manual.builder()
                 .withDirectory(getSourceDirectory())
@@ -115,7 +122,9 @@ public class TaskBook {
         return getTargetDirectory() + "//" + getFilenameForLink();
     }
 
-    public String getTargetDirectory() { return "..//" + langAbbreviation; }
+    public String getTargetDirectory() {
+        return "..//" + langAbbreviation;
+    }
 
     public String getSourceDirectory() {
         return sourceDirectory;
@@ -214,5 +223,15 @@ public class TaskBook {
         }
         sb.append("</ul></div>");
         return sb.toString();
+    }
+
+    public void updateReferenceLinks(TaskBookFinder finder) throws IOException {
+        for (Map.Entry<Integer, LabTask> entry : taskById.entrySet()) {
+            LabTask task = entry.getValue();
+            task.updateReferenceLinks(finder);
+        }
+        for (Manual manual : manuals){
+            manual.updateReferenceLinks(finder);
+        }
     }
 }

@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -50,6 +51,7 @@ public class LabTask extends LabFragment {
         }
     }
 
+    @Override
     protected String getSrcFilename() {
         String langSpecificPath = String.format("%s/task%s%4d.html", srcDirectory, langAbbreviation, id);
         if (Files.exists(Paths.get(langSpecificPath))) {
@@ -60,6 +62,29 @@ public class LabTask extends LabFragment {
         }
     }
 
+    protected void updateReferenceLinks(TaskBookFinder finder) throws IOException {
+        String content = getContent();
+        StringBuffer newContent = new StringBuffer();
+        Pattern referencePattern = Pattern.compile("<a href=\"(.*?)#task(\\d{4})\" target=\"_blank\">(.*?)</a>");
+        Matcher referenceMatcher = referencePattern.matcher(content);
+        while (referenceMatcher.find()) {
+            String labId = referenceMatcher.group(1);
+            String referenceId = referenceMatcher.group(2);
+            String referenceName = referenceMatcher.group(3);
+
+            System.out.println("Fragment " + getSrcFilename() + " has reference to " + referenceId + " " + referenceName);
+            Optional<TaskBook> value = finder.getFirstTaskbookFilenameWithTask(referenceId);
+            if (value.isPresent()) {
+                String linkTitle = "ЛР" + value.get().getLabIndex() + "#" + referenceId+ "(открыть в новой вкладке)";
+                referenceMatcher.appendReplacement(newContent, "<a href=\"" + value.get().getFilenameForLink() + "#task$2\" target=\"_blank\">" + linkTitle + "</a>");
+            } else {
+                System.out.println("Failed to find task " + referenceId + " in other taskbooks");
+            }
+        }
+        referenceMatcher.appendTail(newContent);
+        updateContent(newContent.toString());
+    }
+
     @Override
     public void copyRequiredFilesTo(String targetDirectory) throws IOException {
         super.copyRequiredFilesTo(targetDirectory);
@@ -68,7 +93,7 @@ public class LabTask extends LabFragment {
         while (dataMatcher.find()) {
             String dataName = dataMatcher.group(1);
             System.out.println("Task " + id + " links to data file '" + dataName + "'");
-            if (!dataName.contains(String.valueOf(id))){
+            if (!dataName.contains(String.valueOf(id))) {
                 throw new IllegalArgumentException("Task " + id + " links to data file of other task");
             }
             Path src = Paths.get(srcDirectory + "\\" + dataName).toAbsolutePath();
