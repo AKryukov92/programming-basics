@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Random;
 
 /**
  * Created by Александр on 09.02.2019.
@@ -17,15 +18,17 @@ public class Application {
                 "Работа с интервалами значений",
 
                 "Реорганизация повторяющихся действий",
+                "Вложенные циклы",
                 "Массивы",
                 "Вычисление агрегатов",
                 "Строки",
-                "Обработка неизвестного объема данных",
 
+                "Обработка неизвестного объема данных",
                 "Запись в файлы",
                 "Методы",
                 "Исключения",
                 "Классы и объекты",
+
                 "Коллекции"
         };
         String css = loadCss("styles.css");
@@ -37,15 +40,16 @@ public class Application {
         fillMutualExclusives(taskBooksCs[3]);
         fillRanges(taskBooksCs[4]);
         fillLoops(taskBooksCs[5]);
-        fillArrayHandling(taskBooksCs[6]);
-        fillAggregateCalculation(taskBooksCs[7]);
-        fillStringMethods(taskBooksCs[8]);
-        fillReadingFiles(taskBooksCs[9]);
-        fillWritingFiles(taskBooksCs[10]);
-        fillMethods(taskBooksCs[11]);
-        fillExceptions(taskBooksCs[12]);
-        fillAbstractDataStructures(taskBooksCs[13]);
-        fillCollections(taskBooksCs[14]);
+        fillNestedLoops(taskBooksCs[6]);
+        fillArrayHandling(taskBooksCs[7]);
+        fillAggregateCalculation(taskBooksCs[8]);
+        fillStringMethods(taskBooksCs[9]);
+        fillReadingFiles(taskBooksCs[10]);
+        fillWritingFiles(taskBooksCs[11]);
+        fillMethods(taskBooksCs[12]);
+        fillExceptions(taskBooksCs[13]);
+        fillAbstractDataStructures(taskBooksCs[14]);
+        fillCollections(taskBooksCs[15]);
         updateCrossTaskLinks(taskBooksCs);
         makeFiles(taskBooksCs, css);
 
@@ -57,15 +61,16 @@ public class Application {
         fillMutualExclusives(taskBooksJava[3]);
         fillRanges(taskBooksJava[4]);
         fillLoops(taskBooksJava[5]);
-        fillArrayHandling(taskBooksJava[6]);
-        fillAggregateCalculation(taskBooksJava[7]);
-        fillStringMethods(taskBooksJava[8]);
-        fillReadingFiles(taskBooksJava[9]);
-        fillWritingFiles(taskBooksJava[10]);
-        fillMethods(taskBooksJava[11]);
-        fillExceptions(taskBooksJava[12]);
-        fillAbstractDataStructures(taskBooksJava[13]);
-        fillCollections(taskBooksJava[14]);
+        fillNestedLoops(taskBooksJava[6]);
+        fillArrayHandling(taskBooksJava[7]);
+        fillAggregateCalculation(taskBooksJava[8]);
+        fillStringMethods(taskBooksJava[9]);
+        fillReadingFiles(taskBooksJava[10]);
+        fillWritingFiles(taskBooksJava[11]);
+        fillMethods(taskBooksJava[12]);
+        fillExceptions(taskBooksJava[13]);
+        fillAbstractDataStructures(taskBooksJava[14]);
+        fillCollections(taskBooksJava[15]);
         makeFiles(taskBooksJava, css);
 
         String[] themeListJs = new String[]{
@@ -76,9 +81,11 @@ public class Application {
                 "Работа с интервалами значений",
 
                 "Реорганизация повторяющихся действий",
+                "Вложенные циклы",
                 "Массивы",
                 "Вычисление агрегатов",
                 "Строки",
+
                 "Функции",
                 "Исключения",
                 "Объекты"
@@ -91,13 +98,16 @@ public class Application {
         fillMutualExclusives(taskBooksJs[3]);
         fillRanges(taskBooksJs[4]);
         fillLoops(taskBooksJs[5]);
-        fillArrayHandling(taskBooksJs[6]);
-        fillAggregateCalculation(taskBooksJs[7]);
-        fillStringMethods(taskBooksJs[8]);
-        fillMethods(taskBooksJs[9]);
-        fillExceptionJs(taskBooksJs[10]);
-        fillAbstractDataStructuresJs(taskBooksJs[11]);
+        fillNestedLoops(taskBooksJs[6]);
+        fillArrayHandling(taskBooksJs[7]);
+        fillAggregateCalculation(taskBooksJs[8]);
+        fillStringMethods(taskBooksJs[9]);
+        fillMethods(taskBooksJs[10]);
+        fillExceptionJs(taskBooksJs[11]);
+        fillAbstractDataStructuresJs(taskBooksJs[12]);
         makeFiles(taskBooksJs, css);
+
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksCs));
     }
 
     private static void makeFiles(TaskBook[] taskBooks, String css) throws IOException {
@@ -289,7 +299,13 @@ public class Application {
 
                 .withGroup("Один цикл за другим")
                 .addTask(7086)
-                .addTask(4075)
+
+                .withGroup("Графический диктант с циклами один за другим")
+                .addExample(6062)
+                .addTask(6955)
+                .addTask(9639)
+                .addTask(7353)
+                .addTask(4910)
 
                 .withGroup("Цикл внутри условия")
                 .addExample(6066)
@@ -311,9 +327,18 @@ public class Application {
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 .addTask(4236)
+        ;
+    }
+
+    private static void fillNestedLoops(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab06")
 
                 .withGroup("Цикл после цикла. Подготовка к циклам внутри циклов")
-                .addExample(8395)
+                .addExample(4075)
+                .addTask(8395)
+
+                .withGroup("Циклы один за другим с вложением")
+                .addExample(5902)
                 .addTask(5568)
                 .addTask(2592)
 
@@ -327,7 +352,8 @@ public class Application {
                 .addTask(5411)
                 .addTask(5171)
                 .addTask(1862)
-        ;
+                .addTask(6302)
+                ;
     }
 
     private static void fillArrayHandling(TaskBook taskBook) {
@@ -685,5 +711,22 @@ public class Application {
             taskBooks[i].withThemeNav(navContent);
         }
         return taskBooks;
+    }
+
+    public static int suggestNextTaskId(TaskBook[] books) {
+        Random rnd = new Random();
+        int potentialId;
+        boolean found;
+        do {
+            potentialId = 1000 + rnd.nextInt(9000);
+            found = false;
+            for (TaskBook book : books){
+                if (book.containsTaskWithId(potentialId)){
+                    found = true;
+                    break;
+                }
+            }
+        } while (found);
+        return potentialId;
     }
 }

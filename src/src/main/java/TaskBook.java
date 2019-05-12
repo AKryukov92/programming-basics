@@ -36,7 +36,7 @@ public class TaskBook {
         return this;
     }
 
-    public int getLabIndex(){
+    public int getLabIndex() {
         return this.labIndex;
     }
 
@@ -230,8 +230,12 @@ public class TaskBook {
             LabTask task = entry.getValue();
             task.updateReferenceLinks(finder);
         }
-        for (Manual manual : manuals){
+        for (Manual manual : manuals) {
             manual.updateReferenceLinks(finder);
         }
+    }
+
+    public boolean containsTaskWithId(int id){
+        return taskById.containsKey(id);
     }
 }

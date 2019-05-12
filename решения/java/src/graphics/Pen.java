@@ -85,11 +85,11 @@ public class Pen extends JPanel {
         draws.add(draw);
     }
 
-    public void startDrawing() {
+    public void startLine() {
         this.draw = true;
     }
 
-    public void endDrawing() {
+    public void endLine() {
         this.draw = false;
     }
 }
