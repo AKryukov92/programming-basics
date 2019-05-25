@@ -8,9 +8,9 @@ public class Pen extends JPanel {
     private int x;
     private int y;
     private boolean draw;
-    private static int PIXELS_IN_STEP = 20;
-    private static int WINDOW_WIDTH = 800;
-    private static int WINDOW_HEIGHT = 600;
+    private static final int PIXELS_IN_STEP = 20;
+    private static final int WINDOW_WIDTH = 800;
+    private static final int WINDOW_HEIGHT = 600;
     private ArrayList<Point> points = new ArrayList<>();
     private ArrayList<Boolean> draws = new ArrayList<>();
 

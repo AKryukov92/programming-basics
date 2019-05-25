@@ -88,3 +88,9 @@ csharp/postcard/postcard/obj
 /src/.idea/workspace.xml
 /cs
 /архив/WpfApp1/.vs/WpfApp1/v15/sqlite3/storage.ide
+/архив/PaintingApp/PaintingApp/bin/*
+/архив/PaintingApp/PaintingApp/obj/*
+/архив/PaintingApp/.vs/PaintingApp/v15/Server/sqlite3/db.lock
+/архив/PaintingApp/.vs/PaintingApp/v15/Server/sqlite3/storage.ide
+/архив/PaintingApp/.vs/PaintingApp/v15/Server/sqlite3/storage.ide-shm
+/архив/PaintingApp/.vs/PaintingApp/v15/Server/sqlite3/storage.ide-wal
