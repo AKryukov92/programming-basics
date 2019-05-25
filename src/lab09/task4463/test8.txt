@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery.js" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8" src="js/jasmine.js"></script>
+	</head>
+	<body>
+		This file includes jquery and jasmine script
+		<script>
+			alert("custom script");
+		</script>
+	</body>
+</html>

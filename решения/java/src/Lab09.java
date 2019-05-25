@@ -8,6 +8,20 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
+        System.out.println("5537");
+        String[] out5537 = {
+                "Файл пуст",
+                "3",
+                "569",
+                "253",
+                "Запись 'Опять, как в годы золотые,' длиннее четырех символов",
+                "Файл не существует E:\\tfa\\решения\\java\\.\\task5537\\test6.txt",
+                "Запись 'шъх' короче четырех символов"
+        };
+        for (int i = 0; i < out5537.length; i++){
+            System.out.println("-->" + out5537[i] + "<--");
+            task5537(".\\task5537\\test" + (i+1) + ".txt");
+        }
     }
     public static void call(){
         System.out.println("6175");
@@ -67,36 +81,22 @@ public class Lab09 {
         System.out.println();
         System.out.println("6882");
         String[] out6882 = {
-            "0",
-            "0",
-            "5",
-            "1023",
-            "Не удается считать число",
-            "Не удается считать число",
-            "Файл пуст",
-            "Файл не существует",
-            "Не удается считать число"
+                "0",
+                "0",
+                "5",
+                "1023",
+                "Не удается считать число",
+                "Не удается считать число",
+                "Файл пуст",
+                "Файл не существует",
+                "Не удается считать число",
+                "-15"
         };
         for (int i = 0; i < out6882.length; i++){
             System.out.println("-->" + out6882[i] + "<--");
             task6882(".\\task6882\\test" + (i+1) + ".txt");
         }
         System.out.println();
-        System.out.println("5537");
-        String[] out5537 = {
-            "Некорректное число",
-            "569",
-            "253",
-            "Не удается считать число",
-            "Некорректное число",
-            "0",
-            "Файл не существует",
-            "Некорректное число"
-        };
-        for (int i = 0; i < out5537.length; i++){
-            System.out.println("-->" + out5537[i] + "<--");
-            task5537(".\\task5537\\test" + (i+1) + ".txt");
-        }
         System.out.println();
         System.out.println("6431");
         String[] out6431 = {
@@ -133,35 +133,39 @@ public class Lab09 {
         System.out.println();
         System.out.println("5847");
         String[] in5847 = {
-            "B", "Y", "I", "F", "", "B", "S"
+                "B", "Y", "I", "F", "", "B", "S", "X"
         };
         String[] out5847 = {
-            "32",
-            "0",
-            "24",
-            "0",
-            "Файл не существует",
-            "Указанная буква не найдена",
-            "В данной строке несколько искомых букв"
+                "32",
+                "0",
+                "24",
+                "0",
+                "Файл не существует",
+                "Указанная буква не найдена",
+                "В данной строке несколько искомых букв",
+                "В файле слишком много строк"
         };
         for (int i = 0; i < out5847.length; i++){
             System.out.println("-->" + out5847[i] + "<--");
             task5847(in5847[i], ".\\task5847\\test" + (i+1) + ".txt");
         }
         System.out.println();
-        System.out.println("4768");
-        String[] in4769a = {"P", "N" , "W", "U", "F", "I", "B", "P", "S"};
-        String[] in4769b = {"Q", "K", "X", "T", "A", "I", "E", "Q", "F"};
+        System.out.println("4769");
+        String[] in4769a = {"P", "N" , "W", "U", "F", "I", "B", "P", "S", "P", "P", "T"};
+        String[] in4769b = {"Q", "K", "X", "T", "A", "I", "E", "Q", "F", "Q", "Q", "R"};
         String[] out4769 = {
-            "16",
-            "0",
-            "41",
-            "4",
-            "Одна из указанных букв не найдена",
-            "В данной строке несколько искомых букв",
-            "Одна из указанных букв не найдена",
-            "Файл не существует",
-            "Одна из указанных букв не найдена"
+                "16",
+                "0",
+                "41",
+                "4",
+                "Одна из указанных букв не найдена",
+                "В данной строке несколько искомых букв",
+                "Одна из указанных букв не найдена",
+                "Файл не существует",
+                "Одна из указанных букв не найдена",
+                "В данной строке несколько искомых букв",
+                "В данной строке несколько искомых букв",
+                "В файле слишком много строк"
         };
         for (int i = 0; i < out4769.length; i++){
             System.out.println("-->" + out4769[i] + "<--");
@@ -296,7 +300,7 @@ public class Lab09 {
         } catch (InputMismatchException ex){
             System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex){
-            System.out.println("Файл не существует");
+            System.out.println("Файл не существует " + target.getAbsolutePath());
         }
     }
 
@@ -305,25 +309,25 @@ public class Lab09 {
         try (Scanner scanner = new Scanner(target)){
             int count = 0;
             while(scanner.hasNext()){
-                int current = scanner.nextInt();
-                if (current < 1000 || current > 9999){
-                    System.out.println("Некорректное число");
+                String current = scanner.nextLine();
+                if (current.length() > 4){
+                    System.out.println("Запись '" + current + "' длиннее четырех символов");
                     scanner.close();
                     return;
-                }
-                int d1 = current/1000;
-                int d2 = current/100%10;
-                int d3 = current/10%10;
-                int d4 = current%10;
-                if (d1 == d2 || d2 == d3 || d3 == d4){
-                    count++;
+                } else if (current.length() < 4){
+                    System.out.println("Запись '" + current + "' короче четырех символов");
+                    scanner.close();
+                    return;
+                } else {
+                    char[] chars = current.toCharArray();
+                    if (chars[0] == chars[1] || chars[1] == chars[2] || chars[2] == chars[3]){
+                        count++;
+                    }
                 }
             }
             System.out.println(count);
-        } catch (InputMismatchException ex){
-            System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex){
-            System.out.println("Файл не существует");
+            System.out.println("Файл не существует " + target.getAbsolutePath());
         }
     }
 
@@ -413,7 +417,9 @@ public class Lab09 {
         try (Scanner scanner = new Scanner(target)) {
             if (scanner.hasNext()){
                 String line = scanner.next();
-                if (line.indexOf(a) != line.lastIndexOf(a)){
+                if (scanner.hasNext()){
+                    System.out.println("В файле слишком много строк");
+                } else if (line.indexOf(a) != line.lastIndexOf(a)){
                     System.out.println("В данной строке несколько искомых букв");
                 } else if (line.contains(a)) {
                     System.out.println(line.length() - line.indexOf(a) - 1);
@@ -435,28 +441,32 @@ public class Lab09 {
     public static void task4769(String a, String b, String filename) {
         File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
-            if (scanner.hasNext()){
+            if (scanner.hasNext()) {
                 String line = scanner.next();
-                int ia = line.indexOf(a);
-                int ib = line.indexOf(b);
-                if (ia != line.lastIndexOf(a) || ib != line.lastIndexOf(b)){
-                    System.out.println("В данной строке несколько искомых букв");
-                } else if (line.contains(a) && line.contains(b)){
-                    if (ia > ib){
-                        System.out.println(ia - ib - 1);
-                    } else {
-                        System.out.println(ib - ia - 1);
-                    }
+                if (scanner.hasNext()) {
+                    System.out.println("В файле слишком много строк");
                 } else {
-                    System.out.println("Одна из указанных букв не найдена");
+                    int ia = line.indexOf(a);
+                    int ib = line.indexOf(b);
+                    if (ia != line.lastIndexOf(a) || ib != line.lastIndexOf(b)) {
+                        System.out.println("В данной строке несколько искомых букв");
+                    } else if (line.contains(a) && line.contains(b)) {
+                        if (ia > ib) {
+                            System.out.println(ia - ib - 1);
+                        } else {
+                            System.out.println(ib - ia - 1);
+                        }
+                    } else {
+                        System.out.println("Одна из указанных букв не найдена");
+                    }
                 }
             } else {
                 System.out.println("Файл пуст");
             }
-        } catch (NumberFormatException | InputMismatchException ex){
+        } catch (NumberFormatException | InputMismatchException ex) {
             System.out.println("Не удается считать число");
-        } catch (FileNotFoundException ex){
-            System.out.println("Файл не существует");
+        } catch (FileNotFoundException ex) {
+            System.out.println("Файл не существует " + target.getAbsolutePath());
         } catch (Exception e) {
             System.out.println("Некорректный формат данных");
         }
