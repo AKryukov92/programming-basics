@@ -107,7 +107,7 @@ public class Application {
         fillAbstractDataStructuresJs(taskBooksJs[12]);
         makeFiles(taskBooksJs, css);
 
-        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksCs));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
 
     private static void makeFiles(TaskBook[] taskBooks, String css) throws IOException {
@@ -128,7 +128,7 @@ public class Application {
                 .addCitation("link_c1_p4.3")
                 .addExampleWithManual(1662)
 
-                .withGroup("Диктант по присваиванию")
+                .withGroup("Диктант по присваиванию и конкатенации")
                 .addExample(4131)
                 .addTask(7365)
 
@@ -150,8 +150,14 @@ public class Application {
                 .addTask(4343)
                 .addTask(7474)
 
+                .withGroup("Отработка присваивания")
+                .addExample(3246)
+                .addTask(7332)
+                .addTask(9781)
+                .addTask(6814)
+
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addTask(1640)
+                .addExample(1640)
                 .addTask(8693)
         ;
     }
@@ -365,6 +371,7 @@ public class Application {
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(5683)
+                .addTask(8557)
                 .addCitation("link_c3_p12.8")
                 .addTask(1223)
                 .addTask(8311)
@@ -392,6 +399,7 @@ public class Application {
                 .addExample(7369)
                 .addTask(5894)
                 .addTask(4515)
+                .addTask(2234)
 
                 .withGroup("Сортировка массива вставкой")
                 .addExample(7290)
@@ -445,6 +453,7 @@ public class Application {
                 .addTask(4265)
                 .addTask(2166)
                 .addTask(9116)
+                .addTask(4996)
                 .addExample(9925)
                 .addExample(3657)
                 .addTask(6599)

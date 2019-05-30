@@ -279,4 +279,139 @@ public class Lab08 {
         }
         return String.format("Значение переменной %s %s %s %s", var, description, special, value);
     }
+
+    public static String task8557(String data){
+        String[] arr = data.split(",");
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < arr.length; i++){
+            result.append("Глава ").append(i + 1).append(" ").append(arr[i]).append("\n");
+        }
+        return result.toString();
+    }
+
+    public static String[] codes = {
+            "..--..",
+            ".-",
+            "-...",
+            ".--",
+            "--.",
+            "-..",
+            ".",
+            "...-",
+            "--..",
+            "..",
+            ".---",
+            "-.-",
+            ".-..",
+            "--",
+            "-.",
+            "---",
+            ".--.",
+            ".-.",
+            "...",
+            "-",
+            "..-",
+            "..-.",
+            "....",
+            "-.-.",
+            "---.",
+            "----",
+            "--.-",
+            "--.--",
+            "-.--",
+            "..-..",
+            "..-..",
+            "..--",
+            ".-.-",
+            ".----",
+            "..---",
+            "...--",
+            "....-",
+            ".....",
+            "-....",
+            "--...",
+            "---..",
+            "----.",
+            "-----"
+    };
+    public static char[] letters = {
+            '?',
+            'А',
+            'Б',
+            'В',
+            'Г',
+            'Д',
+            'Е',
+            'Ж',
+            'З',
+            'И',
+            'Й',
+            'К',
+            'Л',
+            'М',
+            'Н',
+            'О',
+            'П',
+            'Р',
+            'С',
+            'Т',
+            'У',
+            'Ф',
+            'Х',
+            'Ц',
+            'Ч',
+            'Ш',
+            'Щ',
+            'Ъ',
+            'Ы',
+            'Ь',
+            'Э',
+            'Ю',
+            'Я',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '0'
+    };
+
+    public static String task4996(String message) {
+        char[] uppered = message.toUpperCase().toCharArray();
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < uppered.length; i++) {
+            int letterIndex = 0;
+            if (Character.isWhitespace(uppered[i])) {
+                continue;
+            }
+            for (int j = 0; j < letters.length; j++) {
+                if (letters[j] == uppered[i]) {
+                    letterIndex = j;
+                    break;
+                }
+            }
+            result.append(codes[letterIndex]).append(" ");
+        }
+        return result.toString();
+    }
+
+    public static String task2234(String message){
+        String[] arr = message.split(" ");
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < arr.length; i++){
+            int letterIndex = 0;
+            for (int j = 0; j < codes.length; j++){
+                if (arr[i].equals(codes[j])){
+                    letterIndex = j;
+                    break;
+                }
+            }
+            result.append(letters[letterIndex]);
+        }
+        return result.toString();
+    }
 }
