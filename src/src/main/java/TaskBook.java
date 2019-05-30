@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -170,9 +171,7 @@ public class TaskBook {
             }
         }
         System.out.println("Creating fresh target directory");
-        if (!targetDirectory.mkdirs()) {
-            throw new RuntimeException("Failed to create target directory " + targetDirectory.getAbsolutePath());
-        }
+        Files.createDirectory(targetDirectory.toPath());
     }
 
     public void make(String css) throws IOException {

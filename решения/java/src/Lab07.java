@@ -5,6 +5,23 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
+        step8122();
+    }
+
+    public static void step8122() {
+        System.out.println();
+        System.out.println("8122");
+        task8122("а,0,б,0,в,0,г,0,е,1,е,2,е,3,к,1,к,2,к,5,к,6,д,7,г,7");
+        task8122("б,5,в,5,г,5,е,5,ж,5,з,5,и,5,д,1,д,2,д,3,д,7,д,8");
+        task8122("а,-1,в,2,д,4");
+        task8122("а,0,к,15");
+        task8122("а,0,к,10");
+        task8122("м,5,а,0,ж,3");
+        task8122("");
+        task8122("в,2,з,2,в,7,з");
+    }
+
+    public static void step5541() {
         System.out.println();
         System.out.println("5541");
         String[] in5541 = {
@@ -672,5 +689,66 @@ public class Lab07 {
             }
         }
         return sb.toString();
+    }
+
+    public static void task8122(String data){
+        System.out.println(data);
+        if(data.isEmpty()){
+            System.out.println("Нет данных о кораблях");
+            return;
+        }
+        String[] arr = data.split(",");
+
+        char[] colHeaders = {'а','б','в','г','д','е','ж','з','и','к'};
+        int TOTAL_ROWS = 10;
+        for (int j = 0; j < arr.length; j += 2) {
+            String letter = arr[j];
+            if (j + 1 == arr.length){
+                System.out.println("Некорректный формат. Последняя координата указана не полностью");
+                return;
+            }
+            int number = Integer.parseInt(arr[j + 1]);
+            if (number >= TOTAL_ROWS || number < 0) {
+                System.out.println("Некорректная координата " + number);
+                return;
+            }
+            boolean found = false;
+            for (int col = 0; col < colHeaders.length; col++) {
+                if (letter.charAt(0) == colHeaders[col]) {
+                    found = true;
+                    break;
+                }
+            }
+            if(!found){
+                System.out.println("Некорректная координата " + letter);
+                return;
+            }
+        }
+        System.out.print(" ");
+        for (int i = 0; i < colHeaders.length; i++){
+            System.out.print(colHeaders[i]);
+        }
+        System.out.println();
+        for (int row = 0; row < TOTAL_ROWS; row++){
+            System.out.print(row);
+            for (int col = 0; col < colHeaders.length; col++) {
+                boolean found = false;
+                for (int j = 0; j < arr.length; j += 2) {
+                    String letter = arr[j];
+                    int number = Integer.parseInt(arr[j + 1]);
+                    if (number == row && letter.charAt(0) == colHeaders[col]) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) {
+                    System.out.print("#");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("|");
+        }
+        System.out.println(" ----------");
     }
 }
