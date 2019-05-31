@@ -330,6 +330,7 @@ public class Application {
                 .addCitation("link_c3_p11.2")
                 .addTask(8418)
                 .addTask(5170)
+                .addTask(8722)
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 .addTask(4236)
@@ -340,7 +341,8 @@ public class Application {
         taskBook.withSourceDirectory("lab06")
 
                 .withGroup("Цикл после цикла. Подготовка к циклам внутри циклов")
-                .addExample(4075)
+                .addExample(9249)
+                .addTask(4075)
                 .addTask(8395)
 
                 .withGroup("Циклы один за другим с вложением")
@@ -385,7 +387,9 @@ public class Application {
 
                 .withGroup("Конвертирование элементов")
                 .addExample(9774)
+                .addTask(2390)
                 .addTask(3940)
+                .addTask(9525)
 
                 .withGroup("Реорганизация повторяющихся действий")
                 .addExample(5694)
@@ -437,6 +441,7 @@ public class Application {
                 .addTask(7035)
                 .addTask(9271)
                 .addTask(8769)
+                .addTask(7260)
         ;
     }
 

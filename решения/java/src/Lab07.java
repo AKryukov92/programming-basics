@@ -5,7 +5,51 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step8122();
+        step9525();
+    }
+
+    public static void step2390() {
+        System.out.println();
+        System.out.println("2390");
+        task2390("9;8;7;6;5;4");
+        System.out.println("-----------");
+        task2390("15;0;4;20;10");
+        System.out.println("-----------");
+        task2390("3");
+        System.out.println("-----------");
+        task2390("");
+        System.out.println("-----------");
+        task2390("3;-1;6;-100000;4");
+    }
+
+    public static void step9525() {
+        System.out.println();
+        System.out.println("9525");
+        task9525("1,5,3,10,8,15,18,20");
+        System.out.println("-----------");
+        task9525("19,25,0,3,100,120");
+        System.out.println("-----------");
+        task9525("10,19,20,29,30,39");
+        System.out.println("-----------");
+        task9525("19,8,5,10,34,19");
+        System.out.println("-----------");
+        task9525("1,1,20,60,20,20,19,19");
+        System.out.println("-----------");
+        task9525("3,17,90,65");
+        System.out.println("-----------");
+        task9525("1,100,2,99,3,98,4,97,5,96");
+        System.out.println("-----------");
+        task9525("1,5,3");
+    }
+
+    public static void step7260() {
+        System.out.println();
+        System.out.println("7260");
+        task7260("9 8 7 6 5 4");
+        task7260("10 98 62 37 50 41 77 2");
+        task7260("5 9 7 2");
+        task7260("-3 -6 -8 -20 -4 -90");
+        task7260("");
     }
 
     public static void step8122() {
@@ -295,12 +339,14 @@ public class Lab07 {
             throw new IllegalArgumentException("Число B должно быть в интервале [0, размер массива)");
         }
         int t = Integer.parseInt(arr[b]);
+        System.out.println("На позиции B находится " + arr[b]);
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (Integer.parseInt(arr[i]) < t) {
                 count++;
             }
         }
+        System.out.println("Количество меньших " + count);
         return count;
     }
 
@@ -750,5 +796,75 @@ public class Lab07 {
             System.out.println("|");
         }
         System.out.println(" ----------");
+    }
+
+    public static void task7260(String data) {
+        System.out.println();
+        if(data.isEmpty()){
+            System.out.println("Нет данных");
+            return;
+        }
+        String[] arr = data.split(" ");
+        int i = 0;
+        int j = 0;
+        int sum = 0;
+
+        while (i < arr.length) {
+            if(j == 0){
+                System.out.print("Группа");
+            }
+            int value = Integer.parseInt(arr[i]);
+            System.out.print(" ");
+            System.out.print(value);
+            sum += value;
+            j++;
+            if (j == 3){
+                j = 0;
+                System.out.println(" сумма " + sum);
+                sum = 0;
+            }
+            i++;
+        }
+    }
+
+    public static void task9525(String data) {
+        int TARGET = 19;
+        String[] arr = data.split(",");
+        if (arr.length % 2 == 1){
+            System.out.println("У последнего интервала отсутствует одна из границ");
+            return;
+        }
+        for (int i = 0; i < arr.length; i+=2){
+            int p = Integer.parseInt(arr[i]);
+            int q = Integer.parseInt(arr[i+1]);
+            if (p < q){
+                if (p <= TARGET && TARGET <= q){
+                    System.out.println("От " + p + " до " + q);
+                }
+            } else {
+                if (q <= TARGET && TARGET <= p){
+                    System.out.println("От " + q + " до " + p);
+                }
+            }
+        }
+    }
+
+    public static void task2390(String data) {
+        if (data.isEmpty()) {
+            System.out.println("Нет данных");
+            return;
+        }
+        String[] arr = data.split(";");
+        for (int i = 0; i < arr.length; i++) {
+            int value = Integer.parseInt(arr[i]);
+            if (value < 0) {
+                System.out.println("Элемент массива на индексе " + i + " меньше нуля");
+                continue;
+            }
+            for (int j = 0; j < value; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
     }
 }

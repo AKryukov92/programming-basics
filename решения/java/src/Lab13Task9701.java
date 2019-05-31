@@ -4,57 +4,57 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-        Step9020();
-        Step7237();
-        Step3943();
-        Step8873();
-        Step2624();
-
-        Step1346();
-        Step5871();
-        Step3591();
-        Step9298();
-        Step3354();
-
-        Step5201();
-        Step2981();
-        Step4312();
-        Step8833();
-        Step1934();
-
-        Step7619();
-        Step9130();
-        Step2461();
-        Step7799();
-        Step2802();
-
-        Step9180();
-        Step1544();
-        Step9631();
-        Step9812();
-        Step5728();
-
-        Step5923();
-        Step9116();
-        Step1618();
-        Step7937();
-        Step4845();
-
-        Step7222();
-        Step2166();
-        Step5894();
-        Step4425();
+//        Step9020();
+//        Step7237();
+//        Step3943();
+//        Step8873();
+//        Step2624();
+//
+//        Step1346();
+//        Step5871();
+//        Step3591();
+//        Step9298();
+//        Step3354();
+//
+//        Step5201();
+//        Step2981();
+//        Step4312();
+//        Step8833();
+//        Step1934();
+//
+//        Step7619();
+//        Step9130();
+//        Step2461();
+//        Step7799();
+//        Step2802();
+//
+//        Step9180();
+//        Step1544();
+//        Step9631();
+//        Step9812();
+//        Step5728();
+//
+//        Step5923();
+//        Step9116();
+//        Step1618();
+//        Step7937();
+//        Step4845();
+//
+//        Step7222();
+//        Step2166();
+//        Step5894();
+//        Step4425();
         Step7290();
 
-        Step8769();
-        Step9354();
-        Step3490();
-        Step1433();
-        Step7085();
-
-        Step8887();
-        Step7834();
-        Step3095();
+//        Step8769();
+//        Step9354();
+//        Step3490();
+//        Step1433();
+//        Step7085();
+//
+//        Step8887();
+//        Step7834();
+//        Step3095();
     }
 
     private static void Step3591() {
@@ -666,7 +666,7 @@ public class Lab13Task9701 {
     static void Step7290() {
         System.out.println();
         System.out.println("7290");
-        int[] in7290b = {3, 2, 0, 4, 7, 1, -5};
+        int[] in7290b = {3, 2, 0, 4, 7, 1, -5, 10};
         String[] in7290data = {
                 "1 1 1 3 4 1",
                 "1 2 3 4 1 2",
@@ -675,9 +675,10 @@ public class Lab13Task9701 {
                 "4 4 4 4 4 3 2 1",
                 "4 4 4 4",
                 "1 1 1 3 4 1",
+                "1 2 3",
                 "1 2 3"
         };
-        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0};
+        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0, 0};
         for (int i = 0; i < in7290b.length; i++) {
             try {
                 int result = Lab07.task7290(in7290b[i], in7290data[i]);

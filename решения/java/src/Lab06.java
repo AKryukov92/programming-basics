@@ -9,6 +9,34 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
+        step8722();
+    }
+
+    public static void step8722() {
+        System.out.println();
+        System.out.println("8722");
+        task8722(3, 11);
+        task8722(11, 3);
+        task8722(20, 17);
+        task8722(0, 6);
+        task8722(9, 0);
+
+        task8722(-1, 3);
+        task8722(5, -8);
+    }
+
+    public static void step9249() {
+        System.out.println();
+        System.out.println("9249");
+        task9249(5, 11);
+        task9249(20, 3);
+        task9249(0, 7);
+        task9249(4, 0);
+        task9249(-1, 6);
+        task9249(6, -2);
+    }
+
+    public static void step0000() {
         task0000(3, 4);
         System.out.println("-----------");
         task0000(3, 7);
@@ -839,5 +867,56 @@ public class Lab06 {
             sb.append("\n");
         }
         return sb;
+    }
+
+    public static void task9249(int r, int t) {
+        if (r < 0) {
+            System.out.println("Значение R должно быть неотрицательно");
+            return;
+        }
+        if (t < 0) {
+            System.out.println("Значение T должно быть неотрицательно");
+            return;
+        }
+        System.out.println();
+        for (int i = 0; i < r; i++) {
+            System.out.print("#");
+        }
+        System.out.println();
+        for (int i = 0; i < t; i++) {
+            System.out.print("#");
+        }
+        System.out.println();
+    }
+
+    public static void task8722(int a, int b) {
+        if (a < 0) {
+            System.out.println("Значение A должно быть неотрицательно");
+            return;
+        }
+        if (b < 0) {
+            System.out.println("Значение B должно быть неотрицательно");
+            return;
+        }
+        if (a < b){
+            for (int i = 0; i <= b; i++){
+                if (i <= a) {
+                    System.out.print(i);
+                } else {
+                    System.out.print(" ");
+                }
+                System.out.print(" ");
+                System.out.println(i);
+            }
+        } else {
+            for (int i = 0; i <= a; i++){
+                System.out.print(i);
+                System.out.print(" ");
+                if (i <= b) {
+                    System.out.print(i);
+                }
+                System.out.println();
+            }
+        }
     }
 }
