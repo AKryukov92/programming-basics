@@ -4,7 +4,7 @@
 	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, а также X<sub>b</sub> и Y<sub>b</sub> точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах. 
 	<ul>
 	<li>Вычислите приращение координат. <formula>&Delta;x = X<sub>b</sub> - X<sub>a</sub></formula>; <formula>&Delta;y = Y<sub>b</sub> - Y<sub>a</sub></formula></li>
-	<li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>&Delta;Y</numerator><denominator>&Delta;X</denominator></fraction></formula>. Арктангенс из частного по модулю.</li>
+	<li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>&Delta;Y</numerator><denominator>&Delta;X</denominator></fraction></formula>. Арктангенс из абсолютного значения результата деления.</li>
 	<li>Выберите формулу для вычисления угла по знакам приращения координат и определите дирекционный угол по ней
 	<table class="check_values">
 		<tr>
@@ -18,26 +18,26 @@
 		</tr>
 		<tr>
 			<td>1</td>
-			<td>0+</td>
-			<td>+</td>
+			<td>0 и более</td>
+			<td>больше 0</td>
 			<td>angle = r</td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>-</td>
-			<td>0+</td>
+			<td>меньше 0</td>
+			<td>0 и более</td>
 			<td>angle = 180 - r</td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td>-0</td>
-			<td>-</td>
+			<td>0 и менее</td>
+			<td>меньше 0</td>
 			<td>angle = 180 + r</td>
 		</tr>
 		<tr>
 			<td>4</td>
-			<td>+</td>
-			<td>-0</td>
+			<td>больше 0</td>
+			<td>0 и менее</td>
 			<td>angle = 360 - r</td>
 		</tr>
 	</table></li>

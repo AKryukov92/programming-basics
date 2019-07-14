@@ -3,11 +3,51 @@ import java.util.List;
 
 /**
  * @author akryukov
- *         29.03.2017
+ * 29.03.2017
  */
 public class Lab05 {
     public static void main(String[] args) {
+        step8718();
+    }
 
+    public static void step8718() {
+        System.out.println();
+        System.out.println("8718");
+        task8718(80, 0, 450);
+        task8718(80, 0, 700);
+        task8718(80, 0, 2500);
+        task8718(80, 0, 6000);
+        task8718(80, 0, 10000);
+
+        task8718(100, 0, 450);
+        task8718(101, 0, 450);
+
+        task8718(100, 0.50, 450);
+        task8718(100, 7.50, 450);
+        task8718(100, 100.68, 450);
+        task8718(100, 15.99, 450);
+
+        task8718(115, 0, 500);
+        task8718(115, 0, 800);
+        task8718(115, 0, 3000);
+        task8718(115, 0, 5500);
+        task8718(115, 0, 8500);
+
+        task8718(500, 0, 550);
+        task8718(501, 0, 550);
+
+        task8718(1700, 0, 550);
+        task8718(1700, 0, 600);
+        task8718(1700, 0, 601);
+
+        task8718(0, 0, 450);
+        task8718(-50, 0, 450);
+        task8718(80, 0, 0);
+        task8718(80, 0, -100);
+        task8718(80, -20, 450);
+    }
+
+    public static void taskX() {
         System.out.println();
         System.out.println("3072");
         System.out.println(task3072(173, 179).print());
@@ -59,11 +99,11 @@ public class Lab05 {
         int[] in4858b1 = {3, 17, 37, 53, 15, 71, 73, 101};
         int[] in4858a2 = {5, 13, 29, 41, 0, 59, 83, 107};
         int[] in4858b2 = {7, 19, 31, 47, 30, 61, 89, 103};
-        for (int i = 0; i < in4858a1.length; i++){
+        for (int i = 0; i < in4858a1.length; i++) {
             try {
                 String value = task4858(in4858a1[i], in4858b1[i], in4858a2[i], in4858b2[i]);
                 System.out.println(value);
-            } catch (IllegalArgumentException ex){
+            } catch (IllegalArgumentException ex) {
                 System.out.println(ex.getMessage());
             }
         }
@@ -118,29 +158,63 @@ public class Lab05 {
         int[] in8867a = {1, -4, -2, 0, 4, 4};
         int[] in8867b = {3, 5, 7, 5, 4, -2};
         int[] in8867x = {2, 0, -10, 7, 4, 3};
-        for (int i = 0; i < in8867a.length; i++){
+        for (int i = 0; i < in8867a.length; i++) {
             try {
                 System.out.println(task8867(in8867a[i], in8867b[i], in8867x[i]));
-            } catch (IllegalArgumentException ex){
+            } catch (IllegalArgumentException ex) {
                 System.out.println(ex.getMessage());
             }
         }
         System.out.println();
         System.out.println("7865");
-        int[] in7865= {-5, -11, -3, 10, 5, 19, 0, -20, 20};
-        for (int i = 0; i < in7865.length; i++){
+        int[] in7865 = {-5, -11, -3, 10, 5, 19, 0, -20, 20};
+        for (int i = 0; i < in7865.length; i++) {
             System.out.println(task7865(in7865[i]));
         }
         System.out.println();
         System.out.println("8751");
         double[] in8751 = {-273, -10, -1, 0, 99, 100, 101, -274};
-        for (int i = 0; i < in8751.length; i++){
+        for (int i = 0; i < in8751.length; i++) {
             try {
                 System.out.println(task8751(in8751[i]));
-            } catch (IllegalArgumentException ex){
+            } catch (IllegalArgumentException ex) {
                 System.out.println(ex.getMessage());
             }
         }
+    }
+
+    public static void task8718(int mass, double declaredValue, double distance) {
+        if (mass <= 0) {
+            System.out.println("Масса должна быть положительна");
+            return;
+        }
+        if (declaredValue < 0) {
+            System.out.println("Оценочная стоимость должна быть неотрицательна");
+            return;
+        }
+        if (distance <= 0) {
+            System.out.println("Дистанция должна быть положительна");
+            return;
+        }
+        double cost = 40;
+        if (mass >= 100) {
+            double units = Math.ceil((mass - 100) / 20.0);
+            cost = cost + units * 2.5;
+        }
+        cost = cost + Math.ceil(declaredValue) * 0.03;
+        double units = Math.ceil(mass / 500.0);
+        if (distance < 600) {
+            cost = cost + units * 95;
+        } else if (601 <= distance && distance <= 2000) {
+            cost = cost + units * 105;
+        } else if (2001 <= distance && distance <= 5000) {
+            cost = cost + units * 120;
+        } else if (5001 <= distance && distance <= 8000) {
+            cost = cost + units * 135;
+        } else {
+            cost = cost + units * 150;
+        }
+        System.out.printf("Плата за посылку массой %d грамм с оценочной стоимостью %.2f рублей, которую отправили на расстояние %.0f км, составляет %.2f рублей\n", mass, declaredValue, distance, cost);
     }
 
     public static boolean task8878(int a, int b) {
@@ -254,9 +328,9 @@ public class Lab05 {
 
     public static double[] task1186(double x, double y, double z) {
         return new double[]{
-            x > 0 ? x * x : x,
-            y > 0 ? y * y : y,
-            z > 0 ? z * z : z
+                x > 0 ? x * x : x,
+                y > 0 ? y * y : y,
+                z > 0 ? z * z : z
         };
     }
 
@@ -361,9 +435,9 @@ public class Lab05 {
     public static StringBuilder task1292(StringBuilder sb, String x) {
         String[] chars = {"a", "b", "c", "d", "e", "f", "g", "h"};
         int i = 0;
-        while (i < chars.length){
+        while (i < chars.length) {
             sb.append(chars[i]);
-            if (chars[i].equals(x)){
+            if (chars[i].equals(x)) {
                 break;
             }
             i++;
@@ -383,7 +457,7 @@ public class Lab05 {
         }
         int abs = a < 0 ? -a : a;
         if (abs % 10 == 1 || abs % 10 == 4 || abs % 10 == 5 || abs % 10 == 9 || a % 10 == 0
-            || a == 12 || a == 13 || a == 16 || a == 17 || a == 18) {
+                || a == 12 || a == 13 || a == 16 || a == 17 || a == 18) {
             return a + "'ый";
         }
         if (abs % 10 == 2 || abs % 10 == 6 || abs % 10 == 7 || abs % 10 == 8) {
@@ -480,9 +554,9 @@ public class Lab05 {
 
     public static boolean task5635(Point t, Rectangle r) {
         return r.x <= t.x &&
-            t.x <= r.x + r.w &&
-            r.y <= t.y &&
-            t.y <= r.y + r.h;
+                t.x <= r.x + r.w &&
+                r.y <= t.y &&
+                t.y <= r.y + r.h;
     }
 
     public static boolean task3878(Point t, Point p1, Point p2) {
@@ -589,37 +663,37 @@ public class Lab05 {
         return x >= 2 || (y <= 1.5 && y >= 0.5);
     }
 
-    public static String task8867(int a, int b, int x){
-        if(a > b){
+    public static String task8867(int a, int b, int x) {
+        if (a > b) {
             throw new IllegalArgumentException("Некорректный интервал. Левая граница должна быть меньше правой.");
         }
-        if (a <= x && x <= b){
+        if (a <= x && x <= b) {
             return x + " попадает в интервал от " + a + " до " + b;
         } else {
             return x + " за пределами интервала от " + a + " до " + b;
         }
     }
 
-    public static String task7865(int x){
-        if (-11 <= x && x <= -3){
+    public static String task7865(int x) {
+        if (-11 <= x && x <= -3) {
             return "Красный";
-        } else if (5 <= x && x <= 19){
+        } else if (5 <= x && x <= 19) {
             return "Зеленый";
         } else {
             return "X не попадает ни в зеленый, ни в красный интервал";
         }
     }
 
-    public static String task4858(int redA, int redB, int greenA, int greenB){
-        if(redA > redB){
+    public static String task4858(int redA, int redB, int greenA, int greenB) {
+        if (redA > redB) {
             throw new IllegalArgumentException("Интервал задан некорректно. Левая граница должна быть меньше правой.");
         }
-        if (greenA > greenB){
+        if (greenA > greenB) {
             throw new IllegalArgumentException("Интервал задан некорректно. Левая граница должна быть меньше правой.");
         }
         double redCenter = (redA + redB) / 2.0;
         double greenCenter = (greenA + greenB) / 2.0;
-        if (redCenter < greenCenter){
+        if (redCenter < greenCenter) {
             return "Красный слева, зеленый справа";
         } else if (redCenter > greenCenter) {
             return "Зеленый слева, красный справа";
@@ -628,8 +702,8 @@ public class Lab05 {
         }
     }
 
-    public static String task8751(double tC){
-        if (tC <= -273.15){
+    public static String task8751(double tC) {
+        if (tC <= -273.15) {
             throw new IllegalArgumentException("Некорректная температура");
         }
         String result = "";
@@ -639,12 +713,12 @@ public class Lab05 {
         double lambda = 3.3E5;
         double m = 17;
         double tK = tC + 273.15;
-        if (tC <= 0){
+        if (tC <= 0) {
             result += "Агрегатное состояние: кристалл\n";
             Q = m * tK * c;
             result += String.format("Внутренняя энергия: %.2f Дж\n", Q);
         }
-        if (0 <= tC && tC <= 100){
+        if (0 <= tC && tC <= 100) {
             result += "Агрегатное состояние: жидкость\n";
             Q = m * (tK * c + r);
             result += String.format("Внутренняя энергия: %.2f Дж\n", Q);

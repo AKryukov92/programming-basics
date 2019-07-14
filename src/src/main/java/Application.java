@@ -71,6 +71,7 @@ public class Application {
         fillExceptions(taskBooksJava[13]);
         fillAbstractDataStructures(taskBooksJava[14]);
         fillCollections(taskBooksJava[15]);
+        updateCrossTaskLinks(taskBooksJava);
         makeFiles(taskBooksJava, css);
 
         String[] themeListJs = new String[]{
@@ -287,6 +288,7 @@ public class Application {
                 .addTask(5635)
                 .addTask(1217)
                 .addTask(1438)
+                .addTask(8718)
         ;
     }
 
@@ -384,6 +386,7 @@ public class Application {
                 .addTask(7085)
                 .addTask(8820)
                 .addTask(3333)
+                .addTask(8471)
 
                 .withGroup("Конвертирование элементов")
                 .addExample(9774)

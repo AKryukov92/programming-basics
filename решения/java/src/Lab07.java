@@ -5,7 +5,41 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step9525();
+        step8471();
+    }
+
+    public static void step8471(){
+        System.out.println();
+        System.out.println("8471");
+        task8471("qw er ty ui op");
+    }
+
+    private static void task8471(String str) {
+        String[] arr = str.split(" ");
+        int amountOfEven = arr.length / 2;
+        System.out.println("Четных элементов: " + amountOfEven);
+        String[] odd = new String[arr.length - amountOfEven];
+        int i = 0;
+        int j = 0;
+        while (i < arr.length){
+            odd[j] = arr[i];
+            j = j + 1;
+            i = i + 2;
+        }
+        i = 1;
+        j = 0;
+        while (i < arr.length){
+            arr[j] = arr[i];
+            i = i + 2;
+            j = j + 1;
+        }
+        i = 0;
+        while (i < odd.length){
+            arr[j] = odd[i];
+            j = j + 1;
+            i = i + 1;
+        }
+        System.out.println(String.join(" ", arr));
     }
 
     public static void step2390() {
