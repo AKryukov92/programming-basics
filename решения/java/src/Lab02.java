@@ -7,8 +7,8 @@ public class Lab02 {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("2361");
-        int[] in2361t = {400, 103, 2, 300, -800};
-        int[] in2361l = {17, 29, 313, -70, 20};
+        int[] in2361t = {400, 103, 2, 2, 300, -800};
+        int[] in2361l = {17, 29, 12, 313, -70, 20};
         for (int i = 0; i < in2361l.length; i++) {
             try {
                 class2361 result = task2361(in2361t[i], in2361l[i]);
@@ -17,6 +17,9 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public static void step9622() {
         System.out.println();
         System.out.println("9622");
         int[] in9622m = {7351, 19, -1, 2, 3};
@@ -30,7 +33,8 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
-
+    }
+    public static void step6522(){
         System.out.println();
         System.out.println("6522");
         int[] in6522v1 = {1, 1, 5, -2, 4};

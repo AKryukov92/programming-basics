@@ -93,8 +93,8 @@ public class Application {
         };
         TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
         taskBooksJs[0].prepareTargetDirectory();
-        fillPrintingTemplates(taskBooksJs[0]);
-        fillBasicCalculations(taskBooksJs[1]);
+        fillPrintingTemplatesJs(taskBooksJs[0]);
+        fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
         fillRanges(taskBooksJs[4]);
@@ -106,6 +106,7 @@ public class Application {
         fillMethods(taskBooksJs[10]);
         fillExceptionJs(taskBooksJs[11]);
         fillAbstractDataStructuresJs(taskBooksJs[12]);
+        updateCrossTaskLinks(taskBooksJs);
         makeFiles(taskBooksJs, css);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
@@ -121,6 +122,46 @@ public class Application {
         for (TaskBook book : taskBooks) {
             book.updateReferenceLinks(new TaskBookFinder(taskBooks));
         }
+    }
+
+    private static void fillPrintingTemplatesJs(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab01")
+                .withGroup("Печать текста на экране")
+                .addCitation("link_c1_p4.3")
+                .addExample(1662)
+
+                .withGroup("Диктант по присваиванию и конкатенации")
+                .addExample(4131)
+                .addTask(7365)
+
+                .withGroup("Получение строк от пользователя")
+                .addExample(1860)
+                .addCitation("link_c7_p33")
+                .addTask(4764)
+                .addTask(1910)
+                .addTask(2429)
+                .addCitation("link_c6_p30.2")
+                .addTask(7472)
+
+                .withGroup("Оформление текста по шаблону")
+                .addCitation("link_c3_p10.2")
+                .addExample(4140)
+                .addTask(2959)
+                .addTask(7271)
+                .addTask(2632)
+                .addTask(4343)
+                .addTask(7474)
+
+                .withGroup("Отработка присваивания")
+                .addExample(3246)
+                .addTask(7332)
+                .addTask(9781)
+                .addTask(6814)
+
+                .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
+                .addExample(1640)
+                .addTask(8693)
+        ;
     }
 
     private static void fillPrintingTemplates(TaskBook taskBook) {
@@ -160,6 +201,30 @@ public class Application {
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
                 .addExample(1640)
                 .addTask(8693)
+        ;
+    }
+
+    private static void fillBasicCalculationsJs(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab02")
+                .withGroup("Вывод на экран действительных чисел с заданной точностью")
+                .addExample(3862)
+                .addExample(9231)
+
+                .withGroup("Операторы и операнды")
+                .addExample(4411)
+                .addTask(3832)
+                .addTask(7457)
+                .addTask(9865)
+                .addTask(1976)
+
+                .withGroup("Использование математических функций")
+                .addExample(8428)
+                .addCitation("link_c7_p32.5")
+                .addExample(7711)
+                .addTask(1262)
+                .addTask(9164)
+                .addTask(3558)
+                .addTask(6924)
         ;
     }
 
@@ -379,6 +444,7 @@ public class Application {
                 .addCitation("link_c3_p12.8")
                 .addTask(1223)
                 .addTask(8311)
+                .addTask(6563)
 
                 .withGroup("Перестановки элементов")
                 .addExample(3134)

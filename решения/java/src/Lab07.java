@@ -5,13 +5,28 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step8471();
+        step6563();
+    }
+
+    public static void step6563(){
+        System.out.println();
+        System.out.println("6563");
+        task6563("qw er ty");
+        task6563("qw er ty ui op");
+        task6563("asd fgh jkl");
+        task6563("single");
+        task6563("first second");
+        task6563("");
+        task6563("q w e r a s d f z x c v");
     }
 
     public static void step8471(){
         System.out.println();
         System.out.println("8471");
         task8471("qw er ty ui op");
+        task8471("a sd fgh jkl");
+        task8471("za qws xcde r fv tgb yhnu jm");
+        task8471("p o i u a s d f");
     }
 
     private static void task8471(String str) {
@@ -900,5 +915,38 @@ public class Lab07 {
             }
             System.out.println();
         }
+    }
+
+    public static void task6563(String data) {
+        if (data.isEmpty()) {
+            System.out.println("Нет данных");
+            return;
+        }
+        String[] arr = data.split(" ");
+        System.out.print("NULL");
+        if (arr.length > 0) {
+            System.out.print(" ");
+            System.out.print(arr[0]);
+        }
+        if (arr.length > 1) {
+            System.out.print(" ");
+            System.out.println(arr[1]);
+        }
+        for (int i = 1; i < arr.length - 1; i++) {
+            System.out.print(arr[i - 1]);
+            System.out.print(" ");
+            System.out.print(arr[i]);
+            System.out.print(" ");
+            System.out.print(arr[i+1]);
+            System.out.println();
+        }
+        if (arr.length > 1) {
+            System.out.print(arr[arr.length - 2]);
+        }
+        if (arr.length > 0 && arr.length != 1) {
+            System.out.print(" ");
+            System.out.print(arr[arr.length - 1]);
+        }
+        System.out.println(" NULL");
     }
 }
