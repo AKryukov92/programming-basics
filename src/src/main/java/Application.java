@@ -224,7 +224,7 @@ public class Application {
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
-                .addTask(6924)
+                .addTask(4913)
         ;
     }
 
@@ -248,7 +248,7 @@ public class Application {
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
-                .addTask(6924)
+                .addTask(4913)
         ;
     }
 
@@ -269,7 +269,7 @@ public class Application {
                 .addCitation("link_c3_p11.2")
                 .addTask(1934)
                 .addTask(3943)
-                .addTask(4913)
+                .addTask(6924)
 
                 .withGroup("Вычисление остатка от деления")
                 .addExample(2361)
@@ -701,6 +701,9 @@ public class Application {
                 .withGroup("ToString")
                 .addExample(5421)
                 .addTask(9713)
+
+                .withGroup("Работа с датами")
+                .addTask(7397)
 
                 .withGroup("Задачи повышенной сложности")
                 .addExample(5032)
