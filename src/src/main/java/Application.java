@@ -704,6 +704,7 @@ public class Application {
 
                 .withGroup("Работа с датами")
                 .addTask(7397)
+                .addTask(8240)
 
                 .withGroup("Задачи повышенной сложности")
                 .addExample(5032)
