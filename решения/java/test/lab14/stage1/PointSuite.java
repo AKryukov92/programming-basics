@@ -20,39 +20,33 @@ public class PointSuite {
 
     @Test
     public void distanceBetweenPointsTest(){
-        Point a, b;
-        a = new Point();
-        b = new Point();
+        Point src, dest;
+        src = new Point();
+        dest = new Point();
 
-        a.x = 1;
-        a.y = 1;
-        b.x = 3;
-        b.y = 4;
-        Assert.assertEquals(3.6056, Point.distanceBetween(a, b), 0.001);
+        src.x = 1;
+        src.y = 1;
+        dest.x = 3;
+        dest.y = 4;
+        Assert.assertEquals(3.6056, Point.distanceBetween(src, dest), 0.001);
 
-        a.x = -2;
-        a.y = 4;
-        b.x = 8;
-        b.y = -10;
-        Assert.assertEquals(17.2046, Point.distanceBetween(a, b), 0.001);
+        src.x = -2;
+        src.y = 4;
+        dest.x = 8;
+        dest.y = -10;
+        Assert.assertEquals(17.2046, Point.distanceBetween(src, dest), 0.001);
 
-        a.x = 0;
-        a.y = 0;
-        b.x = -5;
-        b.y = -7;
-        Assert.assertEquals(8.6023, Point.distanceBetween(a, b), 0.001);
+        src = Point.zero();
+        dest = Point.make(-5, -7);
+        Assert.assertEquals(8.6023, Point.distanceBetween(src, dest), 0.001);
 
-        a.x = 0;
-        a.y = 0;
-        b.x = 0;
-        b.y = 0;
-        Assert.assertEquals(0, Point.distanceBetween(a, b), 0.001);
+        src = Point.zero();
+        dest = Point.zero();
+        Assert.assertEquals(0, Point.distanceBetween(src, dest), 0.001);
 
-        a.x = -1;
-        a.y = -3;
-        b.x = 2;
-        b.y = 9;
-        Assert.assertEquals(12.3693, Point.distanceBetween(a, b), 0.001);
+        src = new Point(-1, -3);
+        dest = new Point(2, 9);
+        Assert.assertEquals(12.3693, Point.distanceBetween(src, dest), 0.001);
     }
 
     @Test

@@ -8,6 +8,27 @@ public class Point {
     public double x;
     public double y;
 
+    public Point(){}
+
+    public Point(int px, int py){
+        this.x = px;
+        this.y = py;
+    }
+
+    public static Point zero(){
+        Point instance = new Point();
+        instance.x = 0;
+        instance.y = 0;
+        return instance;
+    }
+
+    public static Point make(int px, int py){
+        Point instance = new Point();
+        instance.x = px;
+        instance.y = py;
+        return instance;
+    }
+
     public static double distanceBetween(double ax, double ay, double bx, double by) {
         double dx = ax - bx;
         double dy = ay - by;

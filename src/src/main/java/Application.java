@@ -33,7 +33,7 @@ public class Application {
         };
         String css = loadCss("styles.css");
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
-        taskBooksCs[0].prepareTargetDirectory();
+        //taskBooksCs[0].prepareTargetDirectory();
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
         fillPreliminaryAssertions(taskBooksCs[2]);
@@ -51,7 +51,7 @@ public class Application {
         fillAbstractDataStructures(taskBooksCs[14]);
         fillCollections(taskBooksCs[15]);
         updateCrossTaskLinks(taskBooksCs);
-        makeFiles(taskBooksCs, css);
+        //makeFiles(taskBooksCs, css);
 
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
         taskBooksJava[0].prepareTargetDirectory();
@@ -92,7 +92,7 @@ public class Application {
                 "Объекты"
         };
         TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        taskBooksJs[0].prepareTargetDirectory();
+        //taskBooksJs[0].prepareTargetDirectory();
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
@@ -107,7 +107,7 @@ public class Application {
         fillExceptionJs(taskBooksJs[11]);
         fillAbstractDataStructuresJs(taskBooksJs[12]);
         updateCrossTaskLinks(taskBooksJs);
-        makeFiles(taskBooksJs, css);
+        //makeFiles(taskBooksJs, css);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
@@ -396,7 +396,6 @@ public class Application {
                 .addTask(8770)
                 .addCitation("link_c3_p11.2")
                 .addTask(8418)
-                .addTask(5170)
                 .addTask(8722)
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
@@ -502,6 +501,7 @@ public class Application {
                 .addCitation("link_c5_p23.1")
                 .addTask(2802)
                 .addTask(6580)
+                .addTask(5170)
                 .addExample(8696)
                 .addTask(5969)
                 .addTask(3946)
@@ -678,6 +678,14 @@ public class Application {
                 .addTask(6522)
                 .addTask(8225)
 
+                .withGroup("Статический метод для создания экземпляров")
+                .addExample(4491)
+                .addTask(1193)
+
+                .withGroup("Параметризованный конструктор")
+                .addExample(7301)
+                .addTask(2000)
+
                 .withGroup("Нестатические методы класса")
                 .addExample(8403)
                 .addExample(3185)
@@ -694,10 +702,6 @@ public class Application {
 
                 .withGroup("Модификации состояния с контролем целостности")
                 .addTask(8265)
-
-                .withGroup("Параметризованный конструктор")
-                .addExample(7301)
-                .addTask(2000)
                 .withGroup("ToString")
                 .addExample(5421)
                 .addTask(9713)

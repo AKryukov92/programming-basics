@@ -9,7 +9,17 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
-        step8722();
+        step5170();
+    }
+
+    public static void step5170(){
+        System.out.println();
+        System.out.println("5170");
+        task5170_2(6);
+        task5170_2(3219);
+        task5170_2(7);
+        task5170_2(2017);
+        task5170_2(-10);
     }
 
     public static void step8722() {
@@ -563,6 +573,28 @@ public class Lab06 {
         }
         ret.add(x);
         return ret;
+    }
+
+    public static void task5170_2(int y) {
+        if (y <= 0) {
+            System.out.println("Введенное число должно быть положительным");
+            return;
+        }
+        int i = 2;
+        int count = 1;
+        while (i < y / 2 + 1) {
+            if (y % i == 0) {
+                count++;
+            }
+            i++;
+        }
+        count++;
+        System.out.print("Число " + y + " без остатка делится на " + count);
+        if (count == 2) {
+            System.out.println(" других чисел. Число простое");
+        } else {
+            System.out.println(" других чисел. Число не простое");
+        }
     }
 
     public static boolean task5170(int y) throws IllegalArgumentException {
