@@ -19,39 +19,46 @@ public class Application {
 
                 "Реорганизация повторяющихся действий",
                 "Вложенные циклы",
-                "Массивы",
+                "Базовые операции с массивами",
+                "Использование числовых массивов",
                 "Вычисление агрегатов",
-                "Строки",
 
+                "Строки",
                 "Обработка неизвестного объема данных",
                 "Запись в файлы",
                 "Методы",
                 "Исключения",
-                "Классы и объекты",
 
+                "Классы и объекты",
                 "Коллекции"
         };
         String css = loadCss("styles.css");
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
         taskBooksCs[0].prepareTargetDirectory();
+
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
         fillPreliminaryAssertions(taskBooksCs[2]);
         fillMutualExclusives(taskBooksCs[3]);
         fillRanges(taskBooksCs[4]);
+
         fillLoops(taskBooksCs[5]);
         fillNestedLoops(taskBooksCs[6]);
-        fillArrayHandling(taskBooksCs[7]);
-        fillAggregateCalculation(taskBooksCs[8]);
-        fillStringMethods(taskBooksCs[9]);
-        fillReadingFiles(taskBooksCs[10]);
-        fillWritingFiles(taskBooksCs[11]);
-        fillMethods(taskBooksCs[12]);
-        fillExceptions(taskBooksCs[13]);
-        fillAbstractDataStructures(taskBooksCs[14]);
-        fillCollections(taskBooksCs[15]);
+        fillBasicArrayOperations(taskBooksCs[7]);
+        fillArrayConversionToNumbers(taskBooksCs[8]);
+        fillAggregateCalculation(taskBooksCs[9]);
+
+        fillStringMethods(taskBooksCs[10]);
+        fillReadingFiles(taskBooksCs[11]);
+        fillWritingFiles(taskBooksCs[12]);
+        fillMethods(taskBooksCs[13]);
+        fillExceptions(taskBooksCs[14]);
+
+        fillAbstractDataStructures(taskBooksCs[15]);
+        fillCollections(taskBooksCs[16]);
         updateCrossTaskLinks(taskBooksCs);
         makeFiles(taskBooksCs, css);
+
 
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
         taskBooksJava[0].prepareTargetDirectory();
@@ -60,19 +67,24 @@ public class Application {
         fillPreliminaryAssertions(taskBooksJava[2]);
         fillMutualExclusives(taskBooksJava[3]);
         fillRanges(taskBooksJava[4]);
+
         fillLoops(taskBooksJava[5]);
         fillNestedLoops(taskBooksJava[6]);
-        fillArrayHandling(taskBooksJava[7]);
-        fillAggregateCalculation(taskBooksJava[8]);
-        fillStringMethods(taskBooksJava[9]);
-        fillReadingFiles(taskBooksJava[10]);
-        fillWritingFiles(taskBooksJava[11]);
-        fillMethods(taskBooksJava[12]);
-        fillExceptions(taskBooksJava[13]);
-        fillAbstractDataStructures(taskBooksJava[14]);
+        fillBasicArrayOperations(taskBooksJava[7]);
+        fillArrayConversionToNumbers(taskBooksJava[8]);
+        fillAggregateCalculation(taskBooksJava[9]);
+
+        fillStringMethods(taskBooksJava[10]);
+        fillReadingFiles(taskBooksJava[11]);
+        fillWritingFiles(taskBooksJava[12]);
+        fillMethods(taskBooksJava[13]);
+        fillExceptions(taskBooksJava[14]);
+
+        fillAbstractDataStructures(taskBooksJava[15]);
         fillCollections(taskBooksJava[15]);
         updateCrossTaskLinks(taskBooksJava);
         makeFiles(taskBooksJava, css);
+
 
         String[] themeListJs = new String[]{
                 "Заполнение шаблона текстом",
@@ -83,7 +95,8 @@ public class Application {
 
                 "Реорганизация повторяющихся действий",
                 "Вложенные циклы",
-                "Массивы",
+                "Базовые операции с массивами",
+                "Работа с массивами чисел",
                 "Вычисление агрегатов",
                 "Строки",
 
@@ -98,14 +111,17 @@ public class Application {
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
         fillRanges(taskBooksJs[4]);
+
         fillLoops(taskBooksJs[5]);
         fillNestedLoops(taskBooksJs[6]);
-        fillArrayHandling(taskBooksJs[7]);
-        fillAggregateCalculation(taskBooksJs[8]);
-        fillStringMethods(taskBooksJs[9]);
-        fillMethods(taskBooksJs[10]);
-        fillExceptionJs(taskBooksJs[11]);
-        fillAbstractDataStructuresJs(taskBooksJs[12]);
+        fillBasicArrayOperations(taskBooksJs[7]);
+        fillArrayConversionToNumbers(taskBooksJs[8]);
+        fillAggregateCalculation(taskBooksJs[9]);
+
+        fillStringMethods(taskBooksJs[10]);
+        fillMethods(taskBooksJs[11]);
+        fillExceptionJs(taskBooksJs[12]);
+        fillAbstractDataStructuresJs(taskBooksJs[13]);
         updateCrossTaskLinks(taskBooksJs);
         makeFiles(taskBooksJs, css);
 
@@ -429,9 +445,8 @@ public class Application {
                 .addTask(6302)
                 ;
     }
-
-    private static void fillArrayHandling(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab07")
+    private static void fillBasicArrayOperations(TaskBook taskBook){
+        taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
                 .addTask(1433)
@@ -444,6 +459,8 @@ public class Application {
                 .addTask(1223)
                 .addTask(8311)
                 .addTask(6563)
+                .addTask(1292)
+                .addTask(6988)
 
                 .withGroup("Перестановки элементов")
                 .addExample(3134)
@@ -452,7 +469,11 @@ public class Application {
                 .addTask(8820)
                 .addTask(3333)
                 .addTask(8471)
+                ;
+    }
 
+    private static void fillArrayConversionToNumbers(TaskBook taskBook) {
+        taskBook.withSourceDirectory("arrays")
                 .withGroup("Конвертирование элементов")
                 .addExample(9774)
                 .addTask(2390)
@@ -461,50 +482,38 @@ public class Application {
 
                 .withGroup("Реорганизация повторяющихся действий")
                 .addExample(5694)
-                .addTask(1292)
-                .addTask(6988)
                 .addTask(6806)
                 .addTask(8613)
                 .addTask(7534)
-                .addTask(2173)
-
-                .withGroup("Поиск повторений в массиве")
-                .addExample(7369)
-                .addTask(5894)
-                .addTask(4515)
-                .addTask(2234)
 
                 .withGroup("Сортировка массива вставкой")
-                .addExample(7290)
+                .addExample(2173)
+                .addTask(7290)
                 .addTask(4497)
                 .addTask(3218)
 
                 .withGroup("Задачи повышенного уровня сложности")
                 .addTask(6492)
-                .addTask(4283)
-                .addTask(7703)
-                .addTask(5541)
-                .addTask(9182)
                 .addTask(3095)
+                .addTask(2234)
                 .addTask(8122)
         ;
     }
 
     private static void fillAggregateCalculation(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab061")
-                .withGroup("Вычисление агрегатов")
+        taskBook.withSourceDirectory("arrays")
+                .withGroup("Вычисление агрегатов из ряда чисел")
                 .addExample(2475)
-                .addTask(9180)
-                .addTask(1544)
-                .addTask(9562)
                 .addTask(3669)
                 .addTask(5951)
                 .addCitation("link_c5_p23.1")
                 .addTask(2802)
                 .addTask(6580)
-                .addTask(5170)
+
+                .withGroup("Вычисление агрегатов в массиве")
                 .addExample(8696)
                 .addTask(5969)
+                .addTask(5170)
                 .addTask(3946)
                 .addTask(6497)
                 .addTask(5648)
@@ -513,6 +522,15 @@ public class Application {
                 .addTask(8769)
                 .addTask(7260)
                 .addTask(5795)
+
+                .withGroup("Поиск повторений в массиве")
+                .addExample(7369)
+                .addTask(5894)
+                .addTask(4515)
+                .addTask(4283)
+                .addTask(7703)
+                .addTask(5541)
+                .addTask(9182)
         ;
     }
 

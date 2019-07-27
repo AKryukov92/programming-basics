@@ -7,31 +7,7 @@ import java.util.Set;
  */
 public class Lab15Task8787 {
     public static void main(String[] args) {
-        Step7991();
-        Step2321();
-        Step5053();
-        Step8418();
-        Step9279();
-
-        Step3657();
-        Step6599();
-        Step1223();
         Step6497();
-        Step5648();
-
-        Step3940();
-        Step8311();
-        Step3134();
-        Step9774();
-        Step9711();
-
-        Step3333();
-        Step9271();
-        Step4497();
-        Step8820();
-        Step3218();
-
-        Step7703();
     }
 
     static void Step7991() {
@@ -466,20 +442,28 @@ public class Lab15Task8787 {
     private static void Step6497(){
         System.out.println();
         System.out.println("6497");
-        String[] in6497 = {
-            "9 8 9 1 1 5 1 1",
-            "5 5 5 5 5",
-            "",
-            "1000000 1 1"
-        };
-        for (int i = 0; i < in6497.length; i++){
-            StringBuilder sb = new StringBuilder();
-            double[] result = Lab07.task6497(in6497[i]);
-            for (double item : result){
-                sb.append(String.format("%.4f", item));
-                sb.append("  ");
-            }
-            System.out.println(sb.toString());
+        for (double item : Lab07.task6497("9 8 9 1 1 5 1 1")){
+            System.out.print(String.format("%.4f ", item));
+        }
+        System.out.println();
+        for (double item : Lab07.task6497("1 2 3 4 1 3 4 4 4 4")){
+            System.out.print(String.format("%.4f ", item));
+        }
+        System.out.println();
+        for (double item : Lab07.task6497("5 5 5 5 5")){
+            System.out.print(String.format("%.4f ", item));
+        }
+        System.out.println();
+        for (double item : Lab07.task6497("")){
+            System.out.print(String.format("%.4f ", item));
+        }
+        System.out.println();
+        for (double item : Lab07.task6497("1 1 1 9 9 100 30")){
+            System.out.print(String.format("%.4f ", item));
+        }
+        System.out.println();
+        for (double item : Lab07.task6497("1000000 1 1")){
+            System.out.print(String.format("%.4f ", item));
         }
     }
 

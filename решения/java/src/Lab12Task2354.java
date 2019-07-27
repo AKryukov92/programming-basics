@@ -3,40 +3,7 @@
  */
 public class Lab12Task2354 {
     public static void main(String[] args) {
-        Step4411();
-        Step8428();
-        Step1262();
-        Step2790();
-        Step9164();
-
-        Step5789();
-        Step5063();
-        Step7711();
-        Step3832();
-        Step5895();
-
-        Step7457();
-        Step9865();
-        Step3558();
-        Step4366();
-        Step5980();
-
-        Step8174();
-        Step5662();
-        Step3770();
-        Step9562();
-        Step6580();
-
-        Step8731();
-        Step4082();
-        Step3669();
-        Step5969();
-        Step9925();
-
-        Step4265();
         Step3946();
-        Step4283();
-        Step9182();
     }
 
     private static void Step4411() {
@@ -300,16 +267,12 @@ public class Lab12Task2354 {
     private static void Step3946() {
         System.out.println();
         System.out.println("3946");
-        String[] in3946 = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 3 4 4 4 4",
-                ""
-        };
-        double[] out3946 = {2.2, 3, 0};
-        for (int i = 0; i < in3946.length; i++) {
-            double result = Lab07.task3946(in3946[i]);
-            System.out.printf("%.6f (%.6f)\n", result, out3946[i]);
-        }
+        System.out.printf("%.6f\n", Lab07.task3946("9 8 9 1 1 5 1 1"));
+        System.out.printf("%.6f\n", Lab07.task3946("1 2 3 4 1 3 4 4 4 4"));
+        System.out.printf("%.6f\n", Lab07.task3946("5 5 5 5 5"));
+        System.out.printf("%.6f\n", Lab07.task3946(""));
+        System.out.printf("%.6f\n", Lab07.task3946("1 1 1 9 9 100 30"));
+        System.out.printf("%.6f\n", Lab07.task3946("1000000 1 1"));
     }
 
     private static void Step4283() {
