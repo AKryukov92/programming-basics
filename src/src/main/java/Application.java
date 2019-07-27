@@ -33,7 +33,7 @@ public class Application {
         };
         String css = loadCss("styles.css");
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
-        //taskBooksCs[0].prepareTargetDirectory();
+        taskBooksCs[0].prepareTargetDirectory();
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
         fillPreliminaryAssertions(taskBooksCs[2]);
@@ -51,7 +51,7 @@ public class Application {
         fillAbstractDataStructures(taskBooksCs[14]);
         fillCollections(taskBooksCs[15]);
         updateCrossTaskLinks(taskBooksCs);
-        //makeFiles(taskBooksCs, css);
+        makeFiles(taskBooksCs, css);
 
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
         taskBooksJava[0].prepareTargetDirectory();
@@ -92,7 +92,7 @@ public class Application {
                 "Объекты"
         };
         TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        //taskBooksJs[0].prepareTargetDirectory();
+        taskBooksJs[0].prepareTargetDirectory();
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
@@ -107,7 +107,7 @@ public class Application {
         fillExceptionJs(taskBooksJs[11]);
         fillAbstractDataStructuresJs(taskBooksJs[12]);
         updateCrossTaskLinks(taskBooksJs);
-        //makeFiles(taskBooksJs, css);
+        makeFiles(taskBooksJs, css);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
@@ -462,6 +462,7 @@ public class Application {
                 .withGroup("Реорганизация повторяющихся действий")
                 .addExample(5694)
                 .addTask(1292)
+                .addTask(6988)
                 .addTask(6806)
                 .addTask(8613)
                 .addTask(7534)
@@ -511,6 +512,7 @@ public class Application {
                 .addTask(9271)
                 .addTask(8769)
                 .addTask(7260)
+                .addTask(5795)
         ;
     }
 

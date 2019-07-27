@@ -5,10 +5,32 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step6563();
+        step5795();
     }
 
-    public static void step6563(){
+    public static void step5795(){
+        System.out.println();
+        System.out.println("5795");
+        task5795("9 8 7 6 5 4");
+        task5795("11 59 84 28 40");
+        task5795("100");
+        task5795("5 6");
+        task5795("");
+    }
+
+    public static void step6988() {
+        System.out.println();
+        System.out.println("6988");
+        task6988("a s d f a", "a s d f g");
+        task6988("qwerty asdfgh zxcvb", "qwerty asdfgh asdfgh");
+        task6988("qaz wsx edc", "wsx edc qaz");
+        task6988("qaz wsx edc", "qaz wsx edc rfv");
+        task6988("qaz wsx edc rfv tgb", "qaz wsx edc rfv");
+        task6988("qaz wsx edc", "qaz tgb ujm yhn");
+        task6988("qaz wsx vbn rfv tgb", "qaz wsx edc");
+    }
+
+    public static void step6563() {
         System.out.println();
         System.out.println("6563");
         task6563("qw er ty");
@@ -948,5 +970,46 @@ public class Lab07 {
             System.out.print(arr[arr.length - 1]);
         }
         System.out.println(" NULL");
+    }
+
+    public static void task6988(String left, String right) {
+        String[] larr = left.split(" ");
+        String[] rarr = right.split(" ");
+        int i = 0;
+        while (i < larr.length && i < rarr.length) {
+            if (!larr[i].equals(rarr[i])) {
+                break;
+            }
+            i = i + 1;
+        }
+        System.out.println("Массивы начинают различаться на индексе " + i);
+    }
+
+    public static void task5795(String data){
+        if(data.isEmpty()){
+            System.out.println("Нет данных");
+            return;
+        }
+        String[] arr = data.split(" ");
+        int i = 0;
+        int sum = 0;
+        System.out.print("Числа на четных позициях:");
+        while (i < arr.length){
+            System.out.print(" ");
+            System.out.print(arr[i]);
+            sum = sum + Integer.parseInt(arr[i]);
+            i = i + 2;
+        }
+        System.out.println(". Сумма: " + sum);
+        System.out.print("Числа на нечетных позициях:");
+        i = 1;
+        sum = 0;
+        while(i < arr.length){
+            System.out.print(" ");
+            System.out.print(arr[i]);
+            sum = sum + Integer.parseInt(arr[i]);
+            i = i + 2;
+        }
+        System.out.println(". Сумма: " + sum);
     }
 }
