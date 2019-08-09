@@ -29,7 +29,8 @@ public class Application {
                 "Методы",
                 "Исключения",
 
-                "Классы и объекты",
+                "Составные типы данных",
+                "Внутреннее состояние",
                 "Коллекции"
         };
         String css = loadCss("styles.css");
@@ -55,7 +56,8 @@ public class Application {
         fillExceptions(taskBooksCs[14]);
 
         fillAbstractDataStructures(taskBooksCs[15]);
-        fillCollections(taskBooksCs[16]);
+        fillInternalState(taskBooksCs[16]);
+        fillCollections(taskBooksCs[17]);
         updateCrossTaskLinks(taskBooksCs);
         makeFiles(taskBooksCs, css);
 
@@ -81,7 +83,8 @@ public class Application {
         fillExceptions(taskBooksJava[14]);
 
         fillAbstractDataStructures(taskBooksJava[15]);
-        fillCollections(taskBooksJava[15]);
+        fillInternalState(taskBooksJava[16]);
+        fillCollections(taskBooksJava[17]);
         updateCrossTaskLinks(taskBooksJava);
         makeFiles(taskBooksJava, css);
 
@@ -443,9 +446,10 @@ public class Application {
                 .addTask(5171)
                 .addTask(1862)
                 .addTask(6302)
-                ;
+        ;
     }
-    private static void fillBasicArrayOperations(TaskBook taskBook){
+
+    private static void fillBasicArrayOperations(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
@@ -459,8 +463,6 @@ public class Application {
                 .addTask(1223)
                 .addTask(8311)
                 .addTask(6563)
-                .addTask(1292)
-                .addTask(6988)
 
                 .withGroup("Перестановки элементов")
                 .addExample(3134)
@@ -469,34 +471,37 @@ public class Application {
                 .addTask(8820)
                 .addTask(3333)
                 .addTask(8471)
-                ;
+
+                .withGroup("Поиск конкретного элемента в массиве")
+                .addExample(5694)//поиск в массиве
+                .addTask(6806)//поиск в массиве
+                .addTask(2234)//поиск в массиве
+
+                .withGroup("Прерывание работы цикла")
+                .addExample(1292)//break
+                .addTask(6988)//break
+        ;
     }
 
     private static void fillArrayConversionToNumbers(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Конвертирование элементов")
-                .addExample(9774)
-                .addTask(2390)
-                .addTask(3940)
-                .addTask(9525)
+                .addExample(9774)//операции над массивом
+                .addTask(2390)//вложенные циклы
+                .addTask(3940)//операции над массивом
+                .addTask(9525)//просмотр массива
+                .addTask(8613)//чтение элементов массива по индексу
+                .addTask(7534)//реорганизация повторяющихся действий
 
-                .withGroup("Реорганизация повторяющихся действий")
-                .addExample(5694)
-                .addTask(6806)
-                .addTask(8613)
-                .addTask(7534)
-
-                .withGroup("Сортировка массива вставкой")
-                .addExample(2173)
-                .addTask(7290)
-                .addTask(4497)
-                .addTask(3218)
+                .withGroup("Сортировка массива вставкой ?может быть пузырьком?")
+                .addExample(2173)//понятие отсортированного массива
+                .addTask(7290)//подсчет количества
+                .addTask(4497)//просмотр массива и замена
+                .addTask(3218)//сортировка массива
 
                 .withGroup("Задачи повышенного уровня сложности")
-                .addTask(6492)
-                .addTask(3095)
-                .addTask(2234)
-                .addTask(8122)
+                .addTask(3095)//комбинаторика. понятие "все комбинации"
+                .addTask(8122)//сложная задача с кучей концепций
         ;
     }
 
@@ -517,9 +522,14 @@ public class Application {
                 .addTask(3946)
                 .addTask(6497)
                 .addTask(5648)
-                .addTask(7035)
+
+                .withGroup("Поиск минимального")
+                .addExample(7035)
                 .addTask(9271)
                 .addTask(8769)
+                .addTask(6492)
+
+                .withGroup("Агрегат по группам")
                 .addTask(7260)
                 .addTask(5795)
 
@@ -687,16 +697,12 @@ public class Application {
     }
 
     private static void fillAbstractDataStructures(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab14")
+        taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)")
                 .addExample(5789)
                 .addExample(6011)
                 .addTask(6589)
                 .addTask(6037)
-                .addTask(3864)
-                .addTask(4913)
-                .addTask(6522)
-                .addTask(8225)
 
                 .withGroup("Статический метод для создания экземпляров")
                 .addExample(4491)
@@ -706,6 +712,15 @@ public class Application {
                 .addExample(7301)
                 .addTask(2000)
 
+                .addTask(3864)
+                .addTask(4913)
+                .addTask(6522)
+                .addTask(8225)
+        ;
+    }
+
+    private static void fillInternalState(TaskBook taskBook) {
+        taskBook.withSourceDirectory("objects")
                 .withGroup("Нестатические методы класса")
                 .addExample(8403)
                 .addExample(3185)
@@ -737,7 +752,7 @@ public class Application {
     }
 
     private static void fillAbstractDataStructuresJs(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab14")
+        taskBook.withSourceDirectory("objects")
                 .withGroup("Объекты как контейнеры данных (АТД)")
                 .addExample(5789)
                 .addExample(6011)
@@ -832,8 +847,8 @@ public class Application {
         do {
             potentialId = 1000 + rnd.nextInt(9000);
             found = false;
-            for (TaskBook book : books){
-                if (book.containsTaskWithId(potentialId)){
+            for (TaskBook book : books) {
+                if (book.containsTaskWithId(potentialId)) {
                     found = true;
                     break;
                 }
