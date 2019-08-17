@@ -5,10 +5,10 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step5795();
+        step9525();
     }
 
-    public static void step5795(){
+    public static void step5795() {
         System.out.println();
         System.out.println("5795");
         task5795("9 8 7 6 5 4");
@@ -42,7 +42,7 @@ public class Lab07 {
         task6563("q w e r a s d f z x c v");
     }
 
-    public static void step8471(){
+    public static void step8471() {
         System.out.println();
         System.out.println("8471");
         task8471("qw er ty ui op");
@@ -58,20 +58,20 @@ public class Lab07 {
         String[] odd = new String[arr.length - amountOfEven];
         int i = 0;
         int j = 0;
-        while (i < arr.length){
+        while (i < arr.length) {
             odd[j] = arr[i];
             j = j + 1;
             i = i + 2;
         }
         i = 1;
         j = 0;
-        while (i < arr.length){
+        while (i < arr.length) {
             arr[j] = arr[i];
             i = i + 2;
             j = j + 1;
         }
         i = 0;
-        while (i < odd.length){
+        while (i < odd.length) {
             arr[j] = odd[i];
             j = j + 1;
             i = i + 1;
@@ -201,19 +201,19 @@ public class Lab07 {
             throw new IllegalArgumentException("Исходная строка пуста");
         }
         String[] arr = raw.split(";");
-        int index = (arr.length-1)/2;
+        int index = (arr.length - 1) / 2;
         return String.format("Индекс %d, элемент %s", index, arr[index]);
     }
 
-    public static String task7834(String raw){
-        if (raw.isEmpty()){
+    public static String task7834(String raw) {
+        if (raw.isEmpty()) {
             throw new IllegalArgumentException("Исходная строка пуста");
         }
         String[] arr = raw.split(",");
         StringBuilder sb = new StringBuilder();
-        int[] indexes = new int[] {0, 2, 3, 5};
-        for (int i = 0; i < indexes.length; i++){
-            if (arr.length > indexes[i]){
+        int[] indexes = new int[]{0, 2, 3, 5};
+        for (int i = 0; i < indexes.length; i++) {
+            if (arr.length > indexes[i]) {
                 sb.append(arr[indexes[i]]);
             } else {
                 sb.append("Элемент на индексе ");
@@ -349,8 +349,8 @@ public class Lab07 {
         return ret;
     }
 
-    public static void task9774(double m, double[] arr){
-        for (int i = 0; i < arr.length; i++){
+    public static void task9774(double m, double[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] *= m;
         }
     }
@@ -445,19 +445,19 @@ public class Lab07 {
         return sb;
     }
 
-    public static String task8613(String fragmentsRaw, String indexesRaw){
-        if (fragmentsRaw.isEmpty()){
+    public static String task8613(String fragmentsRaw, String indexesRaw) {
+        if (fragmentsRaw.isEmpty()) {
             return "Отсутствуют данные о фрагментах";
         }
-        if (indexesRaw.isEmpty()){
+        if (indexesRaw.isEmpty()) {
             return "Отсутствуют данные об индексах";
         }
         String[] fragments = fragmentsRaw.split(" ");
         String[] indexes = indexesRaw.split(" ");
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < indexes.length; i++){
+        for (int i = 0; i < indexes.length; i++) {
             int j = Integer.parseInt(indexes[i]);
-            if (fragments.length > j){
+            if (fragments.length > j) {
                 sb.append(fragments[j]);
             } else {
                 sb.append("Фрагмент на индексе ");
@@ -469,22 +469,22 @@ public class Lab07 {
         return sb.toString();
     }
 
-    public static String task7534(String charsRaw, String amountsRaw){
-        if (charsRaw.isEmpty()){
+    public static String task7534(String charsRaw, String amountsRaw) {
+        if (charsRaw.isEmpty()) {
             return "Отсутствуют данные о символах";
         }
-        if (amountsRaw.isEmpty()){
+        if (amountsRaw.isEmpty()) {
             return "Отсутствуют данные о количествах";
         }
         String[] chars = charsRaw.split(" ");
         String[] amounts = amountsRaw.split(" ");
-        if (chars.length != amounts.length){
+        if (chars.length != amounts.length) {
             return "Длины массивов не совпадают";
         }
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < chars.length; i++){
+        for (int i = 0; i < chars.length; i++) {
             int amount = Integer.parseInt(amounts[i]);
-            for (int j = 0; j < amount; j++){
+            for (int j = 0; j < amount; j++) {
                 sb.append(chars[i]);
             }
             sb.append("\n");
@@ -492,18 +492,18 @@ public class Lab07 {
         return sb.toString();
     }
 
-    public static String task2173(String data){
-        if (data.isEmpty()){
+    public static String task2173(String data) {
+        if (data.isEmpty()) {
             return "Исходная строка пуста";
         }
-        if (!data.contains(";")){
+        if (!data.contains(";")) {
             return "Значения отсортированы по возрастанию";
         }
         String[] parts = data.split(";");
         int prev = Integer.parseInt(parts[0]);
-        for (int i = 1; i < parts.length; i++){
-            int current =  Integer.parseInt(parts[i]);
-            if(current < prev){
+        for (int i = 1; i < parts.length; i++) {
+            int current = Integer.parseInt(parts[i]);
+            if (current < prev) {
                 return "Элемент со значением " + current + " на индексе " + i + " нарушает закономерность";
             }
             prev = current;
@@ -511,32 +511,32 @@ public class Lab07 {
         return "Значения отсортированы по возрастанию";
     }
 
-    public static String task6492(String charsRaw, String amountsRaw){
-        if (charsRaw.isEmpty()){
+    public static String task6492(String charsRaw, String amountsRaw) {
+        if (charsRaw.isEmpty()) {
             return "Отсутствуют данные о символах";
         }
-        if (amountsRaw.isEmpty()){
+        if (amountsRaw.isEmpty()) {
             return "Отсутствуют данные о количествах";
         }
         String[] chars = charsRaw.split(" ");
         String[] amountsStr = amountsRaw.split(" ");
-        if (chars.length != amountsStr.length){
+        if (chars.length != amountsStr.length) {
             return "Длины массивов не совпадают";
         }
         int[] amounts = new int[amountsStr.length];
-        for (int i = 0; i < amountsStr.length; i++){
+        for (int i = 0; i < amountsStr.length; i++) {
             amounts[i] = Integer.parseInt(amountsStr[i]);
         }
         int max = amounts[0];
         for (int i = 1; i < amounts.length; i++) {
-            if (max < amounts[i]){
+            if (max < amounts[i]) {
                 max = amounts[i];
             }
         }
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < max; i++){
-            for (int j = 0; j < chars.length; j++){
-                if (i < amounts[j]){
+        for (int i = 0; i < max; i++) {
+            for (int j = 0; j < chars.length; j++) {
+                if (i < amounts[j]) {
                     sb.append(chars[j]);
                 } else {
                     sb.append(" ");
@@ -653,14 +653,14 @@ public class Lab07 {
         return ret;
     }
 
-    public static void task9271(double[] arr){
+    public static void task9271(double[] arr) {
         double min = arr[0];
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] < min){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
                 min = arr[i];
             }
         }
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             arr[i] -= min;
         }
     }
@@ -787,16 +787,16 @@ public class Lab07 {
         return data.size();
     }
 
-    public static String task3095(String raw){
-        if (raw.isEmpty()){
+    public static String task3095(String raw) {
+        if (raw.isEmpty()) {
             throw new IllegalArgumentException("Исходная строка пуста");
         }
         String[] arr = raw.split(",");
         Set<String> data = new HashSet<>(Arrays.asList(arr));
         StringBuilder sb = new StringBuilder();
         data.toArray(arr);
-        for (int i = 0; i < arr.length; i++){
-            for (int j = i+1; j < arr.length; j++){
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 sb.append(arr[i]);
                 sb.append(arr[j]);
                 sb.append("\n");
@@ -808,19 +808,19 @@ public class Lab07 {
         return sb.toString();
     }
 
-    public static void task8122(String data){
+    public static void task8122(String data) {
         System.out.println(data);
-        if(data.isEmpty()){
+        if (data.isEmpty()) {
             System.out.println("Нет данных о кораблях");
             return;
         }
         String[] arr = data.split(",");
 
-        char[] colHeaders = {'а','б','в','г','д','е','ж','з','и','к'};
+        char[] colHeaders = {'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'к'};
         int TOTAL_ROWS = 10;
         for (int j = 0; j < arr.length; j += 2) {
             String letter = arr[j];
-            if (j + 1 == arr.length){
+            if (j + 1 == arr.length) {
                 System.out.println("Некорректный формат. Последняя координата указана не полностью");
                 return;
             }
@@ -836,17 +836,17 @@ public class Lab07 {
                     break;
                 }
             }
-            if(!found){
+            if (!found) {
                 System.out.println("Некорректная координата " + letter);
                 return;
             }
         }
         System.out.print(" ");
-        for (int i = 0; i < colHeaders.length; i++){
+        for (int i = 0; i < colHeaders.length; i++) {
             System.out.print(colHeaders[i]);
         }
         System.out.println();
-        for (int row = 0; row < TOTAL_ROWS; row++){
+        for (int row = 0; row < TOTAL_ROWS; row++) {
             System.out.print(row);
             for (int col = 0; col < colHeaders.length; col++) {
                 boolean found = false;
@@ -871,7 +871,7 @@ public class Lab07 {
 
     public static void task7260(String data) {
         System.out.println();
-        if(data.isEmpty()){
+        if (data.isEmpty()) {
             System.out.println("Нет данных");
             return;
         }
@@ -881,7 +881,7 @@ public class Lab07 {
         int sum = 0;
 
         while (i < arr.length) {
-            if(j == 0){
+            if (j == 0) {
                 System.out.print("Группа");
             }
             int value = Integer.parseInt(arr[i]);
@@ -889,7 +889,7 @@ public class Lab07 {
             System.out.print(value);
             sum += value;
             j++;
-            if (j == 3){
+            if (j == 3) {
                 j = 0;
                 System.out.println(" сумма " + sum);
                 sum = 0;
@@ -901,22 +901,25 @@ public class Lab07 {
     public static void task9525(String data) {
         int TARGET = 19;
         String[] arr = data.split(",");
-        if (arr.length % 2 == 1){
+        if (arr.length % 2 == 1) {
             System.out.println("У последнего интервала отсутствует одна из границ");
             return;
         }
-        for (int i = 0; i < arr.length; i+=2){
+        for (int i = 0; i < arr.length; i += 2) {
             int p = Integer.parseInt(arr[i]);
-            int q = Integer.parseInt(arr[i+1]);
-            if (p < q){
-                if (p <= TARGET && TARGET <= q){
-                    System.out.println("От " + p + " до " + q);
+            int q = Integer.parseInt(arr[i + 1]);
+            if (p < q) {
+                System.out.print("От " + p + " до " + q);
+                if (p <= TARGET && TARGET <= q) {
+                    System.out.print("<--");
                 }
             } else {
-                if (q <= TARGET && TARGET <= p){
-                    System.out.println("От " + q + " до " + p);
+                System.out.print("От " + q + " до " + p);
+                if (q <= TARGET && TARGET <= p) {
+                    System.out.print("<--");
                 }
             }
+            System.out.println();
         }
     }
 
@@ -959,7 +962,7 @@ public class Lab07 {
             System.out.print(" ");
             System.out.print(arr[i]);
             System.out.print(" ");
-            System.out.print(arr[i+1]);
+            System.out.print(arr[i + 1]);
             System.out.println();
         }
         if (arr.length > 1) {
@@ -985,8 +988,8 @@ public class Lab07 {
         System.out.println("Массивы начинают различаться на индексе " + i);
     }
 
-    public static void task5795(String data){
-        if(data.isEmpty()){
+    public static void task5795(String data) {
+        if (data.isEmpty()) {
             System.out.println("Нет данных");
             return;
         }
@@ -994,7 +997,7 @@ public class Lab07 {
         int i = 0;
         int sum = 0;
         System.out.print("Числа на четных позициях:");
-        while (i < arr.length){
+        while (i < arr.length) {
             System.out.print(" ");
             System.out.print(arr[i]);
             sum = sum + Integer.parseInt(arr[i]);
@@ -1004,7 +1007,7 @@ public class Lab07 {
         System.out.print("Числа на нечетных позициях:");
         i = 1;
         sum = 0;
-        while(i < arr.length){
+        while (i < arr.length) {
             System.out.print(" ");
             System.out.print(arr[i]);
             sum = sum + Integer.parseInt(arr[i]);

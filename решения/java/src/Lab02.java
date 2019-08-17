@@ -1,10 +1,24 @@
 /**
  * @author akryukov
- *         28.03.2017
+ * 28.03.2017
  */
 public class Lab02 {
 
     public static void main(String[] args) {
+        step2801();
+    }
+
+    public static void step2801() {
+        System.out.println();
+        System.out.println("2801");
+        task2801(1234, 11);
+        task2801(5, 13);
+        task2801(17, 17);
+        task2801(0, 23);
+        task2801(4, 0);
+    }
+
+    public static void step2361() {
         System.out.println();
         System.out.println("2361");
         int[] in2361t = {400, 103, 2, 2, 300, -800};
@@ -34,7 +48,8 @@ public class Lab02 {
             }
         }
     }
-    public static void step6522(){
+
+    public static void step6522() {
         System.out.println();
         System.out.println("6522");
         int[] in6522v1 = {1, 1, 5, -2, 4};
@@ -51,14 +66,14 @@ public class Lab02 {
         }
     }
 
-    public static String task5870(int timeInSeconds){
-        if (timeInSeconds < 0){
+    public static String task5870(int timeInSeconds) {
+        if (timeInSeconds < 0) {
             throw new IllegalArgumentException("Количество времени должно быть неотрицательным");
         }
-        int h = timeInSeconds/3600;
-        int m = timeInSeconds/60%60;
-        int s = timeInSeconds%60;
-        return String.format("%d часов %d минут %d секунд", h,m,s);
+        int h = timeInSeconds / 3600;
+        int m = timeInSeconds / 60 % 60;
+        int s = timeInSeconds % 60;
+        return String.format("%d часов %d минут %d секунд", h, m, s);
     }
 
     public static double task4411(double x) {
@@ -122,6 +137,14 @@ public class Lab02 {
         }
     }
 
+    public static void task2801(int dividend, int divider) {
+        if (divider == 0) {
+            System.out.println("Делитель не может быть равен 0");
+            return;
+        }
+        System.out.printf("Делимое %d, делитель %d, частное %d, остаток %d\n", dividend, divider, dividend / divider, dividend % divider);
+    }
+
     public static class2361 task2361(int t, int l) throws IllegalArgumentException {
         if (t <= 0) {
             throw new IllegalArgumentException("Длина рулона должна быть положительна");
@@ -129,7 +152,7 @@ public class Lab02 {
         if (l <= 0) {
             throw new IllegalArgumentException("Расход материала должен быть положительным");
         }
-        if (t * 100 < l){
+        if (t * 100 < l) {
             throw new IllegalArgumentException("Материала не хватат даже на одно изделие");
         }
         return new class2361(t * 100 / l, t * 100 % l);
@@ -377,17 +400,17 @@ public class Lab02 {
         return new class6522(v1 + v2, (double) (t1 * v1 + t2 * v2) / (v1 + v2));
     }
 
-    public static int task3490(double yarnDiameterCm, int wireCoils){
-        if (yarnDiameterCm <= 0){
+    public static int task3490(double yarnDiameterCm, int wireCoils) {
+        if (yarnDiameterCm <= 0) {
             throw new IllegalArgumentException("Длина проволоки должна быть неотрицательна");
         }
-        if (wireCoils <= 0){
+        if (wireCoils <= 0) {
             throw new IllegalArgumentException("Количество витков должно быть неотрицательно");
         }
-        return (int)Math.floor(yarnDiameterCm * Math.PI * wireCoils);
+        return (int) Math.floor(yarnDiameterCm * Math.PI * wireCoils);
     }
 
-    public static String task6924(double ax, double ay, double bx, double by){
+    public static String task6924(double ax, double ay, double bx, double by) {
         System.out.println(ax + " " + ay + " " + bx + " " + by);
         String result;
         double aModule = Math.sqrt(ax * ax + ay * ay);

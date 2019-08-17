@@ -1,8 +1,13 @@
 public class Lab01 {
 
     public static void main(String[] args) {
+        task6814();
+    }
+    public static void step1662() {
         System.out.println("1662");
         task1662();
+    }
+    public static void step8693() {
         System.out.println();
         System.out.println("8693");
         String standard = "Вот дом,"
@@ -228,5 +233,32 @@ public class Lab01 {
                 + "Которые будят того пастуха,\n";
         result += repeat;
         return result;
+    }
+
+    public static void task9781() {
+        String a, b, c, d;
+        c = "успех";
+        a = "провал";
+        b = "тоже провал";
+        c = b;
+        d = b;
+        b = d;
+        d = c;
+        a = b;
+        System.out.println(a);
+    }
+
+    public static void task6814() {
+        String a, b, c, d;
+        c = "успех";
+        a = "тоже провал";
+        b = "провал";
+        d = b;
+        b = c;
+        b = d;
+        d = c;
+        a = d;
+        a = b;
+        System.out.println(a);
     }
 }

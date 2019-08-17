@@ -157,10 +157,10 @@ public class Application {
                 .addExample(1860)
                 .addCitation("link_c7_p33")
                 .addTask(4764)
-                .addTask(1910)
                 .addTask(2429)
                 .addCitation("link_c6_p30.2")
                 .addTask(7472)
+                .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
@@ -197,10 +197,10 @@ public class Application {
                 .addExampleWithManual(1860)
                 .addCitation("link_c7_p33")
                 .addTask(4764)
-                .addTask(1910)
                 .addTask(2429)
                 .addCitation("link_c6_p30.2")
                 .addTask(7472)
+                .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
@@ -291,7 +291,8 @@ public class Application {
                 .addTask(6924)
 
                 .withGroup("Вычисление остатка от деления")
-                .addExample(2361)
+                .addExample(2801)
+                .addTask(2361)
                 .addTask(5063)
                 .addTask(5870)
 
@@ -489,7 +490,7 @@ public class Application {
                 .addExample(9774)//операции над массивом
                 .addTask(2390)//вложенные циклы
                 .addTask(3940)//операции над массивом
-                .addTask(9525)//просмотр массива
+                .addTask(9525)//просмотр массива с условиями
                 .addTask(8613)//чтение элементов массива по индексу
                 .addTask(7534)//реорганизация повторяющихся действий
 

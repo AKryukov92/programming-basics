@@ -138,6 +138,7 @@ public class TaskBook {
                 "<meta charset='utf-8'/>" +
                 "<title>%d %s</title>" +
                 "<style>%s</style>" +
+                "<meta name=\"author\" content=\"Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019\"/>" +
                 "</head>" +
                 "<body class='section'>", labIndex, theme, css);
     }
@@ -187,6 +188,7 @@ public class TaskBook {
             group.appendContentTo(writer);
             group.copyRequiredFiles(Paths.get(getTargetDirectory()).toAbsolutePath().toString());
         }
+        writer.write("Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
         writer.write("</body></html>");
         writer.close();
         for (Manual man : manuals) {
