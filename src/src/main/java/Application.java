@@ -43,6 +43,19 @@ public class Application {
         fillMutualExclusives(taskBooksCs[3]);
         fillRanges(taskBooksCs[4]);
 
+        taskBooksCs[5]
+                .addResource("PaintingApp/PaintingApp.sln")
+                .addResource("PaintingApp/PaintingApp/App.config")
+                .addResource("PaintingApp/PaintingApp/MainForm.cs")
+                .addResource("PaintingApp/PaintingApp/MainForm.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/PaintingApp.csproj")
+                .addResource("PaintingApp/PaintingApp/PenTool.cs")
+                .addResource("PaintingApp/PaintingApp/Program.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/AssemblyInfo.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Resources.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Resources.resx")
+                .addResource("PaintingApp/PaintingApp/Properties/Settings.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Settings.settings");
         fillLoops(taskBooksCs[5]);
         fillNestedLoops(taskBooksCs[6]);
         fillBasicArrayOperations(taskBooksCs[7]);
@@ -70,6 +83,9 @@ public class Application {
         fillMutualExclusives(taskBooksJava[3]);
         fillRanges(taskBooksJava[4]);
 
+        taskBooksJava[5]
+                .addResource("graphics/PaintingApp.java")
+                .addResource("graphics/Pen.java");
         fillLoops(taskBooksJava[5]);
         fillNestedLoops(taskBooksJava[6]);
         fillBasicArrayOperations(taskBooksJava[7]);
@@ -108,13 +124,18 @@ public class Application {
                 "Объекты"
         };
         TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        taskBooksJs[0].prepareTargetDirectory();
+        taskBooksJs[0]
+                .addResource("base.html")
+                .prepareTargetDirectory();
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
         fillRanges(taskBooksJs[4]);
 
+        taskBooksJs[5]
+                .addResource("graphics.html")
+                .addResource("graphics.js");
         fillLoops(taskBooksJs[5]);
         fillNestedLoops(taskBooksJs[6]);
         fillBasicArrayOperations(taskBooksJs[7]);

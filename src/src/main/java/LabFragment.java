@@ -18,11 +18,12 @@ public abstract class LabFragment {
     protected String langAbbreviation;
     private String content = null;
 
-    LabFragment(String srcDirectory){
+    LabFragment(String srcDirectory) {
         this.srcDirectory = srcDirectory;
     }
 
     public abstract void appendContentTo(PrintWriter writer) throws IOException;
+
     public abstract Optional<String> makeNavItem(String navTitle);
 
     public void copyRequiredFilesTo(String targetDirectory) throws IOException {
@@ -32,19 +33,19 @@ public abstract class LabFragment {
         while (imageMatcher.find()) {
             String imageName = imageMatcher.group(1);
             System.out.println(getSrcFilename() + " links to image " + imageName);
-            copyFileTo(imageName, targetDirectory);
+            copyFileTo(imageName, srcDirectory, targetDirectory);
         }
     }
 
     protected abstract String getSrcFilename();
 
-    protected void copyFileTo(String filename, String targetDirectory) throws IOException {
-        Path from = Paths.get(srcDirectory + "\\" + filename).toAbsolutePath();
+    public static void copyFileTo(String filename, String sourceDirectory, String targetDirectory) throws IOException {
+        Path from = Paths.get(sourceDirectory + "\\" + filename).toAbsolutePath();
         Path to = Paths.get(targetDirectory + "\\" + filename).toAbsolutePath();
         System.out.println("Copy " + from.toString() + " to " + to.toString());
         if (!Files.exists(to.getParent())) {
             System.out.println("Missing directory in target path. Creating.");
-            if (!to.getParent().toFile().mkdirs()){
+            if (!to.getParent().toFile().mkdirs()) {
                 throw new RuntimeException("Failed to make parent directory");
             }
         }
@@ -60,7 +61,7 @@ public abstract class LabFragment {
         return content;
     }
 
-    protected void updateContent(String newContent){
+    protected void updateContent(String newContent) {
         this.content = newContent;
     }
 }

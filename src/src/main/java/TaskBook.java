@@ -14,6 +14,7 @@ public class TaskBook {
     private int labIndex;
     private String sourceDirectory;
     private String langAbbreviation;
+    private List<String> resources = new ArrayList<>();
     private List<TaskGroup> groups = new ArrayList<>();
     private String themeNav;
     private List<Manual> manuals = new ArrayList<>();
@@ -110,8 +111,12 @@ public class TaskBook {
         fragmentsOfLastGroup = new ArrayList<>();
     }
 
-    public TaskBook withThemeNav(String nav) {
+    public void withThemeNav(String nav) {
         this.themeNav = nav;
+    }
+
+    public TaskBook addResource(String filename){
+        this.resources.add(filename);
         return this;
     }
 
@@ -193,6 +198,10 @@ public class TaskBook {
         writer.close();
         for (Manual man : manuals) {
             man.make(css);
+        }
+        System.out.println("Copying files ");
+        for (String filename: resources){
+            LabFragment.copyFileTo(filename, getSourceDirectory(), getTargetDirectory());
         }
     }
 

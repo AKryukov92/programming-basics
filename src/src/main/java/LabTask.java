@@ -98,7 +98,7 @@ public class LabTask extends LabFragment {
             }
             Path src = Paths.get(srcDirectory + "\\" + dataName).toAbsolutePath();
             if (Files.exists(src)) {
-                copyFileTo(dataName, targetDirectory + "\\files");
+                copyFileTo(dataName, srcDirectory, targetDirectory + "\\files");
             } else {
                 System.out.println("File " + src.toAbsolutePath() + " not found. Consider it as no-file-test.");
             }
