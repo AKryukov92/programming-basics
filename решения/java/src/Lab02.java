@@ -5,7 +5,18 @@
 public class Lab02 {
 
     public static void main(String[] args) {
-        step2801();
+        step8428();
+    }
+
+    public static void step8428() {
+        System.out.println();
+        System.out.println("8428");
+        task3435(0.7854);
+        task3435(19.6350);
+        task3435(0);
+        task3435(6.2832);
+        task3435(1.5708);
+        task3435(34.9066);
     }
 
     public static void step2801() {
@@ -120,6 +131,10 @@ public class Lab02 {
 
     public static double task8428(int a) {
         return a * Math.PI / 180;
+    }
+
+    public static void task3435(double radians) {
+        System.out.printf("%.4f радиан это %.4f градусов\n", radians, radians / Math.PI * 180);
     }
 
     public static class class2361 {
@@ -342,12 +357,14 @@ public class Lab02 {
         return Math.sin(ar) * Math.cos(br) + Math.cos(ar) * Math.sin(br);
     }
 
-    public static double task7457(int x) {
-        return 7 * x * x - 3 * x + 6;
+    public static void task7457(double velocityInKmH) {
+        double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
+        System.out.printf("%.2f км/ч это %.2f м/с\n", velocityInKmH, velocityInMS1);
     }
 
-    public static double task9865(double a) {
-        return 12 * a * a + 7 * a - 16;
+    public static void task9865(double kmH) {
+        double knots = kmH * 2 - kmH * 0.2;
+        System.out.printf("%.2f км/ч это приблизительно %.2f узлов\n", kmH, knots);
     }
 
     public static double task3591(int h) throws IllegalArgumentException {
