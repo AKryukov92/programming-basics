@@ -7,7 +7,18 @@ import java.util.List;
  */
 public class Lab05 {
     public static void main(String[] args) {
-        step8718();
+        step7323();
+    }
+
+    public static void step7323(){
+        task7323(4, 3);
+        task7323(10, 5);
+        task7323(7, 0);
+        task7323(7, -3);
+        task7323(2, -2);
+        task7323(0, 5);
+        task7323(7, -11);
+        task7323(-2, 4);
     }
 
     public static void step8718() {
@@ -259,14 +270,46 @@ public class Lab05 {
         }
     }
 
-    public static boolean task4257(double l, double p) throws IllegalArgumentException {
-        if (l < 0) {
-            throw new IllegalArgumentException("Расстояние между деревнями должно быть неотрицательно");
+    public static void task7323(int a, int b) {
+        System.out.println();
+        if (a < 0) {
+            System.out.println("Количество символов в первой строке должно быть неотрицательным");
+        } else if (a + b < 0) {
+            System.out.println("Количество символов во второй сроке должно быть неотрицательным");
+        } else {
+            int i = 0;
+            while (i < a) {
+                System.out.print("*");
+                i++;
+            }
+            System.out.println();
+            i = 0;
+            while (i < a + b) {
+                System.out.print("*");
+                i++;
+            }
+            System.out.println();
         }
-        if (p < 0) {
-            throw new IllegalArgumentException("Длина кабеля должна быть неотрицательна");
+    }
+
+    public static void task4257(double roadKm, double lengthFeet) {
+        if (roadKm <= 0) {
+            System.out.println("Расстояние между деревнями должно быть положительно");
+            return;
         }
-        return l * 1000 < p * 0.305;
+        if (lengthFeet <= 0) {
+            System.out.println("Длина кабеля должна быть положительна");
+            return;
+        }
+        double roadFeet = roadKm * 1000 / 0.305;
+        double lengthKm = lengthFeet * 0.305 / 1000;
+        System.out.printf("Расстояние %.4f км это %.4f футов\n", roadKm, roadFeet);
+        System.out.printf("Длина кабеля %.4f футов это %.4f км\n", lengthFeet, lengthKm);
+        if (roadFeet < lengthFeet){
+            System.out.println("Кабеля хватит. Расстояние меньше длины кабеля.");
+        } else {
+            System.out.println("Кабеля не хватит. Длина кабеля меньше расстояния.");
+        }
     }
 
     public static String task2291(double velocityInKmH, double velocityInMS) throws IllegalArgumentException {

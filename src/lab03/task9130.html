@@ -1,15 +1,14 @@
 <div id="task9130" class="task_block empty_on_print">
 	<div class="task_id">9130</div>
 	<h3>Задача</h3>
-	<div class="task_desc">Вычислить результат по формуле:
+	<div class="task_desc">Определить силу тяжести, которая действует на спутник массой satelliteMass, поблизости от планеты массой planetMass и радиусом radius.
 	<formula>
 		force=g
 		<fraction>
-			<numerator>mass<sub>1</sub>*mass<sub>2</sub></numerator>
-			<denominator>distance<sup>2</sup></denominator>
+			<numerator>planetMass*satelliteMass</numerator>
+			<denominator>radius<sup>2</sup></denominator>
 		</fraction>
-	</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067
-	</div>
+	</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067. Результат вывести по шаблону "На спутник действует сила тяжести $force Ньютон". Значение силы оформите в научной нотации.</div>
 	<table class="check_values">
 		<tr>
 			<th rowspan="2">Номер теста</th>
@@ -17,44 +16,51 @@
 			<th rowspan="2">Результат (force)</th>
 		</tr>
 		<tr>
-			<th>mass<sub>1</sub></th>
-			<th>mass<sub>2</sub></th>
-			<th>distance</th>
+			<th>planetMass</th>
+			<th>satelliteMass</th>
+			<th>radius</th>
 		</tr>
 		<tr>
 			<td></td>
-			<td>3</td>
-			<td>7</td>
-			<td>13</td>
-			<td>1,2186</td>
+			<td>5.972E24</td>
+			<td>10000</td>
+			<td>6371</td>
+			<td>На спутник действует сила тяжести 1,442871e+22 Ньютон</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>7219</td>
-			<td>7213</td>
-			<td>7207</td>
-			<td>9,8312</td>
+			<td>6.39E23</td>
+			<td>10000</td>
+			<td>3396.2</td>
+			<td>На спутник действует сила тяжести 5,432969e+21 Ньютон</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>7193</td>
-			<td>7187</td>
-			<td>0</td>
-			<td>Дистанция должна быть неотрицательной</td>
+			<td>6.39E23</td>
+			<td>15000</td>
+			<td>3396.2</td>
+			<td>На спутник действует сила тяжести 8,149454e+21 Ньютон</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>-5</td>
-			<td>4</td>
-			<td>10</td>
-			<td>Масса должна быть неотрицательной</td>
+			<td>6.39E23</td>
+			<td>15000</td>
+			<td>-20000</td>
+			<td>Радиус планеты должен быть положительным</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>10</td>
-			<td>0</td>
-			<td>15</td>
-			<td>Масса должна быть неотрицательной</td>
+			<td>6.39E23</td>
+			<td>-2000</td>
+			<td>3396.2</td>
+			<td>Масса спутника должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-6.39E23</td>
+			<td>10000</td>
+			<td>3396.2</td>
+			<td>Масса планеты должна быть положительна</td>
 		</tr>
 	</table>
 </div>

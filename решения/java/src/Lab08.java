@@ -83,7 +83,7 @@ public class Lab08 {
         if (code.length() != 13) {
             throw new IllegalArgumentException("Некорректная длина штрих-кода");
         }
-        String country = code.substring(0, 2);
+        String country = code.substring(0, 3);
         String manufacturer = code.substring(3, 6);
         String product = code.substring(7, 11);
         String checksum = code.substring(12);

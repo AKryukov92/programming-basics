@@ -4,57 +4,7 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-//        Step9020();
-//        Step7237();
-//        Step3943();
-//        Step8873();
-//        Step2624();
-//
-//        Step1346();
-//        Step5871();
-//        Step3591();
-//        Step9298();
-//        Step3354();
-//
-//        Step5201();
-//        Step2981();
-//        Step4312();
-//        Step8833();
-//        Step1934();
-//
-//        Step7619();
-//        Step9130();
-//        Step2461();
-//        Step7799();
-//        Step2802();
-//
-//        Step9180();
-//        Step1544();
-//        Step9631();
-//        Step9812();
-//        Step5728();
-//
-//        Step5923();
-//        Step9116();
-//        Step1618();
-//        Step7937();
-//        Step4845();
-//
-//        Step7222();
-//        Step2166();
-//        Step5894();
-//        Step4425();
-        Step7290();
-
-//        Step8769();
-//        Step9354();
-//        Step3490();
-//        Step1433();
-//        Step7085();
-//
-//        Step8887();
-//        Step7834();
-//        Step3095();
+        Step9130();
     }
 
     private static void Step3591() {
@@ -147,19 +97,12 @@ public class Lab13Task9701 {
     private static void Step9130() {
         System.out.println();
         System.out.println("9130");
-        int[] in9130m1 = {3, 7219, 7193, -5, 10};
-        int[] in9130m2 = {7, 7213, 7187, 4, 0};
-        int[] in9130r = {13, 7207, 0, 10, 15};
-        double[] outs9130 = {1.2186, 9.8312, 0, 0, 0};
-        for (int i = 0; i < in9130m1.length; i++) {
-            try {
-                double result = Lab02.task9130(
-                        in9130m1[i], in9130m2[i], in9130r[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs9130[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        Lab02.task9130(5.972E24, 10000, 6371);
+        Lab02.task9130(6.39E23, 10000, 3396.2);
+        Lab02.task9130(6.39E23, 15000, 3396.2);
+        Lab02.task9130(6.39E23, 10000, -20000);
+        Lab02.task9130(6.39E23, -2000, 3396.2);
+        Lab02.task9130(-6.39E23, 10000, 3396.2);
     }
 
     private static void Step8873() {

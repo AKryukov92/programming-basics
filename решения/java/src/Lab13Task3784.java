@@ -4,38 +4,19 @@
  */
 public class Lab13Task3784 {
     public static void main(String[] args) {
-//        Step5870();
-//        Step4257();
-//        Step2291();
-//        Step1763();
-        Step1945();
-//
-//        Step6291();
-//        Step3883();
-//        Step4527();
-//        Step6556();
-//        Step2153();
-//
-//        Step5170();
-//        Step1703();
+        Step4257();
     }
 
     private static void Step4257(){
         System.out.println();
         System.out.println("4257");
-        double[] in4257l = {0.7, 0.3, 0.05, -2, 300};
-        double[] in4257p = {2297, 983, 101, 15, -113};
-        for (int i = 0; i < in4257l.length; i++){
-            try {
-                if (Lab05.task4257(in4257l[i], in4257p[i])){
-                    System.out.println("Кабеля хватит. Расстояние меньше длины кабеля.");
-                } else {
-                    System.out.println("Кабеля не хватит. Длина кабеля меньше расстояния.");
-                }
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        Lab05.task4257(0.7, 2297);
+        Lab05.task4257(0.3, 983);
+        Lab05.task4257(0.05, 101);
+        Lab05.task4257(-2, 15);
+        Lab05.task4257(0, 1133);
+        Lab05.task4257(300, -113);
+        Lab05.task4257(0.19, 0);
     }
 
     private static void Step2291(){

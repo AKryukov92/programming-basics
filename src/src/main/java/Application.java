@@ -452,6 +452,7 @@ public class Application {
                 .addExample(9249)
                 .addTask(4075)
                 .addTask(8395)
+                .addTask(7323)
 
                 .withGroup("Циклы один за другим с вложением")
                 .addExample(5902)
