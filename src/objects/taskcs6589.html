@@ -15,22 +15,21 @@
 <li>В папке для юнит-тестов создайте класс RangeSuite.</li>
 <li>В файле RangeSuite добавьте директиву using CodeProject;</li>
 <li>В классе RangeSuite создайте юнит-тест HasIntersectionIntsTest.</li>
-<li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
-	<ol type="a">
-	<li>Вызовите статический метод HasIntersection класса Range.</li>
-	<li>Передайте ему в качестве аргументов значения leftA, leftB, rightA, rightB.</li>
-	<li>Добавьте выражение для проверки результата вызова метода HasIntersection.</li>
-	</ol>
-</li>
+<li>В теле метода HasIntersectionIntsTest вызовите метод HasIntersection.</li>
+<li>Передайте в качестве аргументов значения 2, 3, 5 и 7.</li>
+<li>Проверьте, что метод HasIntersection вернул значение false.</li>
+<li>В теле метода HasIntersectionIntsTest вызовите метод HasIntersection еще раз.</li>
+<li>Передайте в качестве аргументов значения 11, 17, 13, 19.</li>
+<li>Проверьте, что при повторном вызове метод HasIntersection вернул значение true.</li>
 <li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li>
 </ol>
 
 <h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
 <ol start="11">
-<li>В классе RangeSuite создайте 2 юнит-теста HasIntersectionIntsWrongLeftTest и HasIntersectionIntsWrongRightTest.</li>
+<li>В классе RangeSuite создайте 2 юнит-теста HasIntersectionIntsWrongRedTest и HasIntersectionIntsWrongGreenTest.</li>
 <li>Они должны проверять факт возникновения исключения ArgumentException.</li>
-<li>В теле метода HasIntersectionIntsWrongLeftTest вызовите метод HasIntersection и укажите такие значения, в которых левый интервал будет некорректным.</li>
-<li>В теле метода HasIntersectionIntsWrongRightTest вызовите метод HasIntersection и укажите такие значения, в которых правый интервал будет некорректным.</li>
+<li>В теле метода HasIntersectionIntsWrongRedTest вызовите метод HasIntersection и укажите такие значения, в которых левый интервал будет некорректным.</li>
+<li>В теле метода HasIntersectionIntsWrongGreenTest вызовите метод HasIntersection и укажите такие значения, в которых правый интервал будет некорректным.</li>
 <li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li>
 </ol>
 </div>

@@ -12,11 +12,14 @@ public class Lab08 {
     public static final String STR = "abcdefwxyz";
     public static final String STR2 = "abcdacadbacdaabaadc";
 
-    public static int task9631(String s) throws IllegalArgumentException {
+    public static void task9631(String s) {
         if (!STR.contains(s)) {
-            throw new IllegalArgumentException("Значение S отсутствует в строке");
+            System.out.printf("Фрагмент '%s' отсутствует в строке\n", s);
+            return;
         }
-        return STR.length() - STR.indexOf(s) - 1;
+        System.out.printf("Фрагмент '%s' находится на индексе '%d'\n", s, STR.indexOf(s));
+        System.out.printf("Длина введенного фрагмента %d\n", s.length());
+        System.out.printf("После него есть еще %d символов\n", STR.length() - STR.indexOf(s) - s.length());
     }
 
     public static int task9812(String ca, String cb) throws IllegalArgumentException {
@@ -84,8 +87,8 @@ public class Lab08 {
             throw new IllegalArgumentException("Некорректная длина штрих-кода");
         }
         String country = code.substring(0, 3);
-        String manufacturer = code.substring(3, 6);
-        String product = code.substring(7, 11);
+        String manufacturer = code.substring(3, 9);
+        String product = code.substring(9, 12);
         String checksum = code.substring(12);
         return "Код страны: " + country +
                 "\nКод изготовителя: " + manufacturer +
@@ -93,8 +96,12 @@ public class Lab08 {
                 "\nКонтрольное число: " + checksum;
     }
 
-    public static boolean task7491(String x) {
-        return STR.contains(x);
+    public static void task7491(String x) {
+        if (STR.contains(x)){
+            System.out.println("Фрагмент '" + x + "' был найден в '" + STR + "'");
+        } else {
+            System.out.println("Фрагмент '" + x + "' отсутствует в '" + STR + "'");
+        }
     }
 
     public static String task5923(int ca, int cb) throws IllegalArgumentException {

@@ -254,11 +254,11 @@ public class Lab05 {
         }
     }
 
-    public static double task5980(int k) {
+    public static void task5980(double k) {
         if (k > 0) {
-            return Math.sqrt(k);
+            System.out.printf("Корень из %.4f равен %.4f\n", k, Math.sqrt(k));
         } else {
-            return k * k;
+            System.out.printf("Квадрат числа %.4f равен %.4f\n", k, k * k);
         }
     }
 
@@ -395,6 +395,22 @@ public class Lab05 {
 
     public static boolean task4847(int x, int y, int z) {
         return x == y || y == z || x == z;
+    }
+
+    public static void task7991(int x, int y, int z){
+        if (-11 < x && x < 13){
+            System.out.print(x);
+            System.out.print(' ');
+        }
+        if (-11 < y && y < 13){
+            System.out.print(y);
+            System.out.print(' ');
+        }
+        if (-11 < z && z < 13){
+            System.out.print(z);
+            System.out.print(' ');
+        }
+        System.out.println();
     }
 
     public static List<Double> task7991(double x, double y, double z) {

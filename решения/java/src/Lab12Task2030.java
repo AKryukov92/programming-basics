@@ -3,20 +3,6 @@
  */
 public class Lab12Task2030 {
     public static void main(String[] args) {
-        Step8878();
-        Step8715();
-        Step4847();
-        Step1999();
-        Step4042();
-
-        Step6351();
-        Step5382();
-        Step7088();
-        Step7250();
-        Step6740();
-
-        Step9038();
-        Step4515();
         Step7491();
     }
 
@@ -209,13 +195,12 @@ public class Lab12Task2030 {
     static void Step7491() {
         System.out.println();
         System.out.println("7491");
-        String[] in7491 = {"bx", "fw", "123"};
-        for (int i = 0; i < in7491.length; i++){
-            if (Lab08.task7491(in7491[i])){
-                System.out.println("Содержится");
-            } else {
-                System.out.println("Не содержится");
-            }
-        }
+        Lab08.task7491("z");
+        Lab08.task7491("bx");
+        Lab08.task7491("fw");
+        Lab08.task7491("abcd");
+        Lab08.task7491("abcdefwxyz000");
+        Lab08.task7491("abcdefwxyz");
+        Lab08.task7491("123");
     }
 }

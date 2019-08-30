@@ -5,7 +5,7 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step9525();
+        step6988();
     }
 
     public static void step5795() {
@@ -21,6 +21,7 @@ public class Lab07 {
     public static void step6988() {
         System.out.println();
         System.out.println("6988");
+        task6988("a s d f a", "a s d f a");
         task6988("a s d f a", "a s d f g");
         task6988("qwerty asdfgh zxcvb", "qwerty asdfgh asdfgh");
         task6988("qaz wsx edc", "wsx edc qaz");
@@ -981,11 +982,18 @@ public class Lab07 {
         int i = 0;
         while (i < larr.length && i < rarr.length) {
             if (!larr[i].equals(rarr[i])) {
-                break;
+                System.out.println("Массивы начинают различаться на индексе " + i);
+                return;
             }
             i = i + 1;
         }
-        System.out.println("Массивы начинают различаться на индексе " + i);
+        if (larr.length < rarr.length){
+            System.out.println("Массивы начинают различаться на индексе " + larr.length);
+        } else if (larr.length > rarr.length){
+            System.out.println("Массивы начинают различаться на индексе " + rarr.length);
+        } else {
+            System.out.println("Массивы одинаковы");
+        }
     }
 
     public static void task5795(String data) {

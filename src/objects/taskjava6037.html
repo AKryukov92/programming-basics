@@ -14,25 +14,23 @@
 <ol start="6">
 <li>В классе RangeSuite создайте юнит-тест hasIntersectionRangesTest.</li>
 <li>В теле метода hasIntersectionRangesTest создайте 2 переменных типа Range: left и right. Инициализируйте их экземплярами класса Range.</li>
-<li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
-	<ol type="a">
-	<li>Инициализируйте поля "from" и "to" переменной left значениями leftA и leftB.</li>
-	<li>Инициализируйте поля "from" и "to" переменной right значениями rightA и rightB.</li>
-	<li>Вызовите статический метод hasIntersection класса Range и передайте ему в качестве аргументов значения переменных left и right.</li>
-	<li>Добавьте выражение для проверки результата вызова метода hasIntersection.</li>
-	</ol>
-</li>
+<li>Инициализируйте поле "from" переменной red значением 23.</li>
+<li>Инициализируйте поле "to" переменной red значением 27.</li>
+<li>Инициализируйте поле "from" переменной green значением 29.</li>
+<li>Инициализируйте поле "from" переменной green значением 31.</li>
+<li>Вызовите статический метод hasIntersection класса Range и передайте ему в качестве аргументов значения переменных red и green.</li>
+<li>Проверьте, что метод hasIntersection возвращает false.</li>
 <li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li>
 </ol>
 
 <h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
 <ol start="10">
-<li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionRangesWrongLeftTest и hasIntersectionRangesWrongRightTest.</li>
+<li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionRangesWrongRedTest и hasIntersectionRangesWrongGreenTest.</li>
 <li>Они должны проверять факт возникновения исключения IllegalArgumentException.</li>
-<li>В теле метода hasIntersectionRangesWrongLeftTest инициализируйте два экземпляра класса Range: left и right.</li>
+<li>В теле метода hasIntersectionRangesWrongRedTest инициализируйте два экземпляра класса Range: left и right.</li>
 <li>Заполните значения их полей так, чтобы левый интервал получился некорректным.</li>
-<li>Вызовите метод hasIntersection и передайте ему left и right в качестве аргументов.</li>
-<li>В теле метода hasIntersectionRangesWrongRightTest проверьте что метод hasIntersection выбрасывает исключение в случае, когда правый интервал некорректный.</li>
+<li>Вызовите метод hasIntersection и передайте ему red и green в качестве аргументов.</li>
+<li>В теле метода hasIntersectionRangesWrongGreenTest проверьте что метод hasIntersection выбрасывает исключение в случае, когда правый интервал некорректный.</li>
 <li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li>
 </ol>
 </div>

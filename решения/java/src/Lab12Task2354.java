@@ -3,7 +3,7 @@
  */
 public class Lab12Task2354 {
     public static void main(String[] args) {
-        Step4411();
+        Step5980();
     }
 
     private static void Step4411() {
@@ -137,9 +137,11 @@ public class Lab12Task2354 {
 
     private static void Step5980() {
         System.out.println("5980");
-        System.out.printf("%.6f (%.6f)\n", Lab05.task5980(9), 3.0);
-        System.out.printf("%.6f (%.6f)\n", Lab05.task5980(0), 0.0);
-        System.out.printf("%.6f (%.6f)\n", Lab05.task5980(-7), 49.0);
+        Lab05.task5980(9);
+        Lab05.task5980(13);
+        Lab05.task5980(0);
+        Lab05.task5980(-7);
+        Lab05.task5980(-0.25);
     }
 
     private static void Step8174() {

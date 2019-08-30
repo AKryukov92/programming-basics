@@ -4,7 +4,7 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-        Step9130();
+        Step7222();
     }
 
     private static void Step3591() {
@@ -541,16 +541,11 @@ public class Lab13Task9701 {
     static void Step9631() {
         System.out.println();
         System.out.println("9631");
-        String[] in9631 = {"z", "a", "g"};
-        int[] out9631 = {0, 9, 0};
-        for (int i = 0; i < in9631.length; i++) {
-            try {
-                int result = Lab08.task9631(in9631[i]);
-                System.out.printf("%d (%d)\n", result, out9631[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        Lab08.task9631("z");
+        Lab08.task9631("a");
+        Lab08.task9631("g");
+        Lab08.task9631("abcd");
+        Lab08.task9631("wxyz");
     }
 
     static void Step5894() {

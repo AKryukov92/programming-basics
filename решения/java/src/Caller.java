@@ -3,7 +3,7 @@
  */
 public class Caller {
     public static void main(String[] args) {
-      Step6924();
+        Step1186();
     }
 
     private static void Step1186(){
@@ -17,7 +17,7 @@ public class Caller {
         for (int i = 0; i < in1186x.length; i++){
             result1186 = Lab05.task1186(in1186x[i], in1186y[i], in1186z[i]);
             for (double aResult : result1186) {
-                System.out.printf("%.4f;\t", aResult);
+                System.out.printf("%.3f;\t", aResult);
             }
             System.out.println();
         }
