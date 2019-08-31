@@ -7,10 +7,21 @@ import java.util.List;
  */
 public class Lab05 {
     public static void main(String[] args) {
-        step7323();
+        step2003();
     }
 
-    public static void step7323(){
+    public static void step2003() {
+        System.out.println();
+        System.out.println("2003");
+        task2003("a;s;d;f");
+        task2003("z;x;c;v");
+        task2003("q;a;z;w;s;x;e;d;c");
+        task2003("");
+        task2003("x");
+        task2003("x;x;x;x;x;x;x");
+    }
+
+    public static void step7323() {
         task7323(4, 3);
         task7323(10, 5);
         task7323(7, 0);
@@ -305,7 +316,7 @@ public class Lab05 {
         double lengthKm = lengthFeet * 0.305 / 1000;
         System.out.printf("Расстояние %.4f км это %.4f футов\n", roadKm, roadFeet);
         System.out.printf("Длина кабеля %.4f футов это %.4f км\n", lengthFeet, lengthKm);
-        if (roadFeet < lengthFeet){
+        if (roadFeet < lengthFeet) {
             System.out.println("Кабеля хватит. Расстояние меньше длины кабеля.");
         } else {
             System.out.println("Кабеля не хватит. Длина кабеля меньше расстояния.");
@@ -397,16 +408,16 @@ public class Lab05 {
         return x == y || y == z || x == z;
     }
 
-    public static void task7991(int x, int y, int z){
-        if (-11 < x && x < 13){
+    public static void task7991(int x, int y, int z) {
+        if (-11 < x && x < 13) {
             System.out.print(x);
             System.out.print(' ');
         }
-        if (-11 < y && y < 13){
+        if (-11 < y && y < 13) {
             System.out.print(y);
             System.out.print(' ');
         }
-        if (-11 < z && z < 13){
+        if (-11 < z && z < 13) {
             System.out.print(z);
             System.out.print(' ');
         }
@@ -489,6 +500,21 @@ public class Lab05 {
         int hundreds = a / 100 % 10;
         int units = a % 10;
         return hundreds == units;
+    }
+
+    public static void task2003(String raw) {
+        if (raw.isEmpty()) {
+            System.out.println("Символ 'x' отсутствует");
+            return;
+        }
+        String[] arr = raw.split(";");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals("x")){
+                System.out.println("Символ 'x' найден на позиции '" + i + "'");
+                return;
+            }
+        }
+        System.out.println("Символ 'x' отсутствует");
     }
 
     public static StringBuilder task1292(StringBuilder sb, String x) {

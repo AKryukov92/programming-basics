@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,6 +12,7 @@ import java.util.Random;
  */
 public class Application {
     public static void main(String[] args) throws IOException {
+        String gitHash = getGitHash();
         String[] themeList = new String[]{
                 "Заполнение шаблона текстом",
                 "Организация вычислений",
@@ -72,7 +75,7 @@ public class Application {
         fillInternalState(taskBooksCs[16]);
         fillCollections(taskBooksCs[17]);
         updateCrossTaskLinks(taskBooksCs);
-        makeFiles(taskBooksCs, css);
+        makeFiles(taskBooksCs, css, gitHash);
 
 
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
@@ -102,7 +105,7 @@ public class Application {
         fillInternalState(taskBooksJava[16]);
         fillCollections(taskBooksJava[17]);
         updateCrossTaskLinks(taskBooksJava);
-        makeFiles(taskBooksJava, css);
+        makeFiles(taskBooksJava, css, gitHash);
 
 
         String[] themeListJs = new String[]{
@@ -147,14 +150,22 @@ public class Application {
         fillExceptionJs(taskBooksJs[12]);
         fillAbstractDataStructuresJs(taskBooksJs[13]);
         updateCrossTaskLinks(taskBooksJs);
-        makeFiles(taskBooksJs, css);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
 
-    private static void makeFiles(TaskBook[] taskBooks, String css) throws IOException {
+    private static String getGitHash() throws IOException {
+        Process p = Runtime.getRuntime().exec("git show --name-status");
+        BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        String line = input.readLine();
+        input.close();
+        return line.substring(7, 14);
+    }
+
+    private static void makeFiles(TaskBook[] taskBooks, String css, String gitHash) throws IOException {
         for (TaskBook book : taskBooks) {
-            book.make(css);
+            book.make(css, gitHash);
         }
     }
 
@@ -501,9 +512,10 @@ public class Application {
                 .addTask(6806)//поиск в массиве
                 .addTask(2234)//поиск в массиве
 
-                .withGroup("Прерывание работы цикла")
-                .addExample(1292)//break
-                .addTask(6988)//break
+                .withGroup("Поиск в массиве и прерывание работы цикла")
+                .addExample(2003)
+                .addTask(1292)
+                .addTask(6988)
         ;
     }
 
@@ -524,8 +536,10 @@ public class Application {
                 .addTask(3218)//сортировка массива
 
                 .withGroup("Задачи повышенного уровня сложности")
+                .addTask(9576)
                 .addTask(3095)//комбинаторика. понятие "все комбинации"
                 .addTask(8122)//сложная задача с кучей концепций
+                .addTask(5900)
         ;
     }
 
@@ -547,15 +561,17 @@ public class Application {
                 .addTask(6497)
                 .addTask(5648)
 
+                .withGroup("Агрегат по группам")
+                .addTask(7260)
+                .addTask(5795)
+
                 .withGroup("Поиск минимального")
                 .addExample(7035)
                 .addTask(9271)
                 .addTask(8769)
+                .addTask(4707)
+                .addTask(1392)
                 .addTask(6492)
-
-                .withGroup("Агрегат по группам")
-                .addTask(7260)
-                .addTask(5795)
 
                 .withGroup("Поиск повторений в массиве")
                 .addExample(7369)

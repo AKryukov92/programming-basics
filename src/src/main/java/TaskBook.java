@@ -180,7 +180,7 @@ public class TaskBook {
         Files.createDirectory(targetDirectory.toPath());
     }
 
-    public void make(String css) throws IOException {
+    public void make(String css, String gitHash) throws IOException {
         finalizeLastGroup();
         File result = new File(getResultFilename());
         System.out.println("Making taskbook file with name: " + result.getAbsolutePath());
@@ -193,7 +193,9 @@ public class TaskBook {
             group.appendContentTo(writer);
             group.copyRequiredFiles(Paths.get(getTargetDirectory()).toAbsolutePath().toString());
         }
-        writer.write("Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
+        writer.write("Версия ");
+        writer.write(gitHash);
+        writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
         writer.write("</body></html>");
         writer.close();
         for (Manual man : manuals) {

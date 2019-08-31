@@ -174,35 +174,6 @@ public class Lab15Task8787 {
         }
     }
 
-    private static void Step3218() {
-        System.out.println();
-        System.out.println("3218");
-        String[] in3218 = {
-                "4 1 1 1",
-                "1 4 2 1",
-                "3 4 1 5",
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3"
-        };
-        String[] out3218 = {
-            "1 1 1 4",
-            "1 1 2 4",
-            "1 3 4 5",
-            "1 1 2 2 3 4",
-            "1 1 1 2 2 2 3 3 3 4 4"};
-        for (int i = 0; i < in3218.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab07.task3218(in3218[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-            System.out.println(out3218[i]);
-            System.out.println();
-        }
-    }
-
     private static void Step8820() {
         System.out.println();
         System.out.println("8820");

@@ -5,7 +5,57 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step6988();
+        step5900();
+    }
+
+    public static void step5900() {
+        System.out.println();
+        System.out.println("5900");
+        task5900("4 0 0 6 3 8 1 3 3 3 9 3 1");
+        task5900("9 7 8 5 9 8 5 0 3 6 8 2 4");
+        task5900("5 0 3 2 2 2 7 7 0 0 0 2 2");
+        task5900("1 2 3 4 5 6 7 8 9 0");
+        task5900("");
+        task5900("1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6");
+    }
+
+    public static void step9576() {
+        System.out.println();
+        System.out.println("9576");
+        task9576("1;3;6;9;10");
+        task9576("13;19");
+        task9576("2;3;3;3;3;4");
+        task9576("5");
+        task9576("1;2;3;2;1");
+        task9576("");
+        task9576("1;5;9");
+        task9576("20;21;22;23;24");
+    }
+
+    public static void step3218() {
+        System.out.println();
+        System.out.println("3218");
+        task3218("4 1 1 1");
+        task3218("1 4 2 1");
+        task3218("3 4 1 5");
+        task3218("1 2 3 4 1 2");
+        task3218("9 8 9 1 1 5 1 1");
+        task3218("5 5 5 5 5");
+        task3218("1 9 1 30 9 1 100");
+        task3218("");
+        task3218("19");
+    }
+
+    public static void step4707() {
+        System.out.println();
+        System.out.println("4707");
+        task4707("9 8 9 1 1 5 1 1");
+        task4707("1 2 3 4 1 3 4 4 4 4");
+        task4707("5 5 5 5 5");
+        task4707("");
+        task4707("17");
+        task4707("1 9 1 30 9 1 100");
+        task4707("1000000 1 1");
     }
 
     public static void step5795() {
@@ -224,6 +274,71 @@ public class Lab07 {
             sb.append("\n");
         }
         return sb.toString();
+    }
+
+    public static void task1392(String raw) {
+        if (raw.length() == 0) {
+            System.out.println("Массив пуст");
+            return;
+        }
+        String[] arr = raw.split(" ");
+        int[] num = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            num[i] = Integer.parseInt(arr[i]);
+        }
+        for (int j = 0; j < num.length - 1; j++) {
+            int minIdx = j;
+            for (int i = j + 1; i < num.length; i++) {
+                if (num[minIdx] > num[i]) {
+                    minIdx = i;
+                }
+            }
+            int temp = num[minIdx];
+            num[minIdx] = num[j];
+            num[j] = temp;
+        }
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i] + " ");
+        }
+        System.out.println();
+        if (num.length % 2 == 0) {
+            int medianLeft = num.length / 2 - 1;
+            int medianRight = num.length / 2;
+            double realMedian = ((double) num[medianLeft] + num[medianRight]) / 2;
+            System.out.printf("Медиана: %.2f\n", realMedian);
+        } else {
+            int medianIdx = num.length / 2;
+            System.out.println("Медиана: " + num[medianIdx]);
+        }
+    }
+
+    public static void task4707(String raw) {
+        if (raw.length() == 0) {
+            System.out.println("Массив пуст");
+            return;
+        }
+        System.out.println(raw);
+        String[] arr = raw.split(" ");
+        int[] num = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            num[i] = Integer.parseInt(arr[i]);
+        }
+        for (int j = 0; j < num.length - 1; j++) {
+            int minIdx = j;
+            for (int i = j + 1; i < num.length; i++) {
+                if (num[minIdx] > num[i]) {
+                    minIdx = i;
+                }
+            }
+            System.out.printf("Минимальное значение %d на индексе %d. Первая неотсортированная позиция: %d\n", num[minIdx], minIdx, j);
+            int temp = num[minIdx];
+            num[minIdx] = num[j];
+            num[j] = temp;
+            for (int i = 0; i < num.length; i++) {
+                System.out.print(num[i] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static double task3946(String raw) {
@@ -493,6 +608,38 @@ public class Lab07 {
         return sb.toString();
     }
 
+    public static void task9576(String data) {
+        if (data.isEmpty()) {
+            System.out.println("Исходная строка пуста");
+            return;
+        }
+        String[] arr = data.split(";");
+        int[] num = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            num[i] = Integer.parseInt(arr[i]);
+        }
+        for (int i = 1; i < num.length; i++) {
+            if (num[i - 1] > num[i]) {
+                System.out.println("Последовательность в исходных данных нарушена");
+                return;
+            }
+            if (num[i - 1] == num[i]) {
+                System.out.println("В исходных данных присутствуют дубликаты");
+                return;
+            }
+        }
+        for (int i = 1; i < num.length; i++) {
+            if (num[i - 1] + 1 < num[i]) {
+                int j = num[i - 1] + 1;
+                while (j < num[i]) {
+                    System.out.print(j + ";");
+                    j++;
+                }
+            }
+        }
+        System.out.println();
+    }
+
     public static String task2173(String data) {
         if (data.isEmpty()) {
             return "Исходная строка пуста";
@@ -722,26 +869,35 @@ public class Lab07 {
         return ret;
     }
 
-    public static List<Integer> task3218(String raw) {
-        String[] arr = raw.split(" ");
-        List<Integer> ret = new ArrayList<>();
-        int[] data = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            data[i] = Integer.parseInt(arr[i]);
+    public static void task3218(String raw) {
+        if (raw.isEmpty()) {
+            System.out.println("Массив пуст");
+            return;
         }
+        System.out.println(raw);
+        String[] arr = raw.split(" ");
+        int[] num = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            int min = i;
-            for (int j = i; j < arr.length; j++) {
-                if (data[j] < data[min]) {
-                    min = j;
+            num[i] = Integer.parseInt(arr[i]);
+        }
+        for (int j = 0; j < num.length; j++) {
+            System.out.printf("Шаг %d ", j);
+            for (int i = 0; i < num.length - 1; i++) {
+                if (num[i] > num[i + 1]) {
+                    System.out.printf("Меняем %d и %d ", num[i], num[i + 1]);
+                    int temp = num[i];
+                    num[i] = num[i + 1];
+                    num[i + 1] = temp;
+                } else {
+                    System.out.printf("Оставляем %d и %d ", num[i], num[i + 1]);
                 }
             }
-            int t = data[min];
-            data[min] = data[i];
-            data[i] = t;
-            ret.add(t);
+            System.out.println();
+            for (int i = 0; i < num.length; i++) {
+                System.out.print(num[i] + " ");
+            }
+            System.out.println();
         }
-        return ret;
     }
 
     public static int task4283(int k, String raw) {
@@ -807,6 +963,44 @@ public class Lab07 {
             }
         }
         return sb.toString();
+    }
+
+    public static void task5900(String data) {
+        if (data.isEmpty()) {
+            System.out.println("Нет данных о штрих-коде");
+            return;
+        }
+        String[] arr = data.split(" ");
+        if (arr.length != 13) {
+            System.out.println("Некорректная длина штрих-кода");
+            return;
+        }
+        System.out.println(data);
+        int[] num = new int[arr.length];
+        num[num.length - 1] = Integer.parseInt(arr[arr.length - 1]);
+        int sum = 0;
+        for (int i = 0; i < num.length - 1; i++) {
+            num[i] = Integer.parseInt(arr[i]);
+            int weight;
+            if (i % 2 == 0) {
+                weight = 1;
+            } else {
+                weight = 3;
+            }
+            sum += num[i] * weight;
+            System.out.printf("Цифра %d вес %d произведение %d накопленная сумма %d\n", num[i], weight, num[i] * weight, sum);
+        }
+        int checksum;
+        if (sum % 10 > 5) {
+            checksum = 10 - sum % 10;
+        } else {
+            checksum = sum % 10;
+        }
+        if (checksum == num[num.length - 1]) {
+            System.out.printf("Контрольная сумма %d совпадает с последней цифрой %d\n", checksum, num[num.length - 1]);
+        } else {
+            System.out.printf("Контрольная сумма %d расходится с последней цифрой %d\n", checksum, num[num.length - 1]);
+        }
     }
 
     public static void task8122(String data) {
@@ -987,9 +1181,9 @@ public class Lab07 {
             }
             i = i + 1;
         }
-        if (larr.length < rarr.length){
+        if (larr.length < rarr.length) {
             System.out.println("Массивы начинают различаться на индексе " + larr.length);
-        } else if (larr.length > rarr.length){
+        } else if (larr.length > rarr.length) {
             System.out.println("Массивы начинают различаться на индексе " + rarr.length);
         } else {
             System.out.println("Массивы одинаковы");

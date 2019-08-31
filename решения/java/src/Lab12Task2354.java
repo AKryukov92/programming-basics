@@ -3,7 +3,7 @@
  */
 public class Lab12Task2354 {
     public static void main(String[] args) {
-        Step5980();
+        Step1392();
     }
 
     private static void Step4411() {
@@ -267,6 +267,18 @@ public class Lab12Task2354 {
         System.out.println(Lab08.task4265("s"));
         System.out.println(Lab08.task4265("F123"));
         System.out.println(Lab08.task4265("Sopqr"));
+    }
+
+    private static void Step1392(){
+        System.out.println();
+        System.out.println("1392");
+        Lab07.task1392("9 8 9 1 1 5 1 1");
+        Lab07.task1392("1 2 3 4 1 3 4 4 4 4");
+        Lab07.task1392("5 5 5 5 5");
+        Lab07.task1392("");
+        Lab07.task1392("13");
+        Lab07.task1392("1 9 1 30 9 1 100");
+        Lab07.task1392("1000000 1 1");
     }
 
     private static void Step3946() {
