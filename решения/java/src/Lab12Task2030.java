@@ -3,7 +3,7 @@
  */
 public class Lab12Task2030 {
     public static void main(String[] args) {
-        Step7491();
+        Step8715();
     }
 
     private static void Step8878(){
@@ -23,9 +23,9 @@ public class Lab12Task2030 {
     private static void Step8715(){
         System.out.println();
         System.out.println("8715");
-        int[] in8718a = {1, -4, 7, 0, 4, -2, 10, 5};
-        int[] in8718b = {2, 0, 4, 5, 4, 4, 3, 1};
-        int[] in8718c = {3, 5, -2, -7, 4, 3, 5, 7};
+        int[] in8718a = {1, -3, -4, 7, 0, 4, -2, 10, 5};
+        int[] in8718b = {2, -2, 0, 4, 5, 4, 4, 3, 1};
+        int[] in8718c = {3, -1, 5, -2, -7, 4, 3, 5, 7};
         for (int i = 0; i < in8718a.length; i++){
             if (Lab05.task8715(in8718a[i], in8718b[i], in8718c[i])){
                 System.out.println("Выполняется");
