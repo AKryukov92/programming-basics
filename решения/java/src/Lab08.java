@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -172,6 +173,68 @@ public class Lab08 {
             if (openIndex < 0 && closeIndex >= 0) {
                 System.out.print(depth);
                 depth--;
+                lastIndex = closeIndex;
+            }
+            if (openIndex < 0 && closeIndex < 0) {
+                break;
+            }
+            if (depth < 0) {
+                throw new IllegalArgumentException("Неожиданный символ '}'");
+            }
+            lastIndex++;
+        }
+        if (depth > 0) {
+            throw new IllegalArgumentException("Неожиданный конец строки");
+        }
+        System.out.println();
+    }
+
+    public static String fillString(int length, char toFill){
+        if (length > 0){
+            char[] array = new char[length];
+            Arrays.fill(array, toFill);
+            return new String(array);
+        }
+        return "";
+    }
+
+    public static void hiveStructBeautifier(String line) throws IllegalArgumentException {
+        System.out.println(line);
+        int openIndex;
+        int depth = 0;
+        int closeIndex;
+        int lastIndex = 0;
+        while (lastIndex < line.length()) {
+            closeIndex = line.indexOf(">", lastIndex);
+            openIndex = line.indexOf("<", lastIndex);
+            if (openIndex >= 0 && openIndex < closeIndex) {
+                depth++;
+                System.out.println(fillString(depth,' ') + line.substring(lastIndex, openIndex + 1));
+                //System.out.print(depth);
+                lastIndex = openIndex;
+            }
+            if (openIndex >= 0 && closeIndex < 0) {
+                depth++;
+                System.out.println(fillString(depth, ' ') + "###");
+                //System.out.print(depth);
+                lastIndex = openIndex;
+            }
+            if (openIndex >= 0 && openIndex > closeIndex && closeIndex >= 0) {
+                if (lastIndex < closeIndex) {
+                    System.out.println(fillString(depth+1, ' ') + line.substring(lastIndex, closeIndex));
+                }
+                System.out.println(fillString(depth, ' ') + ">");
+                depth--;
+                //System.out.print(depth);
+                lastIndex = closeIndex;
+            }
+            if (openIndex < 0 && closeIndex >= 0) {
+                if (lastIndex < closeIndex) {
+                    System.out.println(fillString(depth + 1, ' ') + line.substring(lastIndex, closeIndex));
+                }
+                //System.out.print(depth);
+                depth--;
+                System.out.println(fillString(depth, ' ') + ">");
                 lastIndex = closeIndex;
             }
             if (openIndex < 0 && closeIndex < 0) {
