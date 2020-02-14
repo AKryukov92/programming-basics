@@ -7,7 +7,20 @@ import java.util.List;
  */
 public class Lab05 {
     public static void main(String[] args) {
-        step2003();
+        step8751();
+    }
+
+    public static void step6589() {
+        System.out.println();
+        System.out.println("6589");
+        task6589(2, 3, 5, 7);
+        task6589(11, 17, 13, 19);
+        task6589(23, 37, 29, 31);
+        task6589(43, 53, 41, 47);
+        task6589(5, 15, 0, 30);
+        task6589(67, 71, 59, 61);
+        task6589(79, 73, 83, 89);
+        task6589(97, 101, 107, 103);
     }
 
     public static void step2003() {
@@ -35,38 +48,38 @@ public class Lab05 {
     public static void step8718() {
         System.out.println();
         System.out.println("8718");
-        task8718(80, 0, 450);
-        task8718(80, 0, 700);
-        task8718(80, 0, 2500);
-        task8718(80, 0, 6000);
-        task8718(80, 0, 10000);
-
-        task8718(100, 0, 450);
-        task8718(101, 0, 450);
-
-        task8718(100, 0.50, 450);
-        task8718(100, 7.50, 450);
-        task8718(100, 100.68, 450);
-        task8718(100, 15.99, 450);
-
-        task8718(115, 0, 500);
-        task8718(115, 0, 800);
-        task8718(115, 0, 3000);
-        task8718(115, 0, 5500);
-        task8718(115, 0, 8500);
-
-        task8718(500, 0, 550);
-        task8718(501, 0, 550);
+//        task8718(80, 0, 450);
+//        task8718(80, 0, 700);
+//        task8718(80, 0, 2500);
+//        task8718(80, 0, 6000);
+//        task8718(80, 0, 10000);
+//
+//        task8718(100, 0, 450);
+//        task8718(101, 0, 450);
+//
+//        task8718(100, 0.50, 450);
+//        task8718(100, 7.50, 450);
+//        task8718(100, 100.68, 450);
+//        task8718(100, 15.99, 450);
+//
+//        task8718(115, 0, 500);
+//        task8718(115, 0, 800);
+//        task8718(115, 0, 3000);
+//        task8718(115, 0, 5500);
+//        task8718(115, 0, 8500);
+//
+//        task8718(500, 0, 550);
+//        task8718(501, 0, 550);
 
         task8718(1700, 0, 550);
         task8718(1700, 0, 600);
         task8718(1700, 0, 601);
 
-        task8718(0, 0, 450);
-        task8718(-50, 0, 450);
-        task8718(80, 0, 0);
-        task8718(80, 0, -100);
-        task8718(80, -20, 450);
+//        task8718(0, 0, 450);
+//        task8718(-50, 0, 450);
+//        task8718(80, 0, 0);
+//        task8718(80, 0, -100);
+//        task8718(80, -20, 450);
     }
 
     public static void taskX() {
@@ -205,6 +218,19 @@ public class Lab05 {
         }
     }
 
+    public static void step8751(){
+        System.out.println();
+        System.out.println("8751");
+        double[] in8751 = {-273, -10, -1, 0, 99, 100, 101, -274};
+        for (int i = 0; i < in8751.length; i++) {
+            try {
+                System.out.println(task8751(in8751[i]));
+            } catch (IllegalArgumentException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+    }
+
     public static void task8718(int mass, double declaredValue, double distance) {
         if (mass <= 0) {
             System.out.println("Масса должна быть положительна");
@@ -225,7 +251,7 @@ public class Lab05 {
         }
         cost = cost + Math.ceil(declaredValue) * 0.03;
         double units = Math.ceil(mass / 500.0);
-        if (distance < 600) {
+        if (distance <= 600) {
             cost = cost + units * 95;
         } else if (601 <= distance && distance <= 2000) {
             cost = cost + units * 105;
@@ -365,6 +391,28 @@ public class Lab05 {
             return "Уравнение " + a + "x^2 + " + b + "x + " + c + " = 0 имеет один корень";
         } else {
             return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
+        }
+    }
+
+    public static void task1945_2(double areaCircle, double areaSquare) {
+        if (areaCircle <= 0){
+            System.out.println("Площадь круга должна быть положительной");
+            return;
+        }
+        if (areaSquare <= 0){
+            System.out.println("Площадь квадрата должна быть положительной");
+            return;
+        }
+        double edge = Math.sqrt(areaSquare);
+        double diameter = Math.sqrt(areaCircle / Math.PI) * 2;
+        System.out.printf("Площадь круга %.4f, площадь квадрата %.4f\n", areaCircle, areaSquare);
+        if (diameter > edge) {
+            if (areaCircle < areaSquare){
+                System.out.println("Площадь меньше, а не влез!");
+            }
+            System.out.println("Круг не поместится в квадрате");
+        } else {
+            System.out.println("Круг уместится в квадрате");
         }
     }
 
@@ -798,6 +846,9 @@ public class Lab05 {
         double lambda = 3.3E5;
         double m = 17;
         double tK = tC + 273.15;
+        if (tC == 0 || tC == 100){
+            result += "Вещество в переходном состоянии.\n";
+        }
         if (tC <= 0) {
             result += "Агрегатное состояние: кристалл\n";
             Q = m * tK * c;
@@ -814,5 +865,19 @@ public class Lab05 {
             result += String.format("Внутренняя энергия: %.2f Дж\n", Q);
         }
         return result;
+    }
+
+    public static void task6589(int redA, int redB, int greenA, int greenB) {
+        if (redA > redB || greenA > greenB) {
+            System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
+            return;
+        }
+        if (redB <= greenA) {
+            System.out.println("Интервалы не пересекаются. Правый край красного левее левого края зеленого");
+        } else if (greenB <= redA) {
+            System.out.println("Интервалы не пересекаются. Правый край зеленого левее левого края красного");
+        } else {
+            System.out.println("Интервалы пересекаются");
+        }
     }
 }

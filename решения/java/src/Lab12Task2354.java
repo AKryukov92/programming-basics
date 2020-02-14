@@ -3,7 +3,7 @@
  */
 public class Lab12Task2354 {
     public static void main(String[] args) {
-        Step1392();
+        Step9182();
     }
 
     private static void Step4411() {
@@ -295,12 +295,13 @@ public class Lab12Task2354 {
     private static void Step4283() {
         System.out.println();
         System.out.println("4283");
-        int[] in4283k = {3, 5, 2, 1};
+        String[] in4283k = {"e", "t", "w", "q"};
+
         String[] in4283s = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3",
-                "3 2 2 2 2 2",
-                "4 4 4 4 4 4"
+                "q w e r q w",
+                "q w e r q w e r q w e",
+                "e w w w w w",
+                "r r r r r r"
         };
         int[] out4283 = {1, 0, 5, 0};
         for (int i = 0; i < in4283k.length; i++) {
@@ -313,9 +314,9 @@ public class Lab12Task2354 {
         System.out.println();
         System.out.println("9182");
         String[] in9182 = {
-                "1 2 3 4 5 6",
-                "1 2 3 1 2 6",
-                "1 1 1 1 1 1"
+                "q w e r t y",
+                "q w e q w y",
+                "q q q q q q"
         };
         int[] out9182 = {6, 4, 1};
         for (int i = 0; i < out9182.length; i++) {

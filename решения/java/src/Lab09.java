@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
-        step1761();
+        step6175();
     }
 
     public static void step5537() {
@@ -44,13 +44,13 @@ public class Lab09 {
         task1761(".\\task1761\\test11.txt");
     }
 
-    public static void call() {
+    public static void step6175(){
         System.out.println("6175");
         String[] out6175 = {
-                "стол, стул, дверь, шкаф, кровать",
+                "стол #### стул #### дверь #### шкаф #### кровать",
                 "космос",
                 "Файл пуст",
-                "кирпич, бетон, дерево",
+                "кирпич #### бетон #### дерево",
                 "Файл не существует",
                 "один два три четыре пять"
         };
@@ -58,6 +58,9 @@ public class Lab09 {
             System.out.println("-->" + out6175[i] + "<--");
             task6175(".\\task6175\\test" + (i + 1) + ".txt");
         }
+    }
+
+    public static void call() {
         System.out.println();
         System.out.println("4488");
         String[] out4488 = {
@@ -232,14 +235,14 @@ public class Lab09 {
                 return;
             }
             while (scanner.hasNext()) {
-                System.out.print(", ");
+                System.out.print(" #### ");
                 System.out.print(scanner.nextLine());
             }
             System.out.println();
         } catch (InputMismatchException ex) {
             System.out.println("Не удается считать число");
         } catch (FileNotFoundException ex) {
-            System.out.println("Файл не существует");
+            System.out.println("Файл не существует: " + target.getAbsolutePath());
         }
     }
 

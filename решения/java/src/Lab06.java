@@ -9,7 +9,16 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
-        step5170();
+        step7086();
+    }
+
+    public static void step7086(){
+        System.out.println();
+        System.out.println("7086");
+        task7086(2);
+        task7086(13);
+        task7086(-6);
+        task7086(1000);
     }
 
     public static void step5170(){
@@ -950,5 +959,22 @@ public class Lab06 {
                 System.out.println();
             }
         }
+    }
+
+    public static void task7086(int x) {
+        int i = x;
+        while (i <= x + 30) {
+            System.out.print(i);
+            System.out.print(" ");
+            i+=3;
+        }
+        System.out.println();
+        i = x - 40;
+        while (i <= x){
+            System.out.print(i);
+            System.out.print(" ");
+            i+=4;
+        }
+        System.out.println();
     }
 }

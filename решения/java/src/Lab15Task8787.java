@@ -7,7 +7,7 @@ import java.util.Set;
  */
 public class Lab15Task8787 {
     public static void main(String[] args) {
-        Step7991();
+        Step7703();
     }
 
     static void Step7991() {
@@ -151,10 +151,10 @@ public class Lab15Task8787 {
         System.out.println();
         System.out.println("7703");
         String[] in7703 = {
-                "1 2 3 4 1 2",
-                "1 2 3 4 1 2 3 4 1 2 3",
-                "3 2 2 2 2 2",
-                "4 4 4 4 4 4"
+                "q w e e q w",
+                "q w e r q w e r q w e",
+                "e w w w w w",
+                "r r r r r r"
         };
         String[] out7703 = {
             "2 2 1 1 2 2",

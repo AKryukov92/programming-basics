@@ -4,7 +4,7 @@
  */
 public class Lab13Task3784 {
     public static void main(String[] args) {
-        Step4257();
+        Step1945();
     }
 
     private static void Step4257(){
@@ -63,23 +63,34 @@ public class Lab13Task3784 {
     static void Step1945() {
         System.out.println();
         System.out.println("1945");
-        System.out.println(Lab05.task1945(28.2733, 36));
-        System.out.println(Lab05.task1945(28.2735, 36));
-        System.out.println(Lab05.task1945(28.2752, 36));
-        System.out.println(Lab05.task1945(28.2754, 36));
-        int[] in1945sc = {17, 13, 7854, 5808, -20, 300};
-        int[] in1945ss = {19, 19, 8100, 8100, 4, -200};
-        for (int i = 0; i < in1945sc.length; i++) {
-            try {
-                if (Lab05.task1945(in1945sc[i], in1945ss[i])) {
-                    System.out.println("Круг уместится в квадрате");
-                } else {
-                    System.out.println("Круг не поместится в квадрате");
-                }
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        Lab05.task1945_2(17, 19);
+        Lab05.task1945_2(13, 19);
+        Lab05.task1945_2(28.2733, 36);
+        Lab05.task1945_2(28.2735, 36);
+        Lab05.task1945_2(28.2752, 36);
+        Lab05.task1945_2(28.2754, 36);
+        Lab05.task1945_2(7854, 8100);
+        Lab05.task1945_2(5808, 8100);
+        Lab05.task1945_2(-20, 4);
+        Lab05.task1945_2(300, -200);
+
+//        System.out.println(Lab05.task1945(28.2733, 36));
+//        System.out.println(Lab05.task1945(28.2735, 36));
+//        System.out.println(Lab05.task1945(28.2752, 36));
+//        System.out.println(Lab05.task1945(28.2754, 36));
+//        int[] in1945sc = {17, 13, 7854, 5808, -20, 300};
+//        int[] in1945ss = {19, 19, 8100, 8100, 4, -200};
+//        for (int i = 0; i < in1945sc.length; i++) {
+//            try {
+//                if (Lab05.task1945(in1945sc[i], in1945ss[i])) {
+//                    System.out.println("Круг уместится в квадрате");
+//                } else {
+//                    System.out.println("Круг не поместится в квадрате");
+//                }
+//            } catch (IllegalArgumentException e) {
+//                System.out.println(e.getMessage());
+//            }
+//        }
     }
 
     static void Step6291() {

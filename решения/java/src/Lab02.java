@@ -382,7 +382,7 @@ public class Lab02 {
 
     public static void task9865(double kmH) {
         double knots = kmH * 2 - kmH * 0.2;
-        System.out.printf("%.2f км/ч это приблизительно %.2f узлов\n", kmH, knots);
+        System.out.printf("%.2f узлов это приблизительно %.2f км/ч\n", kmH, knots);
     }
 
     public static double task3591(int h) throws IllegalArgumentException {

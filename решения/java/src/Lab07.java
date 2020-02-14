@@ -5,7 +5,7 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step5900();
+        step5541();
     }
 
     public static void step5900() {
@@ -191,12 +191,12 @@ public class Lab07 {
         System.out.println();
         System.out.println("5541");
         String[] in5541 = {
-                "1 1 1 1",
-                "1 1 2 2",
-                "1 1 1 2",
-                "1 2 3 4",
-                "1 2 3 4 1 2",
-                "1 1 3 3 2 2"
+                "q q q q",
+                "q q w w",
+                "q q q w",
+                "q w e r",
+                "q w e r q w",
+                "q q e e w w"
         };
         for (int i = 0; i < in5541.length; i++) {
             StringBuilder sb = new StringBuilder();
@@ -900,11 +900,11 @@ public class Lab07 {
         }
     }
 
-    public static int task4283(int k, String raw) {
+    public static int task4283(String k, String raw) {
         String[] arr = raw.split(" ");
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (Integer.parseInt(arr[i]) == k) {
+            if (arr[i].equals(k)) {
                 count++;
             }
         }
