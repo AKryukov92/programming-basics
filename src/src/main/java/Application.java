@@ -355,13 +355,13 @@ public class Application {
     private static void fillMutualExclusives(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab04")
                 .withGroup("Взаимоисключающие случаи")
-                .addTask(3072)
+                .addExample(3072)
                 .addCitation("link_c4_p15.1")
                 .addTask(5980)
                 .addCitation("link_c4_p19.4")
                 .addTask(8174)
                 .addTask(7178)
-                .addTask(1186)
+                .addTask(7243)
                 .addTask(4257)
                 .addTask(3883)
                 .addTask(1763)
@@ -374,8 +374,9 @@ public class Application {
                 .addCitation("link_c4_p19.2")
                 .addTask(2291)
 
-                .withGroup("Одна задача, решение которой нужно для объяснения циклов и массивов потом")
-                .addExample(8518)
+                .withGroup("Несколько условий последовательно, с дополнением ответа в каждом условии. Нужно для объяснения циклов и массивов потом")
+                .addExample(1186)
+                .addTask(8518)
                 .addTask(1292)
 
                 .withGroup("Просто задачи повышенного уровня сложности")
@@ -385,7 +386,7 @@ public class Application {
                 .addTask(3878)
                 .addTask(2153)
                 .addTask(7937)
-                .addTask(8135)
+                .addTask(8135)//несколько условий последовательно, с дополнением ответа в каждом условии
         ;
     }
 
@@ -446,6 +447,7 @@ public class Application {
                 .addTask(4264)
                 .addTask(1483)
                 .addTask(3983)
+                .addTask(3519)
                 .addTask(8770)
                 .addCitation("link_c3_p11.2")
                 .addTask(8418)
@@ -516,6 +518,7 @@ public class Application {
                 .addExample(2003)
                 .addTask(1292)
                 .addTask(6988)
+                .addTask(9827)
         ;
     }
 

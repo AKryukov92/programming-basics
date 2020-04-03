@@ -5,7 +5,17 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step5541();
+        step9827();
+    }
+
+    public static void step9827() {
+        System.out.println();
+        System.out.println("9827");
+        task9827("one two three four".split(" "), "one four five".split(" "));
+        System.out.println();
+        task9827("one two three four".split(" "), "one two three four".split(" "));
+        System.out.println();
+        task9827("one two three four".split(" "), new String[0]);
     }
 
     public static void step5900() {
@@ -1216,5 +1226,21 @@ public class Lab07 {
             i = i + 2;
         }
         System.out.println(". Сумма: " + sum);
+    }
+
+    //Нужно найти все элементы из массива А, которых нет в массиве Б
+    public static void task9827(String[] a, String[] b) {
+        for (int ai = 0; ai < a.length; ai++){
+            boolean found = false;
+            for (int bi = 0; bi < b.length; bi++){
+                if (a[ai].equals(b[bi])){
+                    found = true;
+                    break;
+                }
+            }
+            if (!found){
+                System.out.println(a[ai]);
+            }
+        }
     }
 }

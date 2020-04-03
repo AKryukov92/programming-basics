@@ -428,12 +428,25 @@ public class Lab05 {
         return diameter < edge;
     }
 
-    public static double[] task1186(double x, double y, double z) {
-        return new double[]{
-                x > 0 ? x * x : x,
-                y > 0 ? y * y : y,
-                z > 0 ? z * z : z
-        };
+    public static void task1186(int x, int y, int z) {
+        if (x > 0) {
+            System.out.print(x * x);
+        } else {
+            System.out.print(x);
+        }
+        System.out.print(";");
+        if (y > 0) {
+            System.out.print(y * y);
+        } else {
+            System.out.print(y);
+        }
+        System.out.print(";");
+        if (z > 0) {
+            System.out.print(z * z);
+        } else {
+            System.out.print(z);
+        }
+        System.out.println();
     }
 
     public static boolean task8715(int a, int b, int c) {

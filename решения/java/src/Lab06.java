@@ -9,7 +9,29 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
-        step7086();
+        step3519();
+    }
+
+    public static void step3519(){
+        System.out.println();
+        System.out.println("3519");
+        Lab06.task3519(2, 10, 3);
+        System.out.println();
+        Lab06.task3519(0, 10, 3);
+        System.out.println();
+        Lab06.task3519(20, 11, 4);
+        System.out.println();
+        Lab06.task3519(0, 96, 10);
+        System.out.println();
+        Lab06.task3519(-9, 9, 7);
+        System.out.println();
+        Lab06.task3519(0, 0, 10);
+        System.out.println();
+        Lab06.task3519(2, 7, 20);
+        System.out.println();
+        Lab06.task3519(1, 2, 0);
+        System.out.println();
+        Lab06.task3519(3,5,-6);
     }
 
     public static void step7086(){
@@ -497,6 +519,37 @@ public class Lab06 {
             i++;
         }
         return sb;
+    }
+
+    //Дано начало и конец интервала, а также ширина вывода. Вывести все числа в указанном интервале по возрастанию.
+    //Количество чисел на каждой строке должно быть равно ширине вывода.
+    //Числа в строке разделены тремя символами _
+    public static void task3519(int begin, int end, int width) {
+        if (width <= 0) {
+            System.out.println("Ширина должна быть положительной");
+            return;
+        }
+        int i;
+        int n;
+        if (begin < end) {
+            i = begin;
+            n = end;
+        } else {
+            i = end;
+            n = begin;
+        }
+        int j = 1;
+        while (i <= n) {
+            System.out.print(i);
+            if (j % width == 0) {
+                System.out.print("\n");
+            } else if (i != n){
+                System.out.print("___");
+            }
+            i++;
+            j++;
+        }
+        System.out.println();
     }
 
     public static StringBuilder task8770(StringBuilder sb, int x) {
