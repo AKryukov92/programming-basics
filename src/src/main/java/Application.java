@@ -366,6 +366,7 @@ public class Application {
                 .addTask(3883)
                 .addTask(1763)
                 .addTask(1945)
+                .addTask(4859)
 
                 .withGroup("Несколько взаимоисключающих случаев if(){} else if() {} else {}")
                 .addExample(8878)
