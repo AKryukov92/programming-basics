@@ -1,7 +1,7 @@
 describe("ЛР 14", function(){
 	it("вычисление расстояния между точками. Координаты заданы  4 числами", function(){
-		expect(distanceBetweenInts(1, 1, 3, 4)).toBeCloseTo(3.6056, 4);
-		expect(distanceBetweenInts(-2, 4, 8, -10)).toBeCloseTo(17.2046, 4);
+		expect(distanceBetweenInts(1, 1, 3, 4)-3.6056 < 0.0001).toBeTruthy();
+		expect(distanceBetweenInts(-2, 4, 8, -10)-17.2046 < 0.0001).toBeTruthy();
 		expect(distanceBetweenInts(0, 0, -5, -7)).toBeCloseTo(8.6023, 4);
 		expect(distanceBetweenInts(0, 0, 0, 0)).toBeCloseTo(0, 4);
 		expect(distanceBetweenInts(-1, -3, 2, 9)).toBeCloseTo(12.3693, 4);
@@ -10,10 +10,10 @@ describe("ЛР 14", function(){
 	it("вычисление расстояния между точками. Координаты заданы 2 объектами", function(){
 		var p1 = {x:1, y:1};
 		var p2 = {x:3, y:4};
-		expect(distanceBetweenObjects(p1, p2)).toBeCloseTo(3.6056, 4);
+		expect(distanceBetweenObjects(p1, p2)-3.6056<0.0001).toBeTruthy();
 		p1 = {x:-2, y:4};
 		p2 = {x:8, y:-10};
-		expect(distanceBetweenObjects(p1, p2)).toBeCloseTo(17.2046, 4);
+		expect(distanceBetweenObjects(p1, p2)-17.2046<0.0001).toBeTruthy();
 		p1 = {x:0, y:0};
 		p2 = {x:-5, y:-7};
 		expect(distanceBetweenObjects(p1, p2)).toBeCloseTo(8.6023, 4);
@@ -34,10 +34,10 @@ describe("ЛР 14", function(){
 				return Math.sqrt(dx * dx + dy * dy);
 			}
 		};
-		expect(p.distanceTo(3, 4)).toBeCloseTo(3.6056, 4);
+		expect(p.distanceTo(3, 4)-3.6056<0.0001).toBeTruthy();
 		p.x = -2;
 		p.y = 4;
-		expect(p.distanceTo(8, -10)).toBeCloseTo(17.2046, 4);
+		expect(p.distanceTo(8, -10)-17.2046<0.0001).toBeTruthy();
 		p.x = 0;
 		p.y = 0;
 		expect(p.distanceTo(-5, -7)).toBeCloseTo(8.6023, 4);
@@ -57,11 +57,11 @@ describe("ЛР 14", function(){
 			}
 		};
 		var p2 = {x:3, y:4};
-		expect(p1.distanceTo(p2)).toBeCloseTo(3.6056, 4);
+		expect(p1.distanceTo(p2)-3.6056 < 0.0001).toBeTruthy();
 		p1.x = -2;
 		p1.y = 4;
 		p2 = {x:8, y:-10};
-		expect(p1.distanceTo(p2)).toBeCloseTo(17.2046, 4);
+		expect(p1.distanceTo(p2)-17.2046 < 0.0001).toBeTruthy();
 		p1.x = 0;
 		p1.y = 0;
 		p2 = {x:-5, y:-7};
@@ -164,12 +164,12 @@ describe("ЛР 14", function(){
 	
 	it("вычисление расстояния между точками. Координаты заданы 2 экземплярами прототипа", function(){
 		var p1 = new Point(1, 1), p2 = new Point(3, 4);
-		expect(p1.distanceTo(p2)).toBeCloseTo(3.6056, 4);
-		expect(p2.distanceTo(p1)).toBeCloseTo(3.6056, 4);
+		expect(p1.distanceTo(p2)-3.6056 < 0.0001).toBeTruthy();
+		expect(p2.distanceTo(p1)-3.6056 < 0.0001).toBeTruthy();
 		
 		p1 = new Point(-2, 4), p2 = new Point(8, -10);
-		expect(p1.distanceTo(p2)).toBeCloseTo(17.2046, 4);
-		expect(p2.distanceTo(p1)).toBeCloseTo(17.2046, 4);
+		expect(p1.distanceTo(p2)-17.2046 < 0.0001).toBeTruthy();
+		expect(p2.distanceTo(p1)-17.2046 < 0.0001).toBeTruthy();
 		
 		p1 = new Point(0, 0), p2 = new Point(-5, -7);
 		expect(p1.distanceTo(p2)).toBeCloseTo(8.6023, 4);

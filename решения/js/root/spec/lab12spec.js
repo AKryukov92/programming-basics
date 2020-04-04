@@ -130,4 +130,31 @@ describe("ЛР 12", function(){
 			expect(task6740(t6740x[i], t6740y[i])).toBeTruthy();
 		}
 	});
+	
+	it("В задаче 7891 должен получиться корректный результат", function() {
+		let data = [9,8,  7,6,  5,4,  3,2];
+		let validate = data.slice();
+		let expected = [9,8,17,  7,6,13,  5,4,9,  3,2,5];
+		expect(task7891(data)).toEqual(expected);
+		expect(data).toEqual(validate);
+		
+		data = [11,13, 17,19, 23,29];
+		validate = data.slice();
+		expected = [11,13,24, 17,19,36, 23,29,52];
+		expect(task7891(data)).toEqual(expected);
+		expect(data).toEqual(validate);
+		
+		data = [0,0];
+		validate = data.slice();
+		expected = [0,0,0];
+		expect(task7891(data)).toEqual(expected);
+		expect(data).toEqual(validate);
+		
+		data = [];
+		expected = [];
+		expect(task7891(data)).toEqual(expected);
+		expect(data).toEqual([]);
+		
+		expect(function(){ task7891([9,8, 7]) }).toThrow(new Error("В массиве должно быть четное количество элементов"));
+	});
 });

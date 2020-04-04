@@ -9,7 +9,17 @@ import java.util.Set;
 public class Lab06 {
 
     public static void main(String[] args) {
-        step3519();
+        step5301();
+    }
+
+    public static void step5301() {
+        System.out.println();
+        System.out.println("5301");
+        task5301(100);
+        task5301(10);
+        task5301(150);
+        task5301(0);
+        task5301(-10);
     }
 
     public static void step3519(){
@@ -257,6 +267,22 @@ public class Lab06 {
             i++;
         }
         return sb;
+    }
+
+    public static void task5301(int limit) {
+        if (limit < 0) {
+            System.out.println("Введенное значение должно быть неотрицательным");
+            return;
+        }
+        int i = 1;
+        int current = 0;
+        while (current < limit) {
+            System.out.print(current);
+            System.out.print(" ");
+            current += i;
+            i += 1;
+        }
+        System.out.println();
     }
 
     public static StringBuilder task3550(StringBuilder sb, int v){

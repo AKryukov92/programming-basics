@@ -107,3 +107,16 @@ function task4847(x, y, z){
 function task6740(x, y){
 	return x >= 1 && x <= 3 && y >= -2 && y <= -1;
 }
+
+function task7891(arr) {
+	if (arr.length % 2 != 0){
+		throw new Error("В массиве должно быть четное количество элементов");
+	}
+	let result = [];
+	for (let i = 0; i < arr.length; i+=2){
+		result.push(parseFloat(arr[i]));
+		result.push(parseFloat(arr[i + 1]));
+		result.push(parseFloat(arr[i]) + parseFloat(arr[i + 1]));
+	}
+	return result;
+}

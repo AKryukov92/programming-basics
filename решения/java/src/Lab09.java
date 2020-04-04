@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -8,7 +10,17 @@ import java.util.Scanner;
  */
 public class Lab09 {
     public static void main(String[] args) {
-        step6175();
+        step9092();
+    }
+
+    public static void step9092() {
+        System.out.println("9092");
+        task9092(".\\task9092\\test1.csv");
+        task9092(".\\task9092\\test2.csv");
+        task9092(".\\task9092\\test3.csv");
+        task9092(".\\task9092\\test4.csv");
+        task9092(".\\task9092\\test5.csv");
+        task9092(".\\task9092\\test6.csv");
     }
 
     public static void step5537() {
@@ -646,7 +658,40 @@ public class Lab09 {
                 }
             }
         } catch (FileNotFoundException ex) {
-            System.out.println("Файл не существует");
+            System.out.println("Файл " + target.getAbsolutePath() + " не существует");
+        }
+    }
+
+    public static void task9092(String filename) {
+        File target = new File(filename);
+        System.out.println();
+        System.out.println("Обработка файла " + target.getAbsolutePath());
+        Map<String, Integer> result = new HashMap<>();
+        int i = 0;
+        try (Scanner scanner = new Scanner(target)) {
+            while (scanner.hasNext()) {
+                String line = scanner.nextLine();
+                String[] parts = line.split(";");
+                if (parts.length != 2){
+                    System.out.println("Некорректный формат записи в строке " + i);
+                    return;
+                }
+                String key = parts[0];
+                int value = Integer.parseInt(parts[1]);
+                if (result.containsKey(key))
+                {
+                    value += result.get(key);
+                }
+                result.put(key, value);
+                i++;
+            }
+            for (Map.Entry<String, Integer> entry : result.entrySet()){
+                System.out.println("У группы '" + entry.getKey() + "' сумма равна " + entry.getValue());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл " + target.getAbsolutePath() + " не существует");
+        } catch (NumberFormatException e) {
+            System.out.println("Не удалось преобразовать число в строке " + i);
         }
     }
 

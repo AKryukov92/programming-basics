@@ -424,6 +424,7 @@ public class Application {
                 .addTask(3762)
                 .addTask(3550)
                 .addTask(1139)
+                .addTask(5301)
 
                 .withGroup("Один цикл за другим")
                 .addTask(7086)
@@ -716,6 +717,7 @@ public class Application {
                 .addTask(7799)
                 .addTask(9354)
                 .addTask(5170)
+                .addTask(7891)
 
                 .withGroup("Работа с файлами, перехват исключений на различных этапах работы программы")
                 .addExample(6882)
@@ -738,6 +740,7 @@ public class Application {
                 .addTask(7799)
                 .addTask(9354)
                 .addTask(5170)
+                .addTask(7891)
         ;
     }
 
@@ -831,6 +834,9 @@ public class Application {
                 .withGroup("Формирование множества")
                 .addExample(4568)
                 .addTask(9990)
+
+                .withGroup("Вычисление агрегата по группам")
+                .addTask(9092)
 
                 .withGroup("Переопределение стандартного Equals")
                 .addExample(5449)
