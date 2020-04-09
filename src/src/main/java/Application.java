@@ -388,6 +388,8 @@ public class Application {
                 .addTask(2153)
                 .addTask(7937)
                 .addTask(8135)//несколько условий последовательно, с дополнением ответа в каждом условии
+                .addTask(6896)
+                .addTask(9734)
         ;
     }
 
@@ -620,6 +622,7 @@ public class Application {
                 .addCitation("link_c4_p16.1")
                 .addTask(8731)
                 .addTask(4082)
+                .addTask(2523)
 
                 .withGroup("Чтение файлов")
                 .addExample(6175)

@@ -96,6 +96,9 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
+.check_values tr:target {
+    background-color:lightgrey;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
