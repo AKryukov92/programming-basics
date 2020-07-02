@@ -288,14 +288,14 @@ public class Application {
 
                 .withGroup("Операторы и операнды")
                 .addExampleWithManual(4411)
-                .addTask(7457)
-                .addTask(9865)
-                .addTask(1976)
+                .addTask(8428)//перевод из градусов в радианы по готовой формуле
+                .addTask(1976)//диктант
+                .addTask(3435)//обратное действие, нужно вывести формулу из задачи про радианы
+                .addTask(9865)//нужно перевести с естественного языка на ЯП
+                .addTask(7457)//нужно вывести формулу с помощью школьных знаний
                 .addTask(7237)
 
                 .withGroup("Использование математических функций")
-                .addExample(8428)
-                .addTask(3435)
                 .addCitation("link_c7_p32.5")
                 .addExampleWithManual(7711)
                 .addTask(1262)

@@ -5,7 +5,7 @@
 public class Lab02 {
 
     public static void main(String[] args) {
-        step8428();
+        step2361();
     }
 
     public static void step8428() {
@@ -32,16 +32,19 @@ public class Lab02 {
     public static void step2361() {
         System.out.println();
         System.out.println("2361");
-        int[] in2361t = {400, 103, 2, 2, 300, -800};
-        int[] in2361l = {17, 29, 12, 313, -70, 20};
-        for (int i = 0; i < in2361l.length; i++) {
-            try {
-                class2361 result = task2361(in2361t[i], in2361l[i]);
-                System.out.println(result);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        task2361_2(400, 17);
+        task2361_2(103, 29);
+        task2361_2(2, 12);
+
+        task2361_2(2, 313);
+        task2361_2(3, 400);
+
+        task2361_2(300, -70);
+        task2361_2(5, -10);
+        task2361_2(11, 0);
+
+        task2361_2(-800, 20);
+        task2361_2(0, 23);
     }
 
     public static void step9622() {
@@ -158,6 +161,26 @@ public class Lab02 {
             return;
         }
         System.out.printf("Делимое %d, делитель %d, частное %d, остаток %d\n", dividend, divider, dividend / divider, dividend % divider);
+    }
+
+    public static void task2361_2(int totalM, int partCm) {
+        if (totalM <= 0) {
+            System.out.println("Длина рулона должна быть положительна");
+            return;
+        }
+        if (partCm <= 0) {
+            System.out.println("Расход материала должен быть положительным");
+            return;
+        }
+        int totalCm = totalM * 100;
+        System.out.printf("Длина рулона в сантиметрах равна %d\n", totalCm);
+        if (totalCm < partCm) {
+            System.out.println("Материала не хватат даже на одно изделие");
+            return;
+        }
+        int amount = totalCm / partCm;
+        int remainder = totalCm % partCm;
+        System.out.printf("Из этого материала получится %d изделий и останется %s см\n", amount, remainder);
     }
 
     public static class2361 task2361(int t, int l) throws IllegalArgumentException {
