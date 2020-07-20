@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="out" style="width:50px;height:50px;">&nbsp;</div>
+		<input type="button" value="синий" onclick="paintBlue()"/>
+		<input type="button" value="красный" onclick="paintRed()"/>
+		<input type="button" value="желтый" onclick="paintYellow()"/>
+		<script>
+		let outElem = document.getElementById("out");
+		function paintBlue() {
+			outElem.style.backgroundColor = "blue";
+		}
+		function paintRed() {
+			outElem.style.backgroundColor = "red";
+		}
+		function paintYellow() {
+			outElem.style.backgroundColor = "yellow";
+		}
+		</script>
+	</body>
+</html>

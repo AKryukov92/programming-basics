@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input type="button" onmouseover="showLeft()" onmouseout="hideLeft()" value="показать слева"/>
+		<input type="button" onmouseover="showRight()" onmouseout="hideRight()" value="показать справа"/>
+		<input id="answer"/>
+		<input type="button" onclick="check()" value="проверить"/>
+		<div id="out"></div>
+		<script>
+		let answerElem = document.getElementById("answer");
+		let outElem = document.getElementById("out");
+		let left = 1000 + Math.floor(Math.random() * Math.floor(8999));
+		let right = 1000 + Math.floor(Math.random() * Math.floor(8999));
+		function showLeft() {
+			answerElem.value = left;
+		}
+		function hideLeft() {
+			answerElem.value = "";
+		}
+		function showRight() {
+			answerElem.value = right;
+		}
+		function hideRight() {
+			answerElem.value = "";
+		}
+		function check() {
+			if (left + right == answerElem.value) {
+				outElem.innerHTML = "Правильно";
+			} else {
+				outElem.innerHTML = "Не правильно";
+			}
+		}
+		</script>
+	</body>
+</html>

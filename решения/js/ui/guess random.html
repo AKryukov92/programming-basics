@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="guess"/>
+		<input type="button" value="Проверить" onclick="check()"/>
+		<div id="out"></div>
+		<script>
+		let guessElem = document.getElementById("guess");
+		let outElem = document.getElementById("out");
+		let secret = 1000 + Math.floor(Math.random() * Math.floor(8999));
+		function check(){
+			let guess = parseFloat(guessElem.value);
+			if (guess < secret){
+				outElem.innerHTML = "Нужно больше";
+			} else if (guess > secret) {
+				outElem.innerHTML = "Нужно меньше";
+			} else if (guess == secret) {
+				outElem.innerHTML = "Верно";
+			} else {
+				outElem.innerHTML = "Не удается сравнить";
+			}
+		}
+		</script>
+	</body>
+</html>

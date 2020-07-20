@@ -113,15 +113,16 @@ public class Application {
                 "Организация вычислений",
                 "Проверка исходных данных",
                 "Взаимоисключающие случаи",
-                "Работа с интервалами значений",
+                "Упражнения с кнопками",
 
+                "Работа с интервалами значений",
                 "Реорганизация повторяющихся действий",
                 "Вложенные циклы",
                 "Базовые операции с массивами",
                 "Работа с массивами чисел",
+
                 "Вычисление агрегатов",
                 "Строки",
-
                 "Функции",
                 "Исключения",
                 "Объекты"
@@ -134,21 +135,22 @@ public class Application {
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
-        fillRanges(taskBooksJs[4]);
+        fillExcercisesWithButtons(taskBooksJs[4]);
 
-        taskBooksJs[5]
+        fillRanges(taskBooksJs[5]);
+        taskBooksJs[6]
                 .addResource("graphics.html")
                 .addResource("graphics.js");
-        fillLoops(taskBooksJs[5]);
-        fillNestedLoops(taskBooksJs[6]);
-        fillBasicArrayOperations(taskBooksJs[7]);
-        fillArrayConversionToNumbers(taskBooksJs[8]);
-        fillAggregateCalculation(taskBooksJs[9]);
+        fillLoops(taskBooksJs[6]);
+        fillNestedLoops(taskBooksJs[7]);
+        fillBasicArrayOperations(taskBooksJs[8]);
+        fillArrayConversionToNumbers(taskBooksJs[9]);
+        fillAggregateCalculation(taskBooksJs[10]);
 
-        fillStringMethods(taskBooksJs[10]);
-        fillMethods(taskBooksJs[11]);
-        fillExceptionJs(taskBooksJs[12]);
-        fillAbstractDataStructuresJs(taskBooksJs[13]);
+        fillStringMethods(taskBooksJs[11]);
+        fillMethods(taskBooksJs[12]);
+        fillExceptionJs(taskBooksJs[13]);
+        fillAbstractDataStructuresJs(taskBooksJs[14]);
         updateCrossTaskLinks(taskBooksJs);
         makeFiles(taskBooksJs, css, gitHash);
 
@@ -277,6 +279,16 @@ public class Application {
                 .addTask(9164)
                 .addTask(3558)
                 .addTask(4913)
+        ;
+    }
+
+    private static void fillExcercisesWithButtons(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab18")
+                .withGroup("Случайные числа")
+                .addExample(7874)
+                .addTask(3915)
+                .withGroup("активация кнопок")
+                .addExample(9021)
         ;
     }
 

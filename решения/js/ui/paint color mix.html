@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="out" style="width:50px;height:50px;">&nbsp;</div>
+		<input id="checkBlue" type="checkbox" value="синий" onclick="paintBlue()"/>
+		<input id="checkRed" type="checkbox" value="красный" onclick="paintRed()"/>
+		<input id="checkYellow" type="checkbox" value="желтый" onclick="paintYellow()"/>
+		<script>
+		let outElem = document.getElementById("out");
+		let checkBlueElem = document.getElementById("checkBlue");
+		let checkRedElem = document.getElementById("checkRed");
+		let checkYellowElem = document.getElementById("checkYellow");
+		function paintBlue() {
+			updateColor();
+		}
+		function paintRed() {
+			updateColor();
+		}
+		function paintYellow() {
+			updateColor();
+		}
+		function updateColor() {
+			let blue = checkBlueElem.checked;
+			let red = checkRedElem.checked;
+			let yellow = checkYellowElem.checked;
+			if (blue && !red && !yellow) {
+				outElem.style.backgroundColor = "blue";
+			} else if (blue && !red && yellow) {
+				outElem.style.backgroundColor = "green";
+			} else if (blue && red && !yellow) {
+				outElem.style.backgroundColor = "magenta";
+			} else if (blue && red && yellow) {
+				outElem.style.backgroundColor = "black";
+			} else if (!blue && red && !yellow) {
+				outElem.style.backgroundColor = "red";
+			} else if (!blue && red && yellow) {
+				outElem.style.backgroundColor = "orange";
+			} else if (!blue && !red && yellow) {
+				outElem.style.backgroundColor = "yellow";
+			} else if (!blue && !red && !yellow) {
+				outElem.style.backgroundColor = "white";
+			} 
+		}
+		</script>
+	</body>
+</html>
