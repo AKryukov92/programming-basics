@@ -538,6 +538,7 @@ public class Application {
                 .addTask(1292)
                 .addTask(6988)
                 .addTask(9827)
+                .addTask(7793)
         ;
     }
 

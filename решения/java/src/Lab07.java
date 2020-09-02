@@ -5,7 +5,18 @@ import java.util.*;
  */
 public class Lab07 {
     public static void main(String[] args) {
-        step9827();
+        step7793();
+    }
+
+    public static void step7793() {
+        System.out.println();
+        System.out.println("7793");
+        task7793("qw er ty ui", "as er df qw");
+        task7793("qw er ty ui", "as df gh jk");
+        task7793("zx cv bn", "zx cv bn");
+        task7793("q w e r t y", "y e q a s d");
+        task7793("a a a a a a", "a");
+        task7793("b", "b b b b b b");
     }
 
     public static void step9827() {
@@ -1324,4 +1335,46 @@ public class Lab07 {
             }
         }
     }
+
+    public static void task7793(String red, String green) {
+        String[] redArr = red.split(" ");
+        String[] greenArr = green.split(" ");
+        System.out.println("Только в красном");
+        for (int ri = 0; ri < redArr.length; ri++) {
+            boolean found = false;
+            for (int gi = 0; gi < greenArr.length; gi++) {
+                if (redArr[ri].equals(greenArr[gi])) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println(redArr[ri]);
+            }
+        }
+        System.out.println("Есть в обоих");
+        for (int ri = 0; ri < redArr.length; ri++) {
+            for (int gi = 0; gi < greenArr.length; gi++) {
+                if (redArr[ri].equals(greenArr[gi])) {
+                    System.out.println(redArr[ri]);
+                    break;
+                }
+            }
+        }
+        System.out.println("Только в зеленом");
+        for (int gi = 0; gi < greenArr.length; gi++) {
+            boolean found = false;
+            for (int ri = 0; ri < redArr.length; ri++) {
+                if (redArr[ri].equals(greenArr[gi])) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println(greenArr[gi]);
+            }
+        }
+        System.out.println();
+    }
+
 }
