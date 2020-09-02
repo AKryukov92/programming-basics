@@ -460,6 +460,7 @@ public class Application {
 
                 .withGroup("Условие внутри цикла")
                 .addExample(7585)
+                .addExample(3488)
                 .addTask(4264)
                 .addTask(1483)
                 .addTask(3983)

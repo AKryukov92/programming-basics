@@ -484,6 +484,20 @@ public class Lab06 {
         return sum;
     }
 
+    static void task7486(int x) {
+        int i = 10;
+        while (i <= 20) {
+            System.out.print(i);
+            if (i == x){
+                System.out.println(" Найдено");
+            } else {
+                System.out.println();
+            }
+            i = i + 1;
+        }
+        System.out.println();
+    }
+
     public static StringBuilder task7585(StringBuilder sb, int x) {
         int i = 10;
         while (i <= 20){
@@ -495,6 +509,23 @@ public class Lab06 {
             i++;
         }
         return sb;
+    }
+
+    public static void task3488(int a, int b, int c) {
+        int i = 0;
+        System.out.println("a  b  c");
+        while (i < 10) {
+            System.out.print(a + " " + b + " " + c);
+            if (a == 10 || b == 10 || c == 10) {
+                System.out.println(" Найдено");
+            } else {
+                System.out.println();
+            }
+            i = i + 1;
+            a = a + 1;
+            b = b + 1;
+            c = c + 1;
+        }
     }
 
     public static StringBuilder task4264(StringBuilder sb, int n) throws IllegalArgumentException {

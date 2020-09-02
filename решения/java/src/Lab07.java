@@ -628,6 +628,18 @@ public class Lab07 {
         return sb;
     }
 
+    static void task6806(int x) {
+        int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (arr[i] == x) {
+                System.out.print(" Найдено");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public static StringBuilder task6806(StringBuilder sb, int x) {
         int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
         for (int i = 0; i < arr.length; i++) {

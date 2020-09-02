@@ -4,29 +4,7 @@
  */
 public class Lab13Task6732 {
     public static void main(String[] args) {
-        Step2565();
-        Step6066();
-        Step2594();
-        Step4264();
-        Step1483();
-
-        Step3983();
-        Step4236();
-        Step8395();
-        Step5568();
-        Step2592();
-
-        Step4075();
-        Step7517();
-        Step5448();
-        Step5238();
-        Step5171();
-
-        Step1862();
-        Step5683();
-        Step8557();
-        Step4996();
-        Step2234();
+        Step3488();
     }
 
     private static void Step1862() {
@@ -281,6 +259,16 @@ public class Lab13Task6732 {
                 System.out.println(e.getMessage());
             }
         }
+    }
+    static void Step3488() {
+        System.out.println();
+        System.out.println("3488");
+        Lab06.task3488(0, 0, 0);
+        Lab06.task3488(5, 0, 0);
+        Lab06.task3488(8, 6, 4);
+        Lab06.task3488(15, 10, 5);
+        Lab06.task3488(21, 14, 7);
+        Lab06.task3488(36, 30, 24);
     }
 
     private static void Step1483() {

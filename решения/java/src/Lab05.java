@@ -453,16 +453,17 @@ public class Lab05 {
         return a < b && b < c;
     }
 
-    public static StringBuilder task8518(StringBuilder builder, String x) {
+    static void task8518(String x) {
         String[] chars = {"a", "b", "c", "d", "e", "f", "g", "h"};
         for (int i = 0; i < chars.length; i++) {
-            builder.append(chars[i]);
+            System.out.print(chars[i]);
             if (chars[i].equals(x)) {
-                builder.append("+");
+                System.out.println(" Найдено");
+            } else {
+                System.out.println();
             }
-            builder.append("\n");
         }
-        return builder;
+        System.out.println();
     }
 
     public static boolean task4847(int x, int y, int z) {

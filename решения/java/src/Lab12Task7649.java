@@ -4,34 +4,7 @@
  */
 public class Lab12Task7649 {
     public static void main(String[] args) {
-        Step8495();
-        Step1315();
-        Step2475();
-        Step5951();
-        Step8696();
-
-        Step3762();
-        Step2324();
-        Step3550();
-        Step6572();
-        Step2084();
-
-        Step5411();
-        Step8518();
-        Step7585();
-        Step8770();
-        Step7035();
-
-        Step5694();
         Step6806();
-        Step7369();
-        Step1292();
-        Step4338();
-
-        Step7534();
-        Step6492();
-        Step2173();
-        Step8613();
     }
 
     private static void Step8495() {
@@ -169,43 +142,20 @@ public class Lab12Task7649 {
     private static void Step8518() {
         System.out.println();
         System.out.println("8518");
-        String out8518 = "a+\nb\nc\nd\ne\nf\ng\nh\n\n" +
-            "a\nb\nc\nd+\ne\nf\ng\nh\n\n" +
-            "a\nb\nc\nd\ne\nf\ng\nh+\n\n" +
-            "a\nb\nc\nd\ne\nf\ng\nh\n\n";
-        StringBuilder sb = new StringBuilder();
-        Lab05.task8518(sb, "a").append("\n");
-        Lab05.task8518(sb, "d").append("\n");
-        Lab05.task8518(sb, "h").append("\n");
-        Lab05.task8518(sb, "i").append("\n");
-        if (out8518.equals(sb.toString())){
-            System.out.println("Задача решена верно");
-        } else {
-            sb.insert(0, "Неверно. Результат:\n");
-            System.out.println(sb.toString());
-        }
+        Lab05.task8518("a");
+        Lab05.task8518("d");
+        Lab05.task8518("h");
+        Lab05.task8518("i");
     }
 
     private static void Step7585() {
         System.out.println();
         System.out.println("7585");
-        int[] in7585 = {10, 15, 20, 9, 21};
-        String[] out7585 = {
-                "10+\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
-                "10\n11\n12\n13\n14\n15+\n16\n17\n18\n19\n20\n",
-                "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20+\n",
-                "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
-                "10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n"
-        };
-        for (int i = 0; i < in7585.length; i++){
-            StringBuilder result = Lab06.task7585(new StringBuilder(), in7585[i]);
-            if (out7585[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result);
-            }
-        }
+        Lab06.task7486(10);
+        Lab06.task7486(15);
+        Lab06.task7486(20);
+        Lab06.task7486(9);
+        Lab06.task7486(21);
     }
 
     private static void Step5411() {
@@ -244,23 +194,11 @@ public class Lab12Task7649 {
     private static void Step6806() {
         System.out.println();
         System.out.println("6806");
-        int[] in6806 = {10, 15, 20, 9, 23};
-        String[] out6806 = {
-                "11\n13\n17\n19\n10+\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15+\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20+\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n",
-                "11\n13\n17\n19\n10\n12\n14\n15\n16\n18\n20\n"
-        };
-        for (int i = 0; i < in6806.length; i++) {
-            StringBuilder result = Lab07.task6806(new StringBuilder(), in6806[i]);
-            if (out6806[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result.toString());
-            }
-        }
+        Lab07.task6806(10);
+        Lab07.task6806(15);
+        Lab07.task6806(20);
+        Lab07.task6806(9);
+        Lab07.task6806(23);
     }
 
     private static void Step5694() {
