@@ -4,7 +4,7 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-        Step7222();
+        Step1433();
     }
 
     private static void Step3591() {
@@ -630,29 +630,44 @@ public class Lab13Task9701 {
     static void Step4425() {
         System.out.println();
         System.out.println("4425");
-        int[] in4425a = {0, 3, 9, 5, -1, 0};
-        String[] in4425data = {
-                "q w e r",
-                "q w e r",
-                "q w e r t y u i o p",
-                "q w e r",
-                "q w e r",
-                ""
-        };
-        String[] out4425 = {"q", "r", "p", "", "", ""};
-        for (int i = 0; i < in4425a.length; i++) {
-            try {
-                String result = Lab07.task4425(in4425a[i], in4425data[i]);
-                System.out.printf("%s (%s)\n", result, out4425[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+        Lab07.task4425("qw er ty ui", 0);
+        Lab07.task4425("qw er ty ui", 3);
+        Lab07.task4425("q w e r t y u i o p", 9);
+        Lab07.task4425("qwer tyui", 3);
+        Lab07.task4425("qw er ty ui", -1);
+        Lab07.task4425("", 0);
+    }
+
+    static void Step5873() {
+        Lab07.task5873("as df gh jk", 1);
+        Lab07.task5873("a s d f g h j k", 3);
+        Lab07.task5873("as df gh jk", 0);
+        Lab07.task5873("as df gh jk", 3);
+        Lab07.task5873("asdf ghjk", 0);
+        Lab07.task5873("single", 0);
+        Lab07.task5873("as fg gh jk", -1);
+        Lab07.task5873("", 0);
+    }
+
+    static void Step3908() {
+        Lab07.task3908("qa#ws#ed#rf");
+        Lab07.task3908("qaz#wsx#edc#rfv");
+        Lab07.task3908("q#w#e");
+        Lab07.task3908("q#w");
+        Lab07.task3908("q");
+        Lab07.task3908("");
     }
 
     static void Step1433(){
         System.out.println();
         System.out.println("1433");
+        Lab07.task1433_2("q;w;e");
+        Lab07.task1433_2("q;w;e;r");
+        Lab07.task1433_2("q;w;e;r;t;y;u;i;o");
+        Lab07.task1433_2("q;w;e;r;t;y;u;i;o;p");
+        Lab07.task1433_2("q");
+        Lab07.task1433_2("");
+        /*
         String[] in1433in = {
                 "q;w;e",
                 "q;w;e;r",
@@ -669,30 +684,22 @@ public class Lab13Task9701 {
             } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());
             }
-        }
+        }*/
     }
 
     static void Step7834(){
         System.out.println();
         System.out.println("7834");
-        String[] in7834in = {
-            "a,s,d,f,g,h,j,k",
-            "q,w,e,r,t,y,u",
-            "q,w,e,r,t,y",
-            "qa,ws,ed,rf,tg",
-            "za,xs,cd,vf",
-            "qaz,wsx,edc",
-            "qwerty,asdfg",
-            "zxcvbnm",
-            ""
-        };
-        for (int i = 0; i < in7834in.length;i++){
-            try {
-                System.out.println(Lab07.task7834(in7834in[i]));
-            } catch (IllegalArgumentException ex){
-                System.out.println(ex.getMessage());
-            }
-        }
+        Lab07.task7834("a,s,d,f,g,h,j,k");
+        Lab07.task7834("q,w,e,r,t,y,u");
+        Lab07.task7834("q,w,e,r,t,y");
+        Lab07.task7834("qa,ws,ed,rf,tg");
+        Lab07.task7834("za,xs,cd,vf");
+        Lab07.task7834("qaz,wsx,edc");
+        Lab07.task7834("qwerty,asdfg");
+        Lab07.task7834("zxcvbnm");
+        Lab07.task7834("");
+
     }
 
     static void Step7085(){

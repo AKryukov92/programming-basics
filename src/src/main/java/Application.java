@@ -506,8 +506,10 @@ public class Application {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
-                .addTask(1433)
                 .addTask(7834)
+                .addTask(5873)
+                .addTask(3908)
+                .addTask(1433)
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(5683)

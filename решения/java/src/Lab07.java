@@ -219,6 +219,21 @@ public class Lab07 {
         }
     }
 
+    static void task4425(String raw, int a) {
+        if (raw.isEmpty()) {
+            System.out.println("Исходная строка пуста");
+            return;
+        }
+        String[] arr = raw.split(" ");
+        if (a < 0 || a >= arr.length) {
+            System.out.println("Число A должно быть в интервале [0, размер массива)");
+            return;
+        }
+        System.out.println("В массиве длиной " + arr.length);
+        System.out.println("на индексе " + a);
+        System.out.println("находится элемент со значением " + arr[a]);
+    }
+
     static String task4425(int a, String raw) throws IllegalArgumentException {
         if (raw.isEmpty()) {
             throw new IllegalArgumentException("Исходная строка пуста");
@@ -228,6 +243,45 @@ public class Lab07 {
             throw new IllegalArgumentException("Число A должно быть в интервале [0, размер массива)");
         }
         return arr[a];
+    }
+
+    static void task5873(String raw, int t) {
+        if (raw.isEmpty()) {
+            System.out.println("Исходная строка пуста");
+            return;
+        }
+        String[] arr = raw.split(" ");
+        if (t < 0 || t >= arr.length) {
+            System.out.println("Число T должно быть в интервале [0, размер массива)");
+            return;
+        }
+        System.out.println("Элемент на индексе " + t + " содержит значение " + arr[t]);
+        if (t == 0) {
+            System.out.println("Предыдущий элемент не существует");
+        } else {
+            System.out.println("Значение предыдущего элемента " + arr[t - 1]);
+        }
+        if (t == arr.length - 1) {
+            System.out.println("Следующий элемент не существует");
+        } else {
+            System.out.println("Значение следующего элемента " + arr[t + 1]);
+        }
+        System.out.println();
+    }
+
+    static void task3908(String text) {
+        if (text.isEmpty()) {
+            System.out.println("Исходная строка пуста");
+            return;
+        }
+        String[] arr = text.split("#");
+        if (arr.length < 3) {
+            System.out.println("Массив слишком маленький");
+            return;
+        }
+        int index = arr.length - 3;
+        System.out.println("Индекс третьего элемента с конца " + index);
+        System.out.println("Значение этого элемента " + arr[index]);
     }
 
     static String task5683(String str) {
@@ -266,24 +320,39 @@ public class Lab07 {
         return String.format("Индекс %d, элемент %s", index, arr[index]);
     }
 
-    public static String task7834(String raw) {
+    public static void task1433_2(String raw) {
         if (raw.isEmpty()) {
-            throw new IllegalArgumentException("Исходная строка пуста");
+            System.out.println("Исходная строка пуста");
+            return;
+        }
+        String[] arr = raw.split(";");
+        int index = (arr.length - 1) / 2;
+        System.out.println("Длина массива: " + arr.length + ", индекс: " + index + ", элемент: " + arr[index]);
+    }
+
+    public static void task7834(String raw) {
+        if (raw.isEmpty()) {
+            System.out.println("Исходная строка пуста");
+            return;
         }
         String[] arr = raw.split(",");
-        StringBuilder sb = new StringBuilder();
-        int[] indexes = new int[]{0, 2, 3, 5};
-        for (int i = 0; i < indexes.length; i++) {
-            if (arr.length > indexes[i]) {
-                sb.append(arr[indexes[i]]);
-            } else {
-                sb.append("Элемент на индексе ");
-                sb.append(indexes[i]);
-                sb.append(" отсутствует");
-            }
-            sb.append("\n");
+        System.out.println("Значение элемента на индексе 0 это " + arr[0]);
+        if (arr.length <= 2) {
+            System.out.println("Элемент на индексе 2 отсутстствует");
+        } else {
+            System.out.println("Значение элемента на индексе 2 это " + arr[2]);
         }
-        return sb.toString();
+        if (arr.length <= 3) {
+            System.out.println("Элемент на индексе 3 отсутстствует");
+        } else {
+            System.out.println("Значение элемента на индексе 3 это " + arr[2]);
+        }
+        if (arr.length <= 5) {
+            System.out.println("Элемент на индексе 5 отсутстствует");
+        } else {
+            System.out.println("Значение элемента на индексе 5 это " + arr[2]);
+        }
+        System.out.println();
     }
 
     public static void task1392(String raw) {
