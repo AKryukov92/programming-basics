@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<input id="inc" type="button" onclick="increment()" value="инкремент"/>
+		<div id="current"></div>
+		<input id="dec" type="button" onclick="decrement()" value="декремент"/>
+		<script>
+		let currentElem = document.getElementById("current");
+		let current = 5;
+		currentElem.innerHTML = current;
+		function increment() {
+			if (current == 0) {
+				document.getElementById("dec").disabled = false;
+			}
+			current = current + 1;
+			currentElem.innerHTML = current;
+			if (current == 9) {
+				document.getElementById("inc").disabled = true;
+			}
+		}
+		function decrement() {
+			if (current == 9) {
+				document.getElementById("inc").disabled = false;
+			}
+			current = current - 1;
+			currentElem.innerHTML = current;
+			if (current == 0) {
+				document.getElementById("dec").disabled = true;
+			}
+		}
+		</script>
+	</body>
+</html>

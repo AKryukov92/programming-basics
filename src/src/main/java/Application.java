@@ -289,6 +289,12 @@ public class Application {
                 .addTask(3915)
                 .withGroup("активация кнопок")
                 .addExample(9021)
+                .addTask(4172)
+                .addTask(7563)
+                .addTask(9405)
+                .withGroup("влияние на стили")
+                .addExample(2387)
+                .addTask(4868)
         ;
     }
 
