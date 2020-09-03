@@ -1,3 +1,9 @@
+package root;
+
+import root.tasks.BookCitation;
+import root.tasks.LabFragment;
+import root.tasks.LabTask;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -79,6 +85,13 @@ public class TaskBook {
         LabTask task = new LabTask(id, getSourceDirectory(), false)
                 .withLangAbbreviation(langAbbreviation);
         taskById.put(id, task);
+        fragmentsOfLastGroup.add(task);
+        return this;
+    }
+
+    public TaskBook addTask(LabTask task) {
+        checkIfAlreadyPresent(task.getId());
+        taskById.put(task.getId(), task);
         fragmentsOfLastGroup.add(task);
         return this;
     }
@@ -237,7 +250,7 @@ public class TaskBook {
         return sb.toString();
     }
 
-    public void updateReferenceLinks(TaskBookFinder finder) throws IOException {
+    public void updateReferenceLinks(TaskBookFinder finder) {
         for (Map.Entry<Integer, LabTask> entry : taskById.entrySet()) {
             LabTask task = entry.getValue();
             task.updateReferenceLinks(finder);

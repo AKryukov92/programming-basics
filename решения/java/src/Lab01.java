@@ -147,14 +147,6 @@ public class Lab01 {
         System.out.println("Меня зовут " + lastName + ", " + firstName + " " + lastName);
     }
 
-    public static void task4764(String a){
-        System.out.println(a + " нас не остановят!");
-    }
-
-    public static void task2429(String a){
-        System.out.println("Программирование это " + a + "!");
-    }
-
     public static void task7472(String a, String b){
         System.out.println(b + " " + a);
     }

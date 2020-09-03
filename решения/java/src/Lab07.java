@@ -280,21 +280,6 @@ public class Lab07 {
         System.out.println();
     }
 
-    static void task3908(String text) {
-        if (text.isEmpty()) {
-            System.out.println("Исходная строка пуста");
-            return;
-        }
-        String[] arr = text.split("#");
-        if (arr.length < 3) {
-            System.out.println("Массив слишком маленький");
-            return;
-        }
-        int index = arr.length - 3;
-        System.out.println("Индекс третьего элемента с конца " + index);
-        System.out.println("Значение этого элемента " + arr[index]);
-    }
-
     static String task5683(String str) {
         if (str.isEmpty()) {
             return "";
@@ -339,31 +324,6 @@ public class Lab07 {
         String[] arr = raw.split(";");
         int index = (arr.length - 1) / 2;
         System.out.println("Длина массива: " + arr.length + ", индекс: " + index + ", элемент: " + arr[index]);
-    }
-
-    public static void task7834(String raw) {
-        if (raw.isEmpty()) {
-            System.out.println("Исходная строка пуста");
-            return;
-        }
-        String[] arr = raw.split(",");
-        System.out.println("Значение элемента на индексе 0 это " + arr[0]);
-        if (arr.length <= 2) {
-            System.out.println("Элемент на индексе 2 отсутстствует");
-        } else {
-            System.out.println("Значение элемента на индексе 2 это " + arr[2]);
-        }
-        if (arr.length <= 3) {
-            System.out.println("Элемент на индексе 3 отсутстствует");
-        } else {
-            System.out.println("Значение элемента на индексе 3 это " + arr[2]);
-        }
-        if (arr.length <= 5) {
-            System.out.println("Элемент на индексе 5 отсутстствует");
-        } else {
-            System.out.println("Значение элемента на индексе 5 это " + arr[2]);
-        }
-        System.out.println();
     }
 
     public static void task1392(String raw) {

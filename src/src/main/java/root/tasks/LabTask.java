@@ -1,12 +1,13 @@
+package root.tasks;
+
+import root.TaskBook;
+import root.TaskBookFinder;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,7 +20,7 @@ public class LabTask extends LabFragment {
     private boolean isExample;
     private boolean hasManual = false;
 
-    LabTask(int id, String srcDirectory, boolean isExample) {
+    public LabTask(int id, String srcDirectory, boolean isExample) {
         super(srcDirectory);
         if (id < 1000 || 9999 < id) {
             throw new IllegalArgumentException("Идентификатор задачи должен состоять из 4 цифр");
@@ -62,7 +63,8 @@ public class LabTask extends LabFragment {
         }
     }
 
-    protected void updateReferenceLinks(TaskBookFinder finder) throws IOException {
+    @Override
+    public void updateReferenceLinks(TaskBookFinder finder) {
         String content = getContent();
         StringBuffer newContent = new StringBuffer();
         Pattern referencePattern = Pattern.compile("<a href=\"(.*?)#task(\\d{4})\" target=\"_blank\">(.*?)</a>");
@@ -106,7 +108,7 @@ public class LabTask extends LabFragment {
     }
 
     @Override
-    public void appendContentTo(PrintWriter writer) throws IOException {
+    public void appendContentTo(PrintWriter writer) {
         writer.write(getContent());
         if (hasManual) {
             writer.write(String.format("<div>" +

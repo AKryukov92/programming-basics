@@ -1,3 +1,5 @@
+package root;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -61,11 +63,16 @@ public class Manual {
                 "<body class='section'>", taskId, css);
     }
 
-    protected String getContent() throws IOException {
+    protected String getContent() {
         if (content == null) {
             Path p = Paths.get(getSrcFilename());
             System.out.println("Reading content from '" + p.toAbsolutePath().toString());
-            content = new String(Files.readAllBytes(p), StandardCharsets.UTF_8);
+            try {
+                content = new String(Files.readAllBytes(p), StandardCharsets.UTF_8);
+            } catch (IOException ex) {
+                System.out.println("Failed to read content from '" + p.toAbsolutePath().toString() + "'");
+                throw new RuntimeException(ex);
+            }
         }
         return content;
     }
@@ -74,7 +81,7 @@ public class Manual {
         this.content = newContent;
     }
 
-    protected void updateReferenceLinks(TaskBookFinder finder) throws IOException {
+    protected void updateReferenceLinks(TaskBookFinder finder) {
         String content = getContent();
         StringBuffer newContent = new StringBuffer();
         Pattern referencePattern = Pattern.compile("<a href=\"(.*?)#task(\\d{4})\" target=\"_blank\">(.*?)</a>");
@@ -113,7 +120,7 @@ public class Manual {
             writer.write("</body></html>");
             writer.close();
         } else {
-            System.out.println("Manual with name " + p.toAbsolutePath().toString() + " not found");
+            System.out.println("root.Manual with name " + p.toAbsolutePath().toString() + " not found");
         }
     }
 }

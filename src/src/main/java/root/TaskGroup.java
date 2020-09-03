@@ -1,3 +1,7 @@
+package root;
+
+import root.tasks.LabFragment;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -27,7 +31,7 @@ public class TaskGroup {
         return result;
     }
 
-    public void appendContentTo(PrintWriter writer) throws IOException {
+    public void appendContentTo(PrintWriter writer) {
         for (LabFragment fragment : fragments) {
             fragment.appendContentTo(writer);
         }

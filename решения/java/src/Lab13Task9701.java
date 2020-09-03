@@ -4,7 +4,6 @@
  */
 public class Lab13Task9701 {
     public static void main(String[] args) {
-        Step1433();
     }
 
     private static void Step3591() {
@@ -649,15 +648,6 @@ public class Lab13Task9701 {
         Lab07.task5873("", 0);
     }
 
-    static void Step3908() {
-        Lab07.task3908("qa#ws#ed#rf");
-        Lab07.task3908("qaz#wsx#edc#rfv");
-        Lab07.task3908("q#w#e");
-        Lab07.task3908("q#w");
-        Lab07.task3908("q");
-        Lab07.task3908("");
-    }
-
     static void Step1433(){
         System.out.println();
         System.out.println("1433");
@@ -685,21 +675,6 @@ public class Lab13Task9701 {
                 System.out.println(e.getMessage());
             }
         }*/
-    }
-
-    static void Step7834(){
-        System.out.println();
-        System.out.println("7834");
-        Lab07.task7834("a,s,d,f,g,h,j,k");
-        Lab07.task7834("q,w,e,r,t,y,u");
-        Lab07.task7834("q,w,e,r,t,y");
-        Lab07.task7834("qa,ws,ed,rf,tg");
-        Lab07.task7834("za,xs,cd,vf");
-        Lab07.task7834("qaz,wsx,edc");
-        Lab07.task7834("qwerty,asdfg");
-        Lab07.task7834("zxcvbnm");
-        Lab07.task7834("");
-
     }
 
     static void Step7085(){

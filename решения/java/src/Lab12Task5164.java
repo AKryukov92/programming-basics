@@ -6,8 +6,6 @@ public class Lab12Task5164 {
 
     public static void main(String[] args) {
         Step1860();
-        Step4764();
-        Step2429();
         Step7472();
         Step3862();
 
@@ -88,22 +86,6 @@ public class Lab12Task5164 {
         Lab01.task7472("сила", "знание");
         Lab01.task7472("курица", "яйцо");
         Lab01.task7472("шаг", "шаг");
-    }
-
-    static void Step2429() {
-        System.out.println();
-        System.out.println("2429");
-        Lab01.task2429("просто");
-        Lab01.task2429("интересно");
-        Lab01.task2429("перспективно");
-    }
-
-    static void Step4764() {
-        System.out.println();
-        System.out.println("4764");
-        Lab01.task4764("трудности");
-        Lab01.task4764("загадки");
-        Lab01.task4764("сложные задачи");
     }
 
     static void Step1860() {

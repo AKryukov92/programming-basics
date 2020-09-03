@@ -1,11 +1,13 @@
+package root.tasks;
+
+import root.TaskBookFinder;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,9 +24,11 @@ public abstract class LabFragment {
         this.srcDirectory = srcDirectory;
     }
 
-    public abstract void appendContentTo(PrintWriter writer) throws IOException;
+    public abstract void appendContentTo(PrintWriter writer);
 
     public abstract Optional<String> makeNavItem(String navTitle);
+
+    public abstract void updateReferenceLinks(TaskBookFinder finder);
 
     public void copyRequiredFilesTo(String targetDirectory) throws IOException {
         String content = getContent();
@@ -33,11 +37,15 @@ public abstract class LabFragment {
         while (imageMatcher.find()) {
             String imageName = imageMatcher.group(1);
             System.out.println(getSrcFilename() + " links to image " + imageName);
-            copyFileTo(imageName, srcDirectory, targetDirectory);
+            copyFileTo(imageName, targetDirectory);
         }
     }
 
     protected abstract String getSrcFilename();
+
+    public void copyFileTo(String filename, String targetDirectory) throws IOException {
+        LabFragment.copyFileTo(filename, srcDirectory, targetDirectory);
+    }
 
     public static void copyFileTo(String filename, String sourceDirectory, String targetDirectory) throws IOException {
         Path from = Paths.get(sourceDirectory + "\\" + filename).toAbsolutePath();
@@ -52,11 +60,16 @@ public abstract class LabFragment {
         Files.copy(from, to);
     }
 
-    protected String getContent() throws IOException {
+    protected String getContent() {
         if (content == null) {
             Path p = Paths.get(getSrcFilename());
-            System.out.println("Reading content from '" + p.toAbsolutePath().toString());
-            content = new String(Files.readAllBytes(p), StandardCharsets.UTF_8);
+            System.out.println("Reading content from '" + p.toAbsolutePath().toString() + "'");
+            try {
+                content = new String(Files.readAllBytes(p), StandardCharsets.UTF_8);
+            } catch (IOException ex) {
+                System.out.println("Failed to read content from '" + p.toAbsolutePath().toString() + "'");
+                throw new RuntimeException(ex);
+            }
         }
         return content;
     }
