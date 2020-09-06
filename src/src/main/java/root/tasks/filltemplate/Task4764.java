@@ -1,17 +1,12 @@
 package root.tasks.filltemplate;
 
-import root.tasks.CodedTask;
+import root.tasks.OneInputValLayout;
 
-import java.io.PrintWriter;
+import java.io.PrintStream;
 
-public class Task4764 extends CodedTask {
-
-    public Task4764(int id, String srcDirectory, boolean isExample) {
-        super(id, srcDirectory, isExample);
-    }
-
+public class Task4764 extends OneInputValLayout {
     @Override
-    protected String getContent() {
+    protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Дана строка A. Нужно вывести её на экран и дописать слова \"нас не остановят\" в конце.");
         appendCheckValuesHeader("A", "C");
@@ -20,11 +15,10 @@ public class Task4764 extends CodedTask {
         appendCheckValuesRow("сложные задачи");
         appendCheckValuesFooter();
         appendFooter();
-        return collectLayout();
     }
 
     @Override
-    protected void logic(String a, PrintWriter out) {
+    protected void logic(String a, PrintStream out) {
         out.println(a + " нас не остановят!");
     }
 }

@@ -1,16 +1,12 @@
 package root.tasks.arrays;
 
-import root.tasks.CodedTask;
+import root.tasks.OneInputValLayout;
 
-import java.io.PrintWriter;
+import java.io.PrintStream;
 
-public class Task3908 extends CodedTask {
-    public Task3908(int id, String srcDirectory, boolean isExample) {
-        super(id, srcDirectory, isExample);
-    }
-
+public class Task3908 extends OneInputValLayout {
     @Override
-    protected String getContent() {
+    protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \"#\". Вывести на экран третий с конца элемент.");
         appendCheckSingle("Индекс третьего элемента с конца $index\n" +
@@ -24,11 +20,10 @@ public class Task3908 extends CodedTask {
         appendCheckValuesRow("");
         appendCheckValuesFooter();
         appendFooter();
-        return collectLayout();
     }
 
     @Override
-    protected void logic(String value, PrintWriter out) {
+    protected void logic(String value, PrintStream out) {
         if (value.isEmpty()) {
             out.println("Исходная строка пуста");
             return;

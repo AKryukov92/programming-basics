@@ -1,5 +1,7 @@
 package root;
 
+import root.tasks.CodedTask;
+import root.tasks.calculations.Task3474;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.arrays.Task3908;
 import root.tasks.filltemplate.Task4764;
@@ -44,45 +46,45 @@ public class Application {
                 "Коллекции"
         };
         String css = loadCss("styles.css");
-//        root.TaskBook[] taskBooksCs = makeNav(themeList, "cs");
-//        taskBooksCs[0].prepareTargetDirectory();
-//
-//        fillPrintingTemplates(taskBooksCs[0]);
-//        fillBasicCalculations(taskBooksCs[1]);
-//        fillPreliminaryAssertions(taskBooksCs[2]);
-//        fillMutualExclusives(taskBooksCs[3]);
-//        fillRanges(taskBooksCs[4]);
-//
-//        taskBooksCs[5]
-//                .addResource("PaintingApp/PaintingApp.sln")
-//                .addResource("PaintingApp/PaintingApp/App.config")
-//                .addResource("PaintingApp/PaintingApp/MainForm.cs")
-//                .addResource("PaintingApp/PaintingApp/MainForm.Designer.cs")
-//                .addResource("PaintingApp/PaintingApp/PaintingApp.csproj")
-//                .addResource("PaintingApp/PaintingApp/PenTool.cs")
-//                .addResource("PaintingApp/PaintingApp/Program.cs")
-//                .addResource("PaintingApp/PaintingApp/Properties/AssemblyInfo.cs")
-//                .addResource("PaintingApp/PaintingApp/Properties/Resources.Designer.cs")
-//                .addResource("PaintingApp/PaintingApp/Properties/Resources.resx")
-//                .addResource("PaintingApp/PaintingApp/Properties/Settings.Designer.cs")
-//                .addResource("PaintingApp/PaintingApp/Properties/Settings.settings");
-//        fillLoops(taskBooksCs[5]);
-//        fillNestedLoops(taskBooksCs[6]);
-//        fillBasicArrayOperations(taskBooksCs[7]);
-//        fillArrayConversionToNumbers(taskBooksCs[8]);
-//        fillAggregateCalculation(taskBooksCs[9]);
-//
-//        fillStringMethods(taskBooksCs[10]);
-//        fillReadingFiles(taskBooksCs[11]);
-//        fillWritingFiles(taskBooksCs[12]);
-//        fillMethods(taskBooksCs[13]);
-//        fillExceptions(taskBooksCs[14]);
-//
-//        fillAbstractDataStructures(taskBooksCs[15]);
-//        fillInternalState(taskBooksCs[16]);
-//        fillCollections(taskBooksCs[17]);
-//        updateCrossTaskLinks(taskBooksCs);
-//        makeFiles(taskBooksCs, css, gitHash);
+        root.TaskBook[] taskBooksCs = makeNav(themeList, "cs");
+        taskBooksCs[0].prepareTargetDirectory();
+
+        fillPrintingTemplates(taskBooksCs[0]);
+        fillBasicCalculations(taskBooksCs[1]);
+        fillPreliminaryAssertions(taskBooksCs[2]);
+        fillMutualExclusives(taskBooksCs[3]);
+        fillRanges(taskBooksCs[4]);
+
+        taskBooksCs[5]
+                .addResource("PaintingApp/PaintingApp.sln")
+                .addResource("PaintingApp/PaintingApp/App.config")
+                .addResource("PaintingApp/PaintingApp/MainForm.cs")
+                .addResource("PaintingApp/PaintingApp/MainForm.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/PaintingApp.csproj")
+                .addResource("PaintingApp/PaintingApp/PenTool.cs")
+                .addResource("PaintingApp/PaintingApp/Program.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/AssemblyInfo.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Resources.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Resources.resx")
+                .addResource("PaintingApp/PaintingApp/Properties/Settings.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/Properties/Settings.settings");
+        fillLoops(taskBooksCs[5]);
+        fillNestedLoops(taskBooksCs[6]);
+        fillBasicArrayOperations(taskBooksCs[7]);
+        fillArrayConversionToNumbers(taskBooksCs[8]);
+        fillAggregateCalculation(taskBooksCs[9]);
+
+        fillStringMethods(taskBooksCs[10]);
+        fillReadingFiles(taskBooksCs[11]);
+        fillWritingFiles(taskBooksCs[12]);
+        fillMethods(taskBooksCs[13]);
+        fillExceptions(taskBooksCs[14]);
+
+        fillAbstractDataStructures(taskBooksCs[15]);
+        fillInternalState(taskBooksCs[16]);
+        fillCollections(taskBooksCs[17]);
+        updateCrossTaskLinks(taskBooksCs);
+        makeFiles(taskBooksCs, css, gitHash);
 
 
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
@@ -134,32 +136,32 @@ public class Application {
                 "Исключения",
                 "Объекты"
         };
-//        root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-//        taskBooksJs[0]
-//                .addResource("base.html")
-//                .prepareTargetDirectory();
-//        fillPrintingTemplatesJs(taskBooksJs[0]);
-//        fillBasicCalculationsJs(taskBooksJs[1]);
-//        fillPreliminaryAssertions(taskBooksJs[2]);
-//        fillMutualExclusives(taskBooksJs[3]);
-//        fillExcercisesWithButtons(taskBooksJs[4]);
-//
-//        fillRanges(taskBooksJs[5]);
-//        taskBooksJs[6]
-//                .addResource("graphics.html")
-//                .addResource("graphics.js");
-//        fillLoops(taskBooksJs[6]);
-//        fillNestedLoops(taskBooksJs[7]);
-//        fillBasicArrayOperations(taskBooksJs[8]);
-//        fillArrayConversionToNumbers(taskBooksJs[9]);
-//        fillAggregateCalculation(taskBooksJs[10]);
-//
-//        fillStringMethods(taskBooksJs[11]);
-//        fillMethods(taskBooksJs[12]);
-//        fillExceptionJs(taskBooksJs[13]);
-//        fillAbstractDataStructuresJs(taskBooksJs[14]);
-//        updateCrossTaskLinks(taskBooksJs);
-//        makeFiles(taskBooksJs, css, gitHash);
+        root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
+        taskBooksJs[0]
+                .addResource("base.html")
+                .prepareTargetDirectory();
+        fillPrintingTemplatesJs(taskBooksJs[0]);
+        fillBasicCalculationsJs(taskBooksJs[1]);
+        fillPreliminaryAssertions(taskBooksJs[2]);
+        fillMutualExclusives(taskBooksJs[3]);
+        fillExcercisesWithButtons(taskBooksJs[4]);
+
+        fillRanges(taskBooksJs[5]);
+        taskBooksJs[6]
+                .addResource("graphics.html")
+                .addResource("graphics.js");
+        fillLoops(taskBooksJs[6]);
+        fillNestedLoops(taskBooksJs[7]);
+        fillBasicArrayOperations(taskBooksJs[8]);
+        fillArrayConversionToNumbers(taskBooksJs[9]);
+        fillAggregateCalculation(taskBooksJs[10]);
+
+        fillStringMethods(taskBooksJs[11]);
+        fillMethods(taskBooksJs[12]);
+        fillExceptionJs(taskBooksJs[13]);
+        fillAbstractDataStructuresJs(taskBooksJs[14]);
+        updateCrossTaskLinks(taskBooksJs);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
@@ -237,8 +239,8 @@ public class Application {
                 .withGroup("Получение строк от пользователя")
                 .addExampleWithManual(1860)
                 .addCitation("link_c7_p33")
-                .addTask(new Task4764(4764, taskBook.getSourceDirectory(), false))
-                .addTask(new Task2429(2429, taskBook.getSourceDirectory(), false))
+                .addTask(new CodedTask(new Task4764(), taskBook.getSourceDirectory(), false))
+                .addTask(new CodedTask(new Task2429(), taskBook.getSourceDirectory(), false))
                 .addCitation("link_c6_p30.2")
                 .addTask(7472)
                 .addTask(1910)
@@ -282,6 +284,7 @@ public class Application {
                 .addTask(3435)
                 .addCitation("link_c7_p32.5")
                 .addExample(7711)
+                .addTask(new CodedTask(new Task3474(), taskBook.getSourceDirectory(), false))
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
@@ -323,6 +326,7 @@ public class Application {
                 .withGroup("Использование математических функций")
                 .addCitation("link_c7_p32.5")
                 .addExampleWithManual(7711)
+                .addTask(new CodedTask(new Task3474(), taskBook.getSourceDirectory(), false))
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
@@ -520,9 +524,9 @@ public class Application {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
-                .addTask(new Task7834(7834, taskBook.getSourceDirectory(), false))
+                .addTask(new CodedTask(new Task7834(), taskBook.getSourceDirectory(), false))
                 .addTask(5873)
-                .addTask(new Task3908(3908, taskBook.getSourceDirectory(), false))
+                .addTask(new CodedTask(new Task3908(), taskBook.getSourceDirectory(), false))
                 .addTask(1433)
 
                 .withGroup("Обработка массивов циклом")

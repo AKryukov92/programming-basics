@@ -1,16 +1,12 @@
 package root.tasks.arrays;
 
-import root.tasks.CodedTask;
+import root.tasks.OneInputValLayout;
 
-import java.io.PrintWriter;
+import java.io.PrintStream;
 
-public class Task7834 extends CodedTask {
-    public Task7834(int id, String srcDirectory, boolean isExample) {
-        super(id, srcDirectory, isExample);
-    }
-
+public class Task7834 extends OneInputValLayout {
     @Override
-    protected String getContent() {
+    protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \",\"(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение \"нет элемента на индексе X\".");
         appendCheckValuesHeader("arr", "");
@@ -25,11 +21,10 @@ public class Task7834 extends CodedTask {
         appendCheckValuesRow("");
         appendCheckValuesFooter();
         appendFooter();
-        return collectLayout();
     }
 
     @Override
-    protected void logic(String value, PrintWriter out) {
+    protected void logic(String value, PrintStream out) {
         if (value.isEmpty()) {
             out.println("Исходная строка пуста");
             return;
