@@ -122,19 +122,19 @@ public class Application {
                 "Организация вычислений",
                 "Проверка исходных данных",
                 "Взаимоисключающие случаи",
-                "Упражнения с кнопками",
-
                 "Работа с интервалами значений",
+
                 "Реорганизация повторяющихся действий",
                 "Вложенные циклы",
                 "Базовые операции с массивами",
                 "Работа с массивами чисел",
-
                 "Вычисление агрегатов",
+
                 "Строки",
                 "Функции",
                 "Исключения",
-                "Объекты"
+                "Объекты",
+                "Упражнения с кнопками"
         };
         root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
         taskBooksJs[0]
@@ -144,22 +144,22 @@ public class Application {
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
-        fillExcercisesWithButtons(taskBooksJs[4]);
 
-        fillRanges(taskBooksJs[5]);
-        taskBooksJs[6]
+        fillRanges(taskBooksJs[4]);
+        taskBooksJs[5]
                 .addResource("graphics.html")
                 .addResource("graphics.js");
-        fillLoops(taskBooksJs[6]);
-        fillNestedLoops(taskBooksJs[7]);
-        fillBasicArrayOperations(taskBooksJs[8]);
-        fillArrayConversionToNumbers(taskBooksJs[9]);
-        fillAggregateCalculation(taskBooksJs[10]);
+        fillLoops(taskBooksJs[5]);
+        fillNestedLoops(taskBooksJs[6]);
+        fillBasicArrayOperations(taskBooksJs[7]);
+        fillArrayConversionToNumbers(taskBooksJs[8]);
+        fillAggregateCalculation(taskBooksJs[9]);
 
-        fillStringMethods(taskBooksJs[11]);
-        fillMethods(taskBooksJs[12]);
-        fillExceptionJs(taskBooksJs[13]);
-        fillAbstractDataStructuresJs(taskBooksJs[14]);
+        fillStringMethods(taskBooksJs[10]);
+        fillMethods(taskBooksJs[11]);
+        fillExceptionJs(taskBooksJs[12]);
+        fillAbstractDataStructuresJs(taskBooksJs[13]);
+        fillExcercisesWithButtons(taskBooksJs[14]);
         updateCrossTaskLinks(taskBooksJs);
         makeFiles(taskBooksJs, css, gitHash);
 

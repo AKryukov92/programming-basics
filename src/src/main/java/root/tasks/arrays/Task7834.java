@@ -32,19 +32,23 @@ public class Task7834 extends OneInputValLayout {
         String[] arr = value.split(",");
         out.println("Значение элемента на индексе 0 это " + arr[0]);
         if (arr.length <= 2) {
-            out.println("Элемент на индексе 2 отсутстствует");
+            out.println("Нет элемента на индексе 2");
         } else {
             out.println("Значение элемента на индексе 2 это " + arr[2]);
         }
         if (arr.length <= 3) {
-            out.println("Элемент на индексе 3 отсутстствует");
+            out.println("Нет элемента на индексе 3");
         } else {
             out.println("Значение элемента на индексе 3 это " + arr[3]);
         }
         if (arr.length <= 5) {
-            out.println("Элемент на индексе 5 отсутстствует");
+            out.println("Нет элемента на индексе 5");
         } else {
             out.println("Значение элемента на индексе 5 это " + arr[5]);
         }
+    }
+
+    public static void main(String[] args) {
+        new Task7834().logic("qaz,wsx,edc", System.out);
     }
 }
