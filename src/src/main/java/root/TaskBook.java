@@ -1,8 +1,6 @@
 package root;
 
-import root.tasks.BookCitation;
-import root.tasks.LabFragment;
-import root.tasks.LabTask;
+import root.tasks.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -89,7 +87,8 @@ public class TaskBook {
         return this;
     }
 
-    public TaskBook addTask(LabTask task) {
+    public TaskBook addTask(LayoutMaker layoutMaker) {
+        CodedTask task = new CodedTask(layoutMaker, getSourceDirectory(), false);
         checkIfAlreadyPresent(task.getId());
         taskById.put(task.getId(), task);
         fragmentsOfLastGroup.add(task);
@@ -101,6 +100,14 @@ public class TaskBook {
         LabTask task = new LabTask(id, getSourceDirectory(), true)
                 .withLangAbbreviation(langAbbreviation);
         taskById.put(id, task);
+        fragmentsOfLastGroup.add(task);
+        return this;
+    }
+
+    public TaskBook addExample(LayoutMaker layoutMaker) {
+        CodedTask task = new CodedTask(layoutMaker, getSourceDirectory(), true);
+        checkIfAlreadyPresent(task.getId());
+        taskById.put(task.getId(), task);
         fragmentsOfLastGroup.add(task);
         return this;
     }

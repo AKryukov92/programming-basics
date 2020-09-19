@@ -1,11 +1,10 @@
 package root;
 
 import root.tasks.CodedTask;
+import root.tasks.arrays.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.filltemplate.Task2429;
-import root.tasks.arrays.Task3908;
 import root.tasks.filltemplate.Task4764;
-import root.tasks.arrays.Task7834;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -199,8 +198,8 @@ public class Application {
                 .withGroup("Получение строк от пользователя")
                 .addExample(1860)
                 .addCitation("link_c7_p33")
-                .addTask(new CodedTask(new Task4764(), taskBook.getSourceDirectory(), false))
-                .addTask(new CodedTask(new Task2429(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task4764())
+                .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(7472)
                 .addTask(1910)
@@ -239,8 +238,8 @@ public class Application {
                 .withGroup("Получение строк от пользователя")
                 .addExampleWithManual(1860)
                 .addCitation("link_c7_p33")
-                .addTask(new CodedTask(new Task4764(), taskBook.getSourceDirectory(), false))
-                .addTask(new CodedTask(new Task2429(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task4764())
+                .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(7472)
                 .addTask(1910)
@@ -284,7 +283,7 @@ public class Application {
                 .addTask(3435)
                 .addCitation("link_c7_p32.5")
                 .addExample(7711)
-                .addTask(new CodedTask(new Task3474(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task3474())
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
@@ -326,7 +325,7 @@ public class Application {
                 .withGroup("Использование математических функций")
                 .addCitation("link_c7_p32.5")
                 .addExampleWithManual(7711)
-                .addTask(new CodedTask(new Task3474(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task3474())
                 .addTask(1262)
                 .addTask(9164)
                 .addTask(3558)
@@ -524,10 +523,14 @@ public class Application {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
                 .addExample(4425)
-                .addTask(new CodedTask(new Task7834(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task7834())
                 .addTask(5873)
-                .addTask(new CodedTask(new Task3908(), taskBook.getSourceDirectory(), false))
+                .addTask(new Task3908())
                 .addTask(1433)
+
+                .withGroup("Запись в массив")
+                .addExample(new Task9923())
+                .addTask(new Task1331())
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(5683)
@@ -536,6 +539,10 @@ public class Application {
                 .addTask(1223)
                 .addTask(8311)
                 .addTask(6563)
+
+                .withGroup("Головоломки на перестановку")
+                .addTask(new Task8775())
+                .addTask(new Task5510())
 
                 .withGroup("Перестановки элементов")
                 .addExample(3134)

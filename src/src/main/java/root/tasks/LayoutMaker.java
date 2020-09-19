@@ -49,7 +49,6 @@ public abstract class LayoutMaker {
     }
 
     protected void appendFooter() {
-        writer.println("</table>");
         writer.println("</div>");
     }
 }

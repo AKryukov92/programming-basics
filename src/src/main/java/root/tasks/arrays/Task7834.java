@@ -9,7 +9,7 @@ public class Task7834 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \",\"(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение \"нет элемента на индексе X\".");
-        appendCheckValuesHeader("arr", "");
+        appendCheckValuesHeader("arr");
         appendCheckValuesRow("a,s,d,f,g,h,j,k");
         appendCheckValuesRow("q,w,e,r,t,y,u");
         appendCheckValuesRow("q,w,e,r,t,y");
@@ -49,6 +49,6 @@ public class Task7834 extends OneInputValLayout {
     }
 
     public static void main(String[] args) {
-        new Task7834().logic("qaz,wsx,edc", System.out);
+        System.out.println(new Task7834().getContent());
     }
 }

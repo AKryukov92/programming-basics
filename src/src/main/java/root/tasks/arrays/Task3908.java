@@ -11,7 +11,7 @@ public class Task3908 extends OneInputValLayout {
         appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \"#\". Вывести на экран третий с конца элемент.");
         appendCheckSingle("Индекс третьего элемента с конца $index\n" +
                 "Значение этого элемента $value");
-        appendCheckValuesHeader("arr", "");
+        appendCheckValuesHeader("arr");
         appendCheckValuesRow("qa#ws#ed#rf");
         appendCheckValuesRow("qaz#wsx#edc#rfv");
         appendCheckValuesRow("q#w#e");
