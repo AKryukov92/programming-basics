@@ -1,6 +1,5 @@
 package root;
 
-import root.tasks.CodedTask;
 import root.tasks.arrays.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.filltemplate.Task2429;
@@ -19,32 +18,50 @@ import java.util.Random;
  * Created by Александр on 09.02.2019.
  */
 public class Application {
-    public static void main(String[] args) throws IOException {
-        String gitHash = getGitHash();
-        String[] themeList = new String[]{
-                "Заполнение шаблона текстом",
-                "Организация вычислений",
-                "Проверка исходных данных",
-                "Взаимоисключающие случаи",
-                "Работа с интервалами значений",
+    private static final String[] themeListJs = new String[]{
+            "Заполнение шаблона текстом",
+            "Организация вычислений",
+            "Проверка исходных данных",
+            "Взаимоисключающие случаи",
+            "Работа с интервалами значений",
 
-                "Реорганизация повторяющихся действий",
-                "Вложенные циклы",
-                "Базовые операции с массивами",
-                "Использование числовых массивов",
-                "Вычисление агрегатов",
+            "Реорганизация повторяющихся действий",
+            "Вложенные циклы",
+            "Базовые операции с массивами",
+            "Работа с массивами чисел",
+            "Вычисление агрегатов",
 
-                "Строки",
-                "Обработка неизвестного объема данных",
-                "Запись в файлы",
-                "Методы",
-                "Исключения",
+            "Строки",
+            "Функции",
+            "Исключения",
+            "Объекты",
+            "Упражнения с кнопками"
+    };
+    private static final String[] themeList = new String[]{
+            "Заполнение шаблона текстом",
+            "Организация вычислений",
+            "Проверка исходных данных",
+            "Взаимоисключающие случаи",
+            "Работа с интервалами значений",
 
-                "Составные типы данных",
-                "Внутреннее состояние",
-                "Коллекции"
-        };
-        String css = loadCss("styles.css");
+            "Реорганизация повторяющихся действий",
+            "Вложенные циклы",
+            "Базовые операции с массивами",
+            "Использование числовых массивов",
+            "Вычисление агрегатов",
+
+            "Строки",
+            "Обработка неизвестного объема данных",
+            "Запись в файлы",
+            "Методы",
+            "Исключения",
+
+            "Составные типы данных",
+            "Внутреннее состояние",
+            "Коллекции"
+    };
+
+    private static TaskBook[] populateCsContent(String[] themeList) throws IOException {
         root.TaskBook[] taskBooksCs = makeNav(themeList, "cs");
         taskBooksCs[0].prepareTargetDirectory();
 
@@ -83,9 +100,10 @@ public class Application {
         fillInternalState(taskBooksCs[16]);
         fillCollections(taskBooksCs[17]);
         updateCrossTaskLinks(taskBooksCs);
-        makeFiles(taskBooksCs, css, gitHash);
+        return taskBooksCs;
+    }
 
-
+    private static TaskBook[] populateJavaContent(String[] themeList) throws IOException {
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
         taskBooksJava[0].prepareTargetDirectory();
         fillPrintingTemplates(taskBooksJava[0]);
@@ -113,28 +131,10 @@ public class Application {
         fillInternalState(taskBooksJava[16]);
         fillCollections(taskBooksJava[17]);
         updateCrossTaskLinks(taskBooksJava);
-        makeFiles(taskBooksJava, css, gitHash);
+        return taskBooksJava;
+    }
 
-
-        String[] themeListJs = new String[]{
-                "Заполнение шаблона текстом",
-                "Организация вычислений",
-                "Проверка исходных данных",
-                "Взаимоисключающие случаи",
-                "Работа с интервалами значений",
-
-                "Реорганизация повторяющихся действий",
-                "Вложенные циклы",
-                "Базовые операции с массивами",
-                "Работа с массивами чисел",
-                "Вычисление агрегатов",
-
-                "Строки",
-                "Функции",
-                "Исключения",
-                "Объекты",
-                "Упражнения с кнопками"
-        };
+    private static TaskBook[] populateJsContent(String[] themeListJs) throws IOException {
         root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
         taskBooksJs[0]
                 .addResource("base.html")
@@ -160,9 +160,7 @@ public class Application {
         fillAbstractDataStructuresJs(taskBooksJs[13]);
         fillExcercisesWithButtons(taskBooksJs[14]);
         updateCrossTaskLinks(taskBooksJs);
-        makeFiles(taskBooksJs, css, gitHash);
-
-        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        return taskBooksJs;
     }
 
     private static String getGitHash() throws IOException {
@@ -540,6 +538,7 @@ public class Application {
                 .withGroup("Запись в массив")
                 .addExample(new Task9923())
                 .addTask(new Task1331())
+                .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
 
                 .withGroup("Головоломки на перестановку")
                 .addTask(new Task8775())
@@ -950,5 +949,22 @@ public class Application {
             }
         } while (found);
         return potentialId;
+    }
+
+    public static void main(String[] args) throws IOException {
+        String gitHash = getGitHash();
+
+        String css = loadCss("styles.css");
+
+        TaskBook[] taskBooksJava = populateJavaContent(themeList);
+        makeFiles(taskBooksJava, css, gitHash);
+
+        TaskBook[] taskBooksCs = populateCsContent(themeList);
+        makeFiles(taskBooksCs, css, gitHash);
+
+        TaskBook[] taskBooksJs = populateJsContent(themeListJs);
+        makeFiles(taskBooksJs, css, gitHash);
+
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
 }

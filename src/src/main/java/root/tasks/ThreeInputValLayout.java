@@ -10,11 +10,27 @@ public abstract class ThreeInputValLayout extends LayoutMaker {
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
         writer.println("<th colspan='3'>Вводимые данные</th>");
-        if (resultName.isEmpty()) {
-            writer.println("<th rowspan='2'>Результат</th>");
-        } else {
-            writer.println("<th rowspan='2'>Результат (" + resultName + ")</th>");
-        }
+        writer.println("<th rowspan='2'>Результат (" + resultName + ")</th>");
+        writer.println("</tr>");
+        writer.println("<tr>");
+        writer.println("<th>");
+        writer.println(firstVal);
+        writer.println("</th>");
+        writer.println("<th>");
+        writer.println(secondVal);
+        writer.println("</th>");
+        writer.println("<th>");
+        writer.println(thirdVal);
+        writer.println("</th>");
+        writer.println("</tr>");
+    }
+
+    protected void appendCheckValuesHeader(String firstVal, String secondVal, String thirdVal) {
+        writer.println("<table class='check_values'>");
+        writer.println("<tr>");
+        writer.println("<th rowspan='2'>Номер теста</th>");
+        writer.println("<th colspan='3'>Вводимые данные</th>");
+        writer.println("<th rowspan='2'>Результат</th>");
         writer.println("</tr>");
         writer.println("<tr>");
         writer.println("<th>");
