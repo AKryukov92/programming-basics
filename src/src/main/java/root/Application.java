@@ -524,13 +524,9 @@ public class Application {
                 .withGroup("Работа с массивами")
                 .addExample(4425)
                 .addTask(new Task7834())
-                .addTask(5873)
+                .addTask(new Task5873())
                 .addTask(new Task3908())
                 .addTask(1433)
-
-                .withGroup("Запись в массив")
-                .addExample(new Task9923())
-                .addTask(new Task1331())
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(5683)
@@ -539,6 +535,11 @@ public class Application {
                 .addTask(1223)
                 .addTask(8311)
                 .addTask(6563)
+
+                //тут требуется выводить элементы по порядку, а это разбирается в задачах по обработке массивов циклом
+                .withGroup("Запись в массив")
+                .addExample(new Task9923())
+                .addTask(new Task1331())
 
                 .withGroup("Головоломки на перестановку")
                 .addTask(new Task8775())
