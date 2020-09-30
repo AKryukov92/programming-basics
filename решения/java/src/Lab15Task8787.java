@@ -307,21 +307,6 @@ public class Lab15Task8787 {
         }
     }
 
-    private static void Step3134() {
-        System.out.println();
-        System.out.println("3134");
-        int[] in3134p = {0, 2, 4, -1, 2, 19, 1};
-        int[] in3134q = {3, 5, 2, 5, 17, 2, -5};
-        String in3134data = "a s d f g h";
-        for (int i = 0; i < in3134p.length; i++) {
-            try {
-                System.out.println(Lab07.task3134( in3134p[i], in3134q[i], in3134data));
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step8311() {
         System.out.println();
         System.out.println("8311");

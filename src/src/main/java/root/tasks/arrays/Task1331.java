@@ -27,7 +27,7 @@ public class Task1331 extends ThreeInputValLayout {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - строки, разделенные запятой, число - индекс массива и еще одну строку.\n" +
                 "Нужно записать полученную строку по указанному индексу и вывести все элементы массива по возрастанию индекса.\n");
-        appendCheckValuesHeader("data", "index", "value", "");
+        appendCheckValuesHeader("data", "index", "value");
         appendCheckValuesRow("q,w,e,r,t,y", "3", "third");
         appendCheckValuesRow("q,w,e,r,t,y", "0", "initial");
         appendCheckValuesRow("q,w,e,r,t,y", "5", "fifth");

@@ -16,7 +16,7 @@ public class Task1998 extends ThreeInputValLayout {
                 " Содержимое старого массива нужно переписать на те же позиции." +
                 " Все недостающие элементы заполнить строкой \"empty\"." +
                 " Вывести элементы полученного массива по возрастанию индекса.");
-        appendCheckValuesHeader("arr", "str", "a");
+        appendCheckValuesHeader("arr", "append", "a");
         appendCheckValuesRow("qa ws ed rf", "initial", "0");
         appendCheckValuesRow("qa ws ed rf", "third", "2");
         appendCheckValuesRow("qa ws ed rf", "fourth", "3");

@@ -545,7 +545,7 @@ public class Application {
                 .addTask(new Task5510())
 
                 .withGroup("Перестановки элементов")
-                .addExample(3134)
+                .addExample(new Task3134())
                 .addTask(9711)
                 .addTask(7085)
                 .addTask(8820)
