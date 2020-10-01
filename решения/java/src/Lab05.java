@@ -23,17 +23,6 @@ public class Lab05 {
         task6589(97, 101, 107, 103);
     }
 
-    public static void step2003() {
-        System.out.println();
-        System.out.println("2003");
-        task2003("a;s;d;f");
-        task2003("z;x;c;v");
-        task2003("q;a;z;w;s;x;e;d;c");
-        task2003("");
-        task2003("x");
-        task2003("x;x;x;x;x;x;x");
-    }
-
     public static void step7323() {
         task7323(4, 3);
         task7323(10, 5);
@@ -562,21 +551,6 @@ public class Lab05 {
         int hundreds = a / 100 % 10;
         int units = a % 10;
         return hundreds == units;
-    }
-
-    public static void task2003(String raw) {
-        if (raw.isEmpty()) {
-            System.out.println("Символ 'x' отсутствует");
-            return;
-        }
-        String[] arr = raw.split(";");
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equals("x")){
-                System.out.println("Символ 'x' найден на позиции '" + i + "'");
-                return;
-            }
-        }
-        System.out.println("Символ 'x' отсутствует");
     }
 
     public static StringBuilder task1292(StringBuilder sb, String x) {

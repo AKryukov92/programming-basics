@@ -558,7 +558,8 @@ public class Application {
                 .addTask(2234)//поиск в массиве
 
                 .withGroup("Поиск в массиве и прерывание работы цикла")
-                .addExample(2003)
+                .addExample(new Task2003())
+                .addTask(new Task8158())
                 .addTask(1292)
                 .addTask(6988)
                 .addTask(9827)
@@ -960,10 +961,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+        //makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
