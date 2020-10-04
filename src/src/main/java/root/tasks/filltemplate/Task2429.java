@@ -2,8 +2,6 @@ package root.tasks.filltemplate;
 
 import root.tasks.OneInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task2429 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
@@ -18,9 +16,9 @@ public class Task2429 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String value, PrintStream out) {
-        out.print("Программирование это ");
-        out.print(value);
-        out.print("!");
+    protected void logic(String value) {
+        System.out.print("Программирование это ");
+        System.out.print(value);
+        System.out.print("!");
     }
 }

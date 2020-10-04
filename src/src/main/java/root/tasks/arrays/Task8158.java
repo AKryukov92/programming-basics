@@ -2,11 +2,9 @@ package root.tasks.arrays;
 
 import root.tasks.TwoInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task8158 extends TwoInputValLayout {
     @Override
-    protected void logic(String firstValue, String secondValue, PrintStream out) {
+    protected void logic(String firstValue, String secondValue) {
         int firstPosition = -1;
         int secondPosition = -1;
         String[] arr = "a,b,c,d,e,f,g,h,a,b,c,d,e".split(",");
@@ -21,14 +19,14 @@ public class Task8158 extends TwoInputValLayout {
             i = i + 1;
         }
         if (firstPosition >= 0) {
-            out.println("Символ '" + firstValue + "' найден на позиции '" + firstPosition + "'");
+            System.out.println("Символ '" + firstValue + "' найден");
         } else {
-            out.println("Символ '" + firstValue + "' отсутствует");
+            System.out.println("Символ '" + firstValue + "' отсутствует");
         }
         if (secondPosition >= 0) {
-            out.println("Символ '" + secondValue + "' найден на позиции '" + secondPosition + "'");
+            System.out.println("Символ '" + secondValue + "' найден");
         } else {
-            out.println("Символ '" + secondValue + "' отсутствует");
+            System.out.println("Символ '" + secondValue + "' отсутствует");
         }
     }
 

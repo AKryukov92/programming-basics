@@ -3,7 +3,7 @@ package root.tasks;
 import java.io.PrintStream;
 
 public abstract class OneInputValLayout extends LayoutMaker {
-    protected abstract void logic(String value, PrintStream out);
+    protected abstract void logic(String value);
 
     protected void appendCheckValuesHeader(String valName, String resultName) {
         writer.println("<table class='check_values'>");
@@ -30,7 +30,10 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.print(a);
         writer.println("</td>");
         writer.print("<td class='preformatted'>");
-        logic(a, writer);
+        PrintStream oldOut = System.out;
+        System.setOut(writer);
+        logic(a);
+        System.setOut(oldOut);
         writer.println("</td>");
         writer.println("</tr>");
     }

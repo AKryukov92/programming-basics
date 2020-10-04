@@ -32,9 +32,9 @@ public class Task1998 extends ThreeInputValLayout {
     }
 
     @Override
-    protected void logic(String firstValue, String secondValue, String thirdValue, PrintStream out) {
+    protected void logic(String firstValue, String secondValue, String thirdValue) {
         if (firstValue.isEmpty()) {
-            out.println("Исходная строка пуста");
+            System.out.println("Исходная строка пуста");
             return;
         }
         String[] arr = firstValue.split(" ");
@@ -44,7 +44,7 @@ public class Task1998 extends ThreeInputValLayout {
             arr[a] = str;
             int i = 0;
             while (i < arr.length) {
-                out.print(arr[i] + " ");
+                System.out.print(arr[i] + " ");
                 i++;
             }
         } else {
@@ -61,7 +61,7 @@ public class Task1998 extends ThreeInputValLayout {
             result[a] = str;
             i = 0;
             while (i < result.length) {
-                out.print(result[i] + " ");
+                System.out.print(result[i] + " ");
                 i++;
             }
         }

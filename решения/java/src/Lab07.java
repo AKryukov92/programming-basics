@@ -280,21 +280,6 @@ public class Lab07 {
         System.out.println();
     }
 
-    static String task5683(String str) {
-        if (str.isEmpty()) {
-            return "";
-        }
-        String[] arr = str.split(" ");
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-            sb.append(" ");
-            sb.append(i);
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     public static List<String> task1223(String raw) {
         List<String> ret = new ArrayList<>();
         if (raw.isEmpty()) {

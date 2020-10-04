@@ -527,7 +527,7 @@ public class Application {
                 .addTask(1433)
 
                 .withGroup("Обработка массивов циклом")
-                .addExample(5683)
+                .addExample(new Task5683())
                 .addTask(8557)
                 .addCitation("link_c3_p12.8")
                 .addTask(1223)
@@ -961,10 +961,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        //makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        //makeFiles(taskBooksJs, css, gitHash);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

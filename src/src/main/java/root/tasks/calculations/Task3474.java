@@ -20,15 +20,15 @@ public class Task3474 extends TwoInputValLayout {
     }
 
     @Override
-    protected void logic(String first, String second, PrintStream out) {
+    protected void logic(String first, String second) {
         int cathetus = Integer.parseInt(first);
         int angleDeg = Integer.parseInt(second);
         double angleRad = angleDeg * Math.PI / 180;
-        out.printf("Значение угла в радианах %.4f\n", angleRad);
+        System.out.printf("Значение угла в радианах %.4f\n", angleRad);
         double cos = Math.cos(angleRad);
-        out.printf("Косинус этого угла %.4f\n", cos);
+        System.out.printf("Косинус этого угла %.4f\n", cos);
         double hypotenuse = cathetus / cos;
-        out.printf("Длина гипотенузы %.4f\n", hypotenuse);
+        System.out.printf("Длина гипотенузы %.4f\n", hypotenuse);
         /*out.print("Проверка\n");
         double otherCathetus = Math.sqrt(hypotenuse * hypotenuse - cathetus * cathetus);
         out.printf("Длина другого катета %.4f\n", otherCathetus);
@@ -38,9 +38,9 @@ public class Task3474 extends TwoInputValLayout {
     }
 
     public static void main(String[] args) {
-        new Task3474().logic("40", "30", System.out);
-        new Task3474().logic("20", "89", System.out);
-        new Task3474().logic("1000", "1", System.out);
-        new Task3474().logic("70", "45", System.out);
+        new Task3474().logic("40", "30");
+        new Task3474().logic("20", "89");
+        new Task3474().logic("1000", "1");
+        new Task3474().logic("70", "45");
     }
 }

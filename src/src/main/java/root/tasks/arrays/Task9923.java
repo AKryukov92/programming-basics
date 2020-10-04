@@ -6,22 +6,22 @@ import java.io.PrintStream;
 
 public class Task9923 extends OneInputValLayout {
     @Override
-    protected void logic(String firstValue, PrintStream out) {
+    protected void logic(String firstValue) {
         if (firstValue.isEmpty()) {
-            out.println("Исходная строка пуста");
+            System.out.println("Исходная строка пуста");
             return;
         }
         String[] arr = firstValue.split(" ");
 
         int lastIndex = arr.length - 1;
-        out.println("Индекс последнего элемента " + lastIndex);
-        out.println("Значение последнего элемента " + arr[lastIndex]);
-        out.println("Вместо " + arr[0] + " пишем " + arr[lastIndex]);
+        System.out.println("Индекс последнего элемента " + lastIndex);
+        System.out.println("Значение последнего элемента " + arr[lastIndex]);
+        System.out.println("Вместо " + arr[0] + " пишем " + arr[lastIndex]);
         arr[0] = arr[lastIndex];
-        out.println("Элементы массива:");
+        System.out.println("Элементы массива:");
         int i = 0;
-        while(i < arr.length) {
-            out.print(arr[i] + " ");
+        while (i < arr.length) {
+            System.out.print(arr[i] + " ");
             i = i + 1;
         }
     }

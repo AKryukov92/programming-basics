@@ -345,21 +345,6 @@ public class Lab13Task6732 {
         }
     }
 
-    private static void Step5683() {
-        System.out.println();
-        System.out.println("5683");
-        String[] in5683 = {
-            "qw er ty",
-            "qw er ty ui op",
-            "asd fgh jkl",
-            "",
-            "q w e r a s d f z x c v"
-        };
-        for (int i = 0; i < in5683.length; i++){
-            System.out.println(Lab07.task5683(in5683[i]));
-        }
-    }
-
     private static void Step8557(){
         System.out.println();
         System.out.println("8557");

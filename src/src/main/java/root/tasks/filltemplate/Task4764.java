@@ -2,8 +2,6 @@ package root.tasks.filltemplate;
 
 import root.tasks.OneInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task4764 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
@@ -18,8 +16,8 @@ public class Task4764 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String a, PrintStream out) {
-        out.println(a + " нас не остановят!");
+    protected void logic(String a) {
+        System.out.println(a + " нас не остановят!");
     }
 }
 

@@ -2,8 +2,6 @@ package root.tasks.arrays;
 
 import root.tasks.OneInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task7834 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
@@ -24,27 +22,27 @@ public class Task7834 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String value, PrintStream out) {
+    protected void logic(String value) {
         if (value.isEmpty()) {
-            out.println("Исходная строка пуста");
+            System.out.println("Исходная строка пуста");
             return;
         }
         String[] arr = value.split(",");
-        out.println("Значение элемента на индексе 0 это " + arr[0]);
+        System.out.println("Значение элемента на индексе 0 это " + arr[0]);
         if (arr.length <= 2) {
-            out.println("Нет элемента на индексе 2");
+            System.out.println("Нет элемента на индексе 2");
         } else {
-            out.println("Значение элемента на индексе 2 это " + arr[2]);
+            System.out.println("Значение элемента на индексе 2 это " + arr[2]);
         }
         if (arr.length <= 3) {
-            out.println("Нет элемента на индексе 3");
+            System.out.println("Нет элемента на индексе 3");
         } else {
-            out.println("Значение элемента на индексе 3 это " + arr[3]);
+            System.out.println("Значение элемента на индексе 3 это " + arr[3]);
         }
         if (arr.length <= 5) {
-            out.println("Нет элемента на индексе 5");
+            System.out.println("Нет элемента на индексе 5");
         } else {
-            out.println("Значение элемента на индексе 5 это " + arr[5]);
+            System.out.println("Значение элемента на индексе 5 это " + arr[5]);
         }
     }
 

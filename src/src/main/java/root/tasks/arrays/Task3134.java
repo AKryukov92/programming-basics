@@ -2,34 +2,32 @@ package root.tasks.arrays;
 
 import root.tasks.ThreeInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task3134 extends ThreeInputValLayout {
     @Override
-    protected void logic(String firstValue, String secondValue, String thirdValue, PrintStream out) {
+    protected void logic(String firstValue, String secondValue, String thirdValue) {
         int p = Integer.parseInt(secondValue);
         int q = Integer.parseInt(thirdValue);
         String[] arr = firstValue.split(" ");
         if (p < 0 || p >= arr.length) {
-            out.print("Число P должно быть в интервале [0, размер массива)");
+            System.out.print("Число P должно быть в интервале [0, размер массива)");
             return;
         }
         if (q < 0 || q >= arr.length) {
-            out.print("Число Q должно быть в интервале [0, размер массива)");
+            System.out.print("Число Q должно быть в интервале [0, размер массива)");
             return;
         }
         String t = arr[p];
         arr[p] = arr[q];
         arr[q] = t;
-        out.print("Меняю ");
-        out.print(arr[q]);
-        out.print(" на ");
-        out.print(arr[p]);
-        out.print("\n");
+        System.out.print("Меняю ");
+        System.out.print(arr[q]);
+        System.out.print(" на ");
+        System.out.print(arr[p]);
+        System.out.print("\n");
         int i = 0;
         while (i < arr.length) {
-            out.print(arr[i]);
-            out.print(" ");
+            System.out.print(arr[i]);
+            System.out.print(" ");
             i++;
         }
     }

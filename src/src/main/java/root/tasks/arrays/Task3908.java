@@ -2,8 +2,6 @@ package root.tasks.arrays;
 
 import root.tasks.OneInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task3908 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
@@ -23,18 +21,18 @@ public class Task3908 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String value, PrintStream out) {
+    protected void logic(String value) {
         if (value.isEmpty()) {
-            out.println("Исходная строка пуста");
+            System.out.println("Исходная строка пуста");
             return;
         }
         String[] arr = value.split("#");
         if (arr.length < 3) {
-            out.println("Массив слишком маленький");
+            System.out.println("Массив слишком маленький");
             return;
         }
         int index = arr.length - 3;
-        out.println("Индекс третьего элемента с конца " + index);
-        out.println("Значение этого элемента " + arr[index]);
+        System.out.println("Индекс третьего элемента с конца " + index);
+        System.out.println("Значение этого элемента " + arr[index]);
     }
 }
