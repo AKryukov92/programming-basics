@@ -1,6 +1,9 @@
 package root;
 
 import root.tasks.arrays.*;
+import root.tasks.arrays_of_numbers.Task6707;
+import root.tasks.arrays_of_numbers.Task7621;
+import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
@@ -63,7 +66,6 @@ public class Application {
 
     private static TaskBook[] populateCsContent(String[] themeList) throws IOException {
         root.TaskBook[] taskBooksCs = makeNav(themeList, "cs");
-        taskBooksCs[0].prepareTargetDirectory();
 
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
@@ -105,7 +107,6 @@ public class Application {
 
     private static TaskBook[] populateJavaContent(String[] themeList) throws IOException {
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
-        taskBooksJava[0].prepareTargetDirectory();
         fillPrintingTemplates(taskBooksJava[0]);
         fillBasicCalculations(taskBooksJava[1]);
         fillPreliminaryAssertions(taskBooksJava[2]);
@@ -136,9 +137,7 @@ public class Application {
 
     private static TaskBook[] populateJsContent(String[] themeListJs) throws IOException {
         root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        taskBooksJs[0]
-                .addResource("base.html")
-                .prepareTargetDirectory();
+        taskBooksJs[0].addResource("base.html");
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
@@ -172,6 +171,7 @@ public class Application {
     }
 
     private static void makeFiles(TaskBook[] taskBooks, String css, String gitHash) throws IOException {
+        taskBooks[0].prepareTargetDirectory();
         for (TaskBook book : taskBooks) {
             book.make(css, gitHash);
         }
@@ -571,11 +571,12 @@ public class Application {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Конвертирование элементов")
                 .addExample(9774)//операции над массивом
-                .addTask(2390)//вложенные циклы
-                .addTask(3940)//операции над массивом
+                .addTask(3940)//просмотр массива и простая операция
+                .addTask(new Task6707())//просмотр массива с условием
                 .addTask(9525)//просмотр массива с условиями
-                .addTask(8613)//чтение элементов массива по индексу
-                .addTask(7534)//реорганизация повторяющихся действий
+                .addTask(new Task8613())//чтение элементов массива по индексу
+                .addTask(2390)//вложенные циклы
+                .addTask(7534)//вложенные циклы
 
                 .withGroup("Сортировка массива вставкой ?может быть пузырьком?")
                 .addExample(2173)//понятие отсортированного массива
@@ -595,6 +596,7 @@ public class Application {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Вычисление агрегатов из ряда чисел")
                 .addExample(2475)
+                .addTask(new Task7621())//Вычисление суммы элементов на указанных индексах
                 .addTask(3669)
                 .addTask(5951)
                 .addCitation("link_c5_p23.1")
@@ -961,10 +963,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+        //makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

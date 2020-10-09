@@ -223,32 +223,6 @@ public class Lab12Task7649 {
         }
     }
 
-    static void Step8613(){
-        System.out.println();
-        System.out.println("8613");
-        String[] in8613fragments = {
-            "a s d f g h j k",
-            "qaz wsx edc",
-            "as df gh jk",
-            "q w e r t y u i o p",
-            "asdf qwer",
-            "",
-            "v c x z"
-        };
-        String[] in8613indexes = {
-            "0 2 3 5",
-            "0 2 3 5",
-            "3 1",
-            "9 7 3 5",
-            "9 8",
-            "2 1 5",
-            ""
-        };
-        for (int i = 0; i < in8613fragments.length; i++){
-            System.out.println(Lab07.task8613(in8613fragments[i], in8613indexes[i]));
-        }
-    }
-
     static void Step7534(){
         System.out.println();
         System.out.println("7534");

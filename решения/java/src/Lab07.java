@@ -584,30 +584,6 @@ public class Lab07 {
         return sb;
     }
 
-    public static String task8613(String fragmentsRaw, String indexesRaw) {
-        if (fragmentsRaw.isEmpty()) {
-            return "Отсутствуют данные о фрагментах";
-        }
-        if (indexesRaw.isEmpty()) {
-            return "Отсутствуют данные об индексах";
-        }
-        String[] fragments = fragmentsRaw.split(" ");
-        String[] indexes = indexesRaw.split(" ");
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < indexes.length; i++) {
-            int j = Integer.parseInt(indexes[i]);
-            if (fragments.length > j) {
-                sb.append(fragments[j]);
-            } else {
-                sb.append("Фрагмент на индексе ");
-                sb.append(j);
-                sb.append(" отсутствует");
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     public static String task7534(String charsRaw, String amountsRaw) {
         if (charsRaw.isEmpty()) {
             return "Отсутствуют данные о символах";
