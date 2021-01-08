@@ -1,5 +1,6 @@
 package root;
 
+import root.tasks.aggregates.Task2802;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
@@ -7,6 +8,9 @@ import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
+import root.tasks.search_in_array.Task1522;
+import root.tasks.search_in_array.Task4515;
+import root.tasks.use_std_lib.Task9279;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,6 +37,7 @@ public class Application {
             "Базовые операции с массивами",
             "Работа с массивами чисел",
             "Вычисление агрегатов",
+            "Поиск в массиве",
 
             "Строки",
             "Функции",
@@ -52,6 +57,7 @@ public class Application {
             "Базовые операции с массивами",
             "Использование числовых массивов",
             "Вычисление агрегатов",
+            "Поиск в массиве",
 
             "Строки",
             "Обработка неизвестного объема данных",
@@ -65,7 +71,7 @@ public class Application {
     };
 
     private static TaskBook[] populateCsContent(String[] themeList) throws IOException {
-        root.TaskBook[] taskBooksCs = makeNav(themeList, "cs");
+        TaskBook[] taskBooksCs = makeNav(themeList, "cs");
 
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
@@ -92,15 +98,16 @@ public class Application {
         fillArrayConversionToNumbers(taskBooksCs[8]);
         fillAggregateCalculation(taskBooksCs[9]);
 
-        fillStringMethods(taskBooksCs[10]);
-        fillReadingFiles(taskBooksCs[11]);
-        fillWritingFiles(taskBooksCs[12]);
-        fillMethods(taskBooksCs[13]);
-        fillExceptions(taskBooksCs[14]);
+        fillElementSearch(taskBooksCs[10]);
+        fillStringMethods(taskBooksCs[11]);
+        fillReadingFiles(taskBooksCs[12]);
+        fillWritingFiles(taskBooksCs[13]);
+        fillMethods(taskBooksCs[14]);
 
-        fillAbstractDataStructures(taskBooksCs[15]);
-        fillInternalState(taskBooksCs[16]);
-        fillCollections(taskBooksCs[17]);
+        fillExceptions(taskBooksCs[15]);
+        fillAbstractDataStructures(taskBooksCs[16]);
+        fillInternalState(taskBooksCs[17]);
+        fillCollections(taskBooksCs[18]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -122,15 +129,16 @@ public class Application {
         fillArrayConversionToNumbers(taskBooksJava[8]);
         fillAggregateCalculation(taskBooksJava[9]);
 
-        fillStringMethods(taskBooksJava[10]);
-        fillReadingFiles(taskBooksJava[11]);
-        fillWritingFiles(taskBooksJava[12]);
-        fillMethods(taskBooksJava[13]);
-        fillExceptions(taskBooksJava[14]);
+        fillElementSearch(taskBooksJava[10]);
+        fillStringMethods(taskBooksJava[11]);
+        fillReadingFiles(taskBooksJava[12]);
+        fillWritingFiles(taskBooksJava[13]);
+        fillMethods(taskBooksJava[14]);
 
-        fillAbstractDataStructures(taskBooksJava[15]);
-        fillInternalState(taskBooksJava[16]);
-        fillCollections(taskBooksJava[17]);
+        fillExceptions(taskBooksJava[15]);
+        fillAbstractDataStructures(taskBooksJava[16]);
+        fillInternalState(taskBooksJava[17]);
+        fillCollections(taskBooksJava[18]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -142,8 +150,8 @@ public class Application {
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
-
         fillRanges(taskBooksJs[4]);
+
         taskBooksJs[5]
                 .addResource("graphics.html")
                 .addResource("graphics.js");
@@ -153,11 +161,13 @@ public class Application {
         fillArrayConversionToNumbers(taskBooksJs[8]);
         fillAggregateCalculation(taskBooksJs[9]);
 
-        fillStringMethods(taskBooksJs[10]);
-        fillMethods(taskBooksJs[11]);
-        fillExceptionJs(taskBooksJs[12]);
-        fillAbstractDataStructuresJs(taskBooksJs[13]);
-        fillExcercisesWithButtons(taskBooksJs[14]);
+        fillElementSearch(taskBooksJs[10]);
+        fillStringMethods(taskBooksJs[11]);
+        fillMethods(taskBooksJs[12]);
+        fillExceptionJs(taskBooksJs[13]);
+        fillAbstractDataStructuresJs(taskBooksJs[14]);
+
+        fillExcercisesWithButtons(taskBooksJs[15]);
         updateCrossTaskLinks(taskBooksJs);
         return taskBooksJs;
     }
@@ -551,19 +561,6 @@ public class Application {
                 .addTask(8820)
                 .addTask(3333)
                 .addTask(8471)
-
-                .withGroup("Поиск конкретного элемента в массиве")
-                .addExample(5694)//поиск в массиве
-                .addTask(6806)//поиск в массиве
-                .addTask(2234)//поиск в массиве
-
-                .withGroup("Поиск в массиве и прерывание работы цикла")
-                .addExample(new Task2003())
-                .addTask(new Task8158())
-                .addTask(1292)
-                .addTask(6988)
-                .addTask(9827)
-                .addTask(7793)
         ;
     }
 
@@ -600,7 +597,7 @@ public class Application {
                 .addTask(3669)
                 .addTask(5951)
                 .addCitation("link_c5_p23.1")
-                .addTask(2802)
+                .addTask(new Task2802())
                 .addTask(6580)
 
                 .withGroup("Вычисление агрегатов в массиве")
@@ -614,23 +611,52 @@ public class Application {
                 .withGroup("Агрегат по группам")
                 .addTask(7260)
                 .addTask(5795)
+        ;
+    }
+
+    private static void fillElementSearch(TaskBook taskBook) {
+        taskBook.withSourceDirectory("arrays")
+                //Поиск по сути - вычисление агрегата, т.к. результат - один элемент - флаг "присутствует" или "отсутствует"
+                .withGroup("Поиск конкретного элемента в массиве")
+                .addExample(5694)//поиск в массиве
+                .addTask(6806)//поиск в массиве
+                .addTask(2234)//поиск в массиве
+
+                .withGroup("Поиск в массиве и прерывание работы цикла")
+                .addExample(new Task2003())
+                .addTask(new Task8158())
+                .addTask(1292)
+                .addTask(4283)//поиск и подсчет количества
+                .addTask(7703)//многократный поиск и подсчет количества
+
+                .withGroup("Сопоставление массивов")
+                .addExample(7369)//наглядное сопоставление двух массивов
+                .addTask(6988)//синхронный просмотр двух массивов
+                .addTask(5894)//неявное сопоставление + подсчет количества
+                .addTask(new Task4515())//сопоставление массива с самим собой
+                .addTask(9827)//сопоставление массивов MINUS
+                .addTask(7793)//сопоставление, все виды
 
                 .withGroup("Поиск минимального")
                 .addExample(7035)
+                .addTask(new Task1522())//поиск максимального и поиск минимального
                 .addTask(9271)
                 .addTask(8769)
                 .addTask(4707)
                 .addTask(1392)
-                .addTask(6492)
+                .addTask(6492)//Сначала найти максимальное, от которого зависит количество строк
 
-                .withGroup("Поиск повторений в массиве")
-                .addExample(7369)
-                .addTask(5894)
-                .addTask(4515)
-                .addTask(4283)
-                .addTask(7703)
+                //Подготовительной задачей будет
+                //Эти задачи решаются двумя способами
+                //1. Через создание хешсета
+                //2. Через многократный просмотр двух массивов
+                //3. Через сортировку с последующим линейным просмотром
+                //К решению через сортировку подводить кажется правильнее.
+                //Проблема в том, что исходные данные - строки, а не цифры.
+                //Сравнение на "больше" или "меньше" для строк не такое очевидное, как для цифр
                 .addTask(5541)
                 .addTask(9182)
+        //Будет логично сюда поставить еще и бинарный поиск
         ;
     }
 
@@ -640,7 +666,7 @@ public class Application {
                 .addExample(7491)
                 .addTask(9631)
                 .addTask(9812)
-                .addTask(9279)
+                .addTask(new Task9279())
                 .addExample(4845)
                 .addTask(5728)
                 .addTask(7222)

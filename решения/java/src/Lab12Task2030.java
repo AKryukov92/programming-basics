@@ -172,26 +172,6 @@ public class Lab12Task2030 {
         }
     }
 
-    private static void Step4515(){
-        System.out.println();
-        System.out.println("4515");
-        String[] in4515 = {
-            "q w e r",
-            "q w q r",
-            "q w e q",
-            "q w e w",
-            "r r r r",
-            "a b c d q w e r"
-        };
-        for (int i = 0; i < in4515.length; i++) {
-            if (Lab07.task4515(in4515[i])) {
-                System.out.println("Повторения есть");
-            } else {
-                System.out.println("Повторений нет");
-            }
-        }
-    }
-
     static void Step7491() {
         System.out.println();
         System.out.println("7491");

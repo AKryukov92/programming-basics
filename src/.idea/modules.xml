@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Labs assembler.iml" filepath="$PROJECT_DIR$/Labs assembler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs-assembler.iml" filepath="$PROJECT_DIR$/labs-assembler.iml" />
     </modules>
   </component>
 </project>

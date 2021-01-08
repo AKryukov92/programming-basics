@@ -745,18 +745,6 @@ public class Lab07 {
         return count;
     }
 
-    public static boolean task4515(String raw) {
-        String[] arr = raw.split(" ");
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i].equals(arr[j])) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     public static String task7035(String raw) {
         String[] arr = raw.split(" ");
         int min = Integer.parseInt(arr[0]);
