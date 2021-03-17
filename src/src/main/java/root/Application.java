@@ -6,6 +6,7 @@ import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
+import root.tasks.read_files.Task4954;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
 import root.tasks.search_in_array.Task1522;
@@ -696,7 +697,7 @@ public class Application {
                 .withGroup("Чтение файлов")
                 .addExample(6175)
                 .addTask(4488)
-                .addTask(4954)
+                .addTask(new Task4954())
                 .addTask(4642)
                 .addTask(5537)
                 .addTask(5847)

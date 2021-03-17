@@ -87,20 +87,7 @@ public class Lab09 {
             System.out.println("-->" + out4488[i] + "<--");
             task4488(".\\task4488\\test" + (i + 1) + ".txt");
         }
-        System.out.println();
-        System.out.println("4954");
-        String[] in4954 = {"а", "ц", "н", "ч", "п"};
-        String[] out4954 = {
-                "36",
-                "5",
-                "92",
-                "Файл не существует",
-                "0"
-        };
-        for (int i = 0; i < in4954.length; i++) {
-            System.out.println("-->" + out4954[i] + "<--");
-            task4954(in4954[i], ".\\task4954\\test" + (i + 1) + ".txt");
-        }
+
         System.out.println();
         System.out.println("4642");
         String[] out4642 = {
@@ -273,21 +260,6 @@ public class Lab09 {
                 }
                 System.out.println(n + " " + c);
             }
-        } catch (FileNotFoundException ex) {
-            System.out.println("Файл не существует");
-        }
-    }
-
-    public static void task4954(String a, String filename) {
-        File target = new File(filename);
-        try (Scanner scanner = new Scanner(target)) {
-            int count = 0;
-            while (scanner.hasNext()) {
-                if (scanner.nextLine().contains(a)) {
-                    count++;
-                }
-            }
-            System.out.println(count);
         } catch (FileNotFoundException ex) {
             System.out.println("Файл не существует");
         }
