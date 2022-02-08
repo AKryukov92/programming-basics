@@ -9,7 +9,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th>Номер теста</th>");
-        writer.println("<th>Вводимые данные (" + valName + ")</th>");
+        writer.println("<th>Исходные данные (" + valName + ")</th>");
         writer.println("<th>Результат (" + resultName + ")</th>");
         writer.println("</tr>");
     }
@@ -18,7 +18,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th>Номер теста</th>");
-        writer.println("<th>Вводимые данные (" + valName + ")</th>");
+        writer.println("<th>Исходные данные (" + valName + ")</th>");
         writer.println("<th>Результат</th>");
         writer.println("</tr>");
     }

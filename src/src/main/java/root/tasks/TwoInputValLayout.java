@@ -9,7 +9,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
-        writer.println("<th colspan='2'>Вводимые данные</th>");
+        writer.println("<th colspan='2'>Исходные данные</th>");
         writer.println("<th rowspan='2'>Результат (" + resultName + ")</th>");
         writer.println("</tr>");
         writer.println("<tr>");
@@ -26,7 +26,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
-        writer.println("<th colspan='2'>Вводимые данные</th>");
+        writer.println("<th colspan='2'>Исходные данные</th>");
         writer.println("<th rowspan='2'>Результат</th>");
         writer.println("</tr>");
         writer.println("<tr>");

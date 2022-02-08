@@ -6,6 +6,11 @@ import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
+import root.tasks.exceptions.Task1439;
+import root.tasks.exceptions.Task1439Js;
+import root.tasks.random.Task2386;
+import root.tasks.random.Task2549;
+import root.tasks.random.Task2910;
 import root.tasks.read_files.Task4954;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
@@ -728,7 +733,9 @@ public class Application {
                 .addTask(6409)
 
                 .withGroup("Случайные числа")
-                .addExample(2386)
+                .addExample(new Task2386())
+                .addTask(new Task2910())
+                .addTask(new Task2549())
                 .addTask(4342)
                 .addTask(9159)
                 .addTask(5309)
@@ -778,7 +785,7 @@ public class Application {
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(7740)
-                .addTask(1439)
+                .addTask(new Task1439())
 
                 .withGroup("Выбрасывание исключения, проверка в консольной программе")
                 .addExample(1934)
@@ -805,7 +812,7 @@ public class Application {
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(7740)
-                .addTask(1439)
+                .addTask(new Task1439Js())
 
                 .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
                 .addExample(9020)

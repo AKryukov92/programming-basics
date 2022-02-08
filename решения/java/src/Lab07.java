@@ -1130,7 +1130,7 @@ public class Lab07 {
             return;
         }
         String[] arr = data.split(" ");
-        System.out.print("NULL");
+        System.out.print("BEGIN");
         if (arr.length > 0) {
             System.out.print(" ");
             System.out.print(arr[0]);
@@ -1140,12 +1140,7 @@ public class Lab07 {
             System.out.println(arr[1]);
         }
         for (int i = 1; i < arr.length - 1; i++) {
-            System.out.print(arr[i - 1]);
-            System.out.print(" ");
-            System.out.print(arr[i]);
-            System.out.print(" ");
-            System.out.print(arr[i + 1]);
-            System.out.println();
+            System.out.println(arr[i - 1] + " " + arr[i] + " " + arr[i + 1]);
         }
         if (arr.length > 1) {
             System.out.print(arr[arr.length - 2]);
@@ -1154,7 +1149,7 @@ public class Lab07 {
             System.out.print(" ");
             System.out.print(arr[arr.length - 1]);
         }
-        System.out.println(" NULL");
+        System.out.println(" END");
     }
 
     public static void task6988(String left, String right) {
