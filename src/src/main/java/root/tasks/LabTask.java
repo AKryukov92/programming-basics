@@ -8,9 +8,12 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Created by Александр on 11.02.2019.
@@ -77,7 +80,7 @@ public class LabTask extends LabFragment {
             System.out.println("Fragment " + getSrcFilename() + " has reference to " + referenceId + " " + referenceName);
             Optional<TaskBook> value = finder.getFirstTaskbookFilenameWithTask(referenceId);
             if (value.isPresent()) {
-                String linkTitle = "ЛР" + value.get().getLabIndex() + "#" + referenceId+ "(открыть в новой вкладке)";
+                String linkTitle = "ЛР" + value.get().getLabIndex() + "#" + referenceId + "(открыть в новой вкладке)";
                 referenceMatcher.appendReplacement(newContent, "<a href=\"" + value.get().getFilenameForLink() + "#task$2\" target=\"_blank\">" + linkTitle + "</a>");
             } else {
                 System.out.println("Failed to find task " + referenceId + " in other taskbooks");
@@ -92,15 +95,21 @@ public class LabTask extends LabFragment {
         super.copyRequiredFilesTo(targetDirectory);
         String content = getContent();
         Matcher dataMatcher = Pattern.compile("<a href=\"files(.*?)\" target=\"_blank\">").matcher(content);
+        List<String> requiredFiles = new ArrayList<>();
         while (dataMatcher.find()) {
             String dataName = dataMatcher.group(1);
-            System.out.println("Task " + id + " links to data file '" + dataName + "'");
             if (!dataName.contains(String.valueOf(id))) {
                 throw new IllegalArgumentException("Task " + id + " links to data file of other task");
             }
-            Path src = Paths.get(srcDirectory + "\\" + dataName).toAbsolutePath();
+            System.out.println("Task " + id + " links to data file '" + dataName + "'");
+            requiredFiles.add(dataName);
+        }
+        System.out.println("Copy distinct files of task " + id + ".");
+        List<String> distinctFiles = requiredFiles.stream().distinct().collect(Collectors.toList());
+        for (String dataName : distinctFiles) {
+            Path src = Paths.get("files\\" + dataName).toAbsolutePath();
             if (Files.exists(src)) {
-                copyFileTo(dataName, srcDirectory, targetDirectory + "\\files");
+                copyFileTo(dataName, "files", targetDirectory + "\\files");
             } else {
                 System.out.println("File " + src.toAbsolutePath() + " not found. Consider it as no-file-test.");
             }

@@ -23,8 +23,8 @@ public class Task4954 extends TwoInputValLayout {
     }
 
     @Override
-    protected void logic(String value, String file) {
-        File target = new File(file);
+    protected void logic(String value, String filename) {
+        File target = new File(filename);
         try (Scanner scanner = new Scanner(target)) {
             int count = 0;
             while (scanner.hasNext()) {

@@ -37,4 +37,14 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("</td>");
         writer.println("</tr>");
     }
+
+    protected void appendCheckSingleWithFile(String filename) {
+        writer.println("<a href=\"" + filename + "\" target=\"_blank\">открыть исходные данные в новой вкладке</a>");
+        writer.print("<div class='check_single preformatted'>");
+        PrintStream oldOut = System.out;
+        System.setOut(writer);
+        logic(filename);
+        System.setOut(oldOut);
+        writer.println("</div>");
+    }
 }

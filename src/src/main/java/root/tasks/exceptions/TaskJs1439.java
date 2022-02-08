@@ -45,6 +45,6 @@ public class TaskJs1439 extends OneInputValLayout {
         }
 
         public static void main(String[] args) {
-            System.out.println(new root.tasks.exceptions.Task1439().getContent());
+            System.out.println(new TaskJs1439().getContent());
         }
     }

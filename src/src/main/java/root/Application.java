@@ -14,6 +14,9 @@ import root.tasks.random.Task2910;
 import root.tasks.read_files.Task4954;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
+import root.tasks.read_files.Task6590;
+import root.tasks.read_files.Task6989;
+import root.tasks.read_files.Task7788;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task4515;
 import root.tasks.use_std_lib.Task9279;
@@ -707,6 +710,8 @@ public class Application {
                 .addTask(5537)
                 .addTask(5847)
                 .addTask(4769)
+                .addExample(new Task7788())
+                .addTask(new Task6989())
                 .addTask(1761)
                 .addCitation("link_c2_p8.3")
                 .addTask(9930)
@@ -786,6 +791,10 @@ public class Application {
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(7740)
                 .addTask(new Task1439())
+                .addTask(8733)
+                .addTask(5101)
+                .addTask(8139)
+                .addTask(5014)
 
                 .withGroup("Выбрасывание исключения, проверка в консольной программе")
                 .addExample(1934)
@@ -914,6 +923,7 @@ public class Application {
                 .withGroup("Формирование множества")
                 .addExample(4568)
                 .addTask(9990)
+                .addTask(new Task6590())
 
                 .withGroup("Вычисление агрегата по группам")
                 .addTask(9092)
