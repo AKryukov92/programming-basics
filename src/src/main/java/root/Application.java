@@ -7,7 +7,7 @@ import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.exceptions.Task1439;
-import root.tasks.exceptions.Task1439Js;
+import root.tasks.exceptions.TaskJs1439;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -812,7 +812,7 @@ public class Application {
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(7740)
-                .addTask(new Task1439Js())
+                .addTask(new TaskJs1439())
 
                 .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
                 .addExample(9020)

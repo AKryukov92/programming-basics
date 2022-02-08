@@ -2,7 +2,7 @@ package root.tasks.exceptions;
 
 import root.tasks.OneInputValLayout;
 
-public class Task1439Js extends OneInputValLayout {
+public class TaskJs1439 extends OneInputValLayout {
         @Override
         protected void makeLayout() {
             appendHeader();
