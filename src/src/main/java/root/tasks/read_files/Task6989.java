@@ -22,9 +22,9 @@ public class Task6989 extends TwoInputValLayout {
                 "<li>salary - заработная плата</li>" +
                 "<li>commission_pct - ставка коммиссии</li>" +
                 "<li>manager_id - код руководителя</li>" +
-                "<li>department_id - код подразделения</li>" +
+                "<li>department_id - код отдела</li>" +
                 "</ol>" +
-                "Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и код подразделения сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
+                "Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и код отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
         appendCheckValuesHeader("employee_id", "ссылка на файл");
         appendCheckValuesRowWithFile("100", "files/task6989/employees.csv");
         appendCheckValuesRowWithFile("107", "files/task6989/employees.csv");
@@ -46,7 +46,7 @@ public class Task6989 extends TwoInputValLayout {
                 if (attributes[0].equals(employeeId)) {
                     System.out.printf("Имя: %s\n" +
                                     "фамилия: %s\n" +
-                                    "код подразделения: %s",
+                                    "код отдела: %s",
                             attributes[1],
                             attributes[2],
                             attributes[10]);
@@ -55,7 +55,7 @@ public class Task6989 extends TwoInputValLayout {
                 }
             }
             if (!found) {
-                System.out.println("Сотрудник с идентификатором " + employeeId + " не найден");
+                System.out.println("Сотрудник с кодом " + employeeId + " не найден");
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Файл '" + target.getAbsolutePath() + "' не существует");

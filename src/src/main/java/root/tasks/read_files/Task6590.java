@@ -22,7 +22,7 @@ public class Task6590 extends OneInputValLayout {
                 "<li>salary - заработная плата</li>" +
                 "<li>commission_pct - ставка коммиссии</li>" +
                 "<li>manager_id - код руководителя</li>" +
-                "<li>department_id - код подразделения</li>" +
+                "<li>department_id - код отдела</li>" +
                 "</ol>" +
                 "Руководителем считается сотрудник, чей идентификатор указан у другого сотрудника в поле manager_id. Для каждого руководителя нужно вывести его фамилию, код должности и идентификаторы подчиненных сотрудников.");
         appendCheckSingleWithFile("files/task6590/employees.csv");
