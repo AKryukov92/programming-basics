@@ -38,8 +38,12 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("</tr>");
     }
 
+    protected String linkToFile(String filename, String description) {
+        return "<a href=\"" + filename + "\" target=\"_blank\">открыть " + description + " в новой вкладке</a>";
+    }
+
     protected void appendCheckSingleWithFile(String filename) {
-        writer.println("<a href=\"" + filename + "\" target=\"_blank\">открыть исходные данные в новой вкладке</a>");
+        writer.println(linkToFile(filename, ""));
         writer.print("<div class='check_single preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);

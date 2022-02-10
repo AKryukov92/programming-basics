@@ -11,12 +11,9 @@ import root.tasks.exceptions.TaskJs1439;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
-import root.tasks.read_files.Task4954;
+import root.tasks.read_files.*;
 import root.tasks.filltemplate.Task2429;
 import root.tasks.filltemplate.Task4764;
-import root.tasks.read_files.Task6590;
-import root.tasks.read_files.Task6989;
-import root.tasks.read_files.Task7788;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task4515;
 import root.tasks.use_std_lib.Task9279;
@@ -712,6 +709,8 @@ public class Application {
                 .addTask(4769)
                 .addExample(new Task7788())
                 .addTask(new Task6989())
+                .addTask(new Task6170())
+                .addTask(new Task8665())
                 .addTask(1761)
                 .addCitation("link_c2_p8.3")
                 .addTask(9930)
