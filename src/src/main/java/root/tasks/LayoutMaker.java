@@ -4,7 +4,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 public abstract class LayoutMaker {
-    private static final String utf8 = StandardCharsets.UTF_8.name();
+    protected static final String utf8 = StandardCharsets.UTF_8.name();
     PrintStream writer = System.out;
 
     public int getId() {

@@ -1,6 +1,8 @@
 package root.tasks;
 
+import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 public abstract class OneInputValLayout extends LayoutMaker {
     protected abstract void logic(String value);
@@ -36,6 +38,21 @@ public abstract class OneInputValLayout extends LayoutMaker {
         System.setOut(oldOut);
         writer.println("</td>");
         writer.println("</tr>");
+    }
+
+    protected String wrapLogic(String a) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            PrintStream tempStream = new PrintStream(baos, true, utf8);
+            PrintStream oldOut = System.out;
+            System.setOut(tempStream);
+            logic(a);
+            System.setOut(oldOut);
+            tempStream.close();
+            return baos.toString(utf8);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     protected String linkToFile(String filename, String description) {
