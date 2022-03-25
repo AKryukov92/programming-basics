@@ -8,6 +8,7 @@ import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
+import root.tasks.loops.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -459,9 +460,9 @@ public class Application {
     private static void fillLoops(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
-                .addExample(1315)
-                .addTask(1631)
-                .addTask(2594)
+                .addExample(new Task1315())
+                .addTask(new Task1631())
+                .addTask(new Task2594())
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
@@ -469,6 +470,7 @@ public class Application {
                 .addTask(3550)
                 .addTask(1139)
                 .addTask(5301)
+                .addTask(new Task1259())
 
                 .withGroup("Один цикл за другим")
                 .addTask(7086)
@@ -521,6 +523,7 @@ public class Application {
 
                 .withGroup("Просто сложные задачи")
                 .addCitation("link_c2_p9.2")
+                .addTask(new Task6332())
                 .addTask(7517)
                 .addTask(5448)
                 .addTask(6572)
