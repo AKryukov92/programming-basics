@@ -8,13 +8,12 @@ import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
+import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
 import root.tasks.read_files.*;
-import root.tasks.filltemplate.Task2429;
-import root.tasks.filltemplate.Task4764;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task4515;
 import root.tasks.use_std_lib.Task9279;
@@ -216,13 +215,13 @@ public class Application {
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
-                .addTask(7472)
+                .addTask(new Task7472())
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
-                .addExample(4140)
-                .addTask(2959)
+                .addExample(new Task4140())
+                .addTask(new Task2959())
                 .addTask(7271)
                 .addTask(2632)
                 .addTask(4343)
@@ -256,13 +255,13 @@ public class Application {
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
-                .addTask(7472)
+                .addTask(new Task7472())
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
-                .addExample(4140)
-                .addTask(2959)
+                .addExample(new Task4140())
+                .addTask(new Task2959())
                 .addTask(7271)
                 .addTask(2632)
                 .addTask(4343)

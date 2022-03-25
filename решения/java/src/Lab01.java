@@ -143,14 +143,6 @@ public class Lab01 {
         System.out.println("Мы стремимся к " + a);
     }
 
-    public static void task4140(String firstName, String lastName){
-        System.out.println("Меня зовут " + lastName + ", " + firstName + " " + lastName);
-    }
-
-    public static void task7472(String a, String b){
-        System.out.println(b + " " + a);
-    }
-
     public static void task3862(){
         System.out.printf("%.4f\n%.4f", Math.PI, Math.E);
     }
@@ -161,12 +153,6 @@ public class Lab01 {
 
     public static void task8624(int a){
         System.out.println("\"" + a + "\"");
-    }
-
-    public static void task2959(String id){
-        System.out.println("SELECT first_name, last_name, group");
-        System.out.println("FROM students WHERE student_id = '" + id + "';");
-        System.out.println();
     }
 
     public static void task7271(int x, int y){
