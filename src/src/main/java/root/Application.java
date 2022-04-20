@@ -546,11 +546,11 @@ public class Application {
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
-                .addTask(8557)
+                .addTask(new Task8557())
                 .addCitation("link_c3_p12.8")
-                .addTask(1223)
-                .addTask(8311)
-                .addTask(6563)
+                .addTask(new Task1223())
+                .addTask(new Task8311())
+                .addTask(new Task6563())
 
                 //тут требуется выводить элементы по порядку, а это разбирается в задачах по обработке массивов циклом
                 .withGroup("Запись в массив")
@@ -564,8 +564,8 @@ public class Application {
 
                 .withGroup("Перестановки элементов")
                 .addExample(new Task3134())
-                .addTask(9711)
-                .addTask(7085)
+                .addTask(new Task9711())
+                .addTask(new Task7085())
                 .addTask(8820)
                 .addTask(3333)
                 .addTask(8471)

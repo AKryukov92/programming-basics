@@ -677,32 +677,6 @@ public class Lab13Task9701 {
         }*/
     }
 
-    static void Step7085(){
-        System.out.println();
-        System.out.println("7085");
-        String[] in7085 = {
-                "q w e r t y",
-                "q w e r t y",
-                "a s d f",
-                "q w e r t y",
-                "a s d f",
-                "q w e r t y",
-                "a s d f",
-                "q w e r t y",
-                "q w e r t y",
-                "a s d f"
-        };
-        int[] in7085s = {1, 3, 2, 5, 3, 6, 0, 8, -2, 5};
-        for (int i = 0; i < in7085.length; i++){
-            try {
-                String result = Lab07.task7085(in7085s[i], in7085[i]);
-                System.out.println(result);
-            } catch (IllegalArgumentException e){
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step7937() {
         System.out.println();
         System.out.println("7937");
