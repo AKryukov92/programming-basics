@@ -6,6 +6,7 @@ public abstract class ThreeInputValLayout extends LayoutMaker {
     protected abstract void logic(String firstValue, String secondValue, String thirdValue);
 
     protected void appendCheckValuesHeader(String firstVal, String secondVal, String thirdVal, String resultName) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
@@ -26,6 +27,7 @@ public abstract class ThreeInputValLayout extends LayoutMaker {
     }
 
     protected void appendCheckValuesHeader(String firstVal, String secondVal, String thirdVal) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");

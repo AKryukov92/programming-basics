@@ -15,6 +15,7 @@ import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
 import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
+import root.tasks.search_in_array.Task2497;
 import root.tasks.search_in_array.Task4515;
 import root.tasks.use_std_lib.Task9279;
 
@@ -552,7 +553,6 @@ public class Application {
                 .addTask(new Task8311())
                 .addTask(new Task6563())
 
-                //тут требуется выводить элементы по порядку, а это разбирается в задачах по обработке массивов циклом
                 .withGroup("Запись в массив")
                 .addExample(new Task9923())
                 .addTask(new Task1331())
@@ -583,12 +583,6 @@ public class Application {
                 .addTask(2390)//вложенные циклы
                 .addTask(7534)//вложенные циклы
 
-                .withGroup("Сортировка массива вставкой ?может быть пузырьком?")
-                .addExample(2173)//понятие отсортированного массива
-                .addTask(7290)//подсчет количества
-                .addTask(4497)//просмотр массива и замена
-                .addTask(3218)//сортировка массива
-
                 .withGroup("Задачи повышенного уровня сложности")
                 .addTask(9576)
                 .addTask(3095)//комбинаторика. понятие "все комбинации"
@@ -611,10 +605,16 @@ public class Application {
                 .withGroup("Вычисление агрегатов в массиве")
                 .addExample(8696)
                 .addTask(5969)
-                .addTask(5170)
+                .addTask(5170)//подсчет количества делителей
                 .addTask(3946)
                 .addTask(6497)
                 .addTask(5648)
+
+                .withGroup("Сортировка массива вставкой")
+                .addExample(7290)//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой
+                .addTask(2173)//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
+                .addTask(4497)//просмотр массива и замена
+                .addTask(3218)//сортировка массива
 
                 .withGroup("Агрегат по группам")
                 .addTask(7260)
@@ -640,6 +640,7 @@ public class Application {
                 .withGroup("Сопоставление массивов")
                 .addExample(7369)//наглядное сопоставление двух массивов
                 .addTask(6988)//синхронный просмотр двух массивов
+                .addTask(new Task2497())//все числа первого массива меньше всех чисел второго массива
                 .addTask(5894)//неявное сопоставление + подсчет количества
                 .addTask(new Task4515())//сопоставление массива с самим собой
                 .addTask(9827)//сопоставление массивов MINUS
@@ -648,10 +649,10 @@ public class Application {
                 .withGroup("Поиск минимального")
                 .addExample(7035)
                 .addTask(new Task1522())//поиск максимального и поиск минимального
-                .addTask(9271)
-                .addTask(8769)
-                .addTask(4707)
-                .addTask(1392)
+                .addTask(9271)//поиск и манипуляции с массивом
+                .addTask(8769)//минимальное в участке массива
+                .addTask(4707)//сортировка по возрастанию пузырьком
+                .addTask(1392)//вычисление медианы
                 .addTask(6492)//Сначала найти максимальное, от которого зависит количество строк
 
                 //Подготовительной задачей будет

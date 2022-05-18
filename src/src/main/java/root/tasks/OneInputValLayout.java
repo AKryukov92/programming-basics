@@ -8,6 +8,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
     protected abstract void logic(String value);
 
     protected void appendCheckValuesHeader(String valName, String resultName) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th>Номер теста</th>");
@@ -17,6 +18,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
     }
 
     protected void appendCheckValuesHeader(String valName) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th>Номер теста</th>");
