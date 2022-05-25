@@ -4,7 +4,9 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 public abstract class LayoutMaker {
-    private static final String utf8 = StandardCharsets.UTF_8.name();
+    protected static final String utf8 = StandardCharsets.UTF_8.name();
+    protected boolean headerOpened = false;
+    protected boolean tableOpened = false;
     PrintStream writer = System.out;
 
     public int getId() {
@@ -13,6 +15,12 @@ public abstract class LayoutMaker {
     }
 
     public String getContent() {
+        if (tableOpened) {
+            throw new RuntimeException("Заголовок таблицы не закрыт. Вызовите метод appendCheckValuesFooter. Задача " + this.getClass().getName());
+        }
+        if (headerOpened) {
+            throw new RuntimeException("Тэг задания не закрыт. Вызовите метод appendFooter. Задача " + this.getClass().getName());
+        }
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
             this.writer = new PrintStream(baos, true, utf8);
@@ -27,6 +35,7 @@ public abstract class LayoutMaker {
     protected abstract void makeLayout();
 
     protected void appendHeader() {
+        headerOpened = true;
         writer.println("<div id='task" + getId() + "' class='task_block'>");
         writer.println("<div class='task_id'>" + getId() + "</div>");
         writer.println("<h3>Задача</h3>");
@@ -45,10 +54,17 @@ public abstract class LayoutMaker {
     }
 
     protected void appendCheckValuesFooter() {
+        tableOpened = false;
         writer.println("</table>");
     }
 
     protected void appendFooter() {
+        headerOpened = false;
         writer.println("</div>");
+    }
+
+    @Override
+    public String toString() {
+        return getContent();
     }
 }

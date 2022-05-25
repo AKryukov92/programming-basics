@@ -268,26 +268,6 @@ public class Lab15Task8787 {
         }
     }
 
-    private static void Step9711() {
-        System.out.println();
-        System.out.println("9711");
-        String[] in9711 = {
-            "q w e r t y",
-            "a s d f g h j k l m",
-            "zx cv bn m",
-            ""
-        };
-        for (int i = 0; i < in9711.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<String> result = Lab07.task9711(in9711[i]);
-            for (String item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-    }
-
     private static void Step9774() {
         System.out.println();
         System.out.println("9774");
@@ -304,38 +284,6 @@ public class Lab15Task8787 {
                 sb.append(" ");
             }
             System.out.println(sb.toString());
-        }
-    }
-
-    private static void Step8311() {
-        System.out.println();
-        System.out.println("8311");
-        int[] in8311b = {0, 1, 2, 3, 2, 8, 11, -1, 8};
-        int[] in8311e = {3, 3, 3, 10, 2, 2, 8, 5, 50};
-        String[] in8311data = {
-            "z x c v b",
-            "z x c v b",
-            "z x c v b",
-            "z x c v b a s d f g h",
-            "z x c v b a s d f g h",
-            "z x c v b a s d f g h",
-            "z x c v b a s d f g h",
-            "z x c v b a s d f g h",
-            "z x c v b a s d f g h"
-        };
-        for (int i = 0; i < in8311b.length; i++) {
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<String> result = Lab07.task8311(
-                        in8311b[i], in8311e[i], in8311data[i]);
-                for (String item : result) {
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
         }
     }
 

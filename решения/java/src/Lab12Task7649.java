@@ -120,25 +120,6 @@ public class Lab12Task7649 {
         }
     }
 
-    private static void Step7035(){
-        System.out.println();
-        System.out.println("7035");
-        String[] in7035 = {
-            "6 5 7 8 3 4 1",
-            "1 2 3 4 5 6",
-            "3 4 1 2 3 4 1 2 3 1 2",
-            "4 2 3 4 3 2",
-            "4 4 4 4 4 3 8 9",
-            "4 4 4 4",
-            "4 3"
-        };
-        int[] out7035 = {1, 1, 1, 2, 3, 4, 3};
-        for (int i = 0; i < in7035.length; i++) {
-            String result = Lab07.task7035(in7035[i]);
-            System.out.printf("%s (%d)\n\n", result, out7035[i]);
-        }
-    }
-
     private static void Step8518() {
         System.out.println();
         System.out.println("8518");

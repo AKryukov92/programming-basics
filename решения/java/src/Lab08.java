@@ -350,15 +350,6 @@ public class Lab08 {
         return String.format("Значение переменной %s %s %s %s", var, description, special, value);
     }
 
-    public static String task8557(String data){
-        String[] arr = data.split(",");
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < arr.length; i++){
-            result.append("Глава ").append(i + 1).append(" ").append(arr[i]).append("\n");
-        }
-        return result.toString();
-    }
-
     public static String[] codes = {
             "..--..",
             ".-",

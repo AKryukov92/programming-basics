@@ -8,17 +8,16 @@ import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.calculations.Task3474;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
+import root.tasks.filltemplate.*;
+import root.tasks.loops.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
-import root.tasks.read_files.Task4954;
-import root.tasks.filltemplate.Task2429;
-import root.tasks.filltemplate.Task4764;
-import root.tasks.read_files.Task6590;
-import root.tasks.read_files.Task6989;
-import root.tasks.read_files.Task7788;
+import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
+import root.tasks.search_in_array.Task2497;
 import root.tasks.search_in_array.Task4515;
+import root.tasks.search_in_array.Task7035;
 import root.tasks.use_std_lib.Task9279;
 
 import java.io.BufferedReader;
@@ -218,16 +217,16 @@ public class Application {
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
-                .addTask(7472)
+                .addTask(new Task7472())
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
-                .addExample(4140)
-                .addTask(2959)
-                .addTask(7271)
-                .addTask(2632)
-                .addTask(4343)
+                .addExample(new Task4140())
+                .addTask(new Task2959())
+                .addTask(new Task7271())
+                .addTask(new Task2632())
+                .addTask(new Task4343())
                 .addTask(7474)
 
                 .withGroup("Отработка присваивания")
@@ -258,15 +257,15 @@ public class Application {
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
-                .addTask(7472)
+                .addTask(new Task7472())
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
-                .addExample(4140)
-                .addTask(2959)
-                .addTask(7271)
-                .addTask(2632)
+                .addExample(new Task4140())
+                .addTask(new Task2959())
+                .addTask(new Task7271())
+                .addTask(new Task2632())
                 .addTask(4343)
                 .addTask(7474)
 
@@ -462,9 +461,9 @@ public class Application {
     private static void fillLoops(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
-                .addExample(1315)
-                .addTask(1631)
-                .addTask(2594)
+                .addExample(new Task1315())
+                .addTask(new Task1631())
+                .addTask(new Task2594())
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
@@ -472,6 +471,7 @@ public class Application {
                 .addTask(3550)
                 .addTask(1139)
                 .addTask(5301)
+                .addTask(new Task1259())
 
                 .withGroup("Один цикл за другим")
                 .addTask(7086)
@@ -524,6 +524,7 @@ public class Application {
 
                 .withGroup("Просто сложные задачи")
                 .addCitation("link_c2_p9.2")
+                .addTask(new Task6332())
                 .addTask(7517)
                 .addTask(5448)
                 .addTask(6572)
@@ -547,13 +548,12 @@ public class Application {
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
-                .addTask(8557)
+                .addTask(new Task8557())
                 .addCitation("link_c3_p12.8")
-                .addTask(1223)
-                .addTask(8311)
-                .addTask(6563)
+                .addTask(new Task1223())
+                .addTask(new Task8311())
+                .addTask(new Task6563())
 
-                //тут требуется выводить элементы по порядку, а это разбирается в задачах по обработке массивов циклом
                 .withGroup("Запись в массив")
                 .addExample(new Task9923())
                 .addTask(new Task1331())
@@ -565,8 +565,8 @@ public class Application {
 
                 .withGroup("Перестановки элементов")
                 .addExample(new Task3134())
-                .addTask(9711)
-                .addTask(7085)
+                .addTask(new Task9711())
+                .addTask(new Task7085())
                 .addTask(8820)
                 .addTask(3333)
                 .addTask(8471)
@@ -583,12 +583,6 @@ public class Application {
                 .addTask(new Task8613())//чтение элементов массива по индексу
                 .addTask(2390)//вложенные циклы
                 .addTask(7534)//вложенные циклы
-
-                .withGroup("Сортировка массива вставкой ?может быть пузырьком?")
-                .addExample(2173)//понятие отсортированного массива
-                .addTask(7290)//подсчет количества
-                .addTask(4497)//просмотр массива и замена
-                .addTask(3218)//сортировка массива
 
                 .withGroup("Задачи повышенного уровня сложности")
                 .addTask(9576)
@@ -612,10 +606,16 @@ public class Application {
                 .withGroup("Вычисление агрегатов в массиве")
                 .addExample(8696)
                 .addTask(5969)
-                .addTask(5170)
+                .addTask(5170)//подсчет количества делителей
                 .addTask(3946)
                 .addTask(6497)
                 .addTask(5648)
+
+                .withGroup("Сортировка массива вставкой")
+                .addExample(7290)//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой
+                .addTask(2173)//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
+                .addTask(4497)//просмотр массива и замена
+                .addTask(3218)//сортировка массива
 
                 .withGroup("Агрегат по группам")
                 .addTask(7260)
@@ -641,18 +641,19 @@ public class Application {
                 .withGroup("Сопоставление массивов")
                 .addExample(7369)//наглядное сопоставление двух массивов
                 .addTask(6988)//синхронный просмотр двух массивов
+                .addTask(new Task2497())//все числа первого массива меньше всех чисел второго массива
                 .addTask(5894)//неявное сопоставление + подсчет количества
                 .addTask(new Task4515())//сопоставление массива с самим собой
                 .addTask(9827)//сопоставление массивов MINUS
                 .addTask(7793)//сопоставление, все виды
 
                 .withGroup("Поиск минимального")
-                .addExample(7035)
+                .addExample(new Task7035())
                 .addTask(new Task1522())//поиск максимального и поиск минимального
-                .addTask(9271)
-                .addTask(8769)
-                .addTask(4707)
-                .addTask(1392)
+                .addTask(9271)//поиск и манипуляции с массивом
+                .addTask(8769)//минимальное в участке массива
+                .addTask(4707)//сортировка по возрастанию пузырьком
+                .addTask(1392)//вычисление медианы
                 .addTask(6492)//Сначала найти максимальное, от которого зависит количество строк
 
                 //Подготовительной задачей будет
@@ -712,6 +713,8 @@ public class Application {
                 .addTask(4769)
                 .addExample(new Task7788())
                 .addTask(new Task6989())
+                .addTask(new Task6170())
+                .addTask(new Task8665())
                 .addTask(1761)
                 .addCitation("link_c2_p8.3")
                 .addTask(9930)

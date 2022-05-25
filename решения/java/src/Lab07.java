@@ -102,18 +102,6 @@ public class Lab07 {
         task6988("qaz wsx vbn rfv tgb", "qaz wsx edc");
     }
 
-    public static void step6563() {
-        System.out.println();
-        System.out.println("6563");
-        task6563("qw er ty");
-        task6563("qw er ty ui op");
-        task6563("asd fgh jkl");
-        task6563("single");
-        task6563("first second");
-        task6563("");
-        task6563("q w e r a s d f z x c v");
-    }
-
     public static void step8471() {
         System.out.println();
         System.out.println("8471");
@@ -440,30 +428,6 @@ public class Lab07 {
         return ret;
     }
 
-    public static List<String> task8311(int b, int e, String raw) throws IllegalArgumentException {
-        String[] arr = raw.split(" ");
-        if (b < 0 || b >= arr.length) {
-            throw new IllegalArgumentException("Число B должно быть в интервале [0, размер массива)");
-        }
-        if (e < 0 || e >= arr.length) {
-            throw new IllegalArgumentException("Число E должно быть в интервале [0, размер массива)");
-        }
-        List<String> ret = new ArrayList<>();
-        int i, n;
-        if (b < e) {
-            i = b;
-            n = e;
-        } else {
-            i = e;
-            n = b;
-        }
-        while (i <= n) {
-            ret.add(arr[i]);
-            i++;
-        }
-        return ret;
-    }
-
     public static List<Integer> task9774(int m, String raw) {
         List<Integer> ret = new ArrayList<>();
         if (raw.isEmpty()) {
@@ -482,16 +446,6 @@ public class Lab07 {
         }
     }
 
-    public static List<String> task9711(String raw) {
-        String[] arr = raw.split(" ");
-        List<String> ret = new ArrayList<>();
-        ret.add(arr[arr.length - 1]);
-        for (int i = 0; i < arr.length - 1; i++) {
-            ret.add(arr[i]);
-        }
-        return ret;
-    }
-
     public static List<String> task3333(int s, String raw) {
         String[] arr = raw.split(" ");
         List<String> ret = new ArrayList<>();
@@ -508,27 +462,6 @@ public class Lab07 {
             ret.add(arr[i]);
         }
         return ret;
-    }
-
-    public static String task7085(int s, String raw) {
-        String[] arr = raw.split(" ");
-        if (s <= 0 || arr.length <= s) {
-            throw new IllegalArgumentException("Количество позиций при сдвиге должно быть в интервале [0, длина массива)");
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int j = 0; j < s; j++) {
-            String t = arr[arr.length - 1];
-            for (int i = arr.length - 1; i > 0; i--) {
-                arr[i] = arr[i - 1];
-            }
-            arr[0] = t;
-            for (int i = 0; i < arr.length; i++) {
-                sb.append(arr[i]);
-                sb.append(' ');
-            }
-            sb.append('\n');
-        }
-        return sb.toString();
     }
 
     public static int task7290(int b, String raw) throws IllegalArgumentException {
@@ -743,30 +676,6 @@ public class Lab07 {
             }
         }
         return count;
-    }
-
-    public static String task7035(String raw) {
-        String[] arr = raw.split(" ");
-        int min = Integer.parseInt(arr[0]);
-        StringBuilder sb = new StringBuilder();
-        sb.append("Ход решения: \nНачинаю с ");
-        sb.append(min);
-        for (int i = 1; i < arr.length; i++) {
-            int current = Integer.parseInt(arr[i]);
-            sb.append("\nСравниваю ");
-            sb.append(min);
-            sb.append(" и ");
-            sb.append(current);
-            if (current < min) {
-                sb.append("\nЗаменяю");
-                min = current;
-            }
-        }
-        sb.append("\nВ массиве {");
-        sb.append(raw);
-        sb.append("} минимальный элемент это ");
-        sb.append(min);
-        return sb.toString();
     }
 
     public static List<Integer> task9271(String raw) {
@@ -1122,34 +1031,6 @@ public class Lab07 {
             }
             System.out.println();
         }
-    }
-
-    public static void task6563(String data) {
-        if (data.isEmpty()) {
-            System.out.println("Нет данных");
-            return;
-        }
-        String[] arr = data.split(" ");
-        System.out.print("BEGIN");
-        if (arr.length > 0) {
-            System.out.print(" ");
-            System.out.print(arr[0]);
-        }
-        if (arr.length > 1) {
-            System.out.print(" ");
-            System.out.println(arr[1]);
-        }
-        for (int i = 1; i < arr.length - 1; i++) {
-            System.out.println(arr[i - 1] + " " + arr[i] + " " + arr[i + 1]);
-        }
-        if (arr.length > 1) {
-            System.out.print(arr[arr.length - 2]);
-        }
-        if (arr.length > 0 && arr.length != 1) {
-            System.out.print(" ");
-            System.out.print(arr[arr.length - 1]);
-        }
-        System.out.println(" END");
     }
 
     public static void task6988(String left, String right) {

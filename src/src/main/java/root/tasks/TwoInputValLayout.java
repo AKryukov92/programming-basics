@@ -6,6 +6,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
     protected abstract void logic(String firstValue, String secondValue);
 
     protected void appendCheckValuesHeader(String firstVal, String secondVal, String resultName) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
@@ -23,6 +24,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
     }
 
     protected void appendCheckValuesHeader(String firstVal, String secondVal) {
+        tableOpened = true;
         writer.println("<table class='check_values'>");
         writer.println("<tr>");
         writer.println("<th rowspan='2'>Номер теста</th>");
