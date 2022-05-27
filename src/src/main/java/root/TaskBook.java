@@ -51,6 +51,10 @@ public class TaskBook {
         return this;
     }
 
+    public String getLangAbbreviation() {
+        return this.langAbbreviation;
+    }
+
     public TaskBook withGroup(String groupName) {
         if (lastGroupName == null) {
             lastGroupName = groupName;

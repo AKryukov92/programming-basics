@@ -5,6 +5,7 @@ import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
+import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
@@ -227,17 +228,17 @@ public class Application {
                 .addTask(new Task7271())
                 .addTask(new Task2632())
                 .addTask(new Task4343())
-                .addTask(7474)
+                .addTask(new Task7474())
 
                 .withGroup("Отработка присваивания")
-                .addExample(3246)
-                .addTask(7332)
-                .addTask(9781)
-                .addTask(6814)
+                .addExample(new TaskJs3246())
+                .addTask(new TaskJs7332())
+                .addTask(new TaskJs9781())
+                .addTask(new TaskJs6814())
 
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addExample(1640)
-                .addTask(8693)
+                .addExample(new Task1640())
+                .addTask(new Task8693())
         ;
     }
 
@@ -266,17 +267,27 @@ public class Application {
                 .addTask(new Task2959())
                 .addTask(new Task7271())
                 .addTask(new Task2632())
-                .addTask(4343)
-                .addTask(7474)
-
-                .withGroup("Отработка присваивания")
-                .addExample(3246)
-                .addTask(7332)
-                .addTask(9781)
-                .addTask(6814)
-
+                .addTask(new Task4343())
+                .addTask(new Task7474())
+        ;
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .withGroup("Отработка присваивания")
+                    .addExample(new TaskJava3246())
+                    .addTask(new TaskJava7332())
+                    .addTask(new TaskJava9781())
+                    .addTask(new TaskJava6814());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .withGroup("Отработка присваивания")
+                    .addExample(new TaskCs3246())
+                    .addTask(new TaskCs7332())
+                    .addTask(new TaskCs9781())
+                    .addTask(new TaskCs6814());
+        }
+        taskBook
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addExample(1640)
+                .addExample(new Task1640())
                 .addTask(8693)
         ;
     }
@@ -484,7 +495,7 @@ public class Application {
                 .addTask(4910)
 
                 .withGroup("Цикл внутри условия")
-                .addExample(6066)
+                .addExample(new Task6066())
                 .addTask(2565)
                 .addCitation("link_c4_p16.2")
                 .addTask(2321)
