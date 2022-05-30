@@ -219,6 +219,7 @@ public class Application {
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(new Task7472())
+                .withGroup("Конкатенация")
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
@@ -288,7 +289,7 @@ public class Application {
         taskBook
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
                 .addExample(new Task1640())
-                .addTask(8693)
+                .addTask(new Task8693())
         ;
     }
 

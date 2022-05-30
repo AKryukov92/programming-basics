@@ -15,7 +15,7 @@ public class TaskJs7332 extends LayoutMaker {
                 "b = c;\n" +
                 "b = a;\n" +
                 "a = b;\n" +
-                "out.innerHTML = a;");
+                "out.innerHTML = 'Задача 7332 ' + a;");
         appendFooter();
     }
 }

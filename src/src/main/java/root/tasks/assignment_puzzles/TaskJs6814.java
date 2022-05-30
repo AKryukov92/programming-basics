@@ -17,7 +17,7 @@ public class TaskJs6814 extends LayoutMaker {
                 "d = c;\n" +
                 "a = d;\n" +
                 "a = b;\n" +
-                "out.innerHTML = a;");
+                "out.innerHTML = 'Задача 6814 ' + a;");
         appendFooter();
     }
 }

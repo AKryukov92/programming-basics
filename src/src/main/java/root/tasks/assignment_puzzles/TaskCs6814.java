@@ -7,7 +7,8 @@ public class TaskCs6814 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.");
-        appendCheckSingle("String a, b, c, d;\n" +
+        appendCheckSingle("Console.WriteLine(\"Задача 6814\");" +
+                "String a, b, c, d;\n" +
                 "c = \"успех\";\n" +
                 "a = \"тоже провал\";\n" +
                 "b = \"провал\";\n" +

@@ -17,7 +17,7 @@ public class TaskJs9781 extends LayoutMaker {
                 "b = d;\n" +
                 "d = c;\n" +
                 "a = b;\n" +
-                "out.innerHTML = a;");
+                "out.innerHTML = 'Задача 9781 ' + a;");
         appendFooter();
     }
 }

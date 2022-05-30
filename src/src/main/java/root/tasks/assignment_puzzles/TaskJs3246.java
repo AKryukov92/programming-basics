@@ -13,7 +13,7 @@ public class TaskJs3246 extends LayoutMaker {
                 "c = b;\n" +
                 "a = b;\n" +
                 "b = c;\n" +
-                "out.innerHTML = a;");
+                "out.innerHTML = 'Задача 3246 ' + a;");
         appendFooter();
     }
 }

@@ -8,7 +8,8 @@ public class TaskJava9781 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.");
-        appendCheckSingle("String a, b, c, d;\n" +
+        appendCheckSingle("System.out.println(\"Задача 9781\");" +
+                "String a, b, c, d;\n" +
                 "c = \"успех\";\n" +
                 "a = \"тоже провал\";\n" +
                 "b = \"провал\";\n" +
