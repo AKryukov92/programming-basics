@@ -8,6 +8,7 @@ public abstract class LayoutMaker {
     protected boolean headerOpened = false;
     protected boolean tableOpened = false;
     PrintStream writer = System.out;
+    private int nextOrderedIndex = 1;
 
     public int getId() {
         String className = this.getClass().getName();
@@ -39,6 +40,27 @@ public abstract class LayoutMaker {
         writer.println("<div id='task" + getId() + "' class='task_block'>");
         writer.println("<div class='task_id'>" + getId() + "</div>");
         writer.println("<h3>Задача</h3>");
+    }
+
+    protected void appendSubheading(String headerText) {
+        writer.print("<h4>");
+        writer.print(headerText);
+        writer.println("</h4>");
+    }
+
+    protected void appendOrdered(String... elements) {
+        writer.print("<ol start='" + nextOrderedIndex + "'>");
+        for (String element : elements) {
+            writer.print("<li>");
+            writer.print(element);
+            writer.print("</li>");
+            nextOrderedIndex++;
+        }
+        writer.print("</ol>");
+    }
+
+    protected void resetOrdered() {
+        nextOrderedIndex = 1;
     }
 
     protected void appendTaskDesc(String taskDescription) {

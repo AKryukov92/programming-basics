@@ -11,6 +11,9 @@ import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
+import root.tasks.methods.TaskCs8920;
+import root.tasks.methods.TaskJava8920;
+import root.tasks.methods.TaskJs8920;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -785,8 +788,17 @@ public class Application {
                 .addCitation("link_c2_p7.2")
 
                 .withGroup("Аргумент-массив")
-                .addExample(3946)
-                .addTask(4283)
+                .addExample(3946);
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava8920());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addTask(new TaskCs8920());
+        } else if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook.addTask(new TaskJs8920());
+        } else {
+            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+        taskBook
                 .addTask(6497)
 
                 .withGroup("Модификация массива-аргумента")
