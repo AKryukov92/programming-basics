@@ -19,6 +19,7 @@ import root.tasks.methods.TaskJs8920;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
+import root.tasks.ranges.Task8867;
 import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task2497;
@@ -459,7 +460,7 @@ public class Application {
                 .withGroup("Работа с интервалами значений")
                 .addExample(8715)
                 .addTask(3770)
-                .addTask(8867)
+                .addTask(new Task8867())
                 .addTask(7865)
                 .addCitation("link_c4_p19.3")
                 .addTask(7991)
