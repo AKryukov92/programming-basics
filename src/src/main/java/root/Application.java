@@ -7,6 +7,8 @@ import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
+import root.tasks.calculations.Task7243;
+import root.tasks.calculations.Task9164;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
@@ -316,7 +318,7 @@ public class Application {
                 .addExample(7711)
                 .addTask(new Task3474())
                 .addTask(1262)
-                .addTask(9164)
+                .addTask(new Task9164())
                 .addTask(3558)
                 .addTask(4913)
         ;
@@ -358,7 +360,7 @@ public class Application {
                 .addExampleWithManual(7711)
                 .addTask(new Task3474())
                 .addTask(1262)
-                .addTask(9164)
+                .addTask(new Task9164())
                 .addTask(3558)
                 .addTask(4913)
         ;
@@ -420,7 +422,7 @@ public class Application {
                 .addCitation("link_c4_p19.4")
                 .addTask(8174)
                 .addTask(7178)
-                .addTask(7243)
+                .addTask(new Task7243())
                 .addTask(4257)
                 .addTask(3883)
                 .addTask(1763)
