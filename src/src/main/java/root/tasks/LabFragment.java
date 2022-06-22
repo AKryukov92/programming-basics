@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 public abstract class LabFragment {
     protected String srcDirectory;
     protected String langAbbreviation;
-    private String content = null;
+    protected String content = null;
 
     LabFragment(String srcDirectory) {
         this.srcDirectory = srcDirectory;
