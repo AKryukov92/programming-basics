@@ -19,6 +19,9 @@ import root.tasks.methods.TaskJs8920;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
+import root.tasks.ranges.Task4858;
+import root.tasks.ranges.Task6589;
+import root.tasks.ranges.Task7991;
 import root.tasks.ranges.Task8867;
 import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
@@ -463,10 +466,10 @@ public class Application {
                 .addTask(new Task8867())
                 .addTask(7865)
                 .addCitation("link_c4_p19.3")
-                .addTask(7991)
+                .addTask(new Task7991())
                 .addTask(8751)
-                .addTask(4858)
-                .addTask(6589)
+                .addTask(new Task4858())
+                .addTask(new Task6589())
                 .addTask(3864)
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
@@ -508,6 +511,7 @@ public class Application {
                 .addTask(2321)
                 .addTask(5053)
                 .addTask(4338)
+                .addTask(new Task4531())
 
                 .withGroup("Условие внутри цикла")
                 .addExample(7585)
@@ -1037,10 +1041,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        //makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        //makeFiles(taskBooksJs, css, gitHash);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
