@@ -13,9 +13,7 @@ import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
-import root.tasks.methods.TaskCs8920;
-import root.tasks.methods.TaskJava8920;
-import root.tasks.methods.TaskJs8920;
+import root.tasks.methods.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -779,11 +777,30 @@ public class Application {
         taskBook.withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
                 .addCitation("info01")
-                .withGroup("Проверка вспомогательной программой")
-                .addExample(1860)
-                .addTask(4140)
-                .addTask(2632)
-                .addTask(7474)
+                .withGroup("Проверка вспомогательной программой");
+
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addExample(new TaskJava8307())
+                    .addTask(new TaskJava8813())
+                    .addTask(new TaskJava5823())
+                    .addTask(new TaskJava2772());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .addExample(new TaskCs8307())
+                    .addTask(new TaskCs8813())
+                    .addTask(new TaskCs5823())
+                    .addTask(new TaskCs2772());
+        } else if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook
+                    .addExample(new TaskJs8307())
+                    .addTask(new TaskJs8813())
+                    .addTask(new TaskJs5823())
+                    .addTask(new TaskJs2772());
+        } else {
+            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+        taskBook
                 .addCitation("link_c2_p7.1")
 
                 .withGroup("Проверка юнит-тестами")
@@ -1041,10 +1058,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+        // makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

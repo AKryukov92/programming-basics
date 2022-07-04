@@ -1,6 +1,8 @@
 package root.tasks;
 
+import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 public abstract class MultipleInputValLayout extends LayoutMaker {
     private int headerCount;
@@ -41,5 +43,20 @@ public abstract class MultipleInputValLayout extends LayoutMaker {
         System.setOut(oldOut);
         writer.println("</td>");
         writer.println("</tr>");
+    }
+
+    protected String wrapLogic(String... values) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            PrintStream tempStream = new PrintStream(baos, true, utf8);
+            PrintStream oldOut = System.out;
+            System.setOut(tempStream);
+            logic(values);
+            System.setOut(oldOut);
+            tempStream.close();
+            return baos.toString(utf8);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

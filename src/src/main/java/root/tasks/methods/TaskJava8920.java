@@ -12,7 +12,7 @@ public class TaskJava8920 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте метод для решения задачи <a href=\"#task4283\" target=\"_blank\">4283</a>");
+        appendSubheading("Реализуйте метод для решения задачи " + linkToTask(4283));
         appendOrdered(
                 "В классе Methods реализуйте публичный статический метод task4283.",
                 "Он принимает в качестве аргументов 1 строковое значение и массив строковых значений. Метод возвращает целое число.",

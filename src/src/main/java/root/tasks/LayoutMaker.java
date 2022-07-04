@@ -71,7 +71,7 @@ public abstract class LayoutMaker {
 
     protected void appendCheckSingle(String text) {
         writer.print("<div class='check_single preformatted'>");
-        writer.println(text);
+        writer.print(text);
         writer.println("</div>");
     }
 
@@ -83,6 +83,10 @@ public abstract class LayoutMaker {
     protected void appendFooter() {
         headerOpened = false;
         writer.println("</div>");
+    }
+
+    protected static String linkToTask(int id) {
+        return "<a href=\"#task" + id + "\" target=\"_blank\">ЛР#" + id + "(открыть в новой вкладке)</a>";
     }
 
     @Override

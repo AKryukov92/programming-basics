@@ -16,25 +16,38 @@ namespace PaintingApp
         {
             InitializeComponent();
             PenTool p = PenTool.prepare(this);
+            //движение к началу линии
+            //после команд не остается следов на рисунке
             p.down();
             p.right();
+            //начало рисования
             p.startLine();
-            for (int i = 0; i < 5; i++)
-            {
-                p.right();
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                p.down();
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                p.left();
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                p.up();
-            }
+            //рисование
+            //после команд остаются следы на рисунке
+            p.right();
+            p.right();
+            p.right();
+            p.right();
+            p.right();
+
+            p.down();
+            p.down();
+            p.down();
+            p.down();
+            p.down();
+
+            p.left();
+            p.left();
+            p.left();
+            p.left();
+            p.left();
+
+            p.up();
+            p.up();
+            p.up();
+            p.up();
+            p.up();
+
             p.endLine();
         }
     }

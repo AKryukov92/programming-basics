@@ -12,7 +12,7 @@ public class TaskJs8920 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте функцию для решения задачи <a href=\"#task4283\" target=\"_blank\">4283(открыть в новой вкладке)</a>");
+        appendSubheading("Реализуйте функцию для решения задачи " + linkToTask(4283));
         appendOrdered(
                 "В файле для исходного кода реализуйте функцию task4283.",
                 "В качестве аргументов ей будут передавать 1 строковое значение и массив строковых значений.",
