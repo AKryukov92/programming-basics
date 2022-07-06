@@ -572,6 +572,7 @@ public class Application {
                 .addCitation("link_c3_p12.8")
                 .addTask(new Task1223())
                 .addTask(new Task8311())
+                .addTask(new Task3791())
                 .addTask(new Task6563())
 
                 .withGroup("Запись в массив")
