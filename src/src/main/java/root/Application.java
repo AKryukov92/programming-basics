@@ -486,14 +486,14 @@ public class Application {
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
-                .addTask(3762)
-                .addTask(3550)
-                .addTask(1139)
-                .addTask(5301)
+                .addTask(new Task3762())
+                .addTask(new Task3550())
+                .addTask(new Task1139())
+                .addTask(new Task5301())
                 .addTask(new Task1259())
 
                 .withGroup("Один цикл за другим")
-                .addTask(7086)
+                .addTask(new Task7086())
 
                 .withGroup("Графический диктант с циклами один за другим")
                 .addExample(6062)
