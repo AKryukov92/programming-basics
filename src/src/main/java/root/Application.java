@@ -14,6 +14,9 @@ import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
 import root.tasks.methods.*;
+import root.tasks.objects.TaskCs6011;
+import root.tasks.objects.TaskJava6011;
+import root.tasks.objects.TaskJs6011;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -888,8 +891,15 @@ public class Application {
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)")
-                .addExample(5789)
-                .addExample(6011)
+                .addExample(5789);
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava6011());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addTask(new TaskCs6011());
+        } else {
+            taskBook.addTask(new TaskJs6011());
+        }
+        taskBook
                 .addTask(6589)
                 .addTask(6037)
 
@@ -1059,10 +1069,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        // makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        //makeFiles(taskBooksJs, css, gitHash);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
