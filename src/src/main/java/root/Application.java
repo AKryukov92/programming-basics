@@ -9,6 +9,7 @@ import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.calculations.Task7243;
 import root.tasks.calculations.Task9164;
+import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
@@ -16,6 +17,7 @@ import root.tasks.loops.*;
 import root.tasks.methods.*;
 import root.tasks.objects.TaskCs6011;
 import root.tasks.objects.TaskJava6011;
+import root.tasks.objects.TaskJava7040;
 import root.tasks.objects.TaskJs6011;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
@@ -429,7 +431,6 @@ public class Application {
                 .addTask(7178)
                 .addTask(new Task7243())
                 .addTask(4257)
-                .addTask(3883)
                 .addTask(1763)
                 .addTask(1945)
                 .addTask(4859)
@@ -438,6 +439,7 @@ public class Application {
                 .addExample(8878)
                 .addTask(6291)
                 .addTask(5662)
+                .addTask(new Task5116())
                 .addCitation("link_c4_p19.2")
                 .addTask(2291)
 
@@ -465,6 +467,7 @@ public class Application {
                 .addExample(8715)
                 .addTask(3770)
                 .addTask(new Task8867())
+                .addTask(3883)
                 .addTask(7865)
                 .addCitation("link_c4_p19.3")
                 .addTask(new Task7991())
@@ -891,17 +894,21 @@ public class Application {
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)")
-                .addExample(5789);
+                .addExample(5789);//Point.distanceBetween(values)
         if (taskBook.getLangAbbreviation().equals("java")) {
-            taskBook.addTask(new TaskJava6011());
+            taskBook
+                    .addTask(new TaskJava6011())//Point.distanceBetween(Points)
+                    .addTask(new TaskJava7040())//Range.contains(values)
+            .addTask(new TaskJava1606())//Range.contains(Range+value)
+            ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
-            taskBook.addTask(new TaskCs6011());
+            taskBook.addTask(new TaskCs6011());//Point.distanceBetween(Points)
         } else {
-            taskBook.addTask(new TaskJs6011());
+            throw new RuntimeException("Неожиданный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
         taskBook
-                .addTask(6589)
-                .addTask(6037)
+                .addTask(6589)//Range.hasIntersection(values)
+                .addTask(6037)//Range.hasIntersection(Ranges)
 
                 .withGroup("Статический метод для создания экземпляров")
                 .addExample(4491)
@@ -954,7 +961,7 @@ public class Application {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Объекты как контейнеры данных (АТД)")
                 .addExample(5789)
-                .addExample(6011)
+                .addExample(new TaskJs6011())
                 .addTask(6589)
                 .addTask(6037)
 
@@ -1069,10 +1076,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+        //makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
