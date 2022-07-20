@@ -15,10 +15,7 @@ import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
 import root.tasks.methods.*;
-import root.tasks.objects.TaskCs6011;
-import root.tasks.objects.TaskJava6011;
-import root.tasks.objects.TaskJava7040;
-import root.tasks.objects.TaskJs6011;
+import root.tasks.objects.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
@@ -899,7 +896,7 @@ public class Application {
             taskBook
                     .addTask(new TaskJava6011())//Point.distanceBetween(Points)
                     .addTask(new TaskJava7040())//Range.contains(values)
-            .addTask(new TaskJava1606())//Range.contains(Range+value)
+                    .addTask(new TaskJava1606())//Range.contains(Range+value)
             ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
             taskBook.addTask(new TaskCs6011());//Point.distanceBetween(Points)
@@ -912,8 +909,11 @@ public class Application {
 
                 .withGroup("Статический метод для создания экземпляров")
                 .addExample(4491)
-                .addTask(1193)
-
+                .addTask(1193);
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava8347());
+        }
+        taskBook
                 .withGroup("Параметризованный конструктор")
                 .addExample(7301)
                 .addTask(2000)

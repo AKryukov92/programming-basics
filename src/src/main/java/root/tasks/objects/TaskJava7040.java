@@ -5,23 +5,22 @@ import root.tasks.MultipleInputValLayout;
 public class TaskJava7040 extends MultipleInputValLayout {
     @Override
     protected void logic(String... args) {
+        double left = Double.parseDouble(args[0]);
+        double right = Double.parseDouble(args[1]);
+        double x = Double.parseDouble(args[2]);
         try {
-            boolean result = Range.contains(
-                    Double.parseDouble(args[0]),
-                    Double.parseDouble(args[1]),
-                    Double.parseDouble(args[2])
-            );
-            if (result){
-                System.out.println("Интервал содержит число");
+            boolean result = Range.contains(left, right, x);
+            if (result) {
+                System.out.printf("Интервал [%f,%f) содержит число %f", left, right, x);
             } else {
-                System.out.println("Число за пределами интервала");
+                System.out.printf("Число %f за пределами интервала [%f,%f)", x, left, right);
             }
         } catch (IllegalArgumentException ex) {
-            System.out.println("Некорректный интервал");
+            System.out.println("Некорректный интервал [%f,%f)");
         }
     }
 
-    private static class Range {
+    public static class Range {
         public static boolean contains(double left, double right, double x) {
             if (left > right) {
                 throw new IllegalArgumentException("Некорректный интервал");
@@ -57,13 +56,12 @@ public class TaskJava7040 extends MultipleInputValLayout {
         appendOrdered(
                 "В папке для юнит-тестов создайте класс RangeSuite.",
                 "В классе RangeSuite создайте юнит-тест doublesContainDoubleTest.",
-                "В теле метода doublesContainDoubleTest вызовите метод contains класса Range.",
-                "Убедитесь, что метод contains возвращает true если передать ему в качестве аргументов 5, 10, 7",
-                "Проверьте, что при передаче значений 20, 30, 3 метод contains возвращает false.",
                 "Объявите переменную actual и запишите в неё результат вызова метода contains с аргументами 100, 200, 300.",
                 "Проверьте, что переменная actual содержит false.",
+                "Убедитесь, что метод contains возвращает true если передать ему в качестве аргументов 5, 10, 7",
+                "Проверьте, что при передаче значений 20, 30, 3 метод contains возвращает false.",
                 "Проверьте, что метод contains выбрасывает исключение если передать ему 999, 1, 100"
-                );
+        );
         appendFooter();
     }
 }
