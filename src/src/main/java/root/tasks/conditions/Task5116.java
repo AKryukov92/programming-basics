@@ -11,7 +11,7 @@ public class Task5116 extends TwoInputValLayout {
             System.out.println("Оба условия истинны. " + r + " < 100 и 100 < " + k);
         }
         if (r < 100 && k <= 100) {
-            System.out.println("Условие на R истинно. " + r + " < 100");
+            System.out.println("Только условие на R истинно. " + r + " < 100");
         }
         if (100 <= r && 100 < k) {
             System.out.println("Только условие на K истинно. 100 < " + k);
