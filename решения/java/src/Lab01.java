@@ -155,23 +155,6 @@ public class Lab01 {
         System.out.println("\"" + a + "\"");
     }
 
-    public static void task7271(int x, int y){
-        System.out.println("INSERT INTO points (x, y)");
-        System.out.println("VALUES ('" + x + "','" + y + "');");
-        System.out.println();
-    }
-
-    public static void task2632(int cx, int cy, int r, String fill){
-        System.out.print("<circle cx=\"" + cx + "\" cy=\"" + cy + "\"");
-        System.out.println("r=\"" + r + "\" fill=\"" + fill + "\"/>");
-    }
-
-    public static void task4343(String user, String pass, String host, String port, String db){
-        System.out.println("User ID=" + user + ";Password=" + pass + ";");
-        System.out.println("Host=" + host + ";Port=" + port + ";Database=" + db + ";");
-        System.out.println();
-    }
-
     public static void task7474(int a, int b, int c){
         System.out.printf("Квадратное уравнение %s*x*x + %s*x + %s = 0.\n" +
             "Его дискриминант вычисляется по формуле: d = %s*%s - 4*%s*%s\n", a,b,c,b,b,a,c);

@@ -8,6 +8,7 @@ public abstract class LayoutMaker {
     protected boolean headerOpened = false;
     protected boolean tableOpened = false;
     PrintStream writer = System.out;
+    private int nextOrderedIndex = 1;
 
     public int getId() {
         String className = this.getClass().getName();
@@ -15,6 +16,12 @@ public abstract class LayoutMaker {
     }
 
     public String getContent() {
+        if (tableOpened) {
+            throw new RuntimeException("Заголовок таблицы не закрыт. Вызовите метод appendCheckValuesFooter. Задача " + this.getClass().getName());
+        }
+        if (headerOpened) {
+            throw new RuntimeException("Тэг задания не закрыт. Вызовите метод appendFooter. Задача " + this.getClass().getName());
+        }
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
             this.writer = new PrintStream(baos, true, utf8);
@@ -41,6 +48,27 @@ public abstract class LayoutMaker {
         writer.println("<h3>Задача</h3>");
     }
 
+    protected void appendSubheading(String headerText) {
+        writer.print("<h4>");
+        writer.print(headerText);
+        writer.println("</h4>");
+    }
+
+    protected void appendOrdered(String... elements) {
+        writer.print("<ol start='" + nextOrderedIndex + "'>");
+        for (String element : elements) {
+            writer.print("<li>");
+            writer.print(element);
+            writer.print("</li>");
+            nextOrderedIndex++;
+        }
+        writer.print("</ol>");
+    }
+
+    protected void resetOrdered() {
+        nextOrderedIndex = 1;
+    }
+
     protected void appendTaskDesc(String taskDescription) {
         writer.println("<div class='task_desc'>");
         writer.println(taskDescription);
@@ -49,7 +77,7 @@ public abstract class LayoutMaker {
 
     protected void appendCheckSingle(String text) {
         writer.print("<div class='check_single preformatted'>");
-        writer.println(text);
+        writer.print(text);
         writer.println("</div>");
     }
 
@@ -61,5 +89,14 @@ public abstract class LayoutMaker {
     protected void appendFooter() {
         headerOpened = false;
         writer.println("</div>");
+    }
+
+    protected static String linkToTask(int id) {
+        return "<a href=\"#task" + id + "\" target=\"_blank\">ЛР#" + id + "(открыть в новой вкладке)</a>";
+    }
+
+    @Override
+    public String toString() {
+        return getContent();
     }
 }

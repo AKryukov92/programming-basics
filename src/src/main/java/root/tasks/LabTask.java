@@ -77,7 +77,13 @@ public class LabTask extends LabFragment {
             String referenceId = referenceMatcher.group(2);
             String referenceName = referenceMatcher.group(3);
 
-            System.out.println("Fragment " + getSrcFilename() + " has reference to " + referenceId + " " + referenceName);
+            //TODO: correctly resolve link destination
+            if (this instanceof CodedTask) {
+                System.out.println("Coded task " + getId() + " has reference to " + referenceId + " " + referenceName);
+            } else {
+                System.out.println("Fragment " + getSrcFilename() + " has reference to " + referenceId + " " + referenceName);
+            }
+
             Optional<TaskBook> value = finder.getFirstTaskbookFilenameWithTask(referenceId);
             if (value.isPresent()) {
                 String linkTitle = "ЛР" + value.get().getLabIndex() + "#" + referenceId + "(открыть в новой вкладке)";

@@ -51,6 +51,10 @@ public class TaskBook {
         return this;
     }
 
+    public String getLangAbbreviation() {
+        return this.langAbbreviation;
+    }
+
     public TaskBook withGroup(String groupName) {
         if (lastGroupName == null) {
             lastGroupName = groupName;
@@ -218,6 +222,7 @@ public class TaskBook {
         writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2022. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
         writer.write("</body></html>");
         writer.close();
+        System.out.println("Taskbook file with name " + result.getAbsolutePath() + " has been made.");
         for (Manual man : manuals) {
             man.make(css);
         }

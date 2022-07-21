@@ -24,5 +24,7 @@ public class Task2594 extends OneInputValLayout {
         appendCheckValuesRow("w");
         appendCheckValuesRow("bp");
         appendCheckValuesRow("qq");
+        appendCheckValuesFooter();
+        appendFooter();
     }
 }

@@ -9,6 +9,10 @@ public class CodedTask extends LabTask {
 
     @Override
     protected String getContent() {
-        return maker.getContent();
+        if (content == null) {
+            return maker.getContent();
+        } else {
+            return content;
+        }
     }
 }

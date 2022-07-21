@@ -70,6 +70,8 @@ public class Task2497 extends TwoInputValLayout {
         appendCheckValuesRow("6,5,14,3", "9,8,7,6");
         appendCheckValuesRow("", "3,2,1");
         appendCheckValuesRow("9,8,7", "");
+        appendCheckValuesFooter();
+        appendFooter();
         appendTaskDesc("Попробуйте решить это задание правильно по смыслу, но так чтобы напечатался другой текст в тестах с нарушениями правила.");
     }
 

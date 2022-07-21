@@ -678,30 +678,6 @@ public class Lab07 {
         return count;
     }
 
-    public static String task7035(String raw) {
-        String[] arr = raw.split(" ");
-        int min = Integer.parseInt(arr[0]);
-        StringBuilder sb = new StringBuilder();
-        sb.append("Ход решения: \nНачинаю с ");
-        sb.append(min);
-        for (int i = 1; i < arr.length; i++) {
-            int current = Integer.parseInt(arr[i]);
-            sb.append("\nСравниваю ");
-            sb.append(min);
-            sb.append(" и ");
-            sb.append(current);
-            if (current < min) {
-                sb.append("\nЗаменяю");
-                min = current;
-            }
-        }
-        sb.append("\nВ массиве {");
-        sb.append(raw);
-        sb.append("} минимальный элемент это ");
-        sb.append(min);
-        return sb.toString();
-    }
-
     public static List<Integer> task9271(String raw) {
         String[] arr = raw.split(" ");
         List<Integer> ret = new ArrayList<>();

@@ -5,18 +5,29 @@ import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
+import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
+import root.tasks.calculations.Task7243;
+import root.tasks.calculations.Task9164;
+import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.loops.*;
+import root.tasks.methods.*;
+import root.tasks.objects.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
+import root.tasks.ranges.Task4858;
+import root.tasks.ranges.Task6589;
+import root.tasks.ranges.Task7991;
+import root.tasks.ranges.Task8867;
 import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task2497;
 import root.tasks.search_in_array.Task4515;
+import root.tasks.search_in_array.Task7035;
 import root.tasks.use_std_lib.Task9279;
 
 import java.io.BufferedReader;
@@ -217,26 +228,27 @@ public class Application {
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(new Task7472())
+                .withGroup("Конкатенация")
                 .addTask(1910)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
                 .addExample(new Task4140())
                 .addTask(new Task2959())
-                .addTask(7271)
-                .addTask(2632)
-                .addTask(4343)
-                .addTask(7474)
+                .addTask(new Task7271())
+                .addTask(new Task2632())
+                .addTask(new Task4343())
+                .addTask(new Task7474())
 
                 .withGroup("Отработка присваивания")
-                .addExample(3246)
-                .addTask(7332)
-                .addTask(9781)
-                .addTask(6814)
+                .addExample(new TaskJs3246())
+                .addTask(new TaskJs7332())
+                .addTask(new TaskJs9781())
+                .addTask(new TaskJs6814())
 
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addExample(1640)
-                .addTask(8693)
+                .addExample(new Task1640())
+                .addTask(new Task8693())
         ;
     }
 
@@ -263,20 +275,30 @@ public class Application {
                 .addCitation("link_c3_p10.2")
                 .addExample(new Task4140())
                 .addTask(new Task2959())
-                .addTask(7271)
-                .addTask(2632)
-                .addTask(4343)
-                .addTask(7474)
-
-                .withGroup("Отработка присваивания")
-                .addExample(3246)
-                .addTask(7332)
-                .addTask(9781)
-                .addTask(6814)
-
+                .addTask(new Task7271())
+                .addTask(new Task2632())
+                .addTask(new Task4343())
+                .addTask(new Task7474())
+        ;
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .withGroup("Отработка присваивания")
+                    .addExample(new TaskJava3246())
+                    .addTask(new TaskJava7332())
+                    .addTask(new TaskJava9781())
+                    .addTask(new TaskJava6814());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .withGroup("Отработка присваивания")
+                    .addExample(new TaskCs3246())
+                    .addTask(new TaskCs7332())
+                    .addTask(new TaskCs9781())
+                    .addTask(new TaskCs6814());
+        }
+        taskBook
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addExample(1640)
-                .addTask(8693)
+                .addExample(new Task1640())
+                .addTask(new Task8693())
         ;
     }
 
@@ -300,7 +322,7 @@ public class Application {
                 .addExample(7711)
                 .addTask(new Task3474())
                 .addTask(1262)
-                .addTask(9164)
+                .addTask(new Task9164())
                 .addTask(3558)
                 .addTask(4913)
         ;
@@ -342,7 +364,7 @@ public class Application {
                 .addExampleWithManual(7711)
                 .addTask(new Task3474())
                 .addTask(1262)
-                .addTask(9164)
+                .addTask(new Task9164())
                 .addTask(3558)
                 .addTask(4913)
         ;
@@ -404,9 +426,8 @@ public class Application {
                 .addCitation("link_c4_p19.4")
                 .addTask(8174)
                 .addTask(7178)
-                .addTask(7243)
+                .addTask(new Task7243())
                 .addTask(4257)
-                .addTask(3883)
                 .addTask(1763)
                 .addTask(1945)
                 .addTask(4859)
@@ -415,6 +436,7 @@ public class Application {
                 .addExample(8878)
                 .addTask(6291)
                 .addTask(5662)
+                .addTask(new Task5116())
                 .addCitation("link_c4_p19.2")
                 .addTask(2291)
 
@@ -441,13 +463,14 @@ public class Application {
                 .withGroup("Работа с интервалами значений")
                 .addExample(8715)
                 .addTask(3770)
-                .addTask(8867)
+                .addTask(new Task8867())
+                .addTask(3883)
                 .addTask(7865)
                 .addCitation("link_c4_p19.3")
-                .addTask(7991)
+                .addTask(new Task7991())
                 .addTask(8751)
-                .addTask(4858)
-                .addTask(6589)
+                .addTask(new Task4858())
+                .addTask(new Task6589())
                 .addTask(3864)
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
@@ -466,14 +489,14 @@ public class Application {
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
-                .addTask(3762)
-                .addTask(3550)
-                .addTask(1139)
-                .addTask(5301)
+                .addTask(new Task3762())
+                .addTask(new Task3550())
+                .addTask(new Task1139())
+                .addTask(new Task5301())
                 .addTask(new Task1259())
 
                 .withGroup("Один цикл за другим")
-                .addTask(7086)
+                .addTask(new Task7086())
 
                 .withGroup("Графический диктант с циклами один за другим")
                 .addExample(6062)
@@ -483,12 +506,13 @@ public class Application {
                 .addTask(4910)
 
                 .withGroup("Цикл внутри условия")
-                .addExample(6066)
+                .addExample(new Task6066())
                 .addTask(2565)
                 .addCitation("link_c4_p16.2")
                 .addTask(2321)
                 .addTask(5053)
                 .addTask(4338)
+                .addTask(new Task4531())
 
                 .withGroup("Условие внутри цикла")
                 .addExample(7585)
@@ -551,6 +575,7 @@ public class Application {
                 .addCitation("link_c3_p12.8")
                 .addTask(new Task1223())
                 .addTask(new Task8311())
+                .addTask(new Task3791())
                 .addTask(new Task6563())
 
                 .withGroup("Запись в массив")
@@ -647,7 +672,7 @@ public class Application {
                 .addTask(7793)//сопоставление, все виды
 
                 .withGroup("Поиск минимального")
-                .addExample(7035)
+                .addExample(new Task7035())
                 .addTask(new Task1522())//поиск максимального и поиск минимального
                 .addTask(9271)//поиск и манипуляции с массивом
                 .addTask(8769)//минимальное в участке массива
@@ -756,11 +781,30 @@ public class Application {
         taskBook.withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
                 .addCitation("info01")
-                .withGroup("Проверка вспомогательной программой")
-                .addExample(1860)
-                .addTask(4140)
-                .addTask(2632)
-                .addTask(7474)
+                .withGroup("Проверка вспомогательной программой");
+
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addExample(new TaskJava8307())
+                    .addTask(new TaskJava8813())
+                    .addTask(new TaskJava5823())
+                    .addTask(new TaskJava2772());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .addExample(new TaskCs8307())
+                    .addTask(new TaskCs8813())
+                    .addTask(new TaskCs5823())
+                    .addTask(new TaskCs2772());
+        } else if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook
+                    .addExample(new TaskJs8307())
+                    .addTask(new TaskJs8813())
+                    .addTask(new TaskJs5823())
+                    .addTask(new TaskJs2772());
+        } else {
+            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+        taskBook
                 .addCitation("link_c2_p7.1")
 
                 .withGroup("Проверка юнит-тестами")
@@ -772,8 +816,17 @@ public class Application {
                 .addCitation("link_c2_p7.2")
 
                 .withGroup("Аргумент-массив")
-                .addExample(3946)
-                .addTask(4283)
+                .addExample(3946);
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava8920());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addTask(new TaskCs8920());
+        } else if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook.addTask(new TaskJs8920());
+        } else {
+            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+        taskBook
                 .addTask(6497)
 
                 .withGroup("Модификация массива-аргумента")
@@ -838,15 +891,29 @@ public class Application {
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)")
-                .addExample(5789)
-                .addExample(6011)
-                .addTask(6589)
-                .addTask(6037)
+                .addExample(5789);//Point.distanceBetween(values)
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addTask(new TaskJava6011())//Point.distanceBetween(Points)
+                    .addTask(new TaskJava7040())//Range.contains(values)
+                    .addTask(new TaskJava1606())//Range.contains(Range+value)
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addTask(new TaskCs6011());//Point.distanceBetween(Points)
+        } else {
+            throw new RuntimeException("Неожиданный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+        taskBook
+                .addTask(6589)//Range.hasIntersection(values)
+                .addTask(6037)//Range.hasIntersection(Ranges)
 
                 .withGroup("Статический метод для создания экземпляров")
                 .addExample(4491)
-                .addTask(1193)
-
+                .addTask(1193);
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava8347());
+        }
+        taskBook
                 .withGroup("Параметризованный конструктор")
                 .addExample(7301)
                 .addTask(2000)
@@ -894,7 +961,7 @@ public class Application {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Объекты как контейнеры данных (АТД)")
                 .addExample(5789)
-                .addExample(6011)
+                .addExample(new TaskJs6011())
                 .addTask(6589)
                 .addTask(6037)
 

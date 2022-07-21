@@ -9,9 +9,14 @@
 		<script>
 			var canvasBlock = document.getElementById("canvas");
 			var p = new Pen(canvasBlock);
+			//движение к началу линии
+			//после команд не остается следов на рисунке
 			p.right();
 			p.down();
+			//начало рисования
 			p.startLine();
+            //рисование
+            //после команд остаются следы на рисунке
 			p.right();
 			p.right();
 			p.right();

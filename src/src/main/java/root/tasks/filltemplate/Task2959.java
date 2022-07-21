@@ -6,7 +6,7 @@ public class Task2959 extends OneInputValLayout {
     @Override
     protected void logic(String id) {
         System.out.println("SELECT first_name, last_name, group");
-        System.out.println("FROM students WHERE student_id = '" + id + "';");
+        System.out.printf("FROM students WHERE student_id = '%s';", id);
     }
 
     @Override
