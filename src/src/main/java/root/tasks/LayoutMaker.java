@@ -26,6 +26,12 @@ public abstract class LayoutMaker {
         try {
             this.writer = new PrintStream(baos, true, utf8);
             makeLayout();
+            if (tableOpened) {
+                appendCheckValuesFooter();
+            }
+            if (headerOpened) {
+                appendFooter();
+            }
             this.writer.close();
             return baos.toString(utf8);
         } catch (UnsupportedEncodingException e) {

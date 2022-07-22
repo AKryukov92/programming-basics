@@ -8,7 +8,7 @@ public class Task8867 extends MultipleInputValLayout {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
         int x = Integer.parseInt(args[2]);
-        if (b > a) {
+        if (a > b) {
             System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
             return;
         }
@@ -33,6 +33,7 @@ public class Task8867 extends MultipleInputValLayout {
         appendCheckValuesRow("-2", "7", "-10");
         appendCheckValuesRow("0", "5", "7");
         appendCheckValuesRow("4","4", "4");
+        appendCheckValuesRow("6", "4", "3");
         appendCheckValuesRow("4", "-2", "3");
         appendCheckValuesFooter();
         appendFooter();
