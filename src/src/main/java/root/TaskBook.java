@@ -130,6 +130,20 @@ public class TaskBook {
         return this;
     }
 
+    public TaskBook addExampleWithManual(LayoutMaker layoutMaker) {
+        LabTask task = new CodedTask(layoutMaker, getSourceDirectory(), true)
+                .withLangAbbreviation(langAbbreviation)
+                .withManual();
+        taskById.put(task.getId(), task);
+        fragmentsOfLastGroup.add(task);
+        Manual man = Manual.builder()
+                .withDirectory(getSourceDirectory())
+                .forTask(task.getId())
+                .withLangAbbreviation(langAbbreviation);
+        manuals.add(man);
+        return this;
+    }
+
     private void finalizeLastGroup() {
         groups.add(new TaskGroup(lastGroupName, sourceDirectory, fragmentsOfLastGroup));
         fragmentsOfLastGroup = new ArrayList<>();
