@@ -29,6 +29,8 @@ public class Task7085 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
+        appendTaskDesc("Пользователь вводит число S и данные - символы, разделенные пробелами." +
+                " Сдвинуть все элементы массива на 1 позицию вправо S раз.");
         appendCheckValuesHeader("data", "S");
         appendCheckValuesRow("q w e r t y", "1");
         appendCheckValuesRow("q w e r t y", "3");
