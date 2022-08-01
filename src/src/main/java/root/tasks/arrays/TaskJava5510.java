@@ -2,7 +2,7 @@ package root.tasks.arrays;
 
 import root.tasks.LayoutMaker;
 
-public class Task5510 extends LayoutMaker {
+public class TaskJava5510 extends LayoutMaker {
     protected void correct() {
         //все ломают
         //содержат основу исправления
@@ -53,7 +53,7 @@ public class Task5510 extends LayoutMaker {
     }
 
     public static void main(String[] args) {
-        Task5510 task = new Task5510();
+        TaskJava5510 task = new TaskJava5510();
         System.out.println(task.getContent());
         task.correct();
         task.wrong();

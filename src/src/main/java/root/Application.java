@@ -600,10 +600,25 @@ public class Application {
                 .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
 
                 .withGroup("Головоломки на перестановку")
-                .addTask(new Task8775())
-                .addTask(new Task5510())
+        ;
 
-                .withGroup("Перестановки элементов")
+        if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addTask(new TaskCs8775())
+                    .addTask(new TaskCs5510())
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addTask(new TaskJava8775())
+                    .addTask(new TaskJava5510())
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook.addTask(new TaskJs8775())
+                    .addTask(new TaskJs5510())
+            ;
+        } else {
+            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
+        }
+
+        taskBook.withGroup("Перестановки элементов")
                 .addExample(new Task3134())
                 .addTask(new Task9711())
                 .addTask(new Task7085())
