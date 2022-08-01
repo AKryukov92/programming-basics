@@ -622,8 +622,8 @@ public class Application {
                 .addExample(new Task3134())
                 .addTask(new Task9711())
                 .addTask(new Task7085())
-                .addTask(8820)
-                .addTask(3333)
+                .addTask(new Task8820())
+                .addTask(new Task3333())
                 .addTask(8471)
         ;
     }
