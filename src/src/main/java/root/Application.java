@@ -5,6 +5,8 @@ import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.Task6707;
 import root.tasks.arrays_of_numbers.Task7621;
 import root.tasks.arrays_of_numbers.Task8613;
+import root.tasks.assertions.Task4312;
+import root.tasks.assertions.Task9298;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.calculations.Task7243;
@@ -13,6 +15,9 @@ import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
+import root.tasks.internal_state.TaskJava3185;
+import root.tasks.internal_state.TaskJava8403;
+import root.tasks.internal_state.TaskJava9914;
 import root.tasks.loops.*;
 import root.tasks.methods.*;
 import root.tasks.objects.*;
@@ -390,12 +395,11 @@ public class Application {
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
                 .addCitation("link_c2_p8.1")
-                .addExample(9298)
-                .addTask(4312)
-                .addTask(3354)
+                .addExample(new Task9298())
+                .addTask(new Task4312())
+                .addTask(6522)
                 .addCitation("link_c3_p11.1")
-                .addTask(5201)
-                .addTask(2981)
+                .addTask(7619)
 
                 .withGroup("Ограничения при вычислении корня")
                 .addExample(8833)
@@ -413,11 +417,9 @@ public class Application {
                 .addTask(5870)
 
                 .withGroup("Практика")
-                .addTask(7619)
                 .addTask(3490)
                 .addTask(9622)
                 .addCitation("link_c3_p12.1")
-                .addTask(6522)
                 .addTask(7799)
                 .addTask(9354)
                 .addTask(3591)
@@ -427,9 +429,6 @@ public class Application {
                 .addTask(2790)
                 .addTask(2624)
                 .addTask(5871)
-                .addTask(4366)
-                .addTask(1346)
-                .addTask(8873)
         ;
     }
 
@@ -921,34 +920,41 @@ public class Application {
 
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
-                .withGroup("Классы как контейнеры данных (АТД)")
-                .addExample(5789);//Point.distanceBetween(values)
+                .withGroup("Классы как контейнеры данных (АТД)");
         if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook
+                    .addExample(new TaskJava5789())//Point.distanceBetween(values)
                     .addTask(new TaskJava6011())//Point.distanceBetween(Points)
                     .addTask(new TaskJava7040())//Range.contains(values)
                     .addTask(new TaskJava1606())//Range.contains(Range+value)
+                    .addTask(new TaskJava6589())//Range.hasIntersection(values)
+                    .addTask(new TaskJava6037())//Range.hasIntersection(Ranges)
+
+                    .withGroup("Статический метод для создания экземпляров")
+                    .addTask(new TaskJava4491())//Point.zero()
+                    .addTask(new TaskJava1193())//Point.make(x,y)
+                    .addTask(new TaskJava8347())//найти центр отрезка по двум концам
             ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
-            taskBook.addTask(new TaskCs6011());//Point.distanceBetween(Points)
+            taskBook
+                    .addExample(5789)//Point.distanceBetween(values)
+                    .addTask(new TaskCs6011())//Point.distanceBetween(Points)
+                    .addTask(6589)//Range.hasIntersection(values)
+                    .addTask(6037)//Range.hasIntersection(Ranges)
+
+                    .withGroup("Статический метод для создания экземпляров")
+                    .addExample(4491)//Point.zero()
+                    .addTask(1193)//Point.make(x,y)
+            ;
         } else {
             throw new RuntimeException("Неожиданный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
-        taskBook
-                .addTask(6589)//Range.hasIntersection(values)
-                .addTask(6037)//Range.hasIntersection(Ranges)
-
-                .withGroup("Статический метод для создания экземпляров")
-                .addExample(4491)
-                .addTask(1193);
-        if (taskBook.getLangAbbreviation().equals("java")) {
-            taskBook.addTask(new TaskJava8347());
         }
         taskBook
                 .withGroup("Параметризованный конструктор")
                 .addExample(7301)
                 .addTask(2000)
 
+                .withGroup("Практика")
                 .addTask(3864)
                 .addTask(4913)
                 .addTask(6522)
@@ -958,10 +964,18 @@ public class Application {
 
     private static void fillInternalState(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
-                .withGroup("Нестатические методы класса")
-                .addExample(8403)
-                .addExample(3185)
-                .addTask(9914)
+                .withGroup("Нестатические методы класса");
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addExample(new TaskJava8403())
+                    .addExample(new TaskJava3185())
+                    .addTask(new TaskJava9914());
+        } else {
+            taskBook.addExample(8403)
+                    .addExample(3185)
+                    .addTask(9914);
+        }
+        taskBook
                 .addTask(4916)
 
                 .withGroup("Сокрытие полей класса от внешнего мира. Сеттеры")
