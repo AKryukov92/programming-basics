@@ -11,6 +11,8 @@ import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
 import root.tasks.calculations.Task7243;
 import root.tasks.calculations.Task9164;
+import root.tasks.collections.TaskJava5087;
+import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
@@ -1024,8 +1026,14 @@ public class Application {
 
     private static void fillCollections(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab15")
-                .withGroup("Формирование листа")
-                .addExample(5087)
+                .withGroup("Формирование листа");
+        if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addExample(new TaskJava5087())
+            .addTask(new TaskJava8317());
+        } else {
+            taskBook.addExample(5087);
+        }
+        taskBook
                 .addTask(8418)
 
                 .withGroup("Реализация компаратора")
