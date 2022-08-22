@@ -34,6 +34,7 @@ public class Task1259 extends OneInputValLayout {
         appendCheckValuesRow("-100");
         appendCheckValuesRow("-1000");
         appendCheckValuesFooter();
+        appendTaskDesc("Попробуйте адаптировать решение задачи " + linkToTask(2594));
         appendFooter();
     }
 
