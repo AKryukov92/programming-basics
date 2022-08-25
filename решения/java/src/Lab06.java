@@ -163,46 +163,6 @@ public class Lab06 {
         return sb;
     }
 
-    public static StringBuilder task6066(StringBuilder sb, int a, int b) throws IllegalArgumentException {
-        if (a > b){
-            throw new IllegalArgumentException("Значение A должно быть не больше значения B");
-        }
-        int i = a;
-        while(i <= b){
-            sb.append(i);
-            sb.append("\n");
-            i++;
-        }
-        return sb;
-    }
-
-    public static StringBuilder task2565(StringBuilder sb, int a, int b) throws IllegalArgumentException {
-        if (a > b){
-            throw new IllegalArgumentException("Значение A должно быть не больше значения B");
-        }
-        int i = b;
-        while(i >= a){
-            sb.append(i);
-            sb.append(" ");
-            i--;
-        }
-        return sb;
-    }
-
-    public static StringBuilder task2594(StringBuilder sb, int a, String b) throws IllegalArgumentException {
-        if (a < 0){
-            throw new IllegalArgumentException("Значение A должно быть неотрицательным");
-        }
-        int i = 0;
-        sb.append("\"");
-        while(i < a){
-            sb.append(b);
-            i++;
-        }
-        sb.append("\"");
-        return sb;
-    }
-
     public static List<Integer> task2321(int a, int b){
         int i, n;
         List<Integer> ret = new ArrayList<>();

@@ -98,13 +98,7 @@ public class Application {
     private static TaskBook[] populateCsContent(String[] themeList) throws IOException {
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
 
-        fillPrintingTemplates(taskBooksCs[0]);
-        fillBasicCalculations(taskBooksCs[1]);
-        fillPreliminaryAssertions(taskBooksCs[2]);
-        fillMutualExclusives(taskBooksCs[3]);
-        fillRanges(taskBooksCs[4]);
-
-        taskBooksCs[5]
+        taskBooksCs[0]
                 .addResource("PaintingApp/PaintingApp.sln")
                 .addResource("PaintingApp/PaintingApp/App.config")
                 .addResource("PaintingApp/PaintingApp/MainForm.cs")
@@ -117,6 +111,11 @@ public class Application {
                 .addResource("PaintingApp/PaintingApp/Properties/Resources.resx")
                 .addResource("PaintingApp/PaintingApp/Properties/Settings.Designer.cs")
                 .addResource("PaintingApp/PaintingApp/Properties/Settings.settings");
+        fillPrintingTemplates(taskBooksCs[0]);
+        fillBasicCalculations(taskBooksCs[1]);
+        fillPreliminaryAssertions(taskBooksCs[2]);
+        fillMutualExclusives(taskBooksCs[3]);
+        fillRanges(taskBooksCs[4]);
         fillLoops(taskBooksCs[5]);
         fillNestedLoops(taskBooksCs[6]);
         fillBasicArrayOperations(taskBooksCs[7]);
@@ -139,15 +138,15 @@ public class Application {
 
     private static TaskBook[] populateJavaContent(String[] themeList) throws IOException {
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
+        taskBooksJava[0]
+                .addResource("graphics/PaintingApp.java")
+                .addResource("graphics/Pen.java");
         fillPrintingTemplates(taskBooksJava[0]);
         fillBasicCalculations(taskBooksJava[1]);
         fillPreliminaryAssertions(taskBooksJava[2]);
         fillMutualExclusives(taskBooksJava[3]);
         fillRanges(taskBooksJava[4]);
 
-        taskBooksJava[5]
-                .addResource("graphics/PaintingApp.java")
-                .addResource("graphics/Pen.java");
         fillLoops(taskBooksJava[5]);
         fillNestedLoops(taskBooksJava[6]);
         fillBasicArrayOperations(taskBooksJava[7]);
@@ -170,16 +169,16 @@ public class Application {
 
     private static TaskBook[] populateJsContent(String[] themeListJs) throws IOException {
         root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        taskBooksJs[0].addResource("base.html");
+        taskBooksJs[0]
+                .addResource("base.html")
+                .addResource("graphics.html")
+                .addResource("graphics.js");;
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
         fillMutualExclusives(taskBooksJs[3]);
         fillRanges(taskBooksJs[4]);
 
-        taskBooksJs[5]
-                .addResource("graphics.html")
-                .addResource("graphics.js");
         fillLoops(taskBooksJs[5]);
         fillNestedLoops(taskBooksJs[6]);
         fillBasicArrayOperations(taskBooksJs[7]);
@@ -322,6 +321,15 @@ public class Application {
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
                 .addExample(new Task1640())
                 .addTask(new Task8693())
+
+                //Ученики могут запросто писать циклы с одной итерацией, чтобы не задумываться когда его на самом деле нужно применять, а когда - нет.
+                //Поэтому тема перенесена в первую практическую
+                .withGroup("Графический диктант")
+                .addExample(6062)
+                .addTask(6955)
+                .addTask(9639)
+                .addTask(7353)
+                .addTask(4910)
         ;
     }
 
@@ -515,19 +523,13 @@ public class Application {
                 .withGroup("Один цикл за другим")
                 .addTask(new Task7086())
 
-                .withGroup("Графический диктант с циклами один за другим")
-                .addExample(6062)
-                .addTask(6955)
-                .addTask(9639)
-                .addTask(7353)
-                .addTask(4910)
-
                 .withGroup("Цикл внутри условия")
                 .addExample(new Task6066())
-                .addTask(2565)
+                .addTask(new Task2565())
                 .addCitation("link_c4_p16.2")
                 .addTask(2321)
                 .addTask(5053)
+                .addTask(new Task6663())
                 .addTask(4338)
                 .addTask(new Task4531())
 
