@@ -27,7 +27,7 @@ public abstract class MultipleInputValLayout extends LayoutMaker {
 
     protected void appendCheckValuesRow(String... values) {
         if (values.length != headerCount) {
-            throw new RuntimeException("Количество аргументов не совпадает с количеством ");
+            throw new RuntimeException("Количество аргументов не совпадает с количеством полученных данных");
         }
         writer.println("<tr>");
         writer.println("<td></td>");

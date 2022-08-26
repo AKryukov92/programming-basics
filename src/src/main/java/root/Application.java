@@ -531,6 +531,7 @@ public class Application {
                 .addTask(5053)
                 .addTask(new Task6663())
                 .addTask(4338)
+                .addTask(new Task7054())
                 .addTask(new Task4531())
 
                 .withGroup("Условие внутри цикла")
@@ -542,6 +543,7 @@ public class Application {
                 .addTask(3519)
                 .addTask(8770)
                 .addCitation("link_c3_p11.2")
+                .addTask(new Task2222())
                 .addTask(8418)
                 .addTask(8722)
 
@@ -560,9 +562,9 @@ public class Application {
                 .addTask(7323)
 
                 .withGroup("Циклы один за другим с вложением")
-                .addExample(5902)
                 .addTask(5568)
                 .addTask(2592)
+                .addTask(new Task6355())
 
                 .withGroup("Просто сложные задачи")
                 .addCitation("link_c2_p9.2")
@@ -575,6 +577,7 @@ public class Application {
                 .addTask(5411)
                 .addTask(5171)
                 .addTask(1862)
+                .addTask(5902)
                 .addTask(6302)
         ;
     }
