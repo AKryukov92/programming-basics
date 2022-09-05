@@ -63,19 +63,6 @@ public class Lab06 {
         task5170_2(-10);
     }
 
-    public static void step8722() {
-        System.out.println();
-        System.out.println("8722");
-        task8722(3, 11);
-        task8722(11, 3);
-        task8722(20, 17);
-        task8722(0, 6);
-        task8722(9, 0);
-
-        task8722(-1, 3);
-        task8722(5, -8);
-    }
-
     public static void step9249() {
         System.out.println();
         System.out.println("9249");
@@ -161,23 +148,6 @@ public class Lab06 {
             a++;
         }
         return sb;
-    }
-
-    public static List<Integer> task2321(int a, int b){
-        int i, n;
-        List<Integer> ret = new ArrayList<>();
-        if (a < b){
-            i = a;
-            n = b;
-        } else {
-            i = b;
-            n = a;
-        }
-        while(i <= n){
-            ret.add(i);
-            i++;
-        }
-        return ret;
     }
 
     public static List<Integer> task5053(int a, int b){
@@ -567,21 +537,6 @@ public class Lab06 {
             j++;
         }
         System.out.println();
-    }
-
-    public static StringBuilder task8770(StringBuilder sb, int x) {
-        int i = 30;
-        while (i <= 40){
-            sb.append(i);
-            if (i == x){
-                sb.append("+");
-            } else {
-                sb.append("-");
-            }
-            sb.append("\n");
-            i++;
-        }
-        return sb;
     }
 
     public static StringBuilder task4236(StringBuilder sb, int y) throws IllegalArgumentException {
@@ -998,37 +953,6 @@ public class Lab06 {
             System.out.print("#");
         }
         System.out.println();
-    }
-
-    public static void task8722(int a, int b) {
-        if (a < 0) {
-            System.out.println("Значение A должно быть неотрицательно");
-            return;
-        }
-        if (b < 0) {
-            System.out.println("Значение B должно быть неотрицательно");
-            return;
-        }
-        if (a < b){
-            for (int i = 0; i <= b; i++){
-                if (i <= a) {
-                    System.out.print(i);
-                } else {
-                    System.out.print(" ");
-                }
-                System.out.print(" ");
-                System.out.println(i);
-            }
-        } else {
-            for (int i = 0; i <= a; i++){
-                System.out.print(i);
-                System.out.print(" ");
-                if (i <= b) {
-                    System.out.print(i);
-                }
-                System.out.println();
-            }
-        }
     }
 
     public static void task7086(int x) {

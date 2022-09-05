@@ -16,6 +16,7 @@ public class Task2222 extends TwoInputValLayout {
         appendCheckValuesRow("0", "10");
         appendCheckValuesRow("2", "-4");
         appendCheckValuesRow("-2", "3");
+        appendCheckValuesFooter();
         appendFooter();
     }
 

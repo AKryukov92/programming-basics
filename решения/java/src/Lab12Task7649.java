@@ -98,27 +98,6 @@ public class Lab12Task7649 {
         System.out.println(sb6572);
     }
 
-    private static void Step8770() {
-        System.out.println();
-        System.out.println("8770");
-        int[] in8770 = {30, 37, 40, 8, 100};
-        String[] out8770 = {
-                "30+\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37+\n38-\n39-\n40-\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40+\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n",
-                "30-\n31-\n32-\n33-\n34-\n35-\n36-\n37-\n38-\n39-\n40-\n"
-        };
-        for (int i = 0; i < in8770.length; i++){
-            StringBuilder result = Lab06.task8770(new StringBuilder(), in8770[i]);
-            if (out8770[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result.toString());
-            }
-        }
-    }
 
     private static void Step8518() {
         System.out.println();

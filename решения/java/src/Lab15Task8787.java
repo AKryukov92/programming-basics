@@ -58,21 +58,6 @@ public class Lab15Task8787 {
         }
     }
 
-    static void Step2321() {
-        System.out.println();
-        System.out.println("2321");
-        int[] in2321a = {8, 691, 23};
-        int[] in2321b = {13, 702, 11};
-        for (int i = 0; i < in2321a.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab06.task2321(in2321a[i], in2321b[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-    }
 
     private static void Step9279() {
         System.out.println();
