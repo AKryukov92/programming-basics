@@ -517,6 +517,7 @@ public class Application {
                 .addTask(new Task3762())
                 .addTask(new Task3550())
                 .addTask(new Task1139())
+                .addTask(new Task9969())
                 .addTask(new Task5301())
                 .addTask(new Task1259())
 
