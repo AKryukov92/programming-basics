@@ -37,6 +37,7 @@ public class Task7991 extends MultipleInputValLayout {
         appendCheckValuesRow("13", "-11", "6");
         appendCheckValuesRow("8", "13", "-11");
         appendCheckValuesFooter();
+        appendTaskDesc("Эту задачу полезно решить двумя способами. Один способ - с помощью одной конструкции if(){} else if(){} else if(){}. Другой способ - сделать три отдельных if, у каждого из которых есть else.");
         appendFooter();
     }
 

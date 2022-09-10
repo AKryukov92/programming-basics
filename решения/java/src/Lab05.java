@@ -190,12 +190,6 @@ public class Lab05 {
             }
         }
         System.out.println();
-        System.out.println("7865");
-        int[] in7865 = {-5, -11, -3, 10, 5, 19, 0, -20, 20};
-        for (int i = 0; i < in7865.length; i++) {
-            System.out.println(task7865(in7865[i]));
-        }
-        System.out.println();
         System.out.println("8751");
         double[] in8751 = {-273, -10, -1, 0, 99, 100, 101, -274};
         for (int i = 0; i < in8751.length; i++) {
@@ -436,10 +430,6 @@ public class Lab05 {
             System.out.print(z);
         }
         System.out.println();
-    }
-
-    public static boolean task8715(int a, int b, int c) {
-        return a < b && b < c;
     }
 
     static void task8518(String x) {
@@ -792,16 +782,6 @@ public class Lab05 {
             return x + " попадает в интервал от " + a + " до " + b;
         } else {
             return x + " за пределами интервала от " + a + " до " + b;
-        }
-    }
-
-    public static String task7865(int x) {
-        if (-11 <= x && x <= -3) {
-            return "Красный";
-        } else if (5 <= x && x <= 19) {
-            return "Зеленый";
-        } else {
-            return "X не попадает ни в зеленый, ни в красный интервал";
         }
     }
 

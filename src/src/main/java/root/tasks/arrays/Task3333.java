@@ -34,8 +34,7 @@ public class Task3333 extends TwoInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит число S и данные - символы, разделенные пробелами." +
-                " Сдвинуть все элементы массива на S позиций вправо." +
-                " Эту задачу можно решить как " + linkToTask(7085) + " но для вас будет полезнее, если решите без вложенных циклов."
+                " Сдвинуть все элементы массива на S позиций вправо."
         );
         appendCheckValuesHeader("data", "S");
         appendCheckValuesRow("q w e r t y", "1");

@@ -13,7 +13,9 @@ import root.tasks.calculations.Task7243;
 import root.tasks.calculations.Task9164;
 import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
+import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
+import root.tasks.ranges.*;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
@@ -26,10 +28,6 @@ import root.tasks.objects.*;
 import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
-import root.tasks.ranges.Task4858;
-import root.tasks.ranges.Task6589;
-import root.tasks.ranges.Task7991;
-import root.tasks.ranges.Task8867;
 import root.tasks.read_files.*;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task2497;
@@ -446,6 +444,7 @@ public class Application {
         taskBook.withSourceDirectory("lab04")
                 .withGroup("Взаимоисключающие случаи")
                 .addExample(3072)
+                .addTask(new Task3770())
                 .addCitation("link_c4_p15.1")
                 .addTask(5980)
                 .addCitation("link_c4_p19.4")
@@ -486,13 +485,13 @@ public class Application {
     private static void fillRanges(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab05")
                 .withGroup("Работа с интервалами значений")
-                .addExample(8715)
-                .addTask(3770)
+                .addExample(new Task8715())
                 .addTask(new Task8867())
-                .addTask(3883)
-                .addTask(7865)
-                .addCitation("link_c4_p19.3")
                 .addTask(new Task7991())
+                .addTask(new Task7865())
+                .addTask(new Task9705())
+                .addTask(3883)
+                .addCitation("link_c4_p19.3")
                 .addTask(8751)
                 .addTask(new Task4858())
                 .addTask(new Task6589())
@@ -643,6 +642,7 @@ public class Application {
                 .addTask(new Task6707())//просмотр массива с условием
                 .addTask(9525)//просмотр массива с условиями
                 .addTask(new Task8613())//чтение элементов массива по индексу
+                .addTask(new Task9213())//фильтр по одному массиву, вывод из другого
                 .addTask(2390)//вложенные циклы
                 .addTask(7534)//вложенные циклы
 
