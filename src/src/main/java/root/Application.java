@@ -2,9 +2,7 @@ package root;
 
 import root.tasks.aggregates.Task2802;
 import root.tasks.arrays.*;
-import root.tasks.arrays_of_numbers.Task6707;
-import root.tasks.arrays_of_numbers.Task7621;
-import root.tasks.arrays_of_numbers.Task8613;
+import root.tasks.arrays_of_numbers.*;
 import root.tasks.assertions.Task4312;
 import root.tasks.assertions.Task9298;
 import root.tasks.assignment_puzzles.*;
@@ -637,13 +635,13 @@ public class Application {
     private static void fillArrayConversionToNumbers(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Конвертирование элементов")
-                .addExample(9774)//операции над массивом
-                .addTask(3940)//просмотр массива и простая операция
+                .addExample(new Task9774())//операции над массивом
+                .addTask(new Task3940())//просмотр массива и простая операция
                 .addTask(new Task6707())//просмотр массива с условием
-                .addTask(9525)//просмотр массива с условиями
+                .addTask(new Task9525())//просмотр массива с условиями
                 .addTask(new Task8613())//чтение элементов массива по индексу
                 .addTask(new Task9213())//фильтр по одному массиву, вывод из другого
-                .addTask(2390)//вложенные циклы
+                .addTask(new Task2390())//вложенные циклы
                 .addTask(7534)//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")

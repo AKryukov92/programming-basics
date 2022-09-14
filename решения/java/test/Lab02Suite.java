@@ -33,14 +33,6 @@ public class Lab02Suite {
     }
 
     @Test
-    public void task9774test(){
-        double[] data1 = {9, 8, 7, 6, 5, 4};
-        double[] expected1 = {-27, -24, -21, -18, -15, -12};
-        Lab07.task9774(-3, data1);
-        Assert.assertArrayEquals(expected1, data1, 0.0001);
-    }
-
-    @Test
     public void task9271test(){
         double[] data1 = {5, 4, 6, 2, 3, 1};
         double[] expected1 = {4, 3, 5, 1, 2, 0};
