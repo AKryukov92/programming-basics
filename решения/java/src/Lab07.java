@@ -139,40 +139,6 @@ public class Lab07 {
         System.out.println(String.join(" ", arr));
     }
 
-    public static void step2390() {
-        System.out.println();
-        System.out.println("2390");
-        task2390("9;8;7;6;5;4");
-        System.out.println("-----------");
-        task2390("15;0;4;20;10");
-        System.out.println("-----------");
-        task2390("3");
-        System.out.println("-----------");
-        task2390("");
-        System.out.println("-----------");
-        task2390("3;-1;6;-100000;4");
-    }
-
-    public static void step9525() {
-        System.out.println();
-        System.out.println("9525");
-        task9525("1,5,3,10,8,15,18,20");
-        System.out.println("-----------");
-        task9525("19,25,0,3,100,120");
-        System.out.println("-----------");
-        task9525("10,19,20,29,30,39");
-        System.out.println("-----------");
-        task9525("19,8,5,10,34,19");
-        System.out.println("-----------");
-        task9525("1,1,20,60,20,20,19,19");
-        System.out.println("-----------");
-        task9525("3,17,90,65");
-        System.out.println("-----------");
-        task9525("1,100,2,99,3,98,4,97,5,96");
-        System.out.println("-----------");
-        task9525("1,5,3");
-    }
-
     public static void step7260() {
         System.out.println();
         System.out.println("7260");
@@ -385,39 +351,6 @@ public class Lab07 {
             sumOfD += d * d;
         }
         return Math.sqrt(1.0 / (arr.length - 1.0) * sumOfD);
-    }
-
-    public static List<Integer> task3940(String left, String right) throws IllegalArgumentException {
-        String[] larr = left.split(" ");
-        String[] rarr = right.split(" ");
-        if (larr.length != rarr.length) {
-            throw new IllegalArgumentException("Размеры массивов должны быть одинаковы");
-        }
-        List<Integer> ret = new ArrayList<>();
-        for (int i = 0; i < larr.length; i++) {
-            int l = Integer.parseInt(larr[i]);
-            int r = Integer.parseInt(rarr[i]);
-            ret.add(l * r);
-        }
-        return ret;
-    }
-
-    public static List<Integer> task9774(int m, String raw) {
-        List<Integer> ret = new ArrayList<>();
-        if (raw.isEmpty()) {
-            return ret;
-        }
-        String[] arr = raw.split(" ");
-        for (int i = 0; i < arr.length; i++) {
-            ret.add(Integer.parseInt(arr[i]) * m);
-        }
-        return ret;
-    }
-
-    public static void task9774(double m, double[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] *= m;
-        }
     }
 
     public static List<String> task3333(int s, String raw) {
@@ -960,50 +893,6 @@ public class Lab07 {
                 sum = 0;
             }
             i++;
-        }
-    }
-
-    public static void task9525(String data) {
-        int TARGET = 19;
-        String[] arr = data.split(",");
-        if (arr.length % 2 == 1) {
-            System.out.println("У последнего интервала отсутствует одна из границ");
-            return;
-        }
-        for (int i = 0; i < arr.length; i += 2) {
-            int p = Integer.parseInt(arr[i]);
-            int q = Integer.parseInt(arr[i + 1]);
-            if (p < q) {
-                System.out.print("От " + p + " до " + q);
-                if (p <= TARGET && TARGET <= q) {
-                    System.out.print("<--");
-                }
-            } else {
-                System.out.print("От " + q + " до " + p);
-                if (q <= TARGET && TARGET <= p) {
-                    System.out.print("<--");
-                }
-            }
-            System.out.println();
-        }
-    }
-
-    public static void task2390(String data) {
-        if (data.isEmpty()) {
-            System.out.println("Нет данных");
-            return;
-        }
-        String[] arr = data.split(";");
-        for (int i = 0; i < arr.length; i++) {
-            int value = Integer.parseInt(arr[i]);
-            if (value < 0) {
-                System.out.println("Элемент массива на индексе " + i + " меньше нуля");
-                continue;
-            }
-            for (int j = 0; j < value; j++) {
-                System.out.print("#");
-            }
-            System.out.println();
         }
     }
 

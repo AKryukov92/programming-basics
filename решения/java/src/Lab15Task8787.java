@@ -253,55 +253,6 @@ public class Lab15Task8787 {
         }
     }
 
-    private static void Step9774() {
-        System.out.println();
-        System.out.println("9774");
-        int[] in9774m = {31, -3, 11, 73};
-        String[] in9774data = {"9 8 7 6 5 4",
-            "9 8 7 6 5 4",
-            "98 76 54",
-            ""};
-        for (int i = 0; i < in9774m.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab07.task9774(in9774m[i], in9774data[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-    }
-
-    private static void Step3940() {
-        System.out.println();
-        System.out.println("3940");
-        String[] in3940l = {
-                "1 2 3 4 1",
-                "1 2 3 4 1 3 4 4 4 4",
-                "1 2 3",
-                "1 2 3"
-        };
-        String[] in3940r = {
-                "2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 4",
-                "3 4",
-                "3 4 1 2"
-        };
-        for (int i = 0; i < in3940l.length; i++) {
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab07.task3940(in3940l[i], in3940r[i]);
-                for (Integer item : result) {
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step1223() {
         System.out.println();
         System.out.println("1223");
