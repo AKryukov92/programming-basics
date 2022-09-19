@@ -35,8 +35,8 @@ public class Task8613 extends TwoInputValLayout {
         appendHeader();
         appendTaskDesc("Пользователь вводит два массива данных. Первый массив содержит фрагменты текста. Второй - числа. Они обозначают индексы элементов. Вывести элементы первого массива на индексах из второго массива. Если элемент отсутствует, вывести сообщение \"нет элемента на индексе X\".");
         appendCheckValuesHeader("fragments", "indexes");
-        appendCheckValuesRow("a s d f g h j k", "0 2 3 5");
-        appendCheckValuesRow("qaz wsx edc", "0 2 3 5");
+        appendCheckValuesRow("a s d f g h j k", "5 3 2 0");
+        appendCheckValuesRow("qaz wsx edc", "5 3 2 0");
         appendCheckValuesRow("as df gh jk", "3 1");
         appendCheckValuesRow("q w e r t y u i o p", "9 7 3 5");
         appendCheckValuesRow("asdf qwer", "9 8");

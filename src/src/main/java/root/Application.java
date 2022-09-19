@@ -397,23 +397,47 @@ public class Application {
         ;
     }
 
+    /*
+    В практике встречаются несколько способов оформления ветвлений:
+    А. последовательный
+    if(){}
+    if(){}
+    if(){}
+    Б. взаимоисключающий
+    if(){} else {}
+    if(){} else {}
+    В. взаимоисключающий несколько вариантов
+    if(){}
+    else if(){}
+    else if(){}
+    else {}
+    Главная проблема студентов - не знают когда какой вариант применять.
+
+    Кроме того, есть еще другой выбор.
+    А. вложенные
+    if(A){
+      if(B){}
+    }
+    Б. объединенный
+    if(A && B){}
+     */
     private static void fillPreliminaryAssertions(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
                 .addCitation("link_c2_p8.1")
-                .addExample(new Task9298())
-                .addTask(new Task4312())
-                .addTask(6522)
+                .addExample(new Task9298())//взаимоисключающий
+                .addTask(new Task4312())//взаимоисключающий, несколько вариантов
+                .addTask(6522)//взаимоисключающий
                 .addCitation("link_c3_p11.1")
-                .addTask(7619)
+                .addTask(7619)//взаимоисключающий, несколько вариантов
 
                 .withGroup("Ограничения при вычислении корня")
-                .addExample(8833)
-                .addTask(9020)
+                .addExample(8833)//взаимоисключающий
+                .addTask(9020)//взаимоисключающий
                 .addCitation("link_c3_p11.2")
-                .addTask(1934)
-                .addTask(3943)
-                .addTask(5789)
+                .addTask(1934)//взаимоисключающий
+                .addTask(3943)//взаимоисключающий, вложенный!
+                .addTask(5789)//нет ветвления. задачка тут потому что корень
                 .addTask(6924)
 
                 .withGroup("Вычисление остатка от деления")
