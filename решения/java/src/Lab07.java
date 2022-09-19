@@ -139,16 +139,6 @@ public class Lab07 {
         System.out.println(String.join(" ", arr));
     }
 
-    public static void step7260() {
-        System.out.println();
-        System.out.println("7260");
-        task7260("9 8 7 6 5 4");
-        task7260("10 98 62 37 50 41 77 2");
-        task7260("5 9 7 2");
-        task7260("-3 -6 -8 -20 -4 -90");
-        task7260("");
-    }
-
     public static void step8122() {
         System.out.println();
         System.out.println("8122");
@@ -369,23 +359,6 @@ public class Lab07 {
             ret.add(arr[i]);
         }
         return ret;
-    }
-
-    public static int task7290(int b, String raw) throws IllegalArgumentException {
-        String[] arr = raw.split(" ");
-        if (b < 0 || b >= arr.length) {
-            throw new IllegalArgumentException("Число B должно быть в интервале [0, размер массива)");
-        }
-        int t = Integer.parseInt(arr[b]);
-        System.out.println("На позиции B находится " + arr[b]);
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (Integer.parseInt(arr[i]) < t) {
-                count++;
-            }
-        }
-        System.out.println("Количество меньших " + count);
-        return count;
     }
 
     public static StringBuilder task5694(StringBuilder sb, String x) {
@@ -865,35 +838,6 @@ public class Lab07 {
             System.out.println("|");
         }
         System.out.println(" ----------");
-    }
-
-    public static void task7260(String data) {
-        System.out.println();
-        if (data.isEmpty()) {
-            System.out.println("Нет данных");
-            return;
-        }
-        String[] arr = data.split(" ");
-        int i = 0;
-        int j = 0;
-        int sum = 0;
-
-        while (i < arr.length) {
-            if (j == 0) {
-                System.out.print("Группа");
-            }
-            int value = Integer.parseInt(arr[i]);
-            System.out.print(" ");
-            System.out.print(value);
-            sum += value;
-            j++;
-            if (j == 3) {
-                j = 0;
-                System.out.println(" сумма " + sum);
-                sum = 0;
-            }
-            i++;
-        }
     }
 
     public static void task6988(String left, String right) {

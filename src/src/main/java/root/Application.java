@@ -1,6 +1,8 @@
 package root;
 
 import root.tasks.aggregates.Task2802;
+import root.tasks.aggregates.Task7260;
+import root.tasks.aggregates.Task7290;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
 import root.tasks.assertions.Task4312;
@@ -697,13 +699,13 @@ public class Application {
                 .addTask(5648)
 
                 .withGroup("Сортировка массива вставкой")
-                .addExample(7290)//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой
+                .addExample(new Task7290())//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой
                 .addTask(2173)//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
                 .addTask(4497)//просмотр массива и замена
                 .addTask(3218)//сортировка массива
 
                 .withGroup("Агрегат по группам")
-                .addTask(7260)
+                .addTask(new Task7260())
                 .addTask(5795)
         ;
     }

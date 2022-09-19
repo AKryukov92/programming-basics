@@ -600,32 +600,6 @@ public class Lab13Task9701 {
         }
     }
 
-    static void Step7290() {
-        System.out.println();
-        System.out.println("7290");
-        int[] in7290b = {3, 2, 0, 4, 7, 1, -5, 10};
-        String[] in7290data = {
-                "1 1 1 3 4 1",
-                "1 2 3 4 1 2",
-                "3 4 1 2 3 4 1 2 3 1 2",
-                "4 2 3 4 3 2",
-                "4 4 4 4 4 3 2 1",
-                "4 4 4 4",
-                "1 1 1 3 4 1",
-                "1 2 3",
-                "1 2 3"
-        };
-        int[] out7290 = {4, 4, 6, 2, 0, 0, 0, 0, 0};
-        for (int i = 0; i < in7290b.length; i++) {
-            try {
-                int result = Lab07.task7290(in7290b[i], in7290data[i]);
-                System.out.printf("%d (%d)\n", result, out7290[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step5873() {
         Lab07.task5873("as df gh jk", 1);
         Lab07.task5873("a s d f g h j k", 3);
