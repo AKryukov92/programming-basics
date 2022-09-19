@@ -2,9 +2,7 @@ package root;
 
 import root.tasks.aggregates.Task2802;
 import root.tasks.arrays.*;
-import root.tasks.arrays_of_numbers.Task6707;
-import root.tasks.arrays_of_numbers.Task7621;
-import root.tasks.arrays_of_numbers.Task8613;
+import root.tasks.arrays_of_numbers.*;
 import root.tasks.assertions.Task4312;
 import root.tasks.assertions.Task9298;
 import root.tasks.assignment_puzzles.*;
@@ -499,7 +497,6 @@ public class Application {
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
                 .addTask(1217)
-                .addTask(1438)
                 .addTask(8718)
         ;
     }
@@ -585,11 +582,12 @@ public class Application {
     private static void fillBasicArrayOperations(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
-                .addExample(4425)
+                .addExample(new Task4425())
                 .addTask(new Task7834())
                 .addTask(new Task5873())
                 .addTask(new Task3908())
                 .addTask(1433)
+                .addTask(new Task3791())
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
@@ -597,7 +595,6 @@ public class Application {
                 .addCitation("link_c3_p12.8")
                 .addTask(new Task1223())
                 .addTask(new Task8311())
-                .addTask(new Task3791())
                 .addTask(new Task6563())
 
                 .withGroup("Запись в массив")
@@ -647,7 +644,9 @@ public class Application {
                 .addTask(7534)//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
-                .addTask(9576)
+                .addTask(new Task6714())//использование массива чисел для получения данных от пользователя
+                .addTask(new Task1438())
+                .addTask(9576)//вложенные циклы
                 .addTask(3095)//комбинаторика. понятие "все комбинации"
                 .addTask(8122)//сложная задача с кучей концепций
                 .addTask(5900)

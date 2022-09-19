@@ -626,17 +626,6 @@ public class Lab13Task9701 {
         }
     }
 
-    static void Step4425() {
-        System.out.println();
-        System.out.println("4425");
-        Lab07.task4425("qw er ty ui", 0);
-        Lab07.task4425("qw er ty ui", 3);
-        Lab07.task4425("q w e r t y u i o p", 9);
-        Lab07.task4425("qwer tyui", 3);
-        Lab07.task4425("qw er ty ui", -1);
-        Lab07.task4425("", 0);
-    }
-
     static void Step5873() {
         Lab07.task5873("as df gh jk", 1);
         Lab07.task5873("a s d f g h j k", 3);

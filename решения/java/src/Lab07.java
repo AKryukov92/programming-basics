@@ -218,32 +218,6 @@ public class Lab07 {
         }
     }
 
-    static void task4425(String raw, int a) {
-        if (raw.isEmpty()) {
-            System.out.println("Исходная строка пуста");
-            return;
-        }
-        String[] arr = raw.split(" ");
-        if (a < 0 || a >= arr.length) {
-            System.out.println("Число A должно быть в интервале [0, размер массива)");
-            return;
-        }
-        System.out.println("В массиве длиной " + arr.length);
-        System.out.println("на индексе " + a);
-        System.out.println("находится элемент со значением " + arr[a]);
-    }
-
-    static String task4425(int a, String raw) throws IllegalArgumentException {
-        if (raw.isEmpty()) {
-            throw new IllegalArgumentException("Исходная строка пуста");
-        }
-        String[] arr = raw.split(" ");
-        if (a < 0 || a >= arr.length) {
-            throw new IllegalArgumentException("Число A должно быть в интервале [0, размер массива)");
-        }
-        return arr[a];
-    }
-
     static void task5873(String raw, int t) {
         if (raw.isEmpty()) {
             System.out.println("Исходная строка пуста");

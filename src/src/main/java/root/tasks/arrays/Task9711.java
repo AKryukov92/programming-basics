@@ -24,7 +24,10 @@ public class Task9711 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелами. Сдвинуть все элементы массива на 1 позицию вправо. Последний элемент поставить в начало.");
+        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелами. " +
+                "Сдвинуть все элементы массива на 1 позицию вправо. " +
+                "Последний элемент поставить в начало. " +
+                "Обратите внимание, что в этой задаче нужно изменить содержимое массива, а не просто вывести в нужном порядке. ");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("q w e r t y");
         appendCheckValuesRow("a s d f g h j k l m");
