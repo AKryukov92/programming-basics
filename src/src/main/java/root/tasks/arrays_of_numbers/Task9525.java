@@ -18,8 +18,10 @@ public class Task9525 extends OneInputValLayout {
                 System.out.println("От " + l + " до " + r + "<--");
             } else if (r <= 19 && 19 <= l) {
                 System.out.println("От " + r + " до " + l + "<--");
-            } else {
+            } else if (l < r) {
                 System.out.println("От " + l + " до " + r);
+            } else {
+                System.out.println("От " + r + " до " + l);
             }
             i += 2;
         }
@@ -33,7 +35,7 @@ public class Task9525 extends OneInputValLayout {
         appendCheckValuesRow("1,5,3,10,8,15,18,20");
         appendCheckValuesRow("19,25,0,3,100,120");
         appendCheckValuesRow("10,19,20,29,30,39");
-        appendCheckValuesRow("19,8,5,10,34,19");
+        appendCheckValuesRow("19,8,5,10,34,19,30,20");
         appendCheckValuesRow("1,1,20,60,20,20,19,19");
         appendCheckValuesRow("3,17,90,65");
         appendCheckValuesRow("1,100,2,99,3,98,4,97,5,96");

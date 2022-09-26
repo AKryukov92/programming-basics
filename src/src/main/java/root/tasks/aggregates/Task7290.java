@@ -9,16 +9,17 @@ public class Task7290 extends TwoInputValLayout {
         int b = Integer.parseInt(secondValue);
         if (b < 0 || b >= arr.length) {
             System.out.println("Число B должно быть в интервале [0, размер массива)");
-        }
-        int t = Integer.parseInt(arr[b]);
-        System.out.println("На индексе B находится " + arr[b]);
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (Integer.parseInt(arr[i]) < t) {
-                count++;
+        } else {
+            int t = Integer.parseInt(arr[b]);
+            System.out.println("На индексе B находится " + arr[b]);
+            int count = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if (Integer.parseInt(arr[i]) < t) {
+                    count++;
+                }
             }
+            System.out.println("Количество меньших " + count);
         }
-        System.out.println("Количество меньших " + count);
     }
 
     @Override
@@ -36,5 +37,9 @@ public class Task7290 extends TwoInputValLayout {
         appendCheckValuesRow(" 1 2 3", "10");
         appendCheckValuesFooter();
         appendFooter();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task7290());
     }
 }
