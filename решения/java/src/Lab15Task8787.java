@@ -6,10 +6,6 @@ import java.util.Set;
  *         13.07.2017
  */
 public class Lab15Task8787 {
-    public static void main(String[] args) {
-        Step7703();
-    }
-
     static void Step7991() {
         System.out.println();
         System.out.println("7991");
@@ -129,33 +125,6 @@ public class Lab15Task8787 {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
-        }
-    }
-
-    private static void Step7703() {
-        System.out.println();
-        System.out.println("7703");
-        String[] in7703 = {
-                "q w e e q w",
-                "q w e r q w e r q w e",
-                "e w w w w w",
-                "r r r r r r"
-        };
-        String[] out7703 = {
-            "2 2 1 1 2 2",
-            "3 3 3 2 3 3 3 2 3 3 3",
-            "1 5 5 5 5 5",
-            "6 6 6 6 6 6"};
-        for (int i = 0; i < in7703.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            List<Integer> result = Lab07.task7703(in7703[i]);
-            for (Integer item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-            System.out.println(out7703[i]);
-            System.out.println();
         }
     }
 

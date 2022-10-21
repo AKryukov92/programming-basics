@@ -6,9 +6,10 @@ public class Task5380 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит массив");
+        appendTaskDesc("Пользователь вводит числа, разделенные пробелами. " +
+                "Нужно вывести на экран те числа, которые строго меньше чем длина массива.");
         appendCheckValuesHeader("data");
-        appendCheckValuesRow("4 3 2 1 5 5");
+        appendCheckValuesRow("5 6 7 10 -2 0");
         appendCheckValuesRow("4 3 2 1 5");
         appendCheckValuesRow("3 4 2 1");
         appendCheckValuesRow("11");
@@ -28,10 +29,10 @@ public class Task5380 extends OneInputValLayout {
             while (i < arr.length) {
                 int num = Integer.parseInt(arr[i]);
                 if (num < arr.length) {
-                    System.out.println("Элемент с индексом " + i + " содержит значение " + arr[i] + " и он меньше, чем длина массива " + arr.length);
+                    System.out.println("Элемент с индексом " + i + " содержит значение " + arr[i] +
+                            " и он меньше, чем длина массива " + arr.length);
                 } else {
-                    System.out.println("Элемент с индексом " + i + " содержит значение " + arr[i] + " и он не меньше длины массива. Остановка");
-                    break перефразировать,чтобы не было остановки
+                    System.out.println("Элемент с индексом " + i + " содержит значение " + arr[i]);
                 }
                 i++;
             }

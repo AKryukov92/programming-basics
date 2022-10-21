@@ -19,16 +19,6 @@ public class Lab07 {
         task7793("b", "b b b b b b");
     }
 
-    public static void step9827() {
-        System.out.println();
-        System.out.println("9827");
-        task9827("one two three four".split(" "), "one four five".split(" "));
-        System.out.println();
-        task9827("one two three four".split(" "), "one two three four".split(" "));
-        System.out.println();
-        task9827("one two three four".split(" "), new String[0]);
-    }
-
     public static void step5900() {
         System.out.println();
         System.out.println("5900");
@@ -397,29 +387,6 @@ public class Lab07 {
         return sb;
     }
 
-    public static String task7534(String charsRaw, String amountsRaw) {
-        if (charsRaw.isEmpty()) {
-            return "Отсутствуют данные о символах";
-        }
-        if (amountsRaw.isEmpty()) {
-            return "Отсутствуют данные о количествах";
-        }
-        String[] chars = charsRaw.split(" ");
-        String[] amounts = amountsRaw.split(" ");
-        if (chars.length != amounts.length) {
-            return "Длины массивов не совпадают";
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < chars.length; i++) {
-            int amount = Integer.parseInt(amounts[i]);
-            for (int j = 0; j < amount; j++) {
-                sb.append(chars[i]);
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     public static void task9576(String data) {
         if (data.isEmpty()) {
             System.out.println("Исходная строка пуста");
@@ -687,21 +654,6 @@ public class Lab07 {
         return count;
     }
 
-    public static List<Integer> task7703(String raw) {
-        String[] arr = raw.split(" ");
-        List<Integer> ret = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            int count = 0;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j].equals(arr[i])) {
-                    count++;
-                }
-            }
-            ret.add(count);
-        }
-        return ret;
-    }
-
     public static Set<String> task5541(String raw) {
         String[] arr = raw.split(" ");
         Set<String> data = new HashSet<>();
@@ -886,22 +838,6 @@ public class Lab07 {
             i = i + 2;
         }
         System.out.println(". Сумма: " + sum);
-    }
-
-    //Нужно найти все элементы из массива А, которых нет в массиве Б
-    public static void task9827(String[] a, String[] b) {
-        for (int ai = 0; ai < a.length; ai++){
-            boolean found = false;
-            for (int bi = 0; bi < b.length; bi++){
-                if (a[ai].equals(b[bi])){
-                    found = true;
-                    break;
-                }
-            }
-            if (!found){
-                System.out.println(a[ai]);
-            }
-        }
     }
 
     public static void task7793(String red, String green) {

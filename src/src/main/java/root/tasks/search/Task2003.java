@@ -1,4 +1,4 @@
-package root.tasks.arrays;
+package root.tasks.search;
 
 import root.tasks.OneInputValLayout;
 

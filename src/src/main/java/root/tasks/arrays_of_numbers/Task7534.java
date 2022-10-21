@@ -21,9 +21,35 @@ public class Task7534 extends TwoInputValLayout {
 
     @Override
     protected void logic(String firstValue, String secondValue) {
+        if (firstValue.isEmpty()) {
+            System.out.println("Отсутствуют данные о символах");
+            return;
+        }
+        if (secondValue.isEmpty()) {
+            System.out.println("Отсутствуют данные о количествах");
+            return;
+        }
         String[] arr = firstValue.split(" ");
         String[] num = secondValue.split(" ");
+        if (arr.length != num.length) {
+            System.out.println("Длины массивов не совпадают");
+            return;
+        }
         int i = 0;
+        while (i < arr.length) {
+            int j = 0;
+            int len = Integer.parseInt(num[i]);
+            while (j < len) {
+                System.out.print(arr[i]);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
+    }
 
+    public static void main(String[] args) {
+        System.out.println(new Task7534());
+    }
 
 }

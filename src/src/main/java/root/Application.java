@@ -29,6 +29,10 @@ import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
 import root.tasks.read_files.*;
+import root.tasks.search.Task2003;
+import root.tasks.search.Task7703;
+import root.tasks.search.Task8158;
+import root.tasks.search.Task9827;
 import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task2497;
 import root.tasks.search_in_array.Task4515;
@@ -664,12 +668,12 @@ public class Application {
                 .addTask(new Task3940())//просмотр массива и простая операция
                 .addTask(new Task6707())//просмотр массива с условием
                 .addTask(new Task9525())//просмотр массива с условиями
-                .addTask(new Task3289())//просмотр массива с
-                .addTask(new Task5380())//просмотр в массиве с остановкой. сравнение элемента с длиной
+                .addTask(new Task3289())//просмотр массива со сравнением следующего и предыдущего
+                .addTask(new Task5380())//просмотр в массиве. сравнение элемента с длиной
                 .addTask(new Task8613())//чтение элементов массива по индексу
                 .addTask(new Task9213())//фильтр по одному массиву, вывод из другого
                 .addTask(new Task2390())//вложенные циклы
-                .addTask(7534)//вложенные циклы
+                .addTask(new Task7534())//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
                 .addTask(new Task6714())//использование массива чисел для получения данных от пользователя
@@ -725,7 +729,7 @@ public class Application {
                 .addTask(new Task8158())
                 .addTask(1292)
                 .addTask(4283)//поиск и подсчет количества
-                .addTask(7703)//многократный поиск и подсчет количества
+                .addTask(new Task7703())//многократный поиск и подсчет количества
 
                 .withGroup("Сопоставление массивов")
                 .addExample(7369)//наглядное сопоставление двух массивов
@@ -733,7 +737,7 @@ public class Application {
                 .addTask(new Task2497())//все числа первого массива меньше всех чисел второго массива
                 .addTask(5894)//неявное сопоставление + подсчет количества
                 .addTask(new Task4515())//сопоставление массива с самим собой
-                .addTask(9827)//сопоставление массивов MINUS
+                .addTask(new Task9827())//сопоставление массивов MINUS
                 .addTask(7793)//сопоставление, все виды
 
                 .withGroup("Поиск минимального")
