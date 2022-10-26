@@ -6,6 +6,7 @@ import root.tasks.aggregates.Task7290;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
 import root.tasks.assertions.Task4312;
+import root.tasks.assertions.Task6522;
 import root.tasks.assertions.Task9298;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.Task3474;
@@ -433,7 +434,7 @@ public class Application {
                 .addCitation("link_c2_p8.1")
                 .addExample(new Task9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
-                .addTask(6522)//взаимоисключающий
+                .addTask(new Task6522())//взаимоисключающий
                 .addCitation("link_c3_p11.1")
                 .addTask(7619)//взаимоисключающий, несколько вариантов
 

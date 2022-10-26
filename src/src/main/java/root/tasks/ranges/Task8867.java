@@ -38,4 +38,8 @@ public class Task8867 extends MultipleInputValLayout {
         appendCheckValuesFooter();
         appendFooter();
     }
+
+    public static void main(String[] args) {
+        System.out.println(new Task8867());
+    }
 }

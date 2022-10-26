@@ -63,23 +63,6 @@ public class Lab02 {
         }
     }
 
-    public static void step6522() {
-        System.out.println();
-        System.out.println("6522");
-        int[] in6522v1 = {1, 1, 5, -2, 4};
-        int[] in6522t1 = {30, -20, 90, 10, 100};
-        int[] in6522v2 = {3, 10, 1, 5, -10};
-        int[] in6522t2 = {20, 20, -10, 50, 4};
-        for (int i = 0; i < in6522v1.length; i++) {
-            try {
-                class6522 result = task6522(in6522v1[i], in6522t1[i], in6522v2[i], in6522t2[i]);
-                System.out.println(result);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     public static String task5870(int timeInSeconds) {
         if (timeInSeconds < 0) {
             throw new IllegalArgumentException("Количество времени должно быть неотрицательным");
@@ -431,31 +414,6 @@ public class Lab02 {
         double dx = xb - xa;
         double dy = yb - ya;
         return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    public static class class6522 {
-        final double v;
-        final double t;
-
-        public class6522(double v, double t) {
-            this.v = v;
-            this.t = t;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("v %.4f t %.4f", v, t);
-        }
-    }
-
-    public static class6522 task6522(int v1, int t1, int v2, int t2) throws IllegalArgumentException {
-        if (v1 < 0) {
-            throw new IllegalArgumentException("Объем должен быть неотрицательным");
-        }
-        if (v2 < 0) {
-            throw new IllegalArgumentException("Объем должен быть неотрицательным");
-        }
-        return new class6522(v1 + v2, (double) (t1 * v1 + t2 * v2) / (v1 + v2));
     }
 
     public static int task3490(double yarnDiameterCm, int wireCoils) {
