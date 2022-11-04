@@ -128,7 +128,7 @@ public class LabTask extends LabFragment {
         if (hasManual) {
             writer.write(String.format("<div>" +
                     "Руководство по самостоятельному выполнению задачи " +
-                    "<a href='конспекты/pre%4d.html' target='_blank'>(открыть в новом файле)</a>" +
+                    "<a href='конспекты/pre%4d.html#initial' target='_blank'>(открыть в новом файле)</a>" +
                     "</div>", id));
         }
     }

@@ -5,7 +5,10 @@ import root.tasks.MultipleInputValLayout;
 public class Task6522 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
-        appendHeader();
+        appendTaskId();
+        appendTaskDesc("Обратите внимание, что ситуаций с неправильными данными может быть значительно больше, чем ситуаций с правильными данными." +
+                " Код для предотвращения нежелательных ситуаций может получиться объемнее, чем код для решения задачи.");
+        appendTaskHeader();
         appendTaskDesc("Смешали volume<sub>1</sub> литров воды с температурой temperature<sub>1</sub> градусов Цельсия " +
                 "с volume<sub>2</sub> литрами воды с температурой temperature<sub>2</sub> градусов Цельсия." +
                 " Вычислите объем <formula>volume=volume<sub>1</sub>+volume<sub>2</sub></formula> и температуру образовавшейся смеси по формуле" +
@@ -31,6 +34,12 @@ public class Task6522 extends MultipleInputValLayout {
         appendCheckValuesRow("4", "100", "-10", "4");
         appendCheckValuesRow("20", "-800", "20", "30");
         appendCheckValuesRow("20", "10", "30", "-500");
+        appendCheckValuesRow("-7", "-1000", "6", "71");
+        appendCheckValuesRow("15", "-180", "-21", "90");
+        appendCheckValuesRow("31", "10", "-2", "-300");
+        appendCheckValuesRow("-7", "-1000", "-21", "71");
+        appendCheckValuesRow("15", "-180", "-21", "-300");
+        appendCheckValuesRow("-7", "-400", "-5", "-500");
         appendCheckValuesFooter();
         appendFooter();
     }
@@ -43,9 +52,11 @@ public class Task6522 extends MultipleInputValLayout {
         double t2 = Double.parseDouble(args[3]);
         if (v1 <= 0 || v2 <= 0) {
             System.out.println("Объем должен быть неотрицательным");
-        } else if (t1 <= -273.15 || t2 <= -273.15) {
+        }
+        if (t1 <= -273.15 || t2 <= -273.15) {
             System.out.println("Температура должна быть выше абсолютного нуля (-273.15)");
-        } else {
+        }
+        if (v1 > 0 && v2 > 0 && t1 > -273.15 && t2 > -273.15) {
             double v = v1 + v2;
             double t = (t1 * v1 + t2 * v2) / (v1 + v2);
             System.out.printf("Объем смеси: %.4f л\nТемпература смеси: %.4f °C", v, t);

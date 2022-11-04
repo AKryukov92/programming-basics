@@ -8,17 +8,6 @@ public class Lab02 {
         step2361();
     }
 
-    public static void step8428() {
-        System.out.println();
-        System.out.println("8428");
-        task3435(0.7854);
-        task3435(19.6350);
-        task3435(0);
-        task3435(6.2832);
-        task3435(1.5708);
-        task3435(34.9066);
-    }
-
     public static void step2801() {
         System.out.println();
         System.out.println("2801");
@@ -115,14 +104,6 @@ public class Lab02 {
         return (double) a * (double) h / 2;
     }
 
-    public static double task8428(int a) {
-        return a * Math.PI / 180;
-    }
-
-    public static void task3435(double radians) {
-        System.out.printf("%.4f радиан это %.4f градусов\n", radians, radians / Math.PI * 180);
-    }
-
     public static class class2361 {
         public int amount;
         public int deficit;
@@ -183,33 +164,8 @@ public class Lab02 {
         return a % 360;
     }
 
-    public static double task7711(int x) {
-        return Math.sin(x * Math.PI / 180);
-    }
-
-    public static double task8833(int x) throws IllegalArgumentException {
-        if (x < 0) {
-            throw new IllegalArgumentException("Значение X должно быть неотрицательным");
-        }
-        return Math.sqrt(x);
-    }
-
     public static double task1262(int y) {
         return 5 * Math.cos(y * Math.PI / 180);
-    }
-
-    public static double task9020(int x) {
-        if (x > 61) {
-            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
-        }
-        return 3 * Math.sqrt(61 - x);
-    }
-
-    public static double task1934(int a, int b) throws IllegalArgumentException {
-        if (b > 0) {
-            throw new IllegalArgumentException("Значение B должно быть не положительным");
-        }
-        return a * Math.sqrt(-7 * b);
     }
 
     public static double task7237(double t) throws IllegalArgumentException {
@@ -217,26 +173,6 @@ public class Lab02 {
             throw new IllegalArgumentException("Значение T должно быть не ниже абсолютного нуля");
         }
         return t * 1.8 + 32;
-    }
-
-    public static double task3943(int x, int y) throws IllegalArgumentException {
-        if (y < 0) {
-            throw new IllegalArgumentException("Значение y должно быть неотрицательным");
-        }
-        if (x + Math.sqrt(y) < 0) {
-            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");
-        }
-        return -5 * Math.sqrt(x + Math.sqrt(y));
-    }
-
-    public static double task7619(int v1, int v2, int s) throws IllegalArgumentException {
-        if (v1 < 0 || v2 < 0) {
-            throw new IllegalArgumentException("Скорость должна быть неотрицательна");
-        }
-        if (s < 0) {
-            throw new IllegalArgumentException("Расстояние должно быть неотрицательным");
-        }
-        return (double) s / (v1 + v2);
     }
 
     public static int task3832(int x1, int x2, int x3) {

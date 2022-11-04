@@ -9,19 +9,29 @@ public class Task4312 extends TwoInputValLayout {
         double height = Double.parseDouble(secondValue);
         if (edge <= 0) {
             System.out.println("Длина основания треугольника должна быть положительна");
-            return;
         }
         if (height <= 0) {
             System.out.println("Высота треугольника должна быть положительна");
-            return;
         }
-        double area = edge * height / 2;
-        System.out.printf("Площадь прямоугольного треугольника с высотой %.0f и основанием %.0f равна %.4f", height, edge, area);
+        if (edge > 0) {
+            if (height > 0) {
+                double area = edge * height / 2;
+                System.out.printf("Площадь прямоугольного треугольника с высотой %.0f и основанием %.0f равна %.4f", height, edge, area);
+            }
+        }
     }
 
     @Override
     protected void makeLayout() {
-        appendHeader();
+        appendTaskId();
+        appendSubheading("Порядок решения задач с проверками исходных данных");
+        appendOrdered(
+                "Реализовать чтение исходных данных, вычисление результата и печать результата на экран.",
+                "Добавить условие, чтобы вычисление результата работало только при корректных данных, а при некорректных ничего не происходило.",
+                "Добавить условие, чтобы выводить сообщения об ошибках в случае ввода некорректных данных",
+                "При возможности, объединить условия с помощью ключевого слова else"
+        );
+        appendTaskHeader();
         appendTaskDesc("Вычислить площадь прямоугольного треугольника по формуле <formula>area=edge*height/2</formula>, где edge - основание, height - высота.");
         appendCheckValuesHeader("edge", "height");
         appendCheckValuesRow("1", "1");
@@ -29,6 +39,7 @@ public class Task4312 extends TwoInputValLayout {
         appendCheckValuesRow("0", "10");
         appendCheckValuesRow("-2", "1");
         appendCheckValuesRow("3", "-4");
+        appendCheckValuesRow("-5", "-7");
         appendCheckValuesFooter();
         appendFooter();
     }

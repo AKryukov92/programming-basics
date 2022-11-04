@@ -120,24 +120,6 @@ public class Lab13Task9701 {
         }
     }
 
-    private static void Step7619() {
-        System.out.println();
-        System.out.println("7619");
-        int[] in7619v1 = {31, 0, 6, 17, -11, -79, 10};
-        int[] in7619v2 = {47, 7, 0, 19, 13, 67, 20};
-        int[] in7619s = {6833, 6829, 100, 0, 200, 400, -500};
-        double[] outs7619 = {87.6026, 975.5714, 16.6667, 0, 0, 0, 0};
-        for (int i = 0; i < in7619v1.length; i++) {
-            try {
-                double result = Lab02.task7619(
-                        in7619v1[i], in7619v2[i], in7619s[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs7619[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step3943() {
         System.out.println();
         System.out.println("3943");
@@ -163,52 +145,6 @@ public class Lab13Task9701 {
             try {
                 double result = Lab02.task7237(in7237[i]);
                 System.out.printf("%.6f (%.6f)\n", result, outs7237[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step1934() {
-        System.out.println();
-        System.out.println("1934");
-        int[] in1934a = {6047, -3, 0, 13, 6221};
-        int[] in1934b = {-6011, -7, -50, 0, 6373};
-        double[] outs1934 = {1240401.6995, -21.0000, 0.0000, 0.0000, 0};
-        for (int i = 0; i < in1934a.length; i++) {
-            try {
-                double result = Lab02.task1934(in1934a[i], in1934b[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs1934[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step9020() {
-        System.out.println();
-        System.out.println("9020");
-        int[] in9020 = {0, -9, 61, 60, 62, 7573, 75};
-        double[] outs9020 = {23.4307, 25.0998, 0, 3, 0, 0, 0};
-        for (int i = 0; i < in9020.length; i++) {
-            try {
-                double result = Lab02.task9020(in9020[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs9020[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step8833() {
-        System.out.println();
-        System.out.println("8833");
-        int[] in8833 = {7606, 9, 0, -7603};
-        double[] outs8833 = {87.2124, 3.0000, 0, 0};
-        for (int i = 0; i < in8833.length; i++) {
-            try {
-                double result = Lab02.task8833(in8833[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs8833[i]);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }

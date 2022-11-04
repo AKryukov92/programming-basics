@@ -5,13 +5,9 @@ import root.tasks.aggregates.Task7260;
 import root.tasks.aggregates.Task7290;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
-import root.tasks.assertions.Task4312;
-import root.tasks.assertions.Task6522;
-import root.tasks.assertions.Task9298;
+import root.tasks.assertions.*;
 import root.tasks.assignment_puzzles.*;
-import root.tasks.calculations.Task3474;
-import root.tasks.calculations.Task7243;
-import root.tasks.calculations.Task9164;
+import root.tasks.calculations.*;
 import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
@@ -104,8 +100,7 @@ public class Application {
         taskBooksCs[0]
                 .addResource("PaintingApp/PaintingApp.sln")
                 .addResource("PaintingApp/PaintingApp/App.config")
-                .addResource("PaintingApp/PaintingApp/MainForm.cs")
-                .addResource("PaintingApp/PaintingApp/MainForm.Designer.cs")
+                .addResource("PaintingApp/PaintingApp/MainFrm.cs")
                 .addResource("PaintingApp/PaintingApp/PaintingApp.csproj")
                 .addResource("PaintingApp/PaintingApp/PenTool.cs")
                 .addResource("PaintingApp/PaintingApp/Program.cs")
@@ -175,7 +170,8 @@ public class Application {
         taskBooksJs[0]
                 .addResource("base.html")
                 .addResource("graphics.html")
-                .addResource("graphics.js");;
+                .addResource("graphics.js");
+        ;
         fillPrintingTemplatesJs(taskBooksJs[0]);
         fillBasicCalculationsJs(taskBooksJs[1]);
         fillPreliminaryAssertions(taskBooksJs[2]);
@@ -194,7 +190,7 @@ public class Application {
         fillExceptionJs(taskBooksJs[13]);
         fillAbstractDataStructuresJs(taskBooksJs[14]);
 
-        fillExcercisesWithButtons(taskBooksJs[15]);
+        fillExercisesWithButtons(taskBooksJs[15]);
         updateCrossTaskLinks(taskBooksJs);
         return taskBooksJs;
     }
@@ -283,18 +279,18 @@ public class Application {
                 .addTask(new Task5792())
                 .addTask(new Task6986())
 
-                .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(4131)
-                .addTask(7365)
-
                 .withGroup("Получение строк от пользователя")
-                .addExampleWithManual(1860)
+                .addExampleWithManual(new Task1860())
                 .addCitation("link_c7_p33")
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(new Task7472())
                 .addTask(1910)
+
+                .withGroup("Диктант по присваиванию и конкатенации")
+                .addExample(4131)
+                .addTask(7365)
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
@@ -350,10 +346,16 @@ public class Application {
                 .addTask(7237)
 
                 .withGroup("Использование математических функций")
-                .addExample(8428)
-                .addTask(3435)
+                .addExample(new Task8428())
+                .addTask(new Task3435())
                 .addCitation("link_c7_p32.5")
-                .addExample(7711)
+        ;
+        if (taskBook.getLangAbbreviation().equals("js")) {
+            taskBook.addExample(new Task7711());
+        } else {
+            taskBook.addExampleWithManual(new Task7711());
+        }
+        taskBook
                 .addTask(new Task3474())
                 .addTask(1262)
                 .addTask(new Task9164())
@@ -362,7 +364,7 @@ public class Application {
         ;
     }
 
-    private static void fillExcercisesWithButtons(TaskBook taskBook) {
+    private static void fillExercisesWithButtons(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab18")
                 .withGroup("Случайные числа")
                 .addExample(7874)
@@ -386,16 +388,16 @@ public class Application {
 
                 .withGroup("Операторы и операнды")
                 .addExampleWithManual(4411)
-                .addExample(8428)//перевод из градусов в радианы по готовой формуле
+                .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
                 .addTask(1976)//диктант
-                .addTask(3435)//обратное действие, нужно вывести формулу из задачи про радианы
+                .addTask(new Task3435())//обратное действие, нужно вывести формулу из задачи про радианы
                 .addTask(9865)//нужно перевести с естественного языка на ЯП
                 .addTask(7457)//нужно вывести формулу с помощью школьных знаний
                 .addTask(7237)
 
                 .withGroup("Использование математических функций")
                 .addCitation("link_c7_p32.5")
-                .addExampleWithManual(7711)
+                .addExampleWithManual(new Task7711())
                 .addTask(new Task3474())
                 .addTask(1262)
                 .addTask(new Task9164())
@@ -431,19 +433,18 @@ public class Application {
     private static void fillPreliminaryAssertions(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
-                .addCitation("link_c2_p8.1")
                 .addExample(new Task9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
                 .addTask(new Task6522())//взаимоисключающий
                 .addCitation("link_c3_p11.1")
-                .addTask(7619)//взаимоисключающий, несколько вариантов
+                .addTask(new Task7619())//взаимоисключающий, несколько вариантов
 
                 .withGroup("Ограничения при вычислении корня")
-                .addExample(8833)//взаимоисключающий
-                .addTask(9020)//взаимоисключающий
+                .addExample(new Task8833())//взаимоисключающий
+                .addTask(new Task9020())//взаимоисключающий
                 .addCitation("link_c3_p11.2")
-                .addTask(1934)//взаимоисключающий
-                .addTask(3943)//взаимоисключающий, вложенный!
+                .addTask(new Task1934())//взаимоисключающий
+                .addTask(new Task3943())//взаимоисключающий, вложенный!
                 .addTask(5789)//нет ветвления. задачка тут потому что корень
                 .addTask(6924)
 
@@ -658,7 +659,7 @@ public class Application {
                 .addTask(new Task7085())
                 .addTask(new Task8820())
                 .addTask(new Task3333())
-                .addTask(8471)
+                .addTask(new Task8471())
         ;
     }
 
@@ -1067,7 +1068,7 @@ public class Application {
                 .withGroup("Формирование листа");
         if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook.addExample(new TaskJava5087())
-            .addTask(new TaskJava8317());
+                    .addTask(new TaskJava8317());
         } else {
             taskBook.addExample(5087);
         }
@@ -1164,10 +1165,10 @@ public class Application {
         String css = loadCss("styles.css");
 
         TaskBook[] taskBooksJava = populateJavaContent(themeList);
-        makeFiles(taskBooksJava, css, gitHash);
+        //makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        //makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
         //makeFiles(taskBooksJs, css, gitHash);

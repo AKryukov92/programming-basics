@@ -42,8 +42,16 @@ public abstract class LayoutMaker {
     protected abstract void makeLayout();
 
     protected void appendHeader() {
+        appendTaskId();
+        appendTaskHeader();
+    }
+
+    protected void appendTaskId() {
         headerOpened = true;
         writer.println("<div id='task" + getId() + "' class='task_block'>");
+    }
+
+    protected void appendTaskHeader(){
         writer.println("<div class='task_id'>" + getId() + "</div>");
         writer.println("<h3>Задача</h3>");
     }
@@ -72,6 +80,12 @@ public abstract class LayoutMaker {
     protected void appendTaskDesc(String taskDescription) {
         writer.println("<div class='task_desc'>");
         writer.println(taskDescription);
+        writer.println("</div>");
+    }
+
+    protected void appendCheckSingleFormatted(String text) {
+        writer.print("<div class='check_single'>");
+        writer.print(text);
         writer.println("</div>");
     }
 
