@@ -235,7 +235,7 @@ public class Application {
                 .addTask(7365)
 
                 .withGroup("Получение строк от пользователя")
-                .addExample(1860)
+                .addExample(new Task1860())
                 .addCitation("link_c7_p33")
                 .addTask(new Task4764())
                 .addTask(new Task2429())
