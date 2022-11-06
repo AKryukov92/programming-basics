@@ -66,3 +66,6 @@ csharp/postcard/postcard/obj
 /cs
 /js/graphics.js
 /java/graphics
+/src/lab01/PaintingApp/.vs/*
+/src/lab01/PaintingApp/PantingApp/bin/*
+/src/lab01/PaintingApp/PantingApp/obj/*

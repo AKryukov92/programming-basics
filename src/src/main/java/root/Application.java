@@ -887,23 +887,37 @@ public class Application {
                 .addCitation("link_c2_p7.2")
 
                 .withGroup("Аргумент-массив")
-                .addExample(3946);
+                .addExample(3946)
+        ;
+
         if (taskBook.getLangAbbreviation().equals("java")) {
-            taskBook.addTask(new TaskJava8920());
+            taskBook.addTask(new TaskJava8920())
+                    .addTask(6497)
+
+                    .withGroup("Возврат массива в качестве результата")
+                    .addExample(new TaskJava2936())
+                    .addTask(new TaskJava3539())
+            ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
-            taskBook.addTask(new TaskCs8920());
+            taskBook.addTask(new TaskCs8920())
+                    .addTask(6497)
+
+                    .withGroup("Возврат массива в качестве результата")
+                    .addExample(new TaskCs2936())
+                    .addTask(new TaskCs3539())
+            ;
         } else if (taskBook.getLangAbbreviation().equals("js")) {
-            taskBook.addTask(new TaskJs8920());
+            taskBook.addTask(new TaskJs8920())
+                    .addTask(6497)
+
+                    .withGroup("Возврат массива в качестве результата")
+                    .addExample(new TaskJs2936())
+                    .addTask(new TaskJs3539())
+            ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
         taskBook
-                .addTask(6497)
-
-                .withGroup("Модификация массива-аргумента")
-                .addExample(9774)
-                .addTask(9271)
-
                 .withGroup("Возврат булевого значения")
                 .addExample(4847)
                 .addTask(6740)
@@ -1171,7 +1185,7 @@ public class Application {
         makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        //makeFiles(taskBooksJs, css, gitHash);
+        makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
