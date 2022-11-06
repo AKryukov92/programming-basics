@@ -849,7 +849,8 @@ public class Application {
     }
 
     private static void fillMethods(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab12")
+        taskBook
+                .withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
                 .addCitation("info01")
                 .withGroup("Проверка вспомогательной программой");
@@ -897,6 +898,11 @@ public class Application {
                     .withGroup("Возврат массива в качестве результата")
                     .addExample(new TaskJava2936())
                     .addTask(new TaskJava3539())
+
+                    .withGroup("Возврат булевого значения")
+                    .addExample(new TaskJava6401())
+                    .addTask(new TaskJava7581())
+                    .addCitation("link_c2_p7.3")
             ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
             taskBook.addTask(new TaskCs8920())
@@ -905,6 +911,11 @@ public class Application {
                     .withGroup("Возврат массива в качестве результата")
                     .addExample(new TaskCs2936())
                     .addTask(new TaskCs3539())
+
+                    .withGroup("Возврат булевого значения")
+                    .addExample(new TaskCs6401())
+                    .addTask(new TaskCs7581())
+                    .addCitation("link_c2_p7.3")
             ;
         } else if (taskBook.getLangAbbreviation().equals("js")) {
             taskBook.addTask(new TaskJs8920())
@@ -913,16 +924,15 @@ public class Application {
                     .withGroup("Возврат массива в качестве результата")
                     .addExample(new TaskJs2936())
                     .addTask(new TaskJs3539())
+
+                    .withGroup("Возврат булевого значения")
+                    .addExample(new TaskJs6401())
+                    .addTask(new TaskJs7581())
+                    .addCitation("link_c2_p7.3")
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
-        taskBook
-                .withGroup("Возврат булевого значения")
-                .addExample(4847)
-                .addTask(6740)
-                .addCitation("link_c2_p7.3")
-        ;
     }
 
     private static void fillExceptions(TaskBook taskBook) {
