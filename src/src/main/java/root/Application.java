@@ -34,6 +34,7 @@ import root.tasks.search_in_array.Task1522;
 import root.tasks.search_in_array.Task2497;
 import root.tasks.search_in_array.Task4515;
 import root.tasks.search_in_array.Task7035;
+import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
 
 import java.io.BufferedReader;
@@ -57,15 +58,17 @@ public class Application {
             "Работа с интервалами значений",
 
             "Реорганизация повторяющихся действий",
+            "Обработка неизвестного объема данных",
             "Вложенные циклы",
             "Базовые операции с массивами",
             "Работа с массивами чисел",
+
             "Вычисление агрегатов",
             "Поиск в массиве",
-
             "Строки",
             "Функции",
             "Исключения",
+
             "Объекты",
             "Упражнения с кнопками"
     };
@@ -77,18 +80,19 @@ public class Application {
             "Работа с интервалами значений",
 
             "Реорганизация повторяющихся действий",
+            "Обработка неизвестного объема данных",
             "Вложенные циклы",
             "Базовые операции с массивами",
             "Использование числовых массивов",
+
             "Вычисление агрегатов",
             "Поиск в массиве",
-
             "Строки",
-            "Обработка неизвестного объема данных",
+            "Чтение файлов",
             "Запись в файлы",
+
             "Методы",
             "Исключения",
-
             "Составные типы данных",
             "Внутреннее состояние",
             "Коллекции"
@@ -114,22 +118,24 @@ public class Application {
         fillPreliminaryAssertions(taskBooksCs[2]);
         fillMutualExclusives(taskBooksCs[3]);
         fillRanges(taskBooksCs[4]);
+
         fillLoops(taskBooksCs[5]);
-        fillNestedLoops(taskBooksCs[6]);
-        fillBasicArrayOperations(taskBooksCs[7]);
-        fillArrayConversionToNumbers(taskBooksCs[8]);
-        fillAggregateCalculation(taskBooksCs[9]);
+        fillStreamOfData(taskBooksCs[6]);
+        fillNestedLoops(taskBooksCs[7]);
+        fillBasicArrayOperations(taskBooksCs[8]);
+        fillArrayConversionToNumbers(taskBooksCs[9]);
 
-        fillElementSearch(taskBooksCs[10]);
-        fillStringMethods(taskBooksCs[11]);
-        fillReadingFiles(taskBooksCs[12]);
-        fillWritingFiles(taskBooksCs[13]);
-        fillMethods(taskBooksCs[14]);
+        fillAggregateCalculation(taskBooksCs[10]);
+        fillElementSearch(taskBooksCs[11]);
+        fillStringMethods(taskBooksCs[12]);
+        fillReadingFiles(taskBooksCs[13]);
+        fillWritingFiles(taskBooksCs[14]);
 
-        fillExceptions(taskBooksCs[15]);
-        fillAbstractDataStructures(taskBooksCs[16]);
-        fillInternalState(taskBooksCs[17]);
-        fillCollections(taskBooksCs[18]);
+        fillMethods(taskBooksCs[15]);
+        fillExceptions(taskBooksCs[16]);
+        fillAbstractDataStructures(taskBooksCs[17]);
+        fillInternalState(taskBooksCs[18]);
+        fillCollections(taskBooksCs[19]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -146,21 +152,22 @@ public class Application {
         fillRanges(taskBooksJava[4]);
 
         fillLoops(taskBooksJava[5]);
-        fillNestedLoops(taskBooksJava[6]);
-        fillBasicArrayOperations(taskBooksJava[7]);
-        fillArrayConversionToNumbers(taskBooksJava[8]);
-        fillAggregateCalculation(taskBooksJava[9]);
+        fillStreamOfData(taskBooksJava[6]);
+        fillNestedLoops(taskBooksJava[7]);
+        fillBasicArrayOperations(taskBooksJava[8]);
+        fillArrayConversionToNumbers(taskBooksJava[9]);
 
-        fillElementSearch(taskBooksJava[10]);
-        fillStringMethods(taskBooksJava[11]);
-        fillReadingFiles(taskBooksJava[12]);
-        fillWritingFiles(taskBooksJava[13]);
-        fillMethods(taskBooksJava[14]);
+        fillAggregateCalculation(taskBooksJava[10]);
+        fillElementSearch(taskBooksJava[11]);
+        fillStringMethods(taskBooksJava[12]);
+        fillReadingFiles(taskBooksJava[13]);
+        fillWritingFiles(taskBooksJava[14]);
 
-        fillExceptions(taskBooksJava[15]);
-        fillAbstractDataStructures(taskBooksJava[16]);
-        fillInternalState(taskBooksJava[17]);
-        fillCollections(taskBooksJava[18]);
+        fillMethods(taskBooksJava[15]);
+        fillExceptions(taskBooksJava[16]);
+        fillAbstractDataStructures(taskBooksJava[17]);
+        fillInternalState(taskBooksJava[18]);
+        fillCollections(taskBooksJava[19]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -179,18 +186,19 @@ public class Application {
         fillRanges(taskBooksJs[4]);
 
         fillLoops(taskBooksJs[5]);
-        fillNestedLoops(taskBooksJs[6]);
-        fillBasicArrayOperations(taskBooksJs[7]);
-        fillArrayConversionToNumbers(taskBooksJs[8]);
-        fillAggregateCalculation(taskBooksJs[9]);
+        fillStreamOfData(taskBooksJs[6]);
+        fillNestedLoops(taskBooksJs[7]);
+        fillBasicArrayOperations(taskBooksJs[8]);
+        fillArrayConversionToNumbers(taskBooksJs[9]);
 
-        fillElementSearch(taskBooksJs[10]);
-        fillStringMethods(taskBooksJs[11]);
-        fillMethods(taskBooksJs[12]);
-        fillExceptionJs(taskBooksJs[13]);
-        fillAbstractDataStructuresJs(taskBooksJs[14]);
+        fillAggregateCalculation(taskBooksJs[10]);
+        fillElementSearch(taskBooksJs[11]);
+        fillStringMethods(taskBooksJs[12]);
+        fillMethods(taskBooksJs[13]);
+        fillExceptionJs(taskBooksJs[14]);
 
-        fillExercisesWithButtons(taskBooksJs[15]);
+        fillAbstractDataStructuresJs(taskBooksJs[15]);
+        fillExercisesWithButtons(taskBooksJs[16]);
         updateCrossTaskLinks(taskBooksJs);
         return taskBooksJs;
     }
@@ -562,6 +570,21 @@ public class Application {
                 .addTask(4338)
                 .addTask(new Task7054())
                 .addTask(new Task4531())
+        ;
+    }
+
+    private static void fillStreamOfData(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab09")
+                .withGroup("Обработка неизвестного объема данных")
+                .addExample(new Task1903())//вывод с простым вычислением
+                .addTask(new Task8138())//просто вывод, не запутаться с присваиваниями
+                .addTask(new Task1845())//вывод с условием
+                .addTask(new Task7083())//вывод с условием
+                .addTask(new Task2072())//вывод с условием
+                .addTask(new Task7595())//подсчет суммы
+                .withGroup("Обработка конечной последовательности")
+                .addTask(new Task2368())//подсчет суммы. конечное количество чисел
+                .addTask(new Task5279())//конечное множество чисал. не запутаться с присваиваниями
 
                 .withGroup("Условие внутри цикла")
                 .addExample(7585)
@@ -578,7 +601,13 @@ public class Application {
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 .addTask(4236)
-        ;
+
+                .addExample(2324)
+                .addCitation("link_c4_p16.1")
+                .addTask(8731)
+                .addTask(4082)
+                .addTask(2523)
+                ;
     }
 
     private static void fillNestedLoops(TaskBook taskBook) {
@@ -791,12 +820,6 @@ public class Application {
 
     private static void fillReadingFiles(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab09")
-                .withGroup("Обработка неизвестного объема данны")
-                .addExample(2324)
-                .addCitation("link_c4_p16.1")
-                .addTask(8731)
-                .addTask(4082)
-                .addTask(2523)
 
                 .withGroup("Чтение файлов")
                 .addExample(6175)
