@@ -1,6 +1,7 @@
 package root;
 
 import root.tasks.aggregates.Task2802;
+import root.tasks.aggregates.Task3946;
 import root.tasks.aggregates.Task7260;
 import root.tasks.aggregates.Task7290;
 import root.tasks.arrays.*;
@@ -12,6 +13,7 @@ import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
+import root.tasks.loops_with_conditions.*;
 import root.tasks.ranges.*;
 import root.tasks.exceptions.Task1439;
 import root.tasks.exceptions.TaskJs1439;
@@ -587,20 +589,19 @@ public class Application {
                 .addTask(new Task5279())//конечное множество чисал. не запутаться с присваиваниями
 
                 .withGroup("Условие внутри цикла")
-                .addExample(7585)
-                .addExample(3488)
-                .addTask(4264)
-                .addTask(1483)
-                .addTask(3983)
+                .addExample(new Task7585())
+                .addTask(new Task3488())
+                .addTask(new Task4264())
+                .addTask(new Task1483())
+                .addTask(new Task3983())
                 .addTask(new Task3519())
                 .addTask(new Task8770())
-                .addCitation("link_c3_p11.2")
                 .addTask(new Task2222())
-                .addTask(8418)
+                .addTask(new Task8418())
                 .addTask(new Task8722())
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
-                .addTask(4236)
+                // .addTask(4236)
 
                 .addExample(2324)
                 .addCitation("link_c4_p16.1")
@@ -731,7 +732,7 @@ public class Application {
                 .addExample(8696)
                 .addTask(5969)
                 .addTask(5170)//подсчет количества делителей
-                .addTask(3946)
+                .addTask(new Task3946())
                 .addTask(6497)
                 .addTask(5648)
 

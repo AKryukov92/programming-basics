@@ -3,10 +3,6 @@
  *         13.07.2017
  */
 public class Lab13Task6732 {
-    public static void main(String[] args) {
-        Step3488();
-    }
-
     private static void Step1862() {
         System.out.println();
         System.out.println("1862");
@@ -230,62 +226,6 @@ public class Lab13Task6732 {
             }
         }
     }
-
-    private static void Step3983() {
-        System.out.println();
-        System.out.println("3983");
-        int[] in3983 = {5, 23, 51, 0, -7};
-        for (int i = 0; i < in3983.length; i++){
-            try {
-                StringBuilder result = Lab06.task3983(
-                        new StringBuilder(), in3983[i]);
-                System.out.println(result.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step4264() {
-        System.out.println();
-        System.out.println("4264");
-        int[] in4264 = {7, 12, 2, 9, 0, -1};
-        for (int i = 0; i < in4264.length; i++){
-            try {
-                StringBuilder result = Lab06.task4264(
-                        new StringBuilder(), in4264[i]);
-                System.out.println(result.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-    static void Step3488() {
-        System.out.println();
-        System.out.println("3488");
-        Lab06.task3488(0, 0, 0);
-        Lab06.task3488(5, 0, 0);
-        Lab06.task3488(8, 6, 4);
-        Lab06.task3488(15, 10, 5);
-        Lab06.task3488(21, 14, 7);
-        Lab06.task3488(36, 30, 24);
-    }
-
-    private static void Step1483() {
-        System.out.println();
-        System.out.println("1483");
-        int[] in1483 = {4, 18, 42, 0, -9};
-        for (int i = 0; i < in1483.length; i++){
-            try {
-                StringBuilder result = Lab06.task1483(
-                        new StringBuilder(), in1483[i]);
-                System.out.println(result.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step4996(){
         System.out.println();
         System.out.println("4996");

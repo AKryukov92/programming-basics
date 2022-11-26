@@ -19,25 +19,6 @@ public class Lab15Task8787 {
         Lab05.task7991(8, 13, -11);
     }
 
-    static void Step8418() {
-        System.out.println();
-        System.out.println("8418");
-        int[] in8418 = {6, 385, -9};
-        for (int i = 0; i < in8418.length; i++){
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab06.task8418(in8418[i]);
-                for (Integer item : result) {
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step5053() {
         System.out.println();
         System.out.println("5053");

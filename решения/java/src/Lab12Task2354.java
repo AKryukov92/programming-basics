@@ -260,17 +260,6 @@ public class Lab12Task2354 {
         Lab07.task1392("1000000 1 1");
     }
 
-    private static void Step3946() {
-        System.out.println();
-        System.out.println("3946");
-        System.out.printf("%.6f\n", Lab07.task3946("9 8 9 1 1 5 1 1"));
-        System.out.printf("%.6f\n", Lab07.task3946("1 2 3 4 1 3 4 4 4 4"));
-        System.out.printf("%.6f\n", Lab07.task3946("5 5 5 5 5"));
-        System.out.printf("%.6f\n", Lab07.task3946(""));
-        System.out.printf("%.6f\n", Lab07.task3946("1 1 1 9 9 100 30"));
-        System.out.printf("%.6f\n", Lab07.task3946("1000000 1 1"));
-    }
-
     private static void Step4283() {
         System.out.println();
         System.out.println("4283");

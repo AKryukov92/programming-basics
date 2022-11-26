@@ -284,18 +284,6 @@ public class Lab07 {
         }
     }
 
-    public static double task3946(String raw) {
-        if (raw.length() == 0) {
-            return 0;
-        }
-        String[] arr = raw.split(" ");
-        double sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += Integer.parseInt(arr[i]);
-        }
-        return sum / arr.length;
-    }
-
     public static double[] task6497(String raw) {
         if (raw.length() == 0) {
             return new double[0];

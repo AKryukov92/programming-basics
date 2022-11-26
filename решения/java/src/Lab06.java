@@ -441,73 +441,6 @@ public class Lab06 {
         return sb;
     }
 
-    public static void task3488(int a, int b, int c) {
-        int i = 0;
-        System.out.println("a  b  c");
-        while (i < 10) {
-            System.out.print(a + " " + b + " " + c);
-            if (a == 10 || b == 10 || c == 10) {
-                System.out.println(" Найдено");
-            } else {
-                System.out.println();
-            }
-            i = i + 1;
-            a = a + 1;
-            b = b + 1;
-            c = c + 1;
-        }
-    }
-
-    public static StringBuilder task4264(StringBuilder sb, int n) throws IllegalArgumentException {
-        if (n < 0){
-            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
-        }
-        int i = 0;
-        int j = 0;
-        while(i <= n){
-            sb.append(i);
-            sb.append(" - ");
-            sb.append(j);
-            sb.append("\n");
-            j++;
-            if (j == 4){
-                j = 0;
-            }
-            i++;
-        }
-        return sb;
-    }
-
-    public static StringBuilder task1483(StringBuilder sb, int n) throws IllegalArgumentException {
-        if (n < 0){
-            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
-        }
-        int i = 1;
-        while (i <= n){
-            sb.append("!");
-            if (i%5 == 0){
-                sb.append(" ");
-            }
-            i++;
-        }
-        return sb;
-    }
-
-    public static StringBuilder task3983(StringBuilder sb, int n) throws IllegalArgumentException {
-        if (n < 0){
-            throw new IllegalArgumentException("Значение N должно быть неотрицательным");
-        }
-        int i = 1;
-        while (i <= n){
-            sb.append("#");
-            if (i%20 == 0){
-                sb.append("\n");
-            }
-            i++;
-        }
-        return sb;
-    }
-
     //Дано начало и конец интервала, а также ширина вывода. Вывести все числа в указанном интервале по возрастанию.
     //Количество чисел на каждой строке должно быть равно ширине вывода.
     //Числа в строке разделены тремя символами _
@@ -591,22 +524,6 @@ public class Lab06 {
         sb.append("\nОтвет: ");
         sb.append(count);
         return sb.toString();
-    }
-
-    public static List<Integer> task8418(int x) throws IllegalArgumentException {
-        if (x <= 0){
-            throw new IllegalArgumentException("Значение X должно быть положительным");
-        }
-        int i = 1;
-        List<Integer> ret = new ArrayList<>();
-        while (i < x / 2 + 1){
-            if (x%i == 0){
-                ret.add(i);
-            }
-            i++;
-        }
-        ret.add(x);
-        return ret;
     }
 
     public static void task5170_2(int y) {
