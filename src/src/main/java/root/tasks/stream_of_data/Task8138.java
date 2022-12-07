@@ -1,52 +1,50 @@
 package root.tasks.stream_of_data;
 
-import root.tasks.OneInputValLayout;
+import root.tasks.StreamInputLayout;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
-public class Task8138 extends OneInputValLayout {
+public class Task8138 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего чисал.");
         appendCheckValuesHeader("data");
-        appendCheckValuesRow("78<br>" +
-                "71<br>" +
-                "85<br>" +
-                "61<br>" +
-                "87<br>" +
-                "73<br>" +
-                "96<br>" +
-                "87<br>" +
+        appendCheckValuesRow(
+                "78",
+                "71",
+                "85",
+                "61",
+                "87",
+                "73",
+                "96",
+                "87",
                 "92"
         );
-        appendCheckValuesRow("86<br>" +
-                "84<br>" +
-                "68<br>" +
-                "86<br>" +
-                "85<br>" +
-                "79<br>" +
-                "87<br>" +
-                "83<br>" +
+        appendCheckValuesRow(
+                "86",
+                "84",
+                "68",
+                "86",
+                "85",
+                "79",
+                "87",
+                "83",
                 "67"
         );
         appendCheckValuesFooter();
         appendFooter();
     }
-
     @Override
-    protected void logic(String value) {
-        String[] arr = value.split("<br>");
-        Iterator<String> itr = Arrays.stream(arr).iterator();
+    protected void logic(Iterator<String> source) {
         String prev;
-        String current = itr.next();
-        System.out.println("Предыдущее отсутствует. Текущее " + current);
+        String current = source.next();
+        System.out.println("Текущее " + current + ". Предыдущее отсутствует.");
         prev = current;
 
-        while (itr.hasNext()) {
-            current = itr.next();
-            System.out.println("Предыдущее "+ prev + ". Текущее " + current);
+        while (source.hasNext()) {
+            current = source.next();
+            System.out.println("Текущее " + current + ". Предыдущее "+ prev);
             prev = current;
         }
     }

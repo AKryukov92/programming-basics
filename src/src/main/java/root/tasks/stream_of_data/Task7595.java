@@ -1,40 +1,43 @@
 package root.tasks.stream_of_data;
 
-import root.tasks.OneInputValLayout;
+import root.tasks.StreamInputLayout;
 
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class Task7595 extends OneInputValLayout {
+public class Task7595 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит неизвестное количество чисел. Нужно вычислить сумму этих чисел. Программа сама не заканчивается. Её нужно закрывать вручную.");
         appendCheckValuesHeader("");
-        appendCheckValuesRow("1<br>" +
-                "20<br>" +
-                "300<br>" +
-                "4000<br>" +
+        appendCheckValuesRow(
+                "1",
+                "20",
+                "300",
+                "4000",
                 "50000"
         );
-        appendCheckValuesRow("11<br>" +
-                "19<br>" +
-                "7<br>" +
-                "1<br>" +
-                "3<br>" +
-                "20<br>" +
-                "7<br>" +
-                "12<br>" +
+        appendCheckValuesRow(
+                "11",
+                "19",
+                "7",
+                "1",
+                "3",
+                "20",
+                "7",
+                "12",
                 "4"
         );
-        appendCheckValuesRow("8<br>" +
-                "-9<br>" +
-                "3<br>" +
-                "14<br>" +
-                "11<br>" +
-                "14<br>" +
-                "14<br>" +
-                "-4<br>" +
+        appendCheckValuesRow(
+                "8",
+                "-9",
+                "3",
+                "14",
+                "11",
+                "14",
+                "14",
+                "-4",
                 "2"
         );
         appendCheckValuesFooter();
@@ -42,13 +45,11 @@ public class Task7595 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String value) {
-        String[] arr = value.split("<br>");
-        Iterator<String> itr = Arrays.stream(arr).iterator();
+    protected void logic(Iterator<String> source) {
         int sum = 0;
         System.out.println("Изначальная сумма равна " + sum);
-        while (itr.hasNext()) {
-            String current = itr.next();
+        while (source.hasNext()) {
+            String current = source.next();
             int x = Integer.parseInt(current);
             System.out.println("К значению " + sum + " прибавляем " + x);
             sum += x;

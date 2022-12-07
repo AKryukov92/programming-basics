@@ -13,6 +13,7 @@ public class Task9827 extends TwoInputValLayout {
         appendCheckValuesRow("", "one two three four");
         appendCheckValuesRow("", "");
         appendCheckValuesRow("one two three four", "two two two two two");
+        appendCheckValuesFooter();
         appendFooter();
     }
 

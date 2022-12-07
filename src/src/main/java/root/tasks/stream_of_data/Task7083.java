@@ -1,47 +1,46 @@
 package root.tasks.stream_of_data;
 
-import root.tasks.OneInputValLayout;
+import root.tasks.StreamInputLayout;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
-public class Task7083 extends OneInputValLayout {
+public class Task7083 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит неизвестное количество чисел. Проверить каждое введенное число, попадает ли оно в интервал от 30 до 40 включительно. Вывести соответствующее сообщение. Программа сама не заканчивается. Её нужно закрывать вручную.");
-        appendCheckValuesHeader("data");
-        appendCheckValuesRow("5<br>" +
-                "27<br>" +
-                "7<br>" +
-                "18<br>" +
-                "24<br>" +
-                "19<br>" +
-                "26<br>" +
-                "14<br>" +
+        appendCheckValuesHeader();
+        appendCheckValuesRow(
+                "100",
+                "29",
+                "39",
+                "31",
+                "35",
+                "30",
+                "40",
+                "41",
+                "57",
                 "8"
         );
-        appendCheckValuesRow("8<br>" +
-                "17<br>" +
-                "9<br>" +
-                "16<br>" +
-                "13<br>" +
-                "7<br>" +
-                "4<br>" +
-                "24<br>" +
-                "26<br>"
+        appendCheckValuesRow(
+                "68",
+                "17",
+                "49",
+                "16",
+                "13",
+                "37",
+                "34",
+                "24",
+                "26"
         );
         appendCheckValuesFooter();
         appendFooter();
     }
 
     @Override
-    protected void logic(String value) {
-        String[] arr = value.split("<br>");
-        Iterator<String> itr = Arrays.stream(arr).iterator();
-
-        while (itr.hasNext()) {
-            String current = itr.next();
+    protected void logic(Iterator<String> source) {
+        while (source.hasNext()) {
+            String current = source.next();
             int x = Integer.parseInt(current);
             if (30 <= x && x <= 40) {
                 System.out.println("Число " + x + " попадает в интервал от 30 до 40");

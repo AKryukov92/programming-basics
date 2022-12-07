@@ -603,7 +603,7 @@ public class Application {
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 // .addTask(4236)
 
-                .addExample(2324)
+                .addExample(new Task2324())
                 .addCitation("link_c4_p16.1")
                 .addTask(8731)
                 .addTask(4082)

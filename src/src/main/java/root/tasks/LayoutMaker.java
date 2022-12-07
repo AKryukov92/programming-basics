@@ -26,6 +26,9 @@ public abstract class LayoutMaker {
         try {
             this.writer = new PrintStream(baos, true, utf8);
             makeLayout();
+            if (tableOpened && !headerOpened) {
+                throw new RuntimeException("Заголовок таблицы не закрыт. Вызовите метод appendCheckValuesFooter. Задача " + this.getClass().getName());
+            }
             if (tableOpened) {
                 appendCheckValuesFooter();
             }
@@ -51,7 +54,7 @@ public abstract class LayoutMaker {
         writer.println("<div id='task" + getId() + "' class='task_block'>");
     }
 
-    protected void appendTaskHeader(){
+    protected void appendTaskHeader() {
         writer.println("<div class='task_id'>" + getId() + "</div>");
         writer.println("<h3>Задача</h3>");
     }
@@ -79,7 +82,10 @@ public abstract class LayoutMaker {
 
     protected void appendTaskDesc(String taskDescription) {
         writer.println("<div class='task_desc'>");
-        writer.println(taskDescription);
+        String escaped = taskDescription
+                .replace("<", "&lt;")
+                .replace(">", "&gt;");
+        writer.println(escaped);
         writer.println("</div>");
     }
 

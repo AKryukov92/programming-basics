@@ -13,6 +13,7 @@ public class Task3289 extends OneInputValLayout {
         appendCheckValuesRow("");
         appendCheckValuesRow("1000;990;980;970");
         appendCheckValuesRow("1");
+        appendCheckValuesFooter();
         appendFooter();
     }
 
