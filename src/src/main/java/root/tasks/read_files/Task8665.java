@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class Task8665 extends OneInputValLayout {
 
-    private String employeesFile = "files/task8665/employees.csv";
-    private String departmentsFile = "files/task8665/departments.csv";
+    private final String employeesFile = "files/task8665/employees.csv";
+    private final String departmentsFile = "files/task8665/departments.csv";
 
     @Override
     protected void logic(String departmentName) {
@@ -65,30 +65,30 @@ public class Task8665 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Дано два исходных файла: список сотрудников и список отделов." +
-                "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>" +
-                "<li>department_id - код отдела</li>" +
-                "<li>department_name - наименование отдела</li>" +
-                "<li>manager_id - код сотрудника-руководителя</li>" +
-                "<li>location_id - код офиса" +
-                "</ol>" +
-                "В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>" +
-                "<li>employee_id - код сотрудника</li>" +
-                "<li>first_name - имя</li>" +
-                "<li>last_name - фамилия</li>" +
-                "<li>email - адрес почты без домена</li>" +
-                "<li>phone_number - телефонный номер</li>" +
+                "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "department_id - код отдела",
+                "department_name - наименование отдела",
+                "manager_id - код сотрудника-руководителя",
+                "location_id - код офиса"
+        );
+        appendTaskDesc("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "employee_id - код сотрудника",
+                "first_name - имя",
+                "last_name - фамилия",
+                "email - адрес почты без домена",
+                "phone_number - телефонный номер",
 
-                "<li>hire_date - дата найма</li>" +
-                "<li>job_id - код должности</li>" +
-                "<li>salary - заработная плата</li>" +
-                "<li>commission_pct - ставка коммиссии</li>" +
-                "<li>manager_id - код руководителя</li>" +
+                "hire_date - дата найма",
+                "job_id - код должности",
+                "salary - заработная плата",
+                "commission_pct - ставка коммиссии",
+                "manager_id - код руководителя",
 
-                "<li>department_id - код отдела</li>" +
-                "</ol>" +
-                "Пользователь вводит наименование отдела." +
+                "department_id - код отдела"
+        );
+        appendTaskDesc("Пользователь вводит наименование отдела." +
                 " Нужно вывести код отдела, а также имя, фамилию и телефонный номер сотрудников," +
                 " которые работают в данном отделе." +
                 " Если такие отсутствуют, сообщить об этом." +

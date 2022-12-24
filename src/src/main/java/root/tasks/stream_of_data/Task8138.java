@@ -48,4 +48,20 @@ public class Task8138 extends StreamInputLayout {
             prev = current;
         }
     }
+
+    protected void alternative(Iterator<String> source) {
+        String even = source.next();
+        String odd;
+        System.out.println("Текущее " + even + ". Предыдущее отсутствует.");
+        odd = source.next();
+        System.out.println("Текущее " + odd + ". Предыдущее "+ even);
+        while(source.hasNext()) {
+            even = source.next();
+            System.out.println("Текущее " + even + ". Предыдущее" + odd);
+            if (source.hasNext()) {
+                odd = source.next();
+                System.out.println("Текущее " + odd + ". Предыдущее " + even);
+            }
+        }
+    }
 }

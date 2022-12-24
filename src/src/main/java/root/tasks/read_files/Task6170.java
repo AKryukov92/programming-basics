@@ -8,37 +8,37 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Task6170 extends OneInputValLayout {
-    private String employeesFile = "files/task6170/employees.csv";
-    private String departmentsFile = "files/task6170/departments.csv";
+    private final String employeesFile = "files/task6170/employees.csv";
+    private final String departmentsFile = "files/task6170/departments.csv";
 
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано два исходных файла: список сотрудников и список отделов." +
-                "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>" +
-                "<li>department_id - код отдела</li>" +
-                "<li>department_name - наименование отдела</li>" +
-                "<li>manager_id - код сотрудника-руководителя</li>" +
-                "<li>location_id - код офиса" +
-                "</ol>" +
-                "В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>" +
-                "<li>employee_id - код сотрудника</li>" +
-                "<li>first_name - имя</li>" +
-                "<li>last_name - фамилия</li>" +
-                "<li>email - адрес почты без домена</li>" +
-                "<li>phone_number - телефонный номер</li>" +
+        appendTaskDescWithHtml("Дано два исходных файла: список сотрудников и список отделов." +
+                "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "department_id - код отдела",
+                "department_name - наименование отдела",
+                "manager_id - код сотрудника-руководителя",
+                "location_id - код офиса"
+        );
+        appendTaskDescWithHtml("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "employee_id - код сотрудника",
+                "first_name - имя",
+                "last_name - фамилия",
+                "email - адрес почты без домена",
+                "phone_number - телефонный номер",
 
-                "<li>hire_date - дата найма</li>" +
-                "<li>job_id - код должности</li>" +
-                "<li>salary - заработная плата</li>" +
-                "<li>commission_pct - ставка коммиссии</li>" +
-                "<li>manager_id - код руководителя</li>" +
+                "hire_date - дата найма",
+                "job_id - код должности",
+                "salary - заработная плата",
+                "commission_pct - ставка коммиссии",
+                "manager_id - код руководителя",
 
-                "<li>department_id - код отдела</li>" +
-                "</ol>" +
-                "Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и <b>наименование</b> отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
+                "department_id - код отдела"
+        );
+        appendTaskDesc("Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и НАИМЕНОВАНИЕ отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
         appendCheckValuesHeader("Код сотрудника");
         appendCheckValuesRow("100");
         appendCheckValuesRow("107");
@@ -66,7 +66,7 @@ public class Task6170 extends OneInputValLayout {
                                     "Отдел: ",
                             attributes[1],
                             attributes[2]
-                            );
+                    );
                     String departmentId = attributes[10];
                     File dFile = new File(departmentsFile);
                     boolean dFound = false;
@@ -87,7 +87,7 @@ public class Task6170 extends OneInputValLayout {
                     break;
                 }
             }
-            if(!found) {
+            if (!found) {
                 System.out.println("Сотрудник с кодом " + employeeId + " не найден");
             }
         } catch (FileNotFoundException ex) {

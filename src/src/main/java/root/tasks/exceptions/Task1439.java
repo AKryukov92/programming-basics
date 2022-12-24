@@ -6,14 +6,14 @@ public class Task1439 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("<p>Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое среди введенных чисел. Фрагменты строк не участвуют в подсчете количества элементов. Сообщить пользователю индекс и значение некорректных элементов.</p>");
+        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое среди введенных чисел. Фрагменты строк не участвуют в подсчете количества элементов. Сообщить пользователю индекс и значение некорректных элементов.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("9 8 7 6 5");
         appendCheckValuesRow("5 2 11 3 1 3 4 4 4 4");
         appendCheckValuesRow("9 q 8 w 7 e 6 r 5 t");
         appendCheckValuesRow("q w e r");
-        appendCheckValuesRow("0 0 0 0");
         appendCheckValuesRow("");
+        appendCheckValuesRow("0 0 0 0");
         appendCheckValuesFooter();
         appendFooter();
     }
