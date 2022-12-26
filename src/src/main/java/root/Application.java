@@ -830,7 +830,7 @@ public class Application {
                 .addTask(new Task6989())
                 .addTask(new Task6170())
                 .addTask(new Task8665())
-                .addTask(1761)
+                .addTask(new Task1761())
                 .addCitation("link_c2_p8.3")
 
                 .addTask(3226)//нужно добавить ход решения. проанализировать вложенность скобок

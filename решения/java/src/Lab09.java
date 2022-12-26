@@ -40,22 +40,6 @@ public class Lab09 {
         }
     }
 
-    public static void step1761() {
-        System.out.println();
-        System.out.println("1761");
-        task1761(".\\task1761\\test1.txt");
-        task1761(".\\task1761\\test2.txt");
-        task1761(".\\task1761\\test3.txt");
-        task1761(".\\task1761\\test4.txt");
-        task1761(".\\task1761\\test5.txt");
-        task1761(".\\task1761\\test6.txt");
-        task1761(".\\task1761\\test7.txt");
-        task1761(".\\task1761\\test8.txt");
-        task1761(".\\task1761\\test9.txt");
-        task1761(".\\task1761\\test10.txt");
-        task1761(".\\task1761\\test11.txt");
-    }
-
     public static void step6175(){
         System.out.println("6175");
         String[] out6175 = {
@@ -307,68 +291,6 @@ public class Lab09 {
             }
         } catch (InputMismatchException ex) {
             System.out.println("Не удается считать число");
-        } catch (FileNotFoundException ex) {
-            System.out.println("Файл не существует " + target.getAbsolutePath());
-        }
-    }
-
-    public static void task1761(String filename) {
-        File target = new File(filename);
-        try (Scanner scanner = new Scanner(target)) {
-            if (!scanner.hasNext()) {
-                System.out.println("Файл пуст");
-            } else {
-                String functionName = scanner.nextLine();
-                if (scanner.hasNext()) {
-                    scanner.nextLine();
-                    if (functionName.equals("sum")) {
-                        int sum = 0;
-                        while (scanner.hasNext()) {
-                            sum += scanner.nextInt();
-                        }
-                        System.out.printf("sum\n------------\n%d\n", sum);
-                    } else if (functionName.equals("avg")) {
-                        int sum = 0;
-                        int count = 0;
-                        while (scanner.hasNext()) {
-                            sum += scanner.nextInt();
-                            count++;
-                        }
-                        int avg = sum / count;
-                        System.out.printf("avg\n------------\n%d\n", avg);
-                    } else if (functionName.equals("max")) {
-                        if (scanner.hasNext()) {
-                            int max = scanner.nextInt();
-                            while (scanner.hasNext()) {
-                                int current = scanner.nextInt();
-                                if (current > max) {
-                                    max = current;
-                                }
-                            }
-                            System.out.printf("max\n------------\n%d\n", max);
-                        } else {
-                            System.out.println("Формат файла нарушен");
-                        }
-                    } else if (functionName.equals("min")) {
-                        if (scanner.hasNext()) {
-                            int min = scanner.nextInt();
-                            while (scanner.hasNext()) {
-                                int current = scanner.nextInt();
-                                if (current < min) {
-                                    min = current;
-                                }
-                            }
-                            System.out.printf("min\n------------\n%d\n", min);
-                        } else {
-                            System.out.println("Формат файла нарушен");
-                        }
-                    } else {
-                        System.out.println("Неизвестная функция: " + functionName);
-                    }
-                } else {
-                    System.out.println("Формат файла нарушен");
-                }
-            }
         } catch (FileNotFoundException ex) {
             System.out.println("Файл не существует " + target.getAbsolutePath());
         }
