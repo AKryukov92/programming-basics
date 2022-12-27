@@ -233,7 +233,7 @@ public class TaskBook {
         }
         writer.write("Версия ");
         writer.write(gitHash);
-        writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2022. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
+        writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
         writer.write("</body></html>");
         writer.close();
         System.out.println("Taskbook file with name " + result.getAbsolutePath() + " has been made.");

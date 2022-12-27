@@ -42,6 +42,21 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("</tr>");
     }
 
+    protected void appendCheckValuesRowWithFile(String filename) {
+        writer.println("<tr>");
+        writer.println("<td></td>");
+        writer.println("<td>");
+        writer.println("<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>");
+        writer.println("</td>");
+        writer.print("<td class='preformatted'>");
+        PrintStream oldOut = System.out;
+        System.setOut(writer);
+        logic(filename);
+        System.setOut(oldOut);
+        writer.println("</td>");
+        writer.println("</tr>");
+    }
+
     protected String wrapLogic(String a) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
@@ -58,7 +73,11 @@ public abstract class OneInputValLayout extends LayoutMaker {
     }
 
     protected String linkToFile(String filename, String description) {
-        return "<a href=\"" + filename + "\" target=\"_blank\">открыть " + description + " в новой вкладке</a>";
+        if (description.isEmpty()) {
+            return "<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>";
+        } else {
+            return "<a href=\"" + filename + "\" target=\"_blank\">открыть " + description + " в новой вкладке</a>";
+        }
     }
 
     protected void appendCheckSingleWithFile(String filename) {

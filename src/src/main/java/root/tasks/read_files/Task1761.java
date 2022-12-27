@@ -22,17 +22,17 @@ public class Task1761 extends OneInputValLayout {
                 "------------\n" +
                 "$result");
         appendCheckValuesHeader("command");
-        appendCheckSingleWithFile("files/task1761/test1.txt");
-        appendCheckSingleWithFile("files/task1761/test2.txt");
-        appendCheckSingleWithFile("files/task1761/test3.txt");
-        appendCheckSingleWithFile("files/task1761/test4.txt");
-        appendCheckSingleWithFile("files/task1761/test5.txt");
-        appendCheckSingleWithFile("files/task1761/test6.txt");
-        appendCheckSingleWithFile("files/task1761/test7.txt");
-        appendCheckSingleWithFile("files/task1761/test8.txt");
-        appendCheckSingleWithFile("files/task1761/test9.txt");
-        appendCheckSingleWithFile("files/task1761/test10.txt");
-        appendCheckSingleWithFile("files/task1761/test11.txt");
+        appendCheckValuesRowWithFile("files/task1761/test1.txt");
+        appendCheckValuesRowWithFile("files/task1761/test2.txt");
+        appendCheckValuesRowWithFile("files/task1761/test3.txt");
+        appendCheckValuesRowWithFile("files/task1761/test4.txt");
+        appendCheckValuesRowWithFile("files/task1761/test5.txt");
+        appendCheckValuesRowWithFile("files/task1761/test6.txt");
+        appendCheckValuesRowWithFile("files/task1761/test7.txt");
+        appendCheckValuesRowWithFile("files/task1761/test8.txt");
+        appendCheckValuesRowWithFile("files/task1761/test9.txt");
+        appendCheckValuesRowWithFile("files/task1761/test10.txt");
+        appendCheckValuesRowWithFile("files/task1761/test11.txt");
         appendCheckValuesFooter();
         appendFooter();
     }

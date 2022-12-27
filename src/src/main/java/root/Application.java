@@ -827,15 +827,14 @@ public class Application {
                 .addTask(4488)
 
                 .addExample(new Task7788())//использование файла как таблицы СУБД
-                .addTask(new Task6989())
-                .addTask(new Task6170())
-                .addTask(new Task8665())
+                .addTask(new Task6989())//файл-таблица СУБД. нужно вывести данные по идентификатору
+                .addTask(new Task6170())//2 файла-таблицы СУБД. Нужно соединить две таблицы, вывести данные по коду
+                .addTask(new Task8665())//2 файла-таблицы СУБД. Нужно выполнить поиск по неключу и вывести
                 .addTask(new Task1761())
-                .addCitation("link_c2_p8.3")
 
-                .addTask(3226)//нужно добавить ход решения. проанализировать вложенность скобок
-                .addTask(9417)//чтение нескольких файлов, поиск общей суммы, обработка ошибок
-                .addTask(3148)//чтение нескольких файлов. список в одном, обрабатывать другие
+                .addTask(new Task4477())//проанализировать вложенность скобок
+                .addTask(new Task9417())//чтение нескольких файлов, поиск общей суммы, обработка ошибок
+                .addTask(new Task3148())//чтение нескольких файлов. список в одном, обрабатывать другие
         ;
     }
 
@@ -1224,10 +1223,10 @@ public class Application {
         makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+       // makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

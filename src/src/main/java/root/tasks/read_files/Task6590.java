@@ -10,28 +10,28 @@ public class Task6590 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Исходный файл содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>\n" +
-                "<li>employee_id - код сотрудника</li>" +
-                "<li>first_name - имя</li>" +
-                "<li>last_name - фамилия</li>" +
-                "<li>email - адрес почты без домена</li>" +
-                "<li>phone_number - телефонный номер</li>" +
-                "<li>hire_date - дата найма</li>" +
-                "<li>job_id - код должности</li>" +
-                "<li>salary - заработная плата</li>" +
-                "<li>commission_pct - ставка коммиссии</li>" +
-                "<li>manager_id - код руководителя</li>" +
-                "<li>department_id - код отдела</li>" +
-                "</ol>" +
-                "Руководителем считается сотрудник, чей идентификатор указан у другого сотрудника в поле manager_id. Для каждого руководителя нужно вывести его фамилию, код должности и идентификаторы подчиненных сотрудников.");
-        appendCheckSingleWithFile("files/task6590/employees.csv");
+        appendTaskDescWithHtml("Исходный файл " + linkToFile("files/task6590/employees.csv", "employees.csv") + "содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "employee_id - код сотрудника",
+                "first_name - имя",
+                "last_name - фамилия" ,
+                "email - адрес почты без домена",
+                "phone_number - телефонный номер",
+                "hire_date - дата найма",
+                "job_id - код должности",
+                "salary - заработная плата",
+                "commission_pct - ставка коммиссии",
+                "manager_id - код руководителя",
+                "department_id - код отдела>"
+        );
+        appendTaskDesc("Руководителем считается сотрудник, чей идентификатор указан у другого сотрудника в поле manager_id. Для каждого руководителя нужно вывести его фамилию, код должности и идентификаторы подчиненных сотрудников.");
+        appendCheckSingle(wrapLogic("files/task6590/employees.csv"));
         appendFooter();
     }
 
     @Override
-    protected void logic(String file) {
-        File target = new File(file);
+    protected void logic(String filename) {
+        File target = new File(filename);
         Set<String> managerIds = new HashSet<>();
         try (Scanner scanner = new Scanner(target)) {
             while (scanner.hasNext()) {

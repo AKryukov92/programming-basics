@@ -1,61 +1,60 @@
 package root.tasks.read_files;
 
-import root.tasks.TwoInputValLayout;
+import root.tasks.OneInputValLayout;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Task6989 extends TwoInputValLayout {
+public class Task6989 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Исходный файл содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendTaskDescWithHtml("Исходный файл " + linkToFile("files/task6989/composers.csv", "composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
         appendOrdered(
-                "employee_id - код сотрудника",
+                "composer_id - идентификатор композитора",
                 "first_name - имя",
                 "last_name - фамилия",
-                "email - адрес почты без домена",
-                "phone_number - телефонный номер",
-                "hire_date - дата найма",
-                "job_id - код должности",
-                "salary - заработная плата",
-                "commission_pct - ставка коммиссии",
-                "manager_id - код руководителя",
-                "department_id - код отдела"
+                "birth_date - дата рождения",
+                "birth_place - место рождения",
+                "death_date - дата смерти",
+                "death_place - место смерти",
+                "wiki_page - ссылка на страницу Википедии"
         );
-        appendTaskDesc("Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и код отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
+        appendTaskDesc("Пользователь вводит число - идентификатор композитора. Нужно вывести имя, фамилию и место рождения композитора, у которого идентификатор равен введенному числу. Если композитор с нужным идентификатором отсутствует, сообщить об этом.");
         appendCheckValuesHeader("employee_id", "ссылка на файл");
-        appendCheckValuesRowWithFile("100", "files/task6989/employees.csv");
-        appendCheckValuesRowWithFile("107", "files/task6989/employees.csv");
-        appendCheckValuesRowWithFile("149", "files/task6989/employees.csv");
-        appendCheckValuesRowWithFile("202", "files/task6989/employees.csv");
-        appendCheckValuesRowWithFile("404", "files/task6989/employees.csv");
+        appendCheckValuesRow("9");
+        appendCheckValuesRow("6");
+        appendCheckValuesRow("3");
+        appendCheckValuesRow("2");
+        appendCheckValuesRow("404");
+        appendCheckValuesRow("composer_id");
         appendCheckValuesFooter();
         appendFooter();
     }
 
     @Override
-    protected void logic(String employeeId, String filename) {
-        File target = new File(filename);
+    protected void logic(String employeeId) {
+        File target = new File("files/task6989/composers.csv");
         try (Scanner scanner = new Scanner(target)) {
             boolean found = false;
+            scanner.nextLine();
             while (scanner.hasNext()) {
                 String entry = scanner.nextLine();
-                String[] attributes = entry.split(",");
+                String[] attributes = entry.split(";");
                 if (attributes[0].equals(employeeId)) {
                     System.out.printf("Имя: %s\n" +
                                     "фамилия: %s\n" +
-                                    "код отдела: %s",
+                                    "место рождения: %s",
                             attributes[1],
                             attributes[2],
-                            attributes[10]);
+                            attributes[4]);
                     found = true;
                     break;
                 }
             }
             if (!found) {
-                System.out.println("Сотрудник с кодом " + employeeId + " не найден");
+                System.out.println("Композитор с кодом " + employeeId + " не найден");
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Файл '" + target.getAbsolutePath() + "' не существует");
