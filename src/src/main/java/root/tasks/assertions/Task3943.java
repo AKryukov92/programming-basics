@@ -11,6 +11,7 @@ public class Task3943 extends TwoInputValLayout {
         appendCheckValuesRow("-5", "81");
         appendCheckValuesRow("13", "36");
         appendCheckValuesRow("-20", "36");
+        appendCheckValuesRow("20", "-50");
         appendCheckValuesRow("7507", "7499");
         appendCheckValuesRow("7489", "-7487");
         appendCheckValuesRow("-7481", "7477");

@@ -2,20 +2,19 @@ package root.tasks.exceptions;
 
 import root.tasks.TwoInputValLayout;
 
-public class TaskCs5259 extends TwoInputValLayout {
+public class TaskJava5259 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendOrdered(
-                "В классе Methods реализуйте публичный статический метод Task1934 для решения задачи " + linkToTask(1934),
+                "В классе Methods реализуйте публичный статический метод Task1934 для решения задачи" + linkToTask(1934),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
-                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
-                "Создайте проект Runner1934.",
-                "В проекте Runner1934 добавьте ссылку на проект CodeProject.",
-                "Добавьте команду using пространства имен из проекта CodeProject.",
-                "Создайте ещё один метод в классе Program проекта Runner1934. Назовите его Step1934. Он ничего не возвращает и не принимает аргументов."
+                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.",
+                "В папке с исходным кодом создайте класс Runner1934.",
+                "Создайте метод main в классе Runner1934 по аналогии с методами main из задач прошлых практических.",
+                "Создайте еще один метод в классе Runner1934. Назовите его step1934. Он ничего не возвращает и не принимает аргументов."
         );
-        appendSubheading("Реализуйте метод Step1934");
+        appendSubheading("Реализуйте метод step1934");
         appendOrdered(
                 "Выведите в консоль сообщение \"Введите значения A и B\".",
                 "Объявите переменные a и b для хранения целых чисел.",
@@ -28,9 +27,9 @@ public class TaskCs5259 extends TwoInputValLayout {
         appendSubheading("Оформите метод Main");
         appendOrdered(
                 "Выведите сообщение \"Начало работы программы\".",
-                "Вызовите метод Step1934.",
+                "Вызовите метод step1934.",
                 "Выведите сообщение \"Программа завершена успешно\".",
-                "В результате запуска проекта Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
+                "В результате запуска метода main класса Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
         );
         appendSubheading("Проверьте, что метод выбрасывает исключения");
         appendCheckValuesHeader("A", "B");
@@ -52,36 +51,37 @@ public class TaskCs5259 extends TwoInputValLayout {
                 "Введите значения A и B\n" +
                 "13\n" +
                 "15\n" +
-                "Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно\n" +
-                "   at CodeProject.Methods.Task1934(Int32 a, Int32 b) in E:\\Stage2\\CodeProject\\Methods.cs:line 197\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 24\n" +
-                "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
+                "Exception in thread \"main\" java.lang.IllegalArgumentException:\n" +
+                "    Подкоренное выражение должно быть неотрицательно\n" +
+                "\tat Methods.task1934(Methods.java:6)\n" +
+                "\tat Runner1934.step1934(Runner1934.java:50)\n" +
+                "\tat Runner1934.main(Runner1934.java:36)");
         appendCheckValuesRowNoLogic("word", "4", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
                 "word\n" +
-                "Unhandled Exception: System.FormatException: Input string was not in a correct format.\n" +
-                "   at System.Number.StringToNumber(String str, NumberStyles options, \n" +
-                "       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)\n" +
-                "   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n" +
-                "   at System.Int32.Parse(String s)\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 23\n" +
-                "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
+                "Exception in thread \"main\" java.util.InputMismatchException\n" +
+                "    at java.util.Scanner.throwFor(Scanner.java:864)\n" +
+                "    at java.util.Scanner.next(Scanner.java:1485)\n" +
+                "    at java.util.Scanner.nextInt(Scanner.java:2117)\n" +
+                "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
+                "    at Runner1934.step1934(Runner1934.java:42)\n" +
+                "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesRowNoLogic("11", "incorrect", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
                 "11\n" +
                 "word\n" +
-                "Unhandled Exception: System.FormatException: Input string was not in a correct format.\n" +
-                "   at System.Number.StringToNumber(String str, NumberStyles options,\n" +
-                "       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)\n" +
-                "   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n" +
-                "   at System.Int32.Parse(String s)\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 24\n" +
-                "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
+                "Exception in thread \"main\" java.util.InputMismatchException\n" +
+                "    at java.util.Scanner.throwFor(Scanner.java:864)\n" +
+                "    at java.util.Scanner.next(Scanner.java:1485)\n" +
+                "    at java.util.Scanner.nextInt(Scanner.java:2117)\n" +
+                "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
+                "    at Runner1934.step1934(Runner1934.java:43)\n" +
+                "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");
         appendOrdered(
-                "Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
-                "Обработайте FormatException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
+                "Обработайте IllegalArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
+                "Обработайте InputMismatchException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
                 "Стек вызовов не должен выводиться не экран в случае ошибки",
                 "Фраза \"Программа завершена успешно\" не должна выводиться на экран в случае ошибки",
                 "Фраза \"Результат равен\" не должна выводиться на экран в случае ошибки"
@@ -122,6 +122,6 @@ public class TaskCs5259 extends TwoInputValLayout {
     }
 
     public static void main(String[] args) {
-        System.out.println(new TaskCs5259());
+        System.out.println(new TaskJava5259());
     }
 }

@@ -13,11 +13,9 @@ import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
-import root.tasks.exceptions.TaskCs5259;
+import root.tasks.exceptions.*;
 import root.tasks.loops_with_conditions.*;
 import root.tasks.ranges.*;
-import root.tasks.exceptions.Task1439;
-import root.tasks.exceptions.TaskJs1439;
 import root.tasks.filltemplate.*;
 import root.tasks.internal_state.TaskJava3185;
 import root.tasks.internal_state.TaskJava8403;
@@ -979,18 +977,23 @@ public class Application {
                 .addTask(5014)
         ;
         if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
+                    .addExample(new TaskCs5259())
+                    .addTask(new TaskCs9058())
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
+                    .addExample(new TaskJava5259())
+                    .addTask(3943)
+            ;
+        } else {
             taskBook
                     .withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(1934)
-            ;
-        } else {
-            taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
-                    .addExample(new TaskCs5259())
+                    .addTask(3943)
             ;
         }
         taskBook
-                .addTask(3943)
-
                 .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
                 .addExample(9020)
                 .addTask(5871)
@@ -1230,10 +1233,10 @@ public class Application {
         String css = loadCss("styles.css");
 
         TaskBook[] taskBooksJava = populateJavaContent(themeList);
-        makeFiles(taskBooksJava, css, gitHash);
+        //makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-       // makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
         //makeFiles(taskBooksJs, css, gitHash);

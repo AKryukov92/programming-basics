@@ -28,7 +28,7 @@ public class Task2368 extends StreamInputLayout {
         );
         appendCheckValuesRow("0", "");
         appendCheckValuesRow(
-                "8",
+                "4",
                 "-7",
                 "-5",
                 "-13",
@@ -55,12 +55,18 @@ public class Task2368 extends StreamInputLayout {
         }
         if (n > 0) {
             int sum = 0;
-            while (source.hasNext()) {
+            int i = 0;
+            while (i < n && source.hasNext()) {
                 String current = source.next();
                 int x = Integer.parseInt(current);
                 sum += x;
+                i = i + 1;
             }
             System.out.println("Итоговая сумма равна " + sum);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task2368());
     }
 }
