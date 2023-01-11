@@ -6,7 +6,7 @@ public class Task3943 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Вычислить результат по формуле <formula>-5<sqrt><val>x+<sqrt><val>y</val></sqrt></val></sqrt></formula>");
+        appendNonEscaped("Вычислить результат по формуле <formula>-5<sqrt><val>x+<sqrt><val>y</val></sqrt></val></sqrt></formula>");
         appendCheckValuesHeader("x", "y");
         appendCheckValuesRow("-5", "81");
         appendCheckValuesRow("13", "36");

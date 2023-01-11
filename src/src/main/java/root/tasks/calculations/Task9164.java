@@ -16,7 +16,7 @@ public class Task9164 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Вычислить результат по формуле. Значение угла дано в градусах. <formula>sin(aRad)cos(bRad)+cos(aRad)sin(bRad)</formula>");
+        appendNonEscaped("Вычислить результат по формуле. Значение угла дано в градусах. <formula>sin(aRad)cos(bRad)+cos(aRad)sin(bRad)</formula>");
         appendCheckValuesHeader("aDeg", "bDeg");
         appendCheckValuesRow("90","90");
         appendCheckValuesRow("90", "0");

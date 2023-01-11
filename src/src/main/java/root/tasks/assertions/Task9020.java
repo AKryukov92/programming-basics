@@ -10,7 +10,7 @@ public class Task9020 extends OneInputValLayout {
                 " В некоторых случаях к сообщению добавляют код ошибки."
         );
         appendTaskHeader();
-        appendTaskDesc("Вычислить результат по формуле <formula>3<sqrt><val>61-x</val></sqrt></formula>");
+        appendNonEscaped("Вычислить результат по формуле <formula>3<sqrt><val>61-x</val></sqrt></formula>");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-9");

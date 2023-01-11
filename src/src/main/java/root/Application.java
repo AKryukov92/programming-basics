@@ -13,6 +13,7 @@ import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
+import root.tasks.exceptions.TaskCs5259;
 import root.tasks.loops_with_conditions.*;
 import root.tasks.ranges.*;
 import root.tasks.exceptions.Task1439;
@@ -608,7 +609,7 @@ public class Application {
                 .addTask(8731)
                 .addTask(4082)
                 .addTask(2523)
-                ;
+        ;
     }
 
     private static void fillNestedLoops(TaskBook taskBook) {
@@ -969,9 +970,18 @@ public class Application {
                 .addTask(5101)
                 .addTask(8139)
                 .addTask(5014)
-
-                .withGroup("Выбрасывание исключения, проверка в консольной программе")
-                .addExample(1934)
+        ;
+        if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .withGroup("Выбрасывание исключения, проверка в консольной программе")
+                    .addExample(1934)
+            ;
+        } else {
+            taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
+                    .addExample(new TaskCs5259())
+            ;
+        }
+        taskBook
                 .addTask(3943)
 
                 .withGroup("Выбрасывание исключения, проверка в юнит-тестах")

@@ -9,7 +9,7 @@ public class Task6522 extends MultipleInputValLayout {
         appendTaskDesc("Обратите внимание, что ситуаций с неправильными данными может быть значительно больше, чем ситуаций с правильными данными." +
                 " Код для предотвращения нежелательных ситуаций может получиться объемнее, чем код для решения задачи.");
         appendTaskHeader();
-        appendTaskDesc("Смешали volume<sub>1</sub> литров воды с температурой temperature<sub>1</sub> градусов Цельсия " +
+        appendNonEscaped("Смешали volume<sub>1</sub> литров воды с температурой temperature<sub>1</sub> градусов Цельсия " +
                 "с volume<sub>2</sub> литрами воды с температурой temperature<sub>2</sub> градусов Цельсия." +
                 " Вычислите объем <formula>volume=volume<sub>1</sub>+volume<sub>2</sub></formula> и температуру образовавшейся смеси по формуле" +
                 "<formula>\n" +

@@ -89,6 +89,12 @@ public abstract class LayoutMaker {
         writer.println("</div>");
     }
 
+    protected void appendNonEscaped(String taskDescription) {
+        writer.println("<div class='task_desc'>");
+        writer.println(taskDescription);
+        writer.println("</div>");
+    }
+
     protected void appendCheckSingleFormatted(String text) {
         writer.print("<div class='check_single'>");
         writer.print(text);

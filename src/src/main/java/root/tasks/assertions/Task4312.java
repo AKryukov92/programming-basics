@@ -32,7 +32,7 @@ public class Task4312 extends TwoInputValLayout {
                 "При возможности, объединить условия с помощью ключевого слова else"
         );
         appendTaskHeader();
-        appendTaskDesc("Вычислить площадь прямоугольного треугольника по формуле <formula>area=edge*height/2</formula>, где edge - основание, height - высота.");
+        appendNonEscaped("Вычислить площадь прямоугольного треугольника по формуле <formula>area=edge*height/2</formula>, где edge - основание, height - высота.");
         appendCheckValuesHeader("edge", "height");
         appendCheckValuesRow("1", "1");
         appendCheckValuesRow("2", "3");

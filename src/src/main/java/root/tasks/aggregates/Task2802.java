@@ -23,7 +23,7 @@ public class Task2802 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано целое число n. Вычислить сумму ряда <formula>\n" +
+        appendNonEscaped("Дано целое число n. Вычислить сумму ряда <formula>\n" +
                 "1+\n" +
                 "<fraction>\n" +
                 "<numerator>1</numerator>\n" +

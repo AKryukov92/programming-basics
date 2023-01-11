@@ -15,7 +15,7 @@ public class Task8833 extends OneInputValLayout {
                 "Сообщить пользователю результат."
         );
         appendHeader();
-        appendTaskDesc("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>");
+        appendNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("7606");
         appendCheckValuesRow("9");
