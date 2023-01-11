@@ -826,26 +826,33 @@ public class Application {
                 .withGroup("Чтение файлов")
                 .addExample(6175)
                 .addTask(4488)
-                .addTask(new Task4954())
+
+                .addExample(new Task7788())//использование файла как таблицы СУБД
+                .addTask(new Task6989())//файл-таблица СУБД. нужно вывести данные по идентификатору
+                .addTask(new Task6170())//2 файла-таблицы СУБД. Нужно соединить две таблицы, вывести данные по коду
+                .addTask(new Task8665())//2 файла-таблицы СУБД. Нужно выполнить поиск по неключу и вывести
+                .addTask(new Task1761())
+
+                .addTask(new Task4477())//проанализировать вложенность скобок
+                .addTask(new Task9417())//чтение нескольких файлов, поиск общей суммы, обработка ошибок
+                .addTask(new Task3148())//чтение нескольких файлов. список в одном, обрабатывать другие
+        ;
+    }
+
+    public static void fillObsoleteTasks(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab09")
+                .addTask(new Task4954())//чтение простых строк. проверка содержимого
+                .addTask(5847)//посчитать количество символов после A. неинтересно
+                .addTask(4769)//неинтересная. про применение строковых функций
                 .addTask(4642)
                 .addTask(5537)
-                .addTask(5847)
-                .addTask(4769)
-                .addExample(new Task7788())
-                .addTask(new Task6989())
-                .addTask(new Task6170())
-                .addTask(new Task8665())
-                .addTask(1761)
-                .addCitation("link_c2_p8.3")
-                .addTask(9930)
-                .addTask(6861)
-                .addTask(3226)
-                .addTask(4372)
-                .addTask(4463)
-                .addTask(1668)
-                .addTask(9417)
-                .addTask(3148)
-                .addTask(2137)
+                .addTask(9930)//нужно объяснение что такое абсолютное имя файла и относительное
+                .addTask(6861)//валидация емейла без регулярок. Надо нормально описать требования
+                //потенциально хорошие задачи, но нужно расширить требования
+                .addTask(4372)//извлечение селекторов из CSS. нужно нормально описать требования
+                .addTask(4463)//скорее всего нужна дополнительная информация - что такое тэг, что такое атрибут тэга
+                .addTask(1668)//разбор HTML формы
+                .addTask(2137)//крайне путаная задача. возможно надо добавить ход решения
         ;
     }
 
@@ -1223,13 +1230,13 @@ public class Application {
         String css = loadCss("styles.css");
 
         TaskBook[] taskBooksJava = populateJavaContent(themeList);
-        //makeFiles(taskBooksJava, css, gitHash);
+        makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+       // makeFiles(taskBooksCs, css, gitHash);
 
         TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        makeFiles(taskBooksJs, css, gitHash);
+        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

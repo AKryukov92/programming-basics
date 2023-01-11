@@ -10,22 +10,20 @@ public class Task7788 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Исходный файл содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:" +
-                "<ol>\n" +
-                "<li>employee_id - код сотрудника</li>" +
-                "<li>first_name - имя</li>" +
-                "<li>last_name - фамилия</li>" +
-                "<li>email - адрес почты без домена</li>" +
-                "<li>phone_number - телефонный номер</li>" +
-                "<li>hire_date - дата найма</li>" +
-                "<li>job_id - код должности</li>" +
-                "<li>salary - заработная плата</li>" +
-                "<li>commission_pct - ставка коммиссии</li>" +
-                "<li>manager_id - код руководителя</li>" +
-                "<li>department_id - код отдела</li>" +
-                "</ol>" +
-                "Нужно вывести только фамилию, код должности, дату приема и код сотрудника. Первой колонкой должен быть код струдника. Порядок вывода соответствует содержимому файла. После списка сотрудников нужно вывести фразу \"Всего сотрудников\" и количество записей в файле.");
-        appendCheckSingleWithFile("files/task7788/employees.csv");
+        appendTaskDescWithHtml("Исходный файл " + linkToFile("files/task7788/composers.csv", "composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
+        appendOrdered(
+                "composer_id - идентификатор композитора",
+                "first_name - имя",
+                "last_name - фамилия",
+                "birth_date - дата рождения",
+                "birth_place - место рождения",
+                "death_date - дата смерти",
+                "death_place - место смерти",
+                "wiki_page - ссылка на страницу Википедии"
+        );
+        appendTaskDesc(
+                "Нужно вывести фамилию, дату и место смерти. Первой колонкой должен быть код композитора. Порядок вывода соответствует содержимому файла. Перед списком композиторов нужно вывести заголовки столбцов. После списка композиторов нужно вывести фразу \"Всего композиторов\" и количество записей в файле. Строка с заголовками столбцов не участвует в подсчёте количества.");
+        appendCheckSingle(wrapLogic("files/task7788/composers.csv"));
         appendFooter();
     }
 
@@ -33,21 +31,20 @@ public class Task7788 extends OneInputValLayout {
     protected void logic(String file) {
         File target = new File(file);
         try (Scanner scanner = new Scanner(target)) {
-            int count = 0;
-            System.out.println("employee_id, last_name, job_id, hire_date");
+            int count = -1;
             while (scanner.hasNext()) {
                 String entry = scanner.nextLine();
-                String[] attributes = entry.split(",");
+                String[] attributes = entry.split(";");
                 System.out.printf(
                         "%s %s %s %s\n",
                         attributes[0],
                         attributes[2],
-                        attributes[6],
-                        attributes[5]
+                        attributes[5],
+                        attributes[6]
                 );
                 count++;
             }
-            System.out.println("Всего сотрудников: " + count);
+            System.out.println("Всего композиторов: " + count);
         } catch (FileNotFoundException ex) {
             System.out.println("Файл '" + target.getAbsolutePath() + "' не существует");
         }

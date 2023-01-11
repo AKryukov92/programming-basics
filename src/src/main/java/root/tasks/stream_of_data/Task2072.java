@@ -8,38 +8,38 @@ public class Task2072 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит неизвестное количество чисел. Нужно вывести эти числа на экран с номером по порядку начиная с 0. После каждого третьего нужно вывести 'СЧИТАЕМ ЗАНОВО'. После этого нумерация должна снова начаться с 0. Программа сама не заканчивается. Её нужно закрывать вручную.");
+        appendTaskDesc("Пользователь вводит неизвестное количество чисел. Нужно вывести эти числа на экран с номером по порядку начиная с 0. Когда пользователь ввёл число 10, нужно написать 'СЧИТАЕМ ЗАНОВО'. После этого нумерация должна снова начаться с 0. Программа сама не заканчивается. Её нужно закрывать вручную.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow(
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1"
+                "8",
+                "9",
+                "10",
+                "5",
+                "6",
+                "7",
+                "8",
+                "10",
+                "9"
         );
         appendCheckValuesRow(
-                "-24",
-                "-1",
-                "-1",
-                "-48",
-                "-47",
-                "-47"
-        );
-        appendCheckValuesRow(
-                "-47",
-                "15",
+                "20",
+                "10",
                 "18",
-                "-20",
-                "44",
-                "-13",
+                "17",
                 "16",
-                "12",
-                "23",
-                "-15"
+                "15"
+        );
+        appendCheckValuesRow(
+                "10",
+                "5",
+                "10",
+                "10",
+                "4",
+                "9",
+                "1",
+                "4",
+                "3",
+                "10"
         );
         appendCheckValuesFooter();
         appendFooter();
@@ -52,10 +52,14 @@ public class Task2072 extends StreamInputLayout {
             String current = source.next();
             System.out.println("Число № " + i + " равно " + current);
             i++;
-            if (i == 3) {
+            if (current.equals("10")) {
                 System.out.println("СЧИТАЕМ ЗАНОВО");
                 i = 0;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task2072().getContent());
     }
 }
