@@ -6,7 +6,7 @@ public class TaskJava5789 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(5789));
+        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(1058));
         appendOrdered(
                 "В папке для исходного кода создайте класс Point.",
                 "В классе Point реализуйте публичный статический метод distanceBetween.",
