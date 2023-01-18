@@ -14,6 +14,7 @@ import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.*;
+import root.tasks.internal_state.TaskJava2896;
 import root.tasks.loops_with_conditions.*;
 import root.tasks.ranges.*;
 import root.tasks.filltemplate.*;
@@ -984,13 +985,13 @@ public class Application {
         } else if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(new TaskJava5259())
-                    .addTask(3943)
+                    //.addTask(3943)
             ;
         } else {
             taskBook
                     .withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(1934)
-                    .addTask(3943)
+                    //.addTask(3943)
             ;
         }
         taskBook
@@ -1031,11 +1032,23 @@ public class Application {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)");
         if (taskBook.getLangAbbreviation().equals("java")) {
+            //базовая цель - чтобы студенты научились отличать статический метод от нестатического
+            //и обращаться к полям класса
+
+            //большая сложность - в том, чтобы отследить какие методы и поля уже есть у классов
+            //если они используются в разных заданиях и разных практических
+            //Возможные решения:
+            //1. ВНИМАТЕЛЬНО контролировать где какой класс используется и дописывать "проверьте что это объявлено"
+            //2. Использовать разные классы в разных практических
+            //3. Везде писать "создайте, объявите", даже если это не первая задача.
+            // Люди додумаются что повторно не надо это делать.
+            // Если не додумаются, то сначала поймают ошибки компиляции, а потом додумаются.
             taskBook
                     .addExample(new TaskJava5789())//Point.distanceBetween(values)
                     .addTask(new TaskJava6011())//Point.distanceBetween(Points)
                     .addTask(new TaskJava7040())//Range.contains(values)
                     .addTask(new TaskJava1606())//Range.contains(Range+value)
+                    //.addTask(new TaskJava9934())//Range.startsAfter(Range)
                     .addTask(new TaskJava6589())//Range.hasIntersection(values)
                     .addTask(new TaskJava6037())//Range.hasIntersection(Ranges)
 
@@ -1079,6 +1092,11 @@ public class Application {
                     .addExample(new TaskJava8403())
                     .addExample(new TaskJava3185())
                     .addTask(new TaskJava9914());
+        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .addExample(new TaskJava8403())
+                    .addExample(new TaskJava3185())
+                    .addTask(new TaskJava9914());
         } else {
             taskBook.addExample(8403)
                     .addExample(3185)
@@ -1097,6 +1115,7 @@ public class Application {
 
                 .withGroup("Модификации состояния с контролем целостности")
                 .addTask(8265)
+                .addTask(new TaskJava2896())//ReverseCounter
                 .withGroup("ToString")
                 .addExample(5421)
                 .addTask(9713)
@@ -1233,7 +1252,7 @@ public class Application {
         String css = loadCss("styles.css");
 
         TaskBook[] taskBooksJava = populateJavaContent(themeList);
-        //makeFiles(taskBooksJava, css, gitHash);
+        makeFiles(taskBooksJava, css, gitHash);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
         makeFiles(taskBooksCs, css, gitHash);

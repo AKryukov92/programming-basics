@@ -38,4 +38,11 @@ public class TaskJava6037 extends LayoutMaker {
         );
         appendFooter();
     }
+
+    public static class Range {
+        public double from;
+        public double to;
+
+
+    }
 }

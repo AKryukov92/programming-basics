@@ -6,30 +6,30 @@ public class TaskJava1606 extends MultipleInputValLayout {
     @Override
     protected void logic(String... args) {
         Range rng = new Range();
-        rng.left = Double.parseDouble(args[0]);
-        rng.right = Double.parseDouble(args[1]);
+        rng.from = Double.parseDouble(args[0]);
+        rng.to = Double.parseDouble(args[1]);
         double x = Double.parseDouble(args[2]);
         try {
-            boolean result = TaskJava7040.Range.contains(rng.left, rng.right, x);
+            boolean result = TaskJava7040.Range.contains(rng.from, rng.to, x);
             if (result) {
-                System.out.printf("Интервал [%f,%f) содержит число %f", rng.left, rng.right, x);
+                System.out.printf("Интервал [%f,%f) содержит число %f", rng.from, rng.to, x);
             } else {
-                System.out.printf("Число %f за пределами интервала [%f,%f)", x, rng.left, rng.right);
+                System.out.printf("Число %f за пределами интервала [%f,%f)", x, rng.from, rng.to);
             }
         } catch (IllegalArgumentException ex) {
-            System.out.printf("Некорректный интервал [%f,%f)", rng.left, rng.right);
+            System.out.printf("Некорректный интервал [%f,%f)", rng.from, rng.to);
         }
     }
 
     public static class Range {
-        public double left;
-        public double right;
+        public double from;
+        public double to;
 
         public static boolean contains(Range range, double x) {
-            if (range.left > range.right) {
+            if (range.from > range.to) {
                 throw new IllegalArgumentException("Некорректный интервал");
             }
-            return range.left <= x && x < range.right;
+            return range.from <= x && x < range.to;
         }
     }
 
@@ -50,10 +50,11 @@ public class TaskJava1606 extends MultipleInputValLayout {
         appendCheckValuesRow("10", "15", "15");
         appendCheckValuesRow("999", "1", "100");
         appendCheckValuesFooter();
-        appendSubheading("Реализуйте статический метод для решения задачи");
+        appendSubheading("Реализуйте статический метод с двумя аргументами");
         appendOrdered(
-                "В папке с исходным кодом создайте класс Range",
-                "В классе Range реализуйте публичный статический метод contains",
+                "В папке с исходным кодом создайте класс Range.",
+                "Объявите в классе Range поля \"from\" и \"to\" для целых чисел.",
+                "В классе Range реализуйте публичный статический метод contains.",
                 "Он принимает в качестве аргумента 1 экземпляр класса Range, 1 действительное число и возвращает логическое значение.",
                 "В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
@@ -64,14 +65,14 @@ public class TaskJava1606 extends MultipleInputValLayout {
                 "В классе RangeSuite создайте юнит-тест rangeContainsDoubleTest. Далее действия нужно выполнять в теле этого метода.",
                 "Объявите переменную actual для хранения логических значений.",
                 "Объявите переменную r типа Range",
-                "Запишите в поле left переменной r значение 5.",
-                "Запишите в поле right переменной r значение 10",
+                "Запишите в поле from переменной r значение 5.",
+                "Запишите в поле to переменной r значение 10.",
                 "Вызовите метод contains класса Range.",
                 "Передайте переменную r и значение 7 в качестве аргументов метода contains.",
                 "Результат вызова метода contains запишите в переменную actual.",
                 "Проверьте, что переменная actual содержит true.",
                 "Проверьте, что вызов метода contains для интервала 20, 30 и числа 3 возвращает false.",
-                "Заполните поля left и right переменной r значениями 100 и 200 соответственно.",
+                "Заполните поля from и to переменной r значениями 100 и 200 соответственно.",
                 "Запишите в переменную actual результат вызова метода contains с аргументами r и 300.",
                 "Проверьте, что переменная actual содержит значение false",
                 "Проверьте, что метод contains выбросит исключение, если передать ему интервал 999, 1 и любое значение x"

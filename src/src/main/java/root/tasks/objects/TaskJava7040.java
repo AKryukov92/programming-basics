@@ -16,7 +16,7 @@ public class TaskJava7040 extends MultipleInputValLayout {
                 System.out.printf("Число %f за пределами интервала [%f,%f)", x, left, right);
             }
         } catch (IllegalArgumentException ex) {
-            System.out.println("Некорректный интервал [%f,%f)");
+            System.out.printf("Некорректный интервал [%f,%f)", left, right);
         }
     }
 
@@ -44,7 +44,7 @@ public class TaskJava7040 extends MultipleInputValLayout {
         appendCheckValuesRow("10", "15", "15");
         appendCheckValuesRow("999", "1", "100");
         appendCheckValuesFooter();
-        appendSubheading("Реализуйте статический метод для решения задачи");
+        appendSubheading("Реализуйте статический метод с тремя аргументами");
         appendOrdered(
                 "В папке с исходным кодом создайте класс Range",
                 "В классе Range реализуйте публичный статический метод contains",
