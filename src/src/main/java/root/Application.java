@@ -533,7 +533,6 @@ public class Application {
                 .addCitation("link_c4_p19.3")
                 .addTask(8751)
                 .addTask(new Task4858())
-                .addTask(new Task6589())
                 .addTask(3864)
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
@@ -557,6 +556,7 @@ public class Application {
                 .addTask(new Task9969())
                 .addTask(new Task5301())
                 .addTask(new Task1259())
+                .addTask(new Task6790())
 
                 .withGroup("Один цикл за другим")
                 .addTask(new Task7086())
