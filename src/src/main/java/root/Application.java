@@ -455,7 +455,6 @@ public class Application {
                 .addCitation("link_c3_p11.2")
                 .addTask(new Task1934())//взаимоисключающий
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
-                .addTask(5789)//нет ветвления. задачка тут потому что корень
                 .addTask(6924)
 
                 .withGroup("Вычисление остатка от деления")
@@ -650,6 +649,7 @@ public class Application {
                 .addTask(new Task3908())
                 .addTask(1433)
                 .addTask(new Task3791())
+                .addTask(new Task1058())
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
@@ -1057,20 +1057,6 @@ public class Application {
                     .addTask(new TaskJava1193())//Point.make(x,y)
                     .addTask(new TaskJava8347())//найти центр отрезка по двум концам
             ;
-        } else if (taskBook.getLangAbbreviation().equals("cs")) {
-            taskBook
-                    .addExample(5789)//Point.distanceBetween(values)
-                    .addTask(new TaskCs6011())//Point.distanceBetween(Points)
-                    .addTask(6589)//Range.hasIntersection(values)
-                    .addTask(6037)//Range.hasIntersection(Ranges)
-
-                    .withGroup("Статический метод для создания экземпляров")
-                    .addExample(4491)//Point.zero()
-                    .addTask(1193)//Point.make(x,y)
-            ;
-        } else {
-            throw new RuntimeException("Неожиданный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
         taskBook
                 .withGroup("Параметризованный конструктор")
                 .addExample(7301)
@@ -1133,7 +1119,7 @@ public class Application {
     private static void fillAbstractDataStructuresJs(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Объекты как контейнеры данных (АТД)")
-                .addExample(5789)
+                .addExample(5789)//Point.distanceBetween(values)
                 .addExample(new TaskJs6011())
                 .addTask(6589)
                 .addTask(6037)

@@ -6,7 +6,7 @@ public class TaskJava3185 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте НЕстатический метод для решения задачи " + linkToTask(5789));
+        appendSubheading("Реализуйте НЕстатический метод для решения задачи " + linkToTask(1058));
         appendOrdered(
                 "Убедитесь, что у класса Point объявлены поля для действительных значений \"x\" и \"y\".",
                 "В классе Point реализуйте публичный нестатический метод distanceTo (без ключевого слова static перед типом возвращаемого значения).",

@@ -31,7 +31,7 @@ public class TaskJava6011 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(5789) + "используя экземпляры класса");
+        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(1058) + "используя экземпляры класса");
         appendOrdered(
                 "Объявите у класса Point поля для действительных значений \"x\" и \"y\".",
                 "В классе Point реализуйте еще один публичный статический метод distanceBetween.",
