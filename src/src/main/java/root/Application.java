@@ -1058,8 +1058,8 @@ public class Application {
             ;
         taskBook
                 .withGroup("Параметризованный конструктор")
-                .addExample(7301)
-                .addTask(2000)
+                .addExample(new Task7301())
+                .addTask(new Task2000())
 
                 .withGroup("Практика")
                 .addTask(3864)
