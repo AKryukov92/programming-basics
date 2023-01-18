@@ -6,7 +6,6 @@ public class TaskJava9934 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Реализуйте метод starts after для Range");
         appendFooter();
     }
 }

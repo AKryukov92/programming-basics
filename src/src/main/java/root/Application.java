@@ -649,7 +649,8 @@ public class Application {
                 .addTask(new Task3908())
                 .addTask(1433)
                 .addTask(new Task3791())
-                .addTask(new Task1058())
+                .addTask(new Task1058())//parse array to distinct numbers. distance between points
+                .addTask(new Task6589())//parse array, range intersection
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
@@ -1031,7 +1032,6 @@ public class Application {
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)");
-        if (taskBook.getLangAbbreviation().equals("java")) {
             //базовая цель - чтобы студенты научились отличать статический метод от нестатического
             //и обращаться к полям класса
 
@@ -1048,8 +1048,7 @@ public class Application {
                     .addTask(new TaskJava6011())//Point.distanceBetween(Points)
                     .addTask(new TaskJava7040())//Range.contains(values)
                     .addTask(new TaskJava1606())//Range.contains(Range+value)
-                    //.addTask(new TaskJava9934())//Range.startsAfter(Range)
-                    .addTask(new TaskJava6589())//Range.hasIntersection(values)
+                    .addTask(new TaskJava4574())//Range.hasIntersection(values)
                     .addTask(new TaskJava6037())//Range.hasIntersection(Ranges)
 
                     .withGroup("Статический метод для создания экземпляров")

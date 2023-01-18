@@ -2,14 +2,14 @@ package root.tasks.objects;
 
 import root.tasks.LayoutMaker;
 
-public class TaskJava6589 extends LayoutMaker {
+public class TaskJava4574 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(6589));
         appendOrdered(
-                "Проверьте, что в папке с исходным кодом есть класс Range.",
-                "Проверьте, что у класса Range есть поля \"from\" и \"to\" для целых чисел.",
+                "В папке исходным кодом создайте класс Range.",
+                "Объявите в классе Range поля \"from\" и \"to\" для целых чисел.",
                 "В классе Range реализуйте публичный статический метод hasIntersection.",
                 "Он принимает в качестве аргумента 4 целых числа и возвращает логическое значение.",
                 "В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.",
