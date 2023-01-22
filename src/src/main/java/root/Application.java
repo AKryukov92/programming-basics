@@ -590,6 +590,7 @@ public class Application {
                 .withGroup("Условие внутри цикла")
                 .addExample(new Task7585())
                 .addTask(new Task3488())
+                .addTask(new Task6028())
                 .addTask(new Task4264())
                 .addTask(new Task1483())
                 .addTask(new Task3983())
@@ -772,6 +773,7 @@ public class Application {
                 .addTask(new Task4515())//сопоставление массива с самим собой
                 .addTask(new Task9827())//сопоставление массивов MINUS
                 .addTask(7793)//сопоставление, все виды
+                .addTask(new Task1036())//Гиперпрыгающие плазмошашки
 
                 .withGroup("Поиск минимального")
                 .addExample(new Task7035())
