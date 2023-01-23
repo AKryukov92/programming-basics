@@ -644,11 +644,11 @@ public class Application {
     private static void fillBasicArrayOperations(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
-                .addExample(new Task4425())
-                .addTask(new Task7834())
-                .addTask(new Task5873())
-                .addTask(new Task3908())
-                .addTask(1433)
+                .addExample(new Task4425())//образец чтения из массива
+                .addTask(new Task7834())//элементы на конкретных индексах
+                .addTask(new Task5873())//следующий и предыдущий
+                .addTask(new Task3908())//третий с конца
+                .addTask(new Task1433())//середина массива
                 .addTask(new Task3791())
                 .addTask(new Task1058())//parse array to distinct numbers. distance between points
                 .addTask(new Task6589())//parse array, range intersection
