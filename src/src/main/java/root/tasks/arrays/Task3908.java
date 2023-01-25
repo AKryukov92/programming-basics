@@ -7,7 +7,8 @@ public class Task3908 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \"#\". Вывести на экран третий с конца элемент.");
-        appendCheckSingle("Индекс третьего элемента с конца $index\n" +
+        appendCheckSingle("В массиве длиной $length\n" +
+                "Индекс третьего элемента с конца $index\n" +
                 "Значение этого элемента $value");
         appendCheckValuesHeader("arr");
         appendCheckValuesRow("qa#ws#ed#rf");
@@ -31,6 +32,7 @@ public class Task3908 extends OneInputValLayout {
             System.out.println("Массив слишком маленький");
             return;
         }
+        System.out.println("В массиве длиной " + arr.length);
         int index = arr.length - 3;
         System.out.println("Индекс третьего элемента с конца " + index);
         System.out.println("Значение этого элемента " + arr[index]);

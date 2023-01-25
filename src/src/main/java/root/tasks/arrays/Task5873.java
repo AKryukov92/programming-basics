@@ -20,6 +20,7 @@ public class Task5873 extends TwoInputValLayout {
             System.out.println("Число T должно быть в интервале [0, размер массива)");
             return;
         }
+        System.out.println("В массиве длиной " + arr.length);
         System.out.println("Элемент на индексе " + t + " содержит значение " + arr[t]);
         if (t == 0) {
             System.out.println("Предыдущий элемент не существует");

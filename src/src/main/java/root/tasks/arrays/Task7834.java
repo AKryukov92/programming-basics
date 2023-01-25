@@ -28,6 +28,7 @@ public class Task7834 extends OneInputValLayout {
             return;
         }
         String[] arr = value.split(",");
+        System.out.println("В массиве длиной " + arr.length);
         System.out.println("Значение элемента на индексе 0 это " + arr[0]);
         if (arr.length <= 2) {
             System.out.println("Нет элемента на индексе 2");

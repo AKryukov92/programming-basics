@@ -16,6 +16,7 @@ import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.*;
 import root.tasks.internal_state.TaskJava2896;
 import root.tasks.loops_with_conditions.*;
+import root.tasks.nested_loops.*;
 import root.tasks.ranges.*;
 import root.tasks.filltemplate.*;
 import root.tasks.internal_state.TaskJava3185;
@@ -615,14 +616,14 @@ public class Application {
         taskBook.withSourceDirectory("lab06")
 
                 .withGroup("Цикл после цикла. Подготовка к циклам внутри циклов")
-                .addExample(9249)
-                .addTask(4075)
-                .addTask(8395)
-                .addTask(7323)
+                .addExample(new Task9249())
+                .addTask(new Task4075())
+                .addTask(new Task8395())
+                .addTask(new Task7323())
 
                 .withGroup("Циклы один за другим с вложением")
-                .addTask(5568)
-                .addTask(2592)
+                .addTask(new Task5568())
+                .addTask(new Task2592())
                 .addTask(new Task6355())
 
                 .withGroup("Просто сложные задачи")
@@ -649,7 +650,7 @@ public class Application {
                 .addTask(new Task5873())//следующий и предыдущий
                 .addTask(new Task3908())//третий с конца
                 .addTask(new Task1433())//середина массива
-                .addTask(new Task3791())
+                .addTask(new Task3791())//независимые условия
                 .addTask(new Task1058())//parse array to distinct numbers. distance between points
                 .addTask(new Task6589())//parse array, range intersection
 
