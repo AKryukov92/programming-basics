@@ -6,7 +6,7 @@ public class Task3435 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Перевести угол из радианов в градусы. <a href=\"https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD\" target=\"_blank\">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ). Выведите ответ по шаблону \"$angleRadian радиан это $angleDegree градусов\". Точность чисел - 4 знака после запятой.");
+        appendNonEscaped("Перевести угол из радианов в градусы. <a href=\"https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD\" target=\"_blank\">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ). Выведите ответ по шаблону \"$angleRadian радиан это $angleDegree градусов\". Точность чисел - 4 знака после запятой.");
         appendCheckValuesHeader("angleRadian");
         appendCheckValuesRow("0.7854");
         appendCheckValuesRow("19.6350");

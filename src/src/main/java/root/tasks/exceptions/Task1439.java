@@ -31,15 +31,16 @@ public class Task1439 extends OneInputValLayout {
                 System.out.println("Элемент №" + i + " со значением " + arr[i] + " не число");
             }
         }
+        System.out.println("Количество обработанных чисел " + count + " их сумма " + sum);
         if (count > 0) {
             double result = sum / count;
-            System.out.printf("%.4f", result);
+            System.out.printf("Среднее арифметическое %.4f", result);
         } else {
             System.out.println("В исходном массиве отсутствовали числа");
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(new Task1439().getContent());
+        System.out.println(new Task1439());
     }
 }

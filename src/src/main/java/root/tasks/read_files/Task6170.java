@@ -1,7 +1,6 @@
 package root.tasks.read_files;
 
 import root.tasks.OneInputValLayout;
-import root.tasks.TwoInputValLayout;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +13,7 @@ public class Task6170 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescWithHtml("Дано два исходных файла: список сотрудников и список отделов." +
+        appendNonEscaped("Дано два исходных файла: список сотрудников и список отделов." +
                 "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         appendOrdered(
                 "department_id - код отдела",
@@ -22,7 +21,7 @@ public class Task6170 extends OneInputValLayout {
                 "manager_id - код сотрудника-руководителя",
                 "location_id - код офиса"
         );
-        appendTaskDescWithHtml("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendNonEscaped("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         appendOrdered(
                 "employee_id - код сотрудника",
                 "first_name - имя",

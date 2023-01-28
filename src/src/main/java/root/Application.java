@@ -582,8 +582,10 @@ public class Application {
                 .addTask(new Task8138())//просто вывод, не запутаться с присваиваниями
                 .addTask(new Task1845())//вывод с условием
                 .addTask(new Task7083())//вывод с условием
-                .addTask(new Task2072())//вывод с условием
+                .addTask(new Task2072())//вывод с условием, обнуление
                 .addTask(new Task7595())//подсчет суммы
+                .addTask(new Task7150())//подсчет количества, сравнение с предыдущим
+                .addTask(new Task9126())//компьютер угадывает число
                 .withGroup("Обработка конечной последовательности")
                 .addTask(new Task2368())//подсчет суммы. конечное количество чисел
                 .addTask(new Task5279())//конечное множество чисал. не запутаться с присваиваниями
@@ -609,6 +611,7 @@ public class Application {
                 .addTask(8731)
                 .addTask(4082)
                 .addTask(2523)
+                .addTask(new Task3827())//вычисление корня методом бинарного поиска
         ;
     }
 
@@ -839,6 +842,7 @@ public class Application {
                 .addTask(new Task4477())//проанализировать вложенность скобок
                 .addTask(new Task9417())//чтение нескольких файлов, поиск общей суммы, обработка ошибок
                 .addTask(new Task3148())//чтение нескольких файлов. список в одном, обрабатывать другие
+        //.addTask()
         ;
     }
 
@@ -974,10 +978,16 @@ public class Application {
         taskBook.withSourceDirectory("lab13")
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
-                .addExample(7740)
+        ;
+        if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook.addExample(new TaskCs7740());
+        } else if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook.addExample(new TaskJava7740());
+        }
+        taskBook
                 .addTask(new Task1439())
-                .addTask(8733)
-                .addTask(5101)
+                .addTask(new Task5101())//подсчет количества в файле
+                .addTask(new Task8733())//среднее арифметическое в файле
                 .addTask(8139)
                 .addTask(5014)
         ;
@@ -989,13 +999,13 @@ public class Application {
         } else if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(new TaskJava5259())
-                    //.addTask(3943)
+            //.addTask(3943)
             ;
         } else {
             taskBook
                     .withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(1934)
-                    //.addTask(3943)
+            //.addTask(3943)
             ;
         }
         taskBook
@@ -1019,7 +1029,7 @@ public class Application {
         taskBook.withSourceDirectory("lab13")
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
-                .addExample(7740)
+                .addExample(new TaskJs7740())
                 .addTask(new TaskJs1439())
 
                 .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
@@ -1035,30 +1045,30 @@ public class Application {
     private static void fillAbstractDataStructures(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Классы как контейнеры данных (АТД)");
-            //базовая цель - чтобы студенты научились отличать статический метод от нестатического
-            //и обращаться к полям класса
+        //базовая цель - чтобы студенты научились отличать статический метод от нестатического
+        //и обращаться к полям класса
 
-            //большая сложность - в том, чтобы отследить какие методы и поля уже есть у классов
-            //если они используются в разных заданиях и разных практических
-            //Возможные решения:
-            //1. ВНИМАТЕЛЬНО контролировать где какой класс используется и дописывать "проверьте что это объявлено"
-            //2. Использовать разные классы в разных практических
-            //3. Везде писать "создайте, объявите", даже если это не первая задача.
-            // Люди додумаются что повторно не надо это делать.
-            // Если не додумаются, то сначала поймают ошибки компиляции, а потом додумаются.
-            taskBook
-                    .addExample(new TaskJava5789())//Point.distanceBetween(values)
-                    .addTask(new TaskJava6011())//Point.distanceBetween(Points)
-                    .addTask(new TaskJava7040())//Range.contains(values)
-                    .addTask(new TaskJava1606())//Range.contains(Range+value)
-                    .addTask(new TaskJava4574())//Range.hasIntersection(values)
-                    .addTask(new TaskJava6037())//Range.hasIntersection(Ranges)
+        //большая сложность - в том, чтобы отследить какие методы и поля уже есть у классов
+        //если они используются в разных заданиях и разных практических
+        //Возможные решения:
+        //1. ВНИМАТЕЛЬНО контролировать где какой класс используется и дописывать "проверьте что это объявлено"
+        //2. Использовать разные классы в разных практических
+        //3. Везде писать "создайте, объявите", даже если это не первая задача.
+        // Люди додумаются что повторно не надо это делать.
+        // Если не додумаются, то сначала поймают ошибки компиляции, а потом додумаются.
+        taskBook
+                .addExample(new TaskJava5789())//Point.distanceBetween(values)
+                .addTask(new TaskJava6011())//Point.distanceBetween(Points)
+                .addTask(new TaskJava7040())//Range.contains(values)
+                .addTask(new TaskJava1606())//Range.contains(Range+value)
+                .addTask(new TaskJava4574())//Range.hasIntersection(values)
+                .addTask(new TaskJava6037())//Range.hasIntersection(Ranges)
 
-                    .withGroup("Статический метод для создания экземпляров")
-                    .addTask(new TaskJava4491())//Point.zero()
-                    .addTask(new TaskJava1193())//Point.make(x,y)
-                    .addTask(new TaskJava8347())//найти центр отрезка по двум концам
-            ;
+                .withGroup("Статический метод для создания экземпляров")
+                .addTask(new TaskJava4491())//Point.zero()
+                .addTask(new TaskJava1193())//Point.make(x,y)
+                .addTask(new TaskJava8347())//найти центр отрезка по двум концам
+        ;
         taskBook
                 .withGroup("Параметризованный конструктор")
                 .addExample(new Task7301())

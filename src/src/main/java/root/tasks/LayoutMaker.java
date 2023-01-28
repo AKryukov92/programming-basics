@@ -84,13 +84,7 @@ public abstract class LayoutMaker {
         String escaped = taskDescription
                 .replace("<", "&lt;")
                 .replace(">", "&gt;");
-        appendTaskDescWithHtml(escaped);
-    }
-
-    protected void appendTaskDescWithHtml(String taskDescription) {
-        writer.println("<div class='task_desc'>");
-        writer.println(taskDescription);
-        writer.println("</div>");
+        appendNonEscaped(escaped);
     }
 
     protected void appendNonEscaped(String taskDescription) {

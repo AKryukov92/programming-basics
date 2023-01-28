@@ -159,7 +159,7 @@ public class TaskBook {
     }
 
     public String getFilenameForLink() {
-        return "Задания к " + labIndex + " практической работе.html";
+        return "tasks " + labIndex + ".html";
     }
 
     public String getResultFilename() {
