@@ -9,14 +9,31 @@ public class Task2733 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит числа по одному. Если число больше 0, нужно умножить его на 3 и вывести результат. " +
-                "Если число меньше 0, нужно написать 'число должно быть больше 0' и пропустить умножение. " +
+        appendTaskDesc("Пользователь вводит целые числа по одному. Если число больше 0, нужно умножить его на 3, вывести результат и завершить работу программы. " +
+                "Если число меньше 0, нужно написать 'число должно быть больше 0', пропустить умножение и попросить пользователя ввести число заново. " +
                 "Если число равно 0, нужно завершить работу программы.");
+        appendCheckValuesHeader();
+        appendCheckValuesRow("-4,-10,5".split(","));
+        appendCheckValuesRow("41".split(","));
+        appendCheckValuesRow("-1,0,1".split(","));
+        appendCheckValuesRow("-20,-30,200".split(","));
+        appendCheckValuesRow("-1,-2,-3,-4,-5,-6,7".split(","));
+        appendCheckValuesFooter();
         appendFooter();
     }
 
     @Override
     protected void logic(Iterator<String> source) {
+        int current = Integer.parseInt(source.next());
+        while (current <= 0) {
+            System.out.println("Было введено " + current + ". Нужно ввести число больше 0.");
+            current = Integer.parseInt(source.next());
+        }
+        int result = current * 3;
+        System.out.println("Было введено " + current + ". Результат " + result);
+    }
 
+    public static void main(String[] args) {
+        System.out.println(new Task2733());
     }
 }

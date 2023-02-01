@@ -1,0 +1,16 @@
+push
+qa
+push
+ws
+push
+ed
+push
+rf
+push
+tg
+pop
+push
+yh
+pop
+push
+uj

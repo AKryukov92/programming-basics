@@ -583,35 +583,38 @@ public class Application {
                 .addTask(new Task1845())//вывод с условием
                 .addTask(new Task7083())//вывод с условием
                 .addTask(new Task2072())//вывод с условием, обнуление
+                .addTask(new Task2733())//повтор запроса ввода пока не будет введено корректное
                 .addTask(new Task7595())//подсчет суммы
                 .addTask(new Task7150())//подсчет количества, сравнение с предыдущим
                 .addTask(new Task9126())//компьютер угадывает число
                 .withGroup("Обработка конечной последовательности")
                 .addTask(new Task2368())//подсчет суммы. конечное количество чисел
                 .addTask(new Task5279())//конечное множество чисал. не запутаться с присваиваниями
+                .addTask(new Task7150())//следующее предыдущее с подсчетом количества подряд
 
                 .withGroup("Условие внутри цикла")
-                .addExample(new Task7585())
-                .addTask(new Task3488())
-                .addTask(new Task6028())
-                .addTask(new Task4264())
-                .addTask(new Task1483())
-                .addTask(new Task3983())
-                .addTask(new Task3519())
-                .addTask(new Task8770())
-                .addTask(new Task2222())
-                .addTask(new Task8418())
-                .addTask(new Task8722())
+                .addExample(new Task7585())//линейный поиск
+                .addTask(new Task3488())//линейный поиск с логическим или
+                .addTask(new Task6028())//вычисление синуса и проверка результатов.
+                .addTask(new Task4264())//обнуление в условии
+                .addTask(new Task1483())//обнуление в условии неявное
+                .addTask(new Task3983())//перенос строки и обнуление
+                .addTask(new Task3519())//обнуление в зависимости от ввода
+                .addTask(new Task8770())//условие в цикле с добавлением else
+                .addTask(new Task2222())//подробный поиск делителей, цикл с нестандартным шагом
+                .addTask(new Task8418())//поиск делителей
+                .addTask(new Task8722())//два столбца разной высоты
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 // .addTask(4236)
 
-                .addExample(new Task2324())
+                .addExample(new Task2324())//подсчет суммы и количества. остановка при вводе специального числа
                 .addCitation("link_c4_p16.1")
-                .addTask(8731)
-                .addTask(4082)
-                .addTask(2523)
+                .addTask(8731)//подсчет суммы, от которой зависит продолжение цикла
+                .addTask(4082)//повторение действий пока не будет введено специальное число
+                .addTask(new Task9126())//Компьютер угадывает число пользователя
                 .addTask(new Task3827())//вычисление корня методом бинарного поиска
+                .addTask(2523)//переливания с выбором действий пользователем
         ;
     }
 

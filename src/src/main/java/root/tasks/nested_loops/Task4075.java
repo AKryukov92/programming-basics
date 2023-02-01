@@ -6,7 +6,7 @@ public class Task4075 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран рамку шириной W.");
+        appendTaskDesc("Выведите на экран рамку шириной width.");
         appendCheckValuesHeader("width");
         appendCheckValuesRow("5");
         appendCheckValuesRow("2");
