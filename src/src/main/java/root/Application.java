@@ -242,8 +242,8 @@ public class Application {
                 .addTask(new Task6986())
 
                 .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(4131)
-                .addTask(7365)
+                .addExample(new Task4131())
+                .addTask(new Task7365())
 
                 .withGroup("Получение строк от пользователя")
                 .addExample(new Task1860())
@@ -253,7 +253,7 @@ public class Application {
                 .addCitation("link_c6_p30.2")
                 .addTask(new Task7472())
                 .withGroup("Конкатенация")
-                .addTask(1910)
+                .addTask(new Task1910())
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
@@ -297,11 +297,11 @@ public class Application {
                 .addTask(new Task2429())
                 .addCitation("link_c6_p30.2")
                 .addTask(new Task7472())
-                .addTask(1910)
+                .addTask(new Task1910())
 
                 .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(4131)
-                .addTask(7365)
+                .addExample(new Task4131())
+                .addTask(new Task7365())
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
@@ -334,30 +334,30 @@ public class Application {
 
                 //Ученики могут запросто писать циклы с одной итерацией, чтобы не задумываться когда его на самом деле нужно применять, а когда - нет.
                 //Поэтому тема перенесена в первую практическую
-                .withGroup("Графический диктант")
-                .addExample(6062)
-                .addTask(6955)
-                .addTask(9639)
-                .addTask(7353)
-                .addTask(4910)
+                //Эти задания были нужны для того, чтобы люди с новой стороны посмотрели на циклы.
+                //При этом они довольно сложные с точки зрения обвязки. Требуют особенный тип проекта и его настройки.
+                //От задач больше проблем, чем пользы
+                //Думаю их можно перенести в запись в файлы с SVG
+//                .withGroup("Графический диктант")
+//                .addExample(6062)
+//                .addTask(6955)
+//                .addTask(9639)
+//                .addTask(7353)
+//                .addTask(4910)
         ;
     }
 
     private static void fillBasicCalculationsJs(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab02")
-                .withGroup("Вывод на экран действительных чисел с заданной точностью")
-                .addExample(3862)
-                .addExample(9231)
-
                 .withGroup("Операторы и операнды")
-                .addExample(4411)
+                .addExample(new Task4411())//преобразование в число, простая арифметика, вывод с нужной точностью
+                .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
                 .addTask(7457)
                 .addTask(9865)
-                .addTask(1976)
+                .addTask(new Task1976())
                 .addTask(7237)
 
                 .withGroup("Использование математических функций")
-                .addExample(new Task8428())
                 .addTask(new Task3435())
                 .addCitation("link_c7_p32.5")
         ;
@@ -393,14 +393,10 @@ public class Application {
 
     private static void fillBasicCalculations(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab02")
-                .withGroup("Вывод на экран действительных чисел с заданной точностью")
-                .addExampleWithManual(3862)
-                .addExampleWithManual(9231)
-
                 .withGroup("Операторы и операнды")
-                .addExampleWithManual(4411)
+                .addExampleWithManual(new Task4411())//преобразование в число, простая арифметика, вывод с нужной точностью
                 .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
-                .addTask(1976)//диктант
+                .addTask(new Task1976())//диктант
                 .addTask(new Task3435())//обратное действие, нужно вывести формулу из задачи про радианы
                 .addTask(9865)//нужно перевести с естественного языка на ЯП
                 .addTask(7457)//нужно вывести формулу с помощью школьных знаний
@@ -585,8 +581,6 @@ public class Application {
                 .addTask(new Task2072())//вывод с условием, обнуление
                 .addTask(new Task2733())//повтор запроса ввода пока не будет введено корректное
                 .addTask(new Task7595())//подсчет суммы
-                .addTask(new Task7150())//подсчет количества, сравнение с предыдущим
-                .addTask(new Task9126())//компьютер угадывает число
                 .withGroup("Обработка конечной последовательности")
                 .addTask(new Task2368())//подсчет суммы. конечное количество чисел
                 .addTask(new Task5279())//конечное множество чисал. не запутаться с присваиваниями
@@ -633,7 +627,6 @@ public class Application {
                 .addTask(new Task6355())
 
                 .withGroup("Просто сложные задачи")
-                .addCitation("link_c2_p9.2")
                 .addTask(new Task6332())
                 .addTask(7517)
                 .addTask(5448)
@@ -643,8 +636,9 @@ public class Application {
                 .addTask(5411)
                 .addTask(5171)
                 .addTask(1862)
-                .addTask(5902)
-                .addTask(6302)
+//                .withGroup("Рисование")
+//                .addTask(5902)
+//                .addTask(6302)
         ;
     }
 

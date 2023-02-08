@@ -16,14 +16,6 @@ public class Lab01Dictation {
     System.out.println(hjkl);
     System.out.println(wsx);
 
-    System.out.println("Задача 1910");
-    String fdsa;
-    String jfjfjfjf;
-    fdsa = "авыф";
-    jfjfjfjf = "ооооо" + fdsa + "ааааа";
-    System.out.println(fdsa);
-    System.out.println(jfjfjfjf);
-
     System.out.println("Задача 1640");
     String lkjh;
     lkjh = "длор";

@@ -62,10 +62,6 @@ public class Lab02 {
         return String.format("%d часов %d минут %d секунд", h, m, s);
     }
 
-    public static double task4411(double x) {
-        return x + 7;
-    }
-
     public static int task9298(int a) throws IllegalArgumentException {
         if (a <= 0) {
             throw new IllegalArgumentException("Значение A должно быть положительным");
