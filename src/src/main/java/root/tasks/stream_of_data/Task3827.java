@@ -32,7 +32,7 @@ public class Task3827 extends OneInputValLayout {
         } else if (base < 0) {
             System.out.println("Введите число больше 0");
         } else if (base > 0) {
-            double start = 0, end = base / 4;
+            double start = 0, end = base;
             int i = 0;
             while (end - start > 0.0001) {
                 double lowerStart = start, middle = start + (end - start) / 2, higherEnd = end;
