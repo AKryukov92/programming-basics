@@ -160,16 +160,6 @@ public class Lab02 {
         return a % 360;
     }
 
-    public static double task1262(int y) {
-        return 5 * Math.cos(y * Math.PI / 180);
-    }
-
-    public static double task7237(double t) throws IllegalArgumentException {
-        if (t < -273.15) {
-            throw new IllegalArgumentException("Значение T должно быть не ниже абсолютного нуля");
-        }
-        return t * 1.8 + 32;
-    }
 
     public static int task3832(int x1, int x2, int x3) {
         return x1 * x2 + x1 * x3 + x2 * x3;
@@ -311,16 +301,6 @@ public class Lab02 {
         double ar = a * Math.PI / 180;
         double br = b * Math.PI / 180;
         return Math.sin(ar) * Math.cos(br) + Math.cos(ar) * Math.sin(br);
-    }
-
-    public static void task7457(double velocityInKmH) {
-        double velocityInMS1 = velocityInKmH * 1000 / 60 / 60;
-        System.out.printf("%.2f км/ч это %.2f м/с\n", velocityInKmH, velocityInMS1);
-    }
-
-    public static void task9865(double kmH) {
-        double knots = kmH * 2 - kmH * 0.2;
-        System.out.printf("%.2f узлов это приблизительно %.2f км/ч\n", kmH, knots);
     }
 
     public static double task3591(int h) throws IllegalArgumentException {

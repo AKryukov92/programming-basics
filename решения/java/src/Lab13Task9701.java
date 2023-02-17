@@ -120,21 +120,6 @@ public class Lab13Task9701 {
         }
     }
 
-    private static void Step7237() {
-        System.out.println();
-        System.out.println("7237");
-        double[] in7237 = {0, -5, -40, -100, -17.7777, 20.5, 691.9, -273.15, -300};
-        double[] outs7237 = {32, 23, -40, -148, 0, 68.9, 1277.4200, -459.67, 0};
-        for (int i = 0; i < in7237.length; i++) {
-            try {
-                double result = Lab02.task7237(in7237[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs7237[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step4312() {
         System.out.println();
         System.out.println("4312");
