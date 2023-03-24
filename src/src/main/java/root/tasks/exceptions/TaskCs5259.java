@@ -1,13 +1,15 @@
 package root.tasks.exceptions;
 
+import root.tasks.MethodsDictationHelper;
 import root.tasks.TwoInputValLayout;
 
-public class TaskCs5259 extends TwoInputValLayout {
+public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
+        appendSubheading(implementMethodToSolve(1934));
         appendOrdered(
-                "В классе Methods реализуйте публичный статический метод Task1934 для решения задачи " + linkToTask(1934),
+                implementStatic("Library", "Task1934"),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
                 "Создайте проект Runner1934.",
@@ -21,7 +23,7 @@ public class TaskCs5259 extends TwoInputValLayout {
                 "Объявите переменные a и b для хранения целых чисел.",
                 "Инициализируйте переменные a и b значениями, полученными из консоли.",
                 "Объявите переменную result для хранения действительных чисел.",
-                "Вызовите метод Task1934 класса Methods и передайте ему a и b в качестве аргументов.",
+                "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
                 "Результат вызова метода запишите в переменную result.",
                 "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой."
         );
@@ -53,7 +55,7 @@ public class TaskCs5259 extends TwoInputValLayout {
                 "13\n" +
                 "15\n" +
                 "Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно\n" +
-                "   at CodeProject.Methods.Task1934(Int32 a, Int32 b) in E:\\Stage2\\CodeProject\\Methods.cs:line 197\n" +
+                "   at CodeProject.Library.Task1934(Int32 a, Int32 b) in E:\\Stage2\\CodeProject\\Library.cs:line 197\n" +
                 "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 24\n" +
                 "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
         appendCheckValuesRowNoLogic("word", "4", "Начало работы программы\n" +

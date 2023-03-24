@@ -1,14 +1,12 @@
 package root;
 
-import root.tasks.aggregates.Task2802;
-import root.tasks.aggregates.Task3946;
-import root.tasks.aggregates.Task7260;
-import root.tasks.aggregates.Task7290;
+import root.tasks.aggregates.*;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
 import root.tasks.assertions.*;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.*;
+import root.tasks.call_methods.*;
 import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
@@ -29,14 +27,15 @@ import root.tasks.random.Task2386;
 import root.tasks.random.Task2549;
 import root.tasks.random.Task2910;
 import root.tasks.read_files.*;
+import root.tasks.recursion.Task1068;
+import root.tasks.recursion.Task4106;
+import root.tasks.recursion.Task6646;
 import root.tasks.search.Task2003;
 import root.tasks.search.Task7703;
 import root.tasks.search.Task8158;
 import root.tasks.search.Task9827;
-import root.tasks.search_in_array.Task1522;
-import root.tasks.search_in_array.Task2497;
-import root.tasks.search_in_array.Task4515;
-import root.tasks.search_in_array.Task7035;
+import root.tasks.search_in_array.*;
+import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
 
@@ -53,28 +52,6 @@ import java.util.Random;
  * Created by Александр on 09.02.2019.
  */
 public class Application {
-    private static final String[] themeListJs = new String[]{
-            "Заполнение шаблона текстом",
-            "Организация вычислений",
-            "Проверка исходных данных",
-            "Взаимоисключающие случаи",
-            "Работа с интервалами значений",
-
-            "Реорганизация повторяющихся действий",
-            "Обработка неизвестного объема данных",
-            "Вложенные циклы",
-            "Базовые операции с массивами",
-            "Работа с массивами чисел",
-
-            "Вычисление агрегатов",
-            "Поиск в массиве",
-            "Строки",
-            "Функции",
-            "Исключения",
-
-            "Объекты",
-            "Упражнения с кнопками"
-    };
     private static final String[] themeList = new String[]{
             "Заполнение шаблона текстом",
             "Организация вычислений",
@@ -98,24 +75,13 @@ public class Application {
             "Исключения",
             "Составные типы данных",
             "Внутреннее состояние",
-            "Коллекции"
+            "Коллекции",
+            "Рекурсия"
     };
 
-    private static TaskBook[] populateCsContent(String[] themeList) throws IOException {
+    private static TaskBook[] populateCsContent(String[] themeList) {
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
 
-        taskBooksCs[0]
-                .addResource("PaintingApp/PaintingApp.sln")
-                .addResource("PaintingApp/PaintingApp/App.config")
-                .addResource("PaintingApp/PaintingApp/MainFrm.cs")
-                .addResource("PaintingApp/PaintingApp/PaintingApp.csproj")
-                .addResource("PaintingApp/PaintingApp/PenTool.cs")
-                .addResource("PaintingApp/PaintingApp/Program.cs")
-                .addResource("PaintingApp/PaintingApp/Properties/AssemblyInfo.cs")
-                .addResource("PaintingApp/PaintingApp/Properties/Resources.Designer.cs")
-                .addResource("PaintingApp/PaintingApp/Properties/Resources.resx")
-                .addResource("PaintingApp/PaintingApp/Properties/Settings.Designer.cs")
-                .addResource("PaintingApp/PaintingApp/Properties/Settings.settings");
         fillPrintingTemplates(taskBooksCs[0]);
         fillBasicCalculations(taskBooksCs[1]);
         fillPreliminaryAssertions(taskBooksCs[2]);
@@ -139,15 +105,13 @@ public class Application {
         fillAbstractDataStructures(taskBooksCs[17]);
         fillInternalState(taskBooksCs[18]);
         fillCollections(taskBooksCs[19]);
+        fillRecursion(taskBooksCs[20]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
 
-    private static TaskBook[] populateJavaContent(String[] themeList) throws IOException {
+    private static TaskBook[] populateJavaContent(String[] themeList) {
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
-        taskBooksJava[0]
-                .addResource("graphics/PaintingApp.java")
-                .addResource("graphics/Pen.java");
         fillPrintingTemplates(taskBooksJava[0]);
         fillBasicCalculations(taskBooksJava[1]);
         fillPreliminaryAssertions(taskBooksJava[2]);
@@ -171,39 +135,9 @@ public class Application {
         fillAbstractDataStructures(taskBooksJava[17]);
         fillInternalState(taskBooksJava[18]);
         fillCollections(taskBooksJava[19]);
+        fillRecursion(taskBooksJava[20]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
-    }
-
-    private static TaskBook[] populateJsContent(String[] themeListJs) throws IOException {
-        root.TaskBook[] taskBooksJs = makeNav(themeListJs, "js");
-        taskBooksJs[0]
-                .addResource("base.html")
-                .addResource("graphics.html")
-                .addResource("graphics.js");
-        ;
-        fillPrintingTemplatesJs(taskBooksJs[0]);
-        fillBasicCalculationsJs(taskBooksJs[1]);
-        fillPreliminaryAssertions(taskBooksJs[2]);
-        fillMutualExclusives(taskBooksJs[3]);
-        fillRanges(taskBooksJs[4]);
-
-        fillLoops(taskBooksJs[5]);
-        fillStreamOfData(taskBooksJs[6]);
-        fillNestedLoops(taskBooksJs[7]);
-        fillBasicArrayOperations(taskBooksJs[8]);
-        fillArrayConversionToNumbers(taskBooksJs[9]);
-
-        fillAggregateCalculation(taskBooksJs[10]);
-        fillElementSearch(taskBooksJs[11]);
-        fillStringMethods(taskBooksJs[12]);
-        fillMethods(taskBooksJs[13]);
-        fillExceptionJs(taskBooksJs[14]);
-
-        fillAbstractDataStructuresJs(taskBooksJs[15]);
-        fillExercisesWithButtons(taskBooksJs[16]);
-        updateCrossTaskLinks(taskBooksJs);
-        return taskBooksJs;
     }
 
     private static String getGitHash() throws IOException {
@@ -225,55 +159,6 @@ public class Application {
         for (TaskBook book : taskBooks) {
             book.updateReferenceLinks(new TaskBookFinder(taskBooks));
         }
-    }
-
-    private static void fillPrintingTemplatesJs(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab01")
-                .withGroup("Печать текста на экране")
-                .addCitation("link_c1_p4.3")
-                .addExample(new TaskJs1662())
-                .addTask(new Task5321())
-                .addTask(new Task3240())
-                .addTask(new Task7058())
-                .addTask(new Task8691())
-                .addTask(new Task9523())
-                .addTask(new Task5901())
-                .addTask(new Task5792())
-                .addTask(new Task6986())
-
-                .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(new Task4131())
-                .addTask(new Task7365())
-
-                .withGroup("Получение строк от пользователя")
-                .addExample(new Task1860())
-                .addCitation("link_c7_p33")
-                .addTask(new Task4764())
-                .addTask(new Task2429())
-                .addCitation("link_c6_p30.2")
-                .addTask(new Task7472())
-                .withGroup("Конкатенация")
-                .addTask(new Task1910())
-
-                .withGroup("Оформление текста по шаблону")
-                .addCitation("link_c3_p10.2")
-                .addExample(new Task4140())
-                .addTask(new Task2959())
-                .addTask(new Task7271())
-                .addTask(new Task2632())
-                .addTask(new Task4343())
-                .addTask(new Task7474())
-
-                .withGroup("Отработка присваивания")
-                .addExample(new TaskJs3246())
-                .addTask(new TaskJs7332())
-                .addTask(new TaskJs9781())
-                .addTask(new TaskJs6814())
-
-                .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
-                .addExample(new Task1640())
-                .addTask(new Task8693())
-        ;
     }
 
     private static void fillPrintingTemplates(TaskBook taskBook) {
@@ -344,34 +229,6 @@ public class Application {
 //                .addTask(9639)
 //                .addTask(7353)
 //                .addTask(4910)
-        ;
-    }
-
-    private static void fillBasicCalculationsJs(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab02")
-                .withGroup("Операторы и операнды")
-                .addExample(new Task4411())//преобразование в число, простая арифметика, вывод с нужной точностью
-                .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
-                .addTask(new Task7457())
-                .addTask(new Task9865())
-                .addTask(new Task1976())
-                .addTask(new Task7237())
-
-                .withGroup("Использование математических функций")
-                .addTask(new Task3435())
-                .addCitation("link_c7_p32.5")
-        ;
-        if (taskBook.getLangAbbreviation().equals("js")) {
-            taskBook.addExample(new Task7711());
-        } else {
-            taskBook.addExampleWithManual(new Task7711());
-        }
-        taskBook
-                .addTask(new Task3474())
-                .addTask(new Task1262())
-                .addTask(new Task9164())
-                .addTask(new Task3558())
-                .addTask(new Task4913())
         ;
     }
 
@@ -504,6 +361,7 @@ public class Application {
                 .addExample(1186)
                 .addTask(8518)
                 .addTask(1292)
+                .addTask(new Task6686())//поиск максимума, последовательный ввод и сравнение
 
                 .withGroup("Просто задачи повышенного уровня сложности")
                 .addTask(4527)
@@ -575,7 +433,7 @@ public class Application {
         taskBook.withSourceDirectory("lab09")
                 .withGroup("Обработка неизвестного объема данных")
                 .addExample(new Task1903())//вывод с простым вычислением
-                .addTask(new Task8138())//просто вывод, не запутаться с присваиваниями
+                .addExample(new Task8138())//просто вывод, не запутаться с присваиваниями
                 .addTask(new Task1845())//вывод с условием
                 .addTask(new Task7083())//вывод с условием
                 .addTask(new Task2072())//вывод с условием, обнуление
@@ -708,6 +566,7 @@ public class Application {
                 .addTask(new Task5380())//просмотр в массиве. сравнение элемента с длиной
                 .addTask(new Task8613())//чтение элементов массива по индексу
                 .addTask(new Task9213())//фильтр по одному массиву, вывод из другого
+                .addTask(new Task1904())//сбор числа из цифр, проверка ошибки в цикле
                 .addTask(new Task2390())//вложенные циклы
                 .addTask(new Task7534())//вложенные циклы
 
@@ -780,6 +639,7 @@ public class Application {
                 .withGroup("Поиск минимального")
                 .addExample(new Task7035())
                 .addTask(new Task1522())//поиск максимального и поиск минимального
+                .addTask(new Task1431())//максимальное и следующее максимальное
                 .addTask(9271)//поиск и манипуляции с массивом
                 .addTask(8769)//минимальное в участке массива
                 .addTask(4707)//сортировка по возрастанию пузырьком
@@ -801,12 +661,30 @@ public class Application {
     }
 
     private static void fillStringMethods(TaskBook taskBook) {
+        //Цели:
+        // познакомить студентов с концепцией вызова методов
+        // научить читать документацию
+        // раньше была цель научить искать в документации, но для начала можно просто читать
+        // познакомить с упоротым термином "подстрока", который постоянно используется
         taskBook.withSourceDirectory("lab08")
                 .withGroup("Строковые методы")
-                .addExample(7491)
-                .addTask(9631)
-                .addTask(9812)
-                .addTask(new Task9279())
+        ;
+        if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .addExample(new TaskCs7491())
+                    .addExample(new TaskCs9631())
+                    .addTask(new Task9812())
+                    .addTask(new Task9279())
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addExample(new TaskJava7491())
+                    .addExample(new TaskJava9631())
+                    .addTask(new Task9812())
+                    .addTask(new Task9279())
+            ;
+        }
+        taskBook
                 .addExample(4845)
                 .addTask(5728)
                 .addTask(7222)
@@ -859,6 +737,17 @@ public class Application {
                 .addTask(4463)//скорее всего нужна дополнительная информация - что такое тэг, что такое атрибут тэга
                 .addTask(1668)//разбор HTML формы
                 .addTask(2137)//крайне путаная задача. возможно надо добавить ход решения
+        ;
+    }
+
+    private static void fillRecursion(TaskBook taskBook) {
+        taskBook.withSourceDirectory("recursion")
+                .addTask(new Task4106())//написать подробное решение
+                .addTask(new Task1068())//написать сокращенное решение
+                //.addTask(new )//бинарный рекурсивный поиск корня. неинтересный
+                .addTask(new Task6646())//сумма чисел во всех файлах
+        //Обработка файла с древовидной структурой
+        //Поиск решения, например A*, ИИ для крестиков-ноликов
         ;
     }
 
@@ -1038,21 +927,13 @@ public class Application {
         ;
     }
 
-    private static void fillExceptionJs(TaskBook taskBook) {
-        taskBook.withSourceDirectory("lab13")
-                .addCitation("link_c2_p8.4")
-                .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
-                .addExample(new TaskJs7740())
-                .addTask(new TaskJs1439())
-
-                .withGroup("Выбрасывание исключения, проверка в юнит-тестах")
-                .addExample(9020)
-                .addTask(3943)
-                .addTask(7799)
-                .addTask(9354)
-                .addTask(5170)
-                .addTask(7891)
-        ;
+    private static void fillStaticVsNonStatic(TaskBook taskBook) {
+        taskBook.withSourceDirectory("objects")
+                .withGroup("Отличие статических методов от нестатических")
+                .addExample(new TaskJava6011())//Point.distanceBetween(Points)
+                .addExample(new TaskJava3185())//Point.distanceTo(Point)
+                .addExample(new TaskJava1401())//Point.distanceBetween(Points) && Point.distanceTo(Point)
+                .addTask(new TaskJava1606());
     }
 
     private static void fillAbstractDataStructures(TaskBook taskBook) {
@@ -1069,6 +950,10 @@ public class Application {
         //3. Везде писать "создайте, объявите", даже если это не первая задача.
         // Люди додумаются что повторно не надо это делать.
         // Если не додумаются, то сначала поймают ошибки компиляции, а потом додумаются.
+
+        //цель размазана на две разные практические. Методы с аргументом values - лишние. Отвлекают от основной цели. Возможно надо раньше давать.
+
+        //не затронута тема статических переменных
         taskBook
                 .addExample(new TaskJava5789())//Point.distanceBetween(values)
                 .addTask(new TaskJava6011())//Point.distanceBetween(Points)
@@ -1092,6 +977,11 @@ public class Application {
                 .addTask(4913)
                 .addTask(6522)
                 .addTask(8225)
+
+        //нужна задача: создайте класс с такими полями. Например Деньги.
+        //Сделайте так, чтобы в этом классе в поле cent никогда не было значения меньше 0 и больше 99
+        //Сделайте так, чтобы поле cent нельзя было менять в обход сеттера
+
         ;
     }
 
@@ -1100,9 +990,10 @@ public class Application {
                 .withGroup("Нестатические методы класса");
         if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook
-                    .addExample(new TaskJava8403())
-                    .addExample(new TaskJava3185())
-                    .addTask(new TaskJava9914());
+                    .addExample(new TaskJava8403())//Point.distanceTo(values)
+                    .addExample(new TaskJava3185())//Point.distanceTo(Point)
+                    .addTask(new TaskJava9914())//Range.intersects(values)
+            ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
             taskBook
                     .addExample(new TaskJava8403())
@@ -1141,26 +1032,6 @@ public class Application {
         ;
     }
 
-    private static void fillAbstractDataStructuresJs(TaskBook taskBook) {
-        taskBook.withSourceDirectory("objects")
-                .withGroup("Объекты как контейнеры данных (АТД)")
-                .addExample(5789)//Point.distanceBetween(values)
-                .addExample(new TaskJs6011())
-                .addTask(6589)
-                .addTask(6037)
-
-                .withGroup("функции экземпляров объектов")
-                .addExample(8403)
-                .addExample(3185)
-                .addTask(9914)
-                .addTask(4916)
-
-                .withGroup("Параметризованный конструктор")
-                .addExample(7301)
-                .addTask(2000)
-        ;
-    }
-
     private static void fillCollections(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab15")
                 .withGroup("Формирование листа");
@@ -1175,7 +1046,7 @@ public class Application {
 
                 .withGroup("Реализация компаратора")
                 .addExample(8258)
-                .addTask(4061)
+                .addTask(4061)//компаратор по возрастанию абсолютных значений
                 .addTask(7186)
                 .addTask(1457)
 
@@ -1267,9 +1138,6 @@ public class Application {
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
         makeFiles(taskBooksCs, css, gitHash);
-
-        TaskBook[] taskBooksJs = populateJsContent(themeListJs);
-        //makeFiles(taskBooksJs, css, gitHash);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }

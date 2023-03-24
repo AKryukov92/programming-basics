@@ -7,7 +7,7 @@ public class TaskJava5259 extends TwoInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendOrdered(
-                "В классе Methods реализуйте публичный статический метод Task1934 для решения задачи" + linkToTask(1934),
+                "В классе Library реализуйте публичный статический метод Task1934 для решения задачи" + linkToTask(1934),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.",
                 "В папке с исходным кодом создайте класс Runner1934.",
@@ -20,7 +20,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Объявите переменные a и b для хранения целых чисел.",
                 "Инициализируйте переменные a и b значениями, полученными из консоли.",
                 "Объявите переменную result для хранения действительных чисел.",
-                "Вызовите метод Task1934 класса Methods и передайте ему a и b в качестве аргументов.",
+                "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
                 "Результат вызова метода запишите в переменную result.",
                 "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой."
         );
@@ -53,7 +53,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "15\n" +
                 "Exception in thread \"main\" java.lang.IllegalArgumentException:\n" +
                 "    Подкоренное выражение должно быть неотрицательно\n" +
-                "\tat Methods.task1934(Methods.java:6)\n" +
+                "\tat Library.task1934(Library.java:6)\n" +
                 "\tat Runner1934.step1934(Runner1934.java:50)\n" +
                 "\tat Runner1934.main(Runner1934.java:36)");
         appendCheckValuesRowNoLogic("word", "4", "Начало работы программы\n" +

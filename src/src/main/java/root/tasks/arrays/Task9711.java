@@ -29,9 +29,12 @@ public class Task9711 extends OneInputValLayout {
                 "Последний элемент поставить в начало. " +
                 "Обратите внимание, что в этой задаче нужно изменить содержимое массива, а не просто вывести в нужном порядке. ");
         appendCheckValuesHeader("data");
+        //однажды при объяснении очень удачно получилось провести параллель массива с двумя элементами и задачи на перестановку двух элементов
+        appendCheckValuesRow("first second");
         appendCheckValuesRow("q w e r t y");
         appendCheckValuesRow("a s d f g h j k l m");
         appendCheckValuesRow("zx cv bn m");
+        appendCheckValuesRow("single");
         appendCheckValuesRow("");
         appendCheckValuesFooter();
         appendFooter();

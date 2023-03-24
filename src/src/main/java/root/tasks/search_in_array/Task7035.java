@@ -28,8 +28,8 @@ public class Task7035 extends OneInputValLayout {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти минимальное число.");
         appendCheckValuesHeader("");
-        appendCheckValuesRow("6 5 7 8 3 4 1");
-        appendCheckValuesRow("1 2 3 4 5 6");
+        appendCheckValuesRow("12 5 7 8 3 4 2");
+        appendCheckValuesRow("2 3 4 5 12");
         appendCheckValuesRow("3 4 1 2 3 4 1 2 3 1 2");
         appendCheckValuesRow("4 2 3 4 3 2");
         appendCheckValuesRow("4 4 4 4 4 3 8 9");

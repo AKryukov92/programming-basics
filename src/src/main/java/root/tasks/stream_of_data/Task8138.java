@@ -8,7 +8,7 @@ public class Task8138 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего чисал.");
+        appendTaskDesc("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего числа.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow(
                 "78",

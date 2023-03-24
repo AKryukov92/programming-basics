@@ -1,8 +1,10 @@
 package root.tasks.methods;
 
+import root.tasks.MethodsDictationHelper;
 import root.tasks.MultipleInputValLayout;
 
-public class TaskCs2772 extends MultipleInputValLayout {
+
+public class TaskCs2772 extends MultipleInputValLayout implements MethodsDictationHelper {
     @Override
     protected void logic(String... args) {
         String a = args[0];
@@ -15,16 +17,16 @@ public class TaskCs2772 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте метод для решения задачи " + linkToTask(7474));
+        appendSubheading(implementMethodToSolve(7474));
         appendOrdered(
-                "В классе Methods реализуйте публичный статический метод task7474.",
-                "Он принимает в качестве аргументов 3 целых числа",
-                "В теле метода task7474 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных."
+                implementStatic("Library", "task7474"),
+                itAccepts("3 целых числа"),
+                itShouldDo("task7474")
         );
         appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
         appendOrdered(
-                "В методе main класса Program вызовите метод task2632 класса Methods.",
-                "Первым аргументом передайте ему число 1, вторым - число 2, третьим - число 3.",
+                callMethod("Runner7474", "Library", "task7474"),
+                passArguments("число 1", "число 2", "число 3"),
                 "Вызовите метод task2632 еще раз с аргументами -3, 0, 2.",
                 "В результате запуска метода main класса Program, в консоли должен появиться текст:"
         );

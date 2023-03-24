@@ -7,26 +7,26 @@ public class Task1315 extends OneInputValLayout {
     protected void logic(String value) {
         int i = 1;
         int total = Integer.parseInt(value);
-        System.out.println("Предисловие");
+        System.out.println("Введение");
         while (i <= total) {
             System.out.println("Глава " + i);
             i++;
         }
-        System.out.println("Послесловие");
+        System.out.println("Заключение");
     }
 
     protected static void step1(String value) {
         int total = Integer.parseInt(value);
-        System.out.println("Предисловие");
+        System.out.println("Введение");
         System.out.println("Глава " + 1);
         System.out.println("Глава " + 2);
         System.out.println("Глава " + 3);
-        System.out.println("Послесловие");
+        System.out.println("Заключение");
     }
 
     protected static void step2(String value) {
         int total = Integer.parseInt(value);
-        System.out.println("Предисловие");
+        System.out.println("Введение");
         int i = 1;
         System.out.println("Глава " + i);
         i = i + 1;
@@ -40,12 +40,12 @@ public class Task1315 extends OneInputValLayout {
         i = i + 1;
         System.out.println("Глава " + i);
         i = i + 1;
-        System.out.println("Послесловие");
+        System.out.println("Заключение");
     }
 
     protected static void step3(String value) {
         int total = Integer.parseInt(value);
-        System.out.println("Предисловие");
+        System.out.println("Введение");
         int i = 1;
         if (i <= total) {
             System.out.println("Глава " + i);
@@ -79,24 +79,24 @@ public class Task1315 extends OneInputValLayout {
             System.out.println("Глава " + i);
             i = i + 1;
         }
-        System.out.println("Послесловие");
+        System.out.println("Заключение");
     }
 
     protected static void step4(String value) {
         int total = Integer.parseInt(value);
-        System.out.println("Предисловие");
+        System.out.println("Введение");
         int i = 1;
         while (i <= total) {
             System.out.println("Глава " + i);
             i = i + 1;
         }
-        System.out.println("Послесловие");
+        System.out.println("Заключение");
     }
 
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово \"Предисловие\", а после всех чисел - слово \"Послесловие\". Перед каждым числом нужно написать слово \"Глава\".");
+        appendTaskDesc("Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово \"Введение\", а после всех чисел - слово \"Заключение\". Перед каждым числом нужно написать слово \"Глава\".");
         appendCheckValuesHeader("total");
         appendCheckValuesRow("3");
         appendCheckValuesRow("7");

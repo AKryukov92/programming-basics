@@ -3,15 +3,20 @@ package root.tasks.assertions;
 import root.tasks.OneInputValLayout;
 
 public class Task1058 extends OneInputValLayout {
-    @Override
-    protected void makeLayout() {
-        appendHeader();
-        appendNonEscaped("Пользователь вводит массив из 4 значений, разделенных символов ','. Числа обозначают координаты двух точек A и B. Первое число это x точки A. Второе - y точки A. Третье x точки B. Четвертое y точки B. Вычислить расстояние между точками по формуле <br/>\n" +
+
+    public static String getTaskDescription() {
+        return "Числа обозначают координаты двух точек A и B. Первое число это x точки A. Второе - y точки A. Третье x точки B. Четвертое y точки B. Вычислить расстояние между точками по формуле <br/>\n" +
                 "    <formula>\n" +
                 "      <sqrt><val>\n" +
                 "        (Bx - Ax)<sup>2</sup> + (By - Ay)<sup>2</sup>\n" +
                 "      </val></sqrt>\n" +
-                "    </formula>");
+                "    </formula>";
+    }
+
+    @Override
+    protected void makeLayout() {
+        appendHeader();
+        appendNonEscaped("Пользователь вводит массив из 4 значений, разделенных символов ','. " + getTaskDescription());
         appendCheckValuesHeader("coordinates");
         appendCheckValuesRow("1,1,3,4");
         appendCheckValuesRow("-2,4,8,-10");

@@ -1,15 +1,16 @@
 package root.tasks.internal_state;
 
 import root.tasks.LayoutMaker;
+import root.tasks.MethodsDictationHelper;
 
-public class TaskJava3185 extends LayoutMaker {
+public class TaskJava3185 extends LayoutMaker implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте НЕстатический метод для решения задачи " + linkToTask(1058));
         appendOrdered(
                 "Убедитесь, что у класса Point объявлены поля для действительных значений \"x\" и \"y\".",
-                "В классе Point реализуйте публичный нестатический метод distanceTo (без ключевого слова static перед типом возвращаемого значения).",
+                implementNonStatic("Point", "distanceTo"),
                 "Метод distanceTo принимает в качестве аргумента 1 экземпляр класса Point и возвращает действительное число.",
                 "В теле метода верните результат решения задачи. Для его вычисления используйте поля \"x\" и \"y\" экземпляра, у которого вызвали метод, и поля \"x\" и \"y\" экземпляра, который передали в качестве аргумента."
         );

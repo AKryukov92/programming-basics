@@ -6,7 +6,7 @@ public class Task4425 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число A и данные - символы, разделенные символами подчеркивания '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону");
+        appendTaskDesc("Пользователь вводит число A и данные - символы, разделенные тире '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону");
         appendCheckSingle("В массиве длиной $arrLength\n" +
                 "на индексе $A\n" +
                 "находится элемент со значением '$value'");
@@ -18,6 +18,7 @@ public class Task4425 extends TwoInputValLayout {
         appendCheckValuesRow("qwer-tyui", "3");
         appendCheckValuesRow("qw-er-ty-ui", "-1");
         appendCheckValuesRow("a--a", "1");
+        appendCheckValuesRow("b-b-    -b", "2");
         appendCheckValuesRow("", "8");
         appendCheckValuesFooter();
         appendFooter();

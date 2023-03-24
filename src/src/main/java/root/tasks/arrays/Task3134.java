@@ -1,13 +1,13 @@
 package root.tasks.arrays;
 
-import root.tasks.ThreeInputValLayout;
+import root.tasks.TwoInputValLayout;
 
-public class Task3134 extends ThreeInputValLayout {
+public class Task3134 extends TwoInputValLayout {
     @Override
-    protected void logic(String firstValue, String secondValue, String thirdValue) {
+    protected void logic(String secondValue, String thirdValue) {
         int p = Integer.parseInt(secondValue);
         int q = Integer.parseInt(thirdValue);
-        String[] arr = firstValue.split(" ");
+        String[] arr = "a s d f g h".split(" ");
         if (p < 0 || p >= arr.length) {
             System.out.print("Число P должно быть в интервале [0, размер массива)");
             return;
@@ -35,15 +35,15 @@ public class Task3134 extends ThreeInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два индекса P, Q и данные - символы, разделенные пробелами. Нужно переставить местами значения элементов на указанных индексах.");
-        appendCheckValuesHeader("data", "P", "Q");
-        appendCheckValuesRow("a s d f g h", "0", "3");
-        appendCheckValuesRow("a s d f g h", "2", "5");
-        appendCheckValuesRow("a s d f g h", "4", "2");
-        appendCheckValuesRow("a s d f g h", "-1", "5");
-        appendCheckValuesRow("a s d f g h", "2", "17");
-        appendCheckValuesRow("a s d f g h", "19", "2");
-        appendCheckValuesRow("a s d f g h", "1", "-5");
+        appendTaskDesc("Дан известный массив, содержащий элементы: a, s, d, f, g, h. Пользователь вводит два числа P, Q и данные - символы, разделенные пробелами. Нужно переставить местами значения элементов на индексах P и Q.");
+        appendCheckValuesHeader("P", "Q");
+        appendCheckValuesRow("0", "3");
+        appendCheckValuesRow("2", "5");
+        appendCheckValuesRow("4", "2");
+        appendCheckValuesRow("-1", "5");
+        appendCheckValuesRow("2", "17");
+        appendCheckValuesRow("19", "2");
+        appendCheckValuesRow("1", "-5");
         appendCheckValuesFooter();
         appendFooter();
     }

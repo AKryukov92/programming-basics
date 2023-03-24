@@ -1,8 +1,10 @@
 package root.tasks.objects;
 
 import root.tasks.LayoutMaker;
+import root.tasks.MethodsDictationHelper;
 
-public class TaskJava6011 extends LayoutMaker {
+
+public class TaskJava6011 extends LayoutMaker implements MethodsDictationHelper {
     protected void logic() {
         Point src;
         Point dest;
@@ -23,6 +25,7 @@ public class TaskJava6011 extends LayoutMaker {
     private static class Point {
         public double x;
         public double y;
+
         public static double distanceBetween(Point a, Point b) {
             return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
         }
@@ -34,7 +37,7 @@ public class TaskJava6011 extends LayoutMaker {
         appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(1058) + "используя экземпляры класса");
         appendOrdered(
                 "Объявите у класса Point поля для действительных значений \"x\" и \"y\".",
-                "В классе Point реализуйте еще один публичный статический метод distanceBetween.",
+                implementStatic("Point", "distanceBetween"),
                 "Новый метод distanceBetween принимает в качестве аргументов 2 экземпляра класса Point и возвращает действительное число.",
                 "В теле метода верните результат решения задачи. Для его вычисления используйте поля \"x\" и \"y\" экземпляров класса Point, которые были переданы в качестве аргументов."
         );

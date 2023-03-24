@@ -48,7 +48,8 @@ public class TaskJava1606 extends MultipleInputValLayout {
         appendCheckValuesRow("100", "200", "300");
         appendCheckValuesRow("10", "15", "10");
         appendCheckValuesRow("10", "15", "15");
-        appendCheckValuesRow("999", "1", "100");
+        appendCheckValuesRow("10", "5", "7");
+        appendCheckValuesRow("30", "20", "3");
         appendCheckValuesFooter();
         appendSubheading("Реализуйте статический метод с двумя аргументами");
         appendOrdered(
@@ -57,7 +58,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
                 "В классе Range реализуйте публичный статический метод contains.",
                 "Он принимает в качестве аргумента 1 экземпляр класса Range, 1 действительное число и возвращает логическое значение.",
                 "В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.",
-                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
+                "Если поле from больше поля to, то метод contains должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
         appendOrdered(
@@ -65,6 +66,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
                 "В классе RangeSuite создайте юнит-тест rangeContainsDoubleTest. Далее действия нужно выполнять в теле этого метода.",
                 "Объявите переменную actual для хранения логических значений.",
                 "Объявите переменную r типа Range",
+                "Инициализируйте переменную r экземпляра класса Range",
                 "Запишите в поле from переменной r значение 5.",
                 "Запишите в поле to переменной r значение 10.",
                 "Вызовите метод contains класса Range.",

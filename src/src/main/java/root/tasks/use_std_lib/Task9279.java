@@ -24,14 +24,22 @@ public class Task9279 extends root.tasks.OneInputValLayout {
             return;
         }
         String data = "abcabcabbacbacbaaac";
+        System.out.println("Записываю значение '" + data + "' в переменную data");
+        System.out.println("Записываю значение '" + value + "' в переменную value");
         int firstOccurrence = data.indexOf(value);
         if (firstOccurrence >= 0) {
             System.out.println("Первая подстрока находится на индексе " + firstOccurrence);
             System.out.println("Ищу вторую начиная с индекса " + (firstOccurrence + 1));
+            System.out.println("Записываю индекс первой подстроки в переменную firstOccurrence");
+            System.out.println("Использую перегрузку метода с двумя аргументами. Вызов выглядит так:");
+            System.out.println("int secondOccurrence = data.indexOf(value, firstOccurrence + 1);");
             int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
+            System.out.println("Переменная secondOccurrence содержит " + secondOccurrence + ", значит");
             if (secondOccurrence >= 0) {
                 System.out.println("Вторая подстрока находится на индексе " + secondOccurrence);
                 System.out.println("Ищу третью начиная с индекса " + (secondOccurrence + 1));
+                System.out.println("Вызов метода выглядит так:");
+                System.out.println("int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);");
                 int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
                 if (thirdOccurrence >= 0) {
                     System.out.println("Третья подстрока находится на индексе " + thirdOccurrence);

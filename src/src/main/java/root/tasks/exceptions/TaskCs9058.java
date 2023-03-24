@@ -1,15 +1,15 @@
 package root.tasks.exceptions;
 
+import root.tasks.MethodsDictationHelper;
 import root.tasks.TwoInputValLayout;
 
-import java.util.Locale;
-
-public class TaskCs9058 extends TwoInputValLayout {
+public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
+        appendSubheading(implementMethodToSolve(3943));
         appendOrdered(
-                "В классе Methods реализуйте публичный статический метод Task3943 для решения задачи " + linkToTask(3943),
+                implementStatic("Library", "Task3943"),
                 "Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
                 "Создайте проект Runner3943.",
@@ -23,7 +23,7 @@ public class TaskCs9058 extends TwoInputValLayout {
                 "Объявите переменные x и y для хранения целых чисел.",
                 "Инициализируйте переменные x и y значениями, полученными из консоли.",
                 "Объявите переменную result для хранения действительных чисел.",
-                "Вызовите метод Task3943 класса Methods и передайте ему x и y в качестве аргументов.",
+                "Вызовите метод Task3943 класса Library и передайте ему x и y в качестве аргументов.",
                 "Результат вызова метода запишите в переменную result.",
                 "Выведите на экран сообщение \"Результат равен\" и значение переменной result с точностью 4 знака после запятой."
         );
@@ -55,7 +55,7 @@ public class TaskCs9058 extends TwoInputValLayout {
                 "-20\n" +
                 "36\n" +
                 "Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно\n" +
-                "   at CodeProject.Methods.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Methods.cs:line 206\n" +
+                "   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Library.cs:line 206\n" +
                 "   at Lab13Task3943.Program.Step1934() in E:\\Stage2\\Lab13Task3943\\Program.cs:line 24\n" +
                 "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
         appendCheckValuesRowNoLogic("20", "-50",
@@ -64,7 +64,7 @@ public class TaskCs9058 extends TwoInputValLayout {
                         "20\n" +
                         "-50\n" +
                         "Unhandled Exception: System.ArgumentException: Значение y должно быть неотрицательным\n" +
-                        "   at CodeProject.Methods.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Methods.cs:line 210\n" +
+                        "   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Library.cs:line 210\n" +
                         "   at Lab13Task3943.Program.Step1934() in E:\\Stage2\\Lab13Task3943\\Program.cs:line 24\n" +
                         "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
         appendCheckValuesRowNoLogic("word", "",

@@ -1,15 +1,16 @@
 package root.tasks.collections;
 
 import root.tasks.LayoutMaker;
+import root.tasks.MethodsDictationHelper;
 
-public class TaskJava8317 extends LayoutMaker {
+public class TaskJava8317 extends LayoutMaker implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для решения задачи " + linkToTask(8418));
         appendOrdered(
-                "В классе Methods импортируйте классы \"java.util.Arrays\" и \"java.util.List\".",
-                "В классе Methods реализуйте публичный статический метод task8317.",
+                "В классе Library импортируйте классы \"java.util.Arrays\" и \"java.util.List\".",
+                implementStatic("Library","task8317"),
                 "Он принимает в качестве аргумента 1 целое число и возвращает List целых чисел.",
                 "В теле метода task8317 в случае получения некорректных значений аргументов, нужно выбросить исключение IllegalArgumentException и указать при этом текст ошибки из задачи."
         );
