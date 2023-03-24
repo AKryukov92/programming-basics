@@ -274,11 +274,6 @@ public class Lab02 {
         return (double) (a * d + b * c) / (a * d);
     }
 
-    public static double task2790(int x) {
-        double sin = Math.sin(x * Math.PI / 180.0);
-        return Math.sqrt(1.0 - sin * sin);
-    }
-
     public static double task2624(long a, long b, long c, long x) throws IllegalArgumentException {
         if (a * x * x + b * x + c < 0) {
             throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательным");

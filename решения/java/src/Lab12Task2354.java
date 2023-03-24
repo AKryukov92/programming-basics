@@ -6,17 +6,6 @@ public class Lab12Task2354 {
         Step9182();
     }
 
-
-    private static void Step2790() {
-        System.out.println();
-        System.out.println("2790");
-        System.out.printf("%.6f (%.6f)\n", Lab02.task2790(6997), 0.9205);
-        System.out.printf("%.6f (%.6f)\n", Lab02.task2790(31), 0.8572);
-        System.out.printf("%.6f (%.6f)\n", Lab02.task2790(90), 0.0000);
-        System.out.printf("%.6f (%.6f)\n", Lab02.task2790(0), 1.0000);
-        System.out.printf("%.6f (%.6f)\n", Lab02.task2790(180), 1.0000);
-    }
-
     private static void Step9164() {
         System.out.println();
         System.out.println("9164");
@@ -61,15 +50,6 @@ public class Lab12Task2354 {
         double result5895 = Lab02.task5895(7109, 7103, 7079);
         System.out.printf("%.6f (%.6f)\n", result5895, 12369.4955);
         System.out.printf("%.6f (%.6f)\n", Lab02.task5895(3, 7, 13), 4.1324);
-    }
-
-    private static void Step9865() {
-        System.out.println();
-        System.out.println("9865");
-        Lab02.task9865(15);
-        Lab02.task9865(11);
-        Lab02.task9865(1);
-        Lab02.task9865(0);
     }
 
     private static void Step3558() {

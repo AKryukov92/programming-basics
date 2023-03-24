@@ -14,8 +14,8 @@ public class Task3908 extends OneInputValLayout {
         appendCheckValuesRow("qa#ws#ed#rf");
         appendCheckValuesRow("qaz#wsx#edc#rfv");
         appendCheckValuesRow("q#w#e");
-        appendCheckValuesRow("q#w");
-        appendCheckValuesRow("q");
+        appendCheckValuesRow("one#two");
+        appendCheckValuesRow("single");
         appendCheckValuesRow("");
         appendCheckValuesFooter();
         appendFooter();

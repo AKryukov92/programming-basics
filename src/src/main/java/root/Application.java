@@ -410,6 +410,7 @@ public class Application {
                 .addTask(new Task9164())
                 .addTask(new Task3558())
                 .addTask(new Task4913())
+                .addTask(new Task2790())
         ;
     }
 
@@ -470,7 +471,6 @@ public class Application {
                 .addTask(9130)
                 .addTask(5895)
                 .addTask(2461)
-                .addTask(2790)
                 .addTask(2624)
                 .addTask(5871)
         ;
@@ -891,26 +891,30 @@ public class Application {
                 .withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
                 .addCitation("info01")
-                .withGroup("Проверка вспомогательной программой");
+                .withGroup("Проверка вспомогательной программой")
+        ;
 
         if (taskBook.getLangAbbreviation().equals("java")) {
             taskBook
                     .addExample(new TaskJava8307())
                     .addTask(new TaskJava8813())
                     .addTask(new TaskJava5823())
-                    .addTask(new TaskJava2772());
+                    .addTask(new TaskJava2772())
+            ;
         } else if (taskBook.getLangAbbreviation().equals("cs")) {
             taskBook
                     .addExample(new TaskCs8307())
                     .addTask(new TaskCs8813())
                     .addTask(new TaskCs5823())
-                    .addTask(new TaskCs2772());
+                    .addTask(new TaskCs2772())
+            ;
         } else if (taskBook.getLangAbbreviation().equals("js")) {
             taskBook
                     .addExample(new TaskJs8307())
                     .addTask(new TaskJs8813())
                     .addTask(new TaskJs5823())
-                    .addTask(new TaskJs2772());
+                    .addTask(new TaskJs2772())
+            ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
@@ -919,7 +923,17 @@ public class Application {
 
                 .withGroup("Проверка юнит-тестами")
                 .addExample(4411)
-                .addTask(2790)
+        ;
+        if (taskBook.getLangAbbreviation().equals("cs")) {
+            taskBook
+                    .addTask(new TaskCs4776())
+            ;
+        } else if (taskBook.getLangAbbreviation().equals("java")) {
+            taskBook
+                    .addTask(new TaskJava4776())
+            ;
+        }
+        taskBook
                 .addTask(5662)
                 .addTask(3669)
                 .addTask(1292)

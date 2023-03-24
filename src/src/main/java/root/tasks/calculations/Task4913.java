@@ -6,14 +6,14 @@ public class Task4913 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.");
+        appendNonEscaped("Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.");
         appendOrdered(
                 "Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula>",
                 "Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula>",
                 "Координату X<sub>b</sub> другой точки по формуле <formula>bx = ax + dX</formula>.",
                 "Координату Y<sub>b</sub> другой точки по формуле <formula>by = ay + dY</formula>"
         );
-        appendTaskDesc("Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.");
+        appendNonEscaped("Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.");
         appendCheckSingle("Приращение координат: &Delta;x = $dx; &Delta;y = $dy\n" +
                 "Координаты второй точки ($bx;$by)");
         appendCheckValuesHeader("ax", "ay", "distance", "angleDeg");
