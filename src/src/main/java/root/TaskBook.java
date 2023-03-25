@@ -55,6 +55,14 @@ public class TaskBook {
         return this.langAbbreviation;
     }
 
+    public boolean isJava() {
+        return this.langAbbreviation.equals("java");
+    }
+
+    public boolean isCsharp() {
+        return this.langAbbreviation.equals("cs");
+    }
+
     public TaskBook withGroup(String groupName) {
         if (lastGroupName == null) {
             lastGroupName = groupName;

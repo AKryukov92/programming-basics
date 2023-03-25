@@ -197,14 +197,14 @@ public class Application {
                 .addTask(new Task4343())
                 .addTask(new Task7474())
         ;
-        if (taskBook.getLangAbbreviation().equals("java")) {
+        if (taskBook.isJava()) {
             taskBook
                     .withGroup("Отработка присваивания")
                     .addExample(new TaskJava3246())
                     .addTask(new TaskJava7332())
                     .addTask(new TaskJava9781())
                     .addTask(new TaskJava6814());
-        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+        } else if (taskBook.isCsharp()) {
             taskBook
                     .withGroup("Отработка присваивания")
                     .addExample(new TaskCs3246())
@@ -529,17 +529,13 @@ public class Application {
                 .withGroup("Головоломки на перестановку")
         ;
 
-        if (taskBook.getLangAbbreviation().equals("cs")) {
+        if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
                     .addTask(new TaskCs5510())
             ;
-        } else if (taskBook.getLangAbbreviation().equals("java")) {
+        } else if (taskBook.isJava()) {
             taskBook.addTask(new TaskJava8775())
                     .addTask(new TaskJava5510())
-            ;
-        } else if (taskBook.getLangAbbreviation().equals("js")) {
-            taskBook.addTask(new TaskJs8775())
-                    .addTask(new TaskJs5510())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
@@ -669,24 +665,26 @@ public class Application {
         taskBook.withSourceDirectory("lab08")
                 .withGroup("Строковые методы")
         ;
-        if (taskBook.getLangAbbreviation().equals("cs")) {
+        if (taskBook.isCsharp()) {
             taskBook
-                    .addExample(new TaskCs7491())
-                    .addExample(new TaskCs9631())
-                    .addTask(new Task9812())
-                    .addTask(new Task9279())
+                    .addExample(new TaskCs7491())//знакомство с contains
+                    .addExample(new TaskCs9631())//знакомство с indexOf
+                    .addTask(new Task9812())//indexOf + ветвление
+                    .addTask(new Task9279())//знакомство с indexOf с двумя аргументами
+                    .addExample(new TaskCs4845())//знакомство с substring
+                    .addTask(new Task5728())//вырезание фрагмента ограниченного двумя другими фрагментам
             ;
-        } else if (taskBook.getLangAbbreviation().equals("java")) {
+        } else if (taskBook.isJava()) {
             taskBook
-                    .addExample(new TaskJava7491())
-                    .addExample(new TaskJava9631())
-                    .addTask(new Task9812())
-                    .addTask(new Task9279())
+                    .addExample(new TaskJava7491())//знакомство с contains
+                    .addExample(new TaskJava9631())//знакомство с indexOf
+                    .addTask(new Task9812())//indexOf + ветвление
+                    .addTask(new Task9279())//знакомство с indexOf с двумя аргументами
+                    .addExample(new TaskJava4845())//знакомство с substring
+                    .addTask(new Task5728())//вырезание фрагмента ограниченного двумя другими фрагментам
             ;
         }
         taskBook
-                .addExample(4845)
-                .addTask(5728)
                 .addTask(7222)
                 .addTask(5923)
                 .addTask(4265)
@@ -783,26 +781,19 @@ public class Application {
                 .withGroup("Проверка вспомогательной программой")
         ;
 
-        if (taskBook.getLangAbbreviation().equals("java")) {
+        if (taskBook.isJava()) {
             taskBook
                     .addExample(new TaskJava8307())
                     .addTask(new TaskJava8813())
                     .addTask(new TaskJava5823())
                     .addTask(new TaskJava2772())
             ;
-        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+        } else if (taskBook.isCsharp()) {
             taskBook
                     .addExample(new TaskCs8307())
                     .addTask(new TaskCs8813())
                     .addTask(new TaskCs5823())
                     .addTask(new TaskCs2772())
-            ;
-        } else if (taskBook.getLangAbbreviation().equals("js")) {
-            taskBook
-                    .addExample(new TaskJs8307())
-                    .addTask(new TaskJs8813())
-                    .addTask(new TaskJs5823())
-                    .addTask(new TaskJs2772())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
@@ -813,11 +804,11 @@ public class Application {
                 .withGroup("Проверка юнит-тестами")
                 .addExample(4411)
         ;
-        if (taskBook.getLangAbbreviation().equals("cs")) {
+        if (taskBook.isCsharp()) {
             taskBook
                     .addTask(new TaskCs4776())
             ;
-        } else if (taskBook.getLangAbbreviation().equals("java")) {
+        } else if (taskBook.isJava()) {
             taskBook
                     .addTask(new TaskJava4776())
             ;
@@ -832,7 +823,7 @@ public class Application {
                 .addExample(3946)
         ;
 
-        if (taskBook.getLangAbbreviation().equals("java")) {
+        if (taskBook.isJava()) {
             taskBook.addTask(new TaskJava8920())
                     .addTask(6497)
 
@@ -845,7 +836,7 @@ public class Application {
                     .addTask(new TaskJava7581())
                     .addCitation("link_c2_p7.3")
             ;
-        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+        } else if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8920())
                     .addTask(6497)
 
@@ -858,19 +849,6 @@ public class Application {
                     .addTask(new TaskCs7581())
                     .addCitation("link_c2_p7.3")
             ;
-        } else if (taskBook.getLangAbbreviation().equals("js")) {
-            taskBook.addTask(new TaskJs8920())
-                    .addTask(6497)
-
-                    .withGroup("Возврат массива в качестве результата")
-                    .addExample(new TaskJs2936())
-                    .addTask(new TaskJs3539())
-
-                    .withGroup("Возврат булевого значения")
-                    .addExample(new TaskJs6401())
-                    .addTask(new TaskJs7581())
-                    .addCitation("link_c2_p7.3")
-            ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
@@ -881,9 +859,9 @@ public class Application {
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
         ;
-        if (taskBook.getLangAbbreviation().equals("cs")) {
+        if (taskBook.isCsharp()) {
             taskBook.addExample(new TaskCs7740());
-        } else if (taskBook.getLangAbbreviation().equals("java")) {
+        } else if (taskBook.isJava()) {
             taskBook.addExample(new TaskJava7740());
         }
         taskBook
@@ -893,12 +871,12 @@ public class Application {
                 .addTask(8139)
                 .addTask(5014)
         ;
-        if (taskBook.getLangAbbreviation().equals("cs")) {
+        if (taskBook.isCsharp()) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(new TaskCs5259())
                     .addTask(new TaskCs9058())
             ;
-        } else if (taskBook.getLangAbbreviation().equals("java")) {
+        } else if (taskBook.isJava()) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
                     .addExample(new TaskJava5259())
             //.addTask(3943)
@@ -988,13 +966,13 @@ public class Application {
     private static void fillInternalState(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Нестатические методы класса");
-        if (taskBook.getLangAbbreviation().equals("java")) {
+        if (taskBook.isJava()) {
             taskBook
                     .addExample(new TaskJava8403())//Point.distanceTo(values)
                     .addExample(new TaskJava3185())//Point.distanceTo(Point)
                     .addTask(new TaskJava9914())//Range.intersects(values)
             ;
-        } else if (taskBook.getLangAbbreviation().equals("cs")) {
+        } else if (taskBook.isCsharp()) {
             taskBook
                     .addExample(new TaskJava8403())
                     .addExample(new TaskJava3185())
@@ -1035,7 +1013,7 @@ public class Application {
     private static void fillCollections(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab15")
                 .withGroup("Формирование листа");
-        if (taskBook.getLangAbbreviation().equals("java")) {
+        if (taskBook.isJava()) {
             taskBook.addExample(new TaskJava5087())
                     .addTask(new TaskJava8317());
         } else {

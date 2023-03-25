@@ -155,16 +155,4 @@ public class Lab12Task2030 {
             }
         }
     }
-
-    static void Step7491() {
-        System.out.println();
-        System.out.println("7491");
-        Lab08.task7491("z");
-        Lab08.task7491("bx");
-        Lab08.task7491("fw");
-        Lab08.task7491("abcd");
-        Lab08.task7491("abcdefwxyz000");
-        Lab08.task7491("abcdefwxyz");
-        Lab08.task7491("123");
-    }
 }

@@ -35,26 +35,6 @@ public class Lab15Task8787 {
         }
     }
 
-
-    private static void Step9279() {
-        System.out.println();
-        System.out.println("9279");
-        String[] in9279 = {"ab","bc","ac","bb","xz","cde","a"};
-        for (int i = 0; i < in9279.length; i++){
-            try {
-                StringBuilder sb = new StringBuilder();
-                List<Integer> result = Lab08.task9279(in9279[i]);
-                for(Integer item : result){
-                    sb.append(item);
-                    sb.append(" ");
-                }
-                System.out.println(sb);
-            } catch(Exception e){
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step3657() {
         System.out.println();
         System.out.println("3657");

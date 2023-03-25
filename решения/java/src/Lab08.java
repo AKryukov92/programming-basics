@@ -39,50 +39,6 @@ public class Lab08 {
         }
     }
 
-    public static List<Integer> task9279(String x) throws IllegalArgumentException {
-        if (x.length() != 2) {
-            throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
-        }
-        String data = "abcabcabbacbacbaaac";
-        List<Integer> ret = new ArrayList<>();
-        int i = data.indexOf(x);
-        while (i != -1) {
-            ret.add(i);
-            i = data.indexOf(x, i + 1);
-        }
-        return ret;
-    }
-
-    static String task4845(int ca, int cb) throws IllegalArgumentException {
-        if (ca < 0 || ca > STR.length()) {
-            throw new IllegalArgumentException("Значение CA должно быть в интервале [0,длина строки)");
-        }
-        if (cb < 0 || cb > STR.length()) {
-            throw new IllegalArgumentException("Значение CB должно быть в интервале [0,длина строки)");
-        }
-        if (ca > cb) {
-            return STR.substring(cb, ca + 1);
-        } else {
-            return STR.substring(ca, cb + 1);
-        }
-    }
-
-    public static String task5728(String ca, String cb) throws IllegalArgumentException {
-        if (!STR.contains(ca)) {
-            throw new IllegalArgumentException("Значение CA отсутствует в строке");
-        }
-        if (!STR.contains(cb)) {
-            throw new IllegalArgumentException("Значение CB отсутствует в строке");
-        }
-        int indexA = STR.indexOf(ca);
-        int indexB = STR.indexOf(cb);
-        if (indexA < indexB) {
-            return STR.substring(indexA + 1, indexB);
-        } else {
-            return STR.substring(indexB + 1, indexA);
-        }
-    }
-
     public static String task7222(String code) throws IllegalArgumentException {
         if (code.length() != 13) {
             throw new IllegalArgumentException("Некорректная длина штрих-кода");
@@ -95,14 +51,6 @@ public class Lab08 {
                 "\nКод изготовителя: " + manufacturer +
                 "\nКод товара: " + product +
                 "\nКонтрольное число: " + checksum;
-    }
-
-    public static void task7491(String x) {
-        if (STR.contains(x)){
-            System.out.println("Фрагмент '" + x + "' был найден в '" + STR + "'");
-        } else {
-            System.out.println("Фрагмент '" + x + "' отсутствует в '" + STR + "'");
-        }
     }
 
     public static String task5923(int ca, int cb) throws IllegalArgumentException {

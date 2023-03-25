@@ -31,7 +31,7 @@ public class Task9279 extends root.tasks.OneInputValLayout {
             System.out.println("Первая подстрока находится на индексе " + firstOccurrence);
             System.out.println("Ищу вторую начиная с индекса " + (firstOccurrence + 1));
             System.out.println("Записываю индекс первой подстроки в переменную firstOccurrence");
-            System.out.println("Использую перегрузку метода с двумя аргументами. Вызов выглядит так:");
+            System.out.println("Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:");
             System.out.println("int secondOccurrence = data.indexOf(value, firstOccurrence + 1);");
             int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
             System.out.println("Переменная secondOccurrence содержит " + secondOccurrence + ", значит");

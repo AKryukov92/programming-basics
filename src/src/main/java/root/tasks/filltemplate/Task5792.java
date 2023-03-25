@@ -12,7 +12,7 @@ public class Task5792 extends LayoutMaker {
                 "&lt;svg width=\"800\" height=\"600\"&gt;\n" +
                 "    &lt;circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\"\n" +
                 "        stroke-width=\"4\" fill=\"yellow\"/&gt;\n" +
-                "&lt;/svg>&gt;");
+                "&lt;/svg&gt;");
         appendFooter();
     }
 }

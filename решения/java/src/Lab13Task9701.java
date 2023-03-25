@@ -398,34 +398,6 @@ public class Lab13Task9701 {
         }
     }
 
-    static void Step5728() {
-        System.out.println();
-        System.out.println("5728");
-        String[] in5728a = {"a", "c", "y", "g", "a"};
-        String[] in5728b = {"z", "d", "d", "z", "l"};
-        for (int i = 0; i < in5728a.length; i++) {
-            try {
-                System.out.println(Lab08.task5728(in5728a[i], in5728b[i]));
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    static void Step4845() {
-        System.out.println();
-        System.out.println("4845");
-        int[] in4845a = {0, 3, 3, 2, 6, 0, -1, 20, 5, 7};
-        int[] in4845b = {3, 0, 3, 6, 2, 9, 4, 4, -2, 17};
-        for (int i = 0; i < in4845a.length; i++) {
-            try {
-                System.out.println(Lab08.task4845(in4845a[i], in4845b[i]));
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step9812() {
         System.out.println();
         System.out.println("9812");
