@@ -9,7 +9,11 @@ public class Task9812 extends TwoInputValLayout {
         appendTaskDesc("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит два символа. Посчитать количество символов между введенными символами.");
         appendCheckValuesHeader("CA", "CB");
         appendCheckValuesRow("a", "x");
+        appendCheckValuesRow("a", "w");
+        appendCheckValuesRow("a", "d");
+        appendCheckValuesRow("a", "b");
         appendCheckValuesRow("w", "d");
+        appendCheckValuesRow("w", "f");
         appendCheckValuesRow("g", "z");
         appendCheckValuesRow("x", "u");
         appendCheckValuesFooter();
