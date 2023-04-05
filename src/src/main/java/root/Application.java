@@ -687,9 +687,9 @@ public class Application {
             ;
         }
         taskBook
-                .addTask(7222)
-                .addTask(5923)
-                .addTask(4265)
+                .addTask(new Task7222())
+                .addTask(new Task5923())
+                .addTask(new Task4265())
                 .addTask(2166)
                 .addTask(9116)
                 .addTask(4996)

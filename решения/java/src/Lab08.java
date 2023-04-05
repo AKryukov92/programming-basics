@@ -39,33 +39,6 @@ public class Lab08 {
         }
     }
 
-    public static String task7222(String code) throws IllegalArgumentException {
-        if (code.length() != 13) {
-            throw new IllegalArgumentException("Некорректная длина штрих-кода");
-        }
-        String country = code.substring(0, 3);
-        String manufacturer = code.substring(3, 9);
-        String product = code.substring(9, 12);
-        String checksum = code.substring(12);
-        return "Код страны: " + country +
-                "\nКод изготовителя: " + manufacturer +
-                "\nКод товара: " + product +
-                "\nКонтрольное число: " + checksum;
-    }
-
-    public static String task5923(int ca, int cb) throws IllegalArgumentException {
-        if (ca < 0 || ca > STR.length()) {
-            throw new IllegalArgumentException("Значение CA должно быть в интервале [0, длина строки)");
-        }
-        if (cb < 0) {
-            throw new IllegalArgumentException("Значение CB должно быть неотрицательно");
-        }
-        if ((ca + cb) > STR.length()) {
-            throw new IllegalArgumentException("Сумма значений CA и CB должна быть меньше длины строки");
-        }
-        return STR.substring(0, ca) + STR.substring(ca + cb);
-    }
-
     public static String task4265(String s) {
         if (s.startsWith("s")) {
             return s.toLowerCase();

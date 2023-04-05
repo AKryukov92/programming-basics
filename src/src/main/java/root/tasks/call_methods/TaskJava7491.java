@@ -6,7 +6,7 @@ public class TaskJava7491 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#contains(java.lang.CharSequence)'>(открыть справку в новой вкладке)</a>");
+        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#contains-java.lang.CharSequence-'>(открыть справку в новой вкладке)</a>");
         appendCheckValuesHeader("needle");
         appendCheckValuesRow("z");
         appendCheckValuesRow("bx");
@@ -25,7 +25,7 @@ public class TaskJava7491 extends OneInputValLayout {
         String haystack = "abcdefwxyz";
         System.out.println("Записываю значение '" + haystack + "' в переменную haystack");
         System.out.println("Вызов метода выглядит так:");
-        System.out.println("boolean check = haystack.сontains(needle);");
+        System.out.println("boolean check = haystack.contains(needle);");
         boolean check = haystack.contains(needle);
         System.out.print("Переменная check содержит " + check + ", значит ");
         if (check) {

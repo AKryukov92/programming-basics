@@ -6,7 +6,7 @@ public class TaskCs7491 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенный фрагмент считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://learn.microsoft.com/ru-ru/dotnet/api/system.string.contains?view=netframework-4.8.1'>(открыть справку в новой вкладке)</a>");
+        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенный фрагмент считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://learn.microsoft.com/ru-ru/dotnet/api/system.string.contains?view=netframework-4.8.1'>(открыть справку в новой вкладке)</a>");
         appendCheckValuesHeader("needle");
         appendCheckValuesRow("z");
         appendCheckValuesRow("bx");
