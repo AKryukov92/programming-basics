@@ -49,13 +49,6 @@ public class Lab08 {
         }
     }
 
-    public static String task2166(String s) throws IllegalArgumentException {
-        if (s.length() != 2) {
-            throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
-        }
-        return "abcdacadbacdaabaadc".replace(s, " ");
-    }
-
     public static String task9116(String s) throws IllegalArgumentException {
         if (!s.startsWith("\"") || !s.endsWith("\"")) {
             throw new IllegalArgumentException("Строка должна начинаться и заканчиваться кавычкой");

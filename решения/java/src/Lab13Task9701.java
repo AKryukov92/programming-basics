@@ -351,19 +351,6 @@ public class Lab13Task9701 {
         }
     }
 
-    static void Step2166() {
-        System.out.println();
-        System.out.println("2166");
-        String[] in2166 = {"cd", "aa", "xy", "abc", "f"};
-        for (int i = 0; i < in2166.length; i++) {
-            try {
-                System.out.println(Lab08.task2166(in2166[i]));
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step9812() {
         System.out.println();
         System.out.println("9812");

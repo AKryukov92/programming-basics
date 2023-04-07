@@ -696,8 +696,7 @@ public class Application {
                 .addTask(new Task7222())
                 .addTask(new Task5923())
                 .addTask(new Task4265())
-                .addTask(2166)
-                .addTask(9116)
+                .addTask(new Task2166())
                 .addTask(4996)
                 .addExample(9925)
                 .addExample(3657)
@@ -705,6 +704,7 @@ public class Application {
                 .addTask(1618)
                 .addTask(1703)
                 .addTask(8887)
+                .addTask(9116)
         ;
     }
 

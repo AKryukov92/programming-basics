@@ -19,8 +19,11 @@ public class Task9865 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         double kmH = Double.parseDouble(value);
-        System.out.printf("10%% от %.4f это %.4f\n", kmH, kmH * 0.1);
-        double knots = kmH * 2 - kmH * 0.2;
+        double kmH2 = kmH * 2;
+        System.out.printf("Умножили %.4f на 2 получили %.4f\n", kmH, kmH2);
+        double tenh = kmH2 * 0.1;
+        double knots = kmH2 - tenh;
+        System.out.printf("10%% от %.4f это %.4f\n", kmH2, tenh);
         System.out.printf("%.2f узлов это приблизительно %.2f км/ч\n", kmH, knots);
     }
 

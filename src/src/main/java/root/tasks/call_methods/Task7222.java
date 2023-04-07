@@ -32,9 +32,9 @@ public class Task7222 extends OneInputValLayout {
             String manufacturer = code.substring(3, 9);
             String product = code.substring(9, 12);
             String checksum = code.substring(12);
-            System.out.println("Код страны:" + country);
-            System.out.println("Код изготовителя" + manufacturer);
-            System.out.println("Код товара:" + product);
+            System.out.println("Код страны: " + country);
+            System.out.println("Код изготовителя: " + manufacturer);
+            System.out.println("Код товара: " + product);
             System.out.println("Контрольное число: " + checksum);
         }
     }
