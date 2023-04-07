@@ -20,6 +20,8 @@ public class Task4411 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         double x = Double.parseDouble(value);
-        System.out.printf("%.4f", x);
+        double result;
+        result = x + 7;
+        System.out.printf("Результат равен %.4f", result);
     }
 }

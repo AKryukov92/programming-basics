@@ -25,6 +25,6 @@ public class Task8428 extends OneInputValLayout {
     protected void logic(String value) {
         double angleDegree = Double.parseDouble(value);
         double angleRadian = angleDegree * Math.PI / 180;
-        System.out.printf("%.4f", angleRadian);
+        System.out.printf("%.0f градусов это %.4f радиан", angleDegree, angleRadian);
     }
 }
