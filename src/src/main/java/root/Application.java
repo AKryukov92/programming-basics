@@ -192,7 +192,13 @@ public class Application {
 
                 .withGroup("Оформление текста по шаблону")
                 .addCitation("link_c3_p10.2")
-                .addExample(new Task4140())
+        ;
+        if (taskBook.isCsharp()) {
+            taskBook.addExample(new TaskCs4140());
+        } else {
+            taskBook.addExample(new TaskJava4140());
+        }
+        taskBook
                 .addTask(new Task2959())
                 .addTask(new Task7271())
                 .addTask(new Task2632())

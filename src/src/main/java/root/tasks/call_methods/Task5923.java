@@ -29,7 +29,8 @@ public class Task5923 extends TwoInputValLayout {
             System.out.println("Значение CB должно быть неотрицательно");
         } else if ((ca + cb) > STR.length()) {
             System.out.println("Сумма значений CA и CB должна быть меньше длины строки");
+        } else {
+            System.out.println(STR.substring(0, ca) + STR.substring(ca + cb));
         }
-        System.out.println(STR.substring(0, ca) + STR.substring(ca + cb));
     }
 }

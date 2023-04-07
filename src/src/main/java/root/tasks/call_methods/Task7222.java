@@ -19,6 +19,7 @@ public class Task7222 extends OneInputValLayout {
         appendCheckValuesRow("9785964300694");
         appendCheckValuesRow("123456789012");
         appendCheckValuesRow("12345678901234567890");
+        appendCheckValuesFooter();
         appendFooter();
     }
 

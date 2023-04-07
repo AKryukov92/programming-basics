@@ -6,7 +6,9 @@ public class Task7711 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит угол, выраженный в градусах. Нужно перевести этот угол в радианы и вычислить результат по формуле <b>sin(angleRad)</b>.");
+        appendNonEscaped("Пользователь вводит угол, выраженный в градусах." +
+                " Нужно перевести этот угол в радианы и вычислить результат по формуле <b>sin(angleRad)</b>." +
+                " Для получения значения в радианах примените формулу, которую использовали в задаче " + linkToTask(8428));
         appendCheckValuesHeader("angleDegree");
         appendCheckValuesRow("45");
         appendCheckValuesRow("90");
@@ -22,6 +24,6 @@ public class Task7711 extends OneInputValLayout {
         double angleDegree = Double.parseDouble(value);
         double angleRadian = angleDegree * Math.PI / 180;
         double result = Math.sin(angleRadian);
-        System.out.printf("Угол %.4f градусов это %.4f радиан. Синус этого угла равен %.4f", angleDegree, angleRadian, result);
+        System.out.printf("Угол %.4f градусов это %.4f радиан.\nСинус этого угла равен %.4f", angleDegree, angleRadian, result);
     }
 }
