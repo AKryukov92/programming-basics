@@ -4,21 +4,6 @@ import java.util.*;
  * Created by Александр on 03.04.2017.
  */
 public class Lab07 {
-    public static void main(String[] args) {
-        step7793();
-    }
-
-    public static void step7793() {
-        System.out.println();
-        System.out.println("7793");
-        task7793("qw er ty ui", "as er df qw");
-        task7793("qw er ty ui", "as df gh jk");
-        task7793("zx cv bn", "zx cv bn");
-        task7793("q w e r t y", "y e q a s d");
-        task7793("a a a a a a", "a");
-        task7793("b", "b b b b b b");
-    }
-
     public static void step5900() {
         System.out.println();
         System.out.println("5900");

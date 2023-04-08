@@ -22,7 +22,7 @@ public class Task6989 extends OneInputValLayout {
                 "wiki_page - ссылка на страницу Википедии"
         );
         appendTaskDesc("Пользователь вводит число - идентификатор композитора. Нужно вывести имя, фамилию и место рождения композитора, у которого идентификатор равен введенному числу. Если композитор с нужным идентификатором отсутствует, сообщить об этом.");
-        appendCheckValuesHeader("employee_id", "ссылка на файл");
+        appendCheckValuesHeader("composer_id", "ссылка на файл");
         appendCheckValuesRow("9");
         appendCheckValuesRow("6");
         appendCheckValuesRow("3");

@@ -26,7 +26,7 @@ public class Task2166 extends OneInputValLayout {
     protected void logic(String substring) {
         String str = "abcdacadbacdaabaadc";
         if (substring.length() != 2) {
-            throw new IllegalArgumentException("Вводимая строка должна содержать ровно 2 символа");
+            System.out.println("Вводимая строка должна содержать ровно 2 символа");
         }
         System.out.println(str.replace(substring, " "));
     }

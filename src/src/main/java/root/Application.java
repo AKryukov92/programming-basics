@@ -30,10 +30,7 @@ import root.tasks.read_files.*;
 import root.tasks.recursion.Task1068;
 import root.tasks.recursion.Task4106;
 import root.tasks.recursion.Task6646;
-import root.tasks.search.Task2003;
-import root.tasks.search.Task7703;
-import root.tasks.search.Task8158;
-import root.tasks.search.Task9827;
+import root.tasks.search.*;
 import root.tasks.search_in_array.*;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
@@ -637,7 +634,7 @@ public class Application {
                 .addTask(5894)//неявное сопоставление + подсчет количества
                 .addTask(new Task4515())//сопоставление массива с самим собой
                 .addTask(new Task9827())//сопоставление массивов MINUS
-                .addTask(7793)//сопоставление, все виды
+                .addTask(new Task7793())//сопоставление, все виды
                 .addTask(new Task1036())//Гиперпрыгающие плазмошашки
 
                 .withGroup("Поиск минимального")
