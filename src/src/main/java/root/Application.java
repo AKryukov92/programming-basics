@@ -690,10 +690,11 @@ public class Application {
             ;
         }
         taskBook
-                .addTask(new Task7222())
-                .addTask(new Task5923())
-                .addTask(new Task4265())
-                .addTask(new Task2166())
+                .addTask(new Task7222())//substring
+                .addTask(new Task5923())//substring+substring
+                .addTask(new Task8543())//расшифровка даты indexof substring
+                .addTask(new Task4265())//toUpper, toLower
+                .addTask(new Task2166())//replace
                 .addTask(4996)
                 .addExample(9925)
                 .addExample(3657)
