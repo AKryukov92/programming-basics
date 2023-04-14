@@ -80,11 +80,13 @@ public abstract class LayoutMaker {
         nextOrderedIndex = 1;
     }
 
-    protected void appendTaskDesc(String taskDescription) {
-        String escaped = taskDescription
+    public static String escapeHtmlSymbols(String nonEscaped) {
+        return nonEscaped
                 .replace("<", "&lt;")
                 .replace(">", "&gt;");
-        appendNonEscaped(escaped);
+    }
+    protected void appendTaskDesc(String taskDescription) {
+        appendNonEscaped(escapeHtmlSymbols(taskDescription));
     }
 
     protected void appendNonEscaped(String taskDescription) {

@@ -22,6 +22,7 @@ public class Task6170 extends OneInputValLayout {
                 "location_id - код офиса"
         );
         appendNonEscaped("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        resetOrdered();
         appendOrdered(
                 "employee_id - код сотрудника",
                 "first_name - имя",

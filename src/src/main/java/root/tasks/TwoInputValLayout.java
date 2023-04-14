@@ -61,6 +61,24 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.println("</tr>");
     }
 
+    protected void appendCheckValuesRowEscaped(String firstVal, String secondVal) {
+        writer.println("<tr>");
+        writer.println("<td></td>");
+        writer.println("<td>");
+        writer.println(escapeHtmlSymbols(firstVal));
+        writer.println("</td>");
+        writer.println("<td>");
+        writer.println(escapeHtmlSymbols(secondVal));
+        writer.println("</td>");
+        writer.print("<td class='preformatted'>");
+        PrintStream oldOut = System.out;
+        System.setOut(writer);
+        logic(firstVal, secondVal);
+        System.setOut(oldOut);
+        writer.println("</td>");
+        writer.println("</tr>");
+    }
+
     protected void appendCheckValuesRowNoLogic(String firstVal, String secondVal, String result){
         writer.println("<tr>");
         writer.println("<td></td>");
