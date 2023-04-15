@@ -28,32 +28,6 @@ public class Lab07 {
         task9576("20;21;22;23;24");
     }
 
-    public static void step3218() {
-        System.out.println();
-        System.out.println("3218");
-        task3218("4 1 1 1");
-        task3218("1 4 2 1");
-        task3218("3 4 1 5");
-        task3218("1 2 3 4 1 2");
-        task3218("9 8 9 1 1 5 1 1");
-        task3218("5 5 5 5 5");
-        task3218("1 9 1 30 9 1 100");
-        task3218("");
-        task3218("19");
-    }
-
-    public static void step4707() {
-        System.out.println();
-        System.out.println("4707");
-        task4707("9 8 9 1 1 5 1 1");
-        task4707("1 2 3 4 1 3 4 4 4 4");
-        task4707("5 5 5 5 5");
-        task4707("");
-        task4707("17");
-        task4707("1 9 1 30 9 1 100");
-        task4707("1000000 1 1");
-    }
-
     public static void step5795() {
         System.out.println();
         System.out.println("5795");
@@ -240,35 +214,6 @@ public class Lab07 {
         }
     }
 
-    public static void task4707(String raw) {
-        if (raw.length() == 0) {
-            System.out.println("Массив пуст");
-            return;
-        }
-        System.out.println(raw);
-        String[] arr = raw.split(" ");
-        int[] num = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            num[i] = Integer.parseInt(arr[i]);
-        }
-        for (int j = 0; j < num.length - 1; j++) {
-            int minIdx = j;
-            for (int i = j + 1; i < num.length; i++) {
-                if (num[minIdx] > num[i]) {
-                    minIdx = i;
-                }
-            }
-            System.out.printf("Минимальное значение %d на индексе %d. Первая неотсортированная позиция: %d\n", num[minIdx], minIdx, j);
-            int temp = num[minIdx];
-            num[minIdx] = num[j];
-            num[j] = temp;
-            for (int i = 0; i < num.length; i++) {
-                System.out.print(num[i] + " ");
-            }
-            System.out.println();
-        }
-    }
-
     public static double[] task6497(String raw) {
         if (raw.length() == 0) {
             return new double[0];
@@ -392,25 +337,6 @@ public class Lab07 {
         System.out.println();
     }
 
-    public static String task2173(String data) {
-        if (data.isEmpty()) {
-            return "Исходная строка пуста";
-        }
-        if (!data.contains(";")) {
-            return "Значения отсортированы по возрастанию";
-        }
-        String[] parts = data.split(";");
-        int prev = Integer.parseInt(parts[0]);
-        for (int i = 1; i < parts.length; i++) {
-            int current = Integer.parseInt(parts[i]);
-            if (current < prev) {
-                return "Элемент со значением " + current + " на индексе " + i + " нарушает закономерность";
-            }
-            prev = current;
-        }
-        return "Значения отсортированы по возрастанию";
-    }
-
     public static String task6492(String charsRaw, String amountsRaw) {
         if (charsRaw.isEmpty()) {
             return "Отсутствуют данные о символах";
@@ -529,39 +455,6 @@ public class Lab07 {
         }
     }
 
-    public static String task8769(int p, int q, String raw) throws IllegalArgumentException {
-        String[] arr = raw.split(" ");
-        int i, n;
-        if (p < 0 || p >= arr.length) {
-            throw new IllegalArgumentException("Число P должно быть в интервале [0, размер массива)");
-        }
-        if (q < 0 || q >= arr.length) {
-            throw new IllegalArgumentException("Число Q должно быть в интервале [0, размер массива)");
-        }
-        if (p < q) {
-            i = p;
-            n = q;
-        } else {
-            i = q;
-            n = p;
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.append("Фрагмент массива:");
-        int min = Integer.parseInt(arr[i]);
-        while (i <= n) {
-            sb.append(" ");
-            sb.append(arr[i]);
-            int current = Integer.parseInt(arr[i]);
-            if (current < min) {
-                min = current;
-            }
-            i++;
-        }
-        sb.append("\nМинимальное среди них: ");
-        sb.append(min);
-        return sb.toString();
-    }
-
     public static List<Integer> task4497(int x, int y, String raw) {
         String[] arr = raw.split(" ");
         List<Integer> ret = new ArrayList<>();
@@ -583,37 +476,6 @@ public class Lab07 {
             ret.add(arr[i]);
         }
         return ret;
-    }
-
-    public static void task3218(String raw) {
-        if (raw.isEmpty()) {
-            System.out.println("Массив пуст");
-            return;
-        }
-        System.out.println(raw);
-        String[] arr = raw.split(" ");
-        int[] num = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            num[i] = Integer.parseInt(arr[i]);
-        }
-        for (int j = 0; j < num.length; j++) {
-            System.out.printf("Шаг %d ", j);
-            for (int i = 0; i < num.length - 1; i++) {
-                if (num[i] > num[i + 1]) {
-                    System.out.printf("Меняем %d и %d ", num[i], num[i + 1]);
-                    int temp = num[i];
-                    num[i] = num[i + 1];
-                    num[i + 1] = temp;
-                } else {
-                    System.out.printf("Оставляем %d и %d ", num[i], num[i + 1]);
-                }
-            }
-            System.out.println();
-            for (int i = 0; i < num.length; i++) {
-                System.out.print(num[i] + " ");
-            }
-            System.out.println();
-        }
     }
 
     public static int task4283(String k, String raw) {

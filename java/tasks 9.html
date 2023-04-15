@@ -1,0 +1,2439 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>9 Базовые операции с массивами</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values {
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.check_values tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+	.hide_on_print .check_values, .hide_on_print .check_single{
+		display:none;
+	}
+	.hide_on_print img{
+		display:none;
+	}
+	.empty_on_print td{
+		color:transparent;
+	}
+	.empty_on_print img{
+		visibility:hidden;
+	}
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Базовые операции с массивами</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4425' class='example'>1*</a><li><a href='#task7834'>2</a><li><a href='#task5873'>3</a><li><a href='#task3908'>4</a><li><a href='#task1433'>5</a><li><a href='#task3791'>6</a><li><a href='#task1058'>7</a><li><a href='#task6589'>8</a><li><a href='#task5683' class='example'>9*</a><li><a href='#task8557'>10</a><li><a href='#task1223'>11</a><li><a href='#task8311'>12</a><li><a href='#task6563'>13</a></ul><ul><li><a href='#task9923' class='example'>14*</a><li><a href='#task1331'>15</a><li><a href='#task3845'>16</a><li><a href='#task1998'>17</a><li><a href='#task8775'>18</a><li><a href='#task5510'>19</a><li><a href='#task3134' class='example'>20*</a><li><a href='#task9711'>21</a><li><a href='#task7085'>22</a><li><a href='#task8820'>23</a><li><a href='#task3333'>24</a><li><a href='#task8471'>25</a></ul></div><div id='task4425' class='task_block'>
+<div class='task_id'>4425</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число A и данные - символы, разделенные тире '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону
+</div>
+<div class='check_single preformatted'>В массиве длиной $arrLength
+на индексе $A
+находится элемент со значением '$value'</div>
+<div class='task_desc'>
+Если в данных два разделителя подряд, то возникает элемент содержащий пустую строку.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+A
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+qw-er-ty-ui
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>В массиве длиной 4
+на индексе 0
+находится элемент со значением 'qw'
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+qw-er-ty-ui
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>В массиве длиной 4
+на индексе 3
+находится элемент со значением 'ui'
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q-w-e-r-t-y-u-i-o-p
+</td>
+<td>
+9
+</td>
+<td class='preformatted'>В массиве длиной 10
+на индексе 9
+находится элемент со значением 'p'
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+qwer-tyui
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+qw-er-ty-ui
+</td>
+<td>
+-1
+</td>
+<td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a--a
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>В массиве длиной 3
+на индексе 1
+находится элемент со значением ''
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+b-b-    -b
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>В массиве длиной 4
+на индексе 2
+находится элемент со значением '    '
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+</td>
+<td>
+8
+</td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task7834' class='task_block'>
+<div class='task_id'>7834</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные символом ","(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение "нет элемента на индексе X".
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (arr)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>a,s,d,f,g,h,j,k</td>
+<td class='preformatted'>В массиве длиной 8
+Значение элемента на индексе 0 это a
+Значение элемента на индексе 2 это d
+Значение элемента на индексе 3 это f
+Значение элемента на индексе 5 это h
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q,w,e,r,t,y,u</td>
+<td class='preformatted'>В массиве длиной 7
+Значение элемента на индексе 0 это q
+Значение элемента на индексе 2 это e
+Значение элемента на индексе 3 это r
+Значение элемента на индексе 5 это y
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q,w,e,r,t,y</td>
+<td class='preformatted'>В массиве длиной 6
+Значение элемента на индексе 0 это q
+Значение элемента на индексе 2 это e
+Значение элемента на индексе 3 это r
+Значение элемента на индексе 5 это y
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qa,ws,ed,rf,tg</td>
+<td class='preformatted'>В массиве длиной 5
+Значение элемента на индексе 0 это qa
+Значение элемента на индексе 2 это ed
+Значение элемента на индексе 3 это rf
+Нет элемента на индексе 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>za,xs,cd,vf</td>
+<td class='preformatted'>В массиве длиной 4
+Значение элемента на индексе 0 это za
+Значение элемента на индексе 2 это cd
+Значение элемента на индексе 3 это vf
+Нет элемента на индексе 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qaz,wsx,edc</td>
+<td class='preformatted'>В массиве длиной 3
+Значение элемента на индексе 0 это qaz
+Значение элемента на индексе 2 это edc
+Нет элемента на индексе 3
+Нет элемента на индексе 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qwerty,asdfg</td>
+<td class='preformatted'>В массиве длиной 2
+Значение элемента на индексе 0 это qwerty
+Нет элемента на индексе 2
+Нет элемента на индексе 3
+Нет элемента на индексе 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>zxcvbnm</td>
+<td class='preformatted'>В массиве длиной 1
+Значение элемента на индексе 0 это zxcvbnm
+Нет элемента на индексе 2
+Нет элемента на индексе 3
+Нет элемента на индексе 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task5873' class='task_block'>
+<div class='task_id'>5873</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число T и данные - символы, разделенные пробелами.
+Вывести на экран элемент на индексе T.Если возможно, то вывести на экран следующий и предыдущий элементы.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+T
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+as df gh jk
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>В массиве длиной 4
+Элемент на индексе 1 содержит значение df
+Значение предыдущего элемента as
+Значение следующего элемента gh
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j k
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>В массиве длиной 8
+Элемент на индексе 3 содержит значение f
+Значение предыдущего элемента d
+Значение следующего элемента g
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+asdf ghjk
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>В массиве длиной 2
+Элемент на индексе 0 содержит значение asdf
+Предыдущий элемент не существует
+Значение следующего элемента ghjk
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+as df gh jk
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>В массиве длиной 4
+Элемент на индексе 0 содержит значение as
+Предыдущий элемент не существует
+Значение следующего элемента df
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j k
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>В массиве длиной 8
+Элемент на индексе 0 содержит значение a
+Предыдущий элемент не существует
+Значение следующего элемента s
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j k
+</td>
+<td>
+7
+</td>
+<td class='preformatted'>В массиве длиной 8
+Элемент на индексе 7 содержит значение k
+Значение предыдущего элемента j
+Следующий элемент не существует
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+as df gh jk
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>В массиве длиной 4
+Элемент на индексе 3 содержит значение jk
+Значение предыдущего элемента gh
+Следующий элемент не существует
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+asdf ghjk
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>В массиве длиной 2
+Элемент на индексе 1 содержит значение ghjk
+Значение предыдущего элемента asdf
+Следующий элемент не существует
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+single
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>В массиве длиной 1
+Элемент на индексе 0 содержит значение single
+Предыдущий элемент не существует
+Следующий элемент не существует
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+single
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+as df gh jk
+</td>
+<td>
+4
+</td>
+<td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+as df gh jk
+</td>
+<td>
+-1
+</td>
+<td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task3908' class='task_block'>
+<div class='task_id'>3908</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные символом "#". Вывести на экран третий с конца элемент.
+</div>
+<div class='check_single preformatted'>В массиве длиной $length
+Индекс третьего элемента с конца $index
+Значение этого элемента $value</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (arr)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>qa#ws#ed#rf</td>
+<td class='preformatted'>В массиве длиной 4
+Индекс третьего элемента с конца 1
+Значение этого элемента ws
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qaz#wsx#edc#rfv</td>
+<td class='preformatted'>В массиве длиной 4
+Индекс третьего элемента с конца 1
+Значение этого элемента wsx
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q#w#e</td>
+<td class='preformatted'>В массиве длиной 3
+Индекс третьего элемента с конца 0
+Значение этого элемента q
+</td>
+</tr>
+<tr>
+<td></td>
+<td>one#two</td>
+<td class='preformatted'>Массив слишком маленький
+</td>
+</tr>
+<tr>
+<td></td>
+<td>single</td>
+<td class='preformatted'>Массив слишком маленький
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task1433' class='task_block'>
+<div class='task_id'>1433</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные символом ";"(точка с запятой). Вывести на экран индекс середины массива и элемент по этому индексу. Для четного количества элементов взять индекс ближе к началу массива. Для определения середины, вычтите 1 из длины, а затем разделите полученное значение на 2. Округлите итоговое значение вниз.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные ()</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>q;w;e</td>
+<td class='preformatted'>Длина массива: 3 Индекс: 1, элемент: w</td>
+</tr>
+<tr>
+<td></td>
+<td>q;w;e;r</td>
+<td class='preformatted'>Длина массива: 4 Индекс: 1, элемент: w</td>
+</tr>
+<tr>
+<td></td>
+<td>q;w;e;r;t;y;u;i;o</td>
+<td class='preformatted'>Длина массива: 9 Индекс: 4, элемент: t</td>
+</tr>
+<tr>
+<td></td>
+<td>q;w;e;r;t;y;u;i;o;p</td>
+<td class='preformatted'>Длина массива: 10 Индекс: 4, элемент: t</td>
+</tr>
+<tr>
+<td></td>
+<td>q</td>
+<td class='preformatted'>Длина массива: 1 Индекс: 0, элемент: q</td>
+</tr>
+</table>
+</div>
+<div id='task3791' class='task_block'>
+<div class='task_id'>3791</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные пробелами. Если массив длиннее 4 элементов или короче 4 элементов, вывести сообщение об ошибке. Если в массиве совпадает первый и второй элемент, написать "Первая пара". Если в массиве совпадает второй и третий элемент, написать "Середина". Если в массиве совпадает третий и четвертый элемент, написать "Третья пара". Если в массиве совпадает первый и четвертый элемент, написать "Границы". Если проходит несколько проверок, писать несколько сообщений. Порядок сообщений может отличаться.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (array)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>a a a a</td>
+<td class='preformatted'>Первая пара
+Середина
+Третья пара
+Границы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>a a b c</td>
+<td class='preformatted'>Первая пара
+</td>
+</tr>
+<tr>
+<td></td>
+<td>a b b c</td>
+<td class='preformatted'>Середина
+</td>
+</tr>
+<tr>
+<td></td>
+<td>z x c c</td>
+<td class='preformatted'>Третья пара
+</td>
+</tr>
+<tr>
+<td></td>
+<td>z x c z</td>
+<td class='preformatted'>Границы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q q w w</td>
+<td class='preformatted'>Первая пара
+Третья пара
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q q w q</td>
+<td class='preformatted'>Первая пара
+Границы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>t y y y</td>
+<td class='preformatted'>Середина
+Третья пара
+</td>
+</tr>
+<tr>
+<td></td>
+<td>t y t t</td>
+<td class='preformatted'>Третья пара
+Границы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>n n m n</td>
+<td class='preformatted'>Первая пара
+Границы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>n n n m</td>
+<td class='preformatted'>Первая пара
+Середина
+</td>
+</tr>
+<tr>
+<td></td>
+<td>a a a a a</td>
+<td class='preformatted'>В исходных данных должно быть ровно 4 элемента. Обнаружено 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>a a a</td>
+<td class='preformatted'>В исходных данных должно быть ровно 4 элемента. Обнаружено 3
+</td>
+</tr>
+<tr>
+<td></td>
+<td>p o p o</td>
+<td class='preformatted'></td>
+</tr>
+<tr>
+<td></td>
+<td>a s d f</td>
+<td class='preformatted'></td>
+</tr>
+</table>
+</div>
+<div id='task1058' class='task_block'>
+<div class='task_id'>1058</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив из 4 значений, разделенных символов ','. Числа обозначают координаты двух точек A и B. Первое число это x точки A. Второе - y точки A. Третье x точки B. Четвертое y точки B. Вычислить расстояние между точками по формуле <br/>
+    <formula>
+      <sqrt><val>
+        (Bx - Ax)<sup>2</sup> + (By - Ay)<sup>2</sup>
+      </val></sqrt>
+    </formula>
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (coordinates)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>1,1,3,4</td>
+<td class='preformatted'>Координаты точки A(1,1)
+Координаты точки B(3,4)
+Расстояние между точками равно 3,6056</td>
+</tr>
+<tr>
+<td></td>
+<td>-2,4,8,-10</td>
+<td class='preformatted'>Координаты точки A(-2,4)
+Координаты точки B(8,-10)
+Расстояние между точками равно 17,2047</td>
+</tr>
+<tr>
+<td></td>
+<td>0,0,-5,-7</td>
+<td class='preformatted'>Координаты точки A(0,0)
+Координаты точки B(-5,-7)
+Расстояние между точками равно 8,6023</td>
+</tr>
+<tr>
+<td></td>
+<td>0,0,0,0</td>
+<td class='preformatted'>Координаты точки A(0,0)
+Координаты точки B(0,0)
+Расстояние между точками равно 0,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>-1,-3,2,9</td>
+<td class='preformatted'>Координаты точки A(-1,-3)
+Координаты точки B(2,9)
+Расстояние между точками равно 12,3693</td>
+</tr>
+</table>
+</div>
+<div id='task6589' class='task_block'>
+<div class='task_id'>6589</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив чисел, разделенных символом ','. Числа объединены парами и описывают два интервала "зеленый" и "красный". Интервал считается корректным если для него выполняется условие A&lt;B. Нужно определить: пересекаются ли данные два интервала чисел. Если не пересекаются, то написать объяснение.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>2,3,5,7</td>
+<td class='preformatted'>Красный интервал начинается с 2 и заканчивается 3
+Зеленый интервал начинается с 5 и заканчивается 7
+Интервалы не пересекаются. Правый край красного левее левого края зеленого.
+</td>
+</tr>
+<tr>
+<td></td>
+<td>11,17,13,19</td>
+<td class='preformatted'>Красный интервал начинается с 11 и заканчивается 17
+Зеленый интервал начинается с 13 и заканчивается 19
+Интервалы пересекаются
+</td>
+</tr>
+<tr>
+<td></td>
+<td>23,37,29,31</td>
+<td class='preformatted'>Красный интервал начинается с 23 и заканчивается 37
+Зеленый интервал начинается с 29 и заканчивается 31
+Интервалы пересекаются
+</td>
+</tr>
+<tr>
+<td></td>
+<td>43,53,41,47</td>
+<td class='preformatted'>Красный интервал начинается с 43 и заканчивается 53
+Зеленый интервал начинается с 41 и заканчивается 47
+Интервалы пересекаются
+</td>
+</tr>
+<tr>
+<td></td>
+<td>5,15,0,30</td>
+<td class='preformatted'>Красный интервал начинается с 5 и заканчивается 15
+Зеленый интервал начинается с 0 и заканчивается 30
+Интервалы пересекаются
+</td>
+</tr>
+<tr>
+<td></td>
+<td>67,71,59,61</td>
+<td class='preformatted'>Красный интервал начинается с 67 и заканчивается 71
+Зеленый интервал начинается с 59 и заканчивается 61
+Интервалы не пересекаются. Правый край зеленого левее левого края красного
+</td>
+</tr>
+<tr>
+<td></td>
+<td>79,73,83,89</td>
+<td class='preformatted'>Красный интервал начинается с 79 и заканчивается 73
+Некорректный интервал. Левая граница должна быть меньше правой.
+</td>
+</tr>
+<tr>
+<td></td>
+<td>97,101,107,103</td>
+<td class='preformatted'>Красный интервал начинается с 97 и заканчивается 101
+Зеленый интервал начинается с 107 и заканчивается 103
+Некорректный интервал. Левая граница должна быть меньше правой.
+</td>
+</tr>
+</table>
+</div>
+<div id='task5683' class='task_block'>
+<div class='task_id'>5683</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные пробелами. Вывести элементы массива на экран в столбик и пронумеровать их, начиная с нуля.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (str)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty</td>
+<td class='preformatted'>qw 0
+er 1
+ty 2
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty ui op</td>
+<td class='preformatted'>qw 0
+er 1
+ty 2
+ui 3
+op 4
+</td>
+</tr>
+<tr>
+<td></td>
+<td>asd fgh jkl</td>
+<td class='preformatted'>asd 0
+fgh 1
+jkl 2
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q w e r a s d f z x c v</td>
+<td class='preformatted'>q 0
+w 1
+e 2
+r 3
+a 4
+s 5
+d 6
+f 7
+z 8
+x 9
+c 10
+v 11
+</td>
+</tr>
+</table>
+</div>
+<div id='task8557' class='task_block'>
+<div class='task_id'>8557</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - названия глав, разделенные запятыми. Вывести содержание. Каждый пункт оформить по шаблону "Глава $i $name", где i - номер главы, name - название соответствующей главы. Нумерация глав должна начинаться с 1.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>Заполнение шаблона текстом,Организация вычислений,Проверка исходных данных,Взаимоисключающие случаи,Работа с интервалами значений,Реорганизация повторяющихся действий,Вложенные циклы,Массивы,Вычисление агрегатов,Строки,Обработка неизвестного объема данных,Запись в файлы,Методы,Исключения,Классы и объекты,Коллекции</td>
+<td class='preformatted'>Глава 1 Заполнение шаблона текстом
+Глава 2 Организация вычислений
+Глава 3 Проверка исходных данных
+Глава 4 Взаимоисключающие случаи
+Глава 5 Работа с интервалами значений
+Глава 6 Реорганизация повторяющихся действий
+Глава 7 Вложенные циклы
+Глава 8 Массивы
+Глава 9 Вычисление агрегатов
+Глава 10 Строки
+Глава 11 Обработка неизвестного объема данных
+Глава 12 Запись в файлы
+Глава 13 Методы
+Глава 14 Исключения
+Глава 15 Классы и объекты
+Глава 16 Коллекции
+</td>
+</tr>
+<tr>
+<td></td>
+<td>Печать текста на экране,Диктант по присваиванию,Получение строк от пользователя,Оформление текста по шаблону,Сокращение повторений в тексте</td>
+<td class='preformatted'>Глава 1 Печать текста на экране
+Глава 2 Диктант по присваиванию
+Глава 3 Получение строк от пользователя
+Глава 4 Оформление текста по шаблону
+Глава 5 Сокращение повторений в тексте
+</td>
+</tr>
+<tr>
+<td></td>
+<td>введение,завязка,кульминация,развязка,заключение</td>
+<td class='preformatted'>Глава 1 введение
+Глава 2 завязка
+Глава 3 кульминация
+Глава 4 развязка
+Глава 5 заключение
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'></td>
+</tr>
+</table>
+</div>
+<div id="link_c3_p12.8" class="task_block">
+	<div class="check_single">Несколько советов по оформлению массивов можно найти в главе 12.8 "Массивы" части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=322" target="_blank">(открыть в новой вкладке)</a>.
+	</div>
+</div><div id='task1223' class='task_block'>
+<div class='task_id'>1223</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные символом "," (запятая). Вывести данные в обратном порядке в строчку без запятых.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>q,w,e,r,t,y</td>
+<td class='preformatted'>y t r e w q </td>
+</tr>
+<tr>
+<td></td>
+<td>q,w,e,r,t,y,q,w,e,r</td>
+<td class='preformatted'>r e w q y t r e w q </td>
+</tr>
+<tr>
+<td></td>
+<td>as,df,gh,jk</td>
+<td class='preformatted'>jk gh df as </td>
+</tr>
+<tr>
+<td></td>
+<td>zxcv</td>
+<td class='preformatted'>zxcv </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'></td>
+</tr>
+</table>
+</div>
+<div id='task8311' class='task_block'>
+<div class='task_id'>8311</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит два числа B и E и данные - символы, разделенные пробелами. Значение B может быть как меньше, так и больше E. Нужно вывести элементы, у которых индекс находится между B и E включительно.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='3'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+B
+</th>
+<th>
+E
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b
+</td>
+<td>
+0
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>z x c v </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b
+</td>
+<td>
+1
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>x c v </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>c v </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+3
+</td>
+<td>
+10
+</td>
+<td class='preformatted'>v b a s d f g h </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+2
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>c </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+8
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>c v b a s d f </td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+11
+</td>
+<td>
+8
+</td>
+<td class='preformatted'>Число B должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+-1
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Число B должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+z x c v b a s d f g h
+</td>
+<td>
+8
+</td>
+<td>
+50
+</td>
+<td class='preformatted'>Число E должно быть в интервале [0, размер массива)
+</td>
+</tr>
+</table>
+</div>
+<div id='task6563' class='task_block'>
+<div class='task_id'>6563</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - фрагменты текста, разделенные пробелами. Вывести данные на экран в три столбика. Второй столбик содержит по одному введенному элементу в строке. Первый столбик - предыдущий элемент. Третий столбик - следующий элемент. Если предыдущий отсутствует, нужно написать BEGIN. Если следующий отсутствует - END.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty</td>
+<td class='preformatted'>BEGIN qw er
+qw er ty
+er ty END
+</td>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty ui op</td>
+<td class='preformatted'>BEGIN qw er
+qw er ty
+er ty ui
+ty ui op
+ui op END
+</td>
+</tr>
+<tr>
+<td></td>
+<td>asd fgh jkl</td>
+<td class='preformatted'>BEGIN asd fgh
+asd fgh jkl
+fgh jkl END
+</td>
+</tr>
+<tr>
+<td></td>
+<td>single</td>
+<td class='preformatted'>BEGIN single END
+</td>
+</tr>
+<tr>
+<td></td>
+<td>first second</td>
+<td class='preformatted'>BEGIN first second
+first second END
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>Нет данных
+</td>
+</tr>
+<tr>
+<td></td>
+<td>q w e r a s d f z x c v</td>
+<td class='preformatted'>BEGIN q w
+q w e
+w e r
+e r a
+r a s
+a s d
+s d f
+d f z
+f z x
+z x c
+x c v
+c v END
+</td>
+</tr>
+</table>
+</div>
+<div id='task9923' class='task_block'>
+<div class='task_id'>9923</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные пробелом. Скопировать последний элемент в начало массива. Вывести все элементы массива по порядку.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty</td>
+<td class='preformatted'>Индекс последнего элемента 2
+Значение последнего элемента ty
+Вместо qw пишем ty
+Элементы массива:
+ty er ty </td>
+</tr>
+<tr>
+<td></td>
+<td>qwe asd zxc</td>
+<td class='preformatted'>Индекс последнего элемента 2
+Значение последнего элемента zxc
+Вместо qwe пишем zxc
+Элементы массива:
+zxc asd zxc </td>
+</tr>
+<tr>
+<td></td>
+<td>a s d f g h</td>
+<td class='preformatted'>Индекс последнего элемента 5
+Значение последнего элемента h
+Вместо a пишем h
+Элементы массива:
+h s d f g h </td>
+</tr>
+<tr>
+<td></td>
+<td>single</td>
+<td class='preformatted'>Индекс последнего элемента 0
+Значение последнего элемента single
+Вместо single пишем single
+Элементы массива:
+single </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task1331' class='task_block'>
+<div class='task_id'>1331</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - строки, разделенные запятой, число - индекс массива и еще одну строку. Нужно записать полученную строку в массив по указанному индексу и вывести все элементы массива по возрастанию индекса. Эту задачу можно решить с помощью условия, вложенного в цикл вывода. Но будет полезнее решить именно с помощью записи значения в массив данных. Цикл вывода элементов должен быть простым: все подряд элементы начиная с 0 и до конца массива.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='3'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+index
+</th>
+<th>
+value
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+3
+</td>
+<td>
+third
+</td>
+<td class='preformatted'>q w e third t y </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+0
+</td>
+<td>
+initial
+</td>
+<td class='preformatted'>initial w e r t y </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+5
+</td>
+<td>
+fifth
+</td>
+<td class='preformatted'>q w e r t fifth </td>
+</tr>
+<tr>
+<td></td>
+<td>
+as,df,gh,jk
+</td>
+<td>
+0
+</td>
+<td>
+initial
+</td>
+<td class='preformatted'>initial df gh jk </td>
+</tr>
+<tr>
+<td></td>
+<td>
+qwe,asd,zxc
+</td>
+<td>
+2
+</td>
+<td>
+second
+</td>
+<td class='preformatted'>qwe asd second </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+6
+</td>
+<td>
+large
+</td>
+<td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+-10
+</td>
+<td>
+negative
+</td>
+<td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q,w,e,r,t,y
+</td>
+<td>
+100
+</td>
+<td>
+large
+</td>
+<td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+</td>
+</tr>
+</table>
+</div>
+<div id='task3845' class='task_block'>
+<div class='task_id'>3845</div>
+<h3>Задача</h3>
+<h4>Смоделируйте работу стека</h4>
+<div class='task_desc'>
+Пользователь вводит слова 'push' и 'pop'. Если пользователь ввел 'push', то дополнительно вводит еще одно значение. Это значение нужно записать в массив. Самое первое значение записывается на индекс 0. С каждым введенным элементом, индекс записи увеличивается на 1. Если пользователь ввел 'pop', то индекс записи уменьшается на 1. При попытке записи элемента на индекс 5, напишите 'ПЕРЕПОЛНЕНИЕ' и завершите работу программы. После каждого действия нужно вывести все элементы массива в строчку.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>push<br>q<br>push<br>w<br>pop<br>pop<br>push<br>e<br>push<br>r<br>push<br>t<br>pop<br>pop<br>pop</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением q
+Индекс записи: 1
+q 
+На индекс 1 был записан элемент со значением w
+Индекс записи: 2
+q w 
+Извлечен элемент со значением w на индексе 1
+Индекс записи: 1
+q 
+Извлечен элемент со значением q на индексе 0
+Индекс записи: 0
+
+На индекс 0 был записан элемент со значением e
+Индекс записи: 1
+e 
+На индекс 1 был записан элемент со значением r
+Индекс записи: 2
+e r 
+На индекс 2 был записан элемент со значением t
+Индекс записи: 3
+e r t 
+Извлечен элемент со значением t на индексе 2
+Индекс записи: 2
+e r 
+Извлечен элемент со значением r на индексе 1
+Индекс записи: 1
+e 
+Извлечен элемент со значением e на индексе 0
+Индекс записи: 0
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>push<br>a<br>push<br>s<br>pop<br>push<br>d<br>push<br>f</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением a
+Индекс записи: 1
+a 
+На индекс 1 был записан элемент со значением s
+Индекс записи: 2
+a s 
+Извлечен элемент со значением s на индексе 1
+Индекс записи: 1
+a 
+На индекс 1 был записан элемент со значением d
+Индекс записи: 2
+a d 
+На индекс 2 был записан элемент со значением f
+Индекс записи: 3
+a d f 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>push<br>qa<br>push<br>ws<br>push<br>ed<br>push<br>rf<br>push<br>tg<br>pop<br>push<br>yh<br>pop<br>push<br>uj</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением qa
+Индекс записи: 1
+qa 
+На индекс 1 был записан элемент со значением ws
+Индекс записи: 2
+qa ws 
+На индекс 2 был записан элемент со значением ed
+Индекс записи: 3
+qa ws ed 
+На индекс 3 был записан элемент со значением rf
+Индекс записи: 4
+qa ws ed rf 
+На индекс 4 был записан элемент со значением tg
+Индекс записи: 5
+qa ws ed rf tg 
+Извлечен элемент со значением tg на индексе 4
+Индекс записи: 4
+qa ws ed rf 
+На индекс 4 был записан элемент со значением yh
+Индекс записи: 5
+qa ws ed rf yh 
+Извлечен элемент со значением yh на индексе 4
+Индекс записи: 4
+qa ws ed rf 
+На индекс 4 был записан элемент со значением uj
+Индекс записи: 5
+qa ws ed rf uj 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>push<br>q<br>push<br>w<br>push<br>e<br>push<br>r<br>push<br>t<br>push<br>y</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением q
+Индекс записи: 1
+q 
+На индекс 1 был записан элемент со значением w
+Индекс записи: 2
+q w 
+На индекс 2 был записан элемент со значением e
+Индекс записи: 3
+q w e 
+На индекс 3 был записан элемент со значением r
+Индекс записи: 4
+q w e r 
+На индекс 4 был записан элемент со значением t
+Индекс записи: 5
+q w e r t 
+ПЕРЕПОЛНЕНИЕ
+</td>
+</tr>
+<tr>
+<td></td>
+<td>push<br>q<br>push<br>w<br>push<br>e<br>push<br>r<br>push<br>t<br>pop<br>push<br>y<br>push<br>u</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением q
+Индекс записи: 1
+q 
+На индекс 1 был записан элемент со значением w
+Индекс записи: 2
+q w 
+На индекс 2 был записан элемент со значением e
+Индекс записи: 3
+q w e 
+На индекс 3 был записан элемент со значением r
+Индекс записи: 4
+q w e r 
+На индекс 4 был записан элемент со значением t
+Индекс записи: 5
+q w e r t 
+Извлечен элемент со значением t на индексе 4
+Индекс записи: 4
+q w e r 
+На индекс 4 был записан элемент со значением y
+Индекс записи: 5
+q w e r y 
+ПЕРЕПОЛНЕНИЕ
+</td>
+</tr>
+<tr>
+<td></td>
+<td>pop</td>
+<td class='preformatted'>Массив пуст
+</td>
+</tr>
+<tr>
+<td></td>
+<td>push<br>z<br>pop<br>pop</td>
+<td class='preformatted'>На индекс 0 был записан элемент со значением z
+Индекс записи: 1
+z 
+Извлечен элемент со значением z на индексе 0
+Индекс записи: 0
+
+Массив пуст
+</td>
+</tr>
+</table>
+</div>
+<div id='task1998' class='task_block'>
+<div class='task_id'>1998</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные символом " ", одну отдельную строку append и число a. Нужно вставить указанную строку в массив, заменив существующее содержимое. Если число a больше размера массива, то нужно создать новый массив. Размер нового массива должен быть такой, чтобы число a было последним индексом. Содержимое старого массива нужно переписать на те же позиции. Все недостающие элементы заполнить строкой "empty". Вывести элементы полученного массива по возрастанию индекса.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='3'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+arr
+</th>
+<th>
+append
+</th>
+<th>
+a
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+qa ws ed rf
+</td>
+<td>
+initial
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>initial ws ed rf </td>
+</tr>
+<tr>
+<td></td>
+<td>
+qa ws ed rf
+</td>
+<td>
+third
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>qa ws third rf </td>
+</tr>
+<tr>
+<td></td>
+<td>
+qa ws ed rf
+</td>
+<td>
+fourth
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>qa ws ed fourth </td>
+</tr>
+<tr>
+<td></td>
+<td>
+qa ws ed rf
+</td>
+<td>
+fifth
+</td>
+<td>
+4
+</td>
+<td class='preformatted'>qa ws ed rf fifth </td>
+</tr>
+<tr>
+<td></td>
+<td>
+qa ws ed rf
+</td>
+<td>
+sixth
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>qa ws ed rf empty sixth </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j
+</td>
+<td>
+###
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>a s d ### g h j </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j
+</td>
+<td>
+###
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>### s d f g h j </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j
+</td>
+<td>
+###
+</td>
+<td>
+6
+</td>
+<td class='preformatted'>a s d f g h ### </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f g h j
+</td>
+<td>
+###
+</td>
+<td>
+15
+</td>
+<td class='preformatted'>a s d f g h j empty empty empty empty empty empty empty empty ### </td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+</td>
+<td>
+irrelevant
+</td>
+<td>
+100
+</td>
+<td class='preformatted'>Исходная строка пуста
+</td>
+</tr>
+</table>
+</div>
+<div id='task8775' class='task_block'>
+<div class='task_id'>8775</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Переставьте команды так, чтобы при запуске на экран было выведено слово "успех". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.
+</div>
+<div class='check_single preformatted'>String[] arr = {"ус", "пех", "резерв", "вал", "про"};
+arr[0] = arr[4];
+arr[2] = arr[0];
+arr[1] = arr[3];
+arr[3] = arr[1];
+System.out.print(arr[2]);
+System.out.println(arr[3]);</div>
+</div>
+<div id='task5510' class='task_block'>
+<div class='task_id'>5510</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Переставьте команды так, чтобы при запуске на экран было выведено слово "успех". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.
+</div>
+<div class='check_single preformatted'>String[] arr = {"ус", "пех", "про", "вал", "резерв"};
+int i = 0;
+arr[i] = arr[0];
+arr[i] = arr[1];
+i = i + 1;
+i = i + 1;
+i = i + 1;
+arr[4] = arr[i];
+arr[3] = arr[4];
+System.out.print(arr[2]);
+System.out.println(arr[3]);</div>
+</div>
+<div id='task3134' class='task_block'>
+<div class='task_id'>3134</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дан известный массив, содержащий элементы: a, s, d, f, g, h. Пользователь вводит два числа P, Q и данные - символы, разделенные пробелами. Нужно переставить местами значения элементов на индексах P и Q.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+P
+</th>
+<th>
+Q
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+0
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>Меняю a на f
+f s d a g h </td>
+</tr>
+<tr>
+<td></td>
+<td>
+2
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Меняю d на h
+a s h f g d </td>
+</tr>
+<tr>
+<td></td>
+<td>
+4
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>Меняю g на d
+a s g f d h </td>
+</tr>
+<tr>
+<td></td>
+<td>
+-1
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Число P должно быть в интервале [0, размер массива)</td>
+</tr>
+<tr>
+<td></td>
+<td>
+2
+</td>
+<td>
+17
+</td>
+<td class='preformatted'>Число Q должно быть в интервале [0, размер массива)</td>
+</tr>
+<tr>
+<td></td>
+<td>
+19
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>Число P должно быть в интервале [0, размер массива)</td>
+</tr>
+<tr>
+<td></td>
+<td>
+1
+</td>
+<td>
+-5
+</td>
+<td class='preformatted'>Число Q должно быть в интервале [0, размер массива)</td>
+</tr>
+</table>
+</div>
+<div id='task9711' class='task_block'>
+<div class='task_id'>9711</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные пробелами. Сдвинуть все элементы массива на 1 позицию вправо. Последний элемент поставить в начало. Обратите внимание, что в этой задаче нужно изменить содержимое массива, а не просто вывести в нужном порядке. 
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>first second</td>
+<td class='preformatted'>second first </td>
+</tr>
+<tr>
+<td></td>
+<td>q w e r t y</td>
+<td class='preformatted'>y q w e r t </td>
+</tr>
+<tr>
+<td></td>
+<td>a s d f g h j k l m</td>
+<td class='preformatted'>m a s d f g h j k l </td>
+</tr>
+<tr>
+<td></td>
+<td>zx cv bn m</td>
+<td class='preformatted'>m zx cv bn </td>
+</tr>
+<tr>
+<td></td>
+<td>single</td>
+<td class='preformatted'>single </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'></td>
+</tr>
+</table>
+</div>
+<div id='task7085' class='task_block'>
+<div class='task_id'>7085</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число S и данные - символы, разделенные пробелами. Сдвинуть все элементы массива на 1 позицию вправо S раз.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+S
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>y q w e r t 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>y q w e r t 
+t y q w e r 
+r t y q w e 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>f a s d 
+d f a s 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>y q w e r t 
+t y q w e r 
+r t y q w e 
+e r t y q w 
+w e r t y q 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>f a s d 
+d f a s 
+s d f a 
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+6
+</td>
+<td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+8
+</td>
+<td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-2
+</td>
+<td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+</td>
+</tr>
+</table>
+</div>
+<div id='task8820' class='task_block'>
+<div class='task_id'>8820</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - символы, разделенные пробелами. Инвертировать массив - переставить элементы массива в обратном порядке. Вывод в этой задаче практически не отличается от вывода задачи &lt;a href="#task1223" target="_blank"&gt;ЛР#1223(открыть в новой вкладке)&lt;/a&gt; но вам будет полезнее решить именно с перестановкой элементов в массиве.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>q w e r t y</td>
+<td class='preformatted'>y t r e w q </td>
+</tr>
+<tr>
+<td></td>
+<td>as df gh</td>
+<td class='preformatted'>gh df as </td>
+</tr>
+<tr>
+<td></td>
+<td>q w e r t y a s d f g</td>
+<td class='preformatted'>g f d s a y t r e w q </td>
+</tr>
+</table>
+</div>
+<div id='task3333' class='task_block'>
+<div class='task_id'>3333</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число S и данные - символы, разделенные пробелами. Сдвинуть все элементы массива на S позиций вправо.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+data
+</th>
+<th>
+S
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 1
+y q w e r t </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 3
+r t y q w e </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+2
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 2
+d f a s </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+6
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 6
+q w e r t y </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+8
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 2
+t y q w e r </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 1
+f a s d </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+99
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 3
+r t y q w e </td>
+</tr>
+<tr>
+<td></td>
+<td>
+a s d f
+</td>
+<td>
+10
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 2
+d f a s </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 0
+q w e r t y </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-1
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 5
+w e r t y q </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-2
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 4
+e r t y q w </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-3
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 3
+r t y q w e </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-9
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 3
+r t y q w e </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-6
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 0
+q w e r t y </td>
+</tr>
+<tr>
+<td></td>
+<td>
+q w e r t y
+</td>
+<td>
+-7
+</td>
+<td class='preformatted'>Фактически нужно сдвинуть на 5
+w e r t y q </td>
+</tr>
+</table>
+</div>
+<div id='task8471' class='task_block'>
+<div class='task_id'>8471</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив фрагментов текста. Элементы массива на нечетных индексах поставить в начало, а на четных - вслед за ними. Элементы на четных индексах должны следовать друг за другом так же как и в исходном массиве. Элементы на нечетных индексах - тоже.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>qw er ty ui op</td>
+<td class='preformatted'>Количество элементов на нечетных индексах: 2
+Элементы на четных индексах:
+qw ty op 
+Элементы на нечетных индексах
+er ui 
+Результат:
+er ui qw ty op
+</td>
+</tr>
+<tr>
+<td></td>
+<td>a sd fgh jkl</td>
+<td class='preformatted'>Количество элементов на нечетных индексах: 2
+Элементы на четных индексах:
+a fgh 
+Элементы на нечетных индексах
+sd jkl 
+Результат:
+sd jkl a fgh
+</td>
+</tr>
+<tr>
+<td></td>
+<td>za qws xcde r fv tgb yhnu jm</td>
+<td class='preformatted'>Количество элементов на нечетных индексах: 4
+Элементы на четных индексах:
+za xcde fv yhnu 
+Элементы на нечетных индексах
+qws r tgb jm 
+Результат:
+qws r tgb jm za xcde fv yhnu
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>отсутствуют исходные данные
+</td>
+</tr>
+<tr>
+<td></td>
+<td>p o i u a s d f</td>
+<td class='preformatted'>Количество элементов на нечетных индексах: 4
+Элементы на четных индексах:
+p i a d 
+Элементы на нечетных индексах
+o u s f 
+Результат:
+o u s f p i a d
+</td>
+</tr>
+</table>
+</div>
+Версия 4d48635. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

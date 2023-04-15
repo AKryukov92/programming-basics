@@ -1,0 +1,1929 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>3 Проверка исходных данных</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values {
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.check_values tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+	.hide_on_print .check_values, .hide_on_print .check_single{
+		display:none;
+	}
+	.hide_on_print img{
+		display:none;
+	}
+	.empty_on_print td{
+		color:transparent;
+	}
+	.empty_on_print img{
+		visibility:hidden;
+	}
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Проверка исходных данных</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task6522'>3</a><li><a href='#task7619'>4</a><li><a href='#task8833' class='example'>5*</a><li><a href='#task9020'>6</a><li><a href='#task1934'>7</a><li><a href='#task3943'>8</a><li><a href='#task6924'>9</a><li><a href='#task2801' class='example'>10*</a><li><a href='#task2361'>11</a><li><a href='#task5063'>12</a><li><a href='#task5870'>13</a></ul><ul><li><a href='#task3490'>14</a><li><a href='#task9622'>15</a><li><a href='#task7799'>16</a><li><a href='#task9354'>17</a><li><a href='#task3591'>18</a><li><a href='#task9130'>19</a><li><a href='#task5895'>20</a><li><a href='#task2461'>21</a><li><a href='#task2624'>22</a><li><a href='#task5871'>23</a></ul></div><div id='task9298' class='task_block'>
+<div class='task_desc'>
+Основное внимание в этой лабораторной уделено одной из техник защитного программирования - выводу сообщений об ошибке. Более подробно о них можно почитать в главе 8 части II книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=205" target="_blank">(открыть в новой вкладке)</a>.
+</div>
+<div class='task_id'>9298</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>area=6*edge<sup>2</sup></formula>.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (edge)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td class='preformatted'>6</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td class='preformatted'>150</td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td class='preformatted'>Значение edge должно быть положительным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>-2</td>
+<td class='preformatted'>Значение edge должно быть положительным
+</td>
+</tr>
+</table>
+</div>
+<div id='task4312' class='task_block'>
+<h4>Порядок решения задач с проверками исходных данных</h4>
+<ol start='1'><li>Реализовать чтение исходных данных, вычисление результата и печать результата на экран.</li><li>Добавить условие, чтобы вычисление результата работало только при корректных данных, а при некорректных ничего не происходило.</li><li>Добавить условие, чтобы выводить сообщения об ошибках в случае ввода некорректных данных</li><li>При возможности, объединить условия с помощью ключевого слова else</li></ol><div class='task_id'>4312</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить площадь прямоугольного треугольника по формуле <formula>area=edge*height/2</formula>, где edge - основание, height - высота.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+edge
+</th>
+<th>
+height
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+1
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>Площадь прямоугольного треугольника с высотой 1 и основанием 1 равна 0,5000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td class='preformatted'>Площадь прямоугольного треугольника с высотой 3 и основанием 2 равна 3,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+0
+</td>
+<td>
+10
+</td>
+<td class='preformatted'>Длина основания треугольника должна быть положительна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-2
+</td>
+<td>
+1
+</td>
+<td class='preformatted'>Длина основания треугольника должна быть положительна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+3
+</td>
+<td>
+-4
+</td>
+<td class='preformatted'>Высота треугольника должна быть положительна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-5
+</td>
+<td>
+-7
+</td>
+<td class='preformatted'>Длина основания треугольника должна быть положительна
+Высота треугольника должна быть положительна
+</td>
+</tr>
+</table>
+</div>
+<div id='task6522' class='task_block'>
+<div class='task_desc'>
+Обратите внимание, что ситуаций с неправильными данными может быть значительно больше, чем ситуаций с правильными данными. Код для предотвращения нежелательных ситуаций может получиться объемнее, чем код для решения задачи.
+</div>
+<div class='task_id'>6522</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Смешали volume<sub>1</sub> литров воды с температурой temperature<sub>1</sub> градусов Цельсия с volume<sub>2</sub> литрами воды с температурой temperature<sub>2</sub> градусов Цельсия. Вычислите объем <formula>volume=volume<sub>1</sub>+volume<sub>2</sub></formula> и температуру образовавшейся смеси по формуле<formula>
+		temperature=
+		<fraction>
+			<numerator>
+				(temperature<sub>1</sub>*volume<sub>1</sub>+temperature<sub>2</sub>*volume<sub>2</sub>)
+			</numerator>
+			<denominator>
+				volume<sub>1</sub>+volume<sub>2</sub>
+			</denominator>
+		</fraction>
+	</formula>Оформите результат по шаблону
+</div>
+<div class='check_single preformatted'>Объем смеси: $volume л
+Температура смеси: $temperature &#8451;</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='4'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+volume1
+</th>
+<th>
+temperature1
+</th>
+<th>
+volume2
+</th>
+<th>
+temperature2
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+1
+</td>
+<td>
+30
+</td>
+<td>
+3
+</td>
+<td>
+20
+</td>
+<td class='preformatted'>Объем смеси: 4,0000 л
+Температура смеси: 22,5000 °C</td>
+</tr>
+<tr>
+<td></td>
+<td>
+1
+</td>
+<td>
+-20
+</td>
+<td>
+10
+</td>
+<td>
+20
+</td>
+<td class='preformatted'>Объем смеси: 11,0000 л
+Температура смеси: 16,3636 °C</td>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+90
+</td>
+<td>
+1
+</td>
+<td>
+-10
+</td>
+<td class='preformatted'>Объем смеси: 6,0000 л
+Температура смеси: 73,3333 °C</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-2
+</td>
+<td>
+10
+</td>
+<td>
+5
+</td>
+<td>
+50
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+4
+</td>
+<td>
+100
+</td>
+<td>
+-10
+</td>
+<td>
+4
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+20
+</td>
+<td>
+-800
+</td>
+<td>
+20
+</td>
+<td>
+30
+</td>
+<td class='preformatted'>Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+20
+</td>
+<td>
+10
+</td>
+<td>
+30
+</td>
+<td>
+-500
+</td>
+<td class='preformatted'>Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-7
+</td>
+<td>
+-1000
+</td>
+<td>
+6
+</td>
+<td>
+71
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+15
+</td>
+<td>
+-180
+</td>
+<td>
+-21
+</td>
+<td>
+90
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+31
+</td>
+<td>
+10
+</td>
+<td>
+-2
+</td>
+<td>
+-300
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-7
+</td>
+<td>
+-1000
+</td>
+<td>
+-21
+</td>
+<td>
+71
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+15
+</td>
+<td>
+-180
+</td>
+<td>
+-21
+</td>
+<td>
+-300
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-7
+</td>
+<td>
+-400
+</td>
+<td>
+-5
+</td>
+<td>
+-500
+</td>
+<td class='preformatted'>Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
+</td>
+</tr>
+</table>
+</div>
+<div id="link_c3_p11.1" class="task_block">
+	<div class="check_single">Какое название лучше выбрать для переменной? Эта проблема подробно рассмотрена в главе 11.1 "Общие принципы выбора имен переменных" части III книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=274" target="_blank">(открыть в новой вкладке)</a></p>
+	<p>Обычно в шапке таблицы с тестовыми данными у вводимых значений будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!</div>
+</div><div id='task7619' class='task_block'>
+<div class='task_desc'>
+Представьте, что вы пишете программное обеспечение для банкомата. Полезным действием будет выдача банкнот. Пользователь пришел к банкомату, вставил карту, увидел что на счету 10 тысяч, нажал 'снять деньги' и ввел миллион. Банкомат выдал ему миллион, а затем написал сообщение 'недостаточно средств на счету'. Правильно ли действовал банкомат? Именно поэтому мы проверяем исходные данные перед тем, как совершаем полезные действия.
+</div>
+<div class='task_id'>7619</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Два автомобиля едут навстречу друг другу с постоянными скоростями velocity1 и velocity2 км/час. Определить, через какое время автомобили встретятся, если расстояние между ними было distance км.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='3'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+velocity1
+</th>
+<th>
+velocity2
+</th>
+<th>
+distance
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+31
+</td>
+<td>
+47
+</td>
+<td>
+6833
+</td>
+<td class='preformatted'>Автомобили встретятся через 87,6026 часов</td>
+</tr>
+<tr>
+<td></td>
+<td>
+0
+</td>
+<td>
+7
+</td>
+<td>
+6829
+</td>
+<td class='preformatted'>Автомобили встретятся через 975,5714 часов</td>
+</tr>
+<tr>
+<td></td>
+<td>
+6
+</td>
+<td>
+0
+</td>
+<td>
+100
+</td>
+<td class='preformatted'>Автомобили встретятся через 16,6667 часов</td>
+</tr>
+<tr>
+<td></td>
+<td>
+17
+</td>
+<td>
+19
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>Автомобили встретятся через 0,0000 часов</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-11
+</td>
+<td>
+13
+</td>
+<td>
+200
+</td>
+<td class='preformatted'>Скорость должна быть неотрицательна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+79
+</td>
+<td>
+-67
+</td>
+<td>
+400
+</td>
+<td class='preformatted'>Скорость должна быть неотрицательна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+10
+</td>
+<td>
+20
+</td>
+<td>
+-500
+</td>
+<td class='preformatted'>Расстояние должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-20
+</td>
+<td>
+-73
+</td>
+<td>
+300
+</td>
+<td class='preformatted'>Скорость должна быть неотрицательна
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+60
+</td>
+<td>
+-120
+</td>
+<td>
+-600
+</td>
+<td class='preformatted'>Скорость должна быть неотрицательна
+Расстояние должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-2
+</td>
+<td>
+-3
+</td>
+<td>
+-1
+</td>
+<td class='preformatted'>Скорость должна быть неотрицательна
+Расстояние должно быть неотрицательным
+</td>
+</tr>
+</table>
+</div>
+<div class='task_desc'>
+При разработке программы мы первым делаем реализуем основную логику, а потом проверки. Но в коде проверка исходных данных обычно располагается в начале, сразу после получения исходных данных и перед основной логикой.
+</div>
+<h4>Общий план работы программы</h4>
+<ol start='1'><li>Получить исходные данные.</li><li>Проверить корректность исходных данных и сообщить об ошибке.</li><li>Если данные корректны, то выполнить полезные действия.</li><li>Сообщить пользователю результат.</li></ol><div id='task8833' class='task_block'>
+<div class='task_id'>8833</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (X)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>7606</td>
+<td class='preformatted'>Корень из 7606,0000 равен 87,2124</td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td class='preformatted'>Корень из 9,0000 равен 3,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td class='preformatted'>Корень из 0,0000 равен 0,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>-7603</td>
+<td class='preformatted'>Значение X должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>-1</td>
+<td class='preformatted'>Значение X должно быть неотрицательным
+</td>
+</tr>
+</table>
+</div>
+<div id='task9020' class='task_block'>
+<div class='task_desc'>
+Сообщение об ошибке должно быть написано так, чтобы пользователь мог понять какие значения или действия от него ожидались. В некоторых случаях к сообщению добавляют код ошибки.
+</div>
+<div class='task_id'>9020</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле <formula>3<sqrt><val>61-x</val></sqrt></formula>
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (X)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td class='preformatted'>Результат вычисления 23,4307</td>
+</tr>
+<tr>
+<td></td>
+<td>-9</td>
+<td class='preformatted'>Результат вычисления 25,0998</td>
+</tr>
+<tr>
+<td></td>
+<td>60</td>
+<td class='preformatted'>Результат вычисления 3,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>61</td>
+<td class='preformatted'>Результат вычисления 0,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>62</td>
+<td class='preformatted'>Подкоренное выражение должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>7573</td>
+<td class='preformatted'>Подкоренное выражение должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>75</td>
+<td class='preformatted'>Подкоренное выражение должно быть неотрицательным
+</td>
+</tr>
+</table>
+</div>
+<div id="link_c3_p11.2" class="task_block">
+	<div class="check_single"><p>В образцах решения задач намеренно используется очень большое количество переменных. Таким образом выделен каждый важный шаг программы. Некоторые из этих переменных нужны для решения задачи. Большинство других переменных - временные. Если они используются только в одном месте, то их полезно сократить.</p>
+	<p>Пример программы, использующей служебную временную переменную (C#).</p>
+<p class="preformatted">string t = Console.ReadLine();//Считываем значение из консоли
+int a = int.Parse(t);//Преобразуем строковое значение в числовое</p>
+<p>Сокращенный код (C#)</p>
+<p class="preformatted">int a = int.Parse(Console.ReadLine());//Получаем целое число от пользователя</p>
+<p>Если же переменная используется не в одном, а в нескольких других выражениях, то сократить ее не удастся. В этом случае ей лучше дать осмысленное имя. 
+<p>Цитата из книги "Совершенный код" часть III глава 11.2:</p>
+<p>Временные переменные служат для хранения промежуточных результатов вычислений и служебных значений программы. Обычно им присваивают имена temp, x или какие-нибудь другие столь же неопределенные и неописательные имена. В целом использование временных переменных говорит о том, что программист еще не полностью понял проблему. Кроме того, с переменными, официально получившими «временный» статус, программисты обычно обращаются небрежнее, чем с другими переменными, что повышает вероятность ошибок. Относитесь к «временным» переменным с подозрением Часто значение нужно на некоторое время сохранить. Однако в том или ином смысле временными являются почти все переменные. Называя переменную временной, подумайте, до конца ли вы понимаете ее реальную роль. Рассмотрим пример:</p>
+	<p>Пример неинформативного имени «временной» переменной (C++)</p>
+	<p class="preformatted">// Вычисление корней квадратного уравнения.
+// Предполагается, что дискриминант (b^2-4*a*c) неотрицателен.
+temp = sqrt( b^2 - 4*a*c );
+root0 = ( -b + temp ) / ( 2 * a );
+root1 = ( -b - temp ) / ( 2 * a );</p>
+<p>Значение выражения sqrt( b^2 - 4 * a * c ) вполне разумно сохранить в переменной, особенно если учесть, что оно используется позднее. Но имя temp ничего не говорит о роли переменной. Лучше поступить так:</p>
+<p>Пример замены «временной» переменной на реальную переменную (C++)</p>
+<p class="preformatted">// Вычисление корней квадратного уравнения.
+// Предполагается, что дискриминант (b^2-4*a*c) неотрицателен.
+discriminant = sqrt( b^2 - 4*a*c );
+root0 = ( -b + discriminant ) / ( 2 * a );
+root1 = ( -b - discriminant ) / ( 2 * a );</p>
+<p>По сути это тот же код, только в нем использована переменная с точным описательным именем.</p>
+	</div>
+</div><div id='task1934' class='task_block'>
+<div class='task_id'>1934</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле <formula>a<sqrt><val>-7b</val></sqrt></formula>
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+A
+</th>
+<th>
+B
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+-3
+</td>
+<td>
+-7
+</td>
+<td class='preformatted'>Результат вычисления -21,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+0
+</td>
+<td>
+-50
+</td>
+<td class='preformatted'>Результат вычисления 0,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+0
+</td>
+<td class='preformatted'>Результат вычисления -0,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+6047
+</td>
+<td>
+-6011
+</td>
+<td class='preformatted'>Результат вычисления 1240401,6995</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+17
+</td>
+<td class='preformatted'>Значение B должно быть не положительным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+6221
+</td>
+<td>
+6373
+</td>
+<td class='preformatted'>Значение B должно быть не положительным
+</td>
+</tr>
+</table>
+</div>
+<div id='task3943' class='task_block'>
+<div class='task_id'>3943</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле <formula>-5<sqrt><val>x+<sqrt><val>y</val></sqrt></val></sqrt></formula>
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+x
+</th>
+<th>
+y
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+-5
+</td>
+<td>
+81
+</td>
+<td class='preformatted'>Результат вычислений -10,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Результат вычислений -21,7945</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-20
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Подкоренное выражение должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+20
+</td>
+<td>
+-50
+</td>
+<td class='preformatted'>Значение y должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+7507
+</td>
+<td>
+7499
+</td>
+<td class='preformatted'>Результат вычислений -435,7062</td>
+</tr>
+<tr>
+<td></td>
+<td>
+7489
+</td>
+<td>
+-7487
+</td>
+<td class='preformatted'>Значение y должно быть неотрицательным
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-7481
+</td>
+<td>
+7477
+</td>
+<td class='preformatted'>Подкоренное выражение должно быть неотрицательным
+</td>
+</tr>
+</table>
+</div>
+<div id="task6924" class="task_block empty_on_print">
+	<div class="task_id">6924</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Даны векторы a и b с координатами {a<sub>x</sub>, a<sub>y</sub>} и {b<sub>x</sub>, b<sub>y</sub>}.
+Вычислить:
+<ol>
+<li>Модули векторов a и b по формуле (для вектора a) <formula>a<sub>mod</sub>=<sqrt><val>a<sub>x</sub><sup>2</sup>+a<sub>y</sub><sup>2</sup></val></sqrt></formula></li>
+<li>Скалярное произведение по формуле <formula>product<sub>a,b</sub> = a<sub>x</sub>b<sub>x</sub> + a<sub>y</sub>b<sub>y</sub></formula></li>
+<li>Угол между векторами a и b по формуле <formula>angle<sub>a,b</sub>=arccos(<fraction><numerator>product<sub>a,b</sub></numerator><denominator>a<sub>mod</sub>b<sub>mod</sub></denominator></fraction>)</formula></li>
+<li>Угол выразить в градусах, результат оформить по шаблону. Точность значений - 4 знака после запятой.</li>
+</ol>
+</div>
+<div class="check_single preformatted">Модуль вектора a = $amod
+Модуль вектора b = $bmod
+Скалярное произведение векторов равно $product
+Угол между векторами составляет $angle градусов</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные </th>
+			<th rowspan="2">Результат (AB)</th>
+		</tr>
+		<tr>
+			<th>a<sub>x</sub></th>
+			<th>a<sub>y</sub></th>
+			<th>b<sub>x</sub></th>
+			<th>b<sub>y</sub></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-50</td>
+			<td>-86.6025</td>
+			<td>60</td>
+			<td>0</td>
+			<td class="preformatted">Модуль вектора a = 100,0000
+Модуль вектора b = 60,0000
+Скалярное произведение векторов равно -3000,0000
+Угол между векторами составляет 120,0000 градусов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10</td>
+			<td>0</td>
+			<td>0</td>
+			<td>10</td>
+			<td class="preformatted">Модуль вектора a = 10,0000
+Модуль вектора b = 10,0000
+Скалярное произведение векторов равно 0,0000
+Угол между векторами составляет 90,0000 градусов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>13</td>
+			<td>7</td>
+			<td>17</td>
+			<td class="preformatted">Модуль вектора a = 17,0294
+Модуль вектора b = 18,3848
+Скалярное произведение векторов равно 298,0000
+Угол между векторами составляет 17,8562 градусов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-70.7106</td>
+			<td>50</td>
+			<td>60</td>
+			<td>0</td>
+			<td class="preformatted">Модуль вектора a = 86,6025
+Модуль вектора b = 60,0000
+Скалярное произведение векторов равно -4242,6360
+Угол между векторами составляет 144,7356 градусов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-86.6025</td>
+			<td>50</td>
+			<td>60</td>
+			<td>0</td>
+			<td class="preformatted">Модуль вектора a = 100,0000
+Модуль вектора b = 60,0000
+Скалярное произведение векторов равно -5196,1500
+Угол между векторами составляет 150,0000 градусов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>4</td>
+			<td>4</td>
+			<td>3</td>
+			<td class="preformatted">Модуль вектора a = 5,0000
+Модуль вектора b = 5,0000
+Скалярное произведение векторов равно 24,0000
+Угол между векторами составляет 16,2602 градусов</td>
+		</tr>
+	</table>
+</div><div id="task2801" class="task_block empty_on_print">
+	<div class="task_id">2801</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Дано два числа: делимое и делитель. Найти частное и остаток от деления. Все значения округлить до целого. Вывести ответ по шаблону:</div>
+<div class="check_single preformatted">Делимое $dividend, делитель $divider, частное $quotient, остаток $remainder</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>dividend</th>
+			<th>divider</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1234</td>
+			<td>11</td>
+			<td>Делимое 1234, делитель 11, частное 112, остаток 2.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>13</td>
+			<td>Делимое 5, делитель 13, частное 0, остаток 5</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>17</td>
+			<td>17</td>
+			<td>Делимое 17, делитель 17, частное 1, остаток 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>23</td>
+			<td>Делимое 0, делитель 23, частное 0, остаток 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>4</td>
+			<td>0</td>
+			<td>Делитель не может быть равен 0</td>
+		</tr>
+	</table>
+</div><div id="task2361" class="task_block empty_on_print">
+	<div class="task_id">2361</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Дан рулон материала длиной totalM метров. Расход материала на одно изделие - partCm сантиметров материала. Вычислите сколько изделий получится изготовить и сколько материала останется. Оформите результат по шаблону</div>
+<div class="check_single preformatted">Длина рулона в сантиметрах равна $totalCm
+Из этого материала получится $amount изделий и останется $remainder см</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>totalM</th>
+			<th>partCm</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>17</td>
+			<td class="preformatted">Длина рулона в сантиметрах равна 40000
+Из этого материала получится 2352 изделий и останется 16 см</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>103</td>
+			<td>29</td>
+			<td class="preformatted">Длина рулона в сантиметрах равна 10300
+Из этого материала получится 355 изделий и останется 5 см</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>12</td>
+			<td class="preformatted">Длина рулона в сантиметрах равна 200
+Из этого материала получится 16 изделий и останется 8 см</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>313</td>
+			<td class="preformatted">Длина рулона в сантиметрах равна 200
+Материала не хватит даже на одно изделие</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>400</td>
+			<td class="preformatted">Длина рулона в сантиметрах равна 300
+Материала не хватит даже на одно изделие</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>300</td>
+			<td>-70</td>
+			<td class="preformatted">Расход материала должен быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>-10</td>
+			<td class="preformatted">Расход материала должен быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>0</td>
+			<td class="preformatted">Расход материала должен быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-800</td>
+			<td>20</td>
+			<td class="preformatted">Длина рулона должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>23</td>
+			<td class="preformatted">Длина рулона должна быть положительна</td>
+		</tr>
+	</table>
+</div><div id="task5063" class="task_block empty_on_print">
+	<div class="task_id">5063</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Дан угол в градусах (aInitial). Определить (aRemainder) наименьшее положительное значение угла, равного данному. (Остаток от деления на 360)</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные(aInitial)</th>
+			<th>Результат (aRemainder)</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>365</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>45</td>
+			<td>45</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1125</td>
+			<td>45</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1500</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>200</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>360</td>
+			<td>0</td>
+		</tr>
+	</table>
+</div><div id="task5870" class="task_block empty_on_print">
+	<div class="task_id">5870</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Видеоролик длится lengthSeconds секунд. Определить сколько это в полных часах, минутах и секундах.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (lengthSeconds)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>4000</td>
+			<td>1 часов 6 минут 40 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3603</td>
+			<td>1 часов 0 минут 3 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3599</td>
+			<td>0 часов 59 минут 59 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3660</td>
+			<td>1 часов 1 минут 0 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>59</td>
+			<td>0 часов 0 минут 59 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>61</td>
+			<td>0 часов 1 минут 1 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0 часов 0 минут 0 секунд</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-1</td>
+			<td>Количество времени должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-20</td>
+			<td>Количество времени должно быть неотрицательным</td>
+		</tr>
+	</table>
+</div><div id="task3490" class="task_block empty_on_print">
+	<div class="task_id">3490</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Сколько проволоки можно намотать на катушку диаметром yarnDiameterCm см за wireCoils полных витков? Толщиной проволоки и шириной катушки можно пренебречь. Результат округлить вниз до целого количества сантиметров.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат (result)</th>
+		</tr>
+		<tr>
+			<th>yarnDiameterCm</th>
+			<th>wireCoils</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>2</td>
+			<td>18 см</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10</td>
+			<td>300</td>
+			<td>9424 см</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>15</td>
+			<td>Длина проволоки должна быть неотрицательна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>13</td>
+			<td>0</td>
+			<td>Количество витков должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-10</td>
+			<td>100</td>
+			<td>Длина проволоки должна быть неотрицательна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>-500</td>
+			<td>Количество витков должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div><div id="task9622" class="task_block empty_on_print">
+	<div class="task_id">9622</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислите:
+<ol>
+<li>Кинетическую энергию тела по формуле:
+		<formula>
+			kineticEnergy = 
+			<fraction>
+				<numerator>mass*velocity<sup>2</sup></numerator>
+				<denominator>2</denominator>
+			</fraction>
+		</formula>
+</li>
+<li>Потенциальную энергию тела по формуле:
+		<formula>potentialEnergy = mass*g*height</formula>
+</li>
+</ol>
+Значение g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067. Оформите результат по шаблону</div>
+<div class="check_single preformatted">Кинетическая энергия составляет: $kineticEnergy Дж
+Потенциальная энергия составляет: $potentialEnergy Дж</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="3">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>mass</th>
+			<th>velocity</th>
+			<th>height</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7351</td>
+			<td>7349</td>
+			<td>7333</td>
+			<td class="preformatted">Кинетическая энергия составляет: 198505672575,5000 Дж
+Потенциальная энергия составляет: 528629016,1161 Дж</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>19</td>
+			<td>23</td>
+			<td>29</td>
+			<td class="preformatted">Кинетическая энергия составляет: 5025,5000 Дж
+Потенциальная энергия составляет: 5403,4917 Дж</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-1</td>
+			<td>2</td>
+			<td>3</td>
+			<td class="preformatted">Значение mass должно быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>-5</td>
+			<td>8</td>
+			<td class="preformatted">Значение velocity должно быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>6</td>
+			<td>-9</td>
+			<td class="preformatted">Значение height должно быть неотрицательным</td>
+		</tr>
+	</table>
+</div><div id="link_c3_p12.1" class="task_block">
+	<div class="check_single"><p>Ускорение свободного падения в предыдущей задаче - пример "магического числа". Особенности его оформления, а также другие полезные рекомендации по использованию чисел можно прочитать в главе 12.1 части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=304" target="_blank">(открыть в новой вкладке)</a>.</p>
+	<p>Особенности использования целых чисел описаны в главе 12.2 части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=305" target="_blank">(открыть в новой вкладке)</a></p>
+	<p>Особенности использования дробных чисел описаны в главе 12.3 части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=307" target="_blank">(открыть в новой вкладке)</a></p>
+	</div>
+</div><div id="task7799" class="task_block empty_on_print">
+	<div class="task_id">7799</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить силу трения по формуле. Значение угла дано в градусах. <formula>force=mass*g*cos(aRad)</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067</div>
+	<img src="images/task7799.png"/>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат (result)</th>
+		</tr>
+		<tr>
+			<th>mass</th>
+			<th>aDeg</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>45</td>
+			<td>34,671920</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7297</td>
+			<td>30</td>
+			<td>61972,336135</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>10</td>
+			<td>90</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>91</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9</td>
+			<td>100</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>30</td>
+			<td>Масса должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-10</td>
+			<td>5</td>
+			<td>Масса должна быть положительной</td>
+		</tr>
+	</table>
+</div><div id="task9354" class="task_block empty_on_print">
+	<div class="task_id">9354</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить дискриминант квадратного уравнения по формуле <formula>discriminant = b<sup>2</sup>-4ac</formula></div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="3">Вводимые данные</th>
+			<th rowspan="2">Результат (discriminant)</th>
+		</tr>
+		<tr>
+			<th>a</th>
+			<th>b</th>
+			<th>c</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>1</td>
+			<td>3</td>
+			<td>-83,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7247</td>
+			<td>7243</td>
+			<td>7229</td>
+			<td>-157093203,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-11</td>
+			<td>-13</td>
+			<td>-17</td>
+			<td>-579,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>1</td>
+			<td>3</td>
+			<td>Уравнение y=0x^2+1x+3 не является квадратным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>1000</td>
+			<td>2000</td>
+			<td>Уравнение y=0x^2+1000x+2000 не является квадратным</td>
+		</tr>
+	</table>
+</div><div id="task3591" class="task_block empty_on_print">
+	<div class="task_id">3591</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Считая, что Земля - идеальная сфера с радиусом radius=6350 км, определить расстояние до линии горизонта от точки с заданной высотой над Землей.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>1606,2378</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6857</td>
+			<td>11580,2569</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-500</td>
+			<td>Высота над уровнем Земли должна быть неотрицательна</td>
+		</tr>
+	</table>
+</div><div id="task9130" class="task_block empty_on_print">
+	<div class="task_id">9130</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Определить силу тяжести, которая действует на спутник массой satelliteMass, поблизости от планеты массой planetMass и радиусом radius.
+	<formula>
+		force=g
+		<fraction>
+			<numerator>planetMass*satelliteMass</numerator>
+			<denominator>radius<sup>2</sup></denominator>
+		</fraction>
+	</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067. Результат вывести по шаблону "На спутник действует сила тяжести $force Ньютон". Значение силы оформите в научной нотации.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="3">Вводимые данные</th>
+			<th rowspan="2">Результат (force)</th>
+		</tr>
+		<tr>
+			<th>planetMass</th>
+			<th>satelliteMass</th>
+			<th>radius</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5.972E24</td>
+			<td>10000</td>
+			<td>6371</td>
+			<td>На спутник действует сила тяжести 1,442871e+22 Ньютон</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6.39E23</td>
+			<td>10000</td>
+			<td>3396.2</td>
+			<td>На спутник действует сила тяжести 5,432969e+21 Ньютон</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6.39E23</td>
+			<td>15000</td>
+			<td>3396.2</td>
+			<td>На спутник действует сила тяжести 8,149454e+21 Ньютон</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6.39E23</td>
+			<td>15000</td>
+			<td>-20000</td>
+			<td>Радиус планеты должен быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6.39E23</td>
+			<td>-2000</td>
+			<td>3396.2</td>
+			<td>Масса спутника должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-6.39E23</td>
+			<td>10000</td>
+			<td>3396.2</td>
+			<td>Масса планеты должна быть положительна</td>
+		</tr>
+	</table>
+</div><div id="task5895" class="task_block empty_on_print">
+	<div class="task_id">5895</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить результат по формуле. Значение угла дано в градусах.
+		<formula>
+			<sqrt><val>
+				a<sup>2</sup>+b<sup>2</sup>-2abcos(cInRad)
+			</val></sqrt>
+		</formula>
+	</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="3">Вводимые данные</th>
+			<th rowspan="2">Результат (result)</th>
+		</tr>
+		<tr>
+			<th>a</th>
+			<th>b</th>
+			<th>cInDeg</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7109</td>
+			<td>7103</td>
+			<td>7079</td>
+			<td>12369,4955</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>7</td>
+			<td>13</td>
+			<td>4,1324</td>
+		</tr>
+	</table>
+</div><div id="task2461" class="task_block empty_on_print">
+	<div class="task_id">2461</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить результат по формуле:
+		<fraction>
+			<numerator>ad+bc</numerator>
+			<denominator>ad</denominator>
+		</fraction>
+	</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат (R)</th>
+		</tr>
+		<tr>
+			<th>a</th>
+			<th>b</th>
+			<th>c</th>
+			<th>d</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>3000</td>
+			<td>5</td>
+			<td>7</td>
+			<td>195,8052</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7069</td>
+			<td>7043</td>
+			<td>7039</td>
+			<td>7057</td>
+			<td>1,9938</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>7043</td>
+			<td>7039</td>
+			<td>7027</td>
+			<td>Значение a должно быть не равно нулю</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7019</td>
+			<td>7013</td>
+			<td>7001</td>
+			<td>0</td>
+			<td>Значение d должно быть не равно нулю</td>
+		</tr>
+	</table>
+</div><div id="task2624" class="task_block empty_on_print">
+	<div class="task_id">2624</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить результат по формуле:
+		<fraction>
+			<numerator>1</numerator>
+			<denominator>
+				<sqrt><val>ax<sup>2</sup>+bx+c</val></sqrt>
+			</denominator>
+		</fraction>
+	</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат (R)</th>
+		</tr>
+		<tr>
+			<th>a</th>
+			<th>b</th>
+			<th>c</th>
+			<th>x</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>13</td>
+			<td>17</td>
+			<td>19</td>
+			<td>0,0154</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6991</td>
+			<td>6983</td>
+			<td>6977</td>
+			<td>6961</td>
+			<td>0,0000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>11</td>
+			<td>-241</td>
+			<td>1</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-6959</td>
+			<td>6949</td>
+			<td>6947</td>
+			<td>6917</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>Знаменатель не может быть равен нулю</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>2</td>
+			<td>-3</td>
+			<td>1</td>
+			<td>Знаменатель не может быть равен нулю</td>
+		</tr>
+	</table>
+</div><div id="task5871" class="task_block empty_on_print">
+	<div class="task_id">5871</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вычислить результат по формуле
+		<fraction>
+			<numerator>
+				<sqrt><val>x+5</val></sqrt>+<sqrt><val>x-5</val></sqrt>
+			</numerator>
+			<denominator>
+				2<sqrt><val>x</val></sqrt>
+			</denominator>
+		</fraction>
+	</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (X)</th>
+			<th>Результат (R)</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>0,707107</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6</td>
+			<td>0,881127</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>6911</td>
+			<td>1,000000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-4</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-20</td>
+			<td>Подкоренное выражение должно быть неотрицательным</td>
+		</tr>
+	</table>
+</div>Версия 4d48635. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

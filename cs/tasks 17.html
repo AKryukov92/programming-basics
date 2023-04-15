@@ -1,0 +1,1325 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>17 Исключения</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values {
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.check_values tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+	.hide_on_print .check_values, .hide_on_print .check_single{
+		display:none;
+	}
+	.hide_on_print img{
+		display:none;
+	}
+	.empty_on_print td{
+		color:transparent;
+	}
+	.empty_on_print img{
+		visibility:hidden;
+	}
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Исключения</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7740' class='example'>1*</a><li><a href='#task1439'>2</a><li><a href='#task5101'>3</a><li><a href='#task8733'>4</a><li><a href='#task8139'>5</a><li><a href='#task5014'>6</a><li><a href='#task5259' class='example'>7*</a><li><a href='#task9058'>8</a></ul><ul><li><a href='#task9020' class='example'>9*</a><li><a href='#task5871'>10</a><li><a href='#task7799'>11</a><li><a href='#task9354'>12</a><li><a href='#task5170'>13</a><li><a href='#task7891'>14</a><li><a href='#task6882' class='example'>15*</a><li><a href='#task1212'>16</a><li><a href='#task9472'>17</a><li><a href='#task5081'>18</a></ul></div><div id="link_c2_p8.4" class="task_block">
+	<div class="check_single">В данной лабораторной работе внимание уделяется оформлению исключений в изучаемом языке программирования. Однако использование исключений не всегда оправдано. Полезные советы о том, когда лучше использовать механизм исключений, содержатся в главе 8.4 "Исключения" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=215" target="_blank">(открыть в новой вкладке)</a></div>
+</div><div id='task7740' class='task_block'>
+<div class='task_id'>7740</div>
+<h3>Задача</h3>
+<ol start='1'><li>В решении Stage2 создайте проект Runner7740 типа "Консольное приложение".</li><li>Решите описанную ниже задачу. Исходные данные пользователь вводит вручную.</li><li>Обработайте потенциальное исключение, которое возникает когда пользователь вводит не числа.</li></ol><div class='task_desc'>
+Вычислить результат по формуле x + 7, где x вводится с клавиатуры
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (X)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>11.13</td>
+<td class='preformatted'>18,1300</td>
+</tr>
+<tr>
+<td></td>
+<td>-7919</td>
+<td class='preformatted'>-7912,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td class='preformatted'>7,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>word</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+</td>
+</tr>
+<tr>
+<td></td>
+<td>$14</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+</td>
+</tr>
+</table>
+</div>
+<div id='task1439' class='task_block'>
+<div class='task_id'>1439</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое среди введенных чисел. Фрагменты строк не участвуют в подсчете количества элементов. Сообщить пользователю индекс и значение некорректных элементов.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (data)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>9 8 7 6 5</td>
+<td class='preformatted'>Количество обработанных чисел 5 их сумма 35.0
+Среднее арифметическое 7,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>5 2 11 3 1 3 4 4 4 4</td>
+<td class='preformatted'>Количество обработанных чисел 10 их сумма 41.0
+Среднее арифметическое 4,1000</td>
+</tr>
+<tr>
+<td></td>
+<td>9 q 8 w 7 e 6 r 5 t</td>
+<td class='preformatted'>Элемент №1 со значением q не число
+Элемент №3 со значением w не число
+Элемент №5 со значением e не число
+Элемент №7 со значением r не число
+Элемент №9 со значением t не число
+Количество обработанных чисел 5 их сумма 35.0
+Среднее арифметическое 7,0000</td>
+</tr>
+<tr>
+<td></td>
+<td>q w e r</td>
+<td class='preformatted'>Элемент №0 со значением q не число
+Элемент №1 со значением w не число
+Элемент №2 со значением e не число
+Элемент №3 со значением r не число
+Количество обработанных чисел 0 их сумма 0.0
+В исходном массиве отсутствовали числа
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class='preformatted'>Элемент №0 со значением  не число
+Количество обработанных чисел 0 их сумма 0.0
+В исходном массиве отсутствовали числа
+</td>
+</tr>
+<tr>
+<td></td>
+<td>0 0 0 0</td>
+<td class='preformatted'>Количество обработанных чисел 4 их сумма 0.0
+Среднее арифметическое 0,0000</td>
+</tr>
+</table>
+</div>
+<div id='task5101' class='task_block'>
+<div class='task_id'>5101</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Посчитать количество чисел в файле (C), исключая первое число. Проверить, равны ли числа N и C. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (file)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test1.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленное и фактическое количество чисел совпадает и равно 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test2.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленное и фактическое количество чисел совпадает и равно 0
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test3.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленное и фактическое количество чисел совпадает и равно 47
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test4.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленое количество 3, фактическое количество 5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test5.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленое количество 10, фактическое количество 6
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test6.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Файл пуст
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test7.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Файл не найден D:\tfa\src\files\task5101\test7.txt
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test8.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task5101/test9.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+</td>
+</tr>
+</table>
+</div>
+<div id='task8733' class='task_block'>
+<div class='task_id'>8733</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Оно не участвует в вычислениях. Найти среднее арифметическое только тех чисел, значение которых не превышает 20. Данные в файле написаны в столбик без дополнительного оформления.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (file)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test1.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Общее количество чисел 0
+Количество чисел 0 их сумма 0.0
+Среднее арифметическое 0</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test2.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Общее количество чисел 10
+Количество чисел 10 их сумма 45.0
+Среднее арифметическое 4,5000</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test3.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Общее количество чисел 564
+Количество чисел 299 их сумма 2834.0
+Среднее арифметическое 9,4783</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test4.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленое количество 373, фактическое количество 374
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test5.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленое количество 3, фактическое количество 2
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test6.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Заявленое количество 3601, фактическое количество 3595
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test7.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test8.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Файл не найден D:\tfa\src\files\task8733\test8.txt
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task8733/test9.txt" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Файл пуст
+</td>
+</tr>
+</table>
+</div>
+<div class="task_block" id="task8139">
+	<div class="task_id">8139</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит целые числа в диапазоне от 1000 до 9999, написаные в столбик без дополнительного оформления.  Количество чисел заранее не известно. Определить, сколько раз встречаются такие числа, в которых есть две одинаковых цифры подряд. Например: 1123, 1223, 1233.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>569</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>253</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Не удается считать число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test5.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test6.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test7.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test8.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task5014">
+	<div class="task_id">5014</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит целые числа, написанные в столбик без дополнительного оформления. Нужно вывести числа из файла в строчку через запятую. Перед первым и после последнего числа запятой быть не должно. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>1, 2, 3, 4, 5</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>-1, -2, -3</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test5.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5014/test6.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Не удается считать число</td>
+		</tr>
+	</table>
+</div><div id='task5259' class='task_block'>
+<div class='task_id'>5259</div>
+<h3>Задача</h3>
+<h4>Реализуйте метод для решения задачи <a href="tasks 1.html#task7474" target="_blank">ЛР1#7474(открыть в новой вкладке)</a></h4>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task1934.</li><li>Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.</li><li>Создайте проект Runner1934.</li><li>В проекте Runner1934 добавьте ссылку на проект CodeProject.</li><li>Добавьте команду using пространства имен из проекта CodeProject.</li><li>Создайте ещё один метод в классе Program проекта Runner1934. Назовите его Step1934. Он ничего не возвращает и не принимает аргументов.</li></ol><h4>Реализуйте метод Step1934</h4>
+<ol start='8'><li>Выведите в консоль сообщение "Введите значения A и B".</li><li>Объявите переменные a и b для хранения целых чисел.</li><li>Инициализируйте переменные a и b значениями, полученными из консоли.</li><li>Объявите переменную result для хранения действительных чисел.</li><li>Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.</li><li>Результат вызова метода запишите в переменную result.</li><li>Выведите на экран сообщение "Результат равен " и значение переменной result с точностью 4 знака после запятой.</li></ol><h4>Оформите метод Main</h4>
+<ol start='15'><li>Выведите сообщение "Начало работы программы".</li><li>Вызовите метод Step1934.</li><li>Выведите сообщение "Программа завершена успешно".</li><li>В результате запуска проекта Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки "Исходный результат". Возможны отличия в номерах строк и расположении файлов.</li></ol><h4>Проверьте, что метод выбрасывает исключения</h4>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+A
+</th>
+<th>
+B
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+-11
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+5
+-11
+Результат равен 43.8748
+Программа завершена успешно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-3
+</td>
+<td>
+-7
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+-3
+-7
+Результат равен -21.0000
+Программа завершена успешно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+15
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+13
+15
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно
+   at CodeProject.Library.Task1934(Int32 a, Int32 b) in E:\Stage2\CodeProject\Library.cs:line 197
+   at Runner1934.Program.Step1934() in E:\Stage2\Runner1934\Program.cs:line 24
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+word
+</td>
+<td>
+4
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, 
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Runner1934.Program.Step1934() in E:\Stage2\Runner1934\Program.cs:line 23
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+11
+</td>
+<td>
+incorrect
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+11
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options,
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Runner1934.Program.Step1934() in E:\Stage2\Runner1934\Program.cs:line 24
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15
+</td>
+</tr>
+</table>
+<h4>Обработайте исключения</h4>
+<ol start='19'><li>Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения "Подкоренное выражение должно быть неотрицательно"</li><li>Обработайте FormatException так, чтобы на экран выводилась фраза "Не удалось преобразовать строку в число"</li><li>Стек вызовов не должен выводиться не экран в случае ошибки</li><li>Фраза "Программа завершена успешно" не должна выводиться на экран в случае ошибки</li><li>Фраза "Результат равен" не должна выводиться на экран в случае ошибки</li></ol><h4>Проверьте, что результат работы совпадает с ожидаемым</h4>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+A
+</th>
+<th>
+B
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+-11
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+Результат равен 43,8748
+Программа завершена успешно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-3
+</td>
+<td>
+-7
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+Результат равен -21,0000
+Программа завершена успешно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+15
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+Подкоренное выражение должно быть неотрицательно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+word
+</td>
+<td>
+4
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+Не удалось преобразовать строку в число
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+11
+</td>
+<td>
+incorrect
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения A и B
+Не удалось преобразовать строку в число
+</td>
+</tr>
+</table>
+</div>
+<div id='task9058' class='task_block'>
+<div class='task_id'>9058</div>
+<h3>Задача</h3>
+<h4>Реализуйте метод для решения задачи <a href="tasks 1.html#task7474" target="_blank">ЛР1#7474(открыть в новой вкладке)</a></h4>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task3943.</li><li>Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.</li><li>Создайте проект Runner3943.</li><li>В проекте Runner3943 добавьте ссылку на проект CodeProject.</li><li>Добавьте команду using пространства имен из проекта CodeProject.</li><li>Создайте ещё один метод в классе Program проекта Runner3943. Назовите его Step3943. Он ничего не возвращает и не принимает аргументов.</li></ol><h4>Реализуйте метод Step3943</h4>
+<ol start='8'><li>Выведите в консоль сообщение "Введите значения x и y"</li><li>Объявите переменные x и y для хранения целых чисел.</li><li>Инициализируйте переменные x и y значениями, полученными из консоли.</li><li>Объявите переменную result для хранения действительных чисел.</li><li>Вызовите метод Task3943 класса Library и передайте ему x и y в качестве аргументов.</li><li>Результат вызова метода запишите в переменную result.</li><li>Выведите на экран сообщение "Результат равен" и значение переменной result с точностью 4 знака после запятой.</li></ol><h4>Оформите метод Main</h4>
+<ol start='15'><li>Выведите сообщение "Начало работы программы".</li><li>Вызовите метод Step1934.</li><li>Выведите сообщение "Конец работы программы".</li></ol><h4>Проверьте, что метод выбрасывает исключения</h4>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+x
+</th>
+<th>
+y
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+-5
+</td>
+<td>
+81
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения x и y
+-5
+81
+Результат равен -10.0000
+Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения x и y
+13
+36
+Результат равен -21,7945
+Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-20
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения x и y
+-20
+36
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно
+   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\Stage2\CodeProject\Library.cs:line 206
+   at Lab13Task3943.Program.Step1934() in E:\Stage2\Lab13Task3943\Program.cs:line 24
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+20
+</td>
+<td>
+-50
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения x и y
+20
+-50
+Unhandled Exception: System.ArgumentException: Значение y должно быть неотрицательным
+   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\Stage2\CodeProject\Library.cs:line 210
+   at Lab13Task3943.Program.Step1934() in E:\Stage2\Lab13Task3943\Program.cs:line 24
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+word
+</td>
+<td>
+
+</td>
+<td class='preformatted'>Начало работы программы
+Введите значения x и y
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number,
+      NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Lab13Task3943.Program.Step1934() in E:\Stage2\Lab13Task3943\Program.cs:line 22
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15
+</td>
+</tr>
+</table>
+<h4>Обработайте исключения</h4>
+<ol start='18'><li>Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения "Подкоренное выражение должно быть неотрицательно"</li><li>Обработайте FormatException так, чтобы на экран выводилась фраза "Не удалось преобразовать строку в число"</li><li>Стек вызовов не должен выводиться не экран в случае ошибки.</li><li>Фраза "Конец работы программы" должна выводиться на экран как в случае ошибки, так и в случае успешного результата.</li><li>Фраза "Результат равен" не должна выводиться на экран в случае ошибки</li></ol><h4>Проверьте, что результат работы совпадает с ожидаемым</h4>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='2'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+x
+</th>
+<th>
+y
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+-5
+</td>
+<td>
+81
+</td>
+<td class='preformatted'>Начало работы программы
+Результат вычислений -10,0000Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+13
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Начало работы программы
+Результат вычислений -21,7945Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+-20
+</td>
+<td>
+36
+</td>
+<td class='preformatted'>Начало работы программы
+Подкоренное выражение должно быть неотрицательным
+Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+20
+</td>
+<td>
+-50
+</td>
+<td class='preformatted'>Начало работы программы
+Значение y должно быть неотрицательным
+Конец работы программы
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+word
+</td>
+<td>
+
+</td>
+<td class='preformatted'>Не удалось преобразовать строку в число
+Конец работы программы
+</td>
+</tr>
+</table>
+</div>
+<div class="task_block" id="task9020">
+	<div class="task_id">9020</div>
+    <h3>Задача</h3>
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task9020 для решения задачи <a href="tasks 3.html#task9020" target="_blank">ЛР3#9020(открыть в новой вкладке)</a>.</li>
+<li>Метод Task9020 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task9020 в случаях с корректными данными.</li>
+</ol>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="6">
+<li>В классе TestSuite создайте еще 3 юнит-теста. Назовите их как Task9020assertionX, где X - цифра от 1 до 3.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task9020assertionX вызовите метод Task9020 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task5871">
+	<div class="task_id">5871</div>
+    <h3>Задача</h3>
+
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task5871 для решения задачи <a href="tasks 3.html#task5871" target="_blank">ЛР3#5871(открыть в новой вкладке)</a>.</li>
+<li>Метод Task5871 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task5871 в случаях с корректными данными.</li>
+</ol>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="7">
+<li>В классе TestSuite создайте еще 4 юнит-теста. Назовите их как Task5871assertionX, где X - цифра от 1 до 4.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task5871assertionX вызовите метод Task5871 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task7799">
+	<div class="task_id">7799</div>
+    <h3>Задача</h3>
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task7799 для решения задачи <a href="tasks 3.html#task7799" target="_blank">ЛР3#7799(открыть в новой вкладке)</a>.</li>
+<li>Метод Task7799 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task7799 в случаях с корректными данными.</li>
+</ol>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="6">
+<li>В классе TestSuite cоздайте 2 юнит-теста. Назовите их как Task7799assertionX, где X - цифра от 1 до 2.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task7799assertion вызовите метод Task7799 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, метод Task7799assertion должен быть отмечен зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task9354">
+	<div class="task_id">9354</div>
+    <h3>Задача</h3>
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task9354 для решения задачи <a href="tasks 3.html#task9354" target="_blank">ЛР3#9354(открыть в новой вкладке)</a>.</li>
+<li>Метод Task9354 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task9354 в случаях с корректными данными.</li>
+</ol>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="6">
+<li>В классе TestSuite создайте еще 2 юнит-теста. Назовите их как Task9354assertionX, где X - цифра от 1 до 2.</li>
+<li>Добавьте им атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task9354assertionX вызовите метод Task9354 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task5170">
+	<div class="task_id">5170</div>
+    <h3>Задача</h3>
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task5170 для решения задачи <a href="tasks 11.html#task5170" target="_blank">ЛР11#5170(открыть в новой вкладке)</a>.</li>
+<li>Метод Task5170 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task5170 в случаях с корректными данными.</li>
+</ol>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="8">
+<li>В классе TestSuite создайте юнит-тест, который называется Task5170assertion.</li>
+<li>Добавьте ему атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task5170assertion вызовите метод Task5170 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task7891">
+	<div class="task_id">7891</div>
+    <h3>Задача</h3>
+	<h4>Реализуйте метод для решения задачи</h4>
+<ol>
+<li>В классе Library реализуйте публичный статический метод task7891.</li>
+<li>В качестве аргумента он принимает массив целых чисел.</li>
+<li>В теле функции создайте новый массив.
+Для каждой пары элементов из исходного массива нужно добавить три элемента в результирующий массив.
+Первый и второй элемент из тройки - копии исходной пары элементов. Третий элемент из тройки - сумма этой пары элементов.
+Если в исходном массиве нечетное количество элементов, функция должна выбросить исключение.</li>
+</ol>
+
+<h4>Проверьте корректность работы функции с помощью юнит-тестов</h4>
+<ol start="4">
+<li>Создайте юнит-тест для проверки задачи и подпишите его словами "в задаче 7891 должен получиться корректный результат".</li>
+<li>Объявите переменные data, actual и expected.</li>
+<li>Запишите в переменную data массив значений исходных данных для одного теста из задачи. Например 9,8, 7,6, 5,4</li>
+<li>Запишите в переменную expected массив значений, которые ожидаются в результате работы метода. Например 9,8,17, 7,6,13, 5,4,9</li>
+<li>Вызовите функцию task7891 и передайте ей переменную data в качестве аргумента.</li>
+<li>Запишите результат вызова функции в переменную actual.</li>
+<li>Проверьте, что содержимое массивов actual и expected одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
+<li>Проверьте, что содержимое массивов data и validate одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
+<li>Проверьте, что метод выбрасывает исключение при некорректных данных.</li>
+</ol>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (array)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9,8, 7,6, 5,4</td>
+			<td class="preformatted">9,8,17, 7,6,13, 5,4,9</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11,13, 17,19, 23,29</td>
+			<td class="preformatted">11,13,24, 17,19,36, 23,29,52</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0,0</td>
+			<td class="preformatted">0,0,0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="preformatted"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9,8, 7</td>
+			<td class="preformatted">В массиве должно быть четное количество элементов</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task6882">
+	<div class="task_id">6882</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Количество чисел заранее не известно. Определить минимальное число в файле. При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 0
+Всего чисел: 10</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 0
+Всего чисел: 1</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 5
+Всего чисел: 3359</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 1023
+Всего чисел: 9905</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test5.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 116
+62,52</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test6.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
+22,47</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test7.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test8.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test9.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
+Я пришел к тебе с приветом,</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test10.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: -15
+Всего чисел: 16</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task1212">
+	<div class="task_id">1212</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Найти самую большую площадь прямоугольника.
+Информация о прямоугольниках находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка</a>) с разделителем &quot;;&quot;.
+Общее количество прямоугольников заранее неизвестно.
+В каждой строчке находится информация об отдельном прямоугольнике: x и y его верхнего-левого угла, ширина и высота.
+Например "68;59;32;15" значит что x = 68, y = 59, ширина = 32, высота = 15.
+При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Выражение</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 875
+Всего записей: 6</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 129276
+Всего записей: 104</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 3691856
+Всего записей: 37</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+2642;1610;6710</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 6
+7125;8872;g;4158;</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test9.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+6846,9127,9991,5478</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task9472">
+	<div class="task_id">9472</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Найти самую большую площадь фигуры.
+Информация о фигурах находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;.
+Общее количество фигур заранее неизвестно. В каждой строчке находится информация об отдельной фигуре: ее наименование и свойства.
+Обработайте потенциальные исключения.
+	<ul>
+		<li>Прямоугольник. Наименование rect, свойства: x и y его верхнего-левого угла, ширина и высота. Например "rect;68;59;32;15" - прямоугольник, x = 68, y = 59, ширина 32, высота 15</li>
+		<li>Круг. Наименование circle, свойства: x и y центра, радиус. Например "circle;72;98;14" - круг, x = 72, y = 98, радиус = 14</li>
+	</ul></div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Выражение</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 1480,0000
+Всего записей: 31</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 907,9203
+Всего записей: 31</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в стркое 0
+261;377;123;94</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+rect;71;55;14</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+circle;57;75</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в стркое 0
+polygon;0;0;1;2;3;4</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task5081">
+	<div class="task_id">5081</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит множество строк с целыми числами. Внутри строки числа разделены запятой. Нужно найти сумму чисел в каждой строчке. При возникновении исключения, обработка файла продолжается, если это возможно. Строки с некорректными данными пропускаются.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">15
+110
+31496</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число
+Строка пуста
+8</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл отсутствует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число
+Не удалось преобразовать строку в число</td>
+		</tr>
+	</table>
+</div>Версия 4d48635. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

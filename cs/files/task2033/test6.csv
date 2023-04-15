@@ -1,0 +1,4 @@
+create;rectangle;r1;10;10;10;10
+shiftX;r1;20
+shiftY;r1;15
+shiftY;r1;-200

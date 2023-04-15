@@ -183,23 +183,6 @@ public class Lab12Task7649 {
         }
     }
 
-    static void Step2173(){
-        System.out.println();
-        System.out.println("2173");
-        String[] in2173 = {
-                "5;6;7;8;9",
-                "2;3;3;3;3;4",
-                "5",
-                "4;5;6;7;3;2;1",
-                "9;8",
-                "4;5;6;7;6;7;8",
-                ""
-        };
-        for (int i = 0; i < in2173.length; i++){
-            System.out.println(Lab07.task2173(in2173[i]));
-        }
-    }
-
     static void Step6492(){
         System.out.println();
         System.out.println("6492");

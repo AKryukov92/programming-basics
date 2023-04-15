@@ -32,6 +32,10 @@ import root.tasks.recursion.Task4106;
 import root.tasks.recursion.Task6646;
 import root.tasks.search.*;
 import root.tasks.search_in_array.*;
+import root.tasks.sorting.Task2173;
+import root.tasks.sorting.Task3218;
+import root.tasks.sorting.Task4707;
+import root.tasks.sorting.Task8769;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
@@ -601,14 +605,14 @@ public class Application {
                 .addTask(5648)
 
                 .withGroup("Сортировка массива вставкой")
-                .addExample(new Task7290())//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой
-                .addTask(2173)//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
+                .addExample(new Task7290())//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой. нужно ближе к теме. посчитать количество равных числу X
+                .addTask(new Task2173())//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
                 .addTask(4497)//просмотр массива и замена
-                .addTask(3218)//сортировка массива
+                .addTask(new Task3218())//сортировка массива
 
                 .withGroup("Агрегат по группам")
-                .addTask(new Task7260())
-                .addTask(5795)
+                .addTask(new Task7260())//сумма чисел в группах по 3
+                .addTask(5795)//сумма чисел на четных и на нечетных позициях
         ;
     }
 
@@ -642,8 +646,8 @@ public class Application {
                 .addTask(new Task1522())//поиск максимального и поиск минимального
                 .addTask(new Task1431())//максимальное и следующее максимальное
                 .addTask(9271)//поиск и манипуляции с массивом
-                .addTask(8769)//минимальное в участке массива
-                .addTask(4707)//сортировка по возрастанию пузырьком
+                .addTask(new Task8769())//минимальное в участке массива
+                .addTask(new Task4707())//сортировка по возрастанию вставкой
                 .addTask(1392)//вычисление медианы
                 .addTask(6492)//Сначала найти максимальное, от которого зависит количество строк
 

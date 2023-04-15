@@ -1,0 +1,15 @@
+push
+q
+push
+w
+pop
+pop
+push
+e
+push
+r
+push
+t
+pop
+pop
+pop

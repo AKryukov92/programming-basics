@@ -1,0 +1,6 @@
+create;circle;c1;40;40;20
+create;circle;c2;50;50;10
+create;rectangle;r1;100;100;40;40
+shiftY;r1;-90
+stretchX;c2;10
+stretchY;c1;7

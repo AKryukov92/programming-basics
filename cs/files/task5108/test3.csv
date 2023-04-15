@@ -1,0 +1,8 @@
+create;r1;0;0;10;10
+create;r2;10;10;10;10
+create;r3;0;10;10;10
+create;r4;10;0;10;10
+shiftX;r1;10
+shiftY;r3;-10
+shiftX;r2;-10
+shiftY;r4;10
