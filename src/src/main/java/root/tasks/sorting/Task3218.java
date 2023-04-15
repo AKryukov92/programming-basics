@@ -21,8 +21,10 @@ public class Task3218 extends OneInputValLayout {
         appendCheckValuesRow("5 5 5 5 5");
         appendCheckValuesRow("1 9 1 30 9 1 100");
         appendCheckValuesRow("");
+        appendCheckValuesRow("9 10 11 12 13 14 15 16 17 18 19");
         appendCheckValuesRow("19");
         appendCheckValuesFooter();
+        appendTaskDesc("Попробуйте улучшить решение. Если в последнем просмотре не было перестановок, прекратить обработку");
         appendFooter();
     }
 
