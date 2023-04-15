@@ -76,6 +76,17 @@ public abstract class LayoutMaker {
         writer.print("</ol>");
     }
 
+    protected void appendOrderedEscaped(String... elements) {
+        writer.print("<ol start='" + nextOrderedIndex + "'>");
+        for (String element : elements) {
+            writer.print("<li>");
+            writer.print(escapeHtmlSymbols(element));
+            writer.print("</li>");
+            nextOrderedIndex++;
+        }
+        writer.print("</ol>");
+    }
+
     protected void resetOrdered() {
         nextOrderedIndex = 1;
     }

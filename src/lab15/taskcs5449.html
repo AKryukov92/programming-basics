@@ -50,8 +50,8 @@ if (x == point.x && y == point.y) return true;</div>
 <li>Вызовите метод Equals и передайте ему в качестве аргумента значение null.</li>
 <li>Проверьте результат вызова Equals с помощью метода IsFalse.</li>
 <li>При запуске тестов, юнит-тест PointNotEqualNull должен быть отмечен красным знаком.</li>
-<li>Добавьте в тело метода Equals выражение:</li>
-<div class="check_single preformatted">if (other == null) return false;</div>
+<li>Добавьте в тело метода Equals выражение:
+<div class="check_single preformatted">if (other == null) return false;</div></li>
 <li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
 </ol>
 
@@ -61,8 +61,8 @@ if (x == point.x && y == point.y) return true;</div>
 <li>Вызовите метод Equals и передайте ему в качестве аргументов строку "not a point".</li>
 <li>Проверьте результат вызова с помощью метода IsFalse</li>
 <li>При запуске тестов, юнит-тест PointNotEqualOtherClass должен быть отмечен красным знаком.</li>
-<li>Добавьте в тело метода Equals выражение:</li>
-<div class="check_single preformatted">if (GetType() != other.GetType()) return false;</div>
+<li>Добавьте в тело метода Equals выражение:
+<div class="check_single preformatted">if (GetType() != other.GetType()) return false;</div></li>
 <li>Тест PointNotEqualOtherClass может быть провален из за возникшего исключения System.InvalidCastException. В этом случае нужно изменить порядок действий.</li>
 <li>Все тесты в классе PointSuite должны быть отмечены зеленым знаком.</li>
 </ol>

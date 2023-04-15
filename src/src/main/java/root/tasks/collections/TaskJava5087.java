@@ -12,7 +12,7 @@ public class TaskJava5087 extends MultipleInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Выполните действия");
-        appendOrdered(
+        appendOrderedEscaped(
                 "Создайте класс Task5087",
                 "Реализуйте в классе Task6087 стандартный метод main",
                 "В методе main создайте экземпляр класса Scanner",

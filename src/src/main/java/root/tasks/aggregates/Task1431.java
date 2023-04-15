@@ -7,6 +7,7 @@ public class Task1431 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти два наибольших числа. Если есть два одинаковых числа с наибольшим значением, то вывести их оба.");
+        appendCheckValuesHeader("data");
         appendCheckValuesRow("2 5 4 3 12");//максимум далеко, второе второй
         appendCheckValuesRow("3 3 3 9 28");//максимум далеко, второе далеко
         appendCheckValuesRow("10 0 3 33");//максимум далеко, второй первый

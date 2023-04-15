@@ -141,12 +141,22 @@ public class Application {
         return taskBooksJava;
     }
 
-    private static String getGitHash() throws IOException {
-        Process p = Runtime.getRuntime().exec("git show --name-status");
-        BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line = input.readLine();
-        input.close();
-        return line.substring(7, 14);
+    private static String runCmd(String cmd) throws IOException {
+        Process p = Runtime.getRuntime().exec(cmd);
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()))) {
+            String line = input.readLine();
+            input.close();
+            return line;
+        }
+    }
+
+    private static String getVersion() throws IOException {
+        String currentTag = runCmd("git tag --points-at HEAD");
+        if (currentTag.isEmpty()) {
+            return runCmd("git describe --tags --abbrev=0") + "-dev";
+        } else {
+            return currentTag;
+        }
     }
 
     private static void makeFiles(TaskBook[] taskBooks, String css, String gitHash) throws IOException {
@@ -699,7 +709,7 @@ public class Application {
                 .addTask(new Task8543())//расшифровка даты indexof substring
                 .addTask(new Task4265())//toUpper, toLower
                 .addTask(new Task2166())//replace
-                .addTask(4996)
+                .addTask(new Task4996())
                 .addExample(9925)
                 .addExample(3657)
                 .addTask(6599)
@@ -1117,15 +1127,15 @@ public class Application {
     }
 
     public static void main(String[] args) throws IOException {
-        String gitHash = getGitHash();
+        String version = getVersion();
 
         String css = loadCss("styles.css");
 
         TaskBook[] taskBooksJava = populateJavaContent(themeList);
-        makeFiles(taskBooksJava, css, gitHash);
+        makeFiles(taskBooksJava, css, version);
 
         TaskBook[] taskBooksCs = populateCsContent(themeList);
-        makeFiles(taskBooksCs, css, gitHash);
+        makeFiles(taskBooksCs, css, version);
 
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
