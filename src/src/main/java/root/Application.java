@@ -152,7 +152,7 @@ public class Application {
 
     private static String getVersion() throws IOException {
         String currentTag = runCmd("git tag --points-at HEAD");
-        if (currentTag.isEmpty()) {
+        if (currentTag == null) {
             return runCmd("git describe --tags --abbrev=0") + "-dev";
         } else {
             return currentTag;
@@ -329,7 +329,6 @@ public class Application {
                 .addCitation("link_c3_p11.2")
                 .addTask(new Task1934())//взаимоисключающий
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
-                .addTask(6924)
 
                 .withGroup("Вычисление остатка от деления")
                 .addExample(2801)
@@ -383,6 +382,7 @@ public class Application {
                 .addTask(new Task6686())//поиск максимума, последовательный ввод и сравнение
 
                 .withGroup("Просто задачи повышенного уровня сложности")
+                .addTask(new Task6924())//нет проверок. просто расчеты с участием корня
                 .addTask(4527)
                 .addTask(6556)
                 .addCitation("link_c2_p5.3")
