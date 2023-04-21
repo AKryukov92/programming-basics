@@ -16,7 +16,7 @@ public interface MethodsDictationHelper {
     }
 
     default String implementMethodToSolve(int taskId) {
-        return "Реализуйте метод для решения задачи " + linkToTask(7474);
+        return "Реализуйте метод для решения задачи " + linkToTask(taskId);
     }
 
     default String implementNonStatic(String className, String methodName) {
