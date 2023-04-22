@@ -32,10 +32,8 @@ import root.tasks.recursion.Task4106;
 import root.tasks.recursion.Task6646;
 import root.tasks.search.*;
 import root.tasks.search_in_array.*;
-import root.tasks.sorting.Task2173;
-import root.tasks.sorting.Task3218;
-import root.tasks.sorting.Task4707;
-import root.tasks.sorting.Task8769;
+import root.tasks.sorting.*;
+import root.tasks.sorting.Task5541;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
@@ -658,8 +656,8 @@ public class Application {
                 .addTask(9271)//поиск и манипуляции с массивом
                 .addTask(new Task8769())//минимальное в участке массива
                 .addTask(new Task4707())//сортировка по возрастанию вставкой
-                .addTask(1392)//вычисление медианы
-                .addTask(6492)//Сначала найти максимальное, от которого зависит количество строк
+                .addTask(new Task1392())//вычисление медианы
+                .addTask(new Task6492())//Сначала найти максимальное, от которого зависит количество строк
 
                 //Подготовительной задачей будет
                 //Эти задачи решаются двумя способами
@@ -669,8 +667,9 @@ public class Application {
                 //К решению через сортировку подводить кажется правильнее.
                 //Проблема в том, что исходные данные - строки, а не цифры.
                 //Сравнение на "больше" или "меньше" для строк не такое очевидное, как для цифр
-                .addTask(5541)
-                .addTask(9182)
+                .addTask(new Task9182())//сортировка, подсчет разных
+                .addTask(new Task5541())//сортировка, подсчет разных, выбор различных
+                .addTask(new Task7066())//сортировка кортежей по первому элементу
         //Будет логично сюда поставить еще и бинарный поиск
         ;
     }

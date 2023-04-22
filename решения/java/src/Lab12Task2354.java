@@ -2,10 +2,6 @@
  * Created by Александр on 13.07.2017.
  */
 public class Lab12Task2354 {
-    public static void main(String[] args) {
-        Step9182();
-    }
-
     private static void Step9164() {
         System.out.println();
         System.out.println("9164");
@@ -192,28 +188,6 @@ public class Lab12Task2354 {
         System.out.printf("%d (%d)\n", Lab08.task9925("один"), 1);
     }
 
-    private static void Step4265() {
-        System.out.println();
-        System.out.println("4265");
-        System.out.println(Lab08.task4265("sABCD"));
-        System.out.println(Lab08.task4265("Uxyz"));
-        System.out.println(Lab08.task4265("s"));
-        System.out.println(Lab08.task4265("F123"));
-        System.out.println(Lab08.task4265("Sopqr"));
-    }
-
-    private static void Step1392(){
-        System.out.println();
-        System.out.println("1392");
-        Lab07.task1392("9 8 9 1 1 5 1 1");
-        Lab07.task1392("1 2 3 4 1 3 4 4 4 4");
-        Lab07.task1392("5 5 5 5 5");
-        Lab07.task1392("");
-        Lab07.task1392("13");
-        Lab07.task1392("1 9 1 30 9 1 100");
-        Lab07.task1392("1000000 1 1");
-    }
-
     private static void Step4283() {
         System.out.println();
         System.out.println("4283");
@@ -229,21 +203,6 @@ public class Lab12Task2354 {
         for (int i = 0; i < in4283k.length; i++) {
             int result = Lab07.task4283(in4283k[i], in4283s[i]);
             System.out.printf("%d (%d)\n", result, out4283[i]);
-        }
-    }
-
-    private static void Step9182() {
-        System.out.println();
-        System.out.println("9182");
-        String[] in9182 = {
-                "q w e r t y",
-                "q w e q w y",
-                "q q q q q q"
-        };
-        int[] out9182 = {6, 4, 1};
-        for (int i = 0; i < out9182.length; i++) {
-            int result = Lab07.task9182(in9182[i]);
-            System.out.printf("%d (%d)\n", result, out9182[i]);
         }
     }
 }

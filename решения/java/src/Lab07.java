@@ -101,28 +101,6 @@ public class Lab07 {
         task8122("в,2,з,2,в,7,з");
     }
 
-    public static void step5541() {
-        System.out.println();
-        System.out.println("5541");
-        String[] in5541 = {
-                "q q q q",
-                "q q w w",
-                "q q q w",
-                "q w e r",
-                "q w e r q w",
-                "q q e e w w"
-        };
-        for (int i = 0; i < in5541.length; i++) {
-            StringBuilder sb = new StringBuilder();
-            Set<String> result = Lab07.task5541(in5541[i]);
-            for (String item : result) {
-                sb.append(item);
-                sb.append(" ");
-            }
-            System.out.println(sb.toString());
-        }
-    }
-
     static void task5873(String raw, int t) {
         if (raw.isEmpty()) {
             System.out.println("Исходная строка пуста");
@@ -176,42 +154,6 @@ public class Lab07 {
         String[] arr = raw.split(";");
         int index = (arr.length - 1) / 2;
         System.out.println("Длина массива: " + arr.length + ", индекс: " + index + ", элемент: " + arr[index]);
-    }
-
-    public static void task1392(String raw) {
-        if (raw.length() == 0) {
-            System.out.println("Массив пуст");
-            return;
-        }
-        String[] arr = raw.split(" ");
-        int[] num = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            num[i] = Integer.parseInt(arr[i]);
-        }
-        for (int j = 0; j < num.length - 1; j++) {
-            int minIdx = j;
-            for (int i = j + 1; i < num.length; i++) {
-                if (num[minIdx] > num[i]) {
-                    minIdx = i;
-                }
-            }
-            int temp = num[minIdx];
-            num[minIdx] = num[j];
-            num[j] = temp;
-        }
-        for (int i = 0; i < num.length; i++) {
-            System.out.print(num[i] + " ");
-        }
-        System.out.println();
-        if (num.length % 2 == 0) {
-            int medianLeft = num.length / 2 - 1;
-            int medianRight = num.length / 2;
-            double realMedian = ((double) num[medianLeft] + num[medianRight]) / 2;
-            System.out.printf("Медиана: %.2f\n", realMedian);
-        } else {
-            int medianIdx = num.length / 2;
-            System.out.println("Медиана: " + num[medianIdx]);
-        }
     }
 
     public static double[] task6497(String raw) {
@@ -337,42 +279,6 @@ public class Lab07 {
         System.out.println();
     }
 
-    public static String task6492(String charsRaw, String amountsRaw) {
-        if (charsRaw.isEmpty()) {
-            return "Отсутствуют данные о символах";
-        }
-        if (amountsRaw.isEmpty()) {
-            return "Отсутствуют данные о количествах";
-        }
-        String[] chars = charsRaw.split(" ");
-        String[] amountsStr = amountsRaw.split(" ");
-        if (chars.length != amountsStr.length) {
-            return "Длины массивов не совпадают";
-        }
-        int[] amounts = new int[amountsStr.length];
-        for (int i = 0; i < amountsStr.length; i++) {
-            amounts[i] = Integer.parseInt(amountsStr[i]);
-        }
-        int max = amounts[0];
-        for (int i = 1; i < amounts.length; i++) {
-            if (max < amounts[i]) {
-                max = amounts[i];
-            }
-        }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < max; i++) {
-            for (int j = 0; j < chars.length; j++) {
-                if (i < amounts[j]) {
-                    sb.append(chars[j]);
-                } else {
-                    sb.append(" ");
-                }
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     public static String task7369(String leftRaw, String topRaw) {
         if (leftRaw.isEmpty()) {
             return "Данные слева отсутствуют";
@@ -487,24 +393,6 @@ public class Lab07 {
             }
         }
         return count;
-    }
-
-    public static Set<String> task5541(String raw) {
-        String[] arr = raw.split(" ");
-        Set<String> data = new HashSet<>();
-        for (int i = 0; i < arr.length; i++) {
-            data.add(arr[i]);
-        }
-        return data;
-    }
-
-    public static int task9182(String raw) {
-        String[] arr = raw.split(" ");
-        Set<String> data = new HashSet<>();
-        for (int i = 0; i < arr.length; i++) {
-            data.add(arr[i]);
-        }
-        return data.size();
     }
 
     public static String task3095(String raw) {

@@ -183,32 +183,6 @@ public class Lab12Task7649 {
         }
     }
 
-    static void Step6492(){
-        System.out.println();
-        System.out.println("6492");
-        String[] in6492chars = {
-                "a s d",
-                "z x c v b",
-                "q w e r t y",
-                "a s d f",
-                "z x c",
-                "",
-                "f d s a"
-        };
-        String[] in6492amounts = {
-                "3 2 1",
-                "1 3 5 0 4",
-                "6 2 8 3 1 5",
-                "3 3 3",
-                "1 2 3 4",
-                "1 2 3 4",
-                ""
-        };
-        for (int i = 0; i < in6492chars.length; i++){
-            System.out.println(Lab07.task6492(in6492chars[i], in6492amounts[i]));
-        }
-    }
-
     static void Step7369() {
         System.out.println();
         System.out.println("7369");
