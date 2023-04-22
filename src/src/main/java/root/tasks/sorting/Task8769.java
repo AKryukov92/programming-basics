@@ -6,7 +6,8 @@ public class Task8769 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит числа from и to и данные - целые числа, разделенные пробелами. Напечатать элементы, у которых индекс находится между from и to включительно. Найти минимальное число между элементами с номерами from и to включительно.");
+        appendTaskDesc("Пользователь вводит числа from и to и данные - целые числа, разделенные пробелами. Напечатать элементы, у которых индекс находится между from и to включительно. Между элементами с индексами from и to включительно нужно найти индекс минимального числа и его значение. ");
+        //важно выводить именно индекс, потому что в следующей задаче он будет нужен для перестановки
         appendCheckValuesHeader("data", "from", "to");
         appendCheckValuesRow("5 6 7 8 5 6", "1", "3");
         appendCheckValuesRow("3 4 4 2 3 4 1 2 3 1 2", "8", "10");
@@ -44,17 +45,17 @@ public class Task8769 extends MultipleInputValLayout {
             n = from;
         }
         System.out.print("Фрагмент массива:");
-        int min = Integer.parseInt(arr[i]);
+        int minIndex = 0;
         while (i <= n) {
             System.out.print(" ");
             System.out.print(arr[i]);
             int current = Integer.parseInt(arr[i]);
-            if (current < min) {
-                min = current;
+            if (current < Integer.parseInt(arr[minIndex])) {
+                minIndex = i;
             }
             i++;
         }
         System.out.println("\nМинимальное среди них: ");
-        System.out.println(min);
+        System.out.println(arr[minIndex] + " на индексе " + minIndex);
     }
 }
