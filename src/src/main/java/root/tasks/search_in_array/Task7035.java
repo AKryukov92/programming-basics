@@ -10,23 +10,28 @@ public class Task7035 extends OneInputValLayout {
         for (int i = 0; i < num.length; i++){
             num[i] = Integer.parseInt(arr[i]);
         }
-        int min = num[0];
+        int minIndex = 0;
         System.out.println("Ход решения:");
-        System.out.println("Начинаю и запоминаю " + min);
+        System.out.println("Начинаю и запоминаю " + minIndex);
         for (int i = 1; i < num.length; i++){
-            System.out.println("Сравниваю " + min + " и " + num[i]);
-            if (num[i] < min) {
-                System.out.println("Вместо " + min + " запоминаю " + num[i]);
-                min = num[i];
+            System.out.print("Сравниваю значение " + num[minIndex] + " на индексе " + minIndex);
+            System.out.println(" и значение " + num[i] + " на индексе " + i);
+            if (num[i] < num[minIndex]) {
+                System.out.println("Вместо " + minIndex + " запоминаю " + i);
+                minIndex = i;
             }
         }
-        System.out.println("В массиве {" + String.join(",", arr) + "} минимальный элемент это " + min);
+        System.out.println("В массиве {" + String.join(",", arr) + "} минимальный элемент это " + num[minIndex] + " на индексе " + minIndex);
     }
 
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти минимальное число.");
+        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти минимальное число и его индекс.");
+        appendOrdered("В начале работы запомните индекс минимального как 0.",
+                "Затем просматривайте каждый элемент массива.",
+                "Если просматриваемый элемент массива меньше, чем элемент на индексе минимального, то запомните индекс просматриваемого"
+        );
         appendCheckValuesHeader("");
         appendCheckValuesRow("12 5 7 8 3 4 2");
         appendCheckValuesRow("2 3 4 5 12");
