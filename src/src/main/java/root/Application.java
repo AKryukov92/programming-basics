@@ -62,6 +62,7 @@ public class Application {
             "Обработка неизвестного объема данных",
             "Вложенные циклы",
             "Базовые операции с массивами",
+            //методы?
             "Использование числовых массивов",
 
             "Вычисление агрегатов",
@@ -99,7 +100,7 @@ public class Application {
         fillReadingFiles(taskBooksCs[13]);
         fillWritingFiles(taskBooksCs[14]);
 
-        fillMethods(taskBooksCs[15]);
+        unitTesting(taskBooksCs[15]);
         fillExceptions(taskBooksCs[16]);
         fillAbstractDataStructures(taskBooksCs[17]);
         fillInternalState(taskBooksCs[18]);
@@ -129,7 +130,7 @@ public class Application {
         fillReadingFiles(taskBooksJava[13]);
         fillWritingFiles(taskBooksJava[14]);
 
-        fillMethods(taskBooksJava[15]);
+        unitTesting(taskBooksJava[15]);
         fillExceptions(taskBooksJava[16]);
         fillAbstractDataStructures(taskBooksJava[17]);
         fillInternalState(taskBooksJava[18]);
@@ -653,7 +654,7 @@ public class Application {
                 .addExample(new Task7035())
                 .addTask(new Task1522())//поиск максимального и поиск минимального
                 .addTask(new Task1431())//максимальное и следующее максимальное
-                .addTask(9271)//поиск и манипуляции с массивом
+                .addTask(new Task9271())//поиск и манипуляции с массивом
                 .addTask(new Task8769())//минимальное в участке массива
                 .addTask(new Task4707())//сортировка по возрастанию вставкой
                 .addTask(new Task1392())//вычисление медианы
@@ -793,6 +794,32 @@ public class Application {
     }
 
     private static void fillMethods(TaskBook taskBook) {
+        //это все будет полезно только если человек научился работать с массивами.
+        // если нет, будет двойной затык: оформление и логика
+        //цель всего этого мероприятия - дать ощущение прогресса по материалу и при этом повторить циклы и массивы.
+        //еще методы позволяют быстрее тестировать задачи с большим количеством исходных данных
+        //значит нужны задачи еще и на циклы.
+        //план:
+        //методы с типом возвращаемого значения void пока не давать
+        //оформление текста
+        //методы для простых вычислений: x+ 7
+        //перевод из градусов в радианы
+        //
+
+        //печать массива целиком -- дать без конкретного описания "найдите общий код в нескольких методах и реализуйте как метод"
+        //преобразование массива строк в массив чисел -- дать без конкретного описания
+        //метод для перестановки элементов массива
+        //перестановка первого и указанного
+        //сортировка пузырьком
+        //метод для поиска индекса минимального
+        //метод для поиска индекса минимального в части массива
+        //метод для сортировки вставкой
+        //метод для поиска медианы
+        //метод для подсчета количества различных
+        //метод для формирования нового массива с различными
+    }
+
+    private static void unitTesting(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
                 .addCitation("link_c2_p7")
