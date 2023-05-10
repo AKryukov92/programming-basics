@@ -182,36 +182,6 @@ public class Lab13Task6732 {
         }
     }
 
-    private static void Step5568() {
-        System.out.println();
-        System.out.println("5568");
-        int[] in5568 = {1, 10, -2, 23};
-        for (int i = 0; i < in5568.length; i++){
-            try {
-                StringBuilder result = Lab06.task5568(
-                        new StringBuilder(), in5568[i]);
-                System.out.println(result.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step8395() {
-        System.out.println();
-        System.out.println("8395");
-        int[] in8395 = {1, 13, -1, 21};
-        for (int i = 0; i < in8395.length; i++){
-            try {
-                StringBuilder result = Lab06.task8395(
-                        new StringBuilder(), in8395[i]);
-                System.out.println(result.toString());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step4236() {
         System.out.println();
         System.out.println("4236");

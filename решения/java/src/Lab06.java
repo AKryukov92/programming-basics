@@ -562,61 +562,6 @@ public class Lab06 {
         return true;
     }
 
-    public static StringBuilder task8395(StringBuilder sb, int w) throws IllegalArgumentException {
-        if (w < 0 || w > 20){
-            throw new IllegalArgumentException("Значение W должно быть в интервале [0, 20]");
-        }
-        for (int i = 0; i < w; i++){
-            sb.append("a");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("b");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("c");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("d");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("e");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("f");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("g");
-        }
-        sb.append("\n");
-        for (int i = 0; i < w; i++){
-            sb.append("h");
-        }
-        return sb;
-    }
-
-    public static StringBuilder task5568(StringBuilder sb, int w) throws IllegalArgumentException {
-        if (w < 0 || w > 20){
-            throw new IllegalArgumentException("Значение W должно быть в интервале [0, 20]");
-        }
-        int i = 0;
-        while (i <= 9){
-            int j = 0;
-            while (j < w){
-                sb.append(i);
-                j++;
-            }
-            sb.append("\n");
-            i++;
-        }
-        return sb;
-    }
-
     public static StringBuilder task2592(StringBuilder sb, String s, int w, int h) throws IllegalArgumentException {
         if (w < 0){
             throw new IllegalArgumentException("Значение W должно быть неотрицательно");

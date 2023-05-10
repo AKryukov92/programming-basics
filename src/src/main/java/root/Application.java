@@ -439,7 +439,7 @@ public class Application {
                 .addTask(new Task2565())
                 .addCitation("link_c4_p16.2")
                 .addTask(new Task2321())
-                .addTask(5053)
+                .addTask(new Task5053())
                 .addTask(new Task6663())
                 .addTask(4338)
                 .addTask(new Task7054())
@@ -492,18 +492,18 @@ public class Application {
         taskBook.withSourceDirectory("lab06")
 
                 .withGroup("Цикл после цикла. Подготовка к циклам внутри циклов")
-                .addExample(new Task9249())
-                .addTask(new Task4075())
-                .addTask(new Task8395())
-                .addTask(new Task7323())
+                .addExample(new Task9249())//две строки с одним счетчиком
+                .addTask(new Task4075())//три строчки указанной ширины
+                .addTask(new Task8395())//несколько букв вывести указанное количество раз
+                .addTask(new Task7323())//две строки с одним счетчиком, другое описание
 
                 .withGroup("Циклы один за другим с вложением")
-                .addTask(new Task5568())
-                .addTask(new Task2592())
-                .addTask(new Task6355())
+                .addTask(new Task5568())//вывести числа подряд указанное количество раз
+                .addTask(new Task2592())//вложенные циклы, счетчик не видно
+                .addTask(new Task6355())//вложенные циклы, счетчик увеличивается более чем на 1
 
                 .withGroup("Просто сложные задачи")
-                .addTask(new Task6332())
+                .addTask(new Task6332())//счетчик не видно
                 .addTask(7517)
                 .addTask(5448)
                 .addTask(6572)

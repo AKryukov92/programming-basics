@@ -78,6 +78,26 @@ public class Task8395 extends OneInputValLayout {
         System.out.println();
     }
 
+    protected void logic2(String value) {
+        int width = Integer.parseInt(value);
+        if (width < 1 || width > 20) {
+            System.out.println("Значение width должно быть в интервале от 1 до 20 включительно");
+            return;
+        }
+
+        String[] letters = new String[]{"a", "b", "c", "d", "e", "f", "g", "h"};
+        int index = 0;
+        while (index < letters.length) {
+            int i = 0;
+            while (i < width) {
+                System.out.print(letters[index]);
+                i++;
+            }
+            System.out.println();
+            index++;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(new Task8395());
     }
