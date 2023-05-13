@@ -14,7 +14,7 @@ public class Task2772 extends MultipleInputValLayout implements MethodsDictation
     protected void makeLayout() {
         appendHeader();
         appendSubheading(implementMethodToSolve(7474));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 implementStatic("Library", "task7474")
         );
         appendFooter();

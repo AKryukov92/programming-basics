@@ -6,7 +6,7 @@ public class Task6109 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дан диапазон от 0 до 1000. Пользователь вводит два целых числа: parts и needle. Нужно разбить исходный диапазон на parts частей. Затем нужно выяснить, в какой из диапазонов попадает значение needle.");
+        appendTaskDescEscaped("Дан диапазон от 0 до 1000. Пользователь вводит два целых числа: parts и needle. Нужно разбить исходный диапазон на parts частей. Затем нужно выяснить, в какой из диапазонов попадает значение needle.");
         appendCheckValuesHeader("parts", "needle");
         appendCheckValuesRow("10", "0");
         appendCheckValuesRow("10", "1000");

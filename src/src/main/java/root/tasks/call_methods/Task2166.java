@@ -6,7 +6,7 @@ public class Task2166 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcdacadbacdaabaadc\"." +
+        appendTaskDescEscaped("Дана фиксированная строка \"abcdacadbacdaabaadc\"." +
                 " Пользователь вводит комбинацию из двух символов." +
                 " В исходной строке заменить эту комбинацию (подстроку) на пробелы." +
                 " Воспользуйтесь методом replace. Найдите его в документации." +

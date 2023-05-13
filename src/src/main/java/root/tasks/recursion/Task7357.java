@@ -6,7 +6,7 @@ public class Task7357 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число base. Найти его корень методом бинарного поиска как в задаче " + linkToTask(3827) + " но с помощью рекурсивного алгоритма.");
+        appendTaskDescEscaped("Пользователь вводит число base. Найти его корень методом бинарного поиска как в задаче " + linkToTask(3827) + " но с помощью рекурсивного алгоритма.");
         appendCheckValuesRow("10000");
         appendCheckValuesRow("1000");
         appendCheckValuesRow("9");

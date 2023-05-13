@@ -17,7 +17,7 @@ public class Task1631 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран в столбик 10 чисел, начиная с A включительно. В конце каждой строки с числом должна быть выведена строка с тремя знаками \"-\".");
+        appendTaskDescEscaped("Выведите на экран в столбик 10 чисел, начиная с A включительно. В конце каждой строки с числом должна быть выведена строка с тремя знаками \"-\".");
         appendCheckValuesHeader("A");
         appendCheckValuesRow("8");
         appendCheckValuesRow("9");
@@ -26,7 +26,7 @@ public class Task1631 extends OneInputValLayout {
         appendCheckValuesFooter();
         appendFooter();
 
-        appendTaskDesc("Если возникают затруднения при решении задач, сделайте сначала подробное решение без цикла. Это поможет увидеть закономерность и компактно перефразировать с помощью цикла.");
+        appendTaskDescEscaped("Если возникают затруднения при решении задач, сделайте сначала подробное решение без цикла. Это поможет увидеть закономерность и компактно перефразировать с помощью цикла.");
     }
 
     public static void main(String[] args) {

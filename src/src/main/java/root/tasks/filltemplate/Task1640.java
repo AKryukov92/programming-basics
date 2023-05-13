@@ -7,7 +7,7 @@ public class Task1640 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Переведите алгоритм с естественного языка на ваш язык программирования.");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Выведите на экран значение строкового литерала \"Задача 1640\"",
                 "Объявите переменную undersong для хранения повторяющейся строки.",
                 "Инициализируйте переменную undersong - запишите в нее строковый литерал \"Йо-хо-хо, и бутылка рому!\".",
@@ -15,7 +15,7 @@ public class Task1640 extends OneInputValLayout {
                 "Выведите на экран результат конкатенации строкового литерала \"Пей, и дьявол тебя доведет до конца.\" и переменной undersong."
         );
         appendSubheading("Запустите программу и проверьте, что у вас получился такой же результат");
-        appendCheckSingle(wrapLogic(""));
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
     }
 

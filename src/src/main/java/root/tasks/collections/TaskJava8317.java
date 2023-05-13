@@ -8,14 +8,14 @@ public class TaskJava8317 extends LayoutMaker implements MethodsDictationHelper 
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для решения задачи " + linkToTask(8418));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе Library импортируйте классы \"java.util.Arrays\" и \"java.util.List\".",
                 implementStatic("Library","task8317"),
                 "Он принимает в качестве аргумента 1 целое число и возвращает List целых чисел.",
                 "В теле метода task8317 в случае получения некорректных значений аргументов, нужно выбросить исключение IllegalArgumentException и указать при этом текст ошибки из задачи."
         );
         appendSubheading("Проверьте с помощью юнит-теста результат работы метода task8317 в случаях с корректными данными.");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе TestSuite создайте юнит-тест task8317test.",
                 "В теле метода task8317test создайте переменные с названиями expected и actual типа List для целых чисел.",
                 "Инициализируйте переменную expected результатом вызова статического метода asList класса Arrays. В качестве аргументов передайте числа, ожидаемые в первом тесте.",

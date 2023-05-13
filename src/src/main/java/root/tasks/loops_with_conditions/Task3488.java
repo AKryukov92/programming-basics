@@ -6,7 +6,7 @@ public class Task3488 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит три целых числа: A, B, C. Нужно вывести 10 чисел, начиная с указанных в три столбика.\n" +
+        appendTaskDescEscaped("Пользователь вводит три целых числа: A, B, C. Нужно вывести 10 чисел, начиная с указанных в три столбика.\n" +
                 "Первый столбик начинается с A. Второй - с B. Третий - с C.\n" +
                 "Если хотя бы одно из чисел в строке будет равно 10, то вывести в конце строку \"найдено\".");
         appendCheckValuesHeader("A", "B", "C");

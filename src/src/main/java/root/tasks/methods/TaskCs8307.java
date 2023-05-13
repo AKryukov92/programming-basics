@@ -12,13 +12,13 @@ public class TaskCs8307 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для решения задачи " + linkToTask(1860));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод task1860.",
                 "Он принимает в качестве аргумента 1 строку.",
                 "В теле метода task1860 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных."
         );
         appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В методе main класса Program вызовите метод task1860 класса Library.",
                 "В качестве аргумента передайте ему строковый литерал \"знаниям\"",
                 "Вызовите метод task1860 еще раз и передайте ему строковый литерал \"цели\".",
@@ -26,7 +26,7 @@ public class TaskCs8307 extends OneInputValLayout {
                 "В результате запуска метода main класса Program, в консоли должен появиться текст:"
 
         );
-        appendCheckSingle(wrapLogic("знаниям") + wrapLogic("цели") + wrapLogic("результату"));
+        appendCheckSingleNonEscaped(wrapLogic("знаниям") + wrapLogic("цели") + wrapLogic("результату"));
         appendFooter();
     }
 

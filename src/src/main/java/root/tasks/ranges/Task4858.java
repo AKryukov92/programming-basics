@@ -29,7 +29,7 @@ public class Task4858 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны два интервала чисел red(A;B) green(A;B). Нужно найти их середины и определить, чья середина находится справа, а чья - слева. Числа на оси координат увеличиваются вправо.");
+        appendTaskDescEscaped("Даны два интервала чисел red(A;B) green(A;B). Нужно найти их середины и определить, чья середина находится справа, а чья - слева. Числа на оси координат увеличиваются вправо.");
         appendCheckValuesHeader("redA", "redB", "greenA", "greenB");
         appendCheckValuesRow("2", "3", "5", "7");
         appendCheckValuesRow("11", "17", "13", "19");

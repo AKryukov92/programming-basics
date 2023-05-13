@@ -10,7 +10,7 @@ public class Task1909 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Прочитать из файла список деталей и узлов. Узел может состоять из других узлов и деталей.");
+        appendTaskDescEscaped("Прочитать из файла список деталей и узлов. Узел может состоять из других узлов и деталей.");
         //нужна иерархия:
         //A из 3 B + 2 C
         //B из 5 E + 7 C

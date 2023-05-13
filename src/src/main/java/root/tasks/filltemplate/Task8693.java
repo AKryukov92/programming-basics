@@ -6,8 +6,8 @@ public class Task8693 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран текст наименьшим количеством строк кода. Примените конкатенацию строк и команду записи значения в переменную (присвоение ей значения). Обратите внимание на строку \"Лягнувшая старого пса без хвоста\".");
-        appendCheckSingle(wrapLogic(""));
+        appendTaskDescEscaped("Выведите на экран текст наименьшим количеством строк кода. Примените конкатенацию строк и команду записи значения в переменную (присвоение ей значения). Обратите внимание на строку \"Лягнувшая старого пса без хвоста\".");
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
     }
 

@@ -95,7 +95,7 @@ public class Task5873 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число T и данные - символы, разделенные пробелами.\n" +
+        appendTaskDescEscaped("Пользователь вводит число T и данные - символы, разделенные пробелами.\n" +
                 "Вывести на экран элемент на индексе T." +
                 "Если возможно, то вывести на экран следующий и предыдущий элементы.");
         appendCheckValuesHeader("data", "T");

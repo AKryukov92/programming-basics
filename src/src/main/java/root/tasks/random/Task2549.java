@@ -8,8 +8,8 @@ public class Task2549 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран в столбик 50 случайных чисел от 400 до 999 включительно.");
-        appendCheckSingle("Числа от 400 до 999:" +
+        appendTaskDescEscaped("Выведите на экран в столбик 50 случайных чисел от 400 до 999 включительно.");
+        appendCheckSingleNonEscaped("Числа от 400 до 999:" +
                 "663\n" +
                 "761\n" +
                 "440\n" +

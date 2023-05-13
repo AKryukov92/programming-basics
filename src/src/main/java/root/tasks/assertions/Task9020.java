@@ -6,11 +6,11 @@ public class Task9020 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendTaskId();
-        appendTaskDesc("Сообщение об ошибке должно быть написано так, чтобы пользователь мог понять какие значения или действия от него ожидались." +
+        appendTaskDescEscaped("Сообщение об ошибке должно быть написано так, чтобы пользователь мог понять какие значения или действия от него ожидались." +
                 " В некоторых случаях к сообщению добавляют код ошибки."
         );
         appendTaskHeader();
-        appendNonEscaped("Вычислить результат по формуле <formula>3<sqrt><val>61-x</val></sqrt></formula>");
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula>3<sqrt><val>61-x</val></sqrt></formula>");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-9");

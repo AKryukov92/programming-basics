@@ -6,7 +6,7 @@ public class Task1262 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Вычислить результат по формуле <formula>5cos(yRad)</formula>. Значение угла дано в градусах.");
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula>5cos(yRad)</formula>. Значение угла дано в градусах.");
         appendCheckValuesHeader("yDeg");
         appendCheckValuesRow("200");
         appendCheckValuesRow("360");

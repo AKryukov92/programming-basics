@@ -6,7 +6,7 @@ public class Task5923 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит два целых числа CA и CB. Удалить из исходной строчки CB штук символов, начиная с позиции CA. Вывести результат на экран. Один из вариантов решения - выполнить конкатенацию фрагментов от 0 до CA и от CB до конца строки.");
+        appendTaskDescEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит два целых числа CA и CB. Удалить из исходной строчки CB штук символов, начиная с позиции CA. Вывести результат на экран. Один из вариантов решения - выполнить конкатенацию фрагментов от 0 до CA и от CB до конца строки.");
         appendCheckValuesHeader("CA", "CB");
         appendCheckValuesRow("5", "3");
         appendCheckValuesRow("6", "0");

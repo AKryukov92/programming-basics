@@ -30,6 +30,7 @@ import root.tasks.read_files.*;
 import root.tasks.recursion.Task1068;
 import root.tasks.recursion.Task4106;
 import root.tasks.recursion.Task6646;
+import root.tasks.remainder.Task3883;
 import root.tasks.search.*;
 import root.tasks.search_in_array.*;
 import root.tasks.sorting.*;
@@ -363,7 +364,7 @@ public class Application {
                 .addTask(4257)
                 .addTask(1763)
                 .addTask(1945)
-                .addTask(4859)
+                .addTask(new Task4859())//расчет НДС, округление
 
                 .withGroup("Несколько взаимоисключающих случаев if(){} else if() {} else {}")
                 .addExample(8878)
@@ -401,11 +402,11 @@ public class Application {
                 .addTask(new Task7991())
                 .addTask(new Task7865())
                 .addTask(new Task9705())
-                .addTask(3883)
+                .addTask(new Task3883())//сравнение цифр в числе
                 .addCitation("link_c4_p19.3")
                 .addTask(8751)
                 .addTask(new Task4858())
-                .addTask(3864)
+                .addTask(new Task3864())//Обратная геодезическая задача. сравнение и тригонометрические функции
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
                 .addTask(1217)

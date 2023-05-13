@@ -6,7 +6,7 @@ public class Task4411 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Вычислить результат по формуле x + 7, где x вводится с клавиатуры.");
+        appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("11.13");
         appendCheckValuesRow("-7919");

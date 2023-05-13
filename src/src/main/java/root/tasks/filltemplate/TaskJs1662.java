@@ -6,9 +6,9 @@ public class TaskJs1662 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран текст");
-        appendCheckSingle("+---+\n|   |\n|   |\n+---+");
-        appendCheckSingle("Чтобы изменить часть веб-страницы, нужно найти на ней соответствующий элемент.\n" +
+        appendTaskDescEscaped("Выведите на экран текст");
+        appendCheckSingleNonEscaped("+---+\n|   |\n|   |\n+---+");
+        appendCheckSingleNonEscaped("Чтобы изменить часть веб-страницы, нужно найти на ней соответствующий элемент.\n" +
                 "Для этого нужно применить команду document.getElementById(\"\")\n" +
                 "В круглых скобках нужно указать id элемента.\n" +
                 "В HTML id элемента указывается в атрибуте id.\n" +

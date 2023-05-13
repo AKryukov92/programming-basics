@@ -35,7 +35,7 @@ public class Task3134 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дан известный массив, содержащий элементы: a, s, d, f, g, h. Пользователь вводит два числа P, Q и данные - символы, разделенные пробелами. Нужно переставить местами значения элементов на индексах P и Q.");
+        appendTaskDescEscaped("Дан известный массив, содержащий элементы: a, s, d, f, g, h. Пользователь вводит два числа P, Q и данные - символы, разделенные пробелами. Нужно переставить местами значения элементов на индексах P и Q.");
         appendCheckValuesHeader("P", "Q");
         appendCheckValuesRow("0", "3");
         appendCheckValuesRow("2", "5");

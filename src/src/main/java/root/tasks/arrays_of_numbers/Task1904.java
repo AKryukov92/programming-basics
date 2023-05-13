@@ -6,7 +6,7 @@ public class Task1904 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит массив цифр, разделенных запятой. Нужно собрать из отдельных цифр целое число. К готовому числу нужно прибавить 7 и написать результат.");
+        appendTaskDescEscaped("Пользователь вводит массив цифр, разделенных запятой. Нужно собрать из отдельных цифр целое число. К готовому числу нужно прибавить 7 и написать результат.");
         appendCheckValuesHeader("digits");
         appendCheckValuesRow("9,8,7,6");
         appendCheckValuesRow("1,2,3,4,5,6");

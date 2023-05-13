@@ -4,7 +4,7 @@ public class Task9279 extends root.tasks.OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcabcabbacbacbaaac\". Пользователь вводит комбинацию из двух символов. Вывести первые три индекса, на которых встречается введенная подстрока.");
+        appendTaskDescEscaped("Дана фиксированная строка \"abcabcabbacbacbaaac\". Пользователь вводит комбинацию из двух символов. Вывести первые три индекса, на которых встречается введенная подстрока.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("ab");
         appendCheckValuesRow("bc");

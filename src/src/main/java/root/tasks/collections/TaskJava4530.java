@@ -1,6 +1,5 @@
 package root.tasks.collections;
 
-import root.tasks.LayoutMaker;
 import root.tasks.OneInputValLayout;
 
 import java.util.TreeSet;
@@ -9,7 +8,7 @@ public class TaskJava4530 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Реализовать компаратор для сортировки чисел по сумме их цифр. При равных суммах цифр, нужно сравнивать сами числа.");
+        appendTaskDescEscaped("Реализовать компаратор для сортировки чисел по сумме их цифр. При равных суммах цифр, нужно сравнивать сами числа.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("9 62 232 1113 23 4");
         appendCheckValuesRow("9 62 232 1113 231 45");

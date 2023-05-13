@@ -55,7 +55,7 @@ public class Task2497 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два массива: левый и правый. Элементы в них разделены запятой ','." +
+        appendTaskDescEscaped("Пользователь вводит два массива: левый и правый. Элементы в них разделены запятой ','." +
                 " Если каждый элемент левого массива строго меньше чем все элементы правого массива, написать 'Правильно'." +
                 " В противном случае, надо написать индексы и значения элементов, которые нарушают правило. Хотя бы одну пару.");
         appendCheckValuesHeader("левый массив(left)", "правый массив (right)");
@@ -72,7 +72,7 @@ public class Task2497 extends TwoInputValLayout {
         appendCheckValuesRow("9,8,7", "");
         appendCheckValuesFooter();
         appendFooter();
-        appendTaskDesc("Попробуйте решить это задание правильно по смыслу, но так чтобы напечатался другой текст в тестах с нарушениями правила.");
+        appendTaskDescEscaped("Попробуйте решить это задание правильно по смыслу, но так чтобы напечатался другой текст в тестах с нарушениями правила.");
     }
 
     public static void main(String[] args) {

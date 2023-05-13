@@ -22,7 +22,7 @@ public class Task7086 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число x." +
+        appendTaskDescEscaped("Пользователь вводит число x." +
                 " Вывести на экран две строчки чисел." +
                 " Первая начинается с числа x, после которого написаны 10 следующих чисел с шагом 3." +
                 " Вторая заканчивается числом x, перед которым написаны 10 предыдущих чисел с шагом 4.");

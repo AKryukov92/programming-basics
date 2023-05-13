@@ -7,14 +7,14 @@ public class TaskJava5789 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(1058));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для исходного кода создайте класс Point.",
                 "В классе Point реализуйте публичный статический метод distanceBetween.",
                 "Он принимает в качестве аргумента 4 действительных числа и возвращает действительное число.",
                 "В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для юнит-тестов создайте класс PointSuite.",
                 "В классе PointSuite создайте юнит-тест distanceBetweenValuesTest.",
                 "Вызовите статический метод distanceBetween класса Point.",

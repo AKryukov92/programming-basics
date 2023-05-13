@@ -20,10 +20,10 @@ public class TaskJava8775 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". " +
+        appendTaskDescEscaped("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". " +
                 "Все команды должны быть использованы. " +
                 "Дописывать новые команды и дублировать существующие - нельзя.");
-        appendCheckSingle("String[] arr = {\"ус\", \"пех\", \"резерв\", \"вал\", \"про\"};\n" +
+        appendCheckSingleNonEscaped("String[] arr = {\"ус\", \"пех\", \"резерв\", \"вал\", \"про\"};\n" +
                 "arr[0] = arr[4];\n" +
                 "arr[2] = arr[0];\n" +
                 "arr[1] = arr[3];\n" +

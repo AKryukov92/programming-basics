@@ -33,7 +33,7 @@ public class TaskJava7040 extends MultipleInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Прочитайте условие задачи");
-        appendTaskDesc("Даны три числа. Первые два обозначают левую и правую границы интервала." +
+        appendTaskDescEscaped("Даны три числа. Первые два обозначают левую и правую границы интервала." +
                 " Нужно проверить, попадает ли третье число в описанный интервал." +
                 " Левая граница включительно, правая - исключительно.");
         appendCheckValuesHeader("left", "right", "x");
@@ -45,7 +45,7 @@ public class TaskJava7040 extends MultipleInputValLayout {
         appendCheckValuesRow("999", "1", "100");
         appendCheckValuesFooter();
         appendSubheading("Реализуйте статический метод с тремя аргументами");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке с исходным кодом создайте класс Range",
                 "В классе Range реализуйте публичный статический метод contains",
                 "Он принимает в качестве аргумента 3 действительных числа и возвращает логическое значение.",
@@ -53,7 +53,7 @@ public class TaskJava7040 extends MultipleInputValLayout {
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для юнит-тестов создайте класс RangeSuite.",
                 "В классе RangeSuite создайте юнит-тест doublesContainDoubleTest.",
                 "Объявите переменную actual и запишите в неё результат вызова метода contains с аргументами 100, 200, 300.",

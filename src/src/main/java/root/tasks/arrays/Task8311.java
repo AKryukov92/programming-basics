@@ -38,7 +38,7 @@ public class Task8311 extends ThreeInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два числа B и E и данные - символы, разделенные пробелами. Значение B может быть как меньше, так и больше E. Нужно вывести элементы, у которых индекс находится между B и E включительно.");
+        appendTaskDescEscaped("Пользователь вводит два числа B и E и данные - символы, разделенные пробелами. Значение B может быть как меньше, так и больше E. Нужно вывести элементы, у которых индекс находится между B и E включительно.");
         appendCheckValuesHeader("data", "B", "E");
         appendCheckValuesRow("z x c v b", "0", "3");
         appendCheckValuesRow("z x c v b", "1", "3");

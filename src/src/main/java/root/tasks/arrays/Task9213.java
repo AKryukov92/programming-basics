@@ -6,7 +6,7 @@ public class Task9213 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано два массива одинаковой длины: с числами и с фрагментами строк. Для всех элементов массива чисел, которые меньше 50, нужно вывести элементы из массива фрагментов с равным индексом.");
+        appendTaskDescEscaped("Дано два массива одинаковой длины: с числами и с фрагментами строк. Для всех элементов массива чисел, которые меньше 50, нужно вывести элементы из массива фрагментов с равным индексом.");
         appendCheckValuesHeader("numbers", "fragments");
         appendCheckValuesRow("0,10,20,100,200", "as,df,gh,jk,kl");
         appendCheckValuesRow("1000,200,50", "qwer,asdf,zxcv");

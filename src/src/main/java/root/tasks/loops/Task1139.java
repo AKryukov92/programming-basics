@@ -16,7 +16,7 @@ public class Task1139 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число x. Вывести на экран в строчку число x, а также 10 следующих чисел с шагом 3.");
+        appendTaskDescEscaped("Пользователь вводит число x. Вывести на экран в строчку число x, а также 10 следующих чисел с шагом 3.");
         appendCheckValuesHeader("x");
         appendCheckValuesRow("2");
         appendCheckValuesRow("4");

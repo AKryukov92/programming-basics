@@ -8,7 +8,7 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
     protected void makeLayout() {
         appendHeader();
         appendSubheading(implementMethodToSolve(3943));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 implementStatic("Library", "Task3943"),
                 "Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
@@ -18,7 +18,7 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
                 "Создайте ещё один метод в классе Program проекта Runner3943. Назовите его Step3943. Он ничего не возвращает и не принимает аргументов."
         );
         appendSubheading("Реализуйте метод Step3943");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Выведите в консоль сообщение \"Введите значения x и y\"",
                 "Объявите переменные x и y для хранения целых чисел.",
                 "Инициализируйте переменные x и y значениями, полученными из консоли.",
@@ -28,7 +28,7 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
                 "Выведите на экран сообщение \"Результат равен\" и значение переменной result с точностью 4 знака после запятой."
         );
         appendSubheading("Оформите метод Main");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Выведите сообщение \"Начало работы программы\".",
                 "Вызовите метод Step1934.",
                 "Выведите сообщение \"Конец работы программы\"."
@@ -80,7 +80,7 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
                 "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
                 "Обработайте FormatException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
                 "Стек вызовов не должен выводиться не экран в случае ошибки.",

@@ -6,7 +6,7 @@ public class TaskJava4845 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\"." +
+        appendTaskDescNonEscaped("Дана фиксированная строка \"abcdefwxyz\"." +
                 " Пользователь вводит два числа: CA и CB." +
                 " Если CA меньше CB, то вывести буквы на индексах от CA до CB, исключая CB." +
                 " В ином случае, вывести буквы на индексах от CB до CA, исключая CA." +

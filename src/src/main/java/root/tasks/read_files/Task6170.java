@@ -13,17 +13,17 @@ public class Task6170 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Дано два исходных файла: список сотрудников и список отделов." +
+        appendTaskDescNonEscaped("Дано два исходных файла: список сотрудников и список отделов." +
                 "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "department_id - код отдела",
                 "department_name - наименование отдела",
                 "manager_id - код сотрудника-руководителя",
                 "location_id - код офиса"
         );
-        appendNonEscaped("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendTaskDescNonEscaped("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         resetOrdered();
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "employee_id - код сотрудника",
                 "first_name - имя",
                 "last_name - фамилия",
@@ -38,7 +38,7 @@ public class Task6170 extends OneInputValLayout {
 
                 "department_id - код отдела"
         );
-        appendTaskDesc("Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и НАИМЕНОВАНИЕ отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
+        appendTaskDescEscaped("Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и НАИМЕНОВАНИЕ отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.");
         appendCheckValuesHeader("Код сотрудника");
         appendCheckValuesRow("100");
         appendCheckValuesRow("107");

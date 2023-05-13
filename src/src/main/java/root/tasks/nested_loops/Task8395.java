@@ -6,7 +6,7 @@ public class Task8395 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число width. Выведите на экран буквы латинского алфавита a,b,c,d,e,f,g,h. Каждая буква должна быть на новой строчке. Количество букв в строчке вводится с клавиатуры. Если width меньше 1 или больше 20, вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Пользователь вводит число width. Выведите на экран буквы латинского алфавита a,b,c,d,e,f,g,h. Каждая буква должна быть на новой строчке. Количество букв в строчке вводится с клавиатуры. Если width меньше 1 или больше 20, вывести сообщение об ошибке.");
         appendCheckValuesHeader("width");
         appendCheckValuesRow("1");
         appendCheckValuesRow("3");

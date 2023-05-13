@@ -6,7 +6,7 @@ public class Task2321 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран в строчку числа от А до В включительно по возрастанию. Перед списком чисел напишите в каком порядке они выводились. Значение A может быть как меньше, так и больше B.");
+        appendTaskDescEscaped("Выведите на экран в строчку числа от А до В включительно по возрастанию. Перед списком чисел напишите в каком порядке они выводились. Значение A может быть как меньше, так и больше B.");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("8", "13");
         appendCheckValuesRow("23", "11");

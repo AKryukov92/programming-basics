@@ -22,7 +22,7 @@ public class Task5683 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелами. Вывести элементы массива на экран в столбик и пронумеровать их, начиная с нуля.");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные пробелами. Вывести элементы массива на экран в столбик и пронумеровать их, начиная с нуля.");
         appendCheckValuesHeader("str");
         appendCheckValuesRow("qw er ty");
         appendCheckValuesRow("qw er ty ui op");

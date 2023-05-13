@@ -6,7 +6,7 @@ public class TaskJava7491 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#contains-java.lang.CharSequence-'>(открыть справку в новой вкладке)</a>");
+        appendTaskDescNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#contains-java.lang.CharSequence-'>(открыть справку в новой вкладке)</a>");
         appendCheckValuesHeader("needle");
         appendCheckValuesRow("z");
         appendCheckValuesRow("bx");

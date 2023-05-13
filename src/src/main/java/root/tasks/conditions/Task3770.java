@@ -6,7 +6,7 @@ public class Task3770 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны действительные числа x, y, z. Вывести на экран значение наибольшего из них.");
+        appendTaskDescEscaped("Даны действительные числа x, y, z. Вывести на экран значение наибольшего из них.");
         appendCheckValuesHeader("X", "Y", "Z");
         appendCheckValuesRow("1", "2", "3");
         appendCheckValuesRow("100", "215", "478");

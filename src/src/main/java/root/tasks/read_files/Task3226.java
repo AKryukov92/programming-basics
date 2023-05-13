@@ -10,7 +10,7 @@ public class Task3226 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Файл с исходными данными содержит открывающиеся и закрывающиеся фигурные скобочки.Если есть другая, нужно вывести сообщение об ошибке. Нужно определить максимальную глубину вложенности.");
+        appendTaskDescEscaped("Файл с исходными данными содержит открывающиеся и закрывающиеся фигурные скобочки.Если есть другая, нужно вывести сообщение об ошибке. Нужно определить максимальную глубину вложенности.");
         appendCheckValuesHeader("filename");
         appendCheckValuesRowWithFile("files/task3226/test1.txt");
         appendCheckValuesRowWithFile("files/task3226/test2.txt");

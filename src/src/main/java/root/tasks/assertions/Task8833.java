@@ -5,17 +5,17 @@ import root.tasks.OneInputValLayout;
 public class Task8833 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
-        appendTaskDesc("При разработке программы мы первым делаем реализуем основную логику, а потом проверки." +
+        appendTaskDescEscaped("При разработке программы мы первым делаем реализуем основную логику, а потом проверки." +
                 " Но в коде проверка исходных данных обычно располагается в начале, сразу после получения исходных данных и перед основной логикой.");
         appendSubheading("Общий план работы программы");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Получить исходные данные.",
                 "Проверить корректность исходных данных и сообщить об ошибке.",
                 "Если данные корректны, то выполнить полезные действия.",
                 "Сообщить пользователю результат."
         );
         appendHeader();
-        appendNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>");
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("7606");
         appendCheckValuesRow("9");

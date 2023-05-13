@@ -37,7 +37,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Прочитайте условие задачи. Оно совпадает с условием в задаче " + linkToTask(7040) + "");
-        appendTaskDesc(
+        appendTaskDescEscaped(
                 "Даны три числа. Первые два обозначают левую и правую границы интервала." +
                 " Нужно проверить, попадает ли третье число в описанный интервал." +
                 " Левая граница включительно, правая - исключительно."
@@ -52,7 +52,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
         appendCheckValuesRow("30", "20", "3");
         appendCheckValuesFooter();
         appendSubheading("Реализуйте статический метод с двумя аргументами");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке с исходным кодом создайте класс Range.",
                 "Объявите в классе Range поля \"from\" и \"to\" для целых чисел.",
                 "В классе Range реализуйте публичный статический метод contains.",
@@ -61,7 +61,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
                 "Если поле from больше поля to, то метод contains должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для юнит-тестов создайте класс RangeSuite.",
                 "В классе RangeSuite создайте юнит-тест rangeContainsDoubleTest. Далее действия нужно выполнять в теле этого метода.",
                 "Объявите переменную actual для хранения логических значений.",

@@ -6,15 +6,15 @@ public class Task8543 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит дату в формате hh:mm dd.MM.yyyy, где");
-        appendOrdered(
+        appendTaskDescEscaped("Пользователь вводит дату в формате hh:mm dd.MM.yyyy, где");
+        appendOrderedNonEscaped(
                 "hh - номер часа в дне в 24 часовом формате",
                 "mm - номер минуты в часу",
                 "dd - номер дня в месяце",
                 "MM - номер месяца в году",
                 "yyyy - номер года"
         );
-        appendTaskDesc("Извлечь из строки все фрагменты даты и подробно описать что означает дата. Используйте методы indexOf и substring.");
+        appendTaskDescEscaped("Извлечь из строки все фрагменты даты и подробно описать что означает дата. Используйте методы indexOf и substring.");
         appendCheckValuesHeader("datetime");
         appendCheckValuesRow("19:39 16.11.2016");
         appendCheckValuesRow("0:0 1.1.1970");

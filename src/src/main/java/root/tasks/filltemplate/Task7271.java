@@ -6,8 +6,8 @@ public class Task7271 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $X на введенное значение x. $Y на введенное значение y.");
-        appendCheckSingle("INSERT INTO points (x, y) VALUES ('$X', '$Y');");
+        appendTaskDescEscaped("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $X на введенное значение x. $Y на введенное значение y.");
+        appendCheckSingleNonEscaped("INSERT INTO points (x, y) VALUES ('$X', '$Y');");
         appendCheckValuesHeader("x", "y");
         appendCheckValuesRow("5", "7");
         appendCheckValuesRow("-1", "1000");

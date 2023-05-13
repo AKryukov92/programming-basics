@@ -6,7 +6,7 @@ public class Task9969 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число start. Нужно вывести это число три раза в строку. А потом продолжая строку вывести 10 следующих чисел с шагом 7. Последнее получившееся число тоже нужно вывести три раза в строку.");
+        appendTaskDescEscaped("Пользователь вводит число start. Нужно вывести это число три раза в строку. А потом продолжая строку вывести 10 следующих чисел с шагом 7. Последнее получившееся число тоже нужно вывести три раза в строку.");
         appendCheckValuesHeader("start");
         appendCheckValuesRow("0");
         appendCheckValuesRow("1");

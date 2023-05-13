@@ -6,10 +6,10 @@ public class Task3474 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дан прямоугольный треугольник. В нем известна длина катета(cathetus) и прилежащий угол(angleDeg)." +
+        appendTaskDescEscaped("Дан прямоугольный треугольник. В нем известна длина катета(cathetus) и прилежащий угол(angleDeg)." +
                 " Нужно найти формулу для вычисления длины гипотенузы в интернете и применить её." +
                 " Точность результата - 4 знака после запятой. Результат вывести по шаблону.");
-        appendCheckSingle("Значение угла в радианах $angleRad\nКосинус этого угла $cos\nДлина гипотенузы $hypotenuse");
+        appendCheckSingleNonEscaped("Значение угла в радианах $angleRad\nКосинус этого угла $cos\nДлина гипотенузы $hypotenuse");
         appendCheckValuesHeader("cathetus", "angleDeg", "hypotenuse");
         appendCheckValuesRow("40", "30");
         appendCheckValuesRow("20", "89");

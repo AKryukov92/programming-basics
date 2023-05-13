@@ -20,7 +20,7 @@ public class Task1259 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит целое число. Это количество символов '*', которые нужно вывести в строчку. Вывести не более 20 символов.");
+        appendTaskDescEscaped("Пользователь вводит целое число. Это количество символов '*', которые нужно вывести в строчку. Вывести не более 20 символов.");
         appendCheckValuesHeader("width");
         appendCheckValuesRow("0");
         appendCheckValuesRow("1");
@@ -34,7 +34,7 @@ public class Task1259 extends OneInputValLayout {
         appendCheckValuesRow("-100");
         appendCheckValuesRow("-1000");
         appendCheckValuesFooter();
-        appendTaskDesc("Попробуйте адаптировать решение задачи " + linkToTask(2594));
+        appendTaskDescEscaped("Попробуйте адаптировать решение задачи " + linkToTask(2594));
         appendFooter();
     }
 

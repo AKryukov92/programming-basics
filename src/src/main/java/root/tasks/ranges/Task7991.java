@@ -25,7 +25,7 @@ public class Task7991 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны три действительных числа. Вывести только те числа, которые принадлежат интервалу (-11;13) исключая границы.");
+        appendTaskDescEscaped("Даны три действительных числа. Вывести только те числа, которые принадлежат интервалу (-11;13) исключая границы.");
         appendCheckValuesHeader("X", "Y", "Z");
         appendCheckValuesRow("9", "10", "11");
         appendCheckValuesRow("3", "20", "0");
@@ -37,7 +37,7 @@ public class Task7991 extends MultipleInputValLayout {
         appendCheckValuesRow("13", "-11", "6");
         appendCheckValuesRow("8", "13", "-11");
         appendCheckValuesFooter();
-        appendTaskDesc("Эту задачу полезно решить двумя способами. Один способ - с помощью одной конструкции if(){} else if(){} else if(){}. Другой способ - сделать три отдельных if, у каждого из которых есть else.");
+        appendTaskDescEscaped("Эту задачу полезно решить двумя способами. Один способ - с помощью одной конструкции if(){} else if(){} else if(){}. Другой способ - сделать три отдельных if, у каждого из которых есть else.");
         appendFooter();
     }
 

@@ -7,7 +7,7 @@ public class Task7365 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Переведите алгоритм с естественного языка на ваш язык программирования.");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Объявите переменную accountBalance для хранения баланса счета.",
                 "Объявите переменную messageText для хранения текста сообщения.",
                 "Инициализируйте переменную accountBalance - запишите в нее строковый литерал \"0,37\".",
@@ -18,8 +18,8 @@ public class Task7365 extends LayoutMaker {
                 "Запишите в переменную messageText результат конкатенации значения переменной messageText и строкового литерала \" руб.\".",
                 "Выведите на экран значение переменной messageText."
         );
-        appendTaskDesc("Запустите программу и проверьте, что у вас получился такой же результат");
-        appendCheckSingle("Задача 7365\n" +
+        appendTaskDescEscaped("Запустите программу и проверьте, что у вас получился такой же результат");
+        appendCheckSingleNonEscaped("Задача 7365\n" +
                 "Пора пополнить счет!\n" +
                 "Баланс Вашего счета составляет 0,37 руб.");
         appendFooter();

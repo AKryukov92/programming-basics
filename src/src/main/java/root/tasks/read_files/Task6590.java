@@ -10,8 +10,8 @@ public class Task6590 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Исходный файл " + linkToFile("files/task6590/employees.csv", "employees.csv") + "содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
-        appendOrdered(
+        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task6590/employees.csv", "employees.csv") + "содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendOrderedNonEscaped(
                 "employee_id - код сотрудника",
                 "first_name - имя",
                 "last_name - фамилия" ,
@@ -24,8 +24,8 @@ public class Task6590 extends OneInputValLayout {
                 "manager_id - код руководителя",
                 "department_id - код отдела>"
         );
-        appendTaskDesc("Руководителем считается сотрудник, чей идентификатор указан у другого сотрудника в поле manager_id. Для каждого руководителя нужно вывести его фамилию, код должности и идентификаторы подчиненных сотрудников.");
-        appendCheckSingle(wrapLogic("files/task6590/employees.csv"));
+        appendTaskDescEscaped("Руководителем считается сотрудник, чей идентификатор указан у другого сотрудника в поле manager_id. Для каждого руководителя нужно вывести его фамилию, код должности и идентификаторы подчиненных сотрудников.");
+        appendCheckSingleNonEscaped(wrapLogic("files/task6590/employees.csv"));
         appendFooter();
     }
 

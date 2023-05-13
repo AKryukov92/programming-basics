@@ -6,7 +6,7 @@ public class Task6066 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран в строчку числа от А до В включительно. После каждого числа должен быть выведен символ \";\". Если A > B, то вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Выведите на экран в строчку числа от А до В включительно. После каждого числа должен быть выведен символ \";\". Если A > B, то вывести сообщение об ошибке.");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("8", "12");
         appendCheckValuesRow("5", "5");

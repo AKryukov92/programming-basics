@@ -6,8 +6,8 @@ public class Task7474 extends ThreeInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $A, $B, $C на введенные значения a, b, c соответственно.");
-        appendCheckSingle("Квадратное уравнение $A*x*x + $B*x + $C = 0.\n" +
+        appendTaskDescEscaped("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $A, $B, $C на введенные значения a, b, c соответственно.");
+        appendCheckSingleNonEscaped("Квадратное уравнение $A*x*x + $B*x + $C = 0.\n" +
                 "Его дискриминант вычисляется по формуле: d = $B*$B - 4*$A*$C");
         appendCheckValuesHeader("a","b","c");
         appendCheckValuesRow("1", "2", "3");

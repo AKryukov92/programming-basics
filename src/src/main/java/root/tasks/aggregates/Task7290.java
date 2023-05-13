@@ -25,7 +25,7 @@ public class Task7290 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число B и данные - целые числа, разделенные пробелами. Определить сколько элементов массива меньше, чем элемент на позиции B.");
+        appendTaskDescEscaped("Пользователь вводит число B и данные - целые числа, разделенные пробелами. Определить сколько элементов массива меньше, чем элемент на позиции B.");
         appendCheckValuesHeader("data", "B");
         appendCheckValuesRow("1 1 1 3 4", "3");
         appendCheckValuesRow("3 2 15 10 4 60", "3");

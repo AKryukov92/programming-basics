@@ -7,7 +7,7 @@ public class Task6663 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число start." +
+        appendTaskDescEscaped("Пользователь вводит число start." +
                 " Нужно вывести числа от start до 25 включительно." +
                 " Если число start меньше 25, то по возрастанию." +
                 " Иначе - по убыванию." +

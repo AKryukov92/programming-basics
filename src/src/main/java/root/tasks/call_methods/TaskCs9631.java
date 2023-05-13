@@ -6,7 +6,7 @@ public class TaskCs9631 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод IndexOf <a target='_blank' href='https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netframework-4.8.1'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке.");
+        appendTaskDescNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод IndexOf <a target='_blank' href='https://learn.microsoft.com/ru-ru/dotnet/api/system.string.indexof?view=netframework-4.8.1'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке.");
         appendCheckValuesHeader("needle");
         appendCheckValuesRow("z");
         appendCheckValuesRow("a");

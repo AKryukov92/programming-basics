@@ -33,7 +33,7 @@ public class Task1522 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - числа, разделенные символом \"_\". Найти разницу между максимальным и минимальным элементом.");
+        appendTaskDescEscaped("Пользователь вводит данные - числа, разделенные символом \"_\". Найти разницу между максимальным и минимальным элементом.");
         appendCheckValuesHeader("N", "sum");
         appendCheckValuesRow("9_8_7_6_5_4");
         appendCheckValuesRow("5_9_1_6_7_3");

@@ -7,7 +7,7 @@ public class TaskJava4574 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(6589));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке исходным кодом создайте класс Range.",
                 "Объявите в классе Range поля \"from\" и \"to\" для целых чисел.",
                 "В классе Range реализуйте публичный статический метод hasIntersection.",
@@ -16,7 +16,7 @@ public class TaskJava4574 extends LayoutMaker {
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для юнит-тестов создайте класс RangeSuite.",
                 "В классе RangeSuite создайте юнит-тест hasIntersectionIntsTest.",
                 "В теле метода hasIntersectionIntsTest вызовите метод hasIntersection.",
@@ -28,7 +28,7 @@ public class TaskJava4574 extends LayoutMaker {
                 "После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов."
         );
         appendSubheading("Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе RangeSuite создайте 2 юнит-теста hasIntersectionIntsWrongRedTest и hasIntersectionIntsWrongGreenTest.",
                 "Они должны проверять факт возникновения исключения IllegalArgumentException.",
                 "В теле метода hasIntersectionIntsWrongRedTest вызовите метод hasIntersection.",

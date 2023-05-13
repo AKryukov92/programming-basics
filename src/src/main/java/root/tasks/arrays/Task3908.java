@@ -6,8 +6,8 @@ public class Task3908 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \"#\". Вывести на экран третий с конца элемент.");
-        appendCheckSingle("В массиве длиной $length\n" +
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные символом \"#\". Вывести на экран третий с конца элемент.");
+        appendCheckSingleNonEscaped("В массиве длиной $length\n" +
                 "Индекс третьего элемента с конца $index\n" +
                 "Значение этого элемента $value");
         appendCheckValuesHeader("arr");

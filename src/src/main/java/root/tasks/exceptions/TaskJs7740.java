@@ -6,13 +6,13 @@ public class TaskJs7740 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке с задачами создайте файл task7740.html.",
                 "Создайте в нем одно поле для ввода, поле для вывода результата и кнопку.",
                 "Решите описанную ниже задачу. Исходные данные пользователь вводит вручную.",
                 "Обработайте ситуацию, когда пользователь вводит не числа."
         );
-        appendTaskDesc("Вычислить результат по формуле x + 7, где x вводится с клавиатуры");
+        appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("11.13");
         appendCheckValuesRow("-7919");

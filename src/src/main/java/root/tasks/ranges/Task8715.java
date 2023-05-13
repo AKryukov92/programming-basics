@@ -6,7 +6,7 @@ public class Task8715 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны действительные числа a, b, c. Проверить, выполняются ли неравенства a&lt;b&lt;c.");
+        appendTaskDescEscaped("Даны действительные числа a, b, c. Проверить, выполняются ли неравенства a&lt;b&lt;c.");
         appendCheckValuesHeader("A", "B", "C");
         appendCheckValuesRow("1", "2", "3");
         appendCheckValuesRow("-4", "0", "5");

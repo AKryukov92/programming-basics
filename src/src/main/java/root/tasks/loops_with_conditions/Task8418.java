@@ -6,7 +6,7 @@ public class Task8418 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано положительное целое число X. Вывести все его делители в строчку.");
+        appendTaskDescEscaped("Дано положительное целое число X. Вывести все его делители в строчку.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("6");
         appendCheckValuesRow("385");

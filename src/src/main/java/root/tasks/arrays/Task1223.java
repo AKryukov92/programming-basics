@@ -17,7 +17,7 @@ public class Task1223 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \",\" (запятая). Вывести данные в обратном порядке в строчку без запятых.");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные символом \",\" (запятая). Вывести данные в обратном порядке в строчку без запятых.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("q,w,e,r,t,y");
         appendCheckValuesRow("q,w,e,r,t,y,q,w,e,r");

@@ -20,7 +20,7 @@ public class Task4515 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелами. Проверить, есть ли среди введенных символов повторения.");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные пробелами. Проверить, есть ли среди введенных символов повторения.");
         appendCheckValuesHeader("N", "sum");
         appendCheckValuesRow("q w e r");
         appendCheckValuesRow("q w q r");

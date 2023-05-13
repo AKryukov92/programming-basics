@@ -33,7 +33,7 @@ public class Task3333 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число S и данные - символы, разделенные пробелами." +
+        appendTaskDescEscaped("Пользователь вводит число S и данные - символы, разделенные пробелами." +
                 " Сдвинуть все элементы массива на S позиций вправо."
         );
         appendCheckValuesHeader("data", "S");

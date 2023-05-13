@@ -6,7 +6,7 @@ public class Task8722 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два целых числа: A и B. Выведите на экран два столбика чисел по возрастанию с шагом 1. В первом - от 0 до A. Во втором - от 0 до B. Если одно из введенных чисел меньше нуля, вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Пользователь вводит два целых числа: A и B. Выведите на экран два столбика чисел по возрастанию с шагом 1. В первом - от 0 до A. Во втором - от 0 до B. Если одно из введенных чисел меньше нуля, вывести сообщение об ошибке.");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("2", "5");
         appendCheckValuesRow("5", "2");

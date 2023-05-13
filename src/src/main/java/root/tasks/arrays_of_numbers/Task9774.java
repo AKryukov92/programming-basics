@@ -23,7 +23,7 @@ public class Task9774 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число M и данные - целые числа, разделенные пробелами. Умножить все элементы массива на M.");
+        appendTaskDescEscaped("Пользователь вводит число M и данные - целые числа, разделенные пробелами. Умножить все элементы массива на M.");
         appendCheckValuesHeader("data", "M");
         appendCheckValuesRow("9 8 7 6 5 4", "31");
         appendCheckValuesRow("9 8 7 6 5 4", "-3");

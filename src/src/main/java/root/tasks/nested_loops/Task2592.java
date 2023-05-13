@@ -6,7 +6,7 @@ public class Task2592 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран прямоугольник из символов. Символ S, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.");
+        appendTaskDescEscaped("Выведите на экран прямоугольник из символов. Символ S, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.");
         appendCheckValuesHeader("S", "W", "H");
         appendCheckValuesRow("#", "5", "3");
         appendCheckValuesRow("?", "7", "10");

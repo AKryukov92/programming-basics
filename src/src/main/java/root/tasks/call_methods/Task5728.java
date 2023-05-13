@@ -6,14 +6,14 @@ public class Task5728 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дан текст");
-        appendCheckSingle("&lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;\n" +
+        appendTaskDescEscaped("Дан текст");
+        appendCheckSingleNonEscaped("&lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;\n" +
                 "\n" +
                 "&lt;svg width=\"800\" height=\"600\"&gt;\n" +
                 "    &lt;circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\"\n" +
                 "        stroke-width=\"4\" fill=\"yellow\"/&gt;\n" +
                 "&lt;/svg&gt;");
-        appendTaskDesc("Пользователь вводит два фрагмента текста: open и close. Вывести на экран фрагмент текста (подстроку), который находится между open и close, исключая их. Нужно найти позицию того фрагмента close, который находится после окончания фрагмента open.");
+        appendTaskDescEscaped("Пользователь вводит два фрагмента текста: open и close. Вывести на экран фрагмент текста (подстроку), который находится между open и close, исключая их. Нужно найти позицию того фрагмента close, который находится после окончания фрагмента open.");
         appendCheckValuesHeader("open", "close");
         appendCheckValuesRowEscaped("<svg", ">");
         appendCheckValuesRowEscaped("<h1>", "</h1>");

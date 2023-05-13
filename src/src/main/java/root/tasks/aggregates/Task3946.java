@@ -6,7 +6,7 @@ public class Task3946 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое введенных элементов. Вывести с точностью 6 знаков после запятой.");
+        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое введенных элементов. Вывести с точностью 6 знаков после запятой.");
         appendCheckValuesHeader("array");
         appendCheckValuesRow("9 8 9 1 1 5 1 1");
         appendCheckValuesRow("1 2 3 4 1 3 4 4 4 4");

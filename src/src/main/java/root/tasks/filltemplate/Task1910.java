@@ -7,14 +7,14 @@ public class Task1910 extends MultipleInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Переведите алгоритм с естественного языка на ваш язык программирования.");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Объявите переменную companyName для хранения названия компании.",
                 "Объявите переменную productName для хранения наименования товара.",
                 "Объявите переменную productCost для хранения цены на товар.",
                 "Объявите переменную messagePart для хранения фрагментов сообщения."
         );
-        appendTaskDesc("Получите данные от пользователя");
-        appendOrdered(
+        appendTaskDescEscaped("Получите данные от пользователя");
+        appendOrderedNonEscaped(
                 "Выведите на экран строковый литерал \"Задача 1910\".",
                 "Выведите на экран строковый литерал \"Введите название компании\".",
                 "Инициализируйте companyName - запишите в нее строку, полученную от пользователя.",
@@ -23,8 +23,8 @@ public class Task1910 extends MultipleInputValLayout {
                 "Выведите на экран строковый литерал \"Введите цену товара\".",
                 "Инициализируйте productCost - запишите в нее строку, полученную от пользователя."
         );
-        appendTaskDesc("Сформируйте ответ и выведите его на экран");
-        appendOrdered(
+        appendTaskDescEscaped("Сформируйте ответ и выведите его на экран");
+        appendOrderedNonEscaped(
                 "Выполните конкатенацию строкового литерала \"Распродажа в \", переменной companyName и строкового литерала \"!\".",
                 "Запишите в переменную messagePart результат конкатенации.",
                 "Выведите на экран значение переменной messagePart.",
@@ -37,7 +37,7 @@ public class Task1910 extends MultipleInputValLayout {
                 "Выведите на экран с новой строки значение переменной messagePart.",
                 "Выведите на экран с новой строки значение строкового литерала \"Торопитесь, предложение ограничено!\"."
         );
-        appendTaskDesc("Убедитесь, что для всех исходных данных получается ожидаемый результат.");
+        appendTaskDescEscaped("Убедитесь, что для всех исходных данных получается ожидаемый результат.");
         appendCheckValuesHeader("companyName", "productName", "productCost");
         appendCheckValuesRow("Рога и копыта", "копыта", "30 рублей за штуку");
         appendCheckValuesRow("Слоновод", "слоны", "15 попугаев");

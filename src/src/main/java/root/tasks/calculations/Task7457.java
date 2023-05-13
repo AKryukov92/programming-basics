@@ -6,7 +6,7 @@ public class Task7457 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана скорость в километрах/час. Найти значение этой скорости в метрах/секунду. Выведите ответ по шаблону \"$velocityInKmH км/ч это $velocityInMS м/с\". Точность чисел составляет 2 знака после запятой.");
+        appendTaskDescEscaped("Дана скорость в километрах/час. Найти значение этой скорости в метрах/секунду. Выведите ответ по шаблону \"$velocityInKmH км/ч это $velocityInMS м/с\". Точность чисел составляет 2 знака после запятой.");
         appendCheckValuesHeader("velocityInKmH");
         appendCheckValuesRow("60");
         appendCheckValuesRow("200");

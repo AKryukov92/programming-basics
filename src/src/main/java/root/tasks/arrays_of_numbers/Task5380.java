@@ -6,7 +6,7 @@ public class Task5380 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит числа, разделенные пробелами. " +
+        appendTaskDescEscaped("Пользователь вводит числа, разделенные пробелами. " +
                 "Нужно вывести на экран те числа, которые строго меньше чем длина массива.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("5 6 7 10 -2 0");

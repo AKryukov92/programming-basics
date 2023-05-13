@@ -6,7 +6,7 @@ public class Task2565 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран в строчку числа от B до A включительно в обратном порядке. Слева от ряда чисел выведите символ \"{\", а справа - \"}\". Если A > B, то вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Выведите на экран в строчку числа от B до A включительно в обратном порядке. Слева от ряда чисел выведите символ \"{\", а справа - \"}\". Если A > B, то вывести сообщение об ошибке.");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("8", "10");
         appendCheckValuesRow("8", "13");
