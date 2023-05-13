@@ -281,12 +281,12 @@ public class Application {
                 .withGroup("Использование математических функций")
                 .addCitation("link_c7_p32.5")
                 .addExampleWithManual(new Task7711())
-                .addTask(new Task3474())
-                .addTask(new Task1262())
-                .addTask(new Task9164())
-                .addTask(new Task3558())
-                .addTask(new Task4913())
-                .addTask(new Task2790())
+                .addTask(new Task3474())//длина гипотенузы, косинус
+                .addTask(new Task1262())//косинус
+                .addTask(new Task9164())//синус и косинус
+                .addTask(new Task3558())//синус и косинус
+                .addTask(new Task4913())//прямая геодезическая задача
+                .addTask(new Task2790())//синус, корень
         ;
     }
 
@@ -365,6 +365,7 @@ public class Application {
                 .addTask(4257)
                 .addTask(1763)
                 .addTask(1945)
+                .addTask(new Task2375())//вычитание одних денег из других. копейки отдельно от рублей
                 .addTask(new Task4859())//расчет НДС, округление
 
                 .withGroup("Несколько взаимоисключающих случаев if(){} else if() {} else {}")
@@ -405,8 +406,8 @@ public class Application {
                 .addTask(new Task9705())
                 .addTask(new Task3883())//сравнение цифр в числе
                 .addCitation("link_c4_p19.3")
-                .addTask(8751)
-                .addTask(new Task4858())
+                .addTask(new Task8751())//несколько if без else
+                .addTask(new Task4858())//сравнение интервалов
                 .addTask(new Task3864())//Обратная геодезическая задача. сравнение и тригонометрические функции
                 .addCitation("link_c4_p19.1")
                 .addTask(5635)
@@ -528,6 +529,7 @@ public class Application {
                 .addTask(new Task3908())//третий с конца
                 .addTask(new Task1433())//середина массива
                 .addTask(new Task3791())//независимые условия
+                .addTask(new Task9361())//пользователь вводит две даты dd_MM_yyyy выяснить какая из них больше.
                 .addTask(new Task1058())//parse array to distinct numbers. distance between points
                 .addTask(new Task6589())//parse array, range intersection
 

@@ -6,7 +6,7 @@ public class Task9271 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.");
+        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("5 4 6 2 3 1");
         appendCheckValuesRow("1 2 3 4 1 2");
@@ -16,6 +16,7 @@ public class Task9271 extends OneInputValLayout {
         appendCheckValuesRow("4 4 4 4");
         appendCheckValuesRow("");
         appendCheckValuesRow("4 3");
+        appendCheckValuesRow("101 200 300 200 600 700");
         appendCheckValuesFooter();
         appendFooter();
     }
@@ -38,8 +39,9 @@ public class Task9271 extends OneInputValLayout {
                 minIndex = i;
             }
         }
+        int val = num[minIndex];
         for (int i = 0; i < num.length; i++) {
-            num[i] = num[i] - 1;
+            num[i] = num[i] - val;
             System.out.print(num[i] + " ");
         }
     }

@@ -11,12 +11,14 @@ public class Task9182 extends OneInputValLayout {
                 "Отсортируйте массив по возрастанию",
                 "Просмотрите элементы массива, если следующий не равен текущему, то увеличьте значение счетчика."
         );
+        appendCheckValuesHeader("numbers");
         appendCheckValuesRow("9 8 7 6");
         appendCheckValuesRow("9 9 7 7");
         appendCheckValuesRow("9 2 7 5");
         appendCheckValuesRow("");
         appendCheckValuesRow("9 1 8 100 8 21 50 9 1");
         appendCheckValuesRow("4 4 4 4");
+        appendCheckValuesFooter();
         appendFooter();
     }
 

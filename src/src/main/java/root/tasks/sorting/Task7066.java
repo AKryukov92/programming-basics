@@ -7,8 +7,9 @@ public class Task7066 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит массив, состоящий из пар элементов. Элементы массива разделены символом ';'. Элементы в паре разделены символом _. Нужно отсортировать массив по возрастанию числа и сохранить пары элементов вместе.");
-        appendCheckValuesHeader("9_nine;8_eight;7_seven;6_six;5_five;4_four;3_three");
-        appendCheckValuesHeader("9_nine;3_three;6_six;5_five;100_onehundred;4_four");
+        appendCheckValuesHeader("array");
+        appendCheckValuesRow("9_nine;8_eight;7_seven;6_six;5_five;4_four;3_three");
+        appendCheckValuesRow("9_nine;3_three;6_six;5_five;100_onehundred;4_four");
         appendCheckValuesRow("2_one;2_two;2_three;2_four;2_five");
         appendCheckValuesRow("9_blue;17_green;-2_white;100_black;53_red");
         appendCheckValuesRow("18_square;4_square;17_square;5_square;10000_square;999_square");
