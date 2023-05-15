@@ -6,15 +6,15 @@ public class Task5901 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран текст с помощью одной команды печати." +
+        appendTaskDescEscaped("Выведите на экран текст с помощью одной команды печати." +
                 " Напишите каждую строчку отдельным строковым литералом." +
                 " Объедините их с помощью конкатенации. Каждый строковый литерал расположите на новой строке исходного кода.");
-        appendCheckSingle(
+        appendCheckSingleNonEscaped(
                 "print(\"Три девицы под окном\\n\" +\n" +
                         "  \"Пряли поздно вечерком.\\n\"" +
                         ");"
         );
-        appendCheckSingle("Три девицы под окном\n" +
+        appendCheckSingleNonEscaped("Три девицы под окном\n" +
                 "Пряли поздно вечерком.\n" +
                 "\"Кабы я была царица, —\n" +
                 "Говорит одна девица, —\n" +

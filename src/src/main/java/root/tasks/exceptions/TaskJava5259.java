@@ -6,7 +6,7 @@ public class TaskJava5259 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task1934 для решения задачи" + linkToTask(1934),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.",
@@ -15,7 +15,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Создайте еще один метод в классе Runner1934. Назовите его step1934. Он ничего не возвращает и не принимает аргументов."
         );
         appendSubheading("Реализуйте метод step1934");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Выведите в консоль сообщение \"Введите значения A и B\".",
                 "Объявите переменные a и b для хранения целых чисел.",
                 "Инициализируйте переменные a и b значениями, полученными из консоли.",
@@ -25,7 +25,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой."
         );
         appendSubheading("Оформите метод Main");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Выведите сообщение \"Начало работы программы\".",
                 "Вызовите метод step1934.",
                 "Выведите сообщение \"Программа завершена успешно\".",
@@ -79,7 +79,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Обработайте IllegalArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
                 "Обработайте InputMismatchException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
                 "Стек вызовов не должен выводиться не экран в случае ошибки",

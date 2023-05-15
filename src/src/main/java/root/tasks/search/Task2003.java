@@ -22,7 +22,7 @@ public class Task2003 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит символ массив символов с разделителем \";\". Определить, присутствует ли в данном массиве символ \"x\".");
+        appendTaskDescEscaped("Пользователь вводит символ массив символов с разделителем \";\". Определить, присутствует ли в данном массиве символ \"x\".");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("a;s;d;f");
         appendCheckValuesRow("z;x;c;v");

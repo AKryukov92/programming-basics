@@ -6,8 +6,8 @@ public class TaskJava6814 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.");
-        appendCheckSingle("System.out.println(\"Задача 6814\");\n" +
+        appendTaskDescEscaped("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.");
+        appendCheckSingleNonEscaped("System.out.println(\"Задача 6814\");\n" +
                 "String a, b, c, d;\n" +
                 "c = \"успех\";\n" +
                 "a = \"тоже провал\";\n" +

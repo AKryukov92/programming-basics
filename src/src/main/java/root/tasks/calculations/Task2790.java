@@ -6,8 +6,8 @@ public class Task2790 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Вычислить результат по формуле. Значение угла дано в градусах.");
-        appendNonEscaped("<formula>\n" +
+        appendTaskDescEscaped("Вычислить результат по формуле. Значение угла дано в градусах.");
+        appendTaskDescNonEscaped("<formula>\n" +
                 "\t\t<sqrt><val>\n" +
                 "\t\t\t1-sin<sup>2</sup>(xRad)\n" +
                 "\t\t</val></sqrt>\n" +

@@ -10,8 +10,8 @@ public class Task7788 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Исходный файл " + linkToFile("files/task7788/composers.csv", "composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
-        appendOrdered(
+        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task7788/composers.csv", "composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
+        appendOrderedNonEscaped(
                 "composer_id - идентификатор композитора",
                 "first_name - имя",
                 "last_name - фамилия",
@@ -21,9 +21,9 @@ public class Task7788 extends OneInputValLayout {
                 "death_place - место смерти",
                 "wiki_page - ссылка на страницу Википедии"
         );
-        appendTaskDesc(
+        appendTaskDescEscaped(
                 "Нужно вывести фамилию, дату и место смерти. Первой колонкой должен быть код композитора. Порядок вывода соответствует содержимому файла. Перед списком композиторов нужно вывести заголовки столбцов. После списка композиторов нужно вывести фразу \"Всего композиторов\" и количество записей в файле. Строка с заголовками столбцов не участвует в подсчёте количества.");
-        appendCheckSingle(wrapLogic("files/task7788/composers.csv"));
+        appendCheckSingleNonEscaped(wrapLogic("files/task7788/composers.csv"));
         appendFooter();
     }
 

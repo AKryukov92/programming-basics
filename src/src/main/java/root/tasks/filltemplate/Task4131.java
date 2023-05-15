@@ -7,17 +7,17 @@ public class Task4131 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Переведите алгоритм с естественного языка на ваш язык программирования.");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Объявите переменную clientName для хранения имени клиента.",
                 "Объявите переменную companyName для хранения названия компании."
         );
-        appendTaskDesc("Инициализируйте переменные");
-        appendOrdered(
+        appendTaskDescEscaped("Инициализируйте переменные");
+        appendOrderedNonEscaped(
                 "Запишите в переменную clientName строковый литерал \"Иван Иванович\".",
                 "Запишите в переменную companyName строковый литерал \"ООО Рога и копыта\"."
         );
-        appendTaskDesc("Оформите ответ");
-        appendOrdered(
+        appendTaskDescEscaped("Оформите ответ");
+        appendOrderedNonEscaped(
                 "Выведите на экран строковый литерал \"Задача 4131\".",
                 "Выведите на экран на новой строке строковый литерал \"Уважаемый \".",
                 "Выведите на экран значение переменной clientName.",
@@ -26,8 +26,8 @@ public class Task4131 extends LayoutMaker {
                 "Выведите на экран значение переменной companyName.",
                 "Выведите на экран строковый литерал \".\"."
         );
-        appendTaskDesc("Запустите программу и проверьте, что у вас получился такой же результат:");
-        appendCheckSingle("Задача 4131\n" +
+        appendTaskDescEscaped("Запустите программу и проверьте, что у вас получился такой же результат:");
+        appendCheckSingleNonEscaped("Задача 4131\n" +
                 "Уважаемый Иван Иванович. Поздравляем с Днем рождения.\n" +
                 "Пусть каждый день будет наполнен счастьем!\n" +
                 "Ваша ООО Рога и копыта.");

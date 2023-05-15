@@ -34,7 +34,7 @@ public class Task3519 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано начало и конец интервала, а также ширина вывода." +
+        appendTaskDescEscaped("Дано начало и конец интервала, а также ширина вывода." +
                 " Вывести все числа в указанном интервале по возрастанию." +
                 " Количество чисел на всех строках, кроме последней, должно быть равно ширине вывода.");
         appendCheckValuesHeader("A", "B", "width");

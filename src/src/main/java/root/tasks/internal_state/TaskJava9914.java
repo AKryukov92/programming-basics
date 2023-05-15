@@ -7,7 +7,7 @@ public class TaskJava9914 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте НЕстатический метод для решения задачи " + linkToTask(6589));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Убедитесь, что у класса Range объявлены поля для целочисленных значений \"from\" и \"to\".",
                 "Метод intersects принимает в качестве аргумента 2 целых числа и возвращает логическое значение.",
                 "В теле метода нужно вернуть результат решения задачи. Для вычисления результата нужно использовать поля класса и значения из аргументов.",
@@ -15,7 +15,7 @@ public class TaskJava9914 extends LayoutMaker {
                 "В случае передачи в качестве аргумента некорректных значений интервала, нужно выбросить исключение IllegalArgumentException."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе RangeSuite создайте юнит-тест intersectsIntsTest.",
                 "В теле метода intersectsIntsTest создайте переменную red типа Range и инициализируйте ее экземпляром класса Range.",
                 "Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:",
@@ -26,7 +26,7 @@ public class TaskJava9914 extends LayoutMaker {
                 "После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов."
         );
         appendSubheading("Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе RangeSuite создайте юнит-теста intersectsIntWrongRedTest, который проверяет возникновение исключения IllegalStateException, и юнит-тест intersectsIntWrongRightTest, который проверяет возникновение исключения IllegalArgumentException.",
                 "В теле метода intersectsIntWrongRedTest инициализируйте экземпляра класса Range.",
                 "Заполните значения его полей так, чтобы этот экземпляр получился некорректным.",

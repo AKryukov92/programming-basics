@@ -33,7 +33,7 @@ public class Task7260 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Условно разделить числа на группы по 3. Посчитать сумму в каждой группе чисел.");
+        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Условно разделить числа на группы по 3. Посчитать сумму в каждой группе чисел.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("161 216 143");
         appendCheckValuesRow("88 54 70 71 86 98");

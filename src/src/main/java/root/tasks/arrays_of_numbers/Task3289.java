@@ -6,7 +6,7 @@ public class Task3289 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит массив данных с разделителем ';'. Нужно найти индекс элемента, после которого находится элемент с разницей менее 20.");
+        appendTaskDescEscaped("Пользователь вводит массив данных с разделителем ';'. Нужно найти индекс элемента, после которого находится элемент с разницей менее 20.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("0;21;45;50;70;100");
         appendCheckValuesRow("0;30;1;31;2;32");

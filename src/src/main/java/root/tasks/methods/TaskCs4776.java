@@ -7,13 +7,13 @@ public class TaskCs4776 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для решения задачи " + linkToTask(2790));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task2790.",
                 "Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.",
                 "В теле метода вычислите результат и верните его"
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе TestSuite создайте публичный метод Task2790test. Добавьте ему атрибут TestMethod.",
                 "Метод Task2790test ничего не возвращает.",
                 "В теле метода Task2790test объявите переменную actual для хранения действительных чисел.",
@@ -25,7 +25,7 @@ public class TaskCs4776 extends LayoutMaker {
                 "Вызовите статический метод AreEqual из класса Assert. Передайте ему первым аргументом число 0.8572, вторым аргументом переменную actual, третьим аргументом число 0.0001",
                 "Добавьте проверку, что метод Task2790 возвращает 0 если его вызвать с аргументом 90."
         );
-        appendTaskDesc("После запуска юнит-теста, он должен быть отмечен зеленым знаком.");
+        appendTaskDescEscaped("После запуска юнит-теста, он должен быть отмечен зеленым знаком.");
         appendFooter();
     }
 }

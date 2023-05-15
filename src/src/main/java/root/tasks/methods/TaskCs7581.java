@@ -7,14 +7,14 @@ public class TaskCs7581 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для решения задачи " + linkToTask(2003));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task2003.",
                 "Он принимает массив строковых значений и возвращает логическое значение.",
                 "Если данный массив содержит хотя бы один символ 'x', метод должен вернуть значение true.",
                 "Если символ 'x' в массиве отсутствует, метод должен вернуть значение false."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе TestSuite создайте юнит-тест для проверки задачи Task2003.",
                 "Объявите переменную result для хранения логических значений",
                 "В теле юнит-теста вызовите метод Task2003 класса Library.",

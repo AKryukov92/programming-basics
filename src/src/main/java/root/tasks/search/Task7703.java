@@ -6,7 +6,7 @@ public class Task7703 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелами. Создать новый массив и записать в него сколько раз встречается каждый из элементов.");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные пробелами. Создать новый массив и записать в него сколько раз встречается каждый из элементов.");
         appendCheckValuesHeader("source");
         appendCheckValuesRow("q w e w q w");
         appendCheckValuesRow("q w e r q w e r q w e");

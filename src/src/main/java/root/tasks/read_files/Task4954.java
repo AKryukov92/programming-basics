@@ -10,7 +10,7 @@ public class Task4954 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Исходный файл содержит слова, написаные в столбик без дополнительного оформления. Количество слов в файле заранее неизвестно. Пользователь вводит фрагмент текста (substring). Определить, сколько раз встречаются слова, содержащие введенный фрагмент.");
+        appendTaskDescEscaped("Исходный файл содержит слова, написаные в столбик без дополнительного оформления. Количество слов в файле заранее неизвестно. Пользователь вводит фрагмент текста (substring). Определить, сколько раз встречаются слова, содержащие введенный фрагмент.");
         appendCheckValuesHeader("substring", "ссылка на файл");
         appendCheckValuesRowWithFile("а", "files/task4954/test1.txt");
         appendCheckValuesRowWithFile("ц", "files/task4954/test2.txt");

@@ -33,7 +33,7 @@ public class Task8158 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дан массив символов \"a,b,c,d,e,f,g,h,a,b,c,d,e\". Пользователь вводит два отдельных символа." +
+        appendTaskDescEscaped("Дан массив символов \"a,b,c,d,e,f,g,h,a,b,c,d,e\". Пользователь вводит два отдельных символа." +
                 " По каждому из символов нужно написать, присутствует он в массиве или нет.");
         appendCheckValuesHeader("first", "second");
         appendCheckValuesRow("a", "x");

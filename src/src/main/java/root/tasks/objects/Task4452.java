@@ -7,11 +7,11 @@ public class Task4452 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте класс по описанию");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 ""
         );
         appendSubheading("Реализуйте дополнительные ограничения");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "У программиста, использующего класс не должно быть возможности записать в поле cent некорректное значение",
                 ""
         );

@@ -24,7 +24,7 @@ public class Task3940 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два массива данных - целые числа. Перемножить числа попарно на одинаковых индексах и вывести на экран.");
+        appendTaskDescEscaped("Пользователь вводит два массива данных - целые числа. Перемножить числа попарно на одинаковых индексах и вывести на экран.");
         appendCheckValuesHeader("left", "right");
         appendCheckValuesRow("1 2 3 4 1", "2 3 4 1 2");
         appendCheckValuesRow("1 2 3 4 1 3 4 4 4 4", "3 4 1 2 3 4 1 2 3 4");

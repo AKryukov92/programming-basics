@@ -6,7 +6,7 @@ public class Task8770 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано число (X) в интервале от 30 до 40. Нужно вывести числа от 30 до 40 включительно в столбик и поставить символ \"+\" справа от введенного числа X и символ \"-\" справа от всех остальных.");
+        appendTaskDescEscaped("Дано число (X) в интервале от 30 до 40. Нужно вывести числа от 30 до 40 включительно в столбик и поставить символ \"+\" справа от введенного числа X и символ \"-\" справа от всех остальных.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("30");
         appendCheckValuesRow("31");

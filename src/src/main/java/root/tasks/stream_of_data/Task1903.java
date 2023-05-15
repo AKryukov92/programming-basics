@@ -8,7 +8,7 @@ public class Task1903 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа сама не заканчивается. Её нужно закрывать вручную.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа сама не заканчивается. Её нужно закрывать вручную.");
         appendCheckValuesHeader();
         appendCheckValuesRow(
                 "7",

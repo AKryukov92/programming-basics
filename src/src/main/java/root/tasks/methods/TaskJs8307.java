@@ -12,13 +12,13 @@ public class TaskJs8307  extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте функцию для решения задачи " + linkToTask(1860));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В файле для исходного кода реализуйте функцию task1860.",
                 "В качестве аргументов ей будут передавать 1 строку.",
                 "В теле функции task1860 нужно напечатать в консоль решение задачи, используя значение аргумента в качестве исходных данных."
         );
         appendSubheading("Проверьте корректность работы функции с помощью вспомогательного файла");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В корне директории создайте файл Runner1860.html. Подключите в нем файл с кодом \"src/lab12.js\".",
                 "В скриптах на странице Runner1860.html вызовите функцию task1860.",
                 "В качестве аргумента передайте ему строковый литерал \"знаниям\"",
@@ -27,7 +27,7 @@ public class TaskJs8307  extends OneInputValLayout {
                 "При открытии файла Runner1860.html, в консоли должен появиться текст:"
 
         );
-        appendCheckSingle(wrapLogic("знаниям") + wrapLogic("цели") + wrapLogic("результату"));
+        appendCheckSingleNonEscaped(wrapLogic("знаниям") + wrapLogic("цели") + wrapLogic("результату"));
         appendFooter();
     }
 

@@ -6,7 +6,7 @@ public class Task5568 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран цифры от 0 до 9. Каждая цифра должна быть на своей строчке. Количество цифр в строчке width вводится с клавиатуры. Вывести не более 20 символов в строке.");
+        appendTaskDescEscaped("Выведите на экран цифры от 0 до 9. Каждая цифра должна быть на своей строчке. Количество цифр в строчке width вводится с клавиатуры. Вывести не более 20 символов в строке.");
         appendCheckValuesHeader("width");
         appendCheckValuesRow("1");
         appendCheckValuesRow("3");

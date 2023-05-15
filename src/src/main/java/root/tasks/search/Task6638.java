@@ -1,13 +1,12 @@
 package root.tasks.search;
 
-import root.tasks.OneInputValLayout;
 import root.tasks.TwoInputValLayout;
 
 public class Task6638 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два массива чисел: желтый и синий. Вывести на экран три группы элементов. Вывести на экран разницу между массивами. Если исходные массивы не отсортированы по возрастанию, вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Пользователь вводит два массива чисел: желтый и синий. Вывести на экран три группы элементов. Вывести на экран разницу между массивами. Если исходные массивы не отсортированы по возрастанию, вывести сообщение об ошибке.");
         appendCheckValuesHeader("Желтый массив (yellow)", "Синий массив (blue)");
         appendCheckValuesRow("1 2 3 4 5", "1 3 5 6");
         appendCheckValuesRow("1 2 2 2 3", "2 2 2 3 3 4");

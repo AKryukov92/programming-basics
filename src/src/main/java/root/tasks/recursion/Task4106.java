@@ -6,8 +6,8 @@ public class Task4106 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Написать подробную версию программы.");
-        appendCheckSingle("private static void work(int n) {\n" +
+        appendTaskDescEscaped("Написать подробную версию программы.");
+        appendCheckSingleNonEscaped("private static void work(int n) {\n" +
                 "    if (n < 0) {\n" +
                 "        return;\n" +
                 "    }\n" +

@@ -19,9 +19,9 @@ public class Task9298 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendTaskId();
-        appendNonEscaped("Основное внимание в этой лабораторной уделено одной из техник защитного программирования - выводу сообщений об ошибке. Более подробно о них можно почитать в главе 8 части II книги \"Совершенный код\" <a href=\"Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=205\" target=\"_blank\">(открыть в новой вкладке)</a>.");
+        appendTaskDescNonEscaped("Основное внимание в этой лабораторной уделено одной из техник защитного программирования - выводу сообщений об ошибке. Более подробно о них можно почитать в главе 8 части II книги \"Совершенный код\" <a href=\"Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=205\" target=\"_blank\">(открыть в новой вкладке)</a>.");
         appendTaskHeader();
-        appendNonEscaped("Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>area=6*edge<sup>2</sup></formula>.");
+        appendTaskDescNonEscaped("Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>area=6*edge<sup>2</sup></formula>.");
         appendCheckValuesHeader("edge");
         appendCheckValuesRow("1");
         appendCheckValuesRow("5");

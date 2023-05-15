@@ -2,14 +2,13 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class Task7595 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит неизвестное количество чисел. Нужно вычислить сумму этих чисел. Программа сама не заканчивается. Её нужно закрывать вручную.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество чисел. Нужно вычислить сумму этих чисел. Программа сама не заканчивается. Её нужно закрывать вручную.");
         appendCheckValuesHeader("");
         appendCheckValuesRow(
                 "1",

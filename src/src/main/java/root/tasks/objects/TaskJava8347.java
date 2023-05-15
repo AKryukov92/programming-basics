@@ -7,7 +7,7 @@ public class TaskJava8347 extends MultipleInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Прочитайте условие задачи");
-        appendTaskDesc(
+        appendTaskDescEscaped(
                 "Даны координаты двух точек: start, end." +
                 " Они обозначают границы отрезка." +
                 " Нужно найти координаты середины отрезка." +
@@ -24,7 +24,7 @@ public class TaskJava8347 extends MultipleInputValLayout {
         appendCheckValuesRow("50", "50", "50", "50");
         appendCheckValuesFooter();
         appendSubheading("Реализуйте статический метод для решения задачи");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Убедитесь, что у класса Point объявлены поля для действительных значений \"x\" и \"y\".",
                 "В классе Point реализуйте публичный статический метод getMiddleOfSegment.",
                 "Он принимает в качестве аргумента 2 экземпляра класса Point и возвращает экземпляр класса Point.",
@@ -33,7 +33,7 @@ public class TaskJava8347 extends MultipleInputValLayout {
                 "Верните полученный экземпляр класса Point как результат вызова метода."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе PointSuite создайте тест middleOfSegmentTest.",
                 "Объявите две переменные типа Point: src и dest.",
                 "Заполните переменные src и dest значениями (0;0) и (0;10).",

@@ -31,7 +31,7 @@ public class Task6707 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - числа, разделенные запятой. Для каждой пары чисел подряд вычислить сумму. Если у числа нет пары, просто вывести его значение.");
+        appendTaskDescEscaped("Пользователь вводит данные - числа, разделенные запятой. Для каждой пары чисел подряд вычислить сумму. Если у числа нет пары, просто вывести его значение.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("9,8,7,6,5,4,3");
         appendCheckValuesRow("14,25,36,74,85");

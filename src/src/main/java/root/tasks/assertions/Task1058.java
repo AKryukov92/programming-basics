@@ -16,7 +16,7 @@ public class Task1058 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Пользователь вводит массив из 4 значений, разделенных символов ','. " + getTaskDescription());
+        appendTaskDescNonEscaped("Пользователь вводит массив из 4 значений, разделенных символов ','. " + getTaskDescription());
         appendCheckValuesHeader("coordinates");
         appendCheckValuesRow("1,1,3,4");
         appendCheckValuesRow("-2,4,8,-10");

@@ -6,7 +6,7 @@ public class Task1483 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите N символов \"!\" в строчку. После каждого пятого, вывести пробел.");
+        appendTaskDescEscaped("Выведите N символов \"!\" в строчку. После каждого пятого, вывести пробел.");
         appendCheckValuesHeader("N");
         appendCheckValuesRow("4");
         appendCheckValuesRow("18");

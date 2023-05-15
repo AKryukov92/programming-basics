@@ -6,7 +6,7 @@ public class Task7585 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано целое число (X). Нужно вывести числа от 10 до 20 включительно в столбик и написать слово \"Найдено\" справа от введенного числа X.");
+        appendTaskDescEscaped("Дано целое число (X). Нужно вывести числа от 10 до 20 включительно в столбик и написать слово \"Найдено\" справа от введенного числа X.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("10");
         appendCheckValuesRow("15");

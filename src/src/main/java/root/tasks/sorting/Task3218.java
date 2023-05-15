@@ -6,8 +6,8 @@ public class Task3218 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - целые числа, разделенные пробелами. Реализуйте алгоритм сортировки по возрастанию 'пузырьком':");
-        appendOrdered(
+        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Реализуйте алгоритм сортировки по возрастанию 'пузырьком':");
+        appendOrderedNonEscaped(
                 "Сравните каждый элемент массива со следующим.",
                 "Если значение просматриваемого элемента больше значения следующего, поменяйте местами их значения.",
                 "Повторяйте просмотр массива, пока все элементы не будут отсортированы."
@@ -24,7 +24,7 @@ public class Task3218 extends OneInputValLayout {
         appendCheckValuesRow("9 10 11 12 13 14 15 16 17 18 19");
         appendCheckValuesRow("19");
         appendCheckValuesFooter();
-        appendTaskDesc("Попробуйте улучшить решение. Если в последнем просмотре не было перестановок, прекратить обработку");
+        appendTaskDescEscaped("Попробуйте улучшить решение. Если в последнем просмотре не было перестановок, прекратить обработку");
         appendFooter();
     }
 

@@ -1,14 +1,12 @@
 package root.tasks.loops;
 
 import root.tasks.MultipleInputValLayout;
-import root.tasks.OneInputValLayout;
-import root.tasks.TwoInputValLayout;
 
 public class Task7054 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит три числа: seed, amountOf7, amountOf3." +
+        appendTaskDescEscaped("Пользователь вводит три числа: seed, amountOf7, amountOf3." +
                 " Начиная с seed, вывести amountOf7 штук чисел в строчку по возрастанию с шагом 7." +
                 " А потом начать с последнего полученного числа и вывести amountOf3 чисел в порядке уменьшения с шагом 3.");
         appendCheckValuesHeader("seed", "amount of 7", "amount of 3");

@@ -22,11 +22,11 @@ public class Task8867 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны действительные числа a, b, x. Если x принадлежит интервалу от a до b включительно, выведите ответ по шаблону:");
-        appendCheckSingle("$x попадает в интервал от $a до $b");
-        appendTaskDesc("В ином случае, выведите ответ по шаблону:");
-        appendCheckSingle("$x за пределами интервала от $a до $b");
-        appendTaskDesc("Интервал считается корректным, если a <= b. Если это не так, выведите сообщение об ошибке.");
+        appendTaskDescEscaped("Даны действительные числа a, b, x. Если x принадлежит интервалу от a до b включительно, выведите ответ по шаблону:");
+        appendCheckSingleNonEscaped("$x попадает в интервал от $a до $b");
+        appendTaskDescEscaped("В ином случае, выведите ответ по шаблону:");
+        appendCheckSingleNonEscaped("$x за пределами интервала от $a до $b");
+        appendTaskDescEscaped("Интервал считается корректным, если a <= b. Если это не так, выведите сообщение об ошибке.");
         appendCheckValuesHeader("A", "B", "X");
         appendCheckValuesRow("1", "3", "2");
         appendCheckValuesRow("-4", "5", "0");

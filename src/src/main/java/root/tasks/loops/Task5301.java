@@ -18,7 +18,7 @@ public class Task5301 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит целое число limit. " +
+        appendTaskDescEscaped("Пользователь вводит целое число limit. " +
                 "Выведите на экран <i>в строчку</i> числа, начиная с 0 до limit, исключая limit. " +
                 "Шаг счетчика должен увеличиваться на 1 каждую итерацию цикла.");
         appendCheckValuesHeader("A");

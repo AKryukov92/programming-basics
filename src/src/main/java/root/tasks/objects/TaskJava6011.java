@@ -35,14 +35,14 @@ public class TaskJava6011 extends LayoutMaker implements MethodsDictationHelper 
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(1058) + "используя экземпляры класса");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Объявите у класса Point поля для действительных значений \"x\" и \"y\".",
                 implementStatic("Point", "distanceBetween"),
                 "Новый метод distanceBetween принимает в качестве аргументов 2 экземпляра класса Point и возвращает действительное число.",
                 "В теле метода верните результат решения задачи. Для его вычисления используйте поля \"x\" и \"y\" экземпляров класса Point, которые были переданы в качестве аргументов."
         );
         appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе PointSuite создайте юнит-тест distanceBetweenPointsTest.",
                 "В теле метода distanceBetweenPointsTest объявите переменные src и dest типа Point.",
                 //простая формулировка заполнения

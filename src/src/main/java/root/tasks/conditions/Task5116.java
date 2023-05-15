@@ -24,7 +24,7 @@ public class Task5116 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два числа: R, K. " +
+        appendTaskDescEscaped("Пользователь вводит два числа: R, K. " +
                 " Нужно подставить эти числа в условия R < 100 и 100 < K. " +
                 " Вывести на экран одно из сообщений:" +
                 " 'Оба условия истинны'." +

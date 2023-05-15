@@ -2,8 +2,6 @@ package root.tasks.arrays;
 
 import root.tasks.OneInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task9923 extends OneInputValLayout {
     @Override
     protected void logic(String firstValue) {
@@ -29,7 +27,7 @@ public class Task9923 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные пробелом. Скопировать последний элемент в начало массива. Вывести все элементы массива по порядку.");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные пробелом. Скопировать последний элемент в начало массива. Вывести все элементы массива по порядку.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("qw er ty");
         appendCheckValuesRow("qwe asd zxc");

@@ -7,7 +7,7 @@ public class TaskJava1193 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте метод для создания экземпляров класса Point с указанием значений");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Убедитесь, что у класса Point объявлены поля для целочисленных значений \"x\" и \"y\".",
                 "В классе Point реализуйте статический метод \"make\". Он принимает в качестве аргументов два числа (\"px\" и \"py\") и возвращает экземпляр класса Point.",
                 "В теле метода объявите переменную instance типа Point и инициализируйте ее экземпляром класса Point.",
@@ -16,7 +16,7 @@ public class TaskJava1193 extends LayoutMaker {
                 "Верните переменную instance в качестве результата работы метода."
         );
         appendSubheading("Используйте метод в тестовом методе distanceBetweenPointsTest");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Запишите в переменную src результат вызова метода zero.",
                 "Вызовите метод make и передайте ему в качестве аргумента значения -5 и -7.",
                 "Результат вызова метода запишите в переменную dest.",

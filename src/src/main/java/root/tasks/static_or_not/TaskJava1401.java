@@ -10,21 +10,21 @@ public class TaskJava1401 extends LayoutMaker implements MethodsDictationHelper 
 
         appendHeader();
         appendSubheading("Подготовьте классы");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Создайте класс Point в папке для исходного кода",
                 "Создайте в классе Point поля x и y для действительных значений",
                 "Создайте класс PointSuite в папке для тестов"
         );
         appendSubheading("Условие задачи совпадает с " + linkToTask(1058));
-        appendTaskDesc(Task1058.getTaskDescription());
+        appendTaskDescEscaped(Task1058.getTaskDescription());
         appendSubheading("Реализуйте статический метод distanceBetween");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "Он принимает в качестве аргумента 2 экземпляра класса Point",
                 "Он возвращает действительное число",
                 "Для вычисления результата используйте поля \"x\" и \"y\" экземпляров класса Point"
         );
         appendSubheading("Напишите тесты для метода distanceBetween");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В классе PointSuite создайте юнит-тест distanceBetweenPointsTest.",
                 "В теле метода distanceBetweenPointsTest объявите переменные a и b типа Point.",
                 //простая формулировка заполнения
@@ -43,7 +43,7 @@ public class TaskJava1401 extends LayoutMaker implements MethodsDictationHelper 
                 "После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов."
         );
         appendSubheading("Реализуйте НЕстатический метод distanceTo");
-        appendOrdered(
+        appendOrderedNonEscaped(
             "Он принимает в качестве аргумента 1 экземпляр класса Point",
             "Он возвращает действительное число",
             "Для вычисления результата используйте поля \"x\" и \"y\" экземпляра, у которого вызвали метод, и поля \"x\" и \"y\" экземпляра, который передали в качестве аргумента."

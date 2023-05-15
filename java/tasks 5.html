@@ -763,137 +763,162 @@ Z
 </tr>
 </table>
 </div>
-<div id="task3883" class="task_block empty_on_print">
-	<div class="task_id">3883</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дано целое число А. Если значение A находится за пределами интервала от 1000 до 9999, то вывести сообщение об ошибке. Если количество сотен равно количеству единиц, то оформить результат по шаблону 1. В ином случае - по шаблону 2.</div>
-	<div class="check_single preformatted">Количество сотен: $hundreds
+<div id='task3883' class='task_block'>
+<div class='task_id'>3883</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано целое число А. Если значение A находится за пределами интервала от 1000 до 9999, то вывести сообщение об ошибке. Определите количество сотен. Для этого разделите A на 100 и найдите остаток от деления на 10. Определите количество единиц. Для этого найдите остаток от деления на 10. Если количество сотен равно количеству единиц, то оформить результат по шаблону 1. В ином случае - по шаблону 2.
+</div>
+<div class='check_single preformatted'>Количество сотен: $hundreds
 Количество единиц: $units
 Количество сотен равно количеству единиц.</div>
-	<div class="check_single preformatted">Количество сотен: $hundreds
+<div class='check_single preformatted'>Количество сотен: $hundreds
 Количество единиц: $units
 Количество сотен не равно количеству единиц.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные (A)</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>1234</td>
-			<td class="preformatted">Количество сотен: 2
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (A)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>1234</td>
+<td class='preformatted'>Количество сотен: 2
 Количество единиц: 4
-Количество сотен не равно количеству единиц.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>6543</td>
-			<td class="preformatted">Количество сотен: 5
+Количество сотен не равно количеству единиц.
+</td>
+</tr>
+<tr>
+<td></td>
+<td>6543</td>
+<td class='preformatted'>Количество сотен: 5
 Количество единиц: 3
-Количество сотен не равно количеству единиц.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>9812</td>
-			<td class="preformatted">Количество сотен: 8
+Количество сотен не равно количеству единиц.
+</td>
+</tr>
+<tr>
+<td></td>
+<td>9812</td>
+<td class='preformatted'>Количество сотен: 8
 Количество единиц: 2
-Количество сотен не равно количеству единиц.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>9171</td>
-			<td class="preformatted">Количество сотен: 1
+Количество сотен не равно количеству единиц.
+</td>
+</tr>
+<tr>
+<td></td>
+<td>9171</td>
+<td class='preformatted'>Количество сотен: 1
 Количество единиц: 1
-Количество сотен равно количеству единиц.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>100</td>
-			<td class="preformatted">Значение A должно быть в интервале от 1000 до 9999 включительно</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>98765</td>
-			<td class="preformatted">Значение A должно быть в интервале от 1000 до 9999 включительно</td>
-		</tr>
-	</table>
-</div><div id="link_c4_p19.3" class="task_block">
+Количество сотен равно количеству единиц
+</td>
+</tr>
+<tr>
+<td></td>
+<td>100</td>
+<td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
+</td>
+</tr>
+<tr>
+<td></td>
+<td>98765</td>
+<td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
+</td>
+</tr>
+</table>
+</div>
+<div id="link_c4_p19.3" class="task_block">
 	<div class="check_single"><p>Вы задумывались над тем, почему программы, содержащие символ ";" после условия вообще запускаются? Дело в том, что одиночный символ ";" это корректная команда "делай ничего". Использование такой команды это классический пример того, что <i>можно</i> делать, но <i>не нужно</i>. Им посвящена глава 19.3 "Пустые выражения" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=458" target="_blank">(открыть в новой вкладке)</a>.</p>
 	</div>
-</div><div id="task8751" class="task_block empty_on_print">
-	<div class="task_id">8751</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Определить агрегатное состояние (state) и внутреннюю энергию (Q) воды массой 17 кг (m). Пользователь вводит температуру в градусах Цельсия (t<sub>C</sub>). Температура перехода из кристалла в жидкость (кристаллизации) 0&#8451;. Температура перехода из жидкости в газ (конденсации) 100&#8451;. Удельная теплоемкость c = 4.2 * 10 <sup>3</sup>Дж/кгK. Для вычисления теплоемкости, нужна температура в Кельвинах, которая вычисляется по формуле <formula>t<sub>K</sub>=t<sub>C</sub> + 273.15</formula>. Удельная теплота парообразования r = 2.26 * 10<sup>6</sup>Дж/кг. Удельная теплота плавления &lambda; = 3.3 * 10<sup>5</sup>Дж/кг. Внутренняя энергия зависит от агрегатного состояния и вычисляется по формуле:
-<ol>
-<li><formula>Q<sub>кристалл</sub> = m * t<sub>K</sub> * c Дж</formula></li>
-<li><formula>Q<sub>жидкость</sub> = m * (t<sub>K</sub> * c + r) Дж</formula></li>
-<li><formula>Q<sub>газ</sub> = m * (t<sub>K</sub> * c + r + &lambda;) Дж</formula></li>
-</ol>Точность результатов два знака после запятой. Оформить ответ по шаблону:</div>
-	<div class="check_single preformatted">Агрегатное состояние: $state
-Внутренняя энергия: $Q Дж</div>
-Если агрегатное состояние не удается определить точно, нужно перед ответом добавить фразу &quot;Вещество в переходном состоянии.&quot;.
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные (t<sub>C</sub>)</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-273</td>
-			<td class="preformatted">Агрегатное состояние: кристалл
-Внутренняя энергия: 10710,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-10</td>
-			<td class="preformatted">Агрегатное состояние: кристалл
-Внутренняя энергия: 18788910,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-1</td>
-			<td class="preformatted">Агрегатное состояние: кристалл
-Внутренняя энергия: 19431510,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td class="preformatted">Вещество в переходном состоянии.
+</div><div id='task8751' class='task_block'>
+<div class='task_id'>8751</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Определить агрегатное состояние (state) и внутреннюю энергию (internalEnergy) воды массой 17 кг (mass). Пользователь вводит температуру в градусах Цельсия (temperatureCelsius). Температура перехода из кристалла в жидкость (кристаллизации) 0&#8451;. Температура перехода из жидкости в газ (конденсации) 100&#8451;. Удельная теплоемкость heatCapacity = 4.2 * 10 <sup>3</sup>Дж/кгK. Для вычисления теплоемкости, нужна температура в Кельвинах, которая вычисляется по формуле <formula>temperatureKelvins=temperatureCelsius + 273.15</formula>. Удельная теплота парообразования vaporisationHeat = 2.26 * 10<sup>6</sup>Дж/кг. Удельная теплота плавления fusionHeat = 3.3 * 10<sup>5</sup>Дж/кг. Внутренняя энергия зависит от агрегатного состояния и вычисляется по формуле:
+</div>
+<ol start='1'><li>Кристалл <formula>internalEnergy = mass * temperatureKelvins * heatCapacity Дж</formula></li><li>Жидкость <formula>internalEnergy = mass * (temperatureKelvins * heatCapacity + vaporisationHeat) Дж</formula></li><li>Газ <formula>internalEnergy = mass * (temperatureKelvins * heatCapacity + vaporisationHeat + fusionHeat) Дж</formula></li></ol><div class='task_desc'>
+Точность результатов два знака после запятой. Оформить ответ по шаблону:
+</div>
+<div class='check_single preformatted'>Агрегатное состояние: $state
+Внутренняя энергия: $internalEnergy Дж</div>
+<div class='task_desc'>
+Если агрегатное состояние не удается определить точно, нужно перед ответом добавить фразу "Вещество в переходном состоянии.".
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (temperatureCelsius)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>-273</td>
+<td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 10710,00 Дж
+</td>
+</tr>
+<tr>
+<td></td>
+<td>-10</td>
+<td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 18788910,00 Дж
+</td>
+</tr>
+<tr>
+<td></td>
+<td>-1</td>
+<td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 19431510,00 Дж
+</td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td class='preformatted'>Вещество в переходном состоянии.
 Агрегатное состояние: кристалл
 Внутренняя энергия: 19502910,00 Дж
 Агрегатное состояние: жидкость
-Внутренняя энергия: 57922910,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>99</td>
-			<td class="preformatted">Агрегатное состояние: жидкость
-Внутренняя энергия: 64991510,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>100</td>
-			<td class="preformatted">Вещество в переходном состоянии.
+Внутренняя энергия: 57922910,00 Дж
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>99</td>
+<td class='preformatted'>Агрегатное состояние: жидкость
+Внутренняя энергия: 64991510,00 Дж
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>100</td>
+<td class='preformatted'>Вещество в переходном состоянии.
 Агрегатное состояние: жидкость
 Внутренняя энергия: 65062910,00 Дж
+
 Агрегатное состояние: газ
-Внутренняя энергия: 70672910,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>101</td>
-			<td class="preformatted">Агрегатное состояние: газ
-Внутренняя энергия: 70744310,00 Дж</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-274</td>
-			<td class="preformatted">Некорректная температура</td>
-		</tr>
-	</table>
-</div><div id='task4858' class='task_block'>
+Внутренняя энергия: 70672910,00 Дж
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>101</td>
+<td class='preformatted'>Агрегатное состояние: газ
+Внутренняя энергия: 70744310,00 Дж
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>-274</td>
+<td class='preformatted'>Некорректная температура
+</td>
+</tr>
+</table>
+</div>
+<div id='task4858' class='task_block'>
 <div class='task_id'>4858</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -1069,23 +1094,18 @@ greenB
 </tr>
 </table>
 </div>
-<div id="task3864" class="task_block empty_on_print">
-	<div class="task_id">3864</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, а также X<sub>b</sub> и Y<sub>b</sub> точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах. 
-	<ul>
-	<li>Вычислите приращение координат. <formula>&Delta;x = X<sub>b</sub> - X<sub>a</sub></formula>; <formula>&Delta;y = Y<sub>b</sub> - Y<sub>a</sub></formula></li>
-	<li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>&Delta;Y</numerator><denominator>&Delta;X</denominator></fraction></formula>. Арктангенс из абсолютного значения результата деления.</li>
-	<li>Выберите формулу для вычисления угла по знакам приращения координат и определите дирекционный угол по ней
-	<table class="check_values">
+<div class='task_desc'>
+Даны координаты srcX и srcY исходной точки, а также destX и destY точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах
+</div>
+<ol start='1'><li>Вычислите приращение координат. <formula>dx = destX - srcX</formula>; <formula>dy = destY - srcY</formula></li><li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>dy</numerator><denominator>dx</denominator></fraction></formula>. Арктангенс из абсолютного значения результата деления.</li><li>Выберите формулу для вычисления угла по знакам приращения координат и определите дирекционный угол по ней<table class="check_values">
 		<tr>
 			<th rowspan="2">Четверть</th>
 			<th colspan="2">Знаки приращения координат</th>
 			<th rowspan="2">Связь между румбами и дирекционными углами</th>
 		</tr>
 		<tr>
-			<th>&Delta;X</th>
-			<th>&Delta;Y</th>
+			<th>dx</th>
+			<th>dy</th>
 		</tr>
 		<tr>
 			<td></td>
@@ -1111,104 +1131,184 @@ greenB
 			<td>0 и менее</td>
 			<td>angle = 360 - r</td>
 		</tr>
-	</table></li>
-	<li>Определите горизонтальное проложение (расстояние между точками)</li>
-	</ul>
-	Выведите на экран четверть угла, горизонтальное проложение и дирекционный угол в градусах, с точностью до 4 знаков после запятой.</div>
-	<table class="check_values">
-		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="4">Вводимые данные</th>
-			<th rowspan="2">Результат (result)</th>
-		</tr>
-		<tr>
-			<th>X<sub>a</sub></th>
-			<th>Y<sub>a</sub></th>
-			<th>X<sub>b</sub></th>
-			<th>Y<sub>b</sub></th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>10</td>
-			<td>10</td>
-			<td>13</td>
-			<td>14</td>
-			<td class="preformatted">Угол в 1 четверти
+	</table></li><li>Определите горизонтальное проложение (расстояние между точками).</li></ol><div class='task_desc'>
+Выведите на экран четверть угла, горизонтальное проложение и дирекционный угол в градусах, с точностью до 4 знаков после запятой.
+</div>
+<table class='check_values'>
+<tr>
+<th rowspan='2'>Номер теста</th>
+<th colspan='4'>Исходные данные</th>
+<th rowspan='2'>Результат</th>
+</tr>
+<tr>
+<th>
+srcX
+</th>
+<th>
+srcY
+</th>
+<th>
+destX
+</th>
+<th>
+destY
+</th>
+</tr>
+<tr>
+<td></td>
+<td>
+10
+</td>
+<td>
+10
+</td>
+<td>
+13
+</td>
+<td>
+14
+</td>
+<td class='preformatted'>Угол в 1 четверти
 Горизонтальное проложение 5,0000
-Дирекционный угол 53,1301</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>24</td>
-			<td>4</td>
-			<td>3</td>
-			<td>17</td>
-			<td class="preformatted">Угол в 2 четверти
+Дирекционный угол 53,1301
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+24
+</td>
+<td>
+4
+</td>
+<td>
+3
+</td>
+<td>
+17
+</td>
+<td class='preformatted'>Угол в 2 четверти
 Горизонтальное проложение 24,6982
-Дирекционный угол 148,2405</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>23</td>
-			<td>25</td>
-			<td>12</td>
-			<td>16</td>
-			<td class="preformatted">Угол в 3 четверти
+Дирекционный угол 148,2405
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+23
+</td>
+<td>
+25
+</td>
+<td>
+12
+</td>
+<td>
+16
+</td>
+<td class='preformatted'>Угол в 3 четверти
 Горизонтальное проложение 14,2127
-Дирекционный угол 219,2894</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3</td>
-			<td>11</td>
-			<td>13</td>
-			<td>5</td>
-			<td class="preformatted">Угол в 4 четверти
+Дирекционный угол 219,2894
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+3
+</td>
+<td>
+11
+</td>
+<td>
+13
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Угол в 4 четверти
 Горизонтальное проложение 11,6619
-Дирекционный угол 329,0362</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>5</td>
-			<td>5</td>
-			<td>10</td>
-			<td class="preformatted">Угол в 1 четверти
+Дирекционный угол 329,0362
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td>
+10
+</td>
+<td class='preformatted'>Угол в 1 четверти
 Горизонтальное проложение 5,0000
-Дирекционный угол 90,0000</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>10</td>
-			<td>5</td>
-			<td>5</td>
-			<td>5</td>
-			<td class="preformatted">Угол в 2 четверти
+Дирекционный угол 90,0000
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+10
+</td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Угол в 2 четверти
 Горизонтальное проложение 5,0000
-Дирекционный угол 180,0000</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>10</td>
-			<td>5</td>
-			<td>5</td>
-			<td class="preformatted">Угол в 3 четверти
+Дирекционный угол 180,0000
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+10
+</td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Угол в 3 четверти
 Горизонтальное проложение 5,0000
-Дирекционный угол 270,0000</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>5</td>
-			<td>10</td>
-			<td>5</td>
-			<td class="preformatted">Угол в 4 четверти
+Дирекционный угол 270,0000
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+5
+</td>
+<td>
+5
+</td>
+<td>
+10
+</td>
+<td>
+5
+</td>
+<td class='preformatted'>Угол в 4 четверти
 Горизонтальное проложение 5,0000
-Дирекционный угол 360,0000</td>
-		</tr>
-	</table>
-</div><div id="link_c4_p19.1" class="task_block">
+Дирекционный угол 360,0000
+</td>
+</tr>
+</table>
+</div>
+<div id="link_c4_p19.1" class="task_block">
 	<div class="check_single"><p>В некоторых заданиях могут получиться очень сложные условные выражения. Попробуйте их упростить. Несколько советов по этому поводу даны в главе 19.1 "Логические выражения" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=445" target="_blank">(открыть в новой вкладке)</a>.</p>
 	</div>
 </div><div id="task5635" class="task_block empty_on_print">
@@ -1660,4 +1760,4 @@ greenB
 			<td>Оценочная стоимость должна быть неотрицательна</td>
 		</tr>
 	</table>
-</div>Версия 20230415-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230513. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

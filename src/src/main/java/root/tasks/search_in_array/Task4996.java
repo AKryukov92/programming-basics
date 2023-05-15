@@ -6,8 +6,8 @@ public class Task4996 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит сообщение. Нужно зашифровать его азбукой Морзе. Между буквами нужно поставить пробел. Пробелы не кодируются. Для шифровки создайте два массива. Один массив содержит   Любая буква не из списка превращается в вопросительный знак.");
-        appendNonEscaped(getMorseTable());
+        appendTaskDescEscaped("Пользователь вводит сообщение. Нужно зашифровать его азбукой Морзе. Между буквами нужно поставить пробел. Пробелы не кодируются. Для шифровки создайте два массива. Один массив содержит   Любая буква не из списка превращается в вопросительный знак.");
+        appendTaskDescNonEscaped(getMorseTable());
 
         appendCheckValuesHeader("message");
         appendCheckValuesRow("добрый день");

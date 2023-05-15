@@ -6,7 +6,7 @@ public class Task9827 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два массива данных - фрагменты текста. Вывести на экран все элементы из левого массива, которых нет в правом.");
+        appendTaskDescEscaped("Пользователь вводит два массива данных - фрагменты текста. Вывести на экран все элементы из левого массива, которых нет в правом.");
         appendCheckValuesHeader("left", "right");
         appendCheckValuesRow("one two three four", "one four five six");
         appendCheckValuesRow("one two three four", "one two three four");

@@ -17,7 +17,7 @@ public class Task3550 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число V." +
+        appendTaskDescEscaped("Пользователь вводит число V." +
                 " Вывести на экран таблицу умножения чисел от 1 до 9 включительно на V." +
                 " В начале программы вывести сообщение по шаблону \"Таблица умножения на $V\"." +
                 " Каждую следующую строчку оформить по шаблону \"$i x $v = $p\"," +

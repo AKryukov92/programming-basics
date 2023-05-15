@@ -2,14 +2,13 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class Task2368 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число N. Если N меньше 0, нужно вывести соощение об ошибке. Затем пользователь вводит еще N штук чисел. Вычислить сумму введенных чисел. Программа должна вывести сумму и завершиться самостоятельно.");
+        appendTaskDescEscaped("Пользователь вводит число N. Если N меньше 0, нужно вывести соощение об ошибке. Затем пользователь вводит еще N штук чисел. Вычислить сумму введенных чисел. Программа должна вывести сумму и завершиться самостоятельно.");
         appendCheckValuesHeader();
         appendCheckValuesRow(
                 "3",

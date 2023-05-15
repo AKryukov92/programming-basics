@@ -52,7 +52,7 @@ public class Task7621 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - числа, разделенные пробелом. Вычислить сумму элементов на индексах 0, 1, 3, 4. Если элемент отсутствует, то вывести сообщение \"Нет элемента на индексе X\"");
+        appendTaskDescEscaped("Пользователь вводит данные - числа, разделенные пробелом. Вычислить сумму элементов на индексах 0, 1, 3, 4. Если элемент отсутствует, то вывести сообщение \"Нет элемента на индексе X\"");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("1 2 3 4 5 6");
         appendCheckValuesRow("12 34 56 78 90");

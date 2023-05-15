@@ -6,7 +6,7 @@ public class Task7834 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \",\"(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение \"нет элемента на индексе X\".");
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные символом \",\"(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение \"нет элемента на индексе X\".");
         appendCheckValuesHeader("arr");
         appendCheckValuesRow("a,s,d,f,g,h,j,k");
         appendCheckValuesRow("q,w,e,r,t,y,u");

@@ -7,7 +7,7 @@ public class TaskJava2896 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте класс ReverseCounter");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке с исходным кодом создайте класс ReverseCounter.",
                 "Объявите поле для целых чисел с названием current. Запишите в него значение 4.",
                 "Создайте нестатический метод tick.",
@@ -16,7 +16,7 @@ public class TaskJava2896 extends LayoutMaker {
                 "Если значение current равно 0, тогда просто верните значение current."
         );
         appendSubheading("Проверьте корректность работы класса с помощью вспомогательной программы");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В методе main класса Program объявите переменную типа ReverseCounter с названием counter.",
                 "Запишите в переменную counter ссылку на экземпляр класса.",
                 "Объявите переменную current.",
@@ -28,7 +28,7 @@ public class TaskJava2896 extends LayoutMaker {
                 "Еще три раза выведите на экран результат вызова метода tick.",
                 "В результате запуска метода main должен получиться следующий результат:"
         );
-        appendCheckSingle("3<br/>2<br/>1<br/>0<br/>0<br/>0");
+        appendCheckSingleNonEscaped("3<br/>2<br/>1<br/>0<br/>0<br/>0");
         appendFooter();
     }
 

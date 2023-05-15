@@ -65,7 +65,7 @@ public abstract class LayoutMaker {
         writer.println("</h4>");
     }
 
-    protected void appendOrdered(String... elements) {
+    protected void appendOrderedNonEscaped(String... elements) {
         writer.print("<ol start='" + nextOrderedIndex + "'>");
         for (String element : elements) {
             writer.print("<li>");
@@ -96,23 +96,17 @@ public abstract class LayoutMaker {
                 .replace("<", "&lt;")
                 .replace(">", "&gt;");
     }
-    protected void appendTaskDesc(String taskDescription) {
-        appendNonEscaped(escapeHtmlSymbols(taskDescription));
+    protected void appendTaskDescEscaped(String taskDescription) {
+        appendTaskDescNonEscaped(escapeHtmlSymbols(taskDescription));
     }
 
-    protected void appendNonEscaped(String taskDescription) {
+    protected void appendTaskDescNonEscaped(String taskDescription) {
         writer.println("<div class='task_desc'>");
         writer.println(taskDescription);
         writer.println("</div>");
     }
 
-    protected void appendCheckSingleFormatted(String text) {
-        writer.print("<div class='check_single'>");
-        writer.print(text);
-        writer.println("</div>");
-    }
-
-    protected void appendCheckSingle(String text) {
+    protected void appendCheckSingleNonEscaped(String text) {
         writer.print("<div class='check_single preformatted'>");
         writer.print(text);
         writer.println("</div>");

@@ -6,7 +6,7 @@ public class Task9249 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два числа: R и T. Вывести две строки символов \"#\". В первой строке должно быть R штук символов. Во второй строке T штук. Если какое-либо число будет отрицательно, вывести сообщение об ошибке.");
+        appendTaskDescEscaped("Пользователь вводит два числа: R и T. Вывести две строки символов \"#\". В первой строке должно быть R штук символов. Во второй строке T штук. Если какое-либо число будет отрицательно, вывести сообщение об ошибке.");
         appendCheckValuesHeader("R", "T");
         appendCheckValuesRow("5", "11");
         appendCheckValuesRow("11", "5");
@@ -17,7 +17,7 @@ public class Task9249 extends TwoInputValLayout {
         appendCheckValuesRow("-90", "6");
         appendCheckValuesRow("6", "-7");
         appendCheckValuesFooter();
-        appendTaskDesc("Попробуйте решить задачу так, чтобы использовалась только одна переменная-счётчик.");
+        appendTaskDescEscaped("Попробуйте решить задачу так, чтобы использовалась только одна переменная-счётчик.");
         appendFooter();
     }
 

@@ -6,7 +6,7 @@ public class Task3788 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит числа, разделенные пробелом. Нужно посчитать количество элементов, которые меньше 100, а затем создать новый массив, в который поместить элементы, которые меньше 100.");
+        appendTaskDescEscaped("Пользователь вводит числа, разделенные пробелом. Нужно посчитать количество элементов, которые меньше 100, а затем создать новый массив, в который поместить элементы, которые меньше 100.");
         appendCheckValuesHeader("numbers");
         appendCheckValuesRow("9 200 5 180 16 21 500 20 99");
         appendCheckValuesRow("5 19 40 872 391 217 77");

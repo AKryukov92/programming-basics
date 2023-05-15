@@ -6,7 +6,7 @@ public class TaskJava9631 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод indexOf <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-int-'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке. ");
+        appendTaskDescNonEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод indexOf <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-int-'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке. ");
         appendCheckValuesHeader("needle");
         appendCheckValuesRow("z");
         appendCheckValuesRow("a");

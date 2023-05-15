@@ -6,7 +6,7 @@ public class Task3983 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите N символов \"#\" в несколько строчек. Не более 20 штук в строке.");
+        appendTaskDescEscaped("Выведите N символов \"#\" в несколько строчек. Не более 20 штук в строке.");
         appendCheckValuesHeader("N");
         appendCheckValuesRow("5");
         appendCheckValuesRow("23");

@@ -7,7 +7,7 @@ public class Task2000 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Реализуйте параметризованный конструктор класса Range");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В папке для исходного кода создайте класс Range.",
                 "Объявите в классе Range поля \"from\" и \"to\" для чисел.",
                 "В классе Range реализуйте публичный метод, который принимает в качестве аргументов 2 целых числа и называется Range (как класс). У него должно отсутствовать указание типа возвращаемого значения.",

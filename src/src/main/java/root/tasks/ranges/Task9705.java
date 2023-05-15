@@ -6,15 +6,15 @@ public class Task9705 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дано несколько интервалов:");
-        appendOrdered(
+        appendTaskDescEscaped("Дано несколько интервалов:");
+        appendOrderedNonEscaped(
                 "от 10 до 17",
                 "от 14 до 137",
                 "от 47 до 144",
                 "от 100 до 171"
         );
-        appendTaskDesc("Нужно реализовать программу для проверки попадания числа x в эти интервалы. Границы проверяются исключительно.");
-        appendTaskDesc("Также нужно проанализировать итервалы и найти такое число, которое попадает в 1 и 2 интервал, и при этом не попадает в 3 и 4.");
+        appendTaskDescEscaped("Нужно реализовать программу для проверки попадания числа x в эти интервалы. Границы проверяются исключительно.");
+        appendTaskDescEscaped("Также нужно проанализировать итервалы и найти такое число, которое попадает в 1 и 2 интервал, и при этом не попадает в 3 и 4.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("0");
         appendCheckValuesRow("22");

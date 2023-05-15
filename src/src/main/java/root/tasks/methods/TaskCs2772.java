@@ -18,19 +18,19 @@ public class TaskCs2772 extends MultipleInputValLayout implements MethodsDictati
     protected void makeLayout() {
         appendHeader();
         appendSubheading(implementMethodToSolve(7474));
-        appendOrdered(
+        appendOrderedNonEscaped(
                 implementStatic("Library", "task7474"),
                 itAccepts("3 целых числа"),
                 itShouldDo("task7474")
         );
         appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
-        appendOrdered(
+        appendOrderedNonEscaped(
                 callMethod("Runner7474", "Library", "task7474"),
                 passArguments("число 1", "число 2", "число 3"),
                 "Вызовите метод task2632 еще раз с аргументами -3, 0, 2.",
                 "В результате запуска метода main класса Program, в консоли должен появиться текст:"
         );
-        appendCheckSingle("" +
+        appendCheckSingleNonEscaped("" +
                 wrapLogic("1", "2", "3") +
                 wrapLogic("-3", "0", "2")
         );

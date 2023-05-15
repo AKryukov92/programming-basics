@@ -17,8 +17,8 @@ public class Task4343 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.");
-        appendCheckSingle("User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;");
+        appendTaskDescEscaped("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.");
+        appendCheckSingleNonEscaped("User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;");
         appendCheckValuesHeader("user", "pass", "host", "port", "db");
         appendCheckValuesRow("test", "pass", "localhost", "5432", "my_db");
         appendCheckValuesRow("admin", "7e8efd48d69c", "production-node1", "5432", "bank");

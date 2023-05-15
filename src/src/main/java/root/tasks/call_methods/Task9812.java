@@ -6,7 +6,7 @@ public class Task9812 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит два символа. Посчитать количество символов между введенными символами.");
+        appendTaskDescEscaped("Дана фиксированная строка \"abcdefwxyz\". Пользователь вводит два символа. Посчитать количество символов между введенными символами.");
         appendCheckValuesHeader("CA", "CB");
         appendCheckValuesRow("a", "x");
         appendCheckValuesRow("a", "w");

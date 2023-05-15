@@ -6,7 +6,7 @@ public class Task7865 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Даны два интервала чисел Красный [-11;-3] Зеленый [5;19]. Пользователь вводит значение X. Определить, к какому интервалу относится число: к красному или к зеленому. Границы нужно проверять включительно.");
+        appendTaskDescEscaped("Даны два интервала чисел Красный [-11;-3] Зеленый [5;19]. Пользователь вводит значение X. Определить, к какому интервалу относится число: к красному или к зеленому. Границы нужно проверять включительно.");
         appendCheckValuesHeader("x");
         appendCheckValuesRow("-5");
         appendCheckValuesRow("-11");

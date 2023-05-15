@@ -8,7 +8,7 @@ public class Task4426 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число. Оно обозначает количество элементов массива. Затем он вводит элементы массива по одному. По окончанию приема данных, нужно вывести на экран все элементы массива в строчку.");
+        appendTaskDescEscaped("Пользователь вводит число. Оно обозначает количество элементов массива. Затем он вводит элементы массива по одному. По окончанию приема данных, нужно вывести на экран все элементы массива в строчку.");
         appendCheckValuesHeader();
         appendCheckValuesRow("4 qw er ty ui".split(" "));
         appendCheckValuesRow("3 as df gh".split(" "));

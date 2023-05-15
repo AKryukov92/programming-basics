@@ -15,8 +15,8 @@ public class Task2632 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.");
-        appendCheckSingle("&lt;circle cx=\"$CX\" cy=\"$CY\" r=\"$R\" fill=\"$FILL\"/&gt;");
+        appendTaskDescEscaped("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.");
+        appendCheckSingleNonEscaped("&lt;circle cx=\"$CX\" cy=\"$CY\" r=\"$R\" fill=\"$FILL\"/&gt;");
         appendCheckValuesHeader("cx", "cy", "r", "fill");
         appendCheckValuesRow("50", "50", "40", "yellow");
         appendCheckValuesRow("400", "300", "200", "green");

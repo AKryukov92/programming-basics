@@ -6,12 +6,12 @@ public class TaskCs7740 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendOrdered(
+        appendOrderedNonEscaped(
                 "В решении Stage2 создайте проект Runner7740 типа \"Консольное приложение\".",
                 "Решите описанную ниже задачу. Исходные данные пользователь вводит вручную.",
                 "Обработайте потенциальное исключение, которое возникает когда пользователь вводит не числа."
         );
-        appendTaskDesc("Вычислить результат по формуле x + 7, где x вводится с клавиатуры");
+        appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("11.13");
         appendCheckValuesRow("-7919");

@@ -2,14 +2,12 @@ package root.tasks.arrays;
 
 import root.tasks.ThreeInputValLayout;
 
-import java.io.PrintStream;
-
 public class Task1998 extends ThreeInputValLayout {
 
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит данные - символы, разделенные символом \" \", одну отдельную строку append и число a." +
+        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные символом \" \", одну отдельную строку append и число a." +
                 " Нужно вставить указанную строку в массив, заменив существующее содержимое." +
                 " Если число a больше размера массива, то нужно создать новый массив." +
                 " Размер нового массива должен быть такой, чтобы число a было последним индексом." +

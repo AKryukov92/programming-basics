@@ -6,11 +6,11 @@ public class Task4425 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит число A и данные - символы, разделенные тире '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону");
-        appendCheckSingle("В массиве длиной $arrLength\n" +
+        appendTaskDescEscaped("Пользователь вводит число A и данные - символы, разделенные тире '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону");
+        appendCheckSingleNonEscaped("В массиве длиной $arrLength\n" +
                 "на индексе $A\n" +
                 "находится элемент со значением '$value'");
-        appendTaskDesc("Если в данных два разделителя подряд, то возникает элемент содержащий пустую строку.");
+        appendTaskDescEscaped("Если в данных два разделителя подряд, то возникает элемент содержащий пустую строку.");
         appendCheckValuesHeader("data", "A");
         appendCheckValuesRow("qw-er-ty-ui", "0");
         appendCheckValuesRow("qw-er-ty-ui", "3");

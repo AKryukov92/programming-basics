@@ -6,7 +6,7 @@ public class Task7323 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два числа: width и diff. Выведите на экран две строки символов \"*\". В первой строке должно быть width штук символов. Количество символов во второй строчке отличается на значение diff.");
+        appendTaskDescEscaped("Пользователь вводит два числа: width и diff. Выведите на экран две строки символов \"*\". В первой строке должно быть width штук символов. Количество символов во второй строчке отличается на значение diff.");
         appendCheckValuesHeader("width", "diff");
         appendCheckValuesRow("4", "3");
         appendCheckValuesRow("10", "5");

@@ -6,7 +6,7 @@ public class Task2429 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Дана строка A. Нужно вывести ее на экран, дописать слова \"Программирование это \" перед началом и \"!\"(восклицательный знак) в конце этой строки.");
+        appendTaskDescEscaped("Дана строка A. Нужно вывести ее на экран, дописать слова \"Программирование это \" перед началом и \"!\"(восклицательный знак) в конце этой строки.");
         appendCheckValuesHeader("A", "C");
         appendCheckValuesRow("просто");
         appendCheckValuesRow("интересно");
