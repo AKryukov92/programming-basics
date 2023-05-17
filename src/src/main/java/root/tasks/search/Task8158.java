@@ -30,6 +30,38 @@ public class Task8158 extends TwoInputValLayout {
         }
     }
 
+    private void logic2(String firstValue, String secondValue) {
+        int firstPosition = -1;
+        int secondPosition = -1;
+        String[] arr = "a,b,c,d,e,f,g,h,a,b,c,d,e".split(",");
+        int i = 0;
+        while (i < arr.length) {
+            if (firstValue.equals(arr[i])) {
+                firstPosition = i;
+                break;
+            }
+            i++;
+        }
+        if (firstPosition >= 0) {
+            System.out.println("Символ '" + firstValue + "' найден");
+        } else {
+            System.out.println("Символ '" + firstValue + "' отсутствует");
+        }
+        i = 0;
+        while (i < arr.length) {
+            if (secondValue.equals(arr[i])) {
+                secondPosition = i;
+                break;
+            }
+            i = i + 1;
+        }
+        if (secondPosition >= 0) {
+            System.out.println("Символ '" + secondValue + "' найден");
+        } else {
+            System.out.println("Символ '" + secondValue + "' отсутствует");
+        }
+    }
+
     @Override
     protected void makeLayout() {
         appendHeader();

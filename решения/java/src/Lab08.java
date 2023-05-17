@@ -373,20 +373,4 @@ public class Lab08 {
         }
         return result.toString();
     }
-
-    public static String task2234(String message){
-        String[] arr = message.split(" ");
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < arr.length; i++){
-            int letterIndex = 0;
-            for (int j = 0; j < codes.length; j++){
-                if (arr[i].equals(codes[j])){
-                    letterIndex = j;
-                    break;
-                }
-            }
-            result.append(letters[letterIndex]);
-        }
-        return result.toString();
-    }
 }

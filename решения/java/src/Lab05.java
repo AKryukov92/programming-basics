@@ -517,19 +517,6 @@ public class Lab05 {
         return hundreds == units;
     }
 
-    public static StringBuilder task1292(StringBuilder sb, String x) {
-        String[] chars = {"a", "b", "c", "d", "e", "f", "g", "h"};
-        int i = 0;
-        while (i < chars.length) {
-            sb.append(chars[i]);
-            if (chars[i].equals(x)) {
-                break;
-            }
-            i++;
-        }
-        return sb;
-    }
-
     public static String task4527(int a) throws IllegalArgumentException {
         if (a < -10 || a > 100) {
             throw new IllegalArgumentException("Значение A должно быть в интервале [-10, 100]");

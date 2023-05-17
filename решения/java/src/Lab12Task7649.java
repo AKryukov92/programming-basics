@@ -3,10 +3,6 @@
  *         13.07.2017
  */
 public class Lab12Task7649 {
-    public static void main(String[] args) {
-        Step6806();
-    }
-
     private static void Step8495() {
         System.out.println();
         System.out.println("8495");
@@ -151,38 +147,6 @@ public class Lab12Task7649 {
         System.out.println(result2084);
     }
 
-    private static void Step6806() {
-        System.out.println();
-        System.out.println("6806");
-        Lab07.task6806(10);
-        Lab07.task6806(15);
-        Lab07.task6806(20);
-        Lab07.task6806(9);
-        Lab07.task6806(23);
-    }
-
-    private static void Step5694() {
-        System.out.println();
-        System.out.println("5694");
-        String[] in5694 = {"a", "d", "h", "i", "z"};
-        String[] out5694 = {
-            "a+\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd+\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh+\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n",
-            "a\nb\nc\nd\ne\nf\ng\nh\n"
-        };
-        for (int i = 0; i < in5694.length; i++) {
-            StringBuilder result = Lab07.task5694(new StringBuilder(), in5694[i]);
-            if (out5694[i].equals(result.toString())){
-                System.out.println("Задача решена верно");
-            } else {
-                result.insert(0, "Неверно. Результат:\n");
-                System.out.println(result.toString());
-            }
-        }
-    }
-
     static void Step7369() {
         System.out.println();
         System.out.println("7369");
@@ -210,17 +174,5 @@ public class Lab12Task7649 {
         System.out.println();
         System.out.println("5951");
         System.out.println(Lab06.task5951());
-    }
-
-    private static void Step1292(){
-        System.out.println();
-        System.out.println("1292");
-        String[] in1292 = {"a","b","d","h","i"};
-        String[] out1292 = {"a", "ab", "abcd", "abcdefgh", "abcdefgh"};
-        for (int i = 0; i < in1292.length; i++){
-            String result = Lab05.task1292(new StringBuilder(), in1292[i]).toString();
-            System.out.println("Ожидалось : " + out1292[i]);
-            System.out.println("Получилось: " + result);
-        }
     }
 }

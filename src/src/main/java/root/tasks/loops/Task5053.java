@@ -6,7 +6,7 @@ public class Task5053 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Выведите на экран <i>в строчку</i> числа от from до to включительно. Если from < to,  то в порядке возрастания. Иначе - в порядке убывания. Перед списком чисел напишите в каком порядке они выводились.");
+        appendTaskDescEscaped("Выведите на экран <i>в строчку</i> числа от from до to включительно. Если from < to,  то в порядке возрастания. Иначе - в порядке убывания. Перед списком чисел напишите в каком порядке они выводились.");
         appendCheckValuesHeader("from", "to");
         appendCheckValuesRow("8", "13");
         appendCheckValuesRow("27", "17");

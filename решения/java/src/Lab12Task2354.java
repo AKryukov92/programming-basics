@@ -187,22 +187,4 @@ public class Lab12Task2354 {
         System.out.printf("%d (%d)\n", Lab08.task9925("янв,фев,март"), 3);
         System.out.printf("%d (%d)\n", Lab08.task9925("один"), 1);
     }
-
-    private static void Step4283() {
-        System.out.println();
-        System.out.println("4283");
-        String[] in4283k = {"e", "t", "w", "q"};
-
-        String[] in4283s = {
-                "q w e r q w",
-                "q w e r q w e r q w e",
-                "e w w w w w",
-                "r r r r r r"
-        };
-        int[] out4283 = {1, 0, 5, 0};
-        for (int i = 0; i < in4283k.length; i++) {
-            int result = Lab07.task4283(in4283k[i], in4283s[i]);
-            System.out.printf("%d (%d)\n", result, out4283[i]);
-        }
-    }
 }

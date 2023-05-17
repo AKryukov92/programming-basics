@@ -23,7 +23,7 @@ public class Task2321 extends TwoInputValLayout {
         int a = Integer.parseInt(firstValue);
         int b = Integer.parseInt(secondValue);
         int i, n;
-        if (a < b){
+        if (a < b) {
             System.out.println("От A до B");
             i = a;
             n = b;
@@ -32,10 +32,30 @@ public class Task2321 extends TwoInputValLayout {
             i = b;
             n = a;
         }
-        while(i <= n){
+        while (i <= n) {
             System.out.print(i);
             System.out.print(" ");
             i++;
+        }
+    }
+
+    protected void logic2(String firstValue, String secondValue) {
+        int a = Integer.parseInt(firstValue);
+        int b = Integer.parseInt(secondValue);
+        if (a < b) {
+            System.out.println("От A до B");
+            while (a <= b) {
+                System.out.print(a);
+                System.out.print(" ");
+                a++;
+            }
+        } else {
+            System.out.println("От B до A");
+            while (b <= a) {
+                System.out.print(b);
+                System.out.print(" ");
+                b++;
+            }
         }
     }
 

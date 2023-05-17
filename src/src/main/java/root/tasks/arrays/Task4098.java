@@ -7,7 +7,7 @@ public class Task4098 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDesc("Пользователь вводит два числа: position и total." +
+        appendTaskDescEscaped("Пользователь вводит два числа: position и total." +
                 " Кроме того есть известный массив letters: \"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\"." +
                 " Нужно вывести элемент массива letters на индексе position в строчку количество раз равное total.");
         appendCheckValuesHeader("position", "total");

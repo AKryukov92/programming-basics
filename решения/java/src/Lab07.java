@@ -211,42 +211,6 @@ public class Lab07 {
         return ret;
     }
 
-    public static StringBuilder task5694(StringBuilder sb, String x) {
-        String[] arr = "a b c d e f g h".split(" ");
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-            if (arr[i].equals(x)) {
-                sb.append("+");
-            }
-            sb.append("\n");
-        }
-        return sb;
-    }
-
-    static void task6806(int x) {
-        int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
-            if (arr[i] == x) {
-                System.out.print(" Найдено");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
-    public static StringBuilder task6806(StringBuilder sb, int x) {
-        int[] arr = {11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20};
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-            if (arr[i] == x) {
-                sb.append("+");
-            }
-            sb.append("\n");
-        }
-        return sb;
-    }
-
     public static void task9576(String data) {
         if (data.isEmpty()) {
             System.out.println("Исходная строка пуста");
@@ -382,17 +346,6 @@ public class Lab07 {
             ret.add(arr[i]);
         }
         return ret;
-    }
-
-    public static int task4283(String k, String raw) {
-        String[] arr = raw.split(" ");
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equals(k)) {
-                count++;
-            }
-        }
-        return count;
     }
 
     public static String task3095(String raw) {
