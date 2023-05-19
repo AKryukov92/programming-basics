@@ -8,20 +8,22 @@ public class Task1903 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа сама не заканчивается. Её нужно закрывать вручную.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа должна закончиться, когда пользователь введёт число меньше или равное нулю.");
         appendCheckValuesHeader();
         appendCheckValuesRow(
                 "7",
                 "12",
                 "23",
-                "-1",
-                "0",
-                "5"
+                "-1"
+        );
+        appendCheckValuesRow(
+                "7", "12", "0"
         );
         appendCheckValuesRow(
                 "14",
                 "15",
-                "4"
+                "4",
+                "-20"
         );
         appendCheckValuesRow(
                 "1",
@@ -35,7 +37,7 @@ public class Task1903 extends StreamInputLayout {
                 "1",
                 "1",
                 "1",
-                "1"
+                "-1"
         );
         appendCheckValuesFooter();
         appendFooter();
@@ -49,5 +51,9 @@ public class Task1903 extends StreamInputLayout {
             int result = x + 7;
             System.out.println("Пользователь ввёл " + tmp + " после прибавления 7 получается " + result);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task1903());
     }
 }

@@ -8,7 +8,7 @@ public class Task8138 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего числа.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего числа. Программа должна закончиться, когда пользователь введёт число меньше или равное нулю.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow(
                 "78",
@@ -19,7 +19,7 @@ public class Task8138 extends StreamInputLayout {
                 "73",
                 "96",
                 "87",
-                "92"
+                "-92"
         );
         appendCheckValuesRow(
                 "86",
@@ -30,38 +30,44 @@ public class Task8138 extends StreamInputLayout {
                 "79",
                 "87",
                 "83",
-                "67"
+                "-67"
         );
+        appendCheckValuesRow("-5");
         appendCheckValuesFooter();
         appendFooter();
     }
+
     @Override
     protected void logic(Iterator<String> source) {
-        String prev;
-        String current = source.next();
+        int prev;
+        int current = Integer.parseInt(source.next());
         System.out.println("Текущее " + current + ". Предыдущее отсутствует.");
         prev = current;
 
-        while (source.hasNext()) {
-            current = source.next();
-            System.out.println("Текущее " + current + ". Предыдущее "+ prev);
+        while (current >= 0 && source.hasNext()) {
+            current = Integer.parseInt(source.next());
+            System.out.println("Текущее " + current + ". Предыдущее " + prev);
             prev = current;
         }
     }
 
     protected void alternative(Iterator<String> source) {
-        String even = source.next();
-        String odd;
+        int even = Integer.parseInt(source.next());
+        int odd;
         System.out.println("Текущее " + even + ". Предыдущее отсутствует.");
-        odd = source.next();
-        System.out.println("Текущее " + odd + ". Предыдущее "+ even);
-        while(source.hasNext()) {
-            even = source.next();
+        odd = Integer.parseInt(source.next());
+        System.out.println("Текущее " + odd + ". Предыдущее " + even);
+        while (source.hasNext()) {
+            even = Integer.parseInt(source.next());
             System.out.println("Текущее " + even + ". Предыдущее" + odd);
             if (source.hasNext()) {
-                odd = source.next();
+                odd = Integer.parseInt(source.next());
                 System.out.println("Текущее " + odd + ". Предыдущее " + even);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task8138());
     }
 }
