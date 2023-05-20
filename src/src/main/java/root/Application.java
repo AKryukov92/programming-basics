@@ -733,9 +733,11 @@ public class Application {
         taskBook.withSourceDirectory("lab09")
 
                 .withGroup("Чтение файлов")
-                .addExample(6175)
-                .addTask(4488)
+                .addExample(new Task6175())//просто чтение и просто вывод на экран
+                .addTask(new Task5236())//чтение чисел, конвертирование и простой вывод
+                .addTask(new Task4488())//пропуск первой строки
 
+                .addExample(new Task7396())//строки файла это массивы чисел
                 .addExample(new Task7788())//использование файла как таблицы СУБД
                 .addTask(new Task6989())//файл-таблица СУБД. нужно вывести данные по идентификатору
                 .addTask(new Task6170())//2 файла-таблицы СУБД. Нужно соединить две таблицы, вывести данные по коду

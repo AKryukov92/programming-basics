@@ -8,33 +8,34 @@ public class Task1845 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Если число больше 20, нужно написать на экране 'БОЛЬШОЕ'. Если число меньше 0, нужно написать 'МАЛЕНЬКОЕ'. Программа сама не заканчивается. Её нужно закрывать вручную.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Если число больше 100, нужно написать на экране 'БОЛЬШОЕ'. Если число меньше 20, нужно написать 'МАЛЕНЬКОЕ'. Программа должна завершиться, когда пользователь введёт число меньше или равное нулю.");
         appendCheckValuesHeader();
+        appendCheckValuesRow("99", "100", "-100");
         appendCheckValuesRow(
-                "-7",
                 "17",
-                "20",
-                "0",
-                "38",
+                "117",
+                "60",
+                "10",
+                "138",
                 "-46"
         );
         appendCheckValuesRow(
-                "11",
+                "41",
                 "17",
-                "38",
-                "-35",
+                "138",
+                "35",
                 "-17"
         );
         appendCheckValuesRow(
-                "-7",
+                "17",
+                "55",
+                "1",
+                "127",
+                "2",
+                "93",
+                "125",
                 "15",
-                "-1",
-                "27",
-                "-2",
-                "13",
-                "25",
-                "15",
-                "9"
+                "-9"
         );
         appendCheckValuesFooter();
         appendFooter();
@@ -42,16 +43,23 @@ public class Task1845 extends StreamInputLayout {
 
     @Override
     protected void logic(Iterator<String> source) {
-        while (source.hasNext()) {
-            String tmp = source.next();
-            int x = Integer.parseInt(tmp);
+        String tmp = source.next();
+        int x = Integer.parseInt(tmp);
+        while (x > 0) {
             System.out.println("Пользователь ввёл " + tmp);
-            if (x > 20) {
+            if (x > 100) {
                 System.out.println("БОЛЬШОЕ");
             }
-            if (x < 0) {
+            if (x < 20) {
                 System.out.println("МАЛЕНЬКОЕ");
             }
+            tmp = source.next();
+            x = Integer.parseInt(tmp);
         }
+        System.out.println("Число " + x + " не больше 0, завершаю программу");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task1845());
     }
 }
