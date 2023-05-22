@@ -11,7 +11,13 @@ public class Task1259 extends OneInputValLayout {
             return;
         }
         int i = 0;
-        while (i < w && i < 20) {
+        if (w < 20) {
+            System.out.println("Требуемое количество меньше 20");
+        } else {
+            System.out.println("Требуемое количество больше 20.");
+            w = 20;
+        }
+        while (i < w) {
             System.out.print("*");
             i++;
         }

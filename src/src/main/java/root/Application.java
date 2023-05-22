@@ -430,7 +430,6 @@ public class Application {
                 .addTask(new Task1139())
                 .addTask(new Task9969())
                 .addTask(new Task5301())
-                .addTask(new Task1259())
                 .addTask(new Task6790())
 
                 .withGroup("Один цикл за другим")
@@ -438,6 +437,7 @@ public class Application {
 
                 .withGroup("Цикл внутри условия")
                 .addExample(new Task6066())
+                .addTask(new Task1259())
                 .addTask(new Task2565())
                 .addCitation("link_c4_p16.2")
                 .addTask(new Task2321())
