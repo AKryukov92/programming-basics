@@ -37,20 +37,6 @@ public class Lab07 {
         task5795("5 6");
         task5795("");
     }
-
-    public static void step6988() {
-        System.out.println();
-        System.out.println("6988");
-        task6988("a s d f a", "a s d f a");
-        task6988("a s d f a", "a s d f g");
-        task6988("qwerty asdfgh zxcvb", "qwerty asdfgh asdfgh");
-        task6988("qaz wsx edc", "wsx edc qaz");
-        task6988("qaz wsx edc", "qaz wsx edc rfv");
-        task6988("qaz wsx edc rfv tgb", "qaz wsx edc rfv");
-        task6988("qaz wsx edc", "qaz tgb ujm yhn");
-        task6988("qaz wsx vbn rfv tgb", "qaz wsx edc");
-    }
-
     public static void step8471() {
         System.out.println();
         System.out.println("8471");
@@ -243,57 +229,6 @@ public class Lab07 {
         System.out.println();
     }
 
-    public static String task7369(String leftRaw, String topRaw) {
-        if (leftRaw.isEmpty()) {
-            return "Данные слева отсутствуют";
-        }
-        if (topRaw.isEmpty()) {
-            return "Данные сверху отсутствуют";
-        }
-        StringBuilder sb = new StringBuilder();
-        String[] leftArr = leftRaw.split(" ");
-        String[] topArr = topRaw.split(" ");
-        sb.append("  ");
-        sb.append(topRaw);
-        sb.append("\n");
-        for (int i = 0; i < leftArr.length; i++) {
-            sb.append(leftArr[i]);
-            for (int j = 0; j < topArr.length; j++) {
-                if (leftArr[i].equals(topArr[j])) {
-                    sb.append(" +");
-                } else {
-                    sb.append("  ");
-                }
-            }
-            sb.append("|\n");
-        }
-        sb.append(" ");
-        for (int i = 0; i < topArr.length; i++) {
-            sb.append("--");
-        }
-        return sb.toString();
-    }
-
-    public static int task5894(String leftRaw, String topRaw) throws IllegalArgumentException {
-        if (leftRaw.isEmpty()) {
-            throw new IllegalArgumentException("Данные слева отсутствуют");
-        }
-        if (topRaw.isEmpty()) {
-            throw new IllegalArgumentException("Данные сверху отсутствуют");
-        }
-        int count = 0;
-        String[] leftArr = leftRaw.split(" ");
-        String[] topArr = topRaw.split(" ");
-        for (int i = 0; i < leftArr.length; i++) {
-            for (int j = 0; j < topArr.length; j++) {
-                if (leftArr[i].equals(topArr[j])) {
-                    count++;
-                }
-            }
-        }
-        return count;
-    }
-
     public static List<Integer> task9271(String raw) {
         String[] arr = raw.split(" ");
         List<Integer> ret = new ArrayList<>();
@@ -466,26 +401,6 @@ public class Lab07 {
             System.out.println("|");
         }
         System.out.println(" ----------");
-    }
-
-    public static void task6988(String left, String right) {
-        String[] larr = left.split(" ");
-        String[] rarr = right.split(" ");
-        int i = 0;
-        while (i < larr.length && i < rarr.length) {
-            if (!larr[i].equals(rarr[i])) {
-                System.out.println("Массивы начинают различаться на индексе " + i);
-                return;
-            }
-            i = i + 1;
-        }
-        if (larr.length < rarr.length) {
-            System.out.println("Массивы начинают различаться на индексе " + larr.length);
-        } else if (larr.length > rarr.length) {
-            System.out.println("Массивы начинают различаться на индексе " + rarr.length);
-        } else {
-            System.out.println("Массивы одинаковы");
-        }
     }
 
     public static void task5795(String data) {

@@ -161,7 +161,7 @@ public class TaskBook {
         this.themeNav = nav;
     }
 
-    public TaskBook addResource(String filename){
+    public TaskBook addResource(String filename) {
         this.resources.add(filename);
         return this;
     }
@@ -249,7 +249,7 @@ public class TaskBook {
             man.make(css);
         }
         System.out.println("Copying files ");
-        for (String filename: resources){
+        for (String filename : resources) {
             LabFragment.copyFileTo(filename, getSourceDirectory(), getTargetDirectory());
         }
     }
@@ -259,25 +259,36 @@ public class TaskBook {
     }
 
     private String makeTaskNav() {
-        int leftAmount = 1, rightAmount = 0;
-        for (int endIndex = groups.size() - 1, beginIndex = 0; beginIndex <= endIndex; ) {
-            if (leftAmount <= rightAmount) {
-                leftAmount += groups.get(beginIndex).navLength();
-                beginIndex++;
-            } else {
-                rightAmount += groups.get(endIndex).navLength();
-                endIndex--;
-            }
-        }
-
         StringBuilder sb = new StringBuilder();
         sb.append("<div class='nav'><ul>");
         sb.append("<li><a href='#heading'>^</a></li>");
-        int index = 1;
+        int sum = 0;
         for (TaskGroup group : groups) {
-            index = group.addToNav(sb, index);
-            if (index == leftAmount) {
-                sb.append("</ul><ul>");
+            sum += group.navLength();
+        }
+        if (sum > 15) {
+            int leftAmount = 1, rightAmount = 0;
+            for (int endIndex = groups.size() - 1, beginIndex = 0; beginIndex <= endIndex; ) {
+                if (leftAmount <= rightAmount) {
+                    leftAmount += groups.get(beginIndex).navLength();
+                    beginIndex++;
+                } else {
+                    rightAmount += groups.get(endIndex).navLength();
+                    endIndex--;
+                }
+            }
+
+            int index = 1;
+            for (TaskGroup group : groups) {
+                index = group.addToNav(sb, index);
+                if (index == leftAmount) {
+                    sb.append("</ul><ul>");
+                }
+            }
+        } else {
+            int index = 1;
+            for (TaskGroup group : groups) {
+                index = group.addToNav(sb, index);
             }
         }
         sb.append("</ul></div>");
@@ -294,7 +305,7 @@ public class TaskBook {
         }
     }
 
-    public boolean containsTaskWithId(int id){
+    public boolean containsTaskWithId(int id) {
         return taskById.containsKey(id);
     }
 }

@@ -377,33 +377,6 @@ public class Lab13Task9701 {
         Lab08.task9631("wxyz");
     }
 
-    static void Step5894() {
-        System.out.println();
-        System.out.println("5894");
-        String[] in5894top = {
-                "q a z",
-                "qw fg hj ty kl",
-                "oiuy hjkl vbmn",
-                "a s d f",
-                ""
-        };
-        String[] in5894left = {
-                "q w e",
-                "qw er ty ui op",
-                "asdf ghjk",
-                "",
-                "zxc vbn"
-        };
-        for (int i = 0; i < in5894left.length; i++) {
-            try {
-                int result = Lab07.task5894(in5894left[i], in5894top[i]);
-                System.out.println("Повторений: " + result);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     static void Step5873() {
         Lab07.task5873("as df gh jk", 1);
         Lab07.task5873("a s d f g h j k", 3);
