@@ -126,6 +126,11 @@ public abstract class LayoutMaker {
         return "<a href=\"#task" + id + "\" target=\"_blank\">ЛР#" + id + "(открыть в новой вкладке)</a>";
     }
 
+    protected static String linkToTask(String className) {
+        String id = className.substring(className.length() - 4);
+        return  "<a href=\"#task" + id + "\" target=\"_blank\">ЛР#" + id + "(открыть в новой вкладке)</a>";
+    }
+
     @Override
     public String toString() {
         return getContent();

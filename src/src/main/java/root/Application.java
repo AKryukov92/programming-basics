@@ -14,6 +14,10 @@ import root.tasks.conditions.Task5116;
 import root.tasks.exceptions.*;
 import root.tasks.internal_state.TaskJava2896;
 import root.tasks.loops_with_conditions.*;
+import root.tasks.method_generalisation.Task6813;
+import root.tasks.method_generalisation.Task8862;
+import root.tasks.method_generalisation.Task9309;
+import root.tasks.method_generalisation.Task9709;
 import root.tasks.nested_loops.*;
 import root.tasks.ranges.*;
 import root.tasks.filltemplate.*;
@@ -839,7 +843,7 @@ public class Application {
         //оформление текста
         //методы для простых вычислений: x+ 7
         //перевод из градусов в радианы
-        //
+        //кроме вызова метода из Program нужно донести мы
 
         //печать массива целиком -- дать без конкретного описания "найдите общий код в нескольких методах и реализуйте как метод"
         //преобразование массива строк в массив чисел -- дать без конкретного описания
@@ -852,6 +856,28 @@ public class Application {
         //метод для поиска медианы
         //метод для подсчета количества различных
         //метод для формирования нового массива с различными
+    }
+
+    private static void methodGeneralisation(TaskBook taskBook) {
+        //обобщение кода - одна из главных целей написания методов.
+        // к ней нужно переходить после того как человек освоил базовый синтаксис.
+        //сами задачи должны быть простыми, многократно пережеванными.
+        //сложность здесь должна быть в обобщении 4 методов до одного.
+        //задачи идут пачками:
+        // - обработка целиком,
+        // - начиная с индекса х до конца,
+        // - начиная с 0 до индекса х,
+        // - от x до y
+        //задачи:
+        // - напечатать массив,
+        // - найти сумму элементов массива,
+        // - найти минимальное
+        taskBook.addTask(new Task9309())//печать всего массива
+                .addTask(new Task8862())//печать от start до конца
+                .addTask(new Task9709())//печать от start до end
+                .addTask(new Task6813())//применить метод из 9709 в 9309 и 8862
+        ;
+
     }
 
     private static void unitTesting(TaskBook taskBook) {
