@@ -5,15 +5,11 @@ import java.util.Random;
 public class RandomRunner {
     public static void main(String[] args) {
         Random rnd = new Random();
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-        System.out.println(-50+rnd.nextInt(100)+"<br>");
-
+        for (int j = 0; j < 10; j++) {
+            for (int i = 0; i < 10; i++) {
+                System.out.print(-500 + rnd.nextInt(1000));
+                System.out.print(";");
+            }
+        }
     }
 }

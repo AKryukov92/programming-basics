@@ -8,7 +8,7 @@ public class Task8138 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего числа. Программа должна закончиться, когда пользователь введёт число меньше или равное нулю.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Нужно вывести на экран значение введенного числа и значение предыдущего числа. Программа должна завершиться, когда пользователь введёт число меньше или равное нулю.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow(
                 "78",
@@ -44,11 +44,12 @@ public class Task8138 extends StreamInputLayout {
         System.out.println("Текущее " + current + ". Предыдущее отсутствует.");
         prev = current;
 
-        while (current >= 0 && source.hasNext()) {
+        while (current >= 0) {
             current = Integer.parseInt(source.next());
             System.out.println("Текущее " + current + ". Предыдущее " + prev);
             prev = current;
         }
+        System.out.println("Число " + current + " не больше 0, завершаю программу");
     }
 
     protected void alternative(Iterator<String> source) {

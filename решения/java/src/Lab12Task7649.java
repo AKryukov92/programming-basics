@@ -147,29 +147,6 @@ public class Lab12Task7649 {
         System.out.println(result2084);
     }
 
-    static void Step7369() {
-        System.out.println();
-        System.out.println("7369");
-        String[] in7369top = {
-            "q a z w s x",
-            "e d c",
-            "a a a a",
-            "r f v",
-            ""
-        };
-        String[] in7369left = {
-            "q w e",
-            "a s d f g h j",
-            "a a a a",
-            "",
-            "z x c v"
-        };
-        for (int i = 0; i < in7369left.length; i++){
-            String result = Lab07.task7369(in7369left[i], in7369top[i]);
-            System.out.println(result);
-        }
-    }
-
     private static void Step5951() {
         System.out.println();
         System.out.println("5951");

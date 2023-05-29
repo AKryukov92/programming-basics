@@ -64,17 +64,20 @@ public class Application {
             "Вложенные циклы",
             "Базовые операции с массивами",
             //методы?
-            "Использование числовых массивов",
+            "Перестановки элементов массива",
 
+            "Использование числовых массивов",
             "Вычисление агрегатов",
             "Поиск в массиве",
+            "Сортировка вставкой",
             "Строки",
+
             "Чтение файлов",
             "Запись в файлы",
-
             "Методы",
             "Исключения",
             "Составные типы данных",
+
             "Внутреннее состояние",
             "Коллекции",
             "Рекурсия"
@@ -93,20 +96,22 @@ public class Application {
         fillStreamOfData(taskBooksCs[6]);
         fillNestedLoops(taskBooksCs[7]);
         fillBasicArrayOperations(taskBooksCs[8]);
-        fillArrayConversionToNumbers(taskBooksCs[9]);
+        fillSwapping(taskBooksCs[9]);
+        fillArrayConversionToNumbers(taskBooksCs[10]);
 
-        fillAggregateCalculation(taskBooksCs[10]);
-        fillElementSearch(taskBooksCs[11]);
-        fillStringMethods(taskBooksCs[12]);
-        fillReadingFiles(taskBooksCs[13]);
-        fillWritingFiles(taskBooksCs[14]);
+        fillAggregateCalculation(taskBooksCs[11]);
+        fillElementSearch(taskBooksCs[12]);
+        fillInsertionSort(taskBooksCs[13]);
+        fillStringMethods(taskBooksCs[14]);
+        fillReadingFiles(taskBooksCs[15]);
+        fillWritingFiles(taskBooksCs[16]);
 
-        unitTesting(taskBooksCs[15]);
-        fillExceptions(taskBooksCs[16]);
-        fillAbstractDataStructures(taskBooksCs[17]);
-        fillInternalState(taskBooksCs[18]);
-        fillCollections(taskBooksCs[19]);
-        fillRecursion(taskBooksCs[20]);
+        unitTesting(taskBooksCs[17]);
+        fillExceptions(taskBooksCs[18]);
+        fillAbstractDataStructures(taskBooksCs[19]);
+        fillInternalState(taskBooksCs[20]);
+        fillCollections(taskBooksCs[21]);
+        fillRecursion(taskBooksCs[22]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -123,20 +128,22 @@ public class Application {
         fillStreamOfData(taskBooksJava[6]);
         fillNestedLoops(taskBooksJava[7]);
         fillBasicArrayOperations(taskBooksJava[8]);
-        fillArrayConversionToNumbers(taskBooksJava[9]);
+        fillSwapping(taskBooksJava[9]);
+        fillArrayConversionToNumbers(taskBooksJava[10]);
 
-        fillAggregateCalculation(taskBooksJava[10]);
-        fillElementSearch(taskBooksJava[11]);
-        fillStringMethods(taskBooksJava[12]);
-        fillReadingFiles(taskBooksJava[13]);
-        fillWritingFiles(taskBooksJava[14]);
+        fillAggregateCalculation(taskBooksJava[11]);
+        fillElementSearch(taskBooksJava[12]);
+        fillInsertionSort(taskBooksJava[13]);
+        fillStringMethods(taskBooksJava[14]);
+        fillReadingFiles(taskBooksJava[15]);
+        fillWritingFiles(taskBooksJava[16]);
 
-        unitTesting(taskBooksJava[15]);
-        fillExceptions(taskBooksJava[16]);
-        fillAbstractDataStructures(taskBooksJava[17]);
-        fillInternalState(taskBooksJava[18]);
-        fillCollections(taskBooksJava[19]);
-        fillRecursion(taskBooksJava[20]);
+        unitTesting(taskBooksJava[17]);
+        fillExceptions(taskBooksJava[18]);
+        fillAbstractDataStructures(taskBooksJava[19]);
+        fillInternalState(taskBooksJava[20]);
+        fillCollections(taskBooksJava[21]);
+        fillRecursion(taskBooksJava[22]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -540,15 +547,19 @@ public class Application {
                 .addTask(new Task1223())
                 .addTask(new Task8311())
                 .addTask(new Task6563())
+        ;
 
+        ;
+    }
+
+    private static void fillSwapping(TaskBook taskBook) {
+        taskBook.withSourceDirectory("arrays")
                 .withGroup("Запись в массив")
-                .addExample(new Task9923())
+                .addExample(new Task9923())//копируем последний в начало
                 .addTask(new Task1331())
-                .addTask(new Task3845())//моделирование стека
-                .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
 
                 .withGroup("Головоломки на перестановку")
-        ;
+                ;
 
         if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
@@ -569,7 +580,11 @@ public class Application {
                 .addTask(new Task8820())
                 .addTask(new Task3333())
                 .addTask(new Task8471())
+
+                .addTask(new Task3845())//моделирование стека
+                .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
         ;
+
     }
 
     private static void fillArrayConversionToNumbers(TaskBook taskBook) {
@@ -640,7 +655,7 @@ public class Application {
                 .withGroup("Поиск конкретного элемента в массиве")
                 .addExample(new Task5694())//поиск неизвестного элемента в известном массиве
                 .addTask(new Task6806())//поиск в массиве
-                .addTask(new Task2234())//поиск в массиве. вложенные циклы
+                .addTask(new Task1708())//поиск, другое оформление
 
                 .withGroup("Поиск в массиве и прерывание работы цикла")
                 .addExample(new Task2003())//return, отсутствие
@@ -648,17 +663,22 @@ public class Application {
                 .addTask(new Task1292())//вывод символов до указанного
                 .addTask(new Task4283())//break поиск и подсчет количества
                 .addTask(new Task7703())//многократный поиск и подсчет количества
+                .addTask(new Task2234())//поиск в массиве, отсутствие. вложенные циклы
 
                 .withGroup("Сопоставление массивов")
-                .addExample(7369)//наглядное сопоставление двух массивов
-                .addTask(6988)//синхронный просмотр двух массивов
+                .addExample(new Task7369())//наглядное сопоставление двух массивов
+                .addTask(new Task6988())//синхронный просмотр двух массивов
                 .addTask(new Task2497())//все числа первого массива меньше всех чисел второго массива
-                .addTask(5894)//неявное сопоставление + подсчет количества
+                .addTask(new Task5894())//неявное сопоставление + подсчет количества
                 .addTask(new Task4515())//сопоставление массива с самим собой
                 .addTask(new Task9827())//сопоставление массивов MINUS
                 .addTask(new Task7793())//сопоставление, все виды
                 .addTask(new Task1036())//Гиперпрыгающие плазмошашки
+        ;
+    }
 
+    private static void fillInsertionSort(TaskBook taskBook) {
+        taskBook
                 .withGroup("Поиск минимального")
                 .addExample(new Task7035())//поиск минимального
                 .addTask(new Task1522())//поиск максимального и поиск минимального
@@ -680,6 +700,7 @@ public class Application {
                 .addTask(new Task9182())//сортировка, подсчет разных
                 .addTask(new Task5541())//сортировка, подсчет разных, выбор различных
                 .addTask(new Task7066())//сортировка кортежей по первому элементу
+
         //Будет логично сюда поставить еще и бинарный поиск
         ;
     }
@@ -733,9 +754,12 @@ public class Application {
         taskBook.withSourceDirectory("lab09")
 
                 .withGroup("Чтение файлов")
-                .addExample(6175)
-                .addTask(4488)
+                .addExample(new Task6175())//просто чтение и просто вывод на экран
+                .addTask(new Task5236())//чтение чисел, конвертирование и простой вывод
+                .addTask(new Task4488())//пропуск первой строки
 
+                .addExample(new Task7396())//строки файла это массивы чисел
+                .addTask(new Task8605())//строки файла это массивы, которые обозначают дату
                 .addExample(new Task7788())//использование файла как таблицы СУБД
                 .addTask(new Task6989())//файл-таблица СУБД. нужно вывести данные по идентификатору
                 .addTask(new Task6170())//2 файла-таблицы СУБД. Нужно соединить две таблицы, вывести данные по коду
