@@ -1015,7 +1015,7 @@ public class Application {
     private static void fillStaticVsNonStatic(TaskBook taskBook) {
         taskBook.withSourceDirectory("objects")
                 .withGroup("Отличие статических методов от нестатических")
-                .addExample(new TaskJava6011())//Point.distanceBetween(Points)
+                .addExample(new Task6011())//Point.distanceBetween(Points)
                 .addExample(new TaskJava3185())//Point.distanceTo(Point)
                 .addExample(new TaskJava1401())//Point.distanceBetween(Points) && Point.distanceTo(Point)
                 .addTask(new TaskJava1606());
@@ -1026,6 +1026,11 @@ public class Application {
                 .withGroup("Классы как контейнеры данных (АТД)");
         //базовая цель - чтобы студенты научились отличать статический метод от нестатического
         //и обращаться к полям класса
+
+        //на практике выяснилось, что людям очень трудно даются юнит-тесты, особенно когда смысл методов еще не закреплен
+        //плюс большие тексты долго сложно писать.
+        //в итоге люди их не читают, потому что многабукоф.
+        //при этом для проверки достаточно печатать на экран.
 
         //большая сложность - в том, чтобы отследить какие методы и поля уже есть у классов
         //если они используются в разных заданиях и разных практических
@@ -1040,8 +1045,9 @@ public class Application {
 
         //не затронута тема статических переменных
         taskBook
-                .addExample(new TaskJava5789())//Point.distanceBetween(values)
-                .addTask(new TaskJava6011())//Point.distanceBetween(Points)
+                .addTask(new Task2686())//Point.print
+                .addExample(new Task5789())//Point.distanceBetween(values)
+                .addTask(new Task6011())//Point.distanceBetween(Points)
                 .addTask(new TaskJava7040())//Range.contains(values)
                 .addTask(new TaskJava1606())//Range.contains(Range+value)
                 .addTask(new TaskJava4574())//Range.hasIntersection(values)
