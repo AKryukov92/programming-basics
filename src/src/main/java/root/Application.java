@@ -194,7 +194,7 @@ public class Application {
                 .addTask(new Task3240())
                 .addTask(new Task7058())
                 .addTask(new Task9523())
-                .addTask(new Task7339())
+                .addExample(new Task7339())//конкатенация
                 .addTask(new Task5901())
                 .addTask(new Task5792())
                 .addTask(new Task6986())
