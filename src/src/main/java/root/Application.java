@@ -12,6 +12,7 @@ import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
+import root.tasks.datetime.*;
 import root.tasks.exceptions.*;
 import root.tasks.internal_state.TaskJava2896;
 import root.tasks.loops_with_conditions.*;
@@ -85,7 +86,8 @@ public class Application {
 
             "Внутреннее состояние",
             "Коллекции",
-            "Рекурсия"
+            "Рекурсия",
+            "Даты"
     };
 
     private static TaskBook[] populateCsContent(String[] themeList) {
@@ -195,7 +197,7 @@ public class Application {
                 .addTask(new Task3240())
                 .addTask(new Task7058())
                 .addTask(new Task9523())
-                .addTask(new Task7339())
+                .addExample(new Task7339())//конкатенация
                 .addTask(new Task5901())
                 .addTask(new Task5792())
                 .addTask(new Task6986())
@@ -562,7 +564,7 @@ public class Application {
                 .addTask(new Task1331())
 
                 .withGroup("Головоломки на перестановку")
-                ;
+        ;
 
         if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
@@ -694,6 +696,7 @@ public class Application {
                 .addTask(new Task4707())//сортировка по возрастанию вставкой
                 .addTask(new Task1392())//вычисление медианы
                 .addTask(new Task6492())//Сначала найти максимальное, от которого зависит количество строк
+                .addTask(new Task1794())//максимальная разница между элементами
 
                 //Подготовительной задачей будет
                 //Эти задачи решаются двумя способами
@@ -1175,6 +1178,32 @@ public class Application {
         ;
     }
 
+    private static void fillDateTime(TaskBook taskBook) {
+        taskBook.withSourceDirectory("datetime")
+                .addTask(new Task9425())//выбор форматирования для чтения дат
+                .addTask(new Task7480())//сравнение двух дат
+                .addTask(new Task9418())//определение разницы между датами
+//                .addTask(3123)
+//                .addTask(8096)
+//                .addTask(8381)
+//                .addTask(8498)
+//                .addTask(8811)
+//                .addTask(8519)
+//                .addTask(2130)
+//                .addTask(3696)
+//                .addTask(1912)
+//                .addTask(6072)
+//                .addTask(1103)
+//                .addTask(1012)
+//                .addTask(2681)
+//                .addTask(6851)
+//                .addTask(9641)
+//                .addTask(2025)
+//                .addTask(7407)
+//                .addTask(7611)
+        ;
+    }
+
     private static String loadCss(String path) throws IOException {
         Path p = Paths.get(path);
         System.out.println("Reading css from '" + p.toAbsolutePath().toString());
@@ -1233,6 +1262,26 @@ public class Application {
         TaskBook[] taskBooksCs = populateCsContent(themeList);
         makeFiles(taskBooksCs, css, version);
 
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
+        System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
         System.out.println("Next task id is:" + suggestNextTaskId(taskBooksJava));
     }
 }
