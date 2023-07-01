@@ -1,0 +1,376 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>23 Рекурсия</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values {
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.check_values tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+	.hide_on_print .check_values, .hide_on_print .check_single{
+		display:none;
+	}
+	.hide_on_print img{
+		display:none;
+	}
+	.empty_on_print td{
+		color:transparent;
+	}
+	.empty_on_print img{
+		visibility:hidden;
+	}
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Рекурсия</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4106'>1</a><li><a href='#task1068'>2</a><li><a href='#task6646'>3</a></ul></div><div id='task4106' class='task_block'>
+<div class='task_id'>4106</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Написать подробную версию программы.
+</div>
+<div class='check_single preformatted'>private static void work(int n) {
+    if (n < 0) {
+        return;
+    }
+    work(n-2);
+    print(n);
+    work(n-3);
+}
+public static void main(String[] args) {
+    work(6);
+}</div>
+</div>
+<div id='task1068' class='task_block'>
+<div class='task_id'>1068</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Написать сокращенное решение.
+</div>
+<div class='check_single preformatted'>private static void level1() {
+        System.out.println("Предисловие");
+        System.out.println("Глава 1");
+        level2();
+    }
+    private static void level2() {
+        System.out.println("Глава 2");
+        level3();
+    }
+    private static void level3() {
+        System.out.println("Глава 3");
+        level4();
+    }
+    private static void level4() {
+        System.out.println("Глава 4");
+        System.out.println("Заключение");
+    }
+    public static void main(String[] args) {
+        level1();
+    }</div>
+</div>
+<div id='task6646' class='task_block'>
+<div class='task_id'>6646</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь указывает путь к папке. Нужно реализовать подсчет суммы чисел во всех вложенных файлах и папках. В папке может быть несколько файлов. Каждый файл содержит неизвестное количество целых чисел. Пустые файлы нужно пропустить. Подсчитывать только сумму корректных целых чисел. Некорректные значения нужно пропустить, не прекращая работу программы.
+</div>
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные (path)</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test1" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Это папка D:\tfa\src\files\task6646\test1
+Это папка D:\tfa\src\files\task6646\test1\chapter1
+Это файл D:\tfa\src\files\task6646\test1\chapter1\data.txt
+Сумма в файле 90
+Сумма в папке 90 D:\tfa\src\files\task6646\test1\chapter1
+Это папка D:\tfa\src\files\task6646\test1\chapter2
+Это файл D:\tfa\src\files\task6646\test1\chapter2\data1.txt
+Сумма в файле 107
+Это файл D:\tfa\src\files\task6646\test1\chapter2\data2.txt
+Сумма в файле 34000
+Сумма в папке 34107 D:\tfa\src\files\task6646\test1\chapter2
+Это папка D:\tfa\src\files\task6646\test1\chapter3
+Это файл D:\tfa\src\files\task6646\test1\chapter3\data1.txt
+Сумма в файле 900000
+Сумма в папке 900000 D:\tfa\src\files\task6646\test1\chapter3
+Это папка D:\tfa\src\files\task6646\test1\chapter4
+Сумма в папке 0 D:\tfa\src\files\task6646\test1\chapter4
+Сумма в папке 934197 D:\tfa\src\files\task6646\test1
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test2" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Это папка D:\tfa\src\files\task6646\test2
+Это папка D:\tfa\src\files\task6646\test2\chapter1
+Это файл D:\tfa\src\files\task6646\test2\chapter1\data.txt
+Сумма в файле 30000
+Это папка D:\tfa\src\files\task6646\test2\chapter1\part1
+Это файл D:\tfa\src\files\task6646\test2\chapter1\part1\data.txt
+Сумма в файле 60
+Сумма в папке 60 D:\tfa\src\files\task6646\test2\chapter1\part1
+Это папка D:\tfa\src\files\task6646\test2\chapter1\part2
+Это файл D:\tfa\src\files\task6646\test2\chapter1\part2\data.txt
+Сумма в файле 7
+Сумма в папке 7 D:\tfa\src\files\task6646\test2\chapter1\part2
+Сумма в папке 30067 D:\tfa\src\files\task6646\test2\chapter1
+Это папка D:\tfa\src\files\task6646\test2\chapter2
+Это папка D:\tfa\src\files\task6646\test2\chapter2\part1
+Это файл D:\tfa\src\files\task6646\test2\chapter2\part1\data.txt
+Сумма в файле 200
+Сумма в папке 200 D:\tfa\src\files\task6646\test2\chapter2\part1
+Это папка D:\tfa\src\files\task6646\test2\chapter2\part2
+Сумма в папке 0 D:\tfa\src\files\task6646\test2\chapter2\part2
+Сумма в папке 200 D:\tfa\src\files\task6646\test2\chapter2
+Это файл D:\tfa\src\files\task6646\test2\data.txt
+Сумма в файле 8000
+Сумма в папке 38267 D:\tfa\src\files\task6646\test2
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test3" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Это папка D:\tfa\src\files\task6646\test3
+Это папка D:\tfa\src\files\task6646\test3\chapter1
+Это файл D:\tfa\src\files\task6646\test3\chapter1\data.txt
+Сумма в файле 0
+Сумма в папке 0 D:\tfa\src\files\task6646\test3\chapter1
+Это папка D:\tfa\src\files\task6646\test3\chapter2
+Это файл D:\tfa\src\files\task6646\test3\chapter2\data.txt
+Сумма в файле 17
+Сумма в папке 17 D:\tfa\src\files\task6646\test3\chapter2
+Сумма в папке 17 D:\tfa\src\files\task6646\test3
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test4" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Путь не существует D:\tfa\src\files\task6646\test4
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test5" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Это папка D:\tfa\src\files\task6646\test5
+Это папка D:\tfa\src\files\task6646\test5\level1
+Это папка D:\tfa\src\files\task6646\test5\level1\level2
+Это папка D:\tfa\src\files\task6646\test5\level1\level2\level3
+Это папка D:\tfa\src\files\task6646\test5\level1\level2\level3\level4
+Это папка D:\tfa\src\files\task6646\test5\level1\level2\level3\level4\level5
+Это папка D:\tfa\src\files\task6646\test5\level1\level2\level3\level4\level5\level6
+Это файл D:\tfa\src\files\task6646\test5\level1\level2\level3\level4\level5\level6\data.txt
+Запись содержит не число one
+Запись содержит не число three
+Сумма в файле 987654324
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1\level2\level3\level4\level5\level6
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1\level2\level3\level4\level5
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1\level2\level3\level4
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1\level2\level3
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1\level2
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5\level1
+Сумма в папке 987654324 D:\tfa\src\files\task6646\test5
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="files/task6646/test1" target="_blank">открыть в новой вкладке</a>
+</td>
+<td class='preformatted'>Это папка D:\tfa\src\files\task6646\test1
+Это папка D:\tfa\src\files\task6646\test1\chapter1
+Это файл D:\tfa\src\files\task6646\test1\chapter1\data.txt
+Сумма в файле 90
+Сумма в папке 90 D:\tfa\src\files\task6646\test1\chapter1
+Это папка D:\tfa\src\files\task6646\test1\chapter2
+Это файл D:\tfa\src\files\task6646\test1\chapter2\data1.txt
+Сумма в файле 107
+Это файл D:\tfa\src\files\task6646\test1\chapter2\data2.txt
+Сумма в файле 34000
+Сумма в папке 34107 D:\tfa\src\files\task6646\test1\chapter2
+Это папка D:\tfa\src\files\task6646\test1\chapter3
+Это файл D:\tfa\src\files\task6646\test1\chapter3\data1.txt
+Сумма в файле 900000
+Сумма в папке 900000 D:\tfa\src\files\task6646\test1\chapter3
+Это папка D:\tfa\src\files\task6646\test1\chapter4
+Сумма в папке 0 D:\tfa\src\files\task6646\test1\chapter4
+Сумма в папке 934197 D:\tfa\src\files\task6646\test1
+</td>
+</tr>
+</table>
+</div>
+Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
