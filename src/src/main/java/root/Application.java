@@ -7,6 +7,7 @@ import root.tasks.assertions.*;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.*;
 import root.tasks.call_methods.*;
+import root.tasks.collections.Task8167;
 import root.tasks.collections.TaskJava5087;
 import root.tasks.collections.TaskJava8317;
 import root.tasks.conditions.Task3770;
@@ -552,8 +553,6 @@ public class Application {
                 .addTask(new Task8311())
                 .addTask(new Task6563())
         ;
-
-        ;
     }
 
     private static void fillSwapping(TaskBook taskBook) {
@@ -607,8 +606,10 @@ public class Application {
                 .addTask(new Task7534())//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
-                .addTask(new Task6714())//использование массива чисел для получения данных от пользователя
-                .addTask(new Task1438())
+                .addTask(new Task6714())//пересечение интервалов. использование массива чисел для получения данных от пользователя
+                .addTask(new Task1438())//пересечение прямоугольников
+                //угол между отрезками
+                //для трех точек - отклонение центральной от соседних
                 .addTask(9576)//вложенные циклы
                 .addTask(3095)//комбинаторика. понятие "все комбинации"
                 .addTask(8122)//сложная задача с кучей концепций
@@ -668,6 +669,7 @@ public class Application {
                 .addTask(new Task4283())//break поиск и подсчет количества
                 .addTask(new Task7703())//многократный поиск и подсчет количества
                 .addTask(new Task2234())//поиск в массиве, отсутствие. вложенные циклы
+                .addTask(new Task4851())//создание нового массива, поиск элементов
 
                 .withGroup("Сопоставление массивов")
                 .addExample(new Task7369())//наглядное сопоставление двух массивов
@@ -1128,6 +1130,7 @@ public class Application {
                 .withGroup("Формирование листа");
         if (taskBook.isJava()) {
             taskBook.addExample(new TaskJava5087())
+                    .addTask(new Task8167())
                     .addTask(new TaskJava8317());
         } else {
             taskBook.addExample(5087);

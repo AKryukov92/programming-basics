@@ -19,11 +19,11 @@ public class Task8418 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         int x = Integer.parseInt(value);
-        if (x <= 0) {
+        System.out.println("Делители числа " + x + ":");
+        if (x < 0) {
             System.out.println("Значение X должно быть положительным");
         }
         int i = 1;
-
         while (i < x / 2 + 1) {
             if (x % i == 0) {
                 System.out.print(i + " ");
