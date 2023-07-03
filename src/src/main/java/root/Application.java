@@ -118,6 +118,7 @@ public class Application {
         fillInternalState(taskBooksCs[20]);
         fillCollections(taskBooksCs[21]);
         fillRecursion(taskBooksCs[22]);
+        fillDateTime(taskBooksCs[23]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -150,6 +151,7 @@ public class Application {
         fillInternalState(taskBooksJava[20]);
         fillCollections(taskBooksJava[21]);
         fillRecursion(taskBooksJava[22]);
+        fillDateTime(taskBooksJava[23]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -773,6 +775,15 @@ public class Application {
                 .addTask(new Task8665())//2 файла-таблицы СУБД. Нужно выполнить поиск по неключу и вывести
                 .addTask(new Task1761())
 
+                //моделировать чтение файла с разнородным смыслом строк. например
+                //в файле написано два массива.
+                //первая строка - число элементов массива N1
+                //следующие N1 строк - сами элементы
+                //следующая строка - число элементов второго массива N2
+                //следующие N2 строк - сами элементы
+                //напечатать содержимое массивов через запятую
+                //
+
                 .addTask(new Task4477())//проанализировать вложенность скобок
                 .addTask(new Task9417())//чтение нескольких файлов, поиск общей суммы, обработка ошибок
                 .addTask(new Task3148())//чтение нескольких файлов. список в одном, обрабатывать другие
@@ -1178,12 +1189,12 @@ public class Application {
     private static void fillDateTime(TaskBook taskBook) {
         taskBook.withSourceDirectory("datetime")
                 .addTask(new Task9425())//выбор форматирования для чтения дат
-                .addTask(new Task7480())//сравнение двух дат
-                .addTask(new Task9418())//определение разницы между датами
-//                .addTask(3123)
-//                .addTask(8096)
-//                .addTask(8381)
-//                .addTask(8498)
+                .addTask(new Task7480())//сравнение двух дат "является ли позже"
+                .addTask(new Task3123())//вычисление разницы между двумя датами в часах, минутах, секундах
+                .addTask(new Task9418())//определение разницы между датами в секундах
+                .addTask(new Task8381())//пользователь вводит дату. напечатать даты десяти дней до указанной и десяти дней после указанного
+                .addTask(new Task8498())//пользователь вводит две даты. определить, совпадают ли дни недели у этих дат
+                .addTask(new Task8096())//напечатать даты каждого дня недели
 //                .addTask(8811)
 //                .addTask(8519)
 //                .addTask(2130)
