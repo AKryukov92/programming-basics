@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Task2_2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        double angleDegree;
+        angleDegree = s.nextDouble();
+        double angleRadian;
+        angleRadian = angleDegree * Math.PI / 180;
+        System.out.printf(
+            "%.4f градусов это %.4f радиан",
+            angleDegree,
+            angleRadian
+        );
+    }
+}
