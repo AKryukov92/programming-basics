@@ -435,33 +435,33 @@ public class Application {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
                 .addExample(new Task1315())
-                .addTask(new Task1631())
-                .addTask(new Task2594())
+                .addTask(new Task1631())//несколько чисел в столбик с повторением оформления
+                .addTask(new Task2594())//повторить символ, оформление не повторяется
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
-                .addTask(new Task3762())
-                .addTask(new Task3550())
-                .addTask(new Task1139())
-                .addTask(new Task9969())
-                .addTask(new Task5301())
-                .addTask(new Task6790())
+                .addTask(new Task3762())//таблица соответствия между кг и фунтами
+                .addTask(new Task3550())//таблица умножения на х
+                .addTask(new Task1139())//10 следующих чисел с шагом
+                .addTask(new Task9969())//три раза, потом 10 раз, потом 3 раза
+                .addTask(new Task5301())//счётчик увеличивается каждую итерацию
+                .addTask(new Task6790())//по возрастанию и вычислить функцию
                 .addTask(new Task3850())//сформировать новый массив чисел
 
                 .withGroup("Один цикл за другим")
-                .addTask(new Task7086())
+                .addTask(new Task7086())//10 следующих, 10 предыдущих
 
                 .withGroup("Цикл внутри условия")
-                .addExample(new Task6066())
-                .addTask(new Task1259())
-                .addTask(new Task2565())
+                .addExample(new Task6066())//вывод подряд с ошибкой
+                .addTask(new Task1259())//повторить не более 20 раз
+                .addTask(new Task2565())//по убыванию с ошибкой
                 .addCitation("link_c4_p16.2")
-                .addTask(new Task2321())
-                .addTask(new Task5053())
-                .addTask(new Task6663())
-                .addTask(4338)
-                .addTask(new Task7054())
-                .addTask(new Task4531())
+                .addTask(new Task2321())//вывод по возрастанию от меньшему к большему
+                .addTask(new Task5053())//вывод по возрастанию/убыванию
+                .addTask(new Task6663())//вывод по возрастанию/убыванию
+                .addTask(new Task4338())//вывод в два столбика по убыванию и возрастанию
+                .addTask(new Task7054())//вывод указанного количества
+                .addTask(new Task4531())//изобразить интервалы символами
         ;
     }
 
