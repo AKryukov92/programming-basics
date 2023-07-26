@@ -11,13 +11,15 @@ public class Task8096 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит дату." +
                 " Эта дата находится в какой-то неделе." +
-                " Нужно определить число каждого из дней недели рядом с этой датой." +
+                " Нужно определить день, месяц и год каждого из дней недели рядом с этой датой." +
                 " Для этого определите понедельник этой недели, а затем прибавьте к нему от 1 до 7 дней");
-        appendCheckValuesHeader("");
+        appendCheckValuesHeader("input");
         appendCheckValuesRow("2023-07-03");
         appendCheckValuesRow("2023-07-02");
         appendCheckValuesRow("2000-01-01");
+        appendCheckValuesRow("2010-01-03");
         appendCheckValuesFooter();
+        appendFooter();
     }
 
     @Override
