@@ -14,6 +14,7 @@ public class TaskJava5510 extends LayoutMaker {
         i = i + 1;
         arr[i] = arr[1];
         arr[3] = arr[4];
+        i = i + 1;
         System.out.print(arr[2]);
         System.out.println(arr[3]);
     }

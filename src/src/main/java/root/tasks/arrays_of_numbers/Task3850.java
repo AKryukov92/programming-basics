@@ -1,7 +1,6 @@
 package root.tasks.arrays_of_numbers;
 
 import root.tasks.MultipleInputValLayout;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Task3850 extends MultipleInputValLayout {
     @Override
@@ -22,7 +21,24 @@ public class Task3850 extends MultipleInputValLayout {
         double start = Double.parseDouble(args[0]);
         double end = Double.parseDouble(args[1]);
         double amount = Double.parseDouble(args[2]);
-        //задачу можно решить без массива!
-        throw new NotImplementedException();
+        if (start >= end) {
+            System.out.println("Начало интервала должно быть меньше чем конец интервала");
+            return;
+        }
+        double width = end - start;
+        double partWidth = width / amount;
+        double i = start + partWidth;
+        System.out.printf("Интервал от %.4f до %.4f делится на %.0f частей шириной %.4f. Получаются интервалы:\n",
+                start, end, partWidth, amount);
+        double prev = start;
+        while (i < end) {
+            System.out.printf("от %.4f до %.4f\n", prev, i);
+            prev = i;
+            i += partWidth;
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task3850());
     }
 }

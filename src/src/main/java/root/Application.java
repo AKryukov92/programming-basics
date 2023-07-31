@@ -1,5 +1,6 @@
 package root;
 
+import root.tasks.TaskJava8072;
 import root.tasks.aggregates.*;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
@@ -548,6 +549,7 @@ public class Application {
                 .addTask(new Task9361())//пользователь вводит две даты dd_MM_yyyy выяснить какая из них больше.
                 .addTask(new Task1058())//parse array to distinct numbers. distance between points
                 .addTask(new Task6589())//parse array, range intersection
+                .addTask(new Task9980())//чтение из массива по указанным индексам
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
@@ -557,19 +559,12 @@ public class Application {
                 .addTask(new Task8311())
                 .addTask(new Task6563())
         ;
-
-        ;
     }
 
     private static void fillSwapping(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
-                .withGroup("Запись в массив")
-                .addExample(new Task9923())//копируем последний в начало
-                .addTask(new Task1331())
-
                 .withGroup("Головоломки на перестановку")
         ;
-
         if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
                     .addTask(new TaskCs5510())
@@ -577,21 +572,28 @@ public class Application {
         } else if (taskBook.isJava()) {
             taskBook.addTask(new TaskJava8775())
                     .addTask(new TaskJava5510())
+                    .addTask(new TaskJava8072())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
+        taskBook
+                .withGroup("Запись в массив")
+                .addExample(new Task9923())//копируем последний в начало
+                .addTask(new Task1331())//запись значения в массив по индексу
+                .addTask(new Task1737())//создание массива и заполнение массива фрагментами
+        ;
 
         taskBook.withGroup("Перестановки элементов")
-                .addExample(new Task3134())
-                .addTask(new Task9711())
-                .addTask(new Task7085())
-                .addTask(new Task8820())
-                .addTask(new Task3333())
-                .addTask(new Task8471())
+                .addExample(new Task3134())//перестановка двух элементов
+                .addTask(new Task9711())//сдвиг на 1 позицию вправо
+                .addTask(new Task7085())//сдвиг на 1 позицию вправо несколько раз
+                .addTask(new Task8820())//инвертирование массива
+                .addTask(new Task3333())//сдвиг на много позиций
+                .addTask(new Task8471())//перестановка с дополнительным массивом
 
                 .addTask(new Task3845())//моделирование стека
-                .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
+                .addTask(new Task1998())//Возможно это слишком сложная задача
         ;
 
     }
