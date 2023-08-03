@@ -1,6 +1,6 @@
 package root;
 
-import root.tasks.TaskJava8072;
+import root.tasks.arrays.TaskJava8072;
 import root.tasks.aggregates.*;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
@@ -568,11 +568,14 @@ public class Application {
         if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
                     .addTask(new TaskCs5510())
+                    .addTask(new TaskCs8072())
+                    .addTask(new TaskCs3985())
             ;
         } else if (taskBook.isJava()) {
             taskBook.addTask(new TaskJava8775())
                     .addTask(new TaskJava5510())
                     .addTask(new TaskJava8072())
+                    .addTask(new TaskJava3985())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
@@ -593,7 +596,7 @@ public class Application {
                 .addTask(new Task8471())//перестановка с дополнительным массивом
 
                 .addTask(new Task3845())//моделирование стека
-                .addTask(new Task1998())//Возможно это слишком сложная задача
+                .addTask(new Task1998())//создание массива, записьВозможно это слишком сложная задача
         ;
 
     }

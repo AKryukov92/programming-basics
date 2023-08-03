@@ -1,6 +1,8 @@
-package root.tasks;
+package root.tasks.arrays;
 
-public class TaskJava8072 extends LayoutMaker{
+import root.tasks.LayoutMaker;
+
+public class TaskJava8072 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
