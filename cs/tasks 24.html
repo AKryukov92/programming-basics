@@ -1,0 +1,462 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>24 Даты</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values, .check_values_v2 {
+	width:100%;
+	counter-reset:test_case;
+}
+.check_values td:first-child::before {
+	counter-increment:test_case;
+	content: counter(test_case);
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child, .check_values_v2 td:first-child{
+	width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.check_values tr:target, .check_values_v2 tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Даты</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425'>1</a><li><a href='#task7480'>2</a><li><a href='#task3123'>3</a><li><a href='#task9418'>4</a><li><a href='#task8811'>5</a><li><a href='#task8381'>6</a><li><a href='#task8498'>7</a><li><a href='#task8096'>8</a></ul></div><div id='task9425' class='task_block'>
+<div class='task_id'>9425</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано несколько дат в виде текста. Выбрать правильный формат чтобы программа прочитала дату. Вывести на экран отдельно день, месяц и год, час, минуту, секунду.
+</div>
+<div class='check_single preformatted'>Выражение 2023-06-28 означает
+Год: 2023
+Месяц: 6
+День: 28
+Выражение 2023-06-28 18:38 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 38
+Секунда 0
+Выражение 28/06/2023 18:38:00 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 38
+Секунда 0
+Выражение 3/4/23 означает
+Год: 2023
+Месяц: 4
+День: 3
+Выражение 18:44 28.06.2023 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 44
+Секунда 0
+Выражение 1995-03-01 означает
+Год: 1995
+Месяц: 3
+День: 1
+</div>
+</div>
+<div id='task7480' class='task_block'>
+<div class='task_id'>7480</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты. Сравните даты. Определите какая позже, какая раньше. Напечатать подробный ответ на экран.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>28.06.2023</td><td>20.06.2023</td><td class='preformatted'>
+Первая дата позже второй
+</td></tr>
+<tr>
+<td>2</td><td>20.06.2023</td><td>28.06.2023</td><td class='preformatted'>
+Вторая дата позже первой
+</td></tr>
+<tr>
+<td>3</td><td>01.07.2023</td><td>07.01.2023</td><td class='preformatted'>
+Первая дата позже второй
+</td></tr>
+<tr>
+<td>4</td><td>05.02.2001</td><td>05.02.2002</td><td class='preformatted'>
+Вторая дата позже первой
+</td></tr>
+</table>
+</div>
+<div id='task3123' class='task_block'>
+<div class='task_id'>3123</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано две отметки времени. Нужно вычислить количество часов, минут секунд между ними. Для определения количества минут в текущем часу, нужно найти остаток от деления общего количества минут на 60. Для определения количества секунд в текущей минуте нужно применить такой же прием.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:56:13</td><td class='preformatted'>
+Между датами прошло 0 часов
+Всего минут 0. В текущем часе 0
+Всего секунд 13. В текущей минуте 13
+</td></tr>
+<tr>
+<td>2</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>
+Между датами прошло 0 часов
+Всего минут 3. В текущем часе 3
+Всего секунд 193. В текущей минуте 13
+</td></tr>
+<tr>
+<td>3</td><td>03/07/2023 13:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>
+Между датами прошло 5 часов
+Всего минут 303. В текущем часе 3
+Всего секунд 18193. В текущей минуте 13
+</td></tr>
+<tr>
+<td>4</td><td>03/07/2023 13:56:00</td><td>03/07/2024 18:59:13</td><td class='preformatted'>
+Между датами прошло 8789 часов
+Всего минут 527343. В текущем часе 3
+Всего секунд 31640593. В текущей минуте 13
+</td></tr>
+<tr>
+<td>5</td><td>28/06/2023 17:30:00</td><td>28/06/2023 18:00:00</td><td class='preformatted'>
+Между датами прошло 0 часов
+Всего минут 30. В текущем часе 30
+Всего секунд 1800. В текущей минуте 0
+</td></tr>
+<tr>
+<td>6</td><td>16/08/2009 10:00:00</td><td>16/08/2009 10:00:10</td><td class='preformatted'>
+Между датами прошло 0 часов
+Всего минут 0. В текущем часе 0
+Всего секунд 10. В текущей минуте 10
+</td></tr>
+<tr>
+<td>7</td><td>12/04/1961 09:07:00</td><td>12/04/1961 09:18:07</td><td class='preformatted'>
+Между датами прошло 0 часов
+Всего минут 11. В текущем часе 11
+Всего секунд 667. В текущей минуте 7
+</td></tr>
+<tr>
+<td>8</td><td>01/06/2023 16:00:00</td><td>01/06/2023 15:00:00</td><td class='preformatted'>
+Между датами прошло 1 часов
+Всего минут 60. В текущем часе 0
+Всего секунд 3600. В текущей минуте 0
+</td></tr>
+</table>
+</div>
+<div id='task9418' class='task_block'>
+<div class='task_id'>9418</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано расстояние в метрах и две отметки времени - начало и конец движения. Нужно вычислить скорость в м/с.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>distance</th><th>start</th><th>end</th></tr>
+<tr><td>1</td><td>7000</td><td>2023-06-28 17:30:00</td><td>2023-06-28 18:00:00</td><td class='preformatted'>Между двумя датами прошло 1800 секунд
+Скорость получается 3,8889 м/с</td></tr>
+<tr><td>2</td><td>100</td><td>2009-08-16 10:00:00</td><td>2009-08-16 10:00:10</td><td class='preformatted'>Между двумя датами прошло 10 секунд
+Скорость получается 10,0000 м/с</td></tr>
+<tr><td>3</td><td>5275970</td><td>1961-04-12 09:07:00</td><td>1961-04-12 09:18:07</td><td class='preformatted'>Между двумя датами прошло 667 секунд
+Скорость получается 7910,0000 м/с</td></tr>
+<tr><td>4</td><td>10000</td><td>2023-06-01 16:00:00</td><td>2023-06-01 15:00:00</td><td class='preformatted'>Между двумя датами прошло 3600 секунд
+Скорость получается 2,7778 м/с</td></tr>
+</table>
+</div>
+<div id='task8811' class='task_block'>
+<div class='task_id'>8811</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит три даты: start, end, appointment. Если appointment после start и до end исключительно, написать фразу 'ДАТА В ПЕРИОДЕ'. В любом другом случае написать - 'ДАТА ЗА ПРЕДЕЛАМИ'
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>start</th><th>end</th><th>appointment</th></tr>
+<tr><td>1</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+<tr><td>2</td><td>2023-07-01</td><td>2023-07-31</td><td>2023-07-15</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
+</td></tr>
+<tr><td>3</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+<tr><td>4</td><td>2023-07-01</td><td>2024-06-01</td><td>2024-01-01</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
+</td></tr>
+<tr><td>5</td><td>2023-01-15</td><td>2023-02-05</td><td>2023-01-19</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
+</td></tr>
+<tr><td>6</td><td>2023-01-01</td><td>2020-01-01</td><td>2020-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+<tr><td>7</td><td>2023-07-26</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+<tr><td>8</td><td>2023-07-26</td><td>2023-08-01</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+<tr><td>9</td><td>2023-06-01</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+</table>
+</div>
+<div id='task8381' class='task_block'>
+<div class='task_id'>8381</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату. Нужно напечатать даты пяти дней до указанной и пяти дней после указанной.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
+<tr><td>1</td><td>05.07.2023</td><td class='preformatted'>Минус 5 дней 30.06.2023
+Минус 4 дней 01.07.2023
+Минус 3 дней 02.07.2023
+Минус 2 дней 03.07.2023
+Минус 1 дней 04.07.2023
+Плюс 1 дней 06.07.2023
+Плюс 2 дней 07.07.2023
+Плюс 3 дней 08.07.2023
+Плюс 4 дней 09.07.2023
+Плюс 5 дней 10.07.2023
+</td></tr>
+<tr><td>2</td><td>28.02.2023</td><td class='preformatted'>Минус 5 дней 23.02.2023
+Минус 4 дней 24.02.2023
+Минус 3 дней 25.02.2023
+Минус 2 дней 26.02.2023
+Минус 1 дней 27.02.2023
+Плюс 1 дней 01.03.2023
+Плюс 2 дней 02.03.2023
+Плюс 3 дней 03.03.2023
+Плюс 4 дней 04.03.2023
+Плюс 5 дней 05.03.2023
+</td></tr>
+<tr><td>3</td><td>29.02.2020</td><td class='preformatted'>Минус 5 дней 24.02.2020
+Минус 4 дней 25.02.2020
+Минус 3 дней 26.02.2020
+Минус 2 дней 27.02.2020
+Минус 1 дней 28.02.2020
+Плюс 1 дней 01.03.2020
+Плюс 2 дней 02.03.2020
+Плюс 3 дней 03.03.2020
+Плюс 4 дней 04.03.2020
+Плюс 5 дней 05.03.2020
+</td></tr>
+<tr><td>4</td><td>01.01.2010</td><td class='preformatted'>Минус 5 дней 27.12.2009
+Минус 4 дней 28.12.2009
+Минус 3 дней 29.12.2009
+Минус 2 дней 30.12.2009
+Минус 1 дней 31.12.2009
+Плюс 1 дней 02.01.2010
+Плюс 2 дней 03.01.2010
+Плюс 3 дней 04.01.2010
+Плюс 4 дней 05.01.2010
+Плюс 5 дней 06.01.2010
+</td></tr>
+</table>
+</div>
+<div id='task8498' class='task_block'>
+<div class='task_id'>8498</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты. Определить, совпадают ли дни недели у этих дат.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>2023-07-03</td><td>2023-08-13</td><td class='preformatted'>
+Дни недели различаются.
+У первой даты понедельник
+У второй даты воскресенье
+</td></tr>
+<tr>
+<td>2</td><td>2023-08-14</td><td>2023-08-07</td><td class='preformatted'>
+Дни недели совпадают и равны понедельник
+</td></tr>
+<tr>
+<td>3</td><td>2023-01-01</td><td>2022-01-01</td><td class='preformatted'>
+Дни недели различаются.
+У первой даты воскресенье
+У второй даты суббота
+</td></tr>
+</table>
+</div>
+<div id='task8096' class='task_block'>
+<div class='task_id'>8096</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату. Эта дата находится в какой-то неделе. Нужно определить день, месяц и год каждого из дней недели рядом с этой датой. Для этого определите понедельник этой недели, а затем прибавьте к нему от 1 до 7 дней
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (input)</th><th>Результат</th></tr>
+<tr><td>1</td><td>2023-07-03</td><td class='preformatted'>Нужно отнять 0 дней чтобы получился понедельник
+понедельник это 2023-07-03
+вторник это 2023-07-04
+среда это 2023-07-05
+четверг это 2023-07-06
+пятница это 2023-07-07
+суббота это 2023-07-08
+воскресенье это 2023-07-09
+</td></tr>
+<tr><td>2</td><td>2023-07-02</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
+понедельник это 2023-06-26
+вторник это 2023-06-27
+среда это 2023-06-28
+четверг это 2023-06-29
+пятница это 2023-06-30
+суббота это 2023-07-01
+воскресенье это 2023-07-02
+</td></tr>
+<tr><td>3</td><td>2000-01-01</td><td class='preformatted'>Нужно отнять 5 дней чтобы получился понедельник
+понедельник это 1999-12-27
+вторник это 1999-12-28
+среда это 1999-12-29
+четверг это 1999-12-30
+пятница это 1999-12-31
+суббота это 2000-01-01
+воскресенье это 2000-01-02
+</td></tr>
+<tr><td>4</td><td>2010-01-03</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
+понедельник это 2009-12-28
+вторник это 2009-12-29
+среда это 2009-12-30
+четверг это 2009-12-31
+пятница это 2010-01-01
+суббота это 2010-01-02
+воскресенье это 2010-01-03
+</td></tr>
+</table>
+</div>
+Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

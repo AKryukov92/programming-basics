@@ -20,7 +20,7 @@ sqrt:before {
 table {
 	border-collapse:collapse;
 }
-.check_values {
+.check_values, .check_values_v2 {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -32,7 +32,7 @@ table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
-.check_values td:first-child{
+.check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
 .lab_nav ol {
@@ -96,7 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target {
+.check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
 formula {
@@ -157,33 +157,7 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-	ol li {
-		margin-bottom:30px;
-	}
-	.quiz_block {
-		width:100%;
-	}
-	.hide_on_print .check_values, .hide_on_print .check_single{
-		display:none;
-	}
-	.hide_on_print img{
-		display:none;
-	}
-	.empty_on_print td{
-		color:transparent;
-	}
-	.empty_on_print img{
-		visibility:hidden;
-	}
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Заполнение шаблона текстом</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1662' class='example'>1*</a><li><a href='#task5321'>2</a><li><a href='#task8691'>3</a><li><a href='#task7920'>4</a><li><a href='#task3240'>5</a><li><a href='#task7058'>6</a><li><a href='#task9523'>7</a><li><a href='#task7339'>8</a><li><a href='#task5901'>9</a><li><a href='#task5792'>10</a><li><a href='#task6986'>11</a><li><a href='#task1860' class='example'>12*</a><li><a href='#task4764'>13</a><li><a href='#task2429'>14</a><li><a href='#task7472'>15</a><li><a href='#task1910'>16</a></ul><ul><li><a href='#task4131' class='example'>17*</a><li><a href='#task7365'>18</a><li><a href='#task4140' class='example'>19*</a><li><a href='#task2959'>20</a><li><a href='#task7271'>21</a><li><a href='#task2632'>22</a><li><a href='#task4343'>23</a><li><a href='#task7474'>24</a><li><a href='#task3246' class='example'>25*</a><li><a href='#task7332'>26</a><li><a href='#task9781'>27</a><li><a href='#task6814'>28</a><li><a href='#task1640' class='example'>29*</a><li><a href='#task8693'>30</a></ul></div><div id="link_c1_p4.3" class="task_block">
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Заполнение шаблона текстом</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1662' class='example'>1*</a><li><a href='#task5321'>2</a><li><a href='#task8691'>3</a><li><a href='#task7920'>4</a><li><a href='#task3240'>5</a><li><a href='#task7058'>6</a><li><a href='#task9523'>7</a><li><a href='#task7339' class='example'>8*</a><li><a href='#task5901'>9</a><li><a href='#task5792'>10</a><li><a href='#task6986'>11</a><li><a href='#task1860' class='example'>12*</a><li><a href='#task4764'>13</a><li><a href='#task2429'>14</a><li><a href='#task7472'>15</a><li><a href='#task1910'>16</a></ul><ul><li><a href='#task4131' class='example'>17*</a><li><a href='#task7365'>18</a><li><a href='#task4140' class='example'>19*</a><li><a href='#task2959'>20</a><li><a href='#task7271'>21</a><li><a href='#task2632'>22</a><li><a href='#task4343'>23</a><li><a href='#task7474'>24</a><li><a href='#task3246' class='example'>25*</a><li><a href='#task7332'>26</a><li><a href='#task9781'>27</a><li><a href='#task6814'>28</a><li><a href='#task1640' class='example'>29*</a><li><a href='#task8693'>30</a></ul></div><div id="link_c1_p4.3" class="task_block">
 	<div>Время от времени в тексте лабораторных работ будут включены ссылки на книгу Стива Макконнелла "Совершенный код". Они будут оформляться примерно так:</div>
 	<div class="check_single">После освоения этого курса вы получите базовые навыки программирования. Они не привязаны к какому-то конкретному языку. Эти навыки помогут вам самостоятельно освоить прикладные технологии, необходимые для устройства на работу. За их развитием невозможно угнаться в рамках вечерних курсов. В книге "Совершенный код" этой проблеме посвящена глава 4.3. <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=86" target="_blank">(открыть в новой вкладке)</a></div>
 	<div>Настоятельно рекомендую вам не читать книгу целиком в начале изучения курса. В нужное время в нужном месте вашему вниманию будут представлены ссылки на главы, которые позволят лучше понять материал, изучаемый в данный момент.</div>
@@ -331,32 +305,16 @@ zoom{
 <div class='task_id'>1860</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Составить программу вывода на экран слова (word), вводимого с клавиатуры. Перед выводимым словом нужно написать фразу "Мы стремимся к ".
+Составить программу вывода на экран слова (word), вводимого с клавиатуры. Перед выводимым словом нужно написать фразу "Мы стремимся к ".Для хранения текста от пользователя нужно объявить переменную. Правила именования переменных:
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (word)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>знаниям</td>
-<td class='preformatted'>Мы стремимся к знаниям
-</td>
-</tr>
-<tr>
-<td></td>
-<td>цели</td>
-<td class='preformatted'>Мы стремимся к цели
-</td>
-</tr>
-<tr>
-<td></td>
-<td>результату</td>
-<td class='preformatted'>Мы стремимся к результату
-</td>
-</tr>
+<ol start='1'><li>Может состоять из русских и латинских букв, цифр, знака подчеркивания "_"</li><li>Может начинаться с буквы или знака подчеркивания. С цифры начинаться не может.</li><li>Не может содержать знаки математических операций</li><li>Название должно отражать назначение переменной</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (word)</th><th>Результат</th></tr>
+<tr><td>1</td><td>знаниям</td><td class='preformatted'>Мы стремимся к знаниям
+</td></tr>
+<tr><td>2</td><td>цели</td><td class='preformatted'>Мы стремимся к цели
+</td></tr>
+<tr><td>3</td><td>результату</td><td class='preformatted'>Мы стремимся к результату
+</td></tr>
 </table>
 </div>
 <div>Руководство по самостоятельному выполнению задачи <a href='конспекты/pre1860.html#initial' target='_blank'>(открыть в новом файле)</a></div><div id="link_c7_p33" class="task_block">
@@ -377,30 +335,14 @@ zoom{
 <div class='task_desc'>
 Дана строка A. Нужно вывести её на экран и дописать слова "нас не остановят" в конце.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (A)</th>
-<th>Результат (C)</th>
-</tr>
-<tr>
-<td></td>
-<td>трудности</td>
-<td class='preformatted'>трудности нас не остановят!
-</td>
-</tr>
-<tr>
-<td></td>
-<td>загадки</td>
-<td class='preformatted'>загадки нас не остановят!
-</td>
-</tr>
-<tr>
-<td></td>
-<td>сложные задачи</td>
-<td class='preformatted'>сложные задачи нас не остановят!
-</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат (C)</th></tr>
+<tr><td>1</td><td>трудности</td><td class='preformatted'>трудности нас не остановят!
+</td></tr>
+<tr><td>2</td><td>загадки</td><td class='preformatted'>загадки нас не остановят!
+</td></tr>
+<tr><td>3</td><td>сложные задачи</td><td class='preformatted'>сложные задачи нас не остановят!
+</td></tr>
 </table>
 </div>
 <div id='task2429' class='task_block'>
@@ -409,27 +351,11 @@ zoom{
 <div class='task_desc'>
 Дана строка A. Нужно вывести ее на экран, дописать слова "Программирование это " перед началом и "!"(восклицательный знак) в конце этой строки.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (A)</th>
-<th>Результат (C)</th>
-</tr>
-<tr>
-<td></td>
-<td>просто</td>
-<td class='preformatted'>Программирование это просто!</td>
-</tr>
-<tr>
-<td></td>
-<td>интересно</td>
-<td class='preformatted'>Программирование это интересно!</td>
-</tr>
-<tr>
-<td></td>
-<td>перспективно</td>
-<td class='preformatted'>Программирование это перспективно!</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат (C)</th></tr>
+<tr><td>1</td><td>просто</td><td class='preformatted'>Программирование это просто!</td></tr>
+<tr><td>2</td><td>интересно</td><td class='preformatted'>Программирование это интересно!</td></tr>
+<tr><td>3</td><td>перспективно</td><td class='preformatted'>Программирование это перспективно!</td></tr>
 </table>
 </div>
 <div id="link_c6_p30.2" class="task_block">
@@ -440,64 +366,25 @@ zoom{
 <div class='task_desc'>
 Дано две строки A и B. Нужно составить из них третью строку C, которая должна начинаться строкой B и заканчиваться строкой A.
 </div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>A</th><th>B</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>начало</td><td>конец</td><td class='preformatted'>
+конец начало
+</td></tr>
 <tr>
-<th>
-A
-</th>
-<th>
-B
-</th>
-</tr>
+<td>2</td><td>сила</td><td>знание</td><td class='preformatted'>
+знание сила
+</td></tr>
 <tr>
-<td></td>
-<td>
-начало
-</td>
-<td>
-конец
-</td>
-<td class='preformatted'>конец начало
-</td>
-</tr>
+<td>3</td><td>курица</td><td>яйцо</td><td class='preformatted'>
+яйцо курица
+</td></tr>
 <tr>
-<td></td>
-<td>
-сила
-</td>
-<td>
-знание
-</td>
-<td class='preformatted'>знание сила
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-курица
-</td>
-<td>
-яйцо
-</td>
-<td class='preformatted'>яйцо курица
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-шаг
-</td>
-<td>
-шаг
-</td>
-<td class='preformatted'>шаг шаг
-</td>
-</tr>
+<td>4</td><td>шаг</td><td>шаг</td><td class='preformatted'>
+шаг шаг
+</td></tr>
 </table>
 </div>
 <div id='task1910' class='task_block'>
@@ -513,63 +400,25 @@ B
 <ol start='12'><li>Выполните конкатенацию строкового литерала "Распродажа в ", переменной companyName и строкового литерала "!".</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Выведите на экран значение переменной messagePart.</li><li>Выполните конкатенацию строкового литерала "наши " и переменной productName.</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Выполните конкатенацию переменной messagePart и строкового литерала " по супер цене. Всего ".</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Запишите в переменную messagePart результат конкатенации messagePart и переменной productCost.</li><li>Запишите в переменную messagePart результат конкатенации messagePart и строкового литерала "!".</li><li>Выведите на экран с новой строки значение переменной messagePart.</li><li>Выведите на экран с новой строки значение строкового литерала "Торопитесь, предложение ограничено!".</li></ol><div class='task_desc'>
 Убедитесь, что для всех исходных данных получается ожидаемый результат.
 </div>
-<table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='3'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-companyName
-</th>
-<th>
-productName
-</th>
-<th>
-productCost
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-Рога и копыта
-</td>
-<td>
-копыта
-</td>
-<td>
-30 рублей за штуку
-</td>
-<td class='preformatted'>Задача 1910
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>companyName</th><th>productName</th><th>productCost</th></tr>
+<tr><td>1</td><td>Рога и копыта</td><td>копыта</td><td>30 рублей за штуку</td><td class='preformatted'>Задача 1910
 Введите название компании
 Введите наименование товара
 Введите цену товара
 Распродажа в Рога и копыта!
 Наши копыта по супер цене. Всего 30 рублей за штуку!
 Торопитесь, предложение ограничено!
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-Слоновод
-</td>
-<td>
-слоны
-</td>
-<td>
-15 попугаев
-</td>
-<td class='preformatted'>Задача 1910
+</td></tr>
+<tr><td>2</td><td>Слоновод</td><td>слоны</td><td>15 попугаев</td><td class='preformatted'>Задача 1910
 Введите название компании
 Введите наименование товара
 Введите цену товара
 Распродажа в Слоновод!
 Наши слоны по супер цене. Всего 15 попугаев!
 Торопитесь, предложение ограничено!
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task4131' class='task_block'>
@@ -624,50 +473,18 @@ productCost
 Команда для решения этой задачи выглядит так
 </div>
 <div class='check_single preformatted'>System.out.printf("Меня зовут %s, %s %s", lastName, firstName, lastName);</div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>first name</th><th>last name</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>Джеймс</td><td>Бонд</td><td class='preformatted'>
+Меня зовут Бонд, Джеймс Бонд</td></tr>
 <tr>
-<th>
-first name
-</th>
-<th>
-last name
-</th>
-</tr>
+<td>2</td><td>капитан</td><td>Джек Воробей</td><td class='preformatted'>
+Меня зовут Джек Воробей, капитан Джек Воробей</td></tr>
 <tr>
-<td></td>
-<td>
-Джеймс
-</td>
-<td>
-Бонд
-</td>
-<td class='preformatted'>Меня зовут Бонд, Джеймс Бонд</td>
-</tr>
-<tr>
-<td></td>
-<td>
-капитан
-</td>
-<td>
-Джек Воробей
-</td>
-<td class='preformatted'>Меня зовут Джек Воробей, капитан Джек Воробей</td>
-</tr>
-<tr>
-<td></td>
-<td>
-Александр
-</td>
-<td>
-Крюков
-</td>
-<td class='preformatted'>Меня зовут Крюков, Александр Крюков</td>
-</tr>
+<td>3</td><td>Александр</td><td>Крюков</td><td class='preformatted'>
+Меня зовут Крюков, Александр Крюков</td></tr>
 </table>
 </div>
 <div id='task2959' class='task_block'>
@@ -678,24 +495,12 @@ last name
 </div>
 <div class='check_single preformatted'>SELECT first_name, last_name, group
 FROM students WHERE student_id = '$ID';</div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (id)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>123456789</td>
-<td class='preformatted'>SELECT first_name, last_name, group
-FROM students WHERE student_id = '123456789';</td>
-</tr>
-<tr>
-<td></td>
-<td>fa93f</td>
-<td class='preformatted'>SELECT first_name, last_name, group
-FROM students WHERE student_id = 'fa93f';</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (id)</th><th>Результат</th></tr>
+<tr><td>1</td><td>123456789</td><td class='preformatted'>SELECT first_name, last_name, group
+FROM students WHERE student_id = '123456789';</td></tr>
+<tr><td>2</td><td>fa93f</td><td class='preformatted'>SELECT first_name, last_name, group
+FROM students WHERE student_id = 'fa93f';</td></tr>
 </table>
 </div>
 <div id='task7271' class='task_block'>
@@ -705,40 +510,15 @@ FROM students WHERE student_id = 'fa93f';</td>
 Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $X на введенное значение x. $Y на введенное значение y.
 </div>
 <div class='check_single preformatted'>INSERT INTO points (x, y) VALUES ('$X', '$Y');</div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>x</th><th>y</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>5</td><td>7</td><td class='preformatted'>
+INSERT INTO points (x, y) VALUES ('5', '7');</td></tr>
 <tr>
-<th>
-x
-</th>
-<th>
-y
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-5
-</td>
-<td>
-7
-</td>
-<td class='preformatted'>INSERT INTO points (x, y) VALUES ('5', '7');</td>
-</tr>
-<tr>
-<td></td>
-<td>
--1
-</td>
-<td>
-1000
-</td>
-<td class='preformatted'>INSERT INTO points (x, y) VALUES ('-1', '1000');</td>
-</tr>
+<td>2</td><td>-1</td><td>1000</td><td class='preformatted'>
+INSERT INTO points (x, y) VALUES ('-1', '1000');</td></tr>
 </table>
 </div>
 <div id='task2632' class='task_block'>
@@ -748,74 +528,12 @@ y
 Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
 </div>
 <div class='check_single preformatted'>&lt;circle cx="$CX" cy="$CY" r="$R" fill="$FILL"/&gt;</div>
-<table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='4'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-cx
-</th>
-<th>
-cy
-</th>
-<th>
-r
-</th>
-<th>
-fill
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-50
-</td>
-<td>
-50
-</td>
-<td>
-40
-</td>
-<td>
-yellow
-</td>
-<td class='preformatted'>&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;</td>
-</tr>
-<tr>
-<td></td>
-<td>
-400
-</td>
-<td>
-300
-</td>
-<td>
-200
-</td>
-<td>
-green
-</td>
-<td class='preformatted'>&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;</td>
-</tr>
-<tr>
-<td></td>
-<td>
-254
-</td>
-<td>
-356
-</td>
-<td>
-100
-</td>
-<td>
-#cc6600
-</td>
-<td class='preformatted'>&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>cx</th><th>cy</th><th>r</th><th>fill</th></tr>
+<tr><td>1</td><td>50</td><td>50</td><td>40</td><td>yellow</td><td class='preformatted'>&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;</td></tr>
+<tr><td>2</td><td>400</td><td>300</td><td>200</td><td>green</td><td class='preformatted'>&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;</td></tr>
+<tr><td>3</td><td>254</td><td>356</td><td>100</td><td>#cc6600</td><td class='preformatted'>&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;</td></tr>
 </table>
 </div>
 <div id='task4343' class='task_block'>
@@ -825,86 +543,12 @@ green
 Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
 </div>
 <div class='check_single preformatted'>User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;</div>
-<table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='5'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-user
-</th>
-<th>
-pass
-</th>
-<th>
-host
-</th>
-<th>
-port
-</th>
-<th>
-db
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-test
-</td>
-<td>
-pass
-</td>
-<td>
-localhost
-</td>
-<td>
-5432
-</td>
-<td>
-my_db
-</td>
-<td class='preformatted'>User ID=test;Password=pass;Host=localhost;Port=5432;Database=my_db;</td>
-</tr>
-<tr>
-<td></td>
-<td>
-admin
-</td>
-<td>
-7e8efd48d69c
-</td>
-<td>
-production-node1
-</td>
-<td>
-5432
-</td>
-<td>
-bank
-</td>
-<td class='preformatted'>User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td>
-</tr>
-<tr>
-<td></td>
-<td>
-akryukov
-</td>
-<td>
-123
-</td>
-<td>
-localhost
-</td>
-<td>
-dev-node1
-</td>
-<td>
-bank
-</td>
-<td class='preformatted'>User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='5'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>user</th><th>pass</th><th>host</th><th>port</th><th>db</th></tr>
+<tr><td>1</td><td>test</td><td>pass</td><td>localhost</td><td>5432</td><td>my_db</td><td class='preformatted'>User ID=test;Password=pass;Host=localhost;Port=5432;Database=my_db;</td></tr>
+<tr><td>2</td><td>admin</td><td>7e8efd48d69c</td><td>production-node1</td><td>5432</td><td>bank</td><td class='preformatted'>User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td></tr>
+<tr><td>3</td><td>akryukov</td><td>123</td><td>localhost</td><td>dev-node1</td><td>bank</td><td class='preformatted'>User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td></tr>
 </table>
 </div>
 <div id='task7474' class='task_block'>
@@ -915,51 +559,15 @@ bank
 </div>
 <div class='check_single preformatted'>Квадратное уравнение $A*x*x + $B*x + $C = 0.
 Его дискриминант вычисляется по формуле: d = $B*$B - 4*$A*$C</div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>a</th><th>b</th><th>c</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='3'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Квадратное уравнение 1*x*x + 2*x + 3 = 0.
+Его дискриминант вычисляется по формуле: d = 2*2 - 4*1*3</td></tr>
 <tr>
-<th>
-a
-</th>
-<th>
-b
-</th>
-<th>
-c
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
-3
-</td>
-<td class='preformatted'>Квадратное уравнение 1*x*x + 2*x + 3 = 0.
-Его дискриминант вычисляется по формуле: d = 2*2 - 4*1*3</td>
-</tr>
-<tr>
-<td></td>
-<td>
--3
-</td>
-<td>
-0
-</td>
-<td>
-2
-</td>
-<td class='preformatted'>Квадратное уравнение -3*x*x + 0*x + 2 = 0.
-Его дискриминант вычисляется по формуле: d = 0*0 - 4*-3*2</td>
-</tr>
+<td>2</td><td>-3</td><td>0</td><td>2</td><td class='preformatted'>Квадратное уравнение -3*x*x + 0*x + 2 = 0.
+Его дискриминант вычисляется по формуле: d = 0*0 - 4*-3*2</td></tr>
 </table>
 </div>
 <div id='task3246' class='task_block'>
@@ -1124,4 +732,4 @@ System.out.println(a);</div>
 
 </div>
 </div>
-Версия 20230513. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

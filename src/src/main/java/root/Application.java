@@ -483,6 +483,7 @@ public class Application {
 
                 .withGroup("Условие внутри цикла")
                 .addExample(new Task7585())//линейный поиск
+                .addTask(new Task5522())//линейный поиск с двумя условиями
                 .addTask(new Task3488())//линейный поиск с логическим или
                 .addTask(new Task6028())//вычисление синуса и проверка результатов.
                 .addTask(new Task4264())//обнуление в условии
