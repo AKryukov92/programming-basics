@@ -22,11 +22,9 @@ table {
 }
 .check_values {
 	width:100%;
-	counter-reset:test_case;
 }
-.check_values td:first-child::before {
-	counter-increment:test_case;
-	content: counter(test_case);
+.stream_values {
+    width:100%;
 }
 table td, table th {
 	border:1px solid black;
@@ -34,6 +32,9 @@ table td, table th {
 }
 .check_values td:first-child{
 	width:40px;
+}
+.stream_values td:first-child{
+    width:40px;
 }
 .lab_nav ol {
 	list-style:none;
@@ -95,6 +96,26 @@ table td, table th {
 	white-space:pre;
 	text-align:left;
 	padding:10px;
+}
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
 }
 .check_values tr:target {
     background-color:lightgrey;
@@ -189,7 +210,7 @@ zoom{
 <div class='task_desc'>
 Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа должна завершиться, когда пользователь введёт число меньше или равное нулю.
 </div>
-<table class='check_values'>
+<table class='stream_values'>
 <tr>
 <th>Номер теста</th>
 <th>Исходные данные</th>

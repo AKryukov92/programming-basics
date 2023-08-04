@@ -20,7 +20,7 @@ sqrt:before {
 table {
 	border-collapse:collapse;
 }
-.check_values {
+.check_values, .check_values_v2 {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -32,7 +32,7 @@ table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
-.check_values td:first-child{
+.check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
 .lab_nav ol {
@@ -96,7 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target {
+.check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
 formula {
@@ -157,32 +157,6 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-	ol li {
-		margin-bottom:30px;
-	}
-	.quiz_block {
-		width:100%;
-	}
-	.hide_on_print .check_values, .hide_on_print .check_single{
-		display:none;
-	}
-	.hide_on_print img{
-		display:none;
-	}
-	.empty_on_print td{
-		color:transparent;
-	}
-	.empty_on_print img{
-		visibility:hidden;
-	}
 }</style></head><body class='section'><h1>Руководство к задаче 4411 на С#</h1>
 <a href="..\tasks 2.html#task4411" target="_blank">ЛР2#4411(открыть в новой вкладке)</a>
 

@@ -55,7 +55,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print("<td>");
         writer.print(secondVal);
         writer.print("</td>");
-        writer.println("<td class='preformatted'>");
+        writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
         logic(firstVal, secondVal);
@@ -74,7 +74,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print("<td>");
         writer.print(escapeHtmlSymbols(secondVal));
         writer.print("</td>");
-        writer.println("<td class='preformatted'>");
+        writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
         logic(firstVal, secondVal);
