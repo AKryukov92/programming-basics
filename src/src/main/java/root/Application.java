@@ -1,5 +1,6 @@
 package root;
 
+import root.tasks.arrays.TaskJava8072;
 import root.tasks.aggregates.*;
 import root.tasks.arrays.*;
 import root.tasks.arrays_of_numbers.*;
@@ -119,6 +120,7 @@ public class Application {
         fillInternalState(taskBooksCs[20]);
         fillCollections(taskBooksCs[21]);
         fillRecursion(taskBooksCs[22]);
+        fillDateTime(taskBooksCs[23]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -151,6 +153,7 @@ public class Application {
         fillInternalState(taskBooksJava[20]);
         fillCollections(taskBooksJava[21]);
         fillRecursion(taskBooksJava[22]);
+        fillDateTime(taskBooksJava[23]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -434,32 +437,33 @@ public class Application {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
                 .addExample(new Task1315())
-                .addTask(new Task1631())
-                .addTask(new Task2594())
+                .addTask(new Task1631())//несколько чисел в столбик с повторением оформления
+                .addTask(new Task2594())//повторить символ, оформление не повторяется
 
                 .withGroup("Несколько заменяемых фрагментов в повторяющихся действиях")
                 .addCitation("link_c3_p10.8")
-                .addTask(new Task3762())
-                .addTask(new Task3550())
-                .addTask(new Task1139())
-                .addTask(new Task9969())
-                .addTask(new Task5301())
-                .addTask(new Task6790())
+                .addTask(new Task3762())//таблица соответствия между кг и фунтами
+                .addTask(new Task3550())//таблица умножения на х
+                .addTask(new Task1139())//10 следующих чисел с шагом
+                .addTask(new Task9969())//три раза, потом 10 раз, потом 3 раза
+                .addTask(new Task5301())//счётчик увеличивается каждую итерацию
+                .addTask(new Task6790())//по возрастанию и вычислить функцию
+                .addTask(new Task3850())//сформировать новый массив чисел
 
                 .withGroup("Один цикл за другим")
-                .addTask(new Task7086())
+                .addTask(new Task7086())//10 следующих, 10 предыдущих
 
                 .withGroup("Цикл внутри условия")
-                .addExample(new Task6066())
-                .addTask(new Task1259())
-                .addTask(new Task2565())
+                .addExample(new Task6066())//вывод подряд с ошибкой
+                .addTask(new Task1259())//повторить не более 20 раз
+                .addTask(new Task2565())//по убыванию с ошибкой
                 .addCitation("link_c4_p16.2")
-                .addTask(new Task2321())
-                .addTask(new Task5053())
-                .addTask(new Task6663())
-                .addTask(4338)
-                .addTask(new Task7054())
-                .addTask(new Task4531())
+                .addTask(new Task2321())//вывод по возрастанию от меньшему к большему
+                .addTask(new Task5053())//вывод по возрастанию/убыванию
+                .addTask(new Task6663())//вывод по возрастанию/убыванию
+                .addTask(new Task4338())//вывод в два столбика по убыванию и возрастанию
+                .addTask(new Task7054())//вывод указанного количества
+                .addTask(new Task4531())//изобразить интервалы символами
         ;
     }
 
@@ -480,6 +484,7 @@ public class Application {
 
                 .withGroup("Условие внутри цикла")
                 .addExample(new Task7585())//линейный поиск
+                .addTask(new Task5522())//линейный поиск с двумя условиями
                 .addTask(new Task3488())//линейный поиск с логическим или
                 .addTask(new Task6028())//вычисление синуса и проверка результатов.
                 .addTask(new Task4264())//обнуление в условии
@@ -546,6 +551,7 @@ public class Application {
                 .addTask(new Task9361())//пользователь вводит две даты dd_MM_yyyy выяснить какая из них больше.
                 .addTask(new Task1058())//parse array to distinct numbers. distance between points
                 .addTask(new Task6589())//parse array, range intersection
+                .addTask(new Task9980())//чтение из массива по указанным индексам
 
                 .withGroup("Обработка массивов циклом")
                 .addExample(new Task5683())
@@ -559,35 +565,40 @@ public class Application {
 
     private static void fillSwapping(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
-                .withGroup("Запись в массив")
-                .addExample(new Task9923())//копируем последний в начало
-                .addTask(new Task1331())
-
                 .withGroup("Головоломки на перестановку")
         ;
-
         if (taskBook.isCsharp()) {
             taskBook.addTask(new TaskCs8775())
                     .addTask(new TaskCs5510())
+                    .addTask(new TaskCs8072())
+                    .addTask(new TaskCs3985())
             ;
         } else if (taskBook.isJava()) {
             taskBook.addTask(new TaskJava8775())
                     .addTask(new TaskJava5510())
+                    .addTask(new TaskJava8072())
+                    .addTask(new TaskJava3985())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
+        taskBook
+                .withGroup("Запись в массив")
+                .addExample(new Task9923())//копируем последний в начало
+                .addTask(new Task1331())//запись значения в массив по индексу
+                .addTask(new Task1737())//создание массива и заполнение массива фрагментами
+        ;
 
         taskBook.withGroup("Перестановки элементов")
-                .addExample(new Task3134())
-                .addTask(new Task9711())
-                .addTask(new Task7085())
-                .addTask(new Task8820())
-                .addTask(new Task3333())
-                .addTask(new Task8471())
+                .addExample(new Task3134())//перестановка двух элементов
+                .addTask(new Task9711())//сдвиг на 1 позицию вправо
+                .addTask(new Task7085())//сдвиг на 1 позицию вправо несколько раз
+                .addTask(new Task8820())//инвертирование массива
+                .addTask(new Task3333())//сдвиг на много позиций
+                .addTask(new Task8471())//перестановка с дополнительным массивом
 
                 .addTask(new Task3845())//моделирование стека
-                .addTask(new Task1998())//Возможно это слишком сложная задача. требуется новый синтаксис - перестановки элементов
+                .addTask(new Task1998())//создание массива, записьВозможно это слишком сложная задача
         ;
 
     }
@@ -608,11 +619,10 @@ public class Application {
                 .addTask(new Task7534())//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
-                .addTask(new Task6714())//пересечение интервалов. использование массива чисел для получения данных от пользователя
+                .addTask(new Task6714())//использование массива чисел для получения данных от пользователя
                 .addTask(new Task1438())//пересечение прямоугольников
                 //угол между отрезками
                 //для трех точек - отклонение центральной от соседних
-                .addTask(9576)//вложенные циклы
                 .addTask(3095)//комбинаторика. понятие "все комбинации"
                 .addTask(8122)//сложная задача с кучей концепций
                 .addTask(5900)
@@ -641,7 +651,8 @@ public class Application {
 
                 .withGroup("Сортировка массива вставкой")
                 .addExample(new Task7290())//подсчет количества чисел меньше Х. Нужно как пререквизит для сортировки вставкой. нужно ближе к теме. посчитать количество равных числу X
-                .addTask(new Task2173())//понятие отсортированного массива. Это задача на поиск или на подсчет агрегата
+                .addTask(new Task2173())//проверка корректности сортировки. Это задача на поиск или на подсчет агрегата
+                .addTask(new Task9576())//вложенные циклы, проверка корректности сортировки
                 .addTask(4497)//просмотр массива и замена
                 .addTask(new Task3218())//сортировка массива
 
@@ -748,7 +759,7 @@ public class Application {
                 .addTask(new Task8543())//расшифровка даты indexof substring
                 .addTask(new Task4265())//toUpper, toLower
                 .addTask(new Task2166())//replace
-                .addTask(new Task4996())
+                .addTask(new Task4996())//азбука Морзе
                 .addExample(9925)
                 .addExample(3657)
                 .addTask(6599)
@@ -774,6 +785,15 @@ public class Application {
                 .addTask(new Task6170())//2 файла-таблицы СУБД. Нужно соединить две таблицы, вывести данные по коду
                 .addTask(new Task8665())//2 файла-таблицы СУБД. Нужно выполнить поиск по неключу и вывести
                 .addTask(new Task1761())
+
+                //моделировать чтение файла с разнородным смыслом строк. например
+                //в файле написано два массива.
+                //первая строка - число элементов массива N1
+                //следующие N1 строк - сами элементы
+                //следующая строка - число элементов второго массива N2
+                //следующие N2 строк - сами элементы
+                //напечатать содержимое массивов через запятую
+                //
 
                 .addTask(new Task4477())//проанализировать вложенность скобок
                 .addTask(new Task9417())//чтение нескольких файлов, поиск общей суммы, обработка ошибок
@@ -882,7 +902,12 @@ public class Application {
                 .addTask(new Task9709())//печать от start до end
                 .addTask(new Task6813())//применить метод из 9709 в 9309 и 8862
         ;
-
+        //в начале посильным упражнением может быть работа с готовым правильным кодом
+        //цель - разбиение кода на наибольшее количество методов
+        //идеальная задача для этого - поиск различных элементов в массиве
+        //еще можно дать поиск медианы и сопоставление двух массивов (full outer join)
+        //у них есть общая часть - сортировка вставкой.
+        //рассчитываю, что ученики заметят это и смогут правильно переиспользовать код
     }
 
     private static void unitTesting(TaskBook taskBook) {
@@ -1129,6 +1154,13 @@ public class Application {
     }
 
     private static void fillCollections(TaskBook taskBook) {
+        //хорошо получилось дать задачу 7834 с постепенным вводом чисел и выводом всего результата каждый раз
+        //затем задача на заполнение массива данными и вывод всего массива 5683
+        //задача на поиск в массиве
+        //затем задача на чтение файла, заполнение листа данными и вывод всего листа 6175
+        //задача на чтение csv файла и вывод некоторых атрибутов
+        //затем поиск в csv файле 6989. обратить внимание что мы сначала читаем файл, а данные из него обрабатываем потом. пользователь вводит несколько идентификаторов
+        //задача на сопоставление двух листов 6170
         taskBook.withSourceDirectory("lab15")
                 .withGroup("Формирование листа");
         if (taskBook.isJava()) {
@@ -1181,13 +1213,13 @@ public class Application {
     private static void fillDateTime(TaskBook taskBook) {
         taskBook.withSourceDirectory("datetime")
                 .addTask(new Task9425())//выбор форматирования для чтения дат
-                .addTask(new Task7480())//сравнение двух дат
-                .addTask(new Task9418())//определение разницы между датами
-//                .addTask(3123)
-//                .addTask(8096)
-//                .addTask(8381)
-//                .addTask(8498)
-//                .addTask(8811)
+                .addTask(new Task7480())//сравнение двух дат "является ли позже"
+                .addTask(new Task3123())//вычисление разницы между двумя датами в часах, минутах, секундах
+                .addTask(new Task9418())//определение разницы между датами в секундах
+                .addTask(new Task8811())//дан период дат. проверить, находится ли третья дата в этом периоде
+                .addTask(new Task8381())//пользователь вводит дату. напечатать даты десяти дней до указанной и десяти дней после указанного
+                .addTask(new Task8498())//пользователь вводит две даты. определить, совпадают ли дни недели у этих дат
+                .addTask(new Task8096())//напечатать даты каждого дня недели
 //                .addTask(8519)
 //                .addTask(2130)
 //                .addTask(3696)

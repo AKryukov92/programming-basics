@@ -5,22 +5,23 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 
 public abstract class MultipleInputValLayout extends LayoutMaker {
+    private int testCounter = 0;
     private int headerCount;
     protected abstract void logic(String... args);
     protected void appendCheckValuesHeader(String... headers) {
         tableOpened = true;
         headerCount = headers.length;
-        writer.println("<table class='check_values'>");
-        writer.println("<tr>");
-        writer.println("<th rowspan='2'>Номер теста</th>");
-        writer.println("<th colspan='" + headers.length + "'>Исходные данные</th>");
-        writer.println("<th rowspan='2'>Результат</th>");
+        writer.println("<table class='check_values_v2'>");
+        writer.print("<tr>");
+        writer.print("<th rowspan='2'>Номер теста</th>");
+        writer.print("<th colspan='" + headers.length + "'>Исходные данные</th>");
+        writer.print("<th rowspan='2'>Результат</th>");
         writer.println("</tr>");
-        writer.println("<tr>");
+        writer.print("<tr>");
         for (String header : headers) {
-            writer.println("<th>");
-            writer.println(header);
-            writer.println("</th>");
+            writer.print("<th>");
+            writer.print(header);
+            writer.print("</th>");
         }
         writer.println("</tr>");
     }
@@ -29,19 +30,20 @@ public abstract class MultipleInputValLayout extends LayoutMaker {
         if (values.length != headerCount) {
             throw new RuntimeException("Количество аргументов не совпадает с количеством полученных данных");
         }
-        writer.println("<tr>");
-        writer.println("<td></td>");
+        writer.print("<tr>");
+        testCounter++;
+        writer.print("<td>" + testCounter + "</td>");
         for(String value: values) {
-            writer.println("<td>");
-            writer.println(value);
-            writer.println("</td>");
+            writer.print("<td>");
+            writer.print(value);
+            writer.print("</td>");
         }
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
         logic(values);
         System.setOut(oldOut);
-        writer.println("</td>");
+        writer.print("</td>");
         writer.println("</tr>");
     }
 

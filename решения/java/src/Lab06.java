@@ -166,27 +166,6 @@ public class Lab06 {
         return ret;
     }
 
-    public static StringBuilder task4338(StringBuilder sb, int a, int b){
-        int begin, end;
-        if (a < b){
-            begin = a;
-            end = b;
-        } else {
-            begin = b;
-            end = a;
-        }
-        int i = begin, j = end;
-        while(i <= end){
-            sb.append(i);
-            sb.append(" ");
-            sb.append(j);
-            sb.append("\n");
-            i++;
-            j--;
-        }
-        return sb;
-    }
-
     public static StringBuilder task3762(StringBuilder sb){
         int i = 1;
         while (i <= 20){

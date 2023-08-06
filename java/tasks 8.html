@@ -20,7 +20,7 @@ sqrt:before {
 table {
 	border-collapse:collapse;
 }
-.check_values {
+.check_values, .check_values_v2 {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -32,7 +32,7 @@ table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
-.check_values td:first-child{
+.check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
 .lab_nav ol {
@@ -96,7 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target {
+.check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
 formula {
@@ -157,156 +157,63 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-	ol li {
-		margin-bottom:30px;
-	}
-	.quiz_block {
-		width:100%;
-	}
-	.hide_on_print .check_values, .hide_on_print .check_single{
-		display:none;
-	}
-	.hide_on_print img{
-		display:none;
-	}
-	.empty_on_print td{
-		color:transparent;
-	}
-	.empty_on_print img{
-		visibility:hidden;
-	}
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Вложенные циклы</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9249' class='example'>1*</a><li><a href='#task4075'>2</a><li><a href='#task8395'>3</a><li><a href='#task7323'>4</a><li><a href='#task5568'>5</a><li><a href='#task2592'>6</a><li><a href='#task6355'>7</a></ul><ul><li><a href='#task6332'>8</a><li><a href='#task7517'>9</a><li><a href='#task5448'>10</a><li><a href='#task6572'>11</a><li><a href='#task5238'>12</a><li><a href='#task2084'>13</a><li><a href='#task5411'>14</a><li><a href='#task5171'>15</a><li><a href='#task1862'>16</a></ul></div><div id='task9249' class='task_block'>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Вложенные циклы</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9249' class='example'>1*</a><li><a href='#task4075'>2</a><li><a href='#task8395'>3</a><li><a href='#task7323'>4</a><li><a href='#task5568'>5</a><li><a href='#task2592'>6</a><li><a href='#task6355'>7</a></ul><ul><li><a href='#task6332'>8</a><li><a href='#task7517'>9</a><li><a href='#task5448'>10</a><li><a href='#task6572'>11</a><li><a href='#task5238'>12</a><li><a href='#task2084'>13</a><li><a href='#task5411'>14</a><li><a href='#task5171'>15</a><li><a href='#task1862'>16</a></ul></div><div id='task9249' class='task_block'>
 <div class='task_id'>9249</div>
 <h3>Задача</h3>
 <div class='task_desc'>
 Пользователь вводит два числа: R и T. Вывести две строки символов "#". В первой строке должно быть R штук символов. Во второй строке T штук. Если какое-либо число будет отрицательно, вывести сообщение об ошибке.
 </div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>R</th><th>T</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-R
-</th>
-<th>
-T
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-5
-</td>
-<td>
-11
-</td>
-<td class='preformatted'>Первая строчка
+<td>1</td><td>5</td><td>11</td><td class='preformatted'>
+Первая строчка
 #####
 Вторая строчка
-###########</td>
-</tr>
+###########</td></tr>
 <tr>
-<td></td>
-<td>
-11
-</td>
-<td>
-5
-</td>
-<td class='preformatted'>Первая строчка
+<td>2</td><td>11</td><td>5</td><td class='preformatted'>
+Первая строчка
 ###########
 Вторая строчка
-#####</td>
-</tr>
+#####</td></tr>
 <tr>
-<td></td>
-<td>
-20
-</td>
-<td>
-3
-</td>
-<td class='preformatted'>Первая строчка
+<td>3</td><td>20</td><td>3</td><td class='preformatted'>
+Первая строчка
 ####################
 Вторая строчка
-###</td>
-</tr>
+###</td></tr>
 <tr>
-<td></td>
-<td>
-3
-</td>
-<td>
-20
-</td>
-<td class='preformatted'>Первая строчка
+<td>4</td><td>3</td><td>20</td><td class='preformatted'>
+Первая строчка
 ###
 Вторая строчка
-####################</td>
-</tr>
+####################</td></tr>
 <tr>
-<td></td>
-<td>
-0
-</td>
-<td>
-7
-</td>
-<td class='preformatted'>Первая строчка
+<td>5</td><td>0</td><td>7</td><td class='preformatted'>
+Первая строчка
 
 Вторая строчка
-#######</td>
-</tr>
+#######</td></tr>
 <tr>
-<td></td>
-<td>
-4
-</td>
-<td>
-0
-</td>
-<td class='preformatted'>Первая строчка
+<td>6</td><td>4</td><td>0</td><td class='preformatted'>
+Первая строчка
 ####
 Вторая строчка
-</td>
-</tr>
+</td></tr>
 <tr>
-<td></td>
-<td>
--90
-</td>
-<td>
-6
-</td>
-<td class='preformatted'>Первая строчка
+<td>7</td><td>-90</td><td>6</td><td class='preformatted'>
+Первая строчка
 
 Вторая строчка
-######</td>
-</tr>
+######</td></tr>
 <tr>
-<td></td>
-<td>
-6
-</td>
-<td>
--7
-</td>
-<td class='preformatted'>Первая строчка
+<td>8</td><td>6</td><td>-7</td><td class='preformatted'>
+Первая строчка
 ######
 Вторая строчка
-</td>
-</tr>
+</td></tr>
 </table>
 <div class='task_desc'>
 Попробуйте решить задачу так, чтобы использовалась только одна переменная-счётчик.
@@ -318,51 +225,23 @@ T
 <div class='task_desc'>
 Выведите на экран рамку шириной width.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (width)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>5</td>
-<td class='preformatted'>+---+
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>5</td><td class='preformatted'>+---+
 |...|
-+---+</td>
-</tr>
-<tr>
-<td></td>
-<td>2</td>
-<td class='preformatted'>++
++---+</td></tr>
+<tr><td>2</td><td>2</td><td class='preformatted'>++
 ||
-++</td>
-</tr>
-<tr>
-<td></td>
-<td>15</td>
-<td class='preformatted'>+-------------+
+++</td></tr>
+<tr><td>3</td><td>15</td><td class='preformatted'>+-------------+
 |.............|
-+-------------+</td>
-</tr>
-<tr>
-<td></td>
-<td>1</td>
-<td class='preformatted'>Число width должно быть 2 или более
-</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>Число width должно быть 2 или более
-</td>
-</tr>
-<tr>
-<td></td>
-<td>-10</td>
-<td class='preformatted'>Число width должно быть 2 или более
-</td>
-</tr>
++-------------+</td></tr>
+<tr><td>4</td><td>1</td><td class='preformatted'>Число width должно быть 2 или более
+</td></tr>
+<tr><td>5</td><td>0</td><td class='preformatted'>Число width должно быть 2 или более
+</td></tr>
+<tr><td>6</td><td>-10</td><td class='preformatted'>Число width должно быть 2 или более
+</td></tr>
 </table>
 </div>
 <div id='task8395' class='task_block'>
@@ -371,16 +250,9 @@ T
 <div class='task_desc'>
 Пользователь вводит число width. Выведите на экран буквы латинского алфавита a,b,c,d,e,f,g,h. Каждая буква должна быть на новой строчке. Количество букв в строчке вводится с клавиатуры. Если width меньше 1 или больше 20, вывести сообщение об ошибке.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (width)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>1</td>
-<td class='preformatted'>a
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1</td><td class='preformatted'>a
 b
 c
 d
@@ -388,12 +260,8 @@ e
 f
 g
 h
-</td>
-</tr>
-<tr>
-<td></td>
-<td>3</td>
-<td class='preformatted'>aaa
+</td></tr>
+<tr><td>2</td><td>3</td><td class='preformatted'>aaa
 bbb
 ccc
 ddd
@@ -401,12 +269,8 @@ eee
 fff
 ggg
 hhh
-</td>
-</tr>
-<tr>
-<td></td>
-<td>5</td>
-<td class='preformatted'>aaaaa
+</td></tr>
+<tr><td>3</td><td>5</td><td class='preformatted'>aaaaa
 bbbbb
 ccccc
 ddddd
@@ -414,12 +278,8 @@ eeeee
 fffff
 ggggg
 hhhhh
-</td>
-</tr>
-<tr>
-<td></td>
-<td>19</td>
-<td class='preformatted'>aaaaaaaaaaaaaaaaaaa
+</td></tr>
+<tr><td>4</td><td>19</td><td class='preformatted'>aaaaaaaaaaaaaaaaaaa
 bbbbbbbbbbbbbbbbbbb
 ccccccccccccccccccc
 ddddddddddddddddddd
@@ -427,12 +287,8 @@ eeeeeeeeeeeeeeeeeee
 fffffffffffffffffff
 ggggggggggggggggggg
 hhhhhhhhhhhhhhhhhhh
-</td>
-</tr>
-<tr>
-<td></td>
-<td>20</td>
-<td class='preformatted'>aaaaaaaaaaaaaaaaaaaa
+</td></tr>
+<tr><td>5</td><td>20</td><td class='preformatted'>aaaaaaaaaaaaaaaaaaaa
 bbbbbbbbbbbbbbbbbbbb
 cccccccccccccccccccc
 dddddddddddddddddddd
@@ -440,32 +296,15 @@ eeeeeeeeeeeeeeeeeeee
 ffffffffffffffffffff
 gggggggggggggggggggg
 hhhhhhhhhhhhhhhhhhhh
-</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>-7</td>
-<td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>21</td>
-<td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>1000</td>
-<td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
-</td>
-</tr>
+</td></tr>
+<tr><td>6</td><td>0</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>7</td><td>-7</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>8</td><td>21</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>9</td><td>1000</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
 </table>
 </div>
 <div id='task7323' class='task_block'>
@@ -474,120 +313,53 @@ hhhhhhhhhhhhhhhhhhhh
 <div class='task_desc'>
 Пользователь вводит два числа: width и diff. Выведите на экран две строки символов "*". В первой строке должно быть width штук символов. Количество символов во второй строчке отличается на значение diff.
 </div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>width</th><th>diff</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-width
-</th>
-<th>
-diff
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-4
-</td>
-<td>
-3
-</td>
-<td class='preformatted'>Первая строка 4 символов
+<td>1</td><td>4</td><td>3</td><td class='preformatted'>
+Первая строка 4 символов
 ****
 Во второй строке нужно вывести 7 символов
-*******</td>
-</tr>
+*******</td></tr>
 <tr>
-<td></td>
-<td>
-10
-</td>
-<td>
-5
-</td>
-<td class='preformatted'>Первая строка 10 символов
+<td>2</td><td>10</td><td>5</td><td class='preformatted'>
+Первая строка 10 символов
 **********
 Во второй строке нужно вывести 15 символов
-***************</td>
-</tr>
+***************</td></tr>
 <tr>
-<td></td>
-<td>
-7
-</td>
-<td>
-0
-</td>
-<td class='preformatted'>Первая строка 7 символов
+<td>3</td><td>7</td><td>0</td><td class='preformatted'>
+Первая строка 7 символов
 *******
 Во второй строке нужно вывести 7 символов
-*******</td>
-</tr>
+*******</td></tr>
 <tr>
-<td></td>
-<td>
-7
-</td>
-<td>
--3
-</td>
-<td class='preformatted'>Первая строка 7 символов
+<td>4</td><td>7</td><td>-3</td><td class='preformatted'>
+Первая строка 7 символов
 *******
 Во второй строке нужно вывести 4 символов
-****</td>
-</tr>
+****</td></tr>
 <tr>
-<td></td>
-<td>
-2
-</td>
-<td>
--2
-</td>
-<td class='preformatted'>Первая строка 2 символов
+<td>5</td><td>2</td><td>-2</td><td class='preformatted'>
+Первая строка 2 символов
 **
 Во второй строке нужно вывести 0 символов
-</td>
-</tr>
+</td></tr>
 <tr>
-<td></td>
-<td>
-0
-</td>
-<td>
-5
-</td>
-<td class='preformatted'>Первая строка 0 символов
+<td>6</td><td>0</td><td>5</td><td class='preformatted'>
+Первая строка 0 символов
 
 Во второй строке нужно вывести 5 символов
-*****</td>
-</tr>
+*****</td></tr>
 <tr>
-<td></td>
-<td>
-7
-</td>
-<td>
--11
-</td>
-<td class='preformatted'>Количество символов во второй строке должно быть неотрицательным
-</td>
-</tr>
+<td>7</td><td>7</td><td>-11</td><td class='preformatted'>
+Количество символов во второй строке должно быть неотрицательным
+</td></tr>
 <tr>
-<td></td>
-<td>
--2
-</td>
-<td>
-4
-</td>
-<td class='preformatted'>Количество символов в первой строке должно быть неотрицательным
-</td>
-</tr>
+<td>8</td><td>-2</td><td>4</td><td class='preformatted'>
+Количество символов в первой строке должно быть неотрицательным
+</td></tr>
 </table>
 </div>
 <div id='task5568' class='task_block'>
@@ -596,16 +368,9 @@ diff
 <div class='task_desc'>
 Выведите на экран цифры от 0 до 9. Каждая цифра должна быть на своей строчке. Количество цифр в строчке width вводится с клавиатуры. Вывести не более 20 символов в строке.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (width)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>1</td>
-<td class='preformatted'>00
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1</td><td class='preformatted'>00
 11
 22
 33
@@ -615,12 +380,8 @@ diff
 77
 88
 99
-</td>
-</tr>
-<tr>
-<td></td>
-<td>3</td>
-<td class='preformatted'>0000
+</td></tr>
+<tr><td>2</td><td>3</td><td class='preformatted'>0000
 1111
 2222
 3333
@@ -630,12 +391,8 @@ diff
 7777
 8888
 9999
-</td>
-</tr>
-<tr>
-<td></td>
-<td>7</td>
-<td class='preformatted'>00000000
+</td></tr>
+<tr><td>3</td><td>7</td><td class='preformatted'>00000000
 11111111
 22222222
 33333333
@@ -645,12 +402,8 @@ diff
 77777777
 88888888
 99999999
-</td>
-</tr>
-<tr>
-<td></td>
-<td>11</td>
-<td class='preformatted'>000000000000
+</td></tr>
+<tr><td>4</td><td>11</td><td class='preformatted'>000000000000
 111111111111
 222222222222
 333333333333
@@ -660,12 +413,8 @@ diff
 777777777777
 888888888888
 999999999999
-</td>
-</tr>
-<tr>
-<td></td>
-<td>19</td>
-<td class='preformatted'>00000000000000000000
+</td></tr>
+<tr><td>5</td><td>19</td><td class='preformatted'>00000000000000000000
 11111111111111111111
 22222222222222222222
 33333333333333333333
@@ -675,12 +424,8 @@ diff
 77777777777777777777
 88888888888888888888
 99999999999999999999
-</td>
-</tr>
-<tr>
-<td></td>
-<td>20</td>
-<td class='preformatted'>000000000000000000000
+</td></tr>
+<tr><td>6</td><td>20</td><td class='preformatted'>000000000000000000000
 111111111111111111111
 222222222222222222222
 333333333333333333333
@@ -690,20 +435,11 @@ diff
 777777777777777777777
 888888888888888888888
 999999999999999999999
-</td>
-</tr>
-<tr>
-<td></td>
-<td>21</td>
-<td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>50</td>
-<td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
-</td>
-</tr>
+</td></tr>
+<tr><td>7</td><td>21</td><td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
+</td></tr>
+<tr><td>8</td><td>50</td><td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
+</td></tr>
 </table>
 </div>
 <div id='task2592' class='task_block'>
@@ -712,51 +448,14 @@ diff
 <div class='task_desc'>
 Выведите на экран прямоугольник из символов. Символ S, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.
 </div>
-<table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='3'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-S
-</th>
-<th>
-W
-</th>
-<th>
-H
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-#
-</td>
-<td>
-5
-</td>
-<td>
-3
-</td>
-<td class='preformatted'>#####
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>S</th><th>W</th><th>H</th></tr>
+<tr><td>1</td><td>#</td><td>5</td><td>3</td><td class='preformatted'>#####
 #####
 #####
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-?
-</td>
-<td>
-7
-</td>
-<td>
-10
-</td>
-<td class='preformatted'>???????
+</td></tr>
+<tr><td>2</td><td>?</td><td>7</td><td>10</td><td class='preformatted'>???????
 ???????
 ???????
 ???????
@@ -766,33 +465,9 @@ H
 ???????
 ???????
 ???????
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-*
-</td>
-<td>
-90
-</td>
-<td>
-0
-</td>
-<td class='preformatted'></td>
-</tr>
-<tr>
-<td></td>
-<td>
-=
-</td>
-<td>
-0
-</td>
-<td>
-15
-</td>
-<td class='preformatted'>
+</td></tr>
+<tr><td>3</td><td>*</td><td>90</td><td>0</td><td class='preformatted'></td></tr>
+<tr><td>4</td><td>=</td><td>0</td><td>15</td><td class='preformatted'>
 
 
 
@@ -807,36 +482,11 @@ H
 
 
 
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-o
-</td>
-<td>
--2
-</td>
-<td>
-8
-</td>
-<td class='preformatted'>Значение width должно быть 0 или более
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-!
-</td>
-<td>
-20
-</td>
-<td>
--6
-</td>
-<td class='preformatted'>Значение height должно быть 0 или более
-</td>
-</tr>
+</td></tr>
+<tr><td>5</td><td>o</td><td>-2</td><td>8</td><td class='preformatted'>Значение width должно быть 0 или более
+</td></tr>
+<tr><td>6</td><td>!</td><td>20</td><td>-6</td><td class='preformatted'>Значение height должно быть 0 или более
+</td></tr>
 </table>
 </div>
 <div id='task6355' class='task_block'>
@@ -845,16 +495,9 @@ o
 <div class='task_desc'>
 Пользователь вводит число seed. Вывести 10 строчек по 7 чисел в каждой. В первой строчке - числа начиная с seed по возрастанию c шагом 1. Во второй строчке - с шагом 2 и так далее. В строчке 10 шаг должен быть равен 10. После двоеточия поставьте символ табуляции "\t"
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (seed)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>Числа от 0 до 7 с шагом 1:	0 1 2 3 4 5 6 7 
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (seed)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>Числа от 0 до 7 с шагом 1:	0 1 2 3 4 5 6 7 
 Числа от 0 до 14 с шагом 2:	0 2 4 6 8 10 12 14 
 Числа от 0 до 21 с шагом 3:	0 3 6 9 12 15 18 21 
 Числа от 0 до 28 с шагом 4:	0 4 8 12 16 20 24 28 
@@ -864,12 +507,8 @@ o
 Числа от 0 до 56 с шагом 8:	0 8 16 24 32 40 48 56 
 Числа от 0 до 63 с шагом 9:	0 9 18 27 36 45 54 63 
 Числа от 0 до 70 с шагом 10:	0 10 20 30 40 50 60 70 
-</td>
-</tr>
-<tr>
-<td></td>
-<td>2</td>
-<td class='preformatted'>Числа от 2 до 9 с шагом 1:	2 3 4 5 6 7 8 9 
+</td></tr>
+<tr><td>2</td><td>2</td><td class='preformatted'>Числа от 2 до 9 с шагом 1:	2 3 4 5 6 7 8 9 
 Числа от 2 до 16 с шагом 2:	2 4 6 8 10 12 14 16 
 Числа от 2 до 23 с шагом 3:	2 5 8 11 14 17 20 23 
 Числа от 2 до 30 с шагом 4:	2 6 10 14 18 22 26 30 
@@ -879,12 +518,8 @@ o
 Числа от 2 до 58 с шагом 8:	2 10 18 26 34 42 50 58 
 Числа от 2 до 65 с шагом 9:	2 11 20 29 38 47 56 65 
 Числа от 2 до 72 с шагом 10:	2 12 22 32 42 52 62 72 
-</td>
-</tr>
-<tr>
-<td></td>
-<td>1000</td>
-<td class='preformatted'>Числа от 1000 до 1007 с шагом 1:	1000 1001 1002 1003 1004 1005 1006 1007 
+</td></tr>
+<tr><td>3</td><td>1000</td><td class='preformatted'>Числа от 1000 до 1007 с шагом 1:	1000 1001 1002 1003 1004 1005 1006 1007 
 Числа от 1000 до 1014 с шагом 2:	1000 1002 1004 1006 1008 1010 1012 1014 
 Числа от 1000 до 1021 с шагом 3:	1000 1003 1006 1009 1012 1015 1018 1021 
 Числа от 1000 до 1028 с шагом 4:	1000 1004 1008 1012 1016 1020 1024 1028 
@@ -894,12 +529,8 @@ o
 Числа от 1000 до 1056 с шагом 8:	1000 1008 1016 1024 1032 1040 1048 1056 
 Числа от 1000 до 1063 с шагом 9:	1000 1009 1018 1027 1036 1045 1054 1063 
 Числа от 1000 до 1070 с шагом 10:	1000 1010 1020 1030 1040 1050 1060 1070 
-</td>
-</tr>
-<tr>
-<td></td>
-<td>-20</td>
-<td class='preformatted'>Числа от -20 до -13 с шагом 1:	-20 -19 -18 -17 -16 -15 -14 -13 
+</td></tr>
+<tr><td>4</td><td>-20</td><td class='preformatted'>Числа от -20 до -13 с шагом 1:	-20 -19 -18 -17 -16 -15 -14 -13 
 Числа от -20 до -6 с шагом 2:	-20 -18 -16 -14 -12 -10 -8 -6 
 Числа от -20 до 1 с шагом 3:	-20 -17 -14 -11 -8 -5 -2 1 
 Числа от -20 до 8 с шагом 4:	-20 -16 -12 -8 -4 0 4 8 
@@ -909,26 +540,18 @@ o
 Числа от -20 до 36 с шагом 8:	-20 -12 -4 4 12 20 28 36 
 Числа от -20 до 43 с шагом 9:	-20 -11 -2 7 16 25 34 43 
 Числа от -20 до 50 с шагом 10:	-20 -10 0 10 20 30 40 50 
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task6332' class='task_block'>
 <div class='task_id'>6332</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число. Вывести его и 10 следующих чисел в столбик. Справа от каждого третьего числа вывести решетки в строчку. Количество решеток равно числу, которое выводилось в начале строки. Количество решеток должно быть не более 30. Есди число в строке отрицательное - не выводить решетки.
+Пользователь вводит число. Вывести его и 10 следующих чисел в столбик с шагом 1. Справа от каждого третьего числа вывести решетки в строчку. Количество решеток равно числу, которое выводилось в начале строки. Количество решеток должно быть не более 30. Есди число в строке отрицательное - не выводить решетки.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (start)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>0
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (start)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>0
 1
 2 ##
 3
@@ -940,12 +563,8 @@ o
 9
 10
 11 ###########
-</td>
-</tr>
-<tr>
-<td></td>
-<td>10</td>
-<td class='preformatted'>10
+</td></tr>
+<tr><td>2</td><td>10</td><td class='preformatted'>10
 11
 12 ############
 13
@@ -957,12 +576,8 @@ o
 19
 20
 21 #####################
-</td>
-</tr>
-<tr>
-<td></td>
-<td>-10</td>
-<td class='preformatted'>-10
+</td></tr>
+<tr><td>3</td><td>-10</td><td class='preformatted'>-10
 -9
 -8 
 -7
@@ -974,12 +589,8 @@ o
 -1
 0
 1 #
-</td>
-</tr>
-<tr>
-<td></td>
-<td>100</td>
-<td class='preformatted'>100
+</td></tr>
+<tr><td>4</td><td>100</td><td class='preformatted'>100
 101
 102 ##############################
 103
@@ -991,12 +602,8 @@ o
 109
 110
 111 ##############################
-</td>
-</tr>
-<tr>
-<td></td>
-<td>22</td>
-<td class='preformatted'>22
+</td></tr>
+<tr><td>5</td><td>22</td><td class='preformatted'>22
 23
 24 ########################
 25
@@ -1008,8 +615,7 @@ o
 31
 32
 33 ##############################
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id="task7517" class="task_block empty_on_print">
@@ -1538,4 +1144,4 @@ o
 			<td>Значение H должно быть неотрицательно</td>
 		</tr>
 	</table>
-</div>Версия 20230513. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

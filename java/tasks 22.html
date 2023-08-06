@@ -20,7 +20,7 @@ sqrt:before {
 table {
 	border-collapse:collapse;
 }
-.check_values {
+.check_values, .check_values_v2 {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -32,7 +32,7 @@ table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
-.check_values td:first-child{
+.check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
 .lab_nav ol {
@@ -96,7 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target {
+.check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
 formula {
@@ -157,59 +157,14 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-	ol li {
-		margin-bottom:30px;
-	}
-	.quiz_block {
-		width:100%;
-	}
-	.hide_on_print .check_values, .hide_on_print .check_single{
-		display:none;
-	}
-	.hide_on_print img{
-		display:none;
-	}
-	.empty_on_print td{
-		color:transparent;
-	}
-	.empty_on_print img{
-		visibility:hidden;
-	}
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Коллекции</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task5087' class='example'>1*</a><li><a href='#task8317'>2</a><li><a href='#task8418'>3</a><li><a href='#task8258' class='example'>4*</a><li><a href='#task4061'>5</a><li><a href='#task7186'>6</a><li><a href='#task1457'>7</a><li><a href='#task4568' class='example'>8*</a><li><a href='#task9990'>9</a><li><a href='#task6590'>10</a><li><a href='#task9092'>11</a></ul><ul><li><a href='#task5449' class='example'>12*</a><li><a href='#task9238'>13</a><li><a href='#task9512' class='example'>14*</a><li><a href='#task9924'>15</a><li><a href='#task1056' class='example'>16*</a><li><a href='#task7738'>17</a><li><a href='#task7657'>18</a><li><a href='#task5108'>19</a><li><a href='#task3956' class='example'>20*</a><li><a href='#task6876'>21</a><li><a href='#task2033'>22</a><li><a href='#task6981'>23</a><li><a href='#task1753'>24</a></ul></div><div id='task5087' class='task_block'>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Коллекции</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task5087' class='example'>1*</a><li><a href='#task8317'>2</a><li><a href='#task8418'>3</a><li><a href='#task8258' class='example'>4*</a><li><a href='#task4061'>5</a><li><a href='#task7186'>6</a><li><a href='#task1457'>7</a><li><a href='#task4568' class='example'>8*</a><li><a href='#task9990'>9</a><li><a href='#task6590'>10</a><li><a href='#task9092'>11</a></ul><ul><li><a href='#task5449' class='example'>12*</a><li><a href='#task9238'>13</a><li><a href='#task9512' class='example'>14*</a><li><a href='#task9924'>15</a><li><a href='#task1056' class='example'>16*</a><li><a href='#task7738'>17</a><li><a href='#task7657'>18</a><li><a href='#task5108'>19</a><li><a href='#task3956' class='example'>20*</a><li><a href='#task6876'>21</a><li><a href='#task2033'>22</a><li><a href='#task6981'>23</a><li><a href='#task1753'>24</a></ul></div><div id='task5087' class='task_block'>
 <div class='task_id'>5087</div>
 <h3>Задача</h3>
 <h4>Выполните действия</h4>
-<ol start='1'><li>Создайте класс Task5087</li><li>Реализуйте в классе Task6087 стандартный метод main</li><li>В методе main создайте экземпляр класса Scanner</li><li>В конструктор класса Scanner передайте статическое поле in класса System</li><li>Объявите переменную temp для хранения текста</li><li>Объявите переменную list типа List&lt;String&gt;</li><li>Создайте экземпляр класса ArrayList&lt;String&gt; и запишите его в переменную list</li><li>Напечатайте в консоли фразу 'исходный размер листа:'</li><li>Напечатайте в консоли результат вызова метода size у экземпляра класса List</li><li>Напечатайте в консоли фразу 'введите первый элемент листа'</li><li>Вызовите нестатический метод nextLine у экземпляра класса Scanner</li><li>Результат вызова метода nextLine запишите в переменную temp</li><li>Вызовите метод add у экземпляра класса ArrayList и передайте temp в качестве аргумента</li><li>Напечатайте в консоли фразу 'размер листа после добавления элемента:'</li><li>Вызовите метод size у экземпляра класса List и напечатайте его результат в консоли</li><li>Напечатайте в консоли фразу 'введите второй элемент листа'</li><li>Вызовите метод nextLine у экземпляра класса Scanner</li><li>Передайте результат вызова метода nextLine в качестве аргумента метода add</li><li>Напечатайте в консоли фразу 'размер листа после добавления двух элементов:'</li><li>Вызовите метод size у экземпляра класса List и напечатайте в консоли результат</li><li>Вызовите метод get у экземпляра класса ArrayList и передайте ему 1 в качестве аргумента</li><li>Полученное на предыдущем шаге значение напечатайте в консоли</li><li>Напечатайте в консоли результат вызова метода get у класса ArrayList с аргументом 0</li></ol><table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-first
-</th>
-<th>
-second
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-начало
-</td>
-<td>
-конец
-</td>
-<td class='preformatted'>исходный размер листа:
+<ol start='1'><li>Создайте класс Task5087</li><li>Реализуйте в классе Task6087 стандартный метод main</li><li>В методе main создайте экземпляр класса Scanner</li><li>В конструктор класса Scanner передайте статическое поле in класса System</li><li>Объявите переменную temp для хранения текста</li><li>Объявите переменную list типа List&lt;String&gt;</li><li>Создайте экземпляр класса ArrayList&lt;String&gt; и запишите его в переменную list</li><li>Напечатайте в консоли фразу 'исходный размер листа:'</li><li>Напечатайте в консоли результат вызова метода size у экземпляра класса List</li><li>Напечатайте в консоли фразу 'введите первый элемент листа'</li><li>Вызовите нестатический метод nextLine у экземпляра класса Scanner</li><li>Результат вызова метода nextLine запишите в переменную temp</li><li>Вызовите метод add у экземпляра класса ArrayList и передайте temp в качестве аргумента</li><li>Напечатайте в консоли фразу 'размер листа после добавления элемента:'</li><li>Вызовите метод size у экземпляра класса List и напечатайте его результат в консоли</li><li>Напечатайте в консоли фразу 'введите второй элемент листа'</li><li>Вызовите метод nextLine у экземпляра класса Scanner</li><li>Передайте результат вызова метода nextLine в качестве аргумента метода add</li><li>Напечатайте в консоли фразу 'размер листа после добавления двух элементов:'</li><li>Вызовите метод size у экземпляра класса List и напечатайте в консоли результат</li><li>Вызовите метод get у экземпляра класса ArrayList и передайте ему 1 в качестве аргумента</li><li>Полученное на предыдущем шаге значение напечатайте в консоли</li><li>Напечатайте в консоли результат вызова метода get у класса ArrayList с аргументом 0</li></ol><table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>first</th><th>second</th></tr>
+<tr><td>1</td><td>начало</td><td>конец</td><td class='preformatted'>исходный размер листа:
 0
 введите первый элемент листа
 размер листа после добавления элемента:
@@ -219,17 +174,8 @@ second
 2
 конец
 начало
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-первое
-</td>
-<td>
-второе
-</td>
-<td class='preformatted'>исходный размер листа:
+</td></tr>
+<tr><td>2</td><td>первое</td><td>второе</td><td class='preformatted'>исходный размер листа:
 0
 введите первый элемент листа
 размер листа после добавления элемента:
@@ -239,8 +185,7 @@ second
 2
 второе
 первое
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task8317' class='task_block'>

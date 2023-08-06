@@ -1,0 +1,279 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>7 Обработка неизвестного объема данных</title><style>.check_single {
+    margin:15px;
+	border:1px solid black;
+	padding:5px;
+    width:calc(100% - 40px);
+}
+sqrt val {
+	border-top: 1px solid black;
+}
+sqrt:before {
+	content:"\221A";
+}
+.section {
+	counter-reset:section;
+}
+.section h3:after {
+	counter-increment:section;
+	content: " " counter(section);
+}
+table {
+	border-collapse:collapse;
+}
+.check_values {
+	width:100%;
+}
+.stream_values {
+    width:100%;
+}
+table td, table th {
+	border:1px solid black;
+	text-align:center;
+}
+.check_values td:first-child{
+	width:40px;
+}
+.stream_values td:first-child{
+    width:40px;
+}
+.lab_nav ol {
+	list-style:none;
+}
+.nav {
+	position:fixed;
+	top:0px;
+	right:0px;
+	margin:15px;
+	clear:both;
+}
+.nav ul{
+	list-style-type:none;
+	padding:0px;
+	float:left;
+}
+.nav li {
+	margin:2px;
+	border:1px solid black;
+}
+.nav li a {
+	display:block;
+	padding:7px;
+}
+.task_block {
+	width:80%;
+	page-break-inside:avoid;
+	padding:10px;
+	display:block;
+}
+.task_block:target{
+	background-color:lightgrey;
+}
+.task_block:target .task_id{
+	color:white;
+}
+.task_id {
+	float:right;
+	color:lightgrey;
+}
+.quiz_block {
+	width:80%;
+}
+.quiz_block:target{
+	background-color:lightgrey;
+}
+.task_desc {
+	margin:5px;
+}
+.example_image {
+	width:200px;
+}
+.lab_nav {
+	width:80%;
+	overflow:auto;
+}
+.check_values .preformatted, .preformatted {
+	font-family:monospace;
+	white-space:pre;
+	text-align:left;
+	padding:10px;
+}
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
+.check_values tr:target {
+    background-color:lightgrey;
+}
+formula {
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+}
+fraction {
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+formula .abs{
+	border-left: solid black 1px;
+    border-right: solid black 1px;
+    padding: 2px;
+}
+numerator {
+	display:block;
+	border-bottom:2px solid black;
+}
+denominator {
+	display:block;
+}
+spoiler {
+	color:darkgrey;
+}
+spoiler origin {
+	display:none;
+}
+spoiler:hover origin {
+	display:inline;
+}
+spoiler trans {
+	display:inline;
+}
+spoiler:hover trans {
+	display:none;
+}
+.comment{
+	color:darkgrey;
+}
+.step{
+	display:none;
+}
+.step:last-child, .step:target{
+	display:block;
+}
+.step:target ~ .step:last-child{
+	display:none;
+}
+.console{
+	background-color:black;
+	color:white;
+	width:300px;
+}
+zoom{
+	background-color:gray;
+	font-size:40pt;
+}
+@media print {
+	.nav {
+		display:none;
+	}
+	.lab_nav {
+		display:none;
+	}
+	ol li {
+		margin-bottom:30px;
+	}
+	.quiz_block {
+		width:100%;
+	}
+	.hide_on_print .check_values, .hide_on_print .check_single{
+		display:none;
+	}
+	.hide_on_print img{
+		display:none;
+	}
+	.empty_on_print td{
+		color:transparent;
+	}
+	.empty_on_print img{
+		visibility:hidden;
+	}
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><div id='task1903' class='task_block'>
+<div class='task_id'>1903</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит неизвестное количество целых чисел. После ввода каждого из чисел, нужно прибавить к нему 7 и вывести на экран. Программа должна завершиться, когда пользователь введёт число меньше или равное нулю.
+</div>
+<table class='stream_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные</th>
+<th>Результат</th>
+</tr>
+<tr><td rowspan="8"></td><td>7</td><td></td></tr>
+<tr><td></td><td>Пользователь ввёл 7 после прибавления 7 получается 14</td></tr>
+<tr><td>12</td><td></td></tr>
+<tr><td></td><td>Пользователь ввёл 12 после прибавления 7 получается 19</td></tr>
+<tr><td>23</td><td></td></tr>
+<tr><td></td><td>Пользователь ввёл 23 после прибавления 7 получается 30</td></tr>
+<tr><td>-7</td><td></td></tr>
+<tr><td></td><td>Число -7 не больше 0, завершаю программу</td></tr>
+</table>
+
+<table class='check_values'>
+<tr>
+<th>Номер теста</th>
+<th>Исходные данные</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td></td>
+<td>7<br>12<br>23<br>-7</td>
+<td class='preformatted'>Пользователь ввёл 7 после прибавления 7 получается 14
+Пользователь ввёл 12 после прибавления 7 получается 19
+Пользователь ввёл 23 после прибавления 7 получается 30
+Число -7 не больше 0, завершаю программу
+</td>
+</tr>
+<tr>
+<td></td>
+<td>7<br>12<br>0</td>
+<td class='preformatted'>Пользователь ввёл 7 после прибавления 7 получается 14
+Пользователь ввёл 12 после прибавления 7 получается 19
+Число 0 не больше 0, завершаю программу
+</td>
+</tr>
+<tr>
+<td></td>
+<td>14<br>15<br>4<br>-20</td>
+<td class='preformatted'>Пользователь ввёл 14 после прибавления 7 получается 21
+Пользователь ввёл 15 после прибавления 7 получается 22
+Пользователь ввёл 4 после прибавления 7 получается 11
+Число -20 не больше 0, завершаю программу
+</td>
+</tr>
+<tr>
+<td></td>
+<td>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>-1</td>
+<td class='preformatted'>Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Пользователь ввёл 1 после прибавления 7 получается 8
+Число -1 не больше 0, завершаю программу
+</td>
+</tr>
+</table>
+</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

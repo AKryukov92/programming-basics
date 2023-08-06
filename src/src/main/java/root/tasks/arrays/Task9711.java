@@ -31,6 +31,7 @@ public class Task9711 extends OneInputValLayout {
         appendCheckValuesHeader("data");
         //однажды при объяснении очень удачно получилось провести параллель массива с двумя элементами и задачи на перестановку двух элементов
         appendCheckValuesRow("first second");
+        appendCheckValuesRow("one two three");
         appendCheckValuesRow("q w e r t y");
         appendCheckValuesRow("a s d f g h j k l m");
         appendCheckValuesRow("zx cv bn m");

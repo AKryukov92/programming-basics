@@ -20,7 +20,7 @@ sqrt:before {
 table {
 	border-collapse:collapse;
 }
-.check_values {
+.check_values, .check_values_v2 {
 	width:100%;
 	counter-reset:test_case;
 }
@@ -32,7 +32,7 @@ table td, table th {
 	border:1px solid black;
 	text-align:center;
 }
-.check_values td:first-child{
+.check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
 .lab_nav ol {
@@ -96,7 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target {
+.check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
 formula {
@@ -157,69 +157,19 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}
-@media print {
-	.nav {
-		display:none;
-	}
-	.lab_nav {
-		display:none;
-	}
-	ol li {
-		margin-bottom:30px;
-	}
-	.quiz_block {
-		width:100%;
-	}
-	.hide_on_print .check_values, .hide_on_print .check_single{
-		display:none;
-	}
-	.hide_on_print img{
-		display:none;
-	}
-	.empty_on_print td{
-		color:transparent;
-	}
-	.empty_on_print img{
-		visibility:hidden;
-	}
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Организация вычислений</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Использование числовых массивов</a></li><li>11 <a href='tasks 11.html'>Вычисление агрегатов</a></li><li>12 <a href='tasks 12.html'>Поиск в массиве</a></li><li>13 <a href='tasks 13.html'>Строки</a></li><li>14 <a href='tasks 14.html'>Чтение файлов</a></li><li>15 <a href='tasks 15.html'>Запись в файлы</a></li><li>16 <a href='tasks 16.html'>Методы</a></li><li>17 <a href='tasks 17.html'>Исключения</a></li><li>18 <a href='tasks 18.html'>Составные типы данных</a></li><li>19 <a href='tasks 19.html'>Внутреннее состояние</a></li><li>20 <a href='tasks 20.html'>Коллекции</a></li><li>21 <a href='tasks 21.html'>Рекурсия</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4411' class='example'>1*</a><li><a href='#task8428' class='example'>2*</a><li><a href='#task1976'>3</a><li><a href='#task3435'>4</a><li><a href='#task9865'>5</a><li><a href='#task7457'>6</a><li><a href='#task7237'>7</a></ul><ul><li><a href='#task7711' class='example'>8*</a><li><a href='#task3474'>9</a><li><a href='#task1262'>10</a><li><a href='#task9164'>11</a><li><a href='#task3558'>12</a><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a></ul></div><div id='task4411' class='task_block'>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Организация вычислений</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4411' class='example'>1*</a><li><a href='#task8428' class='example'>2*</a><li><a href='#task1976'>3</a><li><a href='#task3435'>4</a><li><a href='#task9865'>5</a><li><a href='#task7457'>6</a><li><a href='#task7237'>7</a><li><a href='#task7711' class='example'>8*</a><li><a href='#task3474'>9</a><li><a href='#task1262'>10</a><li><a href='#task9164'>11</a><li><a href='#task3558'>12</a><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a></ul></div><div id='task4411' class='task_block'>
 <div class='task_id'>4411</div>
 <h3>Задача</h3>
 <div class='task_desc'>
 Вычислить результат по формуле x + 7, где x вводится с клавиатуры.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (X)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>11.13</td>
-<td class='preformatted'>Результат равен 18,1300</td>
-</tr>
-<tr>
-<td></td>
-<td>-7919</td>
-<td class='preformatted'>Результат равен -7912,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>Результат равен 7,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>6.00006</td>
-<td class='preformatted'>Результат равен 13,0001</td>
-</tr>
-<tr>
-<td></td>
-<td>9.00004</td>
-<td class='preformatted'>Результат равен 16,0000</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
+<tr><td>1</td><td>11.13</td><td class='preformatted'>Результат равен 18,1300</td></tr>
+<tr><td>2</td><td>-7919</td><td class='preformatted'>Результат равен -7912,0000</td></tr>
+<tr><td>3</td><td>0</td><td class='preformatted'>Результат равен 7,0000</td></tr>
+<tr><td>4</td><td>6.00006</td><td class='preformatted'>Результат равен 13,0001</td></tr>
+<tr><td>5</td><td>9.00004</td><td class='preformatted'>Результат равен 16,0000</td></tr>
 </table>
 </div>
 <div>Руководство по самостоятельному выполнению задачи <a href='конспекты/pre4411.html#initial' target='_blank'>(открыть в новом файле)</a></div><div id='task8428' class='task_block'>
@@ -234,42 +184,14 @@ zoom{
 <div class='task_desc'>
 Перевести угол из градусов в радианы по формуле: <formula>angleRadian=angleDegree*&pi;/180</formula>, где angleDegree - угол в градусах(degrees), angleRadian - угол в радианах. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ).
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (angleDegree)</th>
-<th>Результат (angleRadian)</th>
-</tr>
-<tr>
-<td></td>
-<td>45</td>
-<td class='preformatted'>45 градусов это 0,7854 радиан</td>
-</tr>
-<tr>
-<td></td>
-<td>1125</td>
-<td class='preformatted'>1125 градусов это 19,6350 радиан</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>0 градусов это 0,0000 радиан</td>
-</tr>
-<tr>
-<td></td>
-<td>360</td>
-<td class='preformatted'>360 градусов это 6,2832 радиан</td>
-</tr>
-<tr>
-<td></td>
-<td>90</td>
-<td class='preformatted'>90 градусов это 1,5708 радиан</td>
-</tr>
-<tr>
-<td></td>
-<td>2000</td>
-<td class='preformatted'>2000 градусов это 34,9066 радиан</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (angleDegree)</th><th>Результат (angleRadian)</th></tr>
+<tr><td>1</td><td>45</td><td class='preformatted'>45 градусов это 0,7854 радиан</td></tr>
+<tr><td>2</td><td>1125</td><td class='preformatted'>1125 градусов это 19,6350 радиан</td></tr>
+<tr><td>3</td><td>0</td><td class='preformatted'>0 градусов это 0,0000 радиан</td></tr>
+<tr><td>4</td><td>360</td><td class='preformatted'>360 градусов это 6,2832 радиан</td></tr>
+<tr><td>5</td><td>90</td><td class='preformatted'>90 градусов это 1,5708 радиан</td></tr>
+<tr><td>6</td><td>2000</td><td class='preformatted'>2000 градусов это 34,9066 радиан</td></tr>
 </table>
 </div>
 <div id='task1976' class='task_block'>
@@ -286,59 +208,27 @@ zoom{
 Вычислите результат и оформите ответ
 </div>
 <ol start='12'><li>Инициализируйте переменную area - умножьте переменную height на width и запишите результат в area.</li><li>Выведите на экран текст по шаблону "Площадь прямоугольника со сторонами $height и $width равна $area"</li></ol><h4>Убедитесь, что для всех исходных данных получается ожидаемый результат.</h4>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>height</th><th>width</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-height
-</th>
-<th>
-width
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-3
-</td>
-<td>
-5
-</td>
-<td class='preformatted'>Задача 1976
+<td>1</td><td>3</td><td>5</td><td class='preformatted'>
+Задача 1976
 Введите высоту прямоугольника
 Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 3 и 5 равна 15</td>
-</tr>
+Площадь прямоугольника со сторонами 3 и 5 равна 15</td></tr>
 <tr>
-<td></td>
-<td>
-11
-</td>
-<td>
-19
-</td>
-<td class='preformatted'>Задача 1976
+<td>2</td><td>11</td><td>19</td><td class='preformatted'>
+Задача 1976
 Введите высоту прямоугольника
 Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 11 и 19 равна 209</td>
-</tr>
+Площадь прямоугольника со сторонами 11 и 19 равна 209</td></tr>
 <tr>
-<td></td>
-<td>
-2
-</td>
-<td>
-23
-</td>
-<td class='preformatted'>Задача 1976
+<td>3</td><td>2</td><td>23</td><td class='preformatted'>
+Задача 1976
 Введите высоту прямоугольника
 Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 2 и 23 равна 46</td>
-</tr>
+Площадь прямоугольника со сторонами 2 и 23 равна 46</td></tr>
 </table>
 </div>
 <div id='task3435' class='task_block'>
@@ -347,48 +237,20 @@ width
 <div class='task_desc'>
 Перевести угол из радианов в градусы. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ). Выведите ответ по шаблону "$angleRadian радиан это $angleDegree градусов". Точность чисел - 4 знака после запятой.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (angleRadian)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>0.7854</td>
-<td class='preformatted'>0,7854 радиан это 45,0001 градусов
-</td>
-</tr>
-<tr>
-<td></td>
-<td>19.6350</td>
-<td class='preformatted'>19,6350 радиан это 1125,0026 градусов
-</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>0,0000 радиан это 0,0000 градусов
-</td>
-</tr>
-<tr>
-<td></td>
-<td>6.2832</td>
-<td class='preformatted'>6,2832 радиан это 360,0008 градусов
-</td>
-</tr>
-<tr>
-<td></td>
-<td>1.5708</td>
-<td class='preformatted'>1,5708 радиан это 90,0002 градусов
-</td>
-</tr>
-<tr>
-<td></td>
-<td>34.9066</td>
-<td class='preformatted'>34,9066 радиан это 2000,0009 градусов
-</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (angleRadian)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0.7854</td><td class='preformatted'>0,7854 радиан это 45,0001 градусов
+</td></tr>
+<tr><td>2</td><td>19.6350</td><td class='preformatted'>19,6350 радиан это 1125,0026 градусов
+</td></tr>
+<tr><td>3</td><td>0</td><td class='preformatted'>0,0000 радиан это 0,0000 градусов
+</td></tr>
+<tr><td>4</td><td>6.2832</td><td class='preformatted'>6,2832 радиан это 360,0008 градусов
+</td></tr>
+<tr><td>5</td><td>1.5708</td><td class='preformatted'>1,5708 радиан это 90,0002 градусов
+</td></tr>
+<tr><td>6</td><td>34.9066</td><td class='preformatted'>34,9066 радиан это 2000,0009 градусов
+</td></tr>
 </table>
 </div>
 <div id='task9865' class='task_block'>
@@ -397,44 +259,24 @@ width
 <div class='task_desc'>
 Дана скорость в <a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D0%B5%D0%BB_(%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8F)">узлах</a>. Нужно найти приблизительную скорость в километрах/час. Для быстрого приблизительного пересчёта в уме узлов в километры в час: «умножь на два и вычти 10 процентов». Выведите ответ по шаблону: "$knots узлов это $KmH км/ч". Точность чисел - 2 знака после запятой.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (knots)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>15</td>
-<td class='preformatted'>Умножили 15,0000 на 2 получили 30,0000
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (knots)</th><th>Результат</th></tr>
+<tr><td>1</td><td>15</td><td class='preformatted'>Умножили 15,0000 на 2 получили 30,0000
 10% от 30,0000 это 3,0000
 15,00 узлов это приблизительно 27,00 км/ч
-</td>
-</tr>
-<tr>
-<td></td>
-<td>11</td>
-<td class='preformatted'>Умножили 11,0000 на 2 получили 22,0000
+</td></tr>
+<tr><td>2</td><td>11</td><td class='preformatted'>Умножили 11,0000 на 2 получили 22,0000
 10% от 22,0000 это 2,2000
 11,00 узлов это приблизительно 19,80 км/ч
-</td>
-</tr>
-<tr>
-<td></td>
-<td>1</td>
-<td class='preformatted'>Умножили 1,0000 на 2 получили 2,0000
+</td></tr>
+<tr><td>3</td><td>1</td><td class='preformatted'>Умножили 1,0000 на 2 получили 2,0000
 10% от 2,0000 это 0,2000
 1,00 узлов это приблизительно 1,80 км/ч
-</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>Умножили 0,0000 на 2 получили 0,0000
+</td></tr>
+<tr><td>4</td><td>0</td><td class='preformatted'>Умножили 0,0000 на 2 получили 0,0000
 10% от 0,0000 это 0,0000
 0,00 узлов это приблизительно 0,00 км/ч
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task7457' class='task_block'>
@@ -443,48 +285,28 @@ width
 <div class='task_desc'>
 Дана скорость в километрах/час. Найти значение этой скорости в метрах/секунду. Выведите ответ по шаблону "$velocityInKmH км/ч это $velocityInMS м/с". Точность чисел составляет 2 знака после запятой.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (velocityInKmH)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>60</td>
-<td class='preformatted'>60,00 км/ч
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (velocityInKmH)</th><th>Результат</th></tr>
+<tr><td>1</td><td>60</td><td class='preformatted'>60,00 км/ч
 60000,00 м/ч
 1000,00 м/мин
 16,67 м/с
-</td>
-</tr>
-<tr>
-<td></td>
-<td>200</td>
-<td class='preformatted'>200,00 км/ч
+</td></tr>
+<tr><td>2</td><td>200</td><td class='preformatted'>200,00 км/ч
 200000,00 м/ч
 3333,33 м/мин
 55,56 м/с
-</td>
-</tr>
-<tr>
-<td></td>
-<td>5</td>
-<td class='preformatted'>5,00 км/ч
+</td></tr>
+<tr><td>3</td><td>5</td><td class='preformatted'>5,00 км/ч
 5000,00 м/ч
 83,33 м/мин
 1,39 м/с
-</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>0,00 км/ч
+</td></tr>
+<tr><td>4</td><td>0</td><td class='preformatted'>0,00 км/ч
 0,00 м/ч
 0,00 м/мин
 0,00 м/с
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task7237' class='task_block'>
@@ -493,52 +315,16 @@ width
 <div class='task_desc'>
 Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (temperatureC)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>32,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-5</td>
-<td class='preformatted'>23,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-40</td>
-<td class='preformatted'>-40,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-100</td>
-<td class='preformatted'>-148,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-17.7777</td>
-<td class='preformatted'>0,0001</td>
-</tr>
-<tr>
-<td></td>
-<td>20.5</td>
-<td class='preformatted'>68,9000</td>
-</tr>
-<tr>
-<td></td>
-<td>249.44445</td>
-<td class='preformatted'>481,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-273.15</td>
-<td class='preformatted'>-459,6700</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (temperatureC)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>32,0000</td></tr>
+<tr><td>2</td><td>-5</td><td class='preformatted'>23,0000</td></tr>
+<tr><td>3</td><td>-40</td><td class='preformatted'>-40,0000</td></tr>
+<tr><td>4</td><td>-100</td><td class='preformatted'>-148,0000</td></tr>
+<tr><td>5</td><td>-17.7777</td><td class='preformatted'>0,0001</td></tr>
+<tr><td>6</td><td>20.5</td><td class='preformatted'>68,9000</td></tr>
+<tr><td>7</td><td>249.44445</td><td class='preformatted'>481,0000</td></tr>
+<tr><td>8</td><td>-273.15</td><td class='preformatted'>-459,6700</td></tr>
 </table>
 </div>
 <div id="link_c7_p32.5" class="task_block">
@@ -552,42 +338,18 @@ width
 <div class='task_desc'>
 Пользователь вводит угол, выраженный в градусах. Нужно перевести этот угол в радианы и вычислить результат по формуле <b>sin(angleRad)</b>. Для получения значения в радианах примените формулу, которую использовали в задаче <a href="tasks 2.html#task8428" target="_blank">ЛР2#8428(открыть в новой вкладке)</a>
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (angleDegree)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>45</td>
-<td class='preformatted'>Угол 45,0000 градусов это 0,7854 радиан.
-Синус этого угла равен 0,7071</td>
-</tr>
-<tr>
-<td></td>
-<td>90</td>
-<td class='preformatted'>Угол 90,0000 градусов это 1,5708 радиан.
-Синус этого угла равен 1,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>360</td>
-<td class='preformatted'>Угол 360,0000 градусов это 6,2832 радиан.
-Синус этого угла равен -0,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>1125</td>
-<td class='preformatted'>Угол 1125,0000 градусов это 19,6350 радиан.
-Синус этого угла равен 0,7071</td>
-</tr>
-<tr>
-<td></td>
-<td>7639</td>
-<td class='preformatted'>Угол 7639,0000 градусов это 133,3257 радиан.
-Синус этого угла равен 0,9816</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (angleDegree)</th><th>Результат</th></tr>
+<tr><td>1</td><td>45</td><td class='preformatted'>Угол 45,0000 градусов это 0,7854 радиан.
+Синус этого угла равен 0,7071</td></tr>
+<tr><td>2</td><td>90</td><td class='preformatted'>Угол 90,0000 градусов это 1,5708 радиан.
+Синус этого угла равен 1,0000</td></tr>
+<tr><td>3</td><td>360</td><td class='preformatted'>Угол 360,0000 градусов это 6,2832 радиан.
+Синус этого угла равен -0,0000</td></tr>
+<tr><td>4</td><td>1125</td><td class='preformatted'>Угол 1125,0000 градусов это 19,6350 радиан.
+Синус этого угла равен 0,7071</td></tr>
+<tr><td>5</td><td>7639</td><td class='preformatted'>Угол 7639,0000 градусов это 133,3257 радиан.
+Синус этого угла равен 0,9816</td></tr>
 </table>
 </div>
 <div>Руководство по самостоятельному выполнению задачи <a href='конспекты/pre7711.html#initial' target='_blank'>(открыть в новом файле)</a></div><div id='task3474' class='task_block'>
@@ -599,72 +361,33 @@ width
 <div class='check_single preformatted'>Значение угла в радианах $angleRad
 Косинус этого угла $cos
 Длина гипотенузы $hypotenuse</div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат (hypotenuse)</th></tr>
+<tr><th>cathetus</th><th>angleDeg</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат (hypotenuse)</th>
-</tr>
-<tr>
-<th>
-cathetus
-</th>
-<th>
-angleDeg
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-40
-</td>
-<td>
-30
-</td>
-<td class='preformatted'>Значение угла в радианах 0,5236
+<td>1</td><td>40</td><td>30</td><td class='preformatted'>
+Значение угла в радианах 0,5236
 Косинус этого угла 0,8660
 Длина гипотенузы 46,1880
-</td>
-</tr>
+</td></tr>
 <tr>
-<td></td>
-<td>
-20
-</td>
-<td>
-89
-</td>
-<td class='preformatted'>Значение угла в радианах 1,5533
+<td>2</td><td>20</td><td>89</td><td class='preformatted'>
+Значение угла в радианах 1,5533
 Косинус этого угла 0,0175
 Длина гипотенузы 1145,9738
-</td>
-</tr>
+</td></tr>
 <tr>
-<td></td>
-<td>
-1000
-</td>
-<td>
-1
-</td>
-<td class='preformatted'>Значение угла в радианах 0,0175
+<td>3</td><td>1000</td><td>1</td><td class='preformatted'>
+Значение угла в радианах 0,0175
 Косинус этого угла 0,9998
 Длина гипотенузы 1000,1523
-</td>
-</tr>
+</td></tr>
 <tr>
-<td></td>
-<td>
-70
-</td>
-<td>
-45
-</td>
-<td class='preformatted'>Значение угла в радианах 0,7854
+<td>4</td><td>70</td><td>45</td><td class='preformatted'>
+Значение угла в радианах 0,7854
 Косинус этого угла 0,7071
 Длина гипотенузы 98,9949
-</td>
-</tr>
+</td></tr>
 </table>
 </div>
 <div id='task1262' class='task_block'>
@@ -673,36 +396,16 @@ angleDeg
 <div class='task_desc'>
 Вычислить результат по формуле <formula>5cos(yRad)</formula>. Значение угла дано в градусах.
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (yDeg)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>200</td>
-<td class='preformatted'>200,0000 градусов это 3,4907 радиан
-результат вычисления -4,6985</td>
-</tr>
-<tr>
-<td></td>
-<td>360</td>
-<td class='preformatted'>360,0000 градусов это 6,2832 радиан
-результат вычисления 5,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>90</td>
-<td class='preformatted'>90,0000 градусов это 1,5708 радиан
-результат вычисления 0,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>-50</td>
-<td class='preformatted'>-50,0000 градусов это -0,8727 радиан
-результат вычисления 3,2139</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (yDeg)</th><th>Результат</th></tr>
+<tr><td>1</td><td>200</td><td class='preformatted'>200,0000 градусов это 3,4907 радиан
+результат вычисления -4,6985</td></tr>
+<tr><td>2</td><td>360</td><td class='preformatted'>360,0000 градусов это 6,2832 радиан
+результат вычисления 5,0000</td></tr>
+<tr><td>3</td><td>90</td><td class='preformatted'>90,0000 градусов это 1,5708 радиан
+результат вычисления 0,0000</td></tr>
+<tr><td>4</td><td>-50</td><td class='preformatted'>-50,0000 градусов это -0,8727 радиан
+результат вычисления 3,2139</td></tr>
 </table>
 </div>
 <div id='task9164' class='task_block'>
@@ -711,50 +414,18 @@ angleDeg
 <div class='task_desc'>
 Вычислить результат по формуле. Значение угла дано в градусах. <formula>sin(aRad)cos(bRad)+cos(aRad)sin(bRad)</formula>
 </div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>aDeg</th><th>bDeg</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>90</td><td>90</td><td class='preformatted'>
+0,0000</td></tr>
 <tr>
-<th>
-aDeg
-</th>
-<th>
-bDeg
-</th>
-</tr>
+<td>2</td><td>90</td><td>0</td><td class='preformatted'>
+1,0000</td></tr>
 <tr>
-<td></td>
-<td>
-90
-</td>
-<td>
-90
-</td>
-<td class='preformatted'>0,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>
-90
-</td>
-<td>
-0
-</td>
-<td class='preformatted'>1,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>
-7559
-</td>
-<td>
-7549
-</td>
-<td class='preformatted'>-0,2079</td>
-</tr>
+<td>3</td><td>7559</td><td>7549</td><td class='preformatted'>
+-0,2079</td></tr>
 </table>
 </div>
 <div id='task3558' class='task_block'>
@@ -763,60 +434,21 @@ bDeg
 <div class='task_desc'>
 Вычислить результат по формуле. Значение угла дано в градусах. <formula>3sin(2*aRad)cos(3*bRad)</formula>
 </div>
-<table class='check_values'>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>aDeg</th><th>bDeg</th></tr>
 <tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='2'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
+<td>1</td><td>45</td><td>90</td><td class='preformatted'>
+-0,0000</td></tr>
 <tr>
-<th>
-aDeg
-</th>
-<th>
-bDeg
-</th>
-</tr>
+<td>2</td><td>200</td><td>45</td><td class='preformatted'>
+-1,3636</td></tr>
 <tr>
-<td></td>
-<td>
-45
-</td>
-<td>
-90
-</td>
-<td class='preformatted'>-0,0000</td>
-</tr>
+<td>3</td><td>-70</td><td>20</td><td class='preformatted'>
+-0,9642</td></tr>
 <tr>
-<td></td>
-<td>
-200
-</td>
-<td>
-45
-</td>
-<td class='preformatted'>-1,3636</td>
-</tr>
-<tr>
-<td></td>
-<td>
--70
-</td>
-<td>
-20
-</td>
-<td class='preformatted'>-0,9642</td>
-</tr>
-<tr>
-<td></td>
-<td>
-100
-</td>
-<td>
--135
-</td>
-<td class='preformatted'>-0,7255</td>
-</tr>
+<td>4</td><td>100</td><td>-135</td><td class='preformatted'>
+-0,7255</td></tr>
 </table>
 </div>
 <div id='task4913' class='task_block'>
@@ -830,239 +462,42 @@ bDeg
 </div>
 <div class='check_single preformatted'>Приращение координат: &Delta;x = $dx; &Delta;y = $dy
 Координаты второй точки ($bx;$by)</div>
-<table class='check_values'>
-<tr>
-<th rowspan='2'>Номер теста</th>
-<th colspan='4'>Исходные данные</th>
-<th rowspan='2'>Результат</th>
-</tr>
-<tr>
-<th>
-ax
-</th>
-<th>
-ay
-</th>
-<th>
-distance
-</th>
-<th>
-angleDeg
-</th>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
-5
-</td>
-<td>
-30
-</td>
-<td class='preformatted'>Приращение координат: Δx = 4,3301 Δy = 2,5000
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>ax</th><th>ay</th><th>distance</th><th>angleDeg</th></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>5</td><td>30</td><td class='preformatted'>Приращение координат: Δx = 4,3301 Δy = 2,5000
 Координаты второй точки (5,3301;4,5000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-7
-</td>
-<td>
-11
-</td>
-<td>
-13
-</td>
-<td>
-110
-</td>
-<td class='preformatted'>Приращение координат: Δx = -4,4463 Δy = 12,2160
+</td></tr>
+<tr><td>2</td><td>7</td><td>11</td><td>13</td><td>110</td><td class='preformatted'>Приращение координат: Δx = -4,4463 Δy = 12,2160
 Координаты второй точки (2,5537;23,2160)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-17
-</td>
-<td>
-19
-</td>
-<td>
-23
-</td>
-<td>
-230
-</td>
-<td class='preformatted'>Приращение координат: Δx = -14,7841 Δy = -17,6190
+</td></tr>
+<tr><td>3</td><td>17</td><td>19</td><td>23</td><td>230</td><td class='preformatted'>Приращение координат: Δx = -14,7841 Δy = -17,6190
 Координаты второй точки (2,2159;1,3810)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-29
-</td>
-<td>
-31
-</td>
-<td>
-3
-</td>
-<td>
-290
-</td>
-<td class='preformatted'>Приращение координат: Δx = 1,0261 Δy = -2,8191
+</td></tr>
+<tr><td>4</td><td>29</td><td>31</td><td>3</td><td>290</td><td class='preformatted'>Приращение координат: Δx = 1,0261 Δy = -2,8191
 Координаты второй точки (30,0261;28,1809)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-33
-</td>
-<td>
-37
-</td>
-<td>
-10
-</td>
-<td>
-90
-</td>
-<td class='preformatted'>Приращение координат: Δx = 0,0000 Δy = 10,0000
+</td></tr>
+<tr><td>5</td><td>33</td><td>37</td><td>10</td><td>90</td><td class='preformatted'>Приращение координат: Δx = 0,0000 Δy = 10,0000
 Координаты второй точки (33,0000;47,0000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-33
-</td>
-<td>
-37
-</td>
-<td>
-10
-</td>
-<td>
-180
-</td>
-<td class='preformatted'>Приращение координат: Δx = -10,0000 Δy = 0,0000
+</td></tr>
+<tr><td>6</td><td>33</td><td>37</td><td>10</td><td>180</td><td class='preformatted'>Приращение координат: Δx = -10,0000 Δy = 0,0000
 Координаты второй точки (23,0000;37,0000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-33
-</td>
-<td>
-37
-</td>
-<td>
-10
-</td>
-<td>
-270
-</td>
-<td class='preformatted'>Приращение координат: Δx = -0,0000 Δy = -10,0000
+</td></tr>
+<tr><td>7</td><td>33</td><td>37</td><td>10</td><td>270</td><td class='preformatted'>Приращение координат: Δx = -0,0000 Δy = -10,0000
 Координаты второй точки (33,0000;27,0000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-33
-</td>
-<td>
-37
-</td>
-<td>
-10
-</td>
-<td>
-360
-</td>
-<td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = -0,0000
+</td></tr>
+<tr><td>8</td><td>33</td><td>37</td><td>10</td><td>360</td><td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = -0,0000
 Координаты второй точки (43,0000;37,0000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
-10
-</td>
-<td>
-0
-</td>
-<td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = 0,0000
+</td></tr>
+<tr><td>9</td><td>1</td><td>2</td><td>10</td><td>0</td><td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = 0,0000
 Координаты второй точки (11,0000;2,0000)
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
--5
-</td>
-<td>
-45
-</td>
-<td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
-0
-</td>
-<td>
-45
-</td>
-<td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td>
-</tr>
-<tr>
-<td></td>
-<td>
-1
-</td>
-<td>
-2
-</td>
-<td>
-10
-</td>
-<td>
--5
-</td>
-<td class='preformatted'>Угол должен быть неотрицательным
-</td>
-</tr>
+</td></tr>
+<tr><td>10</td><td>1</td><td>2</td><td>-5</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
+</td></tr>
+<tr><td>11</td><td>1</td><td>2</td><td>0</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
+</td></tr>
+<tr><td>12</td><td>1</td><td>2</td><td>10</td><td>-5</td><td class='preformatted'>Угол должен быть неотрицательным
+</td></tr>
 </table>
 </div>
 <div id='task2790' class='task_block'>
@@ -1078,37 +513,13 @@ angleDeg
 		</val></sqrt>
 	</formula>
 </div>
-<table class='check_values'>
-<tr>
-<th>Номер теста</th>
-<th>Исходные данные (xDeg)</th>
-<th>Результат</th>
-</tr>
-<tr>
-<td></td>
-<td>6997</td>
-<td class='preformatted'>0,9205</td>
-</tr>
-<tr>
-<td></td>
-<td>31</td>
-<td class='preformatted'>0,8572</td>
-</tr>
-<tr>
-<td></td>
-<td>90</td>
-<td class='preformatted'>0,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>0</td>
-<td class='preformatted'>1,0000</td>
-</tr>
-<tr>
-<td></td>
-<td>180</td>
-<td class='preformatted'>1,0000</td>
-</tr>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (xDeg)</th><th>Результат</th></tr>
+<tr><td>1</td><td>6997</td><td class='preformatted'>0,9205</td></tr>
+<tr><td>2</td><td>31</td><td class='preformatted'>0,8572</td></tr>
+<tr><td>3</td><td>90</td><td class='preformatted'>0,0000</td></tr>
+<tr><td>4</td><td>0</td><td class='preformatted'>1,0000</td></tr>
+<tr><td>5</td><td>180</td><td class='preformatted'>1,0000</td></tr>
 </table>
 </div>
-Версия 20230513. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
