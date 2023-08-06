@@ -21,9 +21,9 @@ public class Task8820 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит данные - символы, разделенные пробелами." +
+        appendTaskDescNonEscaped("Пользователь вводит данные - символы, разделенные пробелами." +
                 " Инвертировать массив - переставить элементы массива в обратном порядке." +
-                " Вывод в этой задаче практически не отличается от вывода задачи " + linkToTask(1223) +
+                " Вывод в этой задаче практически не отличается от вывода задачи " + linkToTask(Task1223.class.getName()) +
                 " но вам будет полезнее решить именно с перестановкой элементов в массиве.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("q w e r t y");
