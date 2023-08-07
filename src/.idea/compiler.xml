@@ -12,7 +12,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Labs assembler" target="1.8" />
-      <module name="labs-assembler" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
