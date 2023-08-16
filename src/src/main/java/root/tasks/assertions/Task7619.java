@@ -21,7 +21,7 @@ public class Task7619 extends ThreeInputValLayout {
         appendCheckValuesRow("17", "19", "0");
         appendCheckValuesRow("-11", "13", "200");
         appendCheckValuesRow("79", "-67", "400");
-        appendCheckValuesRow("10", "20","-500");
+        appendCheckValuesRow("10", "20", "-500");
         appendCheckValuesRow("-20", "-73", "300");
         appendCheckValuesRow("60", "-120", "-600");
         appendCheckValuesRow("-2", "-3", "-1");
@@ -34,15 +34,22 @@ public class Task7619 extends ThreeInputValLayout {
         int v1 = Integer.parseInt(firstValue);
         int v2 = Integer.parseInt(secondValue);
         int d = Integer.parseInt(thirdValue);
-        if (v1 < 0 || v2 < 0) {
+        if (v1 < 0) {
+            System.out.println("Скорость должна быть неотрицательна");
+        }
+        if (v2 < 0) {
             System.out.println("Скорость должна быть неотрицательна");
         }
         if (d < 0) {
             System.out.println("Расстояние должно быть неотрицательным");
         }
-        if (v1 >=0 && v2 >= 0 && d >= 0) {
-            double h = (double)d / (v1 + v2);
-            System.out.printf("Автомобили встретятся через %.4f часов", h);
+        if (v1 >= 0) {
+            if (v2 >= 0) {
+                if (d >= 0) {
+                    double h = (double) d / (v1 + v2);
+                    System.out.printf("Автомобили встретятся через %.4f часов", h);
+                }
+            }
         }
     }
 

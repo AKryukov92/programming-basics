@@ -20,18 +20,6 @@ public class Lab12Task2354 {
         System.out.printf("%.6f (%.6f)\n", Lab02.task5789(-1, -3, 2, 9), 12.3693);
     }
 
-    private static void Step5063() {
-        System.out.println();
-        System.out.println("5063");
-        System.out.printf("%d (%d)\n", Lab02.task5063(365), 5);
-        System.out.printf("%d (%d)\n", Lab02.task5063(45), 45);
-        System.out.printf("%d (%d)\n", Lab02.task5063(1125), 45);
-        System.out.printf("%d (%d)\n", Lab02.task5063(1500), 60);
-        System.out.printf("%d (%d)\n", Lab02.task5063(2000), 200);
-        System.out.printf("%d (%d)\n", Lab02.task5063(0), 0);
-        System.out.printf("%d (%d)\n", Lab02.task5063(360), 0);
-    }
-
     private static void Step3832() {
         System.out.println();
         System.out.println("3832");

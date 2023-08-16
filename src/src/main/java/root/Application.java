@@ -332,12 +332,14 @@ public class Application {
     if(A && B){}
      */
     private static void fillPreliminaryAssertions(TaskBook taskBook) {
+        //практика показывает, что на этом этапе нужно дать людям идею о вложенности условий и конструкций
+        //это значит в случае когда нужно проверить 2 условия, их нужно пиать либо последовательно, либо вложенно.
+        //если сразу рассказать о логических операторах и return, то у людей потом будут проблемы с вложенностью циклов
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
                 .addExample(new Task9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
                 .addTask(new Task6522())//взаимоисключающий
-                .addCitation("link_c3_p11.1")
                 .addTask(new Task7619())//взаимоисключающий, несколько вариантов
 
                 .withGroup("Ограничения при вычислении корня")
@@ -348,13 +350,13 @@ public class Application {
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
 
                 .withGroup("Вычисление остатка от деления")
-                .addExample(2801)
-                .addTask(2361)
-                .addTask(5063)
-                .addTask(5870)
+                .addExample(new Task2801())//остаток от деления, не равно
+                .addTask(new Task2361())//остаток от деления, сложная вложенность
+                .addTask(new Task5063())//остаток от деления, кажется скучная
+                .addTask(new Task5870())//остаток от деления
 
                 .withGroup("Практика")
-                .addTask(3490)
+                .addTask(new Task3490())//округление вниз
                 .addTask(9622)
                 .addCitation("link_c3_p12.1")
                 .addTask(7799)
@@ -373,9 +375,7 @@ public class Application {
                 .withGroup("Взаимоисключающие случаи")
                 .addExample(3072)
                 .addTask(new Task3770())
-                .addCitation("link_c4_p15.1")
                 .addTask(5980)
-                .addCitation("link_c4_p19.4")
                 .addTask(8174)
                 .addTask(7178)
                 .addTask(new Task7243())
@@ -390,7 +390,6 @@ public class Application {
                 .addTask(6291)
                 .addTask(5662)
                 .addTask(new Task5116())
-                .addCitation("link_c4_p19.2")
                 .addTask(2291)
 
                 .withGroup("Несколько условий последовательно, с дополнением ответа в каждом условии. Нужно для объяснения циклов и массивов потом")

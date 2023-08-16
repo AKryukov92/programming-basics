@@ -4,38 +4,6 @@
  */
 public class Lab02 {
 
-    public static void main(String[] args) {
-        step2361();
-    }
-
-    public static void step2801() {
-        System.out.println();
-        System.out.println("2801");
-        task2801(1234, 11);
-        task2801(5, 13);
-        task2801(17, 17);
-        task2801(0, 23);
-        task2801(4, 0);
-    }
-
-    public static void step2361() {
-        System.out.println();
-        System.out.println("2361");
-        task2361_2(400, 17);
-        task2361_2(103, 29);
-        task2361_2(2, 12);
-
-        task2361_2(2, 313);
-        task2361_2(3, 400);
-
-        task2361_2(300, -70);
-        task2361_2(5, -10);
-        task2361_2(11, 0);
-
-        task2361_2(-800, 20);
-        task2361_2(0, 23);
-    }
-
     public static void step9622() {
         System.out.println();
         System.out.println("9622");
@@ -50,16 +18,6 @@ public class Lab02 {
                 System.out.println(e.getMessage());
             }
         }
-    }
-
-    public static String task5870(int timeInSeconds) {
-        if (timeInSeconds < 0) {
-            throw new IllegalArgumentException("Количество времени должно быть неотрицательным");
-        }
-        int h = timeInSeconds / 3600;
-        int m = timeInSeconds / 60 % 60;
-        int s = timeInSeconds % 60;
-        return String.format("%d часов %d минут %d секунд", h, m, s);
     }
 
     public static int task9298(int a) throws IllegalArgumentException {
@@ -99,67 +57,6 @@ public class Lab02 {
         }
         return (double) a * (double) h / 2;
     }
-
-    public static class class2361 {
-        public int amount;
-        public int deficit;
-
-        public class2361(int amount, int deficit) {
-            this.amount = amount;
-            this.deficit = deficit;
-        }
-
-        @Override
-        public String toString() {
-            return amount + " шт и " + deficit + " см";
-        }
-    }
-
-    public static void task2801(int dividend, int divider) {
-        if (divider == 0) {
-            System.out.println("Делитель не может быть равен 0");
-            return;
-        }
-        System.out.printf("Делимое %d, делитель %d, частное %d, остаток %d\n", dividend, divider, dividend / divider, dividend % divider);
-    }
-
-    public static void task2361_2(int totalM, int partCm) {
-        if (totalM <= 0) {
-            System.out.println("Длина рулона должна быть положительна");
-            return;
-        }
-        if (partCm <= 0) {
-            System.out.println("Расход материала должен быть положительным");
-            return;
-        }
-        int totalCm = totalM * 100;
-        System.out.printf("Длина рулона в сантиметрах равна %d\n", totalCm);
-        if (totalCm < partCm) {
-            System.out.println("Материала не хватат даже на одно изделие");
-            return;
-        }
-        int amount = totalCm / partCm;
-        int remainder = totalCm % partCm;
-        System.out.printf("Из этого материала получится %d изделий и останется %s см\n", amount, remainder);
-    }
-
-    public static class2361 task2361(int t, int l) throws IllegalArgumentException {
-        if (t <= 0) {
-            throw new IllegalArgumentException("Длина рулона должна быть положительна");
-        }
-        if (l <= 0) {
-            throw new IllegalArgumentException("Расход материала должен быть положительным");
-        }
-        if (t * 100 < l) {
-            throw new IllegalArgumentException("Материала не хватат даже на одно изделие");
-        }
-        return new class2361(t * 100 / l, t * 100 % l);
-    }
-
-    public static int task5063(int a) {
-        return a % 360;
-    }
-
 
     public static int task3832(int x1, int x2, int x3) {
         return x1 * x2 + x1 * x3 + x2 * x3;
@@ -321,16 +218,6 @@ public class Lab02 {
         double dx = xb - xa;
         double dy = yb - ya;
         return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    public static int task3490(double yarnDiameterCm, int wireCoils) {
-        if (yarnDiameterCm <= 0) {
-            throw new IllegalArgumentException("Длина проволоки должна быть неотрицательна");
-        }
-        if (wireCoils <= 0) {
-            throw new IllegalArgumentException("Количество витков должно быть неотрицательно");
-        }
-        return (int) Math.floor(yarnDiameterCm * Math.PI * wireCoils);
     }
 
     public static String task6924(double ax, double ay, double bx, double by) {

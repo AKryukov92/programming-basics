@@ -29,9 +29,11 @@ public class Task3943 extends TwoInputValLayout {
         if (x + Math.sqrt(y) < 0) {
             System.out.println("Подкоренное выражение должно быть неотрицательным");
         }
-        if (x + Math.sqrt(y) >= 0) {
-            double result = -5 * Math.sqrt(x + Math.sqrt(y));
-            System.out.printf("Результат вычислений %.4f", result);
+        if (y >= 0) {
+            if (x + Math.sqrt(y) >= 0) {
+                double result = -5 * Math.sqrt(x + Math.sqrt(y));
+                System.out.printf("Результат вычислений %.4f", result);
+            }
         }
     }
 }

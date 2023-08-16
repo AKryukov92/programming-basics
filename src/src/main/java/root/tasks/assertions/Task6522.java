@@ -42,6 +42,7 @@ public class Task6522 extends MultipleInputValLayout {
         appendCheckValuesRow("-7", "-400", "-5", "-500");
         appendCheckValuesFooter();
         appendFooter();
+        appendCheckSingleNonEscaped("Обычно в шапке таблицы с тестовыми данными у исходных данных будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!");
     }
 
     @Override
@@ -50,16 +51,28 @@ public class Task6522 extends MultipleInputValLayout {
         double t1 = Double.parseDouble(args[1]);
         double v2 = Double.parseDouble(args[2]);
         double t2 = Double.parseDouble(args[3]);
-        if (v1 <= 0 || v2 <= 0) {
+        if (v1 <= 0) {
             System.out.println("Объем должен быть неотрицательным");
         }
-        if (t1 <= -273.15 || t2 <= -273.15) {
+        if (v2 <= 0) {
+            System.out.println("Объем должен быть неотрицательным");
+        }
+        if (t1 <= -273.15) {
             System.out.println("Температура должна быть выше абсолютного нуля (-273.15)");
         }
-        if (v1 > 0 && v2 > 0 && t1 > -273.15 && t2 > -273.15) {
-            double v = v1 + v2;
-            double t = (t1 * v1 + t2 * v2) / (v1 + v2);
-            System.out.printf("Объем смеси: %.4f л\nТемпература смеси: %.4f °C", v, t);
+        if (t2 <= -273.15) {
+            System.out.println("Температура должна быть выше абсолютного нуля (-273.15)");
+        }
+        if (v1 > 0) {
+            if (v2 > 0) {
+                if (t1 > -273.15) {
+                    if (t2 > -273.15) {
+                        double v = v1 + v2;
+                        double t = (t1 * v1 + t2 * v2) / (v1 + v2);
+                        System.out.printf("Объем смеси: %.4f л\nТемпература смеси: %.4f °C", v, t);
+                    }
+                }
+            }
         }
     }
 
