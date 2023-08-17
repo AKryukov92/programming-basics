@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -167,17 +187,13 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>data</th><th>M</th></tr>
 <tr>
-<td>1</td><td>9 8 7 6 5 4</td><td>31</td><td class='preformatted'>
-279 248 217 186 155 124 </td></tr>
+<td>1</td><td>9 8 7 6 5 4</td><td>31</td><td class='preformatted'>279 248 217 186 155 124 </td></tr>
 <tr>
-<td>2</td><td>9 8 7 6 5 4</td><td>-3</td><td class='preformatted'>
--27 -24 -21 -18 -15 -12 </td></tr>
+<td>2</td><td>9 8 7 6 5 4</td><td>-3</td><td class='preformatted'>-27 -24 -21 -18 -15 -12 </td></tr>
 <tr>
-<td>3</td><td>98 76 54</td><td>11</td><td class='preformatted'>
-1078 836 594 </td></tr>
+<td>3</td><td>98 76 54</td><td>11</td><td class='preformatted'>1078 836 594 </td></tr>
 <tr>
 <td>4</td><td></td><td>73</td><td class='preformatted'>
-
 </td></tr>
 </table>
 </div>
@@ -191,18 +207,14 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>left</th><th>right</th></tr>
 <tr>
-<td>1</td><td>1 2 3 4 1</td><td>2 3 4 1 2</td><td class='preformatted'>
-2 6 12 4 2 </td></tr>
+<td>1</td><td>1 2 3 4 1</td><td>2 3 4 1 2</td><td class='preformatted'>2 6 12 4 2 </td></tr>
 <tr>
-<td>2</td><td>1 2 3 4 1 3 4 4 4 4</td><td>3 4 1 2 3 4 1 2 3 4</td><td class='preformatted'>
-3 8 3 8 3 12 4 8 12 16 </td></tr>
+<td>2</td><td>1 2 3 4 1 3 4 4 4 4</td><td>3 4 1 2 3 4 1 2 3 4</td><td class='preformatted'>3 8 3 8 3 12 4 8 12 16 </td></tr>
 <tr>
-<td>3</td><td>1 2 3</td><td>3 4</td><td class='preformatted'>
-Размеры массивов должны быть одинаковы
+<td>3</td><td>1 2 3</td><td>3 4</td><td class='preformatted'>Размеры массивов должны быть одинаковы
 </td></tr>
 <tr>
-<td>4</td><td>1 2 3</td><td>3 4 1 2</td><td class='preformatted'>
-Размеры массивов должны быть одинаковы
+<td>4</td><td>1 2 3</td><td>3 4 1 2</td><td class='preformatted'>Размеры массивов должны быть одинаковы
 </td></tr>
 </table>
 </div>
@@ -357,43 +369,36 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>fragments</th><th>indexes</th></tr>
 <tr>
-<td>1</td><td>a s d f g h j k</td><td>5 3 2 0</td><td class='preformatted'>
-Значение элемента на индексе 5 это h
+<td>1</td><td>a s d f g h j k</td><td>5 3 2 0</td><td class='preformatted'>Значение элемента на индексе 5 это h
 Значение элемента на индексе 3 это f
 Значение элемента на индексе 2 это d
 Значение элемента на индексе 0 это a
 </td></tr>
 <tr>
-<td>2</td><td>qaz wsx edc</td><td>5 3 2 0</td><td class='preformatted'>
-Фрагмент на индексе 5 отсутствует
+<td>2</td><td>qaz wsx edc</td><td>5 3 2 0</td><td class='preformatted'>Фрагмент на индексе 5 отсутствует
 Фрагмент на индексе 3 отсутствует
 Значение элемента на индексе 2 это edc
 Значение элемента на индексе 0 это qaz
 </td></tr>
 <tr>
-<td>3</td><td>as df gh jk</td><td>3 1</td><td class='preformatted'>
-Значение элемента на индексе 3 это jk
+<td>3</td><td>as df gh jk</td><td>3 1</td><td class='preformatted'>Значение элемента на индексе 3 это jk
 Значение элемента на индексе 1 это df
 </td></tr>
 <tr>
-<td>4</td><td>q w e r t y u i o p</td><td>9 7 3 5</td><td class='preformatted'>
-Значение элемента на индексе 9 это p
+<td>4</td><td>q w e r t y u i o p</td><td>9 7 3 5</td><td class='preformatted'>Значение элемента на индексе 9 это p
 Значение элемента на индексе 7 это i
 Значение элемента на индексе 3 это r
 Значение элемента на индексе 5 это y
 </td></tr>
 <tr>
-<td>5</td><td>asdf qwer</td><td>9 8</td><td class='preformatted'>
-Фрагмент на индексе 9 отсутствует
+<td>5</td><td>asdf qwer</td><td>9 8</td><td class='preformatted'>Фрагмент на индексе 9 отсутствует
 Фрагмент на индексе 8 отсутствует
 </td></tr>
 <tr>
-<td>6</td><td></td><td>2 1 5</td><td class='preformatted'>
-Отсутствуют данные о фрагментах
+<td>6</td><td></td><td>2 1 5</td><td class='preformatted'>Отсутствуют данные о фрагментах
 </td></tr>
 <tr>
-<td>7</td><td>v c x z</td><td></td><td class='preformatted'>
-Отсутствуют данные об индексах
+<td>7</td><td>v c x z</td><td></td><td class='preformatted'>Отсутствуют данные об индексах
 </td></tr>
 </table>
 </div>
@@ -407,31 +412,25 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>numbers</th><th>fragments</th></tr>
 <tr>
-<td>1</td><td>0,10,20,100,200</td><td>as,df,gh,jk,kl</td><td class='preformatted'>
-Число 0 меньше 50 и ему соответствует фрагмент as
+<td>1</td><td>0,10,20,100,200</td><td>as,df,gh,jk,kl</td><td class='preformatted'>Число 0 меньше 50 и ему соответствует фрагмент as
 Число 10 меньше 50 и ему соответствует фрагмент df
 Число 20 меньше 50 и ему соответствует фрагмент gh
 </td></tr>
 <tr>
-<td>2</td><td>1000,200,50</td><td>qwer,asdf,zxcv</td><td class='preformatted'>
-</td></tr>
+<td>2</td><td>1000,200,50</td><td>qwer,asdf,zxcv</td><td class='preformatted'></td></tr>
 <tr>
-<td>3</td><td>51,52,53,54</td><td>q,q,q,q</td><td class='preformatted'>
-</td></tr>
+<td>3</td><td>51,52,53,54</td><td>q,q,q,q</td><td class='preformatted'></td></tr>
 <tr>
-<td>4</td><td>30,60,20,70</td><td>thirty,sixty,twenty,seventy</td><td class='preformatted'>
-Число 30 меньше 50 и ему соответствует фрагмент thirty
+<td>4</td><td>30,60,20,70</td><td>thirty,sixty,twenty,seventy</td><td class='preformatted'>Число 30 меньше 50 и ему соответствует фрагмент thirty
 Число 20 меньше 50 и ему соответствует фрагмент twenty
 </td></tr>
 <tr>
-<td>5</td><td>1,2,3</td><td>one,two,three,four</td><td class='preformatted'>
-Число 1 меньше 50 и ему соответствует фрагмент one
+<td>5</td><td>1,2,3</td><td>one,two,three,four</td><td class='preformatted'>Число 1 меньше 50 и ему соответствует фрагмент one
 Число 2 меньше 50 и ему соответствует фрагмент two
 Число 3 меньше 50 и ему соответствует фрагмент three
 </td></tr>
 <tr>
-<td>6</td><td>100,200,300</td><td>one hundred,two hundreds</td><td class='preformatted'>
-</td></tr>
+<td>6</td><td>100,200,300</td><td>one hundred,two hundreds</td><td class='preformatted'></td></tr>
 </table>
 </div>
 <div id='task1904' class='task_block'>
@@ -497,14 +496,12 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>chars</th><th>amounts</th></tr>
 <tr>
-<td>1</td><td>q a z</td><td>3 2 5</td><td class='preformatted'>
-qqq
+<td>1</td><td>q a z</td><td>3 2 5</td><td class='preformatted'>qqq
 aa
 zzzzz
 </td></tr>
 <tr>
-<td>2</td><td>q w e r t y</td><td>3 3 1 7 2 6</td><td class='preformatted'>
-qqq
+<td>2</td><td>q w e r t y</td><td>3 3 1 7 2 6</td><td class='preformatted'>qqq
 www
 e
 rrrrrrr
@@ -512,27 +509,22 @@ tt
 yyyyyy
 </td></tr>
 <tr>
-<td>3</td><td>a s d f</td><td>9 0 7 2</td><td class='preformatted'>
-aaaaaaaaa
+<td>3</td><td>a s d f</td><td>9 0 7 2</td><td class='preformatted'>aaaaaaaaa
 
 ddddddd
 ff
 </td></tr>
 <tr>
-<td>4</td><td>a s d f</td><td>3 3 3</td><td class='preformatted'>
-Длины массивов не совпадают
+<td>4</td><td>a s d f</td><td>3 3 3</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>5</td><td>z x c</td><td>1 2 3 4</td><td class='preformatted'>
-Длины массивов не совпадают
+<td>5</td><td>z x c</td><td>1 2 3 4</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>6</td><td></td><td>1 1 1</td><td class='preformatted'>
-Отсутствуют данные о символах
+<td>6</td><td></td><td>1 1 1</td><td class='preformatted'>Отсутствуют данные о символах
 </td></tr>
 <tr>
-<td>7</td><td>a a a</td><td></td><td class='preformatted'>
-Отсутствуют данные о количествах
+<td>7</td><td>a a a</td><td></td><td class='preformatted'>Отсутствуют данные о количествах
 </td></tr>
 </table>
 </div>
@@ -817,4 +809,4 @@ ot</td>
 			<td class="preformatted">Некорректная длина штрих-кода</td>
 		</tr>
 	</table>
-</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

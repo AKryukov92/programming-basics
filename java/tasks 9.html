@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -173,46 +193,38 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>data</th><th>A</th></tr>
 <tr>
-<td>1</td><td>qw-er-ty-ui</td><td>0</td><td class='preformatted'>
-В массиве длиной 4
+<td>1</td><td>qw-er-ty-ui</td><td>0</td><td class='preformatted'>В массиве длиной 4
 на индексе 0
 находится элемент со значением 'qw'
 </td></tr>
 <tr>
-<td>2</td><td>qw-er-ty-ui</td><td>3</td><td class='preformatted'>
-В массиве длиной 4
+<td>2</td><td>qw-er-ty-ui</td><td>3</td><td class='preformatted'>В массиве длиной 4
 на индексе 3
 находится элемент со значением 'ui'
 </td></tr>
 <tr>
-<td>3</td><td>q-w-e-r-t-y-u-i-o-p</td><td>9</td><td class='preformatted'>
-В массиве длиной 10
+<td>3</td><td>q-w-e-r-t-y-u-i-o-p</td><td>9</td><td class='preformatted'>В массиве длиной 10
 на индексе 9
 находится элемент со значением 'p'
 </td></tr>
 <tr>
-<td>4</td><td>qwer-tyui</td><td>3</td><td class='preformatted'>
-Число A должно быть в интервале [0, размер массива)
+<td>4</td><td>qwer-tyui</td><td>3</td><td class='preformatted'>Число A должно быть в интервале [0, размер массива)
 </td></tr>
 <tr>
-<td>5</td><td>qw-er-ty-ui</td><td>-1</td><td class='preformatted'>
-Число A должно быть в интервале [0, размер массива)
+<td>5</td><td>qw-er-ty-ui</td><td>-1</td><td class='preformatted'>Число A должно быть в интервале [0, размер массива)
 </td></tr>
 <tr>
-<td>6</td><td>a--a</td><td>1</td><td class='preformatted'>
-В массиве длиной 3
+<td>6</td><td>a--a</td><td>1</td><td class='preformatted'>В массиве длиной 3
 на индексе 1
 находится элемент со значением ''
 </td></tr>
 <tr>
-<td>7</td><td>b-b-    -b</td><td>2</td><td class='preformatted'>
-В массиве длиной 4
+<td>7</td><td>b-b-    -b</td><td>2</td><td class='preformatted'>В массиве длиной 4
 на индексе 2
 находится элемент со значением '    '
 </td></tr>
 <tr>
-<td>8</td><td></td><td>8</td><td class='preformatted'>
-Исходная строка пуста
+<td>8</td><td></td><td>8</td><td class='preformatted'>Исходная строка пуста
 </td></tr>
 </table>
 </div>
@@ -287,83 +299,70 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>data</th><th>T</th></tr>
 <tr>
-<td>1</td><td>as df gh jk</td><td>1</td><td class='preformatted'>
-В массиве длиной 4
+<td>1</td><td>as df gh jk</td><td>1</td><td class='preformatted'>В массиве длиной 4
 Элемент на индексе 1 содержит значение df
 Значение предыдущего элемента as
 Значение следующего элемента gh
 </td></tr>
 <tr>
-<td>2</td><td>a s d f g h j k</td><td>3</td><td class='preformatted'>
-В массиве длиной 8
+<td>2</td><td>a s d f g h j k</td><td>3</td><td class='preformatted'>В массиве длиной 8
 Элемент на индексе 3 содержит значение f
 Значение предыдущего элемента d
 Значение следующего элемента g
 </td></tr>
 <tr>
-<td>3</td><td>asdf ghjk</td><td>0</td><td class='preformatted'>
-В массиве длиной 2
+<td>3</td><td>asdf ghjk</td><td>0</td><td class='preformatted'>В массиве длиной 2
 Элемент на индексе 0 содержит значение asdf
 Предыдущий элемент не существует
 Значение следующего элемента ghjk
 </td></tr>
 <tr>
-<td>4</td><td>as df gh jk</td><td>0</td><td class='preformatted'>
-В массиве длиной 4
+<td>4</td><td>as df gh jk</td><td>0</td><td class='preformatted'>В массиве длиной 4
 Элемент на индексе 0 содержит значение as
 Предыдущий элемент не существует
 Значение следующего элемента df
 </td></tr>
 <tr>
-<td>5</td><td>a s d f g h j k</td><td>0</td><td class='preformatted'>
-В массиве длиной 8
+<td>5</td><td>a s d f g h j k</td><td>0</td><td class='preformatted'>В массиве длиной 8
 Элемент на индексе 0 содержит значение a
 Предыдущий элемент не существует
 Значение следующего элемента s
 </td></tr>
 <tr>
-<td>6</td><td>a s d f g h j k</td><td>7</td><td class='preformatted'>
-В массиве длиной 8
+<td>6</td><td>a s d f g h j k</td><td>7</td><td class='preformatted'>В массиве длиной 8
 Элемент на индексе 7 содержит значение k
 Значение предыдущего элемента j
 Следующий элемент не существует
 </td></tr>
 <tr>
-<td>7</td><td>as df gh jk</td><td>3</td><td class='preformatted'>
-В массиве длиной 4
+<td>7</td><td>as df gh jk</td><td>3</td><td class='preformatted'>В массиве длиной 4
 Элемент на индексе 3 содержит значение jk
 Значение предыдущего элемента gh
 Следующий элемент не существует
 </td></tr>
 <tr>
-<td>8</td><td>asdf ghjk</td><td>1</td><td class='preformatted'>
-В массиве длиной 2
+<td>8</td><td>asdf ghjk</td><td>1</td><td class='preformatted'>В массиве длиной 2
 Элемент на индексе 1 содержит значение ghjk
 Значение предыдущего элемента asdf
 Следующий элемент не существует
 </td></tr>
 <tr>
-<td>9</td><td>single</td><td>0</td><td class='preformatted'>
-В массиве длиной 1
+<td>9</td><td>single</td><td>0</td><td class='preformatted'>В массиве длиной 1
 Элемент на индексе 0 содержит значение single
 Предыдущий элемент не существует
 Следующий элемент не существует
 </td></tr>
 <tr>
-<td>10</td><td>single</td><td>1</td><td class='preformatted'>
-Число T должно быть в интервале [0, размер массива)
+<td>10</td><td>single</td><td>1</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
 </td></tr>
 <tr>
-<td>11</td><td>as df gh jk</td><td>4</td><td class='preformatted'>
-Число T должно быть в интервале [0, размер массива)
+<td>11</td><td>as df gh jk</td><td>4</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
 </td></tr>
 <tr>
-<td>12</td><td>as df gh jk</td><td>-1</td><td class='preformatted'>
-Число T должно быть в интервале [0, размер массива)
+<td>12</td><td>as df gh jk</td><td>-1</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
 </td></tr>
 <tr>
-<td>13</td><td></td><td>0</td><td class='preformatted'>
-Исходная строка пуста
+<td>13</td><td></td><td>0</td><td class='preformatted'>Исходная строка пуста
 </td></tr>
 </table>
 </div>
@@ -470,52 +469,40 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>firstDate</th><th>secondDate</th></tr>
 <tr>
-<td>1</td><td>11_03_1685</td><td>05_03_1685</td><td class='preformatted'>
-Первая дата 11_03_1685 больше второй 05_03_1685
+<td>1</td><td>11_03_1685</td><td>05_03_1685</td><td class='preformatted'>Первая дата 11_03_1685 больше второй 05_03_1685
 </td></tr>
 <tr>
-<td>2</td><td>07_02_1986</td><td>02_07_1986</td><td class='preformatted'>
-Вторая дата 02_07_1986 больше первой 07_02_1986
+<td>2</td><td>07_02_1986</td><td>02_07_1986</td><td class='preformatted'>Вторая дата 02_07_1986 больше первой 07_02_1986
 </td></tr>
 <tr>
-<td>3</td><td>11_01_1804</td><td>11_02_1804</td><td class='preformatted'>
-Вторая дата 11_02_1804 больше первой 11_01_1804
+<td>3</td><td>11_01_1804</td><td>11_02_1804</td><td class='preformatted'>Вторая дата 11_02_1804 больше первой 11_01_1804
 </td></tr>
 <tr>
-<td>4</td><td>07_07_2003</td><td>07_07_1993</td><td class='preformatted'>
-Первая дата 07_07_2003 больше второй 07_07_1993
+<td>4</td><td>07_07_2003</td><td>07_07_1993</td><td class='preformatted'>Первая дата 07_07_2003 больше второй 07_07_1993
 </td></tr>
 <tr>
-<td>5</td><td>29_01_1785</td><td>29_03_1777</td><td class='preformatted'>
-Первая дата 29_01_1785 больше второй 29_03_1777
+<td>5</td><td>29_01_1785</td><td>29_03_1777</td><td class='preformatted'>Первая дата 29_01_1785 больше второй 29_03_1777
 </td></tr>
 <tr>
-<td>6</td><td>01_01_1970</td><td>01_01_1970</td><td class='preformatted'>
-Даты равны
+<td>6</td><td>01_01_1970</td><td>01_01_1970</td><td class='preformatted'>Даты равны
 </td></tr>
 <tr>
-<td>7</td><td>04_28_1502</td><td>01_02_2023</td><td class='preformatted'>
-Месяц должен быть меньше 12
+<td>7</td><td>04_28_1502</td><td>01_02_2023</td><td class='preformatted'>Месяц должен быть меньше 12
 </td></tr>
 <tr>
-<td>8</td><td>01_02_2023</td><td>07_15_1934</td><td class='preformatted'>
-Месяц должен быть меньше 12
+<td>8</td><td>01_02_2023</td><td>07_15_1934</td><td class='preformatted'>Месяц должен быть меньше 12
 </td></tr>
 <tr>
-<td>9</td><td>01_02</td><td>01_02_2023</td><td class='preformatted'>
-Дата должна состоять из трех фрагментов
+<td>9</td><td>01_02</td><td>01_02_2023</td><td class='preformatted'>Дата должна состоять из трех фрагментов
 </td></tr>
 <tr>
-<td>10</td><td>01_02_2023</td><td>01_02</td><td class='preformatted'>
-Дата должна состоять из трех фрагментов
+<td>10</td><td>01_02_2023</td><td>01_02</td><td class='preformatted'>Дата должна состоять из трех фрагментов
 </td></tr>
 <tr>
-<td>11</td><td>4</td><td>01_02_2023</td><td class='preformatted'>
-Дата должна состоять из трех фрагментов
+<td>11</td><td>4</td><td>01_02_2023</td><td class='preformatted'>Дата должна состоять из трех фрагментов
 </td></tr>
 <tr>
-<td>12</td><td>01_02_2023</td><td>14</td><td class='preformatted'>
-Дата должна состоять из трех фрагментов
+<td>12</td><td>01_02_2023</td><td>14</td><td class='preformatted'>Дата должна состоять из трех фрагментов
 </td></tr>
 </table>
 </div>
@@ -787,4 +774,4 @@ c v END
 </td></tr>
 </table>
 </div>
-Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

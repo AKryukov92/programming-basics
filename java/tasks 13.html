@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -157,7 +177,7 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Поиск в массиве</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task5694' class='example'>1*</a><li><a href='#task6806'>2</a><li><a href='#task1708'>3</a><li><a href='#task2003' class='example'>4*</a><li><a href='#task8158'>5</a><li><a href='#task1292'>6</a><li><a href='#task4283'>7</a><li><a href='#task7703'>8</a><li><a href='#task2234'>9</a></ul><ul><li><a href='#task7369' class='example'>10*</a><li><a href='#task6988'>11</a><li><a href='#task2497'>12</a><li><a href='#task5894'>13</a><li><a href='#task4515'>14</a><li><a href='#task9827'>15</a><li><a href='#task7793'>16</a><li><a href='#task1036'>17</a></ul></div><div id='task5694' class='task_block'>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Поиск в массиве</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task5694' class='example'>1*</a><li><a href='#task6806'>2</a><li><a href='#task1708'>3</a><li><a href='#task2003' class='example'>4*</a><li><a href='#task8158'>5</a><li><a href='#task1292'>6</a><li><a href='#task4283'>7</a><li><a href='#task7703'>8</a><li><a href='#task2234'>9</a><li><a href='#task4851'>10</a></ul><ul><li><a href='#task7369' class='example'>11*</a><li><a href='#task6988'>12</a><li><a href='#task2497'>13</a><li><a href='#task5894'>14</a><li><a href='#task4515'>15</a><li><a href='#task9827'>16</a><li><a href='#task7793'>17</a><li><a href='#task1036'>18</a></ul></div><div id='task5694' class='task_block'>
 <div class='task_id'>5694</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -341,33 +361,27 @@ h
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>first</th><th>second</th></tr>
 <tr>
-<td>1</td><td>a</td><td>x</td><td class='preformatted'>
-Символ 'a' найден
+<td>1</td><td>a</td><td>x</td><td class='preformatted'>Символ 'a' найден
 Символ 'x' отсутствует
 </td></tr>
 <tr>
-<td>2</td><td>y</td><td>d</td><td class='preformatted'>
-Символ 'y' отсутствует
+<td>2</td><td>y</td><td>d</td><td class='preformatted'>Символ 'y' отсутствует
 Символ 'd' найден
 </td></tr>
 <tr>
-<td>3</td><td>b</td><td>f</td><td class='preformatted'>
-Символ 'b' найден
+<td>3</td><td>b</td><td>f</td><td class='preformatted'>Символ 'b' найден
 Символ 'f' найден
 </td></tr>
 <tr>
-<td>4</td><td>w</td><td>u</td><td class='preformatted'>
-Символ 'w' отсутствует
+<td>4</td><td>w</td><td>u</td><td class='preformatted'>Символ 'w' отсутствует
 Символ 'u' отсутствует
 </td></tr>
 <tr>
-<td>5</td><td>e</td><td>e</td><td class='preformatted'>
-Символ 'e' найден
+<td>5</td><td>e</td><td>e</td><td class='preformatted'>Символ 'e' найден
 Символ 'e' найден
 </td></tr>
 <tr>
-<td>6</td><td>i</td><td>i</td><td class='preformatted'>
-Символ 'i' отсутствует
+<td>6</td><td>i</td><td>i</td><td class='preformatted'>Символ 'i' отсутствует
 Символ 'i' отсутствует
 </td></tr>
 </table>
@@ -397,24 +411,19 @@ h
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>K</th><th>data</th></tr>
 <tr>
-<td>1</td><td>e</td><td>q w e r q w</td><td class='preformatted'>
-Фрагмент e присутствует в массиве 1 раз
+<td>1</td><td>e</td><td>q w e r q w</td><td class='preformatted'>Фрагмент e присутствует в массиве 1 раз
 </td></tr>
 <tr>
-<td>2</td><td>t</td><td>q w e r q w e r q w e</td><td class='preformatted'>
-Фрагмент t присутствует в массиве 0 раз
+<td>2</td><td>t</td><td>q w e r q w e r q w e</td><td class='preformatted'>Фрагмент t присутствует в массиве 0 раз
 </td></tr>
 <tr>
-<td>3</td><td>w</td><td>e w w w w w</td><td class='preformatted'>
-Фрагмент w присутствует в массиве 5 раз
+<td>3</td><td>w</td><td>e w w w w w</td><td class='preformatted'>Фрагмент w присутствует в массиве 5 раз
 </td></tr>
 <tr>
-<td>4</td><td>q</td><td>r r r r r r</td><td class='preformatted'>
-Фрагмент q присутствует в массиве 0 раз
+<td>4</td><td>q</td><td>r r r r r r</td><td class='preformatted'>Фрагмент q присутствует в массиве 0 раз
 </td></tr>
 <tr>
-<td>5</td><td>qw</td><td>qw er ty qw</td><td class='preformatted'>
-Фрагмент qw присутствует в массиве 2 раз
+<td>5</td><td>qw</td><td>qw er ty qw</td><td class='preformatted'>Фрагмент qw присутствует в массиве 2 раз
 </td></tr>
 </table>
 </div>
@@ -505,6 +514,33 @@ h
 <tr><td>9</td><td>-.- --- -. . -.-. ... .-- .-.- --.. ..</td><td class='preformatted'>КОНЕЦСВЯЗИ</td></tr>
 </table>
 </div>
+<div id='task4851' class='task_block'>
+<div class='task_id'>4851</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив символов, разделенных запятыми. Первой строчкой результата вывести содержимое массива. Второй строчкой результата вывести индексы, на которых было найден символ "q".
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
+<tr><td>1</td><td>a,s,d,hf,g,h</td><td class='preformatted'>Количество символов 0
+Элементы равные q не найдены
+</td></tr>
+<tr><td>2</td><td>x,q,cc,v,b,tg,hi</td><td class='preformatted'>Количество символов 1
+Их индексы
+1 </td></tr>
+<tr><td>3</td><td>w,e,q,e,q,sd,q</td><td class='preformatted'>Количество символов 3
+Их индексы
+2 4 6 </td></tr>
+<tr><td>4</td><td>q,q,q,q</td><td class='preformatted'>Количество символов 4
+Их индексы
+0 1 2 3 </td></tr>
+<tr><td>5</td><td></td><td class='preformatted'>Нет данных
+</td></tr>
+<tr><td>6</td><td>okt,p,aaaa,q</td><td class='preformatted'>Количество символов 1
+Их индексы
+3 </td></tr>
+</table>
+</div>
 <div id='task7369' class='task_block'>
 <div class='task_id'>7369</div>
 <h3>Задача</h3>
@@ -515,8 +551,7 @@ h
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>top</th><th>left</th></tr>
 <tr>
-<td>1</td><td>q,a,z,w,s,x</td><td>q,w,e</td><td class='preformatted'>
- qwe
+<td>1</td><td>q,a,z,w,s,x</td><td>q,w,e</td><td class='preformatted'> qwe
 q+..|
 a...|
 z...|
@@ -525,33 +560,28 @@ s...|
 x...|
  ---</td></tr>
 <tr>
-<td>2</td><td>e,d,c</td><td>a,s,d,f,g,h,j</td><td class='preformatted'>
- asdfghj
+<td>2</td><td>e,d,c</td><td>a,s,d,f,g,h,j</td><td class='preformatted'> asdfghj
 e.......|
 d..+....|
 c.......|
  -------</td></tr>
 <tr>
-<td>3</td><td>q,a,z</td><td>q,a,z,q,s,q,z</td><td class='preformatted'>
- qazqsqz
+<td>3</td><td>q,a,z</td><td>q,a,z,q,s,q,z</td><td class='preformatted'> qazqsqz
 q+..+.+.|
 a.+.....|
 z..+...+|
  -------</td></tr>
 <tr>
-<td>4</td><td>a,a,a</td><td>a,a,a,a,a</td><td class='preformatted'>
- aaaaa
+<td>4</td><td>a,a,a</td><td>a,a,a,a,a</td><td class='preformatted'> aaaaa
 a+++++|
 a+++++|
 a+++++|
  -----</td></tr>
 <tr>
-<td>5</td><td>r,f,v</td><td></td><td class='preformatted'>
-Данные сверху отсутствуют
+<td>5</td><td>r,f,v</td><td></td><td class='preformatted'>Данные сверху отсутствуют
 </td></tr>
 <tr>
-<td>6</td><td></td><td>z,x,c,v</td><td class='preformatted'>
-Данные слева отсутствуют
+<td>6</td><td></td><td>z,x,c,v</td><td class='preformatted'>Данные слева отсутствуют
 </td></tr>
 </table>
 </div>
@@ -565,36 +595,28 @@ a+++++|
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>left</th><th>right</th></tr>
 <tr>
-<td>1</td><td>a s d f a</td><td>a s d f a</td><td class='preformatted'>
-Массивы одинаковы
+<td>1</td><td>a s d f a</td><td>a s d f a</td><td class='preformatted'>Массивы одинаковы
 </td></tr>
 <tr>
-<td>2</td><td>a s d f a</td><td>a s d f g</td><td class='preformatted'>
-Массивы начинают различаться на индексе 4
+<td>2</td><td>a s d f a</td><td>a s d f g</td><td class='preformatted'>Массивы начинают различаться на индексе 4
 </td></tr>
 <tr>
-<td>3</td><td>qwerty asdfgh zxcvb</td><td>qwerty asdfgh asdfgh</td><td class='preformatted'>
-Массивы начинают различаться на индексе 2
+<td>3</td><td>qwerty asdfgh zxcvb</td><td>qwerty asdfgh asdfgh</td><td class='preformatted'>Массивы начинают различаться на индексе 2
 </td></tr>
 <tr>
-<td>4</td><td>qaz wsx edc</td><td>wsx edc qaz</td><td class='preformatted'>
-Массивы начинают различаться на индексе 0
+<td>4</td><td>qaz wsx edc</td><td>wsx edc qaz</td><td class='preformatted'>Массивы начинают различаться на индексе 0
 </td></tr>
 <tr>
-<td>5</td><td>qaz wsx edc</td><td>qaz wsx edc rfv</td><td class='preformatted'>
-Массивы начинают различаться на индексе 3
+<td>5</td><td>qaz wsx edc</td><td>qaz wsx edc rfv</td><td class='preformatted'>Массивы начинают различаться на индексе 3
 </td></tr>
 <tr>
-<td>6</td><td>qaz wsx edc rfv tgb</td><td>qaz wsx edc rfv</td><td class='preformatted'>
-Массивы начинают различаться на индексе 4
+<td>6</td><td>qaz wsx edc rfv tgb</td><td>qaz wsx edc rfv</td><td class='preformatted'>Массивы начинают различаться на индексе 4
 </td></tr>
 <tr>
-<td>7</td><td>qaz wsx edc</td><td>qaz tgb ujm yhn</td><td class='preformatted'>
-Массивы начинают различаться на индексе 1
+<td>7</td><td>qaz wsx edc</td><td>qaz tgb ujm yhn</td><td class='preformatted'>Массивы начинают различаться на индексе 1
 </td></tr>
 <tr>
-<td>8</td><td>qaz wsx vbn rfv tgb</td><td>qaz wsx edc</td><td class='preformatted'>
-Массивы начинают различаться на индексе 2
+<td>8</td><td>qaz wsx vbn rfv tgb</td><td>qaz wsx edc</td><td class='preformatted'>Массивы начинают различаться на индексе 2
 </td></tr>
 </table>
 </div>
@@ -608,13 +630,11 @@ a+++++|
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>левый массив(left)</th><th>правый массив (right)</th></tr>
 <tr>
-<td>1</td><td>3</td><td>9,8,7,6</td><td class='preformatted'>
-Элемент 3 прошел проверку. Он меньше всех элементов правого массива
+<td>1</td><td>3</td><td>9,8,7,6</td><td class='preformatted'>Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 Правильно
 </td></tr>
 <tr>
-<td>2</td><td>5,4,3,2,1</td><td>9</td><td class='preformatted'>
-Элемент 5 прошел проверку. Он меньше всех элементов правого массива
+<td>2</td><td>5,4,3,2,1</td><td>9</td><td class='preformatted'>Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 Элемент 2 прошел проверку. Он меньше всех элементов правого массива
@@ -622,31 +642,26 @@ a+++++|
 Правильно
 </td></tr>
 <tr>
-<td>3</td><td>7</td><td>9,8,7</td><td class='preformatted'>
-Элемент 7 на индексе 0 левого массива равен элементу правого массива на индексе 2
+<td>3</td><td>7</td><td>9,8,7</td><td class='preformatted'>Элемент 7 на индексе 0 левого массива равен элементу правого массива на индексе 2
 </td></tr>
 <tr>
-<td>4</td><td>5,4,3</td><td>9,8,7,6</td><td class='preformatted'>
-Элемент 5 прошел проверку. Он меньше всех элементов правого массива
+<td>4</td><td>5,4,3</td><td>9,8,7,6</td><td class='preformatted'>Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 Правильно
 </td></tr>
 <tr>
-<td>5</td><td>5,4,10</td><td>9,8,7</td><td class='preformatted'>
-Элемент 5 прошел проверку. Он меньше всех элементов правого массива
+<td>5</td><td>5,4,10</td><td>9,8,7</td><td class='preformatted'>Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 10 на индексе 2 левого массива больше элемента 9 на индексе 0 правого массива
 </td></tr>
 <tr>
-<td>6</td><td>15,4,3</td><td>9,8,7,6,5</td><td class='preformatted'>
-Элемент 15 на индексе 0 левого массива больше элемента 9 на индексе 0 правого массива
+<td>6</td><td>15,4,3</td><td>9,8,7,6,5</td><td class='preformatted'>Элемент 15 на индексе 0 левого массива больше элемента 9 на индексе 0 правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 </td></tr>
 <tr>
-<td>7</td><td>5,4,3,2,1</td><td>9,8,7,6</td><td class='preformatted'>
-Элемент 5 прошел проверку. Он меньше всех элементов правого массива
+<td>7</td><td>5,4,3,2,1</td><td>9,8,7,6</td><td class='preformatted'>Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 Элемент 2 прошел проверку. Он меньше всех элементов правого массива
@@ -654,26 +669,22 @@ a+++++|
 Правильно
 </td></tr>
 <tr>
-<td>8</td><td>6,5,4,3</td><td>9,8,7,6</td><td class='preformatted'>
-Элемент 6 на индексе 0 левого массива равен элементу правого массива на индексе 3
+<td>8</td><td>6,5,4,3</td><td>9,8,7,6</td><td class='preformatted'>Элемент 6 на индексе 0 левого массива равен элементу правого массива на индексе 3
 Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 4 прошел проверку. Он меньше всех элементов правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 </td></tr>
 <tr>
-<td>9</td><td>6,5,14,3</td><td>9,8,7,6</td><td class='preformatted'>
-Элемент 6 на индексе 0 левого массива равен элементу правого массива на индексе 3
+<td>9</td><td>6,5,14,3</td><td>9,8,7,6</td><td class='preformatted'>Элемент 6 на индексе 0 левого массива равен элементу правого массива на индексе 3
 Элемент 5 прошел проверку. Он меньше всех элементов правого массива
 Элемент 14 на индексе 2 левого массива больше элемента 9 на индексе 0 правого массива
 Элемент 3 прошел проверку. Он меньше всех элементов правого массива
 </td></tr>
 <tr>
-<td>10</td><td></td><td>3,2,1</td><td class='preformatted'>
-Левый массив пуст
+<td>10</td><td></td><td>3,2,1</td><td class='preformatted'>Левый массив пуст
 </td></tr>
 <tr>
-<td>11</td><td>9,8,7</td><td></td><td class='preformatted'>
-Правый массив пуст
+<td>11</td><td>9,8,7</td><td></td><td class='preformatted'>Правый массив пуст
 </td></tr>
 </table>
 </div>
@@ -690,8 +701,7 @@ a+++++|
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>red</th><th>green</th></tr>
 <tr>
-<td>1</td><td>qw fg hj ty kl</td><td>qw er ty qw op</td><td class='preformatted'>
-Проверяю элемент красного массива на индексе 0 со значением qw
+<td>1</td><td>qw fg hj ty kl</td><td>qw er ty qw op</td><td class='preformatted'>Проверяю элемент красного массива на индексе 0 со значением qw
 Этот элемент встретился 2 раз в зеленом массиве
 Предварительное количество повторений 2
 Проверяю элемент красного массива на индексе 1 со значением fg
@@ -709,8 +719,7 @@ a+++++|
 Итоговое количество повторений 3
 </td></tr>
 <tr>
-<td>2</td><td>q a z</td><td>q w e</td><td class='preformatted'>
-Проверяю элемент красного массива на индексе 0 со значением q
+<td>2</td><td>q a z</td><td>q w e</td><td class='preformatted'>Проверяю элемент красного массива на индексе 0 со значением q
 Этот элемент встретился 1 раз в зеленом массиве
 Предварительное количество повторений 1
 Проверяю элемент красного массива на индексе 1 со значением a
@@ -722,8 +731,7 @@ a+++++|
 Итоговое количество повторений 1
 </td></tr>
 <tr>
-<td>3</td><td>oiuy hjkl vbmn</td><td>asdf ghjk</td><td class='preformatted'>
-Проверяю элемент красного массива на индексе 0 со значением oiuy
+<td>3</td><td>oiuy hjkl vbmn</td><td>asdf ghjk</td><td class='preformatted'>Проверяю элемент красного массива на индексе 0 со значением oiuy
 Этот элемент встретился 0 раз в зеленом массиве
 Предварительное количество повторений 0
 Проверяю элемент красного массива на индексе 1 со значением hjkl
@@ -735,15 +743,13 @@ a+++++|
 Итоговое количество повторений 0
 </td></tr>
 <tr>
-<td>4</td><td>y</td><td>y y y y y y y</td><td class='preformatted'>
-Проверяю элемент красного массива на индексе 0 со значением y
+<td>4</td><td>y</td><td>y y y y y y y</td><td class='preformatted'>Проверяю элемент красного массива на индексе 0 со значением y
 Этот элемент встретился 7 раз в зеленом массиве
 Предварительное количество повторений 7
 Итоговое количество повторений 7
 </td></tr>
 <tr>
-<td>5</td><td>l l l l l l l l</td><td>l</td><td class='preformatted'>
-Проверяю элемент красного массива на индексе 0 со значением l
+<td>5</td><td>l l l l l l l l</td><td>l</td><td class='preformatted'>Проверяю элемент красного массива на индексе 0 со значением l
 Этот элемент встретился 1 раз в зеленом массиве
 Предварительное количество повторений 1
 Проверяю элемент красного массива на индексе 1 со значением l
@@ -770,12 +776,10 @@ a+++++|
 Итоговое количество повторений 8
 </td></tr>
 <tr>
-<td>6</td><td>a s d f</td><td></td><td class='preformatted'>
-Данные в зеленом массиве отсутствуют
+<td>6</td><td>a s d f</td><td></td><td class='preformatted'>Данные в зеленом массиве отсутствуют
 </td></tr>
 <tr>
-<td>7</td><td></td><td>zxc vbn</td><td class='preformatted'>
-Данные в красном массиве отсутствуют
+<td>7</td><td></td><td>zxc vbn</td><td class='preformatted'>Данные в красном массиве отсутствуют
 </td></tr>
 </table>
 </div>
@@ -811,23 +815,18 @@ a+++++|
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>left</th><th>right</th></tr>
 <tr>
-<td>1</td><td>one two three four</td><td>one four five six</td><td class='preformatted'>
-two
+<td>1</td><td>one two three four</td><td>one four five six</td><td class='preformatted'>two
 three
 </td></tr>
 <tr>
-<td>2</td><td>one two three four</td><td>one two three four</td><td class='preformatted'>
-</td></tr>
+<td>2</td><td>one two three four</td><td>one two three four</td><td class='preformatted'></td></tr>
 <tr>
 <td>3</td><td></td><td>one two three four</td><td class='preformatted'>
-
 </td></tr>
 <tr>
-<td>4</td><td></td><td></td><td class='preformatted'>
-</td></tr>
+<td>4</td><td></td><td></td><td class='preformatted'></td></tr>
 <tr>
-<td>5</td><td>one two three four</td><td>two two two two two</td><td class='preformatted'>
-one
+<td>5</td><td>one two three four</td><td>two two two two two</td><td class='preformatted'>one
 three
 four
 </td></tr>
@@ -843,8 +842,7 @@ four
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>Красный массив (red)</th><th>Зеленый массив (green)</th></tr>
 <tr>
-<td>1</td><td>qw er ty ui</td><td>as er df qw</td><td class='preformatted'>
-Только в красном
+<td>1</td><td>qw er ty ui</td><td>as er df qw</td><td class='preformatted'>Только в красном
 ty
 ui
 Есть в обоих
@@ -856,8 +854,7 @@ df
 
 </td></tr>
 <tr>
-<td>2</td><td>qw er ty ui</td><td>as df gh jk</td><td class='preformatted'>
-Только в красном
+<td>2</td><td>qw er ty ui</td><td>as df gh jk</td><td class='preformatted'>Только в красном
 qw
 er
 ty
@@ -871,8 +868,7 @@ jk
 
 </td></tr>
 <tr>
-<td>3</td><td>zx cv bn</td><td>zx cv bn</td><td class='preformatted'>
-Только в красном
+<td>3</td><td>zx cv bn</td><td>zx cv bn</td><td class='preformatted'>Только в красном
 Есть в обоих
 zx
 cv
@@ -881,8 +877,7 @@ bn
 
 </td></tr>
 <tr>
-<td>4</td><td>q w e r t y</td><td>y e q a s d</td><td class='preformatted'>
-Только в красном
+<td>4</td><td>q w e r t y</td><td>y e q a s d</td><td class='preformatted'>Только в красном
 w
 r
 t
@@ -897,8 +892,7 @@ d
 
 </td></tr>
 <tr>
-<td>5</td><td>a a a a a a</td><td>a</td><td class='preformatted'>
-Только в красном
+<td>5</td><td>a a a a a a</td><td>a</td><td class='preformatted'>Только в красном
 Есть в обоих
 a
 a
@@ -910,8 +904,7 @@ a
 
 </td></tr>
 <tr>
-<td>6</td><td>b</td><td>b b b b b b</td><td class='preformatted'>
-Только в красном
+<td>6</td><td>b</td><td>b b b b b b</td><td class='preformatted'>Только в красном
 Есть в обоих
 b
 Только в зеленом
@@ -1078,4 +1071,4 @@ XXoXo o
 </td></tr>
 </table>
 </div>
-Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

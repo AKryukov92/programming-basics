@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -167,50 +187,42 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>R</th><th>T</th></tr>
 <tr>
-<td>1</td><td>5</td><td>11</td><td class='preformatted'>
-Первая строчка
+<td>1</td><td>5</td><td>11</td><td class='preformatted'>Первая строчка
 #####
 Вторая строчка
 ###########</td></tr>
 <tr>
-<td>2</td><td>11</td><td>5</td><td class='preformatted'>
-Первая строчка
+<td>2</td><td>11</td><td>5</td><td class='preformatted'>Первая строчка
 ###########
 Вторая строчка
 #####</td></tr>
 <tr>
-<td>3</td><td>20</td><td>3</td><td class='preformatted'>
-Первая строчка
+<td>3</td><td>20</td><td>3</td><td class='preformatted'>Первая строчка
 ####################
 Вторая строчка
 ###</td></tr>
 <tr>
-<td>4</td><td>3</td><td>20</td><td class='preformatted'>
-Первая строчка
+<td>4</td><td>3</td><td>20</td><td class='preformatted'>Первая строчка
 ###
 Вторая строчка
 ####################</td></tr>
 <tr>
-<td>5</td><td>0</td><td>7</td><td class='preformatted'>
-Первая строчка
+<td>5</td><td>0</td><td>7</td><td class='preformatted'>Первая строчка
 
 Вторая строчка
 #######</td></tr>
 <tr>
-<td>6</td><td>4</td><td>0</td><td class='preformatted'>
-Первая строчка
+<td>6</td><td>4</td><td>0</td><td class='preformatted'>Первая строчка
 ####
 Вторая строчка
 </td></tr>
 <tr>
-<td>7</td><td>-90</td><td>6</td><td class='preformatted'>
-Первая строчка
+<td>7</td><td>-90</td><td>6</td><td class='preformatted'>Первая строчка
 
 Вторая строчка
 ######</td></tr>
 <tr>
-<td>8</td><td>6</td><td>-7</td><td class='preformatted'>
-Первая строчка
+<td>8</td><td>6</td><td>-7</td><td class='preformatted'>Первая строчка
 ######
 Вторая строчка
 </td></tr>
@@ -317,48 +329,40 @@ hhhhhhhhhhhhhhhhhhhh
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>width</th><th>diff</th></tr>
 <tr>
-<td>1</td><td>4</td><td>3</td><td class='preformatted'>
-Первая строка 4 символов
+<td>1</td><td>4</td><td>3</td><td class='preformatted'>Первая строка 4 символов
 ****
 Во второй строке нужно вывести 7 символов
 *******</td></tr>
 <tr>
-<td>2</td><td>10</td><td>5</td><td class='preformatted'>
-Первая строка 10 символов
+<td>2</td><td>10</td><td>5</td><td class='preformatted'>Первая строка 10 символов
 **********
 Во второй строке нужно вывести 15 символов
 ***************</td></tr>
 <tr>
-<td>3</td><td>7</td><td>0</td><td class='preformatted'>
-Первая строка 7 символов
+<td>3</td><td>7</td><td>0</td><td class='preformatted'>Первая строка 7 символов
 *******
 Во второй строке нужно вывести 7 символов
 *******</td></tr>
 <tr>
-<td>4</td><td>7</td><td>-3</td><td class='preformatted'>
-Первая строка 7 символов
+<td>4</td><td>7</td><td>-3</td><td class='preformatted'>Первая строка 7 символов
 *******
 Во второй строке нужно вывести 4 символов
 ****</td></tr>
 <tr>
-<td>5</td><td>2</td><td>-2</td><td class='preformatted'>
-Первая строка 2 символов
+<td>5</td><td>2</td><td>-2</td><td class='preformatted'>Первая строка 2 символов
 **
 Во второй строке нужно вывести 0 символов
 </td></tr>
 <tr>
-<td>6</td><td>0</td><td>5</td><td class='preformatted'>
-Первая строка 0 символов
+<td>6</td><td>0</td><td>5</td><td class='preformatted'>Первая строка 0 символов
 
 Во второй строке нужно вывести 5 символов
 *****</td></tr>
 <tr>
-<td>7</td><td>7</td><td>-11</td><td class='preformatted'>
-Количество символов во второй строке должно быть неотрицательным
+<td>7</td><td>7</td><td>-11</td><td class='preformatted'>Количество символов во второй строке должно быть неотрицательным
 </td></tr>
 <tr>
-<td>8</td><td>-2</td><td>4</td><td class='preformatted'>
-Количество символов в первой строке должно быть неотрицательным
+<td>8</td><td>-2</td><td>4</td><td class='preformatted'>Количество символов в первой строке должно быть неотрицательным
 </td></tr>
 </table>
 </div>
@@ -1144,4 +1148,4 @@ hhhhhhhhhhhhhhhhhhhh
 			<td>Значение H должно быть неотрицательно</td>
 		</tr>
 	</table>
-</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

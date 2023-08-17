@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -532,15 +552,13 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>Данные сверху(chars)</th><th>Данные слева(amounts)</th></tr>
 <tr>
-<td>1</td><td>a s d</td><td>3 2 1</td><td class='preformatted'>
-Наибольшая высота столбца: 3
+<td>1</td><td>a s d</td><td>3 2 1</td><td class='preformatted'>Наибольшая высота столбца: 3
 asd
 as.
 a..
 </td></tr>
 <tr>
-<td>2</td><td>z x c v b</td><td>1 3 5 0 4</td><td class='preformatted'>
-Наибольшая высота столбца: 5
+<td>2</td><td>z x c v b</td><td>1 3 5 0 4</td><td class='preformatted'>Наибольшая высота столбца: 5
 zxc.b
 .xc.b
 .xc.b
@@ -548,8 +566,7 @@ zxc.b
 ..c..
 </td></tr>
 <tr>
-<td>3</td><td>q w e r t y</td><td>6 2 8 3 1 5</td><td class='preformatted'>
-Наибольшая высота столбца: 8
+<td>3</td><td>q w e r t y</td><td>6 2 8 3 1 5</td><td class='preformatted'>Наибольшая высота столбца: 8
 qwerty
 qwer.y
 q.er.y
@@ -560,20 +577,16 @@ q.e...
 ..e...
 </td></tr>
 <tr>
-<td>4</td><td>a s d f</td><td>3 3 3</td><td class='preformatted'>
-Длины массивов не совпадают
+<td>4</td><td>a s d f</td><td>3 3 3</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>5</td><td>z x c</td><td>1 2 3 4</td><td class='preformatted'>
-Длины массивов не совпадают
+<td>5</td><td>z x c</td><td>1 2 3 4</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>6</td><td></td><td>1 2 3 4</td><td class='preformatted'>
-Отсутствуют данные о символах
+<td>6</td><td></td><td>1 2 3 4</td><td class='preformatted'>Отсутствуют данные о символах
 </td></tr>
 <tr>
-<td>7</td><td>f d s a</td><td></td><td class='preformatted'>
-Отсутствуют данные о количествах
+<td>7</td><td>f d s a</td><td></td><td class='preformatted'>Отсутствуют данные о количествах
 </td></tr>
 </table>
 </div>
@@ -849,4 +862,4 @@ q.e...
 </td></tr>
 </table>
 </div>
-Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

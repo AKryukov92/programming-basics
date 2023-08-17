@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -273,48 +293,40 @@ int index = haystack.indexOf(needle);
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>CA</th><th>CB</th></tr>
 <tr>
-<td>1</td><td>a</td><td>x</td><td class='preformatted'>
-Фрагмент 'a' начинается на индексе 0
+<td>1</td><td>a</td><td>x</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
 Фрагмент 'x' начинается на индексе 7
 Между ними находится 6 символов
 </td></tr>
 <tr>
-<td>2</td><td>a</td><td>w</td><td class='preformatted'>
-Фрагмент 'a' начинается на индексе 0
+<td>2</td><td>a</td><td>w</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
 Фрагмент 'w' начинается на индексе 6
 Между ними находится 5 символов
 </td></tr>
 <tr>
-<td>3</td><td>a</td><td>d</td><td class='preformatted'>
-Фрагмент 'a' начинается на индексе 0
+<td>3</td><td>a</td><td>d</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
 Фрагмент 'd' начинается на индексе 3
 Между ними находится 2 символов
 </td></tr>
 <tr>
-<td>4</td><td>a</td><td>b</td><td class='preformatted'>
-Фрагмент 'a' начинается на индексе 0
+<td>4</td><td>a</td><td>b</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
 Фрагмент 'b' начинается на индексе 1
 Между ними находится 0 символов
 </td></tr>
 <tr>
-<td>5</td><td>w</td><td>d</td><td class='preformatted'>
-Фрагмент 'w' начинается на индексе 6
+<td>5</td><td>w</td><td>d</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
 Фрагмент 'd' начинается на индексе 3
 Между ними находится 2 символов
 </td></tr>
 <tr>
-<td>6</td><td>w</td><td>f</td><td class='preformatted'>
-Фрагмент 'w' начинается на индексе 6
+<td>6</td><td>w</td><td>f</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
 Фрагмент 'f' начинается на индексе 5
 Между ними находится 0 символов
 </td></tr>
 <tr>
-<td>7</td><td>g</td><td>z</td><td class='preformatted'>
-Значение CA отсутствует в строке
+<td>7</td><td>g</td><td>z</td><td class='preformatted'>Значение CA отсутствует в строке
 </td></tr>
 <tr>
-<td>8</td><td>x</td><td>u</td><td class='preformatted'>
-Значение CB отсутствует в строке
+<td>8</td><td>x</td><td>u</td><td class='preformatted'>Значение CB отсутствует в строке
 </td></tr>
 </table>
 </div>
@@ -398,55 +410,46 @@ int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>CA</th><th>CB</th></tr>
 <tr>
-<td>1</td><td>0</td><td>3</td><td class='preformatted'>
-Записываю значение 'abcdefwxyz' в переменную STR
+<td>1</td><td>0</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
 От CA до CB. Вызов метода выглядит так:
 String result = STR.substring(cb, ca);
 Переменная result содержит 'abc'
 </td></tr>
 <tr>
-<td>2</td><td>3</td><td>0</td><td class='preformatted'>
-Записываю значение 'abcdefwxyz' в переменную STR
+<td>2</td><td>3</td><td>0</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
 От CB до CA. Вызов метода выглядит так:
 String result = STR.substring(cb, ca);
 Переменная result содержит 'abc'
 </td></tr>
 <tr>
-<td>3</td><td>3</td><td>3</td><td class='preformatted'>
-Записываю значение 'abcdefwxyz' в переменную STR
+<td>3</td><td>3</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
 От CA до CB. Вызов метода выглядит так:
 String result = STR.substring(cb, ca);
 Переменная result содержит ''
 </td></tr>
 <tr>
-<td>4</td><td>2</td><td>6</td><td class='preformatted'>
-Записываю значение 'abcdefwxyz' в переменную STR
+<td>4</td><td>2</td><td>6</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
 От CA до CB. Вызов метода выглядит так:
 String result = STR.substring(cb, ca);
 Переменная result содержит 'cdef'
 </td></tr>
 <tr>
-<td>5</td><td>0</td><td>9</td><td class='preformatted'>
-Записываю значение 'abcdefwxyz' в переменную STR
+<td>5</td><td>0</td><td>9</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
 От CA до CB. Вызов метода выглядит так:
 String result = STR.substring(cb, ca);
 Переменная result содержит 'abcdefwxy'
 </td></tr>
 <tr>
-<td>6</td><td>-1</td><td>4</td><td class='preformatted'>
-Значение CA должно быть в интервале [0,длина строки)
+<td>6</td><td>-1</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
 </td></tr>
 <tr>
-<td>7</td><td>20</td><td>4</td><td class='preformatted'>
-Значение CA должно быть в интервале [0,длина строки)
+<td>7</td><td>20</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
 </td></tr>
 <tr>
-<td>8</td><td>5</td><td>-2</td><td class='preformatted'>
-Значение CB должно быть в интервале [0,длина строки)
+<td>8</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
 </td></tr>
 <tr>
-<td>9</td><td>7</td><td>17</td><td class='preformatted'>
-Значение CB должно быть в интервале [0,длина строки)
+<td>9</td><td>7</td><td>17</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
 </td></tr>
 </table>
 </div>
@@ -469,40 +472,35 @@ String result = STR.substring(cb, ca);
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>open</th><th>close</th></tr>
 <tr>
-<td>1</td><td>&lt;svg</td><td>&gt;</td><td class='preformatted'>
-Фрагмент '&lt;svg' начинается на индексе 39 и заканчивается на индексе 43
+<td>1</td><td>&lt;svg</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;svg' начинается на индексе 39 и заканчивается на индексе 43
 Фрагмент '&gt;' после open начинается на индексе 68
 Вырезаю фрагмент с индекса 43 до индекса 68
 Получился фрагмент:
  width="800" height="600"
 </td></tr>
 <tr>
-<td>2</td><td>&lt;h1&gt;</td><td>&lt;/h1&gt;</td><td class='preformatted'>
-Фрагмент '&lt;h1&gt;' начинается на индексе 0 и заканчивается на индексе 4
+<td>2</td><td>&lt;h1&gt;</td><td>&lt;/h1&gt;</td><td class='preformatted'>Фрагмент '&lt;h1&gt;' начинается на индексе 0 и заканчивается на индексе 4
 Фрагмент '&lt;/h1&gt;' после open начинается на индексе 32
 Вырезаю фрагмент с индекса 4 до индекса 32
 Получился фрагмент:
 Мой первый векторный рисунок
 </td></tr>
 <tr>
-<td>3</td><td>&lt;</td><td>&gt;</td><td class='preformatted'>
-Фрагмент '&lt;' начинается на индексе 0 и заканчивается на индексе 1
+<td>3</td><td>&lt;</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;' начинается на индексе 0 и заканчивается на индексе 1
 Фрагмент '&gt;' после open начинается на индексе 3
 Вырезаю фрагмент с индекса 1 до индекса 3
 Получился фрагмент:
 h1
 </td></tr>
 <tr>
-<td>4</td><td>fill="</td><td>"</td><td class='preformatted'>
-Фрагмент 'fill="' начинается на индексе 145 и заканчивается на индексе 151
+<td>4</td><td>fill="</td><td>"</td><td class='preformatted'>Фрагмент 'fill="' начинается на индексе 145 и заканчивается на индексе 151
 Фрагмент '"' после open начинается на индексе 157
 Вырезаю фрагмент с индекса 151 до индекса 157
 Получился фрагмент:
 yellow
 </td></tr>
 <tr>
-<td>5</td><td>&lt;circle</td><td>/&gt;</td><td class='preformatted'>
-Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
+<td>5</td><td>&lt;circle</td><td>/&gt;</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
 Фрагмент '/&gt;' после open начинается на индексе 158
 Вырезаю фрагмент с индекса 81 до индекса 158
 Получился фрагмент:
@@ -510,20 +508,17 @@ yellow
         stroke-width="4" fill="yellow"
 </td></tr>
 <tr>
-<td>6</td><td>h1</td><td>h1</td><td class='preformatted'>
-Фрагмент 'h1' начинается на индексе 1 и заканчивается на индексе 3
+<td>6</td><td>h1</td><td>h1</td><td class='preformatted'>Фрагмент 'h1' начинается на индексе 1 и заканчивается на индексе 3
 Фрагмент 'h1' после open начинается на индексе 34
 Вырезаю фрагмент с индекса 3 до индекса 34
 Получился фрагмент:
 &gt;Мой первый векторный рисунок&lt;/
 </td></tr>
 <tr>
-<td>7</td><td>head</td><td>/head</td><td class='preformatted'>
-Значение head не найдено в тексте
+<td>7</td><td>head</td><td>/head</td><td class='preformatted'>Значение head не найдено в тексте
 </td></tr>
 <tr>
-<td>8</td><td>&lt;circle</td><td>&lt;svg</td><td class='preformatted'>
-Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
+<td>8</td><td>&lt;circle</td><td>&lt;svg</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
 Фрагмент '&lt;svg' не найдено после фрагмента '&lt;circle'
 </td></tr>
 </table>
@@ -567,28 +562,22 @@ yellow
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>CA</th><th>CB</th></tr>
 <tr>
-<td>1</td><td>5</td><td>3</td><td class='preformatted'>
-abcdeyz
+<td>1</td><td>5</td><td>3</td><td class='preformatted'>abcdeyz
 </td></tr>
 <tr>
-<td>2</td><td>6</td><td>0</td><td class='preformatted'>
-abcdefwxyz
+<td>2</td><td>6</td><td>0</td><td class='preformatted'>abcdefwxyz
 </td></tr>
 <tr>
-<td>3</td><td>0</td><td>7</td><td class='preformatted'>
-xyz
+<td>3</td><td>0</td><td>7</td><td class='preformatted'>xyz
 </td></tr>
 <tr>
-<td>4</td><td>-1</td><td>1</td><td class='preformatted'>
-Значение CA должно быть в интервале [0, длина строки)
+<td>4</td><td>-1</td><td>1</td><td class='preformatted'>Значение CA должно быть в интервале [0, длина строки)
 </td></tr>
 <tr>
-<td>5</td><td>9</td><td>3</td><td class='preformatted'>
-Сумма значений CA и CB должна быть меньше длины строки
+<td>5</td><td>9</td><td>3</td><td class='preformatted'>Сумма значений CA и CB должна быть меньше длины строки
 </td></tr>
 <tr>
-<td>6</td><td>5</td><td>-2</td><td class='preformatted'>
-Значение CB должно быть неотрицательно
+<td>6</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть неотрицательно
 </td></tr>
 </table>
 </div>
@@ -1148,4 +1137,4 @@ remainder</td>
 			<td>Строка должна начинаться и заканчиваться кавычкой</td>
 		</tr>
 	</table>
-</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

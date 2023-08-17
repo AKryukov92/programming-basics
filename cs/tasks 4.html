@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -226,10 +246,7 @@ zoom{
 </td></tr>
 </table>
 </div>
-<div id="link_c4_p15.1" class="task_block">
-	<div class="check_single"><p>Несколько советов по использованию условных конструкций можно найти в главе 15.1 "Операторы if" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=367" target="_blank">(открыть в новой вкладке)</a>.</p>
-	</div>
-</div><div id="task5980" class="task_block empty_on_print">
+<div id="task5980" class="task_block empty_on_print">
 	<div class="task_id">5980</div>
 	<h3>Задача</h3>
 	<div class="task_desc">Дано действительное число K. Если оно положительно, вычислить квадратный корень из него. Иначе - квадрат числа. Результат оформите по шаблону:</div>
@@ -267,9 +284,6 @@ zoom{
 			<td>Квадрат числа -0,2500 равен 0,0625</td>
 		</tr>
 	</table>
-</div><div id="link_c4_p19.4" class="task_block">
-	<div class="check_single"><p>Если писать блок else для каждой проверки исходных данных, то получится код с очень большой вложенностью. Для упрощения вложенных условий, рекомендуется использовать блоки с выходом (return). Чтобы ознакомиться с другими способами уменьшения вложенности конструкций, ознакомьтесь с главой 19.4 "Укрощение опасно глубокой вложенности" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=459" target="_blank">(открыть в новой вкладке)</a>.</p>
-	</div>
 </div><div id="task8174" class="task_block empty_on_print">
 	<div class="task_id">8174</div>
 	<h3>Задача</h3>
@@ -369,52 +383,40 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>small</th><th>large</th></tr>
 <tr>
-<td>1</td><td>5</td><td>8</td><td class='preformatted'>
-Было: в маленькой 5 из 5, в большой 8 из 8
+<td>1</td><td>5</td><td>8</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
 Стало: в маленькой 5 из 5, в большой 8 из 8</td></tr>
 <tr>
-<td>2</td><td>0</td><td>0</td><td class='preformatted'>
-Было: в маленькой 0 из 5, в большой 0 из 8
+<td>2</td><td>0</td><td>0</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
 Стало: в маленькой 0 из 5, в большой 0 из 8</td></tr>
 <tr>
-<td>3</td><td>5</td><td>0</td><td class='preformatted'>
-Было: в маленькой 5 из 5, в большой 0 из 8
+<td>3</td><td>5</td><td>0</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
 Стало: в маленькой 0 из 5, в большой 5 из 8</td></tr>
 <tr>
-<td>4</td><td>5</td><td>1</td><td class='preformatted'>
-Было: в маленькой 5 из 5, в большой 1 из 8
+<td>4</td><td>5</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 1 из 8
 Стало: в маленькой 0 из 5, в большой 6 из 8</td></tr>
 <tr>
-<td>5</td><td>5</td><td>3</td><td class='preformatted'>
-Было: в маленькой 5 из 5, в большой 3 из 8
+<td>5</td><td>5</td><td>3</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 3 из 8
 Стало: в маленькой 0 из 5, в большой 8 из 8</td></tr>
 <tr>
-<td>6</td><td>5</td><td>4</td><td class='preformatted'>
-Было: в маленькой 5 из 5, в большой 4 из 8
+<td>6</td><td>5</td><td>4</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
 Стало: в маленькой 1 из 5, в большой 8 из 8</td></tr>
 <tr>
-<td>7</td><td>4</td><td>5</td><td class='preformatted'>
-Было: в маленькой 4 из 5, в большой 5 из 8
+<td>7</td><td>4</td><td>5</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 5 из 8
 Стало: в маленькой 1 из 5, в большой 8 из 8</td></tr>
 <tr>
-<td>8</td><td>3</td><td>7</td><td class='preformatted'>
-Было: в маленькой 3 из 5, в большой 7 из 8
+<td>8</td><td>3</td><td>7</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 7 из 8
 Стало: в маленькой 2 из 5, в большой 8 из 8</td></tr>
 <tr>
-<td>9</td><td>-1</td><td>2</td><td class='preformatted'>
-Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+<td>9</td><td>-1</td><td>2</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
 </td></tr>
 <tr>
-<td>10</td><td>20</td><td>3</td><td class='preformatted'>
-Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+<td>10</td><td>20</td><td>3</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
 </td></tr>
 <tr>
-<td>11</td><td>1</td><td>-4</td><td class='preformatted'>
-Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+<td>11</td><td>1</td><td>-4</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
 </td></tr>
 <tr>
-<td>12</td><td>2</td><td>19</td><td class='preformatted'>
-Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+<td>12</td><td>2</td><td>19</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
 </td></tr>
 </table>
 </div>
@@ -680,8 +682,7 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>buyCostRoubles</th><th>sellCostRoubles</th></tr>
 <tr>
-<td>1</td><td>68</td><td>103</td><td class='preformatted'>
-Раннее округление
+<td>1</td><td>68</td><td>103</td><td class='preformatted'>Раннее округление
 НДС вход 10,372881, после округления 10 рублей 37 копеек
 НДС выход 15,711864, после округления 15 рублей 71 копеек
 Требуется уплатить 5 рублей 34 копеек
@@ -693,8 +694,7 @@ zoom{
 Сумма НДС к уплате составляет 5 рублей 34 копеек
 </td></tr>
 <tr>
-<td>2</td><td>68</td><td>101</td><td class='preformatted'>
-Раннее округление
+<td>2</td><td>68</td><td>101</td><td class='preformatted'>Раннее округление
 НДС вход 10,372881, после округления 10 рублей 37 копеек
 НДС выход 15,406780, после округления 15 рублей 41 копеек
 Требуется уплатить 5 рублей 4 копеек
@@ -706,8 +706,7 @@ zoom{
 Сумма НДС к уплате составляет 5 рублей 4 копеек
 </td></tr>
 <tr>
-<td>3</td><td>69</td><td>103</td><td class='preformatted'>
-Раннее округление
+<td>3</td><td>69</td><td>103</td><td class='preformatted'>Раннее округление
 НДС вход 10,525424, после округления 10 рублей 53 копеек
 НДС выход 15,711864, после округления 15 рублей 71 копеек
 Требуется уплатить 5 рублей 18 копеек
@@ -719,8 +718,7 @@ zoom{
 Сумма НДС к уплате составляет 5 рублей 19 копеек
 </td></tr>
 <tr>
-<td>4</td><td>69</td><td>101</td><td class='preformatted'>
-Раннее округление
+<td>4</td><td>69</td><td>101</td><td class='preformatted'>Раннее округление
 НДС вход 10,525424, после округления 10 рублей 53 копеек
 НДС выход 15,406780, после округления 15 рублей 41 копеек
 Требуется уплатить 4 рублей 88 копеек
@@ -732,8 +730,7 @@ zoom{
 Сумма НДС к уплате составляет 4 рублей 88 копеек
 </td></tr>
 <tr>
-<td>5</td><td>101</td><td>69</td><td class='preformatted'>
-Раннее округление
+<td>5</td><td>101</td><td>69</td><td class='preformatted'>Раннее округление
 НДС вход 15,406780, после округления 15 рублей 41 копеек
 НДС выход 10,525424, после округления 10 рублей 53 копеек
 Требуется уплатить -4 рублей -88 копеек
@@ -944,39 +941,29 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>R</th><th>K</th></tr>
 <tr>
-<td>1</td><td>50</td><td>150</td><td class='preformatted'>
-Оба условия истинны. 50 < 100 и 100 < 150
+<td>1</td><td>50</td><td>150</td><td class='preformatted'>Оба условия истинны. 50 < 100 и 100 < 150
 </td></tr>
 <tr>
-<td>2</td><td>70</td><td>80</td><td class='preformatted'>
-Только условие на R истинно. 70 < 100
+<td>2</td><td>70</td><td>80</td><td class='preformatted'>Только условие на R истинно. 70 < 100
 </td></tr>
 <tr>
-<td>3</td><td>200</td><td>300</td><td class='preformatted'>
-Только условие на K истинно. 100 < 300
+<td>3</td><td>200</td><td>300</td><td class='preformatted'>Только условие на K истинно. 100 < 300
 </td></tr>
 <tr>
-<td>4</td><td>400</td><td>20</td><td class='preformatted'>
-Оба условия ложны
+<td>4</td><td>400</td><td>20</td><td class='preformatted'>Оба условия ложны
 </td></tr>
 <tr>
-<td>5</td><td>-3</td><td>0</td><td class='preformatted'>
-Только условие на R истинно. -3 < 100
+<td>5</td><td>-3</td><td>0</td><td class='preformatted'>Только условие на R истинно. -3 < 100
 </td></tr>
 <tr>
-<td>6</td><td>0</td><td>-3</td><td class='preformatted'>
-Только условие на R истинно. 0 < 100
+<td>6</td><td>0</td><td>-3</td><td class='preformatted'>Только условие на R истинно. 0 < 100
 </td></tr>
 <tr>
-<td>7</td><td>100</td><td>100</td><td class='preformatted'>
-Оба условия ложны
+<td>7</td><td>100</td><td>100</td><td class='preformatted'>Оба условия ложны
 </td></tr>
 </table>
 </div>
-<div id="link_c4_p19.2" class="task_block">
-	<div class="check_single"><p>Фигурные скобки - один из главных источников синтаксических ошибок в программе. Немного информации о том, зачем они вообще нужны, дано в главе 19.2 "Составные операторы (блоки)" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=457" target="_blank">(открыть в новой вкладке)</a>.</p>
-	</div>
-</div><div id="task2291" class="task_block empty_on_print">
+<div id="task2291" class="task_block empty_on_print">
 	<div class="task_id">2291</div>
 	<h3>Задача</h3>
 	<div class="task_desc">Космический корабль летит за кометой. Известны скорости космического корабля shipKmH в километрах в час и комета cometMS - в метрах в секунду. Удастся ли кораблю догнать комету? Если скорость корабля больше скорости кометы, оформить ответ по шаблону:
@@ -2749,4 +2736,4 @@ h</td>
 			<td class="preformatted">Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно</td>
 		</tr>
 	</table>
-</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

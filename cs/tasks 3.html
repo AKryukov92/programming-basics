@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -159,7 +179,10 @@ zoom{
 	font-size:40pt;
 }</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Проверка исходных данных</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task6522'>3</a><li><a href='#task7619'>4</a><li><a href='#task8833' class='example'>5*</a><li><a href='#task9020'>6</a><li><a href='#task1934'>7</a><li><a href='#task3943'>8</a><li><a href='#task2801' class='example'>9*</a><li><a href='#task2361'>10</a><li><a href='#task5063'>11</a><li><a href='#task5870'>12</a></ul><ul><li><a href='#task3490'>13</a><li><a href='#task9622'>14</a><li><a href='#task7799'>15</a><li><a href='#task9354'>16</a><li><a href='#task3591'>17</a><li><a href='#task9130'>18</a><li><a href='#task5895'>19</a><li><a href='#task2461'>20</a><li><a href='#task2624'>21</a><li><a href='#task5871'>22</a></ul></div><div id='task9298' class='task_block'>
 <div class='task_desc'>
-Основное внимание в этой лабораторной уделено одной из техник защитного программирования - выводу сообщений об ошибке. Более подробно о них можно почитать в главе 8 части II книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=205" target="_blank">(открыть в новой вкладке)</a>.
+Основное внимание в этой лабораторной уделено одной из техник защитного программирования - выводу сообщений об ошибке. Говорить пользователю о том, что он ввёл некорректные данные очень важно. Это может быть важнее, чем посчитать результат.
+</div>
+<div class='task_desc'>
+В программе нужно предусмотреть как минимум два варианта действий. Один - когда все данные корректны. Второй - когда исходные данные не подходят для выполнения расчетов. Для оформления нужно использовать конструкции ветвления.
 </div>
 <div class='task_id'>9298</div>
 <h3>Задача</h3>
@@ -176,6 +199,33 @@ zoom{
 </td></tr>
 </table>
 </div>
+<div class='check_single preformatted'>Всегда пишите фигурные скобочки у конструкций ветвления.Пишите открывающую и закрывающую скобку одновременно. Заполняйте внутреннее содержимое после того, как напишете открывающую и закрывающую часть блока. У людей часто возникают ошибки в логике программы из за того, что скобки расставлены неправильно.</div>
+<div class='check_single preformatted'>Сначала напишите
+if () {
+}
+if () {
+}</div>
+<div class='check_single preformatted'>Затем напишите
+if () {
+//сообщение об ошибке
+}
+if () {
+//расчет и вывод результата
+}</div>
+<div class='check_single preformatted'>Подумайте какое условие будет истинно для всех некорректных данных.
+if (edge < 0) {
+//сообщение об ошибке
+}
+if () {
+//расчет и вывод результата
+}</div>
+<div class='check_single preformatted'>Подумайте какое условие будет истинно для всех корректных данных, которые полезны для расчета результата.
+if (edge < 0) {
+//сообщение об ошибке
+}
+if () {
+//расчет и вывод результата
+}</div>
 <div id='task4312' class='task_block'>
 <h4>Порядок решения задач с проверками исходных данных</h4>
 <ol start='1'><li>Реализовать чтение исходных данных, вычисление результата и печать результата на экран.</li><li>Добавить условие, чтобы вычисление результата работало только при корректных данных, а при некорректных ничего не происходило.</li><li>Добавить условие, чтобы выводить сообщения об ошибках в случае ввода некорректных данных</li><li>При возможности, объединить условия с помощью ключевого слова else</li></ol><div class='task_id'>4312</div>
@@ -187,26 +237,20 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>edge</th><th>height</th></tr>
 <tr>
-<td>1</td><td>1</td><td>1</td><td class='preformatted'>
-Площадь прямоугольного треугольника с высотой 1 и основанием 1 равна 0,5000</td></tr>
+<td>1</td><td>1</td><td>1</td><td class='preformatted'>Площадь прямоугольного треугольника с высотой 1 и основанием 1 равна 0,5000</td></tr>
 <tr>
-<td>2</td><td>2</td><td>3</td><td class='preformatted'>
-Площадь прямоугольного треугольника с высотой 3 и основанием 2 равна 3,0000</td></tr>
+<td>2</td><td>2</td><td>3</td><td class='preformatted'>Площадь прямоугольного треугольника с высотой 3 и основанием 2 равна 3,0000</td></tr>
 <tr>
-<td>3</td><td>0</td><td>10</td><td class='preformatted'>
-Длина основания треугольника должна быть положительна
+<td>3</td><td>0</td><td>10</td><td class='preformatted'>Длина основания треугольника должна быть положительна
 </td></tr>
 <tr>
-<td>4</td><td>-2</td><td>1</td><td class='preformatted'>
-Длина основания треугольника должна быть положительна
+<td>4</td><td>-2</td><td>1</td><td class='preformatted'>Длина основания треугольника должна быть положительна
 </td></tr>
 <tr>
-<td>5</td><td>3</td><td>-4</td><td class='preformatted'>
-Высота треугольника должна быть положительна
+<td>5</td><td>3</td><td>-4</td><td class='preformatted'>Высота треугольника должна быть положительна
 </td></tr>
 <tr>
-<td>6</td><td>-5</td><td>-7</td><td class='preformatted'>
-Длина основания треугольника должна быть положительна
+<td>6</td><td>-5</td><td>-7</td><td class='preformatted'>Длина основания треугольника должна быть положительна
 Высота треугольника должна быть положительна
 </td></tr>
 </table>
@@ -258,20 +302,21 @@ zoom{
 Температура должна быть выше абсолютного нуля (-273.15)
 </td></tr>
 <tr><td>11</td><td>-7</td><td>-1000</td><td>-21</td><td>71</td><td class='preformatted'>Объем должен быть неотрицательным
+Объем должен быть неотрицательным
 Температура должна быть выше абсолютного нуля (-273.15)
 </td></tr>
 <tr><td>12</td><td>15</td><td>-180</td><td>-21</td><td>-300</td><td class='preformatted'>Объем должен быть неотрицательным
 Температура должна быть выше абсолютного нуля (-273.15)
 </td></tr>
 <tr><td>13</td><td>-7</td><td>-400</td><td>-5</td><td>-500</td><td class='preformatted'>Объем должен быть неотрицательным
+Объем должен быть неотрицательным
+Температура должна быть выше абсолютного нуля (-273.15)
 Температура должна быть выше абсолютного нуля (-273.15)
 </td></tr>
 </table>
 </div>
-<div id="link_c3_p11.1" class="task_block">
-	<div class="check_single">Какое название лучше выбрать для переменной? Эта проблема подробно рассмотрена в главе 11.1 "Общие принципы выбора имен переменных" части III книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=274" target="_blank">(открыть в новой вкладке)</a></p>
-	<p>Обычно в шапке таблицы с тестовыми данными у вводимых значений будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!</div>
-</div><div id='task7619' class='task_block'>
+<div class='check_single preformatted'>Обычно в шапке таблицы с тестовыми данными у исходных данных будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!</div>
+<div id='task7619' class='task_block'>
 <div class='task_desc'>
 Представьте, что вы пишете программное обеспечение для банкомата. Полезным действием будет выдача банкнот. Пользователь пришел к банкомату, вставил карту, увидел что на счету 10 тысяч, нажал 'снять деньги' и ввел миллион. Банкомат выдал ему миллион, а затем написал сообщение 'недостаточно средств на счету'. Правильно ли действовал банкомат? Именно поэтому мы проверяем исходные данные перед тем, как совершаем полезные действия.
 </div>
@@ -302,6 +347,7 @@ zoom{
 </td></tr>
 <tr>
 <td>8</td><td>-20</td><td>-73</td><td>300</td><td class='preformatted'>Скорость должна быть неотрицательна
+Скорость должна быть неотрицательна
 </td></tr>
 <tr>
 <td>9</td><td>60</td><td>-120</td><td>-600</td><td class='preformatted'>Скорость должна быть неотрицательна
@@ -309,6 +355,7 @@ zoom{
 </td></tr>
 <tr>
 <td>10</td><td>-2</td><td>-3</td><td>-1</td><td class='preformatted'>Скорость должна быть неотрицательна
+Скорость должна быть неотрицательна
 Расстояние должно быть неотрицательным
 </td></tr>
 </table>
@@ -392,24 +439,18 @@ root1 = ( -b - discriminant ) / ( 2 * a );</p>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>A</th><th>B</th></tr>
 <tr>
-<td>1</td><td>-3</td><td>-7</td><td class='preformatted'>
-Результат вычисления -21,0000</td></tr>
+<td>1</td><td>-3</td><td>-7</td><td class='preformatted'>Результат вычисления -21,0000</td></tr>
 <tr>
-<td>2</td><td>0</td><td>-50</td><td class='preformatted'>
-Результат вычисления 0,0000</td></tr>
+<td>2</td><td>0</td><td>-50</td><td class='preformatted'>Результат вычисления 0,0000</td></tr>
 <tr>
-<td>3</td><td>13</td><td>0</td><td class='preformatted'>
-Результат вычисления -0,0000</td></tr>
+<td>3</td><td>13</td><td>0</td><td class='preformatted'>Результат вычисления -0,0000</td></tr>
 <tr>
-<td>4</td><td>6047</td><td>-6011</td><td class='preformatted'>
-Результат вычисления 1240401,6995</td></tr>
+<td>4</td><td>6047</td><td>-6011</td><td class='preformatted'>Результат вычисления 1240401,6995</td></tr>
 <tr>
-<td>5</td><td>13</td><td>17</td><td class='preformatted'>
-Значение B должно быть не положительным
+<td>5</td><td>13</td><td>17</td><td class='preformatted'>Значение B должно быть не положительным
 </td></tr>
 <tr>
-<td>6</td><td>6221</td><td>6373</td><td class='preformatted'>
-Значение B должно быть не положительным
+<td>6</td><td>6221</td><td>6373</td><td class='preformatted'>Значение B должно быть не положительным
 </td></tr>
 </table>
 </div>
@@ -423,314 +464,173 @@ root1 = ( -b - discriminant ) / ( 2 * a );</p>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>x</th><th>y</th></tr>
 <tr>
-<td>1</td><td>-5</td><td>81</td><td class='preformatted'>
-Результат вычислений -10,0000</td></tr>
+<td>1</td><td>-5</td><td>81</td><td class='preformatted'>Результат вычислений -10,0000</td></tr>
 <tr>
-<td>2</td><td>13</td><td>36</td><td class='preformatted'>
-Результат вычислений -21,7945</td></tr>
+<td>2</td><td>13</td><td>36</td><td class='preformatted'>Результат вычислений -21,7945</td></tr>
 <tr>
-<td>3</td><td>-20</td><td>36</td><td class='preformatted'>
-Подкоренное выражение должно быть неотрицательным
+<td>3</td><td>-20</td><td>36</td><td class='preformatted'>Подкоренное выражение должно быть неотрицательным
 </td></tr>
 <tr>
-<td>4</td><td>20</td><td>-50</td><td class='preformatted'>
-Значение y должно быть неотрицательным
+<td>4</td><td>20</td><td>-50</td><td class='preformatted'>Значение y должно быть неотрицательным
 </td></tr>
 <tr>
-<td>5</td><td>7507</td><td>7499</td><td class='preformatted'>
-Результат вычислений -435,7062</td></tr>
+<td>5</td><td>7507</td><td>7499</td><td class='preformatted'>Результат вычислений -435,7062</td></tr>
 <tr>
-<td>6</td><td>7489</td><td>-7487</td><td class='preformatted'>
-Значение y должно быть неотрицательным
+<td>6</td><td>7489</td><td>-7487</td><td class='preformatted'>Значение y должно быть неотрицательным
 </td></tr>
 <tr>
-<td>7</td><td>-7481</td><td>7477</td><td class='preformatted'>
-Подкоренное выражение должно быть неотрицательным
+<td>7</td><td>-7481</td><td>7477</td><td class='preformatted'>Подкоренное выражение должно быть неотрицательным
 </td></tr>
 </table>
 </div>
-<div id="task2801" class="task_block empty_on_print">
-	<div class="task_id">2801</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дано два числа: делимое и делитель. Найти частное и остаток от деления. Все значения округлить до целого. Вывести ответ по шаблону:</div>
-<div class="check_single preformatted">Делимое $dividend, делитель $divider, частное $quotient, остаток $remainder</div>
-	<table class="check_values">
-		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="2">Вводимые данные</th>
-			<th rowspan="2">Результат</th>
-		</tr>
-		<tr>
-			<th>dividend</th>
-			<th>divider</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>1234</td>
-			<td>11</td>
-			<td>Делимое 1234, делитель 11, частное 112, остаток 2.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>13</td>
-			<td>Делимое 5, делитель 13, частное 0, остаток 5</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>17</td>
-			<td>17</td>
-			<td>Делимое 17, делитель 17, частное 1, остаток 0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>23</td>
-			<td>Делимое 0, делитель 23, частное 0, остаток 0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>4</td>
-			<td>0</td>
-			<td>Делитель не может быть равен 0</td>
-		</tr>
-	</table>
-</div><div id="task2361" class="task_block empty_on_print">
-	<div class="task_id">2361</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дан рулон материала длиной totalM метров. Расход материала на одно изделие - partCm сантиметров материала. Вычислите сколько изделий получится изготовить и сколько материала останется. Оформите результат по шаблону</div>
-<div class="check_single preformatted">Длина рулона в сантиметрах равна $totalCm
+<div id='task2801' class='task_block'>
+<div class='task_id'>2801</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано два числа: делимое и делитель. Найти частное и остаток от деления. Все значения округлить до целого. Вывести ответ по шаблону:
+</div>
+<div class='check_single preformatted'>Делимое $dividend, делитель $divider, частное $quotient, остаток $remainder</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>dividend</th><th>divider</th></tr>
+<tr>
+<td>1</td><td>1234</td><td>11</td><td class='preformatted'>Делимое 1234, делитель 11, частное 112, остаток 2
+</td></tr>
+<tr>
+<td>2</td><td>5</td><td>13</td><td class='preformatted'>Делимое 5, делитель 13, частное 0, остаток 5
+</td></tr>
+<tr>
+<td>3</td><td>17</td><td>17</td><td class='preformatted'>Делимое 17, делитель 17, частное 1, остаток 0
+</td></tr>
+<tr>
+<td>4</td><td>0</td><td>23</td><td class='preformatted'>Делимое 0, делитель 23, частное 0, остаток 0
+</td></tr>
+<tr>
+<td>5</td><td>4</td><td>0</td><td class='preformatted'>Делитель не может быть равен 0
+</td></tr>
+</table>
+</div>
+<div id='task2361' class='task_block'>
+<div class='task_id'>2361</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дан рулон материала длиной totalM метров. Расход материала на одно изделие - partCm сантиметров материала. Вычислите сколько изделий получится изготовить и сколько материала останется. Оформите результат по шаблону:
+</div>
+<div class='check_single preformatted'>Длина рулона в сантиметрах равна $totalCm
 Из этого материала получится $amount изделий и останется $remainder см</div>
-	<table class="check_values">
-		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="2">Вводимые данные</th>
-			<th rowspan="2">Результат</th>
-		</tr>
-		<tr>
-			<th>totalM</th>
-			<th>partCm</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>400</td>
-			<td>17</td>
-			<td class="preformatted">Длина рулона в сантиметрах равна 40000
-Из этого материала получится 2352 изделий и останется 16 см</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>103</td>
-			<td>29</td>
-			<td class="preformatted">Длина рулона в сантиметрах равна 10300
-Из этого материала получится 355 изделий и останется 5 см</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>2</td>
-			<td>12</td>
-			<td class="preformatted">Длина рулона в сантиметрах равна 200
-Из этого материала получится 16 изделий и останется 8 см</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>2</td>
-			<td>313</td>
-			<td class="preformatted">Длина рулона в сантиметрах равна 200
-Материала не хватит даже на одно изделие</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3</td>
-			<td>400</td>
-			<td class="preformatted">Длина рулона в сантиметрах равна 300
-Материала не хватит даже на одно изделие</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>300</td>
-			<td>-70</td>
-			<td class="preformatted">Расход материала должен быть положительным</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>5</td>
-			<td>-10</td>
-			<td class="preformatted">Расход материала должен быть положительным</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>11</td>
-			<td>0</td>
-			<td class="preformatted">Расход материала должен быть положительным</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-800</td>
-			<td>20</td>
-			<td class="preformatted">Длина рулона должна быть положительна</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>23</td>
-			<td class="preformatted">Длина рулона должна быть положительна</td>
-		</tr>
-	</table>
-</div><div id="task5063" class="task_block empty_on_print">
-	<div class="task_id">5063</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дан угол в градусах (aInitial). Определить (aRemainder) наименьшее положительное значение угла, равного данному. (Остаток от деления на 360)</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные(aInitial)</th>
-			<th>Результат (aRemainder)</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>365</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>45</td>
-			<td>45</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>1125</td>
-			<td>45</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>1500</td>
-			<td>60</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>2000</td>
-			<td>200</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>360</td>
-			<td>0</td>
-		</tr>
-	</table>
-</div><div id="task5870" class="task_block empty_on_print">
-	<div class="task_id">5870</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Видеоролик длится lengthSeconds секунд. Определить сколько это в полных часах, минутах и секундах.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные (lengthSeconds)</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>4000</td>
-			<td>1 часов 6 минут 40 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3603</td>
-			<td>1 часов 0 минут 3 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3599</td>
-			<td>0 часов 59 минут 59 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3660</td>
-			<td>1 часов 1 минут 0 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>59</td>
-			<td>0 часов 0 минут 59 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>61</td>
-			<td>0 часов 1 минут 1 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>0 часов 0 минут 0 секунд</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-1</td>
-			<td>Количество времени должно быть неотрицательным</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-20</td>
-			<td>Количество времени должно быть неотрицательным</td>
-		</tr>
-	</table>
-</div><div id="task3490" class="task_block empty_on_print">
-	<div class="task_id">3490</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Сколько проволоки можно намотать на катушку диаметром yarnDiameterCm см за wireCoils полных витков? Толщиной проволоки и шириной катушки можно пренебречь. Результат округлить вниз до целого количества сантиметров.</div>
-	<table class="check_values">
-		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="2">Вводимые данные</th>
-			<th rowspan="2">Результат (result)</th>
-		</tr>
-		<tr>
-			<th>yarnDiameterCm</th>
-			<th>wireCoils</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>3</td>
-			<td>2</td>
-			<td>18 см</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>10</td>
-			<td>300</td>
-			<td>9424 см</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0</td>
-			<td>15</td>
-			<td>Длина проволоки должна быть неотрицательна</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>13</td>
-			<td>0</td>
-			<td>Количество витков должно быть неотрицательно</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>-10</td>
-			<td>100</td>
-			<td>Длина проволоки должна быть неотрицательна</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>11</td>
-			<td>-500</td>
-			<td>Количество витков должно быть неотрицательно</td>
-		</tr>
-	</table>
-</div><div id="task9622" class="task_block empty_on_print">
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>totalM</th><th>partCm</th></tr>
+<tr>
+<td>1</td><td>400</td><td>17</td><td class='preformatted'>Длина рулона в сантиметрах равна 40000
+Из этого материала получится 2352 изделий и останется 16 см
+</td></tr>
+<tr>
+<td>2</td><td>103</td><td>29</td><td class='preformatted'>Длина рулона в сантиметрах равна 10300
+Из этого материала получится 355 изделий и останется 5 см
+</td></tr>
+<tr>
+<td>3</td><td>2</td><td>12</td><td class='preformatted'>Длина рулона в сантиметрах равна 200
+Из этого материала получится 16 изделий и останется 8 см
+</td></tr>
+<tr>
+<td>4</td><td>2</td><td>313</td><td class='preformatted'>Длина рулона в сантиметрах равна 200
+Материала не хватат даже на одно изделие
+</td></tr>
+<tr>
+<td>5</td><td>3</td><td>400</td><td class='preformatted'>Длина рулона в сантиметрах равна 300
+Материала не хватат даже на одно изделие
+</td></tr>
+<tr>
+<td>6</td><td>300</td><td>-70</td><td class='preformatted'>Расход материала должен быть положительным
+Длина рулона в сантиметрах равна 30000
+</td></tr>
+<tr>
+<td>7</td><td>5</td><td>-10</td><td class='preformatted'>Расход материала должен быть положительным
+Длина рулона в сантиметрах равна 500
+</td></tr>
+<tr>
+<td>8</td><td>11</td><td>0</td><td class='preformatted'>Расход материала должен быть положительным
+Длина рулона в сантиметрах равна 1100
+</td></tr>
+<tr>
+<td>9</td><td>-800</td><td>20</td><td class='preformatted'>Длина рулона должна быть положительна
+</td></tr>
+<tr>
+<td>10</td><td>0</td><td>23</td><td class='preformatted'>Длина рулона должна быть положительна
+</td></tr>
+</table>
+</div>
+<div id='task5063' class='task_block'>
+<div class='task_id'>5063</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дан угол в градусах (aInitial). Определить (aRemainder) наименьшее положительное значение угла, равного данному. (Остаток от деления на 360)
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (aInitial)</th><th>Результат</th></tr>
+<tr><td>1</td><td>365</td><td class='preformatted'>Угол 365 равен углу 5
+</td></tr>
+<tr><td>2</td><td>45</td><td class='preformatted'>Угол 45 равен углу 45
+</td></tr>
+<tr><td>3</td><td>1125</td><td class='preformatted'>Угол 1125 равен углу 45
+</td></tr>
+<tr><td>4</td><td>1500</td><td class='preformatted'>Угол 1500 равен углу 60
+</td></tr>
+<tr><td>5</td><td>2000</td><td class='preformatted'>Угол 2000 равен углу 200
+</td></tr>
+<tr><td>6</td><td>0</td><td class='preformatted'>Угол 0 равен углу 0
+</td></tr>
+<tr><td>7</td><td>360</td><td class='preformatted'>Угол 360 равен углу 0
+</td></tr>
+</table>
+</div>
+<div id='task5870' class='task_block'>
+<div class='task_id'>5870</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Видеоролик длится timeInSeconds секунд. Определить сколько это в полных часах, минутах и секундах.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (timeInSeconds)</th><th>Результат</th></tr>
+<tr><td>1</td><td>4000</td><td class='preformatted'>1 часов 6 минут 40 секунд</td></tr>
+<tr><td>2</td><td>3603</td><td class='preformatted'>1 часов 0 минут 3 секунд</td></tr>
+<tr><td>3</td><td>3599</td><td class='preformatted'>0 часов 59 минут 59 секунд</td></tr>
+<tr><td>4</td><td>3660</td><td class='preformatted'>1 часов 1 минут 0 секунд</td></tr>
+<tr><td>5</td><td>59</td><td class='preformatted'>0 часов 0 минут 59 секунд</td></tr>
+<tr><td>6</td><td>61</td><td class='preformatted'>0 часов 1 минут 1 секунд</td></tr>
+<tr><td>7</td><td>0</td><td class='preformatted'>0 часов 0 минут 0 секунд</td></tr>
+<tr><td>8</td><td>-1</td><td class='preformatted'>Количество времени должно быть неотрицательным
+</td></tr>
+<tr><td>9</td><td>-20</td><td class='preformatted'>Количество времени должно быть неотрицательным
+</td></tr>
+</table>
+</div>
+<div id='task3490' class='task_block'>
+<div class='task_id'>3490</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Сколько проволоки можно намотать на катушку диаметром yarnDiameterCm см за wireCoils полных витков? Толщиной проволоки и шириной катушки можно пренебречь. Результат округлить вниз до целого количества сантиметров.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>yarnDiameterCm</th><th>wireCoils</th></tr>
+<tr>
+<td>1</td><td>3</td><td>2</td><td class='preformatted'>Длина окружности катушки равна 9,4248На катушку можно намотать 18 см проволоки</td></tr>
+<tr>
+<td>2</td><td>10</td><td>300</td><td class='preformatted'>Длина окружности катушки равна 31,4159На катушку можно намотать 9424 см проволоки</td></tr>
+<tr>
+<td>3</td><td>0</td><td>15</td><td class='preformatted'>Длина проволоки должна быть неотрицательна
+</td></tr>
+<tr>
+<td>4</td><td>13</td><td>0</td><td class='preformatted'>Количество витков должно быть неотрицательно
+</td></tr>
+<tr>
+<td>5</td><td>11</td><td>-500</td><td class='preformatted'>Количество витков должно быть неотрицательно
+</td></tr>
+</table>
+</div>
+<div id="task9622" class="task_block empty_on_print">
 	<div class="task_id">9622</div>
 	<h3>Задача</h3>
 	<div class="task_desc">Вычислите:
@@ -1227,4 +1127,4 @@ root1 = ( -b - discriminant ) / ( 2 * a );</p>
 			<td>Подкоренное выражение должно быть неотрицательным</td>
 		</tr>
 	</table>
-</div>Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

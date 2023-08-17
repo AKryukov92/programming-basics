@@ -99,6 +99,26 @@ table td, table th {
 .check_values tr:target, .check_values_v2 tr:target {
     background-color:lightgrey;
 }
+.stream_values tr:nth-child(2) td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
 formula {
 	font-weight:bold;
 	text-align:center;
@@ -318,29 +338,22 @@ qwer asdf </td></tr>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>P</th><th>Q</th></tr>
 <tr>
-<td>1</td><td>0</td><td>3</td><td class='preformatted'>
-Меняю a на f
+<td>1</td><td>0</td><td>3</td><td class='preformatted'>Меняю a на f
 f s d a g h </td></tr>
 <tr>
-<td>2</td><td>2</td><td>5</td><td class='preformatted'>
-Меняю d на h
+<td>2</td><td>2</td><td>5</td><td class='preformatted'>Меняю d на h
 a s h f g d </td></tr>
 <tr>
-<td>3</td><td>4</td><td>2</td><td class='preformatted'>
-Меняю g на d
+<td>3</td><td>4</td><td>2</td><td class='preformatted'>Меняю g на d
 a s g f d h </td></tr>
 <tr>
-<td>4</td><td>-1</td><td>5</td><td class='preformatted'>
-Число P должно быть в интервале [0, размер массива)</td></tr>
+<td>4</td><td>-1</td><td>5</td><td class='preformatted'>Число P должно быть в интервале [0, размер массива)</td></tr>
 <tr>
-<td>5</td><td>2</td><td>17</td><td class='preformatted'>
-Число Q должно быть в интервале [0, размер массива)</td></tr>
+<td>5</td><td>2</td><td>17</td><td class='preformatted'>Число Q должно быть в интервале [0, размер массива)</td></tr>
 <tr>
-<td>6</td><td>19</td><td>2</td><td class='preformatted'>
-Число P должно быть в интервале [0, размер массива)</td></tr>
+<td>6</td><td>19</td><td>2</td><td class='preformatted'>Число P должно быть в интервале [0, размер массива)</td></tr>
 <tr>
-<td>7</td><td>1</td><td>-5</td><td class='preformatted'>
-Число Q должно быть в интервале [0, размер массива)</td></tr>
+<td>7</td><td>1</td><td>-5</td><td class='preformatted'>Число Q должно быть в интервале [0, размер массива)</td></tr>
 </table>
 </div>
 <div id='task9711' class='task_block'>
@@ -370,53 +383,43 @@ a s g f d h </td></tr>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>data</th><th>S</th></tr>
 <tr>
-<td>1</td><td>q w e r t y</td><td>1</td><td class='preformatted'>
-y q w e r t 
+<td>1</td><td>q w e r t y</td><td>1</td><td class='preformatted'>y q w e r t 
 </td></tr>
 <tr>
-<td>2</td><td>q w e r t y</td><td>3</td><td class='preformatted'>
-y q w e r t 
+<td>2</td><td>q w e r t y</td><td>3</td><td class='preformatted'>y q w e r t 
 t y q w e r 
 r t y q w e 
 </td></tr>
 <tr>
-<td>3</td><td>a s d f</td><td>2</td><td class='preformatted'>
-f a s d 
+<td>3</td><td>a s d f</td><td>2</td><td class='preformatted'>f a s d 
 d f a s 
 </td></tr>
 <tr>
-<td>4</td><td>q w e r t y</td><td>5</td><td class='preformatted'>
-y q w e r t 
+<td>4</td><td>q w e r t y</td><td>5</td><td class='preformatted'>y q w e r t 
 t y q w e r 
 r t y q w e 
 e r t y q w 
 w e r t y q 
 </td></tr>
 <tr>
-<td>5</td><td>a s d f</td><td>3</td><td class='preformatted'>
-f a s d 
+<td>5</td><td>a s d f</td><td>3</td><td class='preformatted'>f a s d 
 d f a s 
 s d f a 
 </td></tr>
 <tr>
-<td>6</td><td>q w e r t y</td><td>6</td><td class='preformatted'>
-Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+<td>6</td><td>q w e r t y</td><td>6</td><td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
 </td></tr>
 <tr>
-<td>7</td><td>a s d f</td><td>0</td><td class='preformatted'>
-Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+<td>7</td><td>a s d f</td><td>0</td><td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
 </td></tr>
 <tr>
-<td>8</td><td>q w e r t y</td><td>8</td><td class='preformatted'>
-Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+<td>8</td><td>q w e r t y</td><td>8</td><td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
 </td></tr>
 <tr>
-<td>9</td><td>q w e r t y</td><td>-2</td><td class='preformatted'>
-Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+<td>9</td><td>q w e r t y</td><td>-2</td><td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
 </td></tr>
 <tr>
-<td>10</td><td>a s d f</td><td>5</td><td class='preformatted'>
-Количество позиций при сдвиге должно быть в интервале [0, длина массива)
+<td>10</td><td>a s d f</td><td>5</td><td class='preformatted'>Количество позиций при сдвиге должно быть в интервале [0, длина массива)
 </td></tr>
 </table>
 </div>
@@ -424,7 +427,7 @@ s d f a
 <div class='task_id'>8820</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - символы, разделенные пробелами. Инвертировать массив - переставить элементы массива в обратном порядке. Вывод в этой задаче практически не отличается от вывода задачи &lt;a href="#task1223" target="_blank"&gt;ЛР#1223(открыть в новой вкладке)&lt;/a&gt; но вам будет полезнее решить именно с перестановкой элементов в массиве.
+Пользователь вводит данные - символы, разделенные пробелами. Инвертировать массив - переставить элементы массива в обратном порядке. Вывод в этой задаче практически не отличается от вывода задачи <a href="tasks 9.html#task1223" target="_blank">ЛР9#1223(открыть в новой вкладке)</a> но вам будет полезнее решить именно с перестановкой элементов в массиве.
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
@@ -443,64 +446,49 @@ s d f a
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>data</th><th>S</th></tr>
 <tr>
-<td>1</td><td>q w e r t y</td><td>1</td><td class='preformatted'>
-Фактически нужно сдвинуть на 1
+<td>1</td><td>q w e r t y</td><td>1</td><td class='preformatted'>Фактически нужно сдвинуть на 1
 y q w e r t </td></tr>
 <tr>
-<td>2</td><td>q w e r t y</td><td>3</td><td class='preformatted'>
-Фактически нужно сдвинуть на 3
+<td>2</td><td>q w e r t y</td><td>3</td><td class='preformatted'>Фактически нужно сдвинуть на 3
 r t y q w e </td></tr>
 <tr>
-<td>3</td><td>a s d f</td><td>2</td><td class='preformatted'>
-Фактически нужно сдвинуть на 2
+<td>3</td><td>a s d f</td><td>2</td><td class='preformatted'>Фактически нужно сдвинуть на 2
 d f a s </td></tr>
 <tr>
-<td>4</td><td>q w e r t y</td><td>6</td><td class='preformatted'>
-Фактически нужно сдвинуть на 6
+<td>4</td><td>q w e r t y</td><td>6</td><td class='preformatted'>Фактически нужно сдвинуть на 6
 q w e r t y </td></tr>
 <tr>
-<td>5</td><td>q w e r t y</td><td>8</td><td class='preformatted'>
-Фактически нужно сдвинуть на 2
+<td>5</td><td>q w e r t y</td><td>8</td><td class='preformatted'>Фактически нужно сдвинуть на 2
 t y q w e r </td></tr>
 <tr>
-<td>6</td><td>a s d f</td><td>5</td><td class='preformatted'>
-Фактически нужно сдвинуть на 1
+<td>6</td><td>a s d f</td><td>5</td><td class='preformatted'>Фактически нужно сдвинуть на 1
 f a s d </td></tr>
 <tr>
-<td>7</td><td>q w e r t y</td><td>99</td><td class='preformatted'>
-Фактически нужно сдвинуть на 3
+<td>7</td><td>q w e r t y</td><td>99</td><td class='preformatted'>Фактически нужно сдвинуть на 3
 r t y q w e </td></tr>
 <tr>
-<td>8</td><td>a s d f</td><td>10</td><td class='preformatted'>
-Фактически нужно сдвинуть на 2
+<td>8</td><td>a s d f</td><td>10</td><td class='preformatted'>Фактически нужно сдвинуть на 2
 d f a s </td></tr>
 <tr>
-<td>9</td><td>q w e r t y</td><td>0</td><td class='preformatted'>
-Фактически нужно сдвинуть на 0
+<td>9</td><td>q w e r t y</td><td>0</td><td class='preformatted'>Фактически нужно сдвинуть на 0
 q w e r t y </td></tr>
 <tr>
-<td>10</td><td>q w e r t y</td><td>-1</td><td class='preformatted'>
-Фактически нужно сдвинуть на 5
+<td>10</td><td>q w e r t y</td><td>-1</td><td class='preformatted'>Фактически нужно сдвинуть на 5
 w e r t y q </td></tr>
 <tr>
-<td>11</td><td>q w e r t y</td><td>-2</td><td class='preformatted'>
-Фактически нужно сдвинуть на 4
+<td>11</td><td>q w e r t y</td><td>-2</td><td class='preformatted'>Фактически нужно сдвинуть на 4
 e r t y q w </td></tr>
 <tr>
-<td>12</td><td>q w e r t y</td><td>-3</td><td class='preformatted'>
-Фактически нужно сдвинуть на 3
+<td>12</td><td>q w e r t y</td><td>-3</td><td class='preformatted'>Фактически нужно сдвинуть на 3
 r t y q w e </td></tr>
 <tr>
-<td>13</td><td>q w e r t y</td><td>-9</td><td class='preformatted'>
-Фактически нужно сдвинуть на 3
+<td>13</td><td>q w e r t y</td><td>-9</td><td class='preformatted'>Фактически нужно сдвинуть на 3
 r t y q w e </td></tr>
 <tr>
-<td>14</td><td>q w e r t y</td><td>-6</td><td class='preformatted'>
-Фактически нужно сдвинуть на 0
+<td>14</td><td>q w e r t y</td><td>-6</td><td class='preformatted'>Фактически нужно сдвинуть на 0
 q w e r t y </td></tr>
 <tr>
-<td>15</td><td>q w e r t y</td><td>-7</td><td class='preformatted'>
-Фактически нужно сдвинуть на 5
+<td>15</td><td>q w e r t y</td><td>-7</td><td class='preformatted'>Фактически нужно сдвинуть на 5
 w e r t y q </td></tr>
 </table>
 </div>
@@ -723,4 +711,4 @@ z
 </td></tr>
 </table>
 </div>
-Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
