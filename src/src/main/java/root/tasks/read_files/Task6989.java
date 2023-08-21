@@ -23,10 +23,10 @@ public class Task6989 extends OneInputValLayout {
         );
         appendTaskDescEscaped("Пользователь вводит число - идентификатор композитора. Нужно вывести имя, фамилию и место рождения композитора, у которого идентификатор равен введенному числу. Если композитор с нужным идентификатором отсутствует, сообщить об этом.");
         appendCheckValuesHeader("composer_id", "ссылка на файл");
-        appendCheckValuesRow("9");
-        appendCheckValuesRow("6");
-        appendCheckValuesRow("3");
-        appendCheckValuesRow("2");
+        appendCheckValuesRow("88");
+        appendCheckValuesRow("85");
+        appendCheckValuesRow("81");
+        appendCheckValuesRow("82");
         appendCheckValuesRow("404");
         appendCheckValuesRow("composer_id");
         appendCheckValuesFooter();
@@ -55,6 +55,7 @@ public class Task6989 extends OneInputValLayout {
             }
             if (!found) {
                 System.out.println("Композитор с кодом " + employeeId + " не найден");
+                        //почему то файлы не обнаруживаются
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Файл '" + target.getAbsolutePath() + "' не существует");
