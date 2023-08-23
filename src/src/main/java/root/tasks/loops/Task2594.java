@@ -19,6 +19,7 @@ public class Task2594 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит строку (X). Вывести эту строку 7 раз в строчку. Написать кавычки слева и справа от результата.");
         appendCheckValuesHeader("X");
+        appendCheckValuesRow("string");
         appendCheckValuesRow("#");
         appendCheckValuesRow("a");
         appendCheckValuesRow("w");
@@ -26,5 +27,6 @@ public class Task2594 extends OneInputValLayout {
         appendCheckValuesRow("qq");
         appendCheckValuesFooter();
         appendFooter();
+        appendTaskDescEscaped("В этой задаче счётчик не выводится на экран. Однако он все равно нужен, чтобы компьютер понимал сколько раз он повторил команду вывода и мог вовремя остановиться.");
     }
 }

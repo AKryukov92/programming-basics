@@ -332,22 +332,6 @@ public class Lab06 {
         return String.format("Сумма чисел: %d, Количество чисел: %d", sum, count);
     }
 
-    public static int task8731(String str)
-    {
-        String[] raw = str.split(" ");
-        int sum = 0;
-        int index = 0;
-        int current;
-        do
-        {
-            current = Integer.parseInt(raw[index]);
-            sum += current;
-            index++;
-        }
-        while (sum <= 1000);
-        return index;
-    }
-
     public static String task4082(String str)
     {
         String[] raw = str.split(" ");

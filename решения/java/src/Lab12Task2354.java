@@ -110,23 +110,6 @@ public class Lab12Task2354 {
         System.out.printf("%d (%d)\n", Lab06.task6580(3000, 24), 9004496176L);
     }
 
-    private static void Step8731() {
-        System.out.println();
-        System.out.println("8731");
-        String[] in8731 = {
-                "501 501",
-                "0 0 1001",
-                "400 400 200 1",
-                "190 190 190 190 190 190 190 190 190 190 190",
-                "130 130 130 130 130 130 130 130 130 130 130",
-                "129 179 89 155 188 163 94 66"};
-        int[] out8731 = {2, 3, 4, 6, 8, 8};
-        for (int i = 0; i < in8731.length; i++) {
-            int result = Lab06.task8731(in8731[i]);
-            System.out.printf("%d (%d)\n", result, out8731[i]);
-        }
-    }
-
     private static void Step4082() {
         System.out.println();
         System.out.println("4082");
