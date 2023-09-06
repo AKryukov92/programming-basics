@@ -3,7 +3,7 @@ package root.tasks.exceptions;
 import root.tasks.MethodsDictationHelper;
 import root.tasks.TwoInputValLayout;
 
-public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHelper {
+public class TaskJava9058 extends TwoInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
@@ -11,12 +11,10 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
         appendOrderedNonEscaped(
                 implementStatic("Library", "Task3943"),
                 "Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.",
-                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
-                "Создайте проект Runner3943.",
-                "В проекте Runner3943 добавьте ссылку на проект CodeProject.",
-                "Добавьте команду using пространства имен из проекта CodeProject."
+                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.",
+                "Создайте класс Runner3943, реализуйте в нем метод main."
         );
-        appendSubheading("Реализуйте метод Main");
+        appendSubheading("Реализуйте метод main");
         appendOrderedNonEscaped(
                 "Выведите сообщение \"Начало работы программы\".",
                 "Выведите в консоль сообщение \"Введите значения x и y\"",
@@ -32,11 +30,11 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
         appendCheckValuesHeader("x", "y");
         appendCheckValuesRowNoLogic("-5", "81",
                 "Начало работы программы\n" +
-                "Введите значения x и y\n" +
-                "-5\n" +
-                "81\n" +
-                "Результат равен -10.0000\n" +
-                "Конец работы программы");
+                        "Введите значения x и y\n" +
+                        "-5\n" +
+                        "81\n" +
+                        "Результат равен -10.0000\n" +
+                        "Конец работы программы");
         appendCheckValuesRowNoLogic("13", "36",
                 "Начало работы программы\n" +
                         "Введите значения x и y\n" +
@@ -46,30 +44,32 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
                         "Конец работы программы");
         appendCheckValuesRowNoLogic("-20", "36",
                 "Начало работы программы\n" +
-                "Введите значения x и y\n" +
-                "-20\n" +
-                "36\n" +
-                "Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно\n" +
-                "   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Library.cs:line 206\n" +
-                "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
+                        "Введите значения x и y\n" +
+                        "-20\n" +
+                        "36\n" +
+                        "Exception in thread \"main\" java.lang.IllegalArgumentException:\n" +
+                        "    Подкоренное выражение должно быть неотрицательно\n" +
+                        "\tat Library.task3943(Library.java:6)\n" +
+                        "\tat Runner3943.main(Runner3943.java:36)");
         appendCheckValuesRowNoLogic("20", "-50",
                 "Начало работы программы\n" +
                         "Введите значения x и y\n" +
                         "20\n" +
                         "-50\n" +
-                        "Unhandled Exception: System.ArgumentException: Значение y должно быть неотрицательным\n" +
-                        "   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\\Stage2\\CodeProject\\Library.cs:line 210\n" +
-                        "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
+                        "Exception in thread \"main\" java.lang.IllegalArgumentException:\n" +
+                        "    Значение y должно быть неотрицательным\n" +
+                        "\tat Library.task3943(Library.java:6)\n" +
+                        "\tat Runner3943.main(Runner3943.java:36)");
         appendCheckValuesRowNoLogic("word", "",
                 "Начало работы программы\n" +
-                "Введите значения x и y\n" +
-                "word\n" +
-                "Unhandled Exception: System.FormatException: Input string was not in a correct format.\n" +
-                "   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number,\n" +
-                "      NumberFormatInfo info, Boolean parseDecimal)\n" +
-                "   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n" +
-                "   at System.Int32.Parse(String s)\n" +
-                "   at Lab13Task3943.Program.Main(String[] args) in E:\\Stage2\\Lab13Task3943\\Program.cs:line 15");
+                        "Введите значения x и y\n" +
+                        "word\n" +
+                        "Exception in thread \"main\" java.util.InputMismatchException\n" +
+                        "    at java.util.Scanner.throwFor(Scanner.java:864)\n" +
+                        "    at java.util.Scanner.next(Scanner.java:1485)\n" +
+                        "    at java.util.Scanner.nextInt(Scanner.java:2117)\n" +
+                        "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
+                        "    at Runner1934.main(Runner3943.java:35)");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");
         appendOrderedNonEscaped(
@@ -119,6 +119,6 @@ public class TaskCs9058 extends TwoInputValLayout implements MethodsDictationHel
     }
 
     public static void main(String[] args) {
-        System.out.println(new TaskCs9058());
+        System.out.println(new TaskJava9058());
     }
 }

@@ -12,12 +12,6 @@ namespace Lab13Task3943
         static void Main(string[] args)
         {
             Console.WriteLine("Начало работы программы");
-            Step3943();
-            Console.WriteLine("Конец работы программы");
-        }
-
-        static void Step3943()
-        {
             Console.WriteLine("Введите значения x и y");
             try
             {
@@ -35,6 +29,7 @@ namespace Lab13Task3943
                 Console.WriteLine("Не удалось вычислить результат");
                 Console.WriteLine(ex.Message);
             }
+            Console.WriteLine("Конец работы программы");
         }
     }
 }

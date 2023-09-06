@@ -14,7 +14,13 @@ namespace Lab13Task1934
             Console.WriteLine("Начало работы программы");
             try
             {
-                Step1934();
+                Console.WriteLine("Введите значения A и B");
+                int a, b;
+                a = int.Parse(Console.ReadLine());
+                b = int.Parse(Console.ReadLine());
+                double result;
+                result = Methods.Task1934(a, b);
+                Console.WriteLine("Результат равен {0:F4}", result);
                 Console.WriteLine("Программа завершена успешно");
             }
             catch (FormatException ex)
@@ -25,17 +31,6 @@ namespace Lab13Task1934
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-
-        static void Step1934()
-        {
-            Console.WriteLine("Введите значения A и B");
-            int a, b;
-            a = int.Parse(Console.ReadLine());
-            b = int.Parse(Console.ReadLine());
-            double result;
-            result = Methods.Task1934(a, b);
-            Console.WriteLine("Результат равен {0:F4}", result);
         }
     }
 }

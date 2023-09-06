@@ -121,13 +121,6 @@ public class Lab02 {
         return m * g * Math.cos(a * Math.PI / 180);
     }
 
-    public static double task9354(int a, int b, int c) {
-        if (a == 0) {
-            throw new IllegalArgumentException(String.format("Уравнение y=%dx^2+%dx+%d не является квадратным", a, b, c));
-        }
-        return b * b - 4 * a * c;
-    }
-
     public static void task9130(double planetMass, double satelliteMass, double radius){
         if (radius <= 0){
             System.out.println("Радиус планеты должен быть положительным");

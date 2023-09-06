@@ -360,7 +360,6 @@ public class Application {
                 .addTask(9622)
                 .addCitation("link_c3_p12.1")
                 .addTask(7799)
-                .addTask(9354)
                 .addTask(3591)
                 .addTask(9130)
                 .addTask(5895)
@@ -1001,25 +1000,27 @@ public class Application {
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
         ;
         if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs7740());
+            taskBook.addExample(new TaskCs7740());//обработка не-чисел
         } else if (taskBook.isJava()) {
-            taskBook.addExample(new TaskJava7740());
+            taskBook.addExample(new TaskJava7740());//обработка не-чисел
         }
         taskBook
-                .addTask(new Task1439())
+                .addTask(new Task1439())//обработка не-чисел
                 .addTask(new Task5101())//подсчет количества в файле
                 .addTask(new Task8733())//среднее арифметическое в файле
-                .addTask(8139)
-                .addTask(5014)
+                .addTask(8139)//чтение файла, подсчет количества особенных, обработка не-чисел
+                .addTask(5014)//чтение файла, вывод первого и остальных, обработка не-чисел
         ;
         if (taskBook.isCsharp()) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
-                    .addExample(new TaskCs5259())
-                    .addTask(new TaskCs9058())
+                    .addExample(new TaskCs9354())//вызов метода, выбрасывание исключения
+                    .addTask(new TaskCs5259())//вызов метода, выбрасывание исключения, расстановка try/catch
+                    .addTask(new TaskCs9058())//вызов метода, выбрасывание исключения, расстановка try/catch
             ;
         } else if (taskBook.isJava()) {
             taskBook.withGroup("Выбрасывание исключения, проверка в консольной программе")
-                    .addExample(new TaskJava5259())
+                    .addExample(new TaskJava9354())//вызов метода, выбрасывание исключения
+                    .addExample(new TaskJava5259())//вызов метода, выбрасывание исключения, расстановка try/catch
             //.addTask(3943)
             ;
         } else {
@@ -1034,7 +1035,6 @@ public class Application {
                 .addExample(9020)
                 .addTask(5871)
                 .addTask(7799)
-                .addTask(9354)
                 .addTask(5170)
                 .addTask(7891)
 

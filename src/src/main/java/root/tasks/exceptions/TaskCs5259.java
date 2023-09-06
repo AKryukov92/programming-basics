@@ -14,27 +14,22 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
                 "Создайте проект Runner1934.",
                 "В проекте Runner1934 добавьте ссылку на проект CodeProject.",
-                "Добавьте команду using пространства имен из проекта CodeProject.",
-                "Создайте ещё один метод в классе Program проекта Runner1934. Назовите его Step1934. Он ничего не возвращает и не принимает аргументов."
+                "Добавьте команду using пространства имен из проекта CodeProject."
         );
-        appendSubheading("Реализуйте метод Step1934");
+        appendSubheading("Реализуйте метод Main");
         appendOrderedNonEscaped(
+                "Выведите сообщение \"Начало работы программы\".",
                 "Выведите в консоль сообщение \"Введите значения A и B\".",
                 "Объявите переменные a и b для хранения целых чисел.",
                 "Инициализируйте переменные a и b значениями, полученными из консоли.",
                 "Объявите переменную result для хранения действительных чисел.",
                 "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
                 "Результат вызова метода запишите в переменную result.",
-                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой."
-        );
-        appendSubheading("Оформите метод Main");
-        appendOrderedNonEscaped(
-                "Выведите сообщение \"Начало работы программы\".",
-                "Вызовите метод Step1934.",
+                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой.",
                 "Выведите сообщение \"Программа завершена успешно\".",
                 "В результате запуска проекта Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
         );
-        appendSubheading("Проверьте, что метод выбрасывает исключения");
+        appendSubheading("Проверьте, что метод выбрасывает необработанные исключения");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRowNoLogic("5", "-11",
                 "Начало работы программы\n" +
@@ -56,7 +51,6 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "15\n" +
                 "Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно\n" +
                 "   at CodeProject.Library.Task1934(Int32 a, Int32 b) in E:\\Stage2\\CodeProject\\Library.cs:line 197\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 24\n" +
                 "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
         appendCheckValuesRowNoLogic("word", "4", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
@@ -66,7 +60,6 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)\n" +
                 "   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n" +
                 "   at System.Int32.Parse(String s)\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 23\n" +
                 "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
         appendCheckValuesRowNoLogic("11", "incorrect", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
@@ -77,7 +70,6 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)\n" +
                 "   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)\n" +
                 "   at System.Int32.Parse(String s)\n" +
-                "   at Runner1934.Program.Step1934() in E:\\Stage2\\Runner1934\\Program.cs:line 24\n" +
                 "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");

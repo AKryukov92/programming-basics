@@ -6,7 +6,7 @@ public class TaskJava1606 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Прочитайте условие задачи. Оно совпадает с условием в задаче " + linkToTask(7040) + "");
+        appendSubheading("Прочитайте условие задачи. Оно совпадает с условием в задаче " + linkToTask(7040));
         appendTaskDescEscaped(
                 "Даны три числа. Первые два обозначают левую и правую границы интервала." +
                         " Нужно проверить, попадает ли третье число в описанный интервал." +

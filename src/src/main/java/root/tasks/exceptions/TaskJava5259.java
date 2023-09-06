@@ -14,24 +14,20 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Создайте метод main в классе Runner1934 по аналогии с методами main из задач прошлых практических.",
                 "Создайте еще один метод в классе Runner1934. Назовите его step1934. Он ничего не возвращает и не принимает аргументов."
         );
-        appendSubheading("Реализуйте метод step1934");
+        appendSubheading("Реализуйте метод Main");
         appendOrderedNonEscaped(
+                "Выведите сообщение \"Начало работы программы\".",
                 "Выведите в консоль сообщение \"Введите значения A и B\".",
                 "Объявите переменные a и b для хранения целых чисел.",
                 "Инициализируйте переменные a и b значениями, полученными из консоли.",
                 "Объявите переменную result для хранения действительных чисел.",
                 "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
                 "Результат вызова метода запишите в переменную result.",
-                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой."
-        );
-        appendSubheading("Оформите метод Main");
-        appendOrderedNonEscaped(
-                "Выведите сообщение \"Начало работы программы\".",
-                "Вызовите метод step1934.",
+                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой.",
                 "Выведите сообщение \"Программа завершена успешно\".",
                 "В результате запуска метода main класса Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
         );
-        appendSubheading("Проверьте, что метод выбрасывает исключения");
+        appendSubheading("Проверьте, что метод выбрасывает необработанные исключения");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRowNoLogic("5", "-11",
                 "Начало работы программы\n" +
@@ -54,7 +50,6 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Exception in thread \"main\" java.lang.IllegalArgumentException:\n" +
                 "    Подкоренное выражение должно быть неотрицательно\n" +
                 "\tat Library.task1934(Library.java:6)\n" +
-                "\tat Runner1934.step1934(Runner1934.java:50)\n" +
                 "\tat Runner1934.main(Runner1934.java:36)");
         appendCheckValuesRowNoLogic("word", "4", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
@@ -64,7 +59,6 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "    at java.util.Scanner.next(Scanner.java:1485)\n" +
                 "    at java.util.Scanner.nextInt(Scanner.java:2117)\n" +
                 "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
-                "    at Runner1934.step1934(Runner1934.java:42)\n" +
                 "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesRowNoLogic("11", "incorrect", "Начало работы программы\n" +
                 "Введите значения A и B\n" +
@@ -75,7 +69,6 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "    at java.util.Scanner.next(Scanner.java:1485)\n" +
                 "    at java.util.Scanner.nextInt(Scanner.java:2117)\n" +
                 "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
-                "    at Runner1934.step1934(Runner1934.java:43)\n" +
                 "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesFooter();
         appendSubheading("Обработайте исключения");
@@ -99,9 +92,9 @@ public class TaskJava5259 extends TwoInputValLayout {
 
     @Override
     protected void logic(String firstValue, String secondValue) {
-        System.out.println("Начало работы программы");
-        System.out.println("Введите значения A и B");
         try {
+            System.out.println("Начало работы программы");
+            System.out.println("Введите значения A и B");
             double a = Double.parseDouble(firstValue);
             double b = Double.parseDouble(secondValue);
             double result = task1934(a, b);

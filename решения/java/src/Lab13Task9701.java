@@ -212,24 +212,6 @@ public class Lab13Task9701 {
         }
     }
 
-    private static void Step9354() {
-        System.out.println();
-        System.out.println("9354");
-        System.out.printf("%.4f (%.4f)\n", Lab02.task9354(7247, 7243, 7229), -157093203.);
-        System.out.printf("%.4f (%.4f)\n", Lab02.task9354(7, 1, 3), -83.);
-        System.out.printf("%.4f (%.4f)\n", Lab02.task9354(-11, -13, -17), -579.0);
-        try {
-            Lab02.task9354(0, 1, 3);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-        try {
-            Lab02.task9354(0, 1000, 2000);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
     private static void Step2802() {
         System.out.println();
         System.out.println("2802");
