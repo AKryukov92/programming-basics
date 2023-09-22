@@ -39,6 +39,7 @@ public class Task1845 extends StreamInputLayout {
         );
         appendCheckValuesFooter();
         appendFooter();
+        throw new RuntimeException("смещенный вывод");
     }
 
     @Override

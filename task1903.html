@@ -97,7 +97,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.stream_values tr:nth-child(2) td:nth-child(3) {
+.stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:right;
@@ -112,10 +112,19 @@ table td, table th {
     border-bottom-width:0px;
     text-align:right;
 }
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
 .stream_values tr td:nth-child(2){
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
 }
 .check_values tr:target {
     background-color:lightgrey;
@@ -216,14 +225,22 @@ zoom{
 <th>Исходные данные</th>
 <th>Результат</th>
 </tr>
-<tr><td rowspan="8"></td><td>7</td><td></td></tr>
-<tr><td></td><td>Пользователь ввёл 7 после прибавления 7 получается 14</td></tr>
+<tr class='test_row'><td rowspan='8'>1</td><td>7</td><td></td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 7 после прибавления 7 получается 14</td></tr>
 <tr><td>12</td><td></td></tr>
-<tr><td></td><td>Пользователь ввёл 12 после прибавления 7 получается 19</td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 12 после прибавления 7 получается 19</td></tr>
 <tr><td>23</td><td></td></tr>
-<tr><td></td><td>Пользователь ввёл 23 после прибавления 7 получается 30</td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 23 после прибавления 7 получается 30</td></tr>
 <tr><td>-7</td><td></td></tr>
-<tr><td></td><td>Число -7 не больше 0, завершаю программу</td></tr>
+<tr><td></td><td class='preformatted'>Число -7 не больше 0, завершаю программу</td></tr>
+<tr class='test_row'><td rowspan='8'>2</td><td>7</td><td></td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 7 после прибавления 7 получается 14</td></tr>
+<tr><td>12</td><td></td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 12 после прибавления 7 получается 19</td></tr>
+<tr><td>23</td><td></td></tr>
+<tr><td></td><td class='preformatted'>Пользователь ввёл 23 после прибавления 7 получается 30</td></tr>
+<tr><td>-7</td><td></td></tr>
+<tr><td></td><td class='preformatted'>Число -7 не больше 0, завершаю программу</td></tr>
 </table>
 
 <table class='check_values'>

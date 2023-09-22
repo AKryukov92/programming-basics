@@ -2,11 +2,13 @@ package root.tasks.calculations;
 
 import root.tasks.OneInputValLayout;
 
-public class Task4411 extends OneInputValLayout {
+public class TaskCs4411 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры.");
+        appendTaskDescEscaped("Команда для решения этой задачи выглядит так:");
+        appendCheckSingleNonEscaped("Console.WriteLine(\"Меня зовут {0}, {1} {0}\", lastName, firstName);");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("11.13");
         appendCheckValuesRow("-7919");

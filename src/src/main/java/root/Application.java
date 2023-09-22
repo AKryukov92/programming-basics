@@ -287,7 +287,13 @@ public class Application {
     private static void fillBasicCalculations(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab02")
                 .withGroup("Операторы и операнды")
-                .addExampleWithManual(new Task4411())//преобразование в число, простая арифметика, вывод с нужной точностью
+        ;
+        if (taskBook.isCsharp()) {
+            taskBook.addExampleWithManual(new TaskCs4411());//преобразование в число, простая арифметика, вывод с нужной точностью
+        } else if (taskBook.isJava()) {
+            taskBook.addExampleWithManual(new TaskJava4411());//преобразование в число, простая арифметика, вывод с нужной точностью
+        }
+        taskBook
                 .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
                 .addTask(new Task1976())//диктант
                 .addTask(new Task3435())//обратное действие, нужно вывести формулу из задачи про радианы
@@ -916,7 +922,6 @@ public class Application {
     private static void unitTesting(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
-                .addCitation("link_c2_p7")
                 .addCitation("info01")
                 .withGroup("Проверка вспомогательной программой")
         ;
@@ -927,6 +932,10 @@ public class Application {
                     .addTask(new TaskJava8813())
                     .addTask(new TaskJava5823())
                     .addTask(new TaskJava2772())
+                    .addCitation("link_c2_p7.1")
+
+                    .addExample(new TaskCs7611())
+                    .addTask(new TaskCs4776())
             ;
         } else if (taskBook.isCsharp()) {
             taskBook
@@ -934,24 +943,13 @@ public class Application {
                     .addTask(new TaskCs8813())
                     .addTask(new TaskCs5823())
                     .addTask(new TaskCs2772())
+                    .addCitation("link_c2_p7.1")
+
+                    .addExample(new TaskJava7611())
+                    .addTask(new TaskJava4776())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
-        taskBook
-                .addCitation("link_c2_p7.1")
-
-                .withGroup("Проверка юнит-тестами")
-                .addExample(4411)
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook
-                    .addTask(new TaskCs4776())
-            ;
-        } else if (taskBook.isJava()) {
-            taskBook
-                    .addTask(new TaskJava4776())
-            ;
         }
         taskBook
                 .addTask(5662)
@@ -1237,7 +1235,6 @@ public class Application {
 //                .addTask(9641)
 //                .addTask(2025)
 //                .addTask(7407)
-//                .addTask(7611)
         ;
     }
 
