@@ -54,7 +54,7 @@ public class Task7621 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит данные - числа, разделенные пробелом. Вычислить сумму элементов на индексах 0, 1, 3, 4. Если элемент отсутствует, то вывести сообщение \"Нет элемента на индексе X\"");
         appendCheckValuesHeader("data");
-        appendCheckValuesRow("1 2 3 4 5 6");
+        appendCheckValuesRow("100000 20000 3000 400 50 6");
         appendCheckValuesRow("12 34 56 78 90");
         appendCheckValuesRow("123 234 345 456");
         appendCheckValuesRow("9876 5432 1987");

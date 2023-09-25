@@ -17,7 +17,7 @@ public class Task5951 extends OneInputValLayout {
         int sum = 0;
         System.out.println("Ход решения:");
         while (i <= 40) {
-            System.out.print(sum + " + " + i * i * i + " = ");
+            System.out.print("Куб числа " + i + " равен " + i * i * i + ". Промежуточный итог ");
             sum = sum + i * i * i;
             System.out.println(sum);
             i++;

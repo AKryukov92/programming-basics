@@ -96,10 +96,7 @@ table td, table th {
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target, .check_values_v2 tr:target {
-    background-color:lightgrey;
-}
-.stream_values tr:nth-child(2) td:nth-child(3) {
+.stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:right;
@@ -114,10 +111,19 @@ table td, table th {
     border-bottom-width:0px;
     text-align:right;
 }
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
 .stream_values tr td:nth-child(2){
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
 }
 formula {
 	font-weight:bold;

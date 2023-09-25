@@ -35,10 +35,10 @@ public abstract class StreamInputLayout extends LayoutMaker {
     }
 
     protected void appendCheckValuesRow(String... a) {
-        ListPrintStream lstPrinter = new ListPrintStream(writer);
+        ListPrintStream lstPrinter = new ListPrintStream(writer, Arrays.stream(a).iterator());
         PrintStream oldOut = System.out;
         System.setOut(lstPrinter);
-        logic(Arrays.stream(a).iterator());
+        logic(lstPrinter);
         System.setOut(oldOut);
         List<String> elements = lstPrinter.elements();
         writer.print("<tr class='test_row'>");
