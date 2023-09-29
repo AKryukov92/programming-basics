@@ -40,12 +40,20 @@ public class Task1036 extends StreamInputLayout {
             System.out.println("0123456");
             int move = Integer.parseInt(source.next());
             System.out.println(move);
-            if (move < 0 || move > 6) {
-                System.out.println("Укажите позицию от 0 до 6 включительно");
-                continue;
+            int allowedMin;
+            int allowedMax;
+            if (emptyPosition > 1) {
+                allowedMin = emptyPosition - 2;
+            } else {
+                allowedMin = 0;
             }
-            if (move < emptyPosition - 2 || emptyPosition + 2 < move || move == emptyPosition) {
-                System.out.printf("Укажите позицию от %d до %d, исключая %d\n", emptyPosition - 2, emptyPosition + 2, emptyPosition);
+            if (emptyPosition < 5) {
+                allowedMax = emptyPosition + 2;
+            } else {
+                allowedMax = 6;
+            }
+            if (move < allowedMin || allowedMax < move || move == emptyPosition) {
+                System.out.printf("Укажите позицию от %d до %d, исключая %d\n", allowedMin, allowedMax, emptyPosition);
                 continue;
             }
             state[emptyPosition] = state[move];

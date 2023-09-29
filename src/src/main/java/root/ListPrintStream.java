@@ -1,14 +1,14 @@
 package root;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
+import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.CharBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class ListPrintStream extends PrintStream implements Iterator<String> {
+public class ListPrintStream extends PrintStream implements Readable {
     List<String> lst = new ArrayList<>();
     Iterator<String> inputs;
     String current = "";
@@ -30,33 +30,31 @@ public class ListPrintStream extends PrintStream implements Iterator<String> {
 
     @Override
     public void println(int x) {
-        throw new NotImplementedException();
-        lst.add(String.valueOf(x));
+        current += x + "\n";
     }
 
     @Override
     public void println(double x) {
-        lst.add(String.valueOf(x));
+        current += x + "\n";
     }
 
     @Override
     public void flush() {
-        for(String s : lst) {
-            super.println(s);
+        for (String s : lst) {
+            super.print(s);
         }
     }
-    public List<String> elements() {
+
+    public List<String> outputs() {
         return Collections.unmodifiableList(lst);
     }
 
     @Override
-    public boolean hasNext() {
-        return inputs.hasNext();
-    }
-
-    @Override
-    public String next() {
-        addToPrevious = false;
-        return inputs.next();
+    public int read(CharBuffer cb) throws IOException {
+        lst.add(current);
+        current = "";
+        String next = inputs.next();
+        cb.put(next);
+        return next.length();
     }
 }
