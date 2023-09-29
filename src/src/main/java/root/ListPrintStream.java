@@ -25,7 +25,7 @@ public class ListPrintStream extends PrintStream implements Readable {
 
     @Override
     public void println(String x) {
-        current += x;
+        current += x + "\n";
     }
 
     @Override
@@ -51,10 +51,16 @@ public class ListPrintStream extends PrintStream implements Readable {
 
     @Override
     public int read(CharBuffer cb) throws IOException {
-        lst.add(current);
-        current = "";
-        String next = inputs.next();
-        cb.put(next);
-        return next.length();
+        if (!current.isEmpty()) {
+            lst.add(current);
+            current = "";
+        }
+        if (inputs.hasNext()) {
+            String next = inputs.next() + " ";
+            cb.put(next);
+            return next.length();
+        } else {
+            return 0;
+        }
     }
 }

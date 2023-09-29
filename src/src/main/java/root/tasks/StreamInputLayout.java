@@ -4,12 +4,10 @@ import root.ListPrintStream;
 
 import java.io.PrintStream;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 public abstract class StreamInputLayout extends LayoutMaker {
     private int testCounter = 0;
-    protected abstract void logic(Iterator<String> source);
 
     protected abstract void logic(Readable stream);
 

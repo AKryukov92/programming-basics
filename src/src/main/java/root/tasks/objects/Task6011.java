@@ -33,8 +33,8 @@ public class Task6011 extends MultipleInputValLayout implements MethodsDictation
         a.y = Integer.parseInt(args[1]);
         b.x = Integer.parseInt(args[2]);
         b.y = Integer.parseInt(args[3]);
-        System.out.printf("Координаты точки A(%.4f,%.4f)\n", a.x, a.y);
-        System.out.printf("Координаты точки B(%.4f%.4f)\n", b.x, b.y);
+        System.out.printf("Координаты точки (%.4f,%.4f)\n", a.x, a.y);
+        System.out.printf("Координаты точки (%.4f%.4f)\n", b.x, b.y);
         System.out.printf("Расстояние между точками равно " + Point.distanceBetween(a, b));
     }
 

@@ -30,8 +30,8 @@ public class Task5789 extends MultipleInputValLayout {
         int ay = Integer.parseInt(args[1]);
         int bx = Integer.parseInt(args[2]);
         int by = Integer.parseInt(args[3]);
-        System.out.printf("Координаты точки A(%d,%d)\n", ax, ay);
-        System.out.printf("Координаты точки B(%d,%d)\n", bx, by);
+        System.out.printf("Координаты точки (%d,%d)\n", ax, ay);
+        System.out.printf("Координаты точки (%d,%d)\n", bx, by);
         System.out.printf("Расстояние между точками равно " + Point.distanceBetween(ax, ay, bx, by));
     }
 

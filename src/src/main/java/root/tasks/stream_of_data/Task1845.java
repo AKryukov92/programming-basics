@@ -18,12 +18,6 @@ public class Task1845 extends StreamInputLayout {
         appendCheckValuesRow("17,55,1,127,2,93,125,15,-9".split(","));
         appendCheckValuesFooter();
         appendFooter();
-        throw new RuntimeException("смещенный вывод");
-    }
-
-    @Override
-    protected void logic(Iterator<String> source) {
-
     }
 
     @Override
