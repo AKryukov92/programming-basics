@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task9126 extends StreamInputLayout {
     @Override
@@ -18,7 +18,8 @@ public class Task9126 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner source = new Scanner(Systemin);
         int start = 0, end = Integer.MAX_VALUE;
         int steps = 0;
         while (end - start > 1) {

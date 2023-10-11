@@ -2,7 +2,7 @@ package root.tasks.arrays;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task1737 extends StreamInputLayout {
     @Override
@@ -19,22 +19,25 @@ public class Task1737 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
-        if (source.hasNext()) {
-            int size = Integer.parseInt(source.next());
-            System.out.println("Создаю массив размером " + size);
-            String[] arr = new String[size];
-            int i = 0;
-            while(i < size) {
-                arr[i] = source.next();
-                i++;
-            }
-            System.out.println("Получился массив:");
-            i = 0;
-            while (i < arr.length) {
-                System.out.print(arr[i] + " ");
-                i++;
-            }
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
+        int size = Integer.parseInt(s.next());
+        if (size == 0) {
+            System.out.println("Размер массива должен быть числом больше 0.");
+            return;
+        }
+        System.out.println("Создаю массив размером " + size);
+        String[] arr = new String[size];
+        int i = 0;
+        while (i < size) {
+            arr[i] = s.next();
+            i++;
+        }
+        System.out.println("Получился массив:");
+        i = 0;
+        while (i < arr.length) {
+            System.out.print(arr[i] + " ");
+            i++;
         }
     }
 

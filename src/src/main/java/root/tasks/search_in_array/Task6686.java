@@ -2,7 +2,7 @@ package root.tasks.search_in_array;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task6686 extends StreamInputLayout {
     @Override
@@ -22,7 +22,8 @@ public class Task6686 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner source = new Scanner(Systemin);
         int a = Integer.parseInt(source.next());
         int b = Integer.parseInt(source.next());
         int max;

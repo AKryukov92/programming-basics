@@ -23,19 +23,22 @@ public class Task3146 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner console = new Scanner(Systemin);
         HashMap<String, Integer> amountByName = new HashMap<>();
         HashMap<Integer, Set<String>> namesByAmount = new HashMap<>();
-        String filename = source.next();
+        String filename = console.next();
         File target = new File("./files/" + filename);
-        try (Scanner s = new Scanner(target)) {
-            while (s.hasNext()) {
-                String current = s.nextLine();
+        try (Scanner file = new Scanner(target)) {
+            while (file.hasNext()) {
+                String current = file.nextLine();
                 System.out.println("Обрабатываю слово " + current);
                 int newAmount;
                 if (amountByName.containsKey(current)) {
                     newAmount = amountByName.get(current) + 1;
+                    System.out.println("Это известное слово. Текущее количество повторений " + newAmount);
                 } else {
+                    System.out.println("Это новое слово. Текущее количество повторений " + 1);
                     newAmount = 1;
                 }
                 amountByName.put(current, newAmount);
@@ -63,12 +66,15 @@ public class Task3146 extends StreamInputLayout {
                 }
             }
             System.out.println("Обработка файла завершена.");
-            while (source.hasNext()) {
+            for (Map.Entry<String, Integer> e : amountByName.entrySet()) {
+                System.out.println("Слово " + e.getKey() + " повторяется " + e.getValue() + " раз");
+            }
+            while (console.hasNext()) {
                 System.out.println("Введите число");
-                int n = Integer.parseInt(source.next());
+                int n = Integer.parseInt(console.next());
                 if (namesByAmount.containsKey(n)) {
                     Set<String> names = namesByAmount.get(n);
-                    if (names.isEmpty()){
+                    if (names.isEmpty()) {
                         System.out.println("Нет слов, которые бы встречались " + n + " раз.");
                     } else {
                         System.out.println("Слова, которые встречаются " + n + " раз: " + String.join(" ", names));

@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task2733 extends StreamInputLayout {
 
@@ -23,11 +23,12 @@ public class Task2733 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
-        int current = Integer.parseInt(source.next());
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
+        int current = Integer.parseInt(s.next());
         while (current <= 0) {
             System.out.println("Было введено " + current + ". Нужно ввести число больше 0.");
-            current = Integer.parseInt(source.next());
+            current = Integer.parseInt(s.next());
         }
         int result = current * 3;
         System.out.println("Было введено " + current + ". Результат " + result);

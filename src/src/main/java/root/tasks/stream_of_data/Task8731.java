@@ -3,6 +3,7 @@ package root.tasks.stream_of_data;
 import root.tasks.StreamInputLayout;
 
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task8731 extends StreamInputLayout {
     @Override
@@ -21,7 +22,8 @@ public class Task8731 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner source = new Scanner(Systemin);
         int sum = 0;
         int count = 0;
         int current;

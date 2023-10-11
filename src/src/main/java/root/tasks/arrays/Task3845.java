@@ -2,7 +2,7 @@ package root.tasks.arrays;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task3845 extends StreamInputLayout {
     @Override
@@ -23,17 +23,18 @@ public class Task3845 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
         String[] arr = new String[10];
         int index = 0;
-        while (source.hasNext()) {
-            String cmd = source.next();
+        while (s.hasNext()) {
+            String cmd = s.next();
             if (cmd.equals("push") && index == 5) {
                 System.out.println("ПЕРЕПОЛНЕНИЕ");
                 return;
             }
             if (cmd.equals("push")) {
-                String value = source.next();
+                String value = s.next();
                 arr[index] = value;
                 System.out.println("На индекс " + index + " был записан элемент со значением " + arr[index]);
                 index++;

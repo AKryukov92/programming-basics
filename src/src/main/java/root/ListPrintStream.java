@@ -1,6 +1,5 @@
 package root;
 
-import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.CharBuffer;
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ListPrintStream extends PrintStream implements Readable {
-    List<String> lst = new ArrayList<>();
+    List<Either> outputs = new ArrayList<>();
     Iterator<String> inputs;
     String current = "";
 
@@ -20,6 +19,11 @@ public class ListPrintStream extends PrintStream implements Readable {
 
     @Override
     public void print(String x) {
+        current += x;
+    }
+
+    @Override
+    public void print(int x) {
         current += x;
     }
 
@@ -40,27 +44,69 @@ public class ListPrintStream extends PrintStream implements Readable {
 
     @Override
     public void flush() {
-        for (String s : lst) {
+        for (Either s : outputs) {
             super.print(s);
         }
     }
 
-    public List<String> outputs() {
-        return Collections.unmodifiableList(lst);
+    public List<Either> outputs() {
+        if (!current.isEmpty()) {
+            outputs.add(Either.right(current));
+            current = "";
+        }
+        while (inputs.hasNext()) {
+            outputs.add(Either.left(inputs.next()));
+        }
+        return Collections.unmodifiableList(outputs);
     }
 
     @Override
-    public int read(CharBuffer cb) throws IOException {
+    public int read(CharBuffer cb) {
         if (!current.isEmpty()) {
-            lst.add(current);
+            outputs.add(Either.right(current));
             current = "";
         }
         if (inputs.hasNext()) {
             String next = inputs.next() + " ";
+            outputs.add(Either.left(next));
             cb.put(next);
             return next.length();
         } else {
-            return 0;
+            return -1;
+        }
+    }
+
+    public static class Either {
+        public String left;
+        public String right;
+
+        public boolean isLeft() {
+            return left != null;
+        }
+
+        public boolean isRight() {
+            return right != null;
+        }
+
+        public static Either left(String val) {
+            Either e = new Either();
+            e.left = val;
+            return e;
+        }
+
+        public static Either right(String val) {
+            Either e = new Either();
+            e.right = val;
+            return e;
+        }
+
+        @Override
+        public String toString() {
+            if (left == null) {
+                return right;
+            } else {
+                return left;
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ public class Task3946 extends OneInputValLayout {
             sum += Integer.parseInt(arr[i]);
         }
         double avg = sum / arr.length;
-        System.out.printf("%.4f", avg);
+        System.out.printf("%.6f", avg);
     }
 
     public static void main(String[] args) {

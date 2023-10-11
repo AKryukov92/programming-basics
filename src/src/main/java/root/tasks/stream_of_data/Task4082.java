@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task4082 extends StreamInputLayout {
     @Override
@@ -20,21 +20,20 @@ public class Task4082 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
-        if (source.hasNext()) {
-            int current = Integer.parseInt(source.next());
-            int leftCnt = 0;
-            int rightCnt = 0;
-            while (current < 83 || 199 < current) {
-                if (current < 83) {
-                    leftCnt++;
-                }
-                if (199 < current) {
-                    rightCnt++;
-                }
-                System.out.println("Количество слева: " + leftCnt + ", количество справа: " + rightCnt);
-                current = Integer.parseInt(source.next());
+    protected void logic(Readable Systemin) {
+        Scanner source = new Scanner(Systemin);
+        int current = Integer.parseInt(source.next());
+        int leftCnt = 0;
+        int rightCnt = 0;
+        while (current < 83 || 199 < current) {
+            if (current < 83) {
+                leftCnt++;
             }
+            if (199 < current) {
+                rightCnt++;
+            }
+            System.out.println("Количество слева: " + leftCnt + ", количество справа: " + rightCnt);
+            current = Integer.parseInt(source.next());
         }
     }
 

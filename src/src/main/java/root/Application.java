@@ -8,9 +8,7 @@ import root.tasks.assertions.*;
 import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.*;
 import root.tasks.call_methods.*;
-import root.tasks.collections.Task8167;
-import root.tasks.collections.TaskJava5087;
-import root.tasks.collections.TaskJava8317;
+import root.tasks.collections.*;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
 import root.tasks.datetime.*;
@@ -45,6 +43,7 @@ import root.tasks.sorting.Task5541;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
+import root.tasks.write_files.Task7940;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -462,6 +461,7 @@ public class Application {
                 .addExample(new Task6066())//вывод подряд с ошибкой
                 .addTask(new Task1259())//повторить не более 20 раз
                 .addTask(new Task2565())//по убыванию с ошибкой
+                .addTask(new Task8722())//два столбца разной высоты
                 .addCitation("link_c4_p16.2")
                 .addTask(new Task2321())//вывод по возрастанию от меньшему к большему
                 .addTask(new Task5053())//вывод по возрастанию/убыванию
@@ -488,18 +488,9 @@ public class Application {
                 .addTask(new Task7150())//следующее предыдущее с подсчетом количества подряд
 
                 .withGroup("Условие внутри цикла")
-                .addExample(new Task7585())//линейный поиск
-                .addTask(new Task5522())//линейный поиск с двумя условиями
-                .addTask(new Task3488())//линейный поиск с логическим или
-                .addTask(new Task6028())//вычисление синуса и проверка результатов.
                 .addTask(new Task4264())//обнуление в условии
                 .addTask(new Task1483())//обнуление в условии неявное
                 .addTask(new Task3983())//перенос строки и обнуление
-                .addTask(new Task3519())//обнуление в зависимости от ввода
-                .addTask(new Task8770())//условие в цикле с добавлением else
-                .addTask(new Task2222())//подробный поиск делителей, цикл с нестандартным шагом
-                .addTask(new Task8418())//поиск делителей
-                .addTask(new Task8722())//два столбца разной высоты
 
                 .withGroup("Цикл после цикла или цикл с условием внутри")
                 // .addTask(4236)
@@ -529,6 +520,7 @@ public class Application {
                 .addTask(new Task6355())//вложенные циклы, счетчик увеличивается более чем на 1
 
                 .withGroup("Просто сложные задачи")
+                .addTask(new Task3519())//обнуление в зависимости от ввода
                 .addTask(new Task6332())//счетчик не видно
                 .addTask(7517)
                 .addTask(5448)
@@ -565,6 +557,7 @@ public class Application {
                 .addTask(new Task1223())
                 .addTask(new Task8311())
                 .addTask(new Task6563())
+                .addTask(new Task7295())//запись в массив по указанному индексу, бесконечный ввод
         ;
     }
 
@@ -669,6 +662,7 @@ public class Application {
                 .withGroup("Агрегат по группам")
                 .addTask(new Task7260())//сумма чисел в группах по 3
                 .addTask(5795)//сумма чисел на четных и на нечетных позициях
+                .addTask(new Task8167())//подсчет суммы. помнить последние 5 чисел
         ;
     }
 
@@ -683,7 +677,16 @@ public class Application {
                 .withGroup("Поиск конкретного элемента в массиве")
                 .addExample(new Task5694())//поиск неизвестного элемента в известном массиве
                 .addTask(new Task6806())//поиск в массиве
+                .addExample(new Task7585())//линейный поиск
+                .addTask(new Task5522())//линейный поиск с двумя условиями
+                .addTask(new Task8770())//условие в цикле с добавлением else
                 .addTask(new Task1708())//поиск, другое оформление
+
+                .withGroup("Поиск всех подходящих по условию")
+                .addTask(new Task3488())//линейный поиск с логическим или
+                .addTask(new Task2222())//подробный поиск делителей, цикл с нестандартным шагом
+                .addTask(new Task8418())//поиск делителей
+                .addTask(new Task6028())//вычисление синуса и проверка результатов.
 
                 .withGroup("Поиск в массиве и прерывание работы цикла")
                 .addExample(new Task2003())//return, отсутствие
@@ -1183,7 +1186,6 @@ public class Application {
                 .withGroup("Формирование листа");
         if (taskBook.isJava()) {
             taskBook.addExample(new TaskJava5087())
-                    .addTask(new Task8167())
                     .addTask(new TaskJava8317());
         } else {
             taskBook.addExample(5087);
@@ -1218,6 +1220,8 @@ public class Application {
                 .addTask(7738)
                 .addTask(7657)
                 .addTask(5108)
+                .addTask(new Task7940())//заполнение расписания, наполнение листа, поиск подходящих, сравнение интервалов
+                .addTask(new Task3146())//wordcount
 
                 .withGroup("Заполнение коллекции экземплярами классов из иерархии")
                 .addExample(3956)

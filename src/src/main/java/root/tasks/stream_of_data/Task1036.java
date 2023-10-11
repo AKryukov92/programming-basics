@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task1036 extends StreamInputLayout {
     @Override
@@ -30,16 +30,16 @@ public class Task1036 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
         boolean end = false;
         String[] state = "X_X_X_ _o_o_o".split("_");
         String[] standard = "o_o_o_ _X_X_X".split("_");
         int emptyPosition = 3;
-        while(!end && source.hasNext()) {
+        while(!end && s.hasNext()) {
             System.out.println(String.join("",state));
             System.out.println("0123456");
-            int move = Integer.parseInt(source.next());
-            System.out.println(move);
+            int move = Integer.parseInt(s.next());
             int allowedMin;
             int allowedMax;
             if (emptyPosition > 1) {

@@ -2,7 +2,7 @@ package root.tasks.arrays;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task9980 extends StreamInputLayout {
     @Override
@@ -19,7 +19,8 @@ public class Task9980 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
+    protected void logic(Readable Systemin) {
+        Scanner source = new Scanner(Systemin);
         String[] arr = "one,two,three,four,five".split(",");
         int i = Integer.parseInt(source.next());
         while (i > 0) {

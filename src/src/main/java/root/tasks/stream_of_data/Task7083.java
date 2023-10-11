@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task7083 extends StreamInputLayout {
     @Override
@@ -10,29 +10,8 @@ public class Task7083 extends StreamInputLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит неизвестное количество чисел. Проверить каждое введенное число, попадает ли оно в интервал от 30 до 40 включительно. Вывести соответствующее сообщение. Программа должна завершиться, когда пользователь введёт число меньше или равное нулю.");
         appendCheckValuesHeader();
-        appendCheckValuesRow(
-                "100",
-                "29",
-                "39",
-                "31",
-                "35",
-                "30",
-                "40",
-                "41",
-                "57",
-                "-8"
-        );
-        appendCheckValuesRow(
-                "68",
-                "17",
-                "49",
-                "16",
-                "13",
-                "37",
-                "34",
-                "24",
-                "-26"
-        );
+        appendCheckValuesRow("100,29,39,31,35,30,40,41,57,-8".split(","));
+        appendCheckValuesRow("68,17,49,16,13,37,34,24,-26".split(","));
         appendCheckValuesRow("-2");
         appendCheckValuesRow("100", "0");
         appendCheckValuesFooter();
@@ -40,8 +19,9 @@ public class Task7083 extends StreamInputLayout {
     }
 
     @Override
-    protected void logic(Iterator<String> source) {
-        String current = source.next();
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
+        String current = s.next();
         int x = Integer.parseInt(current);
         while (x > 0) {
             if (30 <= x && x <= 40) {
@@ -49,7 +29,7 @@ public class Task7083 extends StreamInputLayout {
             } else {
                 System.out.println("Число " + x + " за пределами интервала от 30 до 40");
             }
-            current = source.next();
+            current = s.next();
             x = Integer.parseInt(current);
         }
         System.out.println("Число " + x + " не больше 0, завершаю программу");

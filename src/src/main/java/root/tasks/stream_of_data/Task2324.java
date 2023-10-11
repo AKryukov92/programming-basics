@@ -2,7 +2,7 @@ package root.tasks.stream_of_data;
 
 import root.tasks.StreamInputLayout;
 
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class Task2324 extends StreamInputLayout {
     @Override
@@ -13,33 +13,20 @@ public class Task2324 extends StreamInputLayout {
         appendCheckValuesRow("5", "4", "3", "2", "1", "0");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-1", "-2", "0");
-        appendCheckValuesRow(
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "1",
-                "0"
-        );
+        appendCheckValuesRow("1,1,1,1,1,1,1,1,1,1,1,1,0".split(","));
         appendCheckValuesFooter();
         appendFooter();
     }
 
     @Override
-    protected void logic(Iterator<String> iterator) {
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
         int sum = 0, count = 0;
-        int current = Integer.parseInt(iterator.next());
-        while (current != 0 || iterator.hasNext()) {
+        int current = Integer.parseInt(s.next());
+        while (current != 0 || s.hasNext()) {
             sum = sum + current;
             count = count + 1;
-            current = Integer.parseInt(iterator.next());
+            current = Integer.parseInt(s.next());
         }
         System.out.println("Сумма чисел: " + sum + ", Количество чисел: " + count);
     }
