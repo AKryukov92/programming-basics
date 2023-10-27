@@ -68,10 +68,12 @@ public abstract class LayoutMaker {
     protected void appendOrderedNonEscaped(String... elements) {
         writer.print("<ol start='" + nextOrderedIndex + "'>");
         for (String element : elements) {
-            writer.print("<li>");
-            writer.print(element);
-            writer.print("</li>");
-            nextOrderedIndex++;
+            if (!element.isEmpty()) {
+                writer.print("<li>");
+                writer.print(element);
+                writer.print("</li>");
+                nextOrderedIndex++;
+            }
         }
         writer.print("</ol>");
     }

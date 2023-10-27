@@ -10,6 +10,7 @@ public class Task8418 extends OneInputValLayout {
         appendCheckValuesHeader("X");
         appendCheckValuesRow("6");
         appendCheckValuesRow("385");
+        appendCheckValuesRow("1");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-9");
         appendCheckValuesFooter();
@@ -19,18 +20,20 @@ public class Task8418 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         int x = Integer.parseInt(value);
-        System.out.println("Делители числа " + x + ":");
-        if (x < 0) {
-            System.out.println("Значение X должно быть положительным");
+        if (x <= 0) {
+            System.out.println("Значение X должно быть неотрицательным");
         }
-        int i = 1;
-        while (i < x / 2 + 1) {
-            if (x % i == 0) {
-                System.out.print(i + " ");
+        if (0 < x) {
+            System.out.println("Делители числа " + x + ":");
+            int i = 1;
+            while (i < x / 2 + 1) {
+                if (x % i == 0) {
+                    System.out.print(i + " ");
+                }
+                i++;
             }
-            i++;
+            System.out.println(x);
         }
-        System.out.println(x);
     }
 
     public static void main(String[] args) {

@@ -67,4 +67,22 @@ public interface MethodsDictationHelper {
             return "Первым аргументом передайте ему " + first + ", вторым - " + second + ", третьим - " + third + ".";
         }
     }
+
+    default String importClasses(String className, String... classesToImport) {
+        if (isJava()) {
+            return "В классе " + className + " импортируйте классы: " + String.join(",", classesToImport) + ".";
+        } else {
+            return "";
+        }
+    }
+
+    default String argumentException() {
+        if (isJava()) {
+            return "IllegalArgumentException";
+        } else if (isCs()) {
+            return "ArgumentException";
+        } else {
+            throw new RuntimeException();
+        }
+    }
 }
