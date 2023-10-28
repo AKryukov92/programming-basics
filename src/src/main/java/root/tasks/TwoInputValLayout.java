@@ -107,7 +107,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print(firstVal);
         writer.print("</td>");
         writer.print("<td>");
-        writer.print("<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>");
+        writer.print(linkToFile(filename));
         writer.print("</td>");
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;

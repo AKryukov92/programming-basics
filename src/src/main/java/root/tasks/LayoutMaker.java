@@ -133,6 +133,15 @@ public abstract class LayoutMaker {
         return  "<a href=\"#task" + id + "\" target=\"_blank\">ЛР#" + id + "(открыть в новой вкладке)</a>";
     }
 
+    protected String linkToFile(String filename) {
+        if (filename.endsWith(".csv")) {
+            String filenamePart = filename.substring(filename.lastIndexOf("/") + 1);
+            return "<a href=\"" + filename + "\" target=\"_blank\">скачать " + filenamePart + "</a>";
+        } else {
+            return "<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке<br>" + filename + "</a>";
+        }
+    }
+
     @Override
     public String toString() {
         return getContent();

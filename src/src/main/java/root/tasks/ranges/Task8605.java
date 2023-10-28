@@ -10,7 +10,7 @@ public class Task8605 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task8605/dates.txt", "dates.txt") + " содержит список дат. Каждая строка содержит одну дату, описанную тремя числами: год, месяц и день. Написать пользователю, возможна ли такая дата и если нет, то почему.");
+        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task8605/dates.txt") + " содержит список дат. Каждая строка содержит одну дату, описанную тремя числами: год, месяц и день. Написать пользователю, возможна ли такая дата и если нет, то почему.");
         appendCheckSingleNonEscaped(wrapLogic("files/task8605/dates.txt"));
         appendFooter();
     }

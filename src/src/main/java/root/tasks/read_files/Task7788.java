@@ -10,7 +10,7 @@ public class Task7788 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task7788/composers.csv", "composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
+        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task7788/composers.csv") + " содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой \";\". Атрибуты записаны в следующем порядке:");
         appendOrderedNonEscaped(
                 "composer_id - идентификатор композитора",
                 "first_name - имя",

@@ -14,14 +14,14 @@ public class Task6170 extends OneInputValLayout {
     protected void makeLayout() {
         appendHeader();
         appendTaskDescNonEscaped("Дано два исходных файла: список сотрудников и список отделов." +
-                "В файле " + linkToFile(departmentsFile, "departments.csv") + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+                "В файле " + linkToFile(departmentsFile) + " содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         appendOrderedNonEscaped(
                 "department_id - код отдела",
                 "department_name - наименование отдела",
                 "manager_id - код сотрудника-руководителя",
                 "location_id - код офиса"
         );
-        appendTaskDescNonEscaped("В файле " + linkToFile(employeesFile, "employees.csv") + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendTaskDescNonEscaped("В файле " + linkToFile(employeesFile) + " содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         resetOrdered();
         appendOrderedNonEscaped(
                 "employee_id - код сотрудника",

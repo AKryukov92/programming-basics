@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Labs assembler" />
-        <module name="labs-assembler" />
+        <module name="src" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

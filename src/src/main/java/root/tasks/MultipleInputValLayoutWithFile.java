@@ -35,7 +35,7 @@ public abstract class MultipleInputValLayoutWithFile extends LayoutMaker {
         testCounter++;
         writer.print("<td>" + testCounter + "</td>");
         writer.print("<td>");
-        writer.print("<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>");
+        writer.print(linkToFile(filename));
         writer.print("</td>");
         for (String value : values) {
             writer.print("<td>");

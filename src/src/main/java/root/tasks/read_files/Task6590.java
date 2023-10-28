@@ -10,7 +10,7 @@ public class Task6590 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task6590/employees.csv", "employees.csv") + "содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
+        appendTaskDescNonEscaped("Исходный файл " + linkToFile("files/task6590/employees.csv") + "содержит записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую \",\". Атрибуты записаны в следующем порядке:");
         appendOrderedNonEscaped(
                 "employee_id - код сотрудника",
                 "first_name - имя",

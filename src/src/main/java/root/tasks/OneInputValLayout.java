@@ -50,7 +50,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         testCounter++;
         writer.print("<td>" + testCounter + "</td>");
         writer.print("<td>");
-        writer.print("<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>");
+        writer.print(linkToFile(filename));
         writer.print("</td>");
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
@@ -76,16 +76,8 @@ public abstract class OneInputValLayout extends LayoutMaker {
         }
     }
 
-    protected String linkToFile(String filename, String description) {
-        if (description.isEmpty()) {
-            return "<a href=\"" + filename + "\" target=\"_blank\">открыть в новой вкладке</a>";
-        } else {
-            return "<a href=\"" + filename + "\" target=\"_blank\">открыть " + description + " в новой вкладке</a>";
-        }
-    }
-
     protected void appendCheckSingleWithFile(String filename) {
-        writer.println(linkToFile(filename, ""));
+        writer.println(linkToFile(filename));
         writer.print("<div class='check_single preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
