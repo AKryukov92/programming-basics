@@ -197,3 +197,6 @@ zoom{
 	font-size:40pt;
 	padding:0px 10px;
 }
+.task_block:target zoom {
+    background-color:white;
+}

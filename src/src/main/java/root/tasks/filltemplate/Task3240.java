@@ -11,6 +11,7 @@ public class Task3240 extends LayoutMaker {
                 "//\\\\\n" +
                 "//\\\\\n" +
                 " ][");
+        --добавить про спецсимвол
         appendFooter();
     }
 }
