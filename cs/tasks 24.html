@@ -35,6 +35,9 @@ table td, table th {
 .check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
+.check_values td, .check_values_v2 td {
+    max-width: 450px;
+}
 .lab_nav ol {
 	list-style:none;
 }
@@ -92,12 +95,47 @@ table td, table th {
 }
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
-	white-space:pre;
+	white-space-collapse:preserve;
+    text-wrap:pretty;
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target, .check_values_v2 tr:target {
-    background-color:lightgrey;
+.stream_values tr td:nth-child(3) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr:nth-child(2) td:nth-child(2) {
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr td:nth-child(1){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:right;
+}
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
+.stream_values tr td:nth-child(2){
+    border-top-width:0px;
+    border-bottom-width:0px;
+    text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
+}
+.stream_values tr.test_row td:first-of-type {
+    border-top-width:1px;
+    border-bottom-width:1px;
+    text-align:center;
+}
+.stream_values tr:last-of-type td {
+    border-bottom-width:1px;
 }
 formula {
 	font-weight:bold;
@@ -157,7 +195,8 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Даты</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425'>1</a><li><a href='#task7480'>2</a><li><a href='#task3123'>3</a><li><a href='#task9418'>4</a><li><a href='#task8811'>5</a><li><a href='#task8381'>6</a><li><a href='#task8498'>7</a><li><a href='#task8096'>8</a></ul></div><div id='task9425' class='task_block'>
+	padding:0px 10px;
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Даты</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425' class='example'>1*</a><li><a href='#task3123' class='example'>2*</a><li><a href='#task9418'>3</a><li><a href='#task7480' class='example'>4*</a><li><a href='#task8811'>5</a><li><a href='#task1912'>6</a><li><a href='#task3696' class='example'>7*</a><li><a href='#task8381'>8</a><li><a href='#task8498'>9</a><li><a href='#task8096'>10</a><li><a href='#task8519' class='example'>11*</a><li><a href='#task2130'>12</a></ul></div><div id='task9425' class='task_block'>
 <div class='task_id'>9425</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -198,33 +237,6 @@ zoom{
 День: 1
 </div>
 </div>
-<div id='task7480' class='task_block'>
-<div class='task_id'>7480</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит две даты. Сравните даты. Определите какая позже, какая раньше. Напечатать подробный ответ на экран.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>firstDate</th><th>secondDate</th></tr>
-<tr>
-<td>1</td><td>28.06.2023</td><td>20.06.2023</td><td class='preformatted'>
-Первая дата позже второй
-</td></tr>
-<tr>
-<td>2</td><td>20.06.2023</td><td>28.06.2023</td><td class='preformatted'>
-Вторая дата позже первой
-</td></tr>
-<tr>
-<td>3</td><td>01.07.2023</td><td>07.01.2023</td><td class='preformatted'>
-Первая дата позже второй
-</td></tr>
-<tr>
-<td>4</td><td>05.02.2001</td><td>05.02.2002</td><td class='preformatted'>
-Вторая дата позже первой
-</td></tr>
-</table>
-</div>
 <div id='task3123' class='task_block'>
 <div class='task_id'>3123</div>
 <h3>Задача</h3>
@@ -235,50 +247,42 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>firstDate</th><th>secondDate</th></tr>
 <tr>
-<td>1</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:56:13</td><td class='preformatted'>
-Между датами прошло 0 часов
+<td>1</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:56:13</td><td class='preformatted'>Между датами прошло 0 часов
 Всего минут 0. В текущем часе 0
 Всего секунд 13. В текущей минуте 13
 </td></tr>
 <tr>
-<td>2</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>
-Между датами прошло 0 часов
+<td>2</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 0 часов
 Всего минут 3. В текущем часе 3
 Всего секунд 193. В текущей минуте 13
 </td></tr>
 <tr>
-<td>3</td><td>03/07/2023 13:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>
-Между датами прошло 5 часов
+<td>3</td><td>03/07/2023 13:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 5 часов
 Всего минут 303. В текущем часе 3
 Всего секунд 18193. В текущей минуте 13
 </td></tr>
 <tr>
-<td>4</td><td>03/07/2023 13:56:00</td><td>03/07/2024 18:59:13</td><td class='preformatted'>
-Между датами прошло 8789 часов
+<td>4</td><td>03/07/2023 13:56:00</td><td>03/07/2024 18:59:13</td><td class='preformatted'>Между датами прошло 8789 часов
 Всего минут 527343. В текущем часе 3
 Всего секунд 31640593. В текущей минуте 13
 </td></tr>
 <tr>
-<td>5</td><td>28/06/2023 17:30:00</td><td>28/06/2023 18:00:00</td><td class='preformatted'>
-Между датами прошло 0 часов
+<td>5</td><td>28/06/2023 17:30:00</td><td>28/06/2023 18:00:00</td><td class='preformatted'>Между датами прошло 0 часов
 Всего минут 30. В текущем часе 30
 Всего секунд 1800. В текущей минуте 0
 </td></tr>
 <tr>
-<td>6</td><td>16/08/2009 10:00:00</td><td>16/08/2009 10:00:10</td><td class='preformatted'>
-Между датами прошло 0 часов
+<td>6</td><td>16/08/2009 10:00:00</td><td>16/08/2009 10:00:10</td><td class='preformatted'>Между датами прошло 0 часов
 Всего минут 0. В текущем часе 0
 Всего секунд 10. В текущей минуте 10
 </td></tr>
 <tr>
-<td>7</td><td>12/04/1961 09:07:00</td><td>12/04/1961 09:18:07</td><td class='preformatted'>
-Между датами прошло 0 часов
+<td>7</td><td>12/04/1961 09:07:00</td><td>12/04/1961 09:18:07</td><td class='preformatted'>Между датами прошло 0 часов
 Всего минут 11. В текущем часе 11
 Всего секунд 667. В текущей минуте 7
 </td></tr>
 <tr>
-<td>8</td><td>01/06/2023 16:00:00</td><td>01/06/2023 15:00:00</td><td class='preformatted'>
-Между датами прошло 1 часов
+<td>8</td><td>01/06/2023 16:00:00</td><td>01/06/2023 15:00:00</td><td class='preformatted'>Между датами прошло 1 часов
 Всего минут 60. В текущем часе 0
 Всего секунд 3600. В текущей минуте 0
 </td></tr>
@@ -301,6 +305,29 @@ zoom{
 Скорость получается 7910,0000 м/с</td></tr>
 <tr><td>4</td><td>10000</td><td>2023-06-01 16:00:00</td><td>2023-06-01 15:00:00</td><td class='preformatted'>Между двумя датами прошло 3600 секунд
 Скорость получается 2,7778 м/с</td></tr>
+</table>
+</div>
+<div id='task7480' class='task_block'>
+<div class='task_id'>7480</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты. Сравните даты. Определите какая позже, какая раньше. Напечатать подробный ответ на экран.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>28.06.2023</td><td>20.06.2023</td><td class='preformatted'>Первая дата позже второй
+</td></tr>
+<tr>
+<td>2</td><td>20.06.2023</td><td>28.06.2023</td><td class='preformatted'>Вторая дата позже первой
+</td></tr>
+<tr>
+<td>3</td><td>01.07.2023</td><td>07.01.2023</td><td class='preformatted'>Первая дата позже второй
+</td></tr>
+<tr>
+<td>4</td><td>05.02.2001</td><td>05.02.2002</td><td class='preformatted'>Вторая дата позже первой
+</td></tr>
 </table>
 </div>
 <div id='task8811' class='task_block'>
@@ -329,6 +356,57 @@ zoom{
 <tr><td>8</td><td>2023-07-26</td><td>2023-08-01</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
 <tr><td>9</td><td>2023-06-01</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
+</td></tr>
+</table>
+</div>
+<div id='task1912' class='task_block'>
+<div class='task_id'>1912</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит время. Нужно определить какой прием пищи следующий. Завтрак идет с 8:00 до 9:00. Обед идет с 13:00 до 14:00. Ужин идет с 18:30 до 19:15.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (currentTime)</th><th>Результат</th></tr>
+<tr><td>1</td><td>06:00</td><td class='preformatted'>Следующий прием пищи - завтрак
+</td></tr>
+<tr><td>2</td><td>08:30</td><td class='preformatted'>Завтрак еще не закончился
+</td></tr>
+<tr><td>3</td><td>10:00</td><td class='preformatted'>Следующий прием пищи - обед
+</td></tr>
+<tr><td>4</td><td>13:15</td><td class='preformatted'>Обед еще не закончился
+</td></tr>
+<tr><td>5</td><td>16:00</td><td class='preformatted'>Следующий прием пищи - ужин
+</td></tr>
+<tr><td>6</td><td>19:00</td><td class='preformatted'>Ужин еще не закончился
+</td></tr>
+<tr><td>7</td><td>23:00</td><td class='preformatted'>Следующий прием пищи - завтрак
+</td></tr>
+</table>
+</div>
+<div id='task3696' class='task_block'>
+<div class='task_id'>3696</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату и число. Определить какая дата получится если прибавить указанное количество дней к исходной дате.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>date</th><th>days</th></tr>
+<tr>
+<td>1</td><td>07/08/2023</td><td>40</td><td class='preformatted'>При смещении 07/08/2023 на 40 дней 
+получается дата 16/09/2023
+</td></tr>
+<tr>
+<td>2</td><td>31/12/2023</td><td>4</td><td class='preformatted'>При смещении 31/12/2023 на 4 дней 
+получается дата 04/01/2024
+</td></tr>
+<tr>
+<td>3</td><td>15/02/2013</td><td>14</td><td class='preformatted'>При смещении 15/02/2013 на 14 дней 
+получается дата 01/03/2013
+</td></tr>
+<tr>
+<td>4</td><td>15/02/2012</td><td>14</td><td class='preformatted'>При смещении 15/02/2012 на 14 дней 
+получается дата 29/02/2012
 </td></tr>
 </table>
 </div>
@@ -396,18 +474,15 @@ zoom{
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>firstDate</th><th>secondDate</th></tr>
 <tr>
-<td>1</td><td>2023-07-03</td><td>2023-08-13</td><td class='preformatted'>
-Дни недели различаются.
+<td>1</td><td>2023-07-03</td><td>2023-08-13</td><td class='preformatted'>Дни недели различаются.
 У первой даты понедельник
 У второй даты воскресенье
 </td></tr>
 <tr>
-<td>2</td><td>2023-08-14</td><td>2023-08-07</td><td class='preformatted'>
-Дни недели совпадают и равны понедельник
+<td>2</td><td>2023-08-14</td><td>2023-08-07</td><td class='preformatted'>Дни недели совпадают и равны понедельник
 </td></tr>
 <tr>
-<td>3</td><td>2023-01-01</td><td>2022-01-01</td><td class='preformatted'>
-Дни недели различаются.
+<td>3</td><td>2023-01-01</td><td>2022-01-01</td><td class='preformatted'>Дни недели различаются.
 У первой даты воскресенье
 У второй даты суббота
 </td></tr>
@@ -459,4 +534,63 @@ zoom{
 </td></tr>
 </table>
 </div>
-Версия null-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div id='task8519' class='task_block'>
+<div class='task_id'>8519</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана дата по Омску(UTC+06:00). Определить сколько времени будет в Москве(UTC+03:00), Новосибирске(UTC+07:00), Лондоне (UTC+01:00), на Кубе (UTC-05:00), в Непале (UTC+05:45)
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
+<tr><td>1</td><td>18:16 07.08.2023</td><td class='preformatted'>Когда в Омске 18:16 07.08.2023
+в Новосибирске 19:16 07.08.2023
+в Москве 15:16 07.08.2023
+в Лондоне 13:16 07.08.2023
+на Кубе 07:16 07.08.2023
+в Непале 18:01 07.08.2023
+</td></tr>
+<tr><td>2</td><td>23:11 28.06.2023</td><td class='preformatted'>Когда в Омске 23:11 28.06.2023
+в Новосибирске 00:11 29.06.2023
+в Москве 20:11 28.06.2023
+в Лондоне 18:11 28.06.2023
+на Кубе 12:11 28.06.2023
+в Непале 22:56 28.06.2023
+</td></tr>
+<tr><td>3</td><td>04:35 02.09.2015</td><td class='preformatted'>Когда в Омске 04:35 02.09.2015
+в Новосибирске 05:35 02.09.2015
+в Москве 01:35 02.09.2015
+в Лондоне 23:35 01.09.2015
+на Кубе 17:35 01.09.2015
+в Непале 04:20 02.09.2015
+</td></tr>
+</table>
+</div>
+<div id='task2130' class='task_block'>
+<div class='task_id'>2130</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит смещение по часовым поясам. Определить как изменится время 2023-06-28 18:27 по Гринвичу(UTC+00:00) при введенной пользователем таймзоне.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (timezone)</th><th>Результат</th></tr>
+<tr><td>1</td><td>UTC+01:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC+01:00 время будет равно 2023-06-28 19:27
+</td></tr>
+<tr><td>2</td><td>UTC+10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC+10:00 время будет равно 2023-06-29 04:27
+</td></tr>
+<tr><td>3</td><td>UTC</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC время будет равно 2023-06-28 18:27
+</td></tr>
+<tr><td>4</td><td>UTC-10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC-10:00 время будет равно 2023-06-28 08:27
+</td></tr>
+<tr><td>5</td><td>Turkey</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне Turkey время будет равно 2023-06-28 21:27
+</td></tr>
+<tr><td>6</td><td>Africa/Lubumbashi</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне Africa/Lubumbashi время будет равно 2023-06-28 20:27
+</td></tr>
+</table>
+</div>
+Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

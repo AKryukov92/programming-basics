@@ -44,6 +44,7 @@ import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
 import root.tasks.write_files.Task7940;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -191,10 +192,21 @@ public class Application {
     private static void fillPrintingTemplates(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab01")
                 .withGroup("Печать текста на экране")
-                .addCitation("link_c1_p4.3")
-                .addExampleWithManual(new Task1662())
-                .addTask(new Task5321())
-                .addTask(new Task8691())
+                ;
+        if (taskBook.isCsharp()) {
+            taskBook.addExample(new TaskCs1662())
+                    .addTask(new Task5321())
+                    .addTask(new TaskCs8691())
+            ;
+        } else if (taskBook.isJava()) {
+            taskBook.addExample(new TaskJava1662())
+                    .addTask(new Task5321())
+                    .addTask(new TaskJava8691())
+            ;
+        } else {
+            throw new NotImplementedException();
+        }
+        taskBook
                 .addTask(new Task7920())
                 .addTask(new Task3240())
                 .addTask(new Task7058())

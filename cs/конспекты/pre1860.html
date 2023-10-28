@@ -35,6 +35,9 @@ table td, table th {
 .check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
 }
+.check_values td, .check_values_v2 td {
+    max-width: 450px;
+}
 .lab_nav ol {
 	list-style:none;
 }
@@ -92,7 +95,8 @@ table td, table th {
 }
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
-	white-space:pre;
+	white-space-collapse:preserve;
+    text-wrap:pretty;
 	text-align:left;
 	padding:10px;
 }
@@ -191,6 +195,7 @@ spoiler:hover trans {
 zoom{
 	background-color:gray;
 	font-size:40pt;
+	padding:0px 10px;
 }</style></head><body class='section'><h1>Руководство к задаче 1860 на С#</h1>
 <a href="..\tasks 1.html#task1860" target="_blank">ЛР1#1860(открыть в новой вкладке)</a>
 
