@@ -17,6 +17,20 @@ public class TaskCs1662 extends LayoutMaker {
                 "Вторая строка, вторая команда\n" +
                 "Выделенный текст можно копировать сочетанием клавиш Ctrl+C\n" +
                 "Скопированный текст можно вставить в код сочетанием клавиш Ctrl+V");
+        appendTaskDescEscaped("Если не поставить кавычку в конце строкового литерала, то компьютер не сможет понять когда он заканчивается. Поэтому при попытке запуска компьютер выдаст три ошибки компиляции:");
+        appendCheckSingleNonEscaped("Console.Write(\"Ура! Заработало!);");
+        appendOrderedEscaped(
+                "Символ новой строки в константе.",
+                "Требуется \")\"",
+                "Требуется \";\""
+        );
+        appendTaskDescEscaped("Если у вас английская версия Visual Studio, то ошибки будут такими:");
+        resetOrdered();
+        appendOrderedEscaped(
+                ") expected",
+                "; expected",
+                "Newline in constant"
+        );
         appendFooter();
     }
 }

@@ -60,7 +60,8 @@ import java.util.Random;
  */
 public class Application {
     private static final String[] themeList = new String[]{
-            "Заполнение шаблона текстом",
+            "Печать текста на экран",
+            "Заполнение шаблона данными от пользователя",
             "Организация вычислений",
             "Проверка исходных данных",
             "Взаимоисключающие случаи",
@@ -94,66 +95,68 @@ public class Application {
     private static TaskBook[] populateCsContent(String[] themeList) {
         TaskBook[] taskBooksCs = makeNav(themeList, "cs");
 
-        fillPrintingTemplates(taskBooksCs[0]);
-        fillBasicCalculations(taskBooksCs[1]);
-        fillPreliminaryAssertions(taskBooksCs[2]);
-        fillMutualExclusives(taskBooksCs[3]);
-        fillRanges(taskBooksCs[4]);
+        fillPrintingText(taskBooksCs[0]);
+        fillInputAndTemplates(taskBooksCs[1]);
+        fillBasicCalculations(taskBooksCs[2]);
+        fillPreliminaryAssertions(taskBooksCs[3]);
+        fillMutualExclusives(taskBooksCs[4]);
+        fillRanges(taskBooksCs[5]);
 
-        fillLoops(taskBooksCs[5]);
-        fillStreamOfData(taskBooksCs[6]);
-        fillNestedLoops(taskBooksCs[7]);
-        fillBasicArrayOperations(taskBooksCs[8]);
-        fillSwapping(taskBooksCs[9]);
-        fillArrayConversionToNumbers(taskBooksCs[10]);
+        fillLoops(taskBooksCs[6]);
+        fillStreamOfData(taskBooksCs[7]);
+        fillNestedLoops(taskBooksCs[8]);
+        fillBasicArrayOperations(taskBooksCs[9]);
+        fillSwapping(taskBooksCs[10]);
+        fillArrayConversionToNumbers(taskBooksCs[11]);
 
-        fillAggregateCalculation(taskBooksCs[11]);
-        fillElementSearch(taskBooksCs[12]);
-        fillInsertionSort(taskBooksCs[13]);
-        fillStringMethods(taskBooksCs[14]);
-        fillReadingFiles(taskBooksCs[15]);
-        fillWritingFiles(taskBooksCs[16]);
+        fillAggregateCalculation(taskBooksCs[12]);
+        fillElementSearch(taskBooksCs[13]);
+        fillInsertionSort(taskBooksCs[14]);
+        fillStringMethods(taskBooksCs[15]);
+        fillReadingFiles(taskBooksCs[16]);
+        fillWritingFiles(taskBooksCs[17]);
 
-        unitTesting(taskBooksCs[17]);
-        fillExceptions(taskBooksCs[18]);
-        fillAbstractDataStructures(taskBooksCs[19]);
-        fillInternalState(taskBooksCs[20]);
-        fillCollections(taskBooksCs[21]);
-        fillRecursion(taskBooksCs[22]);
-        fillDateTime(taskBooksCs[23]);
+        unitTesting(taskBooksCs[18]);
+        fillExceptions(taskBooksCs[19]);
+        fillAbstractDataStructures(taskBooksCs[20]);
+        fillInternalState(taskBooksCs[21]);
+        fillCollections(taskBooksCs[22]);
+        fillRecursion(taskBooksCs[23]);
+        fillDateTime(taskBooksCs[24]);
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
 
     private static TaskBook[] populateJavaContent(String[] themeList) {
         TaskBook[] taskBooksJava = makeNav(themeList, "java");
-        fillPrintingTemplates(taskBooksJava[0]);
-        fillBasicCalculations(taskBooksJava[1]);
-        fillPreliminaryAssertions(taskBooksJava[2]);
-        fillMutualExclusives(taskBooksJava[3]);
-        fillRanges(taskBooksJava[4]);
+        fillPrintingText(taskBooksJava[0]);
+        fillInputAndTemplates(taskBooksJava[1]);
+        fillBasicCalculations(taskBooksJava[2]);
+        fillPreliminaryAssertions(taskBooksJava[3]);
+        fillMutualExclusives(taskBooksJava[4]);
+        fillRanges(taskBooksJava[5]);
 
-        fillLoops(taskBooksJava[5]);
-        fillStreamOfData(taskBooksJava[6]);
-        fillNestedLoops(taskBooksJava[7]);
-        fillBasicArrayOperations(taskBooksJava[8]);
-        fillSwapping(taskBooksJava[9]);
-        fillArrayConversionToNumbers(taskBooksJava[10]);
+        fillLoops(taskBooksJava[6]);
+        fillStreamOfData(taskBooksJava[7]);
+        fillNestedLoops(taskBooksJava[8]);
+        fillBasicArrayOperations(taskBooksJava[9]);
+        fillSwapping(taskBooksJava[10]);
+        fillArrayConversionToNumbers(taskBooksJava[11]);
 
-        fillAggregateCalculation(taskBooksJava[11]);
-        fillElementSearch(taskBooksJava[12]);
-        fillInsertionSort(taskBooksJava[13]);
-        fillStringMethods(taskBooksJava[14]);
-        fillReadingFiles(taskBooksJava[15]);
-        fillWritingFiles(taskBooksJava[16]);
+        fillAggregateCalculation(taskBooksJava[12]);
+        fillElementSearch(taskBooksJava[13]);
+        fillInsertionSort(taskBooksJava[14]);
+        fillStringMethods(taskBooksJava[15]);
+        fillReadingFiles(taskBooksJava[16]);
+        fillWritingFiles(taskBooksJava[17]);
 
-        unitTesting(taskBooksJava[17]);
-        fillExceptions(taskBooksJava[18]);
-        fillAbstractDataStructures(taskBooksJava[19]);
-        fillInternalState(taskBooksJava[20]);
-        fillCollections(taskBooksJava[21]);
-        fillRecursion(taskBooksJava[22]);
-        fillDateTime(taskBooksJava[23]);
+        unitTesting(taskBooksJava[18]);
+        fillExceptions(taskBooksJava[19]);
+        fillAbstractDataStructures(taskBooksJava[20]);
+        fillInternalState(taskBooksJava[21]);
+        fillCollections(taskBooksJava[22]);
+        fillRecursion(taskBooksJava[23]);
+        fillDateTime(taskBooksJava[24]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -189,10 +192,10 @@ public class Application {
         }
     }
 
-    private static void fillPrintingTemplates(TaskBook taskBook) {
+    private static void fillPrintingText(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab01")
                 .withGroup("Печать текста на экране")
-                ;
+        ;
         if (taskBook.isCsharp()) {
             taskBook.addExample(new TaskCs1662())
                     .addTask(new Task5321())
@@ -208,42 +211,18 @@ public class Application {
         }
         taskBook
                 .addTask(new Task7920())
-                .addTask(new Task3240())
-                .addTask(new Task7058())
-                .addTask(new Task9523())
                 .addExample(new Task7339())//конкатенация
                 .addTask(new Task5901())
+                .addTask(new Task3240())
+                .addTask(new Task7058())
                 .addTask(new Task5792())
-                .addTask(new Task6986())
-
-                .withGroup("Получение строк от пользователя")
-                .addExampleWithManual(new Task1860())
-                .addCitation("link_c7_p33")
-                .addTask(new Task4764())
-                .addTask(new Task2429())
-                .addCitation("link_c6_p30.2")
-                .addTask(new Task7472())
-                .addTask(new Task1910())
-
-                .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(new Task4131())
-                .addTask(new Task7365())
-
-                .withGroup("Оформление текста по шаблону")
-                .addCitation("link_c3_p10.2")
         ;
-        if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs4140());
-        } else {
-            taskBook.addExample(new TaskJava4140());
+        if (taskBook.isJava()) {
+            taskBook
+                    .addTask(new Task9523())//вывод спецсимвола UNICODE
+                    .addTask(new Task6986())//вывод спецсимвола UNICODE
+            ;
         }
-        taskBook
-                .addTask(new Task2959())
-                .addTask(new Task7271())
-                .addTask(new Task2632())
-                .addTask(new Task4343())
-                .addTask(new Task7474())
-        ;
         if (taskBook.isJava()) {
             taskBook
                     .withGroup("Отработка присваивания")
@@ -276,6 +255,43 @@ public class Application {
 //                .addTask(9639)
 //                .addTask(7353)
 //                .addTask(4910)
+        ;
+    }
+
+    private static void fillInputAndTemplates(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab01")
+                .withGroup("Получение строк от пользователя")
+        ;
+        if (taskBook.isCsharp()) {
+            taskBook.addExample(new TaskCs1860())
+            ;
+        } else {
+            taskBook.addExample(new TaskJava1860())
+            ;
+        }
+        taskBook
+                .addTask(new Task4764())
+                .addTask(new Task2429())
+                .addTask(new Task7472())
+                .addTask(new Task1910())
+
+                .withGroup("Диктант по присваиванию и конкатенации")
+                .addExample(new Task4131())
+                .addTask(new Task7365())
+
+                .withGroup("Оформление текста по шаблону")
+        ;
+        if (taskBook.isCsharp()) {
+            taskBook.addExample(new TaskCs4140());
+        } else {
+            taskBook.addExample(new TaskJava4140());
+        }
+        taskBook
+                .addTask(new Task2959())
+                .addTask(new Task7271())
+                .addTask(new Task2632())
+                .addTask(new Task4343())
+                .addTask(new Task7474())
         ;
     }
 

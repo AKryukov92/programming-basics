@@ -6,8 +6,8 @@ public class Task4764 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Дана строка A. Нужно вывести её на экран и дописать слова \"нас не остановят\" в конце.");
-        appendCheckValuesHeader("A", "C");
+        appendTaskDescEscaped("Пользователь вводит слово (problem). Нужно вывести это слово на экран и дописать слова \"нас не остановят\" в конце.");
+        appendCheckValuesHeader("problem");
         appendCheckValuesRow("трудности");
         appendCheckValuesRow("загадки");
         appendCheckValuesRow("сложные задачи");
