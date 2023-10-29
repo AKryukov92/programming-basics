@@ -200,43 +200,38 @@ public class Application {
             taskBook.addExample(new TaskCs1662())
                     .addTask(new Task5321())
                     .addTask(new TaskCs8691())
-            ;
-        } else if (taskBook.isJava()) {
-            taskBook.addExample(new TaskJava1662())
-                    .addTask(new Task5321())
-                    .addTask(new TaskJava8691())
-            ;
-        } else {
-            throw new NotImplementedException();
-        }
-        taskBook
-                .addTask(new Task7920())
-                .addExample(new Task7339())//конкатенация
-                .addTask(new Task5901())
-                .addTask(new Task3240())
-                .addTask(new Task7058())
-                .addTask(new Task5792())
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addTask(new Task9523())//вывод спецсимвола UNICODE
-                    .addTask(new Task6986())//вывод спецсимвола UNICODE
-            ;
-        }
-        if (taskBook.isJava()) {
-            taskBook
-                    .withGroup("Отработка присваивания")
-                    .addExample(new TaskJava3246())
-                    .addTask(new TaskJava7332())
-                    .addTask(new TaskJava9781())
-                    .addTask(new TaskJava6814());
-        } else if (taskBook.isCsharp()) {
-            taskBook
+                    .addTask(new Task7920())
+                    .addExample(new Task7339())//конкатенация
+                    .addTask(new TaskCs5901())
+                    .addTask(new Task3240())
+                    .addTask(new Task7058())
+                    .addTask(new Task5792())
                     .withGroup("Отработка присваивания")
                     .addExample(new TaskCs3246())
                     .addTask(new TaskCs7332())
                     .addTask(new TaskCs9781())
                     .addTask(new TaskCs6814());
+            ;
+        } else if (taskBook.isJava()) {
+            taskBook.addExample(new TaskJava1662())
+                    .addTask(new Task5321())
+                    .addTask(new TaskJava8691())
+                    .addTask(new Task7920())
+                    .addExample(new Task7339())//конкатенация
+                    .addTask(new TaskJava5901())
+                    .addTask(new Task3240())
+                    .addTask(new Task7058())
+                    .addTask(new Task5792())
+                    .addTask(new Task9523())//вывод спецсимвола UNICODE
+                    .addTask(new Task6986())//вывод спецсимвола UNICODE
+                    .withGroup("Отработка присваивания")
+                    .addExample(new TaskJava3246())
+                    .addTask(new TaskJava7332())
+                    .addTask(new TaskJava9781())
+                    .addTask(new TaskJava6814())
+            ;
+        } else {
+            throw new NotImplementedException();
         }
         taskBook
                 .withGroup("Уменьшение дублей повторяющихся фрагментов текста")
@@ -282,7 +277,7 @@ public class Application {
                 .withGroup("Оформление текста по шаблону")
         ;
         if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs4140());
+            taskBook.addExample(new TaskCs4140());//вывод с помощью подстановочных символов
         } else {
             taskBook.addExample(new TaskJava4140());
         }
@@ -316,9 +311,9 @@ public class Application {
                 .withGroup("Операторы и операнды")
         ;
         if (taskBook.isCsharp()) {
-            taskBook.addExampleWithManual(new TaskCs4411());//преобразование в число, простая арифметика, вывод с нужной точностью
+            taskBook.addExample(new TaskCs4411());//преобразование в число, простая арифметика, вывод с нужной точностью
         } else if (taskBook.isJava()) {
-            taskBook.addExampleWithManual(new TaskJava4411());//преобразование в число, простая арифметика, вывод с нужной точностью
+            taskBook.addExample(new TaskJava4411());//преобразование в число, простая арифметика, вывод с нужной точностью
         }
         taskBook
                 .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
@@ -329,8 +324,7 @@ public class Application {
                 .addTask(new Task7237())
 
                 .withGroup("Использование математических функций")
-                .addCitation("link_c7_p32.5")
-                .addExampleWithManual(new Task7711())
+                .addExample(new Task7711())
                 .addTask(new Task3474())//длина гипотенузы, косинус
                 .addTask(new Task1262())//косинус
                 .addTask(new Task9164())//синус и косинус

@@ -2,7 +2,7 @@ package root.tasks.filltemplate;
 
 import root.tasks.LayoutMaker;
 
-public class Task5901 extends LayoutMaker {
+public class TaskJava5901 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
@@ -10,7 +10,7 @@ public class Task5901 extends LayoutMaker {
                 " Напишите каждую строчку отдельным строковым литералом." +
                 " Объедините их с помощью конкатенации. Каждый строковый литерал расположите на новой строке исходного кода.");
         appendCheckSingleNonEscaped(
-                "print(\"Три девицы под окном\\n\" +\n" +
+                "System.out.println(\"Три девицы под окном\\n\" +\n" +
                         "  \"Пряли поздно вечерком.\\n\"" +
                         ");"
         );

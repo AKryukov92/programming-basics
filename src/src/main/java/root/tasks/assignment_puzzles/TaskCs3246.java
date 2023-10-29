@@ -7,7 +7,7 @@ public class TaskCs3246 extends LayoutMaker {
     protected void makeLayout() {
         appendHeader();
         appendTaskDescEscaped("Переставьте команды так, чтобы при запуске на экран было выведено слово \"успех\". Все команды должны быть использованы. Дописывать новые команды и дублировать существующие - нельзя.");
-        appendCheckSingleNonEscaped("Console.WriteLine(\"Задача 3246\");\b" +
+        appendCheckSingleNonEscaped("Console.WriteLine(\"Задача 3246\");\n" +
                 "String a, b, c; //Объявляю переменные a, b, c для хранения текста\n" +
                 "c = \"успех\";  //Записываю в переменную c значение \"успех\"\n" +
                 "b = \"провал\"; //Записсываю в переменную b значение \"провал\"\n" +

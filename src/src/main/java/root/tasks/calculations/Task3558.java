@@ -6,7 +6,7 @@ public class Task3558 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Вычислить результат по формуле. Значение угла дано в градусах. <formula>3sin(2*aRad)cos(3*bRad)</formula>");
+        appendTaskDescNonEscaped("Вычислить результат по формуле. Значение угла дано в градусах. <formula>3*sin(2*aRad)*cos(3*bRad)</formula>");
         appendCheckValuesHeader("aDeg", "bDeg");
         appendCheckValuesRow("45", "90");
         appendCheckValuesRow("200", "45");

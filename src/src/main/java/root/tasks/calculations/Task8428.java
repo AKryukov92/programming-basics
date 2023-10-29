@@ -6,10 +6,10 @@ public class Task8428 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendTaskId();
-        appendTaskDescNonEscaped("Какое название лучше выбрать для переменной? Эта проблема подробно рассмотрена в главе 11.1 \"Общие принципы выбора имен переменных\" части III книги \"Совершенный код\". <a href=\"Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=274\" target=\"_blank\">(открыть в новой вкладке)</a>");
-        appendTaskDescEscaped("Обычно в шапке таблицы с тестовыми данными у вводимых значений будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!");
         appendTaskHeader();
-        appendTaskDescNonEscaped("Перевести угол из градусов в радианы по формуле: <formula>angleRadian=angleDegree*&pi;/180</formula>, где angleDegree - угол в градусах(degrees), angleRadian - угол в радианах. <a href=\"https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD\" target=\"_blank\">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ).");
+        appendTaskDescNonEscaped("Перевести угол из градусов в радианы по формуле: <formula>angleRadian=angleDegree*&pi;/180</formula>, где angleDegree - угол в градусах(degrees), angleRadian - угол в радианах. <a href=\"https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD\" target=\"_blank\">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ). Команда для вычисления результата выглядит так:");
+        appendCheckSingleNonEscaped("angleRadian = angleDegree * Math.PI / 180;");
+        appendTaskDescNonEscaped("Выражение <zoom>Math.PI</zoom> обозначает &pi;. Его значение сохранено в переменной из стандартной библиотеке языка.");
         appendCheckValuesHeader("angleDegree", "angleRadian");
         appendCheckValuesRow("45");
         appendCheckValuesRow("1125");
@@ -18,6 +18,15 @@ public class Task8428 extends OneInputValLayout {
         appendCheckValuesRow("90");
         appendCheckValuesRow("2000");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("В языке поддерживается следующие операторы для чисел:");
+        appendOrderedNonEscaped(
+                "<zoom>*</zoom> Умножение",
+                "<zoom>/</zoom> Деление",
+                "<zoom>+</zoom> Арифметическое сложение. Для строк этот оператор выполняет конкатенацию (склеивание).",
+                "<zoom>-</zoom> Вычитание",
+                "<zoom>%</zoom> Остаток от деления. Этот оператор будет рассмотрен позже."
+        );
+        appendTaskDescNonEscaped("В арифметических выражениях можно использовать круглые скобки <zoom>()</zoom>. Они работают как в математике - сначала вычисляется выражение внутри скобок, а затем все остальное.");
         appendFooter();
     }
 

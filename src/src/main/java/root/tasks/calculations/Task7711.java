@@ -8,7 +8,8 @@ public class Task7711 extends OneInputValLayout {
         appendHeader();
         appendTaskDescNonEscaped("Пользователь вводит угол, выраженный в градусах." +
                 " Нужно перевести этот угол в радианы и вычислить результат по формуле <b>sin(angleRad)</b>." +
-                " Для получения значения в радианах примените формулу, которую использовали в задаче " + linkToTask(8428));
+                " Для получения значения в радианах примените формулу, которую использовали в задаче " + linkToTask(8428) + ". Для вычисления синуса, используйте команду:");
+        appendCheckSingleNonEscaped("result = Math.sin(angleRad); //использование стандартного метода вычисления синуса.");
         appendCheckValuesHeader("angleDegree");
         appendCheckValuesRow("45");
         appendCheckValuesRow("90");
