@@ -1,15 +1,17 @@
 package root.tasks.calculations;
 
+import root.tasks.StreamInputLayout;
 import root.tasks.TwoInputValLayout;
 
-public class Task1976 extends TwoInputValLayout {
+import java.util.Scanner;
+
+public class Task1976 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
         appendSubheading("Переведите алгоритм с естественного языка на ваш язык программирования.");
         appendTaskDescEscaped("Объявите переменные");
         appendOrderedNonEscaped(
-                "Объявите переменную temp для временного хранения строк получаемых от пользователя",
                 "Объявите переменную height для хранения высоты прямоугольника",
                 "Объявите переменную width для хранения ширины прямоугольника",
                 "Объявите переменную area для хранения результата - площади прямоугольника"
@@ -18,11 +20,9 @@ public class Task1976 extends TwoInputValLayout {
         appendOrderedNonEscaped(
                 "Выведите на экран строковый литерал \"Задача 1976\"",
                 "Выведите на экран строковый литерал \"Введите высоту прямоугольника\".",
-                "Инициализируйте переменную temp - получите от пользователя строку и запишите ее в temp.",
-                "Инициализируйте переменную height - запишите в нее результат преобразования temp в число.",
+                "Инициализируйте переменную height - получите от пользователя число и запишите его в height.",
                 "Выведите на экран строковый литерал \"Введите ширину прямоугольника\".",
-                "Получите от пользователя строку и запишите ее в temp.",
-                "Инициализируйте переменную width - запишите в нее результат преобразования temp в число."
+                "Получите от пользователя число и запишите его в width."
         );
         appendTaskDescEscaped("Вычислите результат и оформите ответ");
         appendOrderedNonEscaped(
@@ -30,7 +30,7 @@ public class Task1976 extends TwoInputValLayout {
                 "Выведите на экран текст по шаблону \"Площадь прямоугольника со сторонами $height и $width равна $area\""
         );
         appendSubheading("Убедитесь, что для всех исходных данных получается ожидаемый результат.");
-        appendCheckValuesHeader("height", "width");
+        appendCheckValuesHeader();
         appendCheckValuesRow("3", "5");
         appendCheckValuesRow("11", "19");
         appendCheckValuesRow("2", "23");
@@ -39,19 +39,17 @@ public class Task1976 extends TwoInputValLayout {
     }
 
     @Override
-    protected void logic(String firstValue, String secondValue) {
-        String temp;
-        int height;
-        int width;
-        int area;
+    protected void logic(Readable Systemin) {
+        Scanner s = new Scanner(Systemin);
+        double height;
+        double width;
+        double area;
         System.out.println("Задача 1976");
         System.out.println("Введите высоту прямоугольника");
-        temp = firstValue;
-        height = Integer.parseInt(temp);
+        height = s.nextDouble();
         System.out.println("Введите ширину прямоугольника");
-        temp = secondValue;
-        width = Integer.parseInt(temp);
+        width = s.nextDouble();
         area = height * width;
-        System.out.printf("Площадь прямоугольника со сторонами %d и %d равна %d", height, width, area);
+        System.out.printf("Площадь прямоугольника со сторонами %.4f и %.4f равна %.4f", height, width, area);
     }
 }

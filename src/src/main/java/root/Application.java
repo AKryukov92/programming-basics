@@ -324,7 +324,7 @@ public class Application {
                 .addTask(new Task7237())
 
                 .withGroup("Использование математических функций")
-                .addExample(new Task7711())
+                .addExample(new Task7711())//синус
                 .addTask(new Task3474())//длина гипотенузы, косинус
                 .addTask(new Task1262())//косинус
                 .addTask(new Task9164())//синус и косинус
@@ -364,7 +364,7 @@ public class Application {
         //если сразу рассказать о логических операторах и return, то у людей потом будут проблемы с вложенностью циклов
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
-                .addExample(new Task9298())//взаимоисключающий
+                .addExample(new TaskJava9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
                 .addTask(new Task6522())//взаимоисключающий
                 .addTask(new Task7619())//взаимоисключающий, несколько вариантов

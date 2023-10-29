@@ -40,6 +40,7 @@ public abstract class StreamInputLayout extends LayoutMaker {
         List<ListPrintStream.Either> elements = lstPrinter.outputs();
         testCounter++;
         int i = 0;
+        --поехало форматирование первой строки
         while (i < elements.size()) {
             ListPrintStream.Either either = elements.get(i);
             if (i > 0) {

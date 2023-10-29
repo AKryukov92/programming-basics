@@ -16,11 +16,11 @@ public class TaskCs4411 extends OneInputValLayout {
         appendCheckValuesFooter();
         appendTaskDescEscaped("В этой задаче вам нужно получить от пользователя число. Для сохранения его в памяти нужно объявить переменную типа double.");
         appendCheckSingleNonEscaped(
-                "double x;              //объявление переменной типа double для исходных данных\n" +
-                        "x = Double.parse(Console.ReadLine());//читаем значение от пользователя\n" +
-                        "double result;         //объявление переменной для результата\n" +
-                        "result = x + 7;        //вычисление результата\n" +
-                        "Console.WriteLine(\"Результат равен {0:F4}\", result); //Выражение F4 обозначает, что нужно напечатать 4 знака после запятой");
+                "double x;                             //объявление переменной типа double для исходных данных\n" +
+                "x = Double.Parse(Console.ReadLine()); //читаем значение от пользователя\n" +
+                "double result;                        //объявление переменной для результата\n" +
+                "result = x + 7;                       //вычисление результата\n" +
+                "Console.WriteLine(\"Результат равен {0:F4}\", result); //Выражение F4 обозначает, что нужно напечатать 4 знака после запятой");
         appendFooter();
     }
 

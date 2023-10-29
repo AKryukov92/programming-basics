@@ -12,9 +12,8 @@ public class Task4568 extends StreamInputLayout {
         appendCheckValuesHeader();
         appendCheckValuesRow("q,w,e,q,q,q".split(","));
         appendCheckValuesRow("qw,as,zx,er,as,zx".split(","));
-        //appendCheckValuesF//ooter();
+        appendCheckValuesF//ooter();
         //нужен пример кода
-        appendCheckValuesFooter();
         appendFooter();
     }
 

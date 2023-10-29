@@ -16,7 +16,7 @@ public class TaskJava4411 extends OneInputValLayout {
         appendCheckValuesFooter();
         appendTaskDescEscaped("В этой задаче вам нужно получить от пользователя число. Для сохранения его в памяти нужно объявить переменную типа double.");
         appendCheckSingleNonEscaped(
-                "Scanner input = new Scanner(System.in);" +
+                "Scanner input = new Scanner(System.in);\n" +
                 "double x;              //объявление переменной типа double для исходных данных\n" +
                 "x = input.nextDouble();//читаем значение от пользователя\n" +
                 "double result;         //объявление переменной для результата\n" +
