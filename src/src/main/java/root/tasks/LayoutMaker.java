@@ -142,6 +142,10 @@ public abstract class LayoutMaker {
         }
     }
 
+    public void appendImage(String src) {
+        writer.println("<img src=\"" + src + "\"/>");
+    }
+
     @Override
     public String toString() {
         return getContent();

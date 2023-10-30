@@ -103,7 +103,7 @@ table td, table th {
 .stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
-    text-align:right;
+    text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
     border-top-width:0px;
@@ -133,9 +133,13 @@ table td, table th {
     border-top-width:1px;
     border-bottom-width:1px;
     text-align:center;
+    width:15px;
 }
 .stream_values tr:last-of-type td {
     border-bottom-width:1px;
+}
+.stream_values {
+    width:100%;
 }
 formula {
 	font-weight:bold;

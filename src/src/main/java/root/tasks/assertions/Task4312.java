@@ -24,7 +24,6 @@ public class Task4312 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendTaskId();
-        --добавить про вложенность условий
         appendTaskHeader();
         appendTaskDescNonEscaped("Вычислить площадь прямоугольного треугольника по формуле <formula>area=edge*height/2</formula>, где edge - основание, height - высота.");
         appendCheckValuesHeader("edge", "height");
@@ -35,6 +34,12 @@ public class Task4312 extends TwoInputValLayout {
         appendCheckValuesRow("3", "-4");
         appendCheckValuesRow("-5", "-7");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("В этой задаче, корректные исходные данные нужно проверять двумя условиями. Длина основания должна быть положительна и одновременно высота должна быть положительна. Для оформления этой идеи в коде можно вкладывать одно условие внутри другого.");
+        appendCheckSingleNonEscaped("if (edge > 0) {\n" +
+                "    if (height > 0) {\n" +
+                "        //вычисления и печать результата на экран\n" +
+                "    }\n" +
+                "}");
         appendFooter();
     }
 }

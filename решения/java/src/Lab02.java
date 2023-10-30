@@ -4,29 +4,6 @@
  */
 public class Lab02 {
 
-    public static void step9622() {
-        System.out.println();
-        System.out.println("9622");
-        int[] in9622m = {7351, 19, -1, 2, 3};
-        int[] in9622v = {7349, 23, 4, -5, 6};
-        int[] in9622h = {7333, 29, 7, 8, -9};
-        for (int i = 0; i < in9622m.length; i++) {
-            try {
-                class9622 result = task9622(in9622m[i], in9622v[i], in9622h[i]);
-                System.out.println(result.print());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    public static int task9298(int a) throws IllegalArgumentException {
-        if (a <= 0) {
-            throw new IllegalArgumentException("Значение A должно быть положительным");
-        }
-        return 6 * a * a;
-    }
-
     public static int task3354(int a) throws IllegalArgumentException {
         if (a <= 0) {
             throw new IllegalArgumentException("Значение A должно быть положительным");
@@ -72,34 +49,6 @@ public class Lab02 {
         return v * t + a * t * t / 2.0;
     }
 
-    public static class class9622 {
-        public double t;
-        public double wn;
-
-        public class9622(double t, double wn) {
-            this.t = t;
-            this.wn = wn;
-        }
-
-        public String print() {
-            return String.format("t %.4f wn %.4f", t, wn);
-        }
-    }
-
-    public static class9622 task9622(int m, int v, int h) throws IllegalArgumentException {
-        if (m <= 0) {
-            throw new IllegalArgumentException("Значение M должно быть положительным");
-        }
-        if (v <= 0) {
-            throw new IllegalArgumentException("Значение V должно быть положительным");
-        }
-        if (h < 0) {
-            throw new IllegalArgumentException("Значение H должно быть неотрицательным");
-        }
-        double g = 9.8067;
-        return new class9622((double) m * v * v / 2, (double) m * g * h);
-    }
-
     public static double task8873(int r1, int r2) throws IllegalArgumentException {
         if (r1 == 0) {
             throw new IllegalArgumentException("Значение r1 должно быть не равно нулю");
@@ -108,17 +57,6 @@ public class Lab02 {
             throw new IllegalArgumentException("Значение r2 должно быть не равно нулю");
         }
         return 1.0 / r1 + 1.0 / r2;
-    }
-
-    public static double task7799(int m, int a) throws IllegalArgumentException {
-        if (m <= 0) {
-            throw new IllegalArgumentException("Масса должна быть положительной");
-        }
-        double g = 9.8067;
-        if (a >= 90) {
-            return 0;
-        }
-        return m * g * Math.cos(a * Math.PI / 180);
     }
 
     public static void task9130(double planetMass, double satelliteMass, double radius){
@@ -186,15 +124,6 @@ public class Lab02 {
         double ar = a * Math.PI / 180;
         double br = b * Math.PI / 180;
         return Math.sin(ar) * Math.cos(br) + Math.cos(ar) * Math.sin(br);
-    }
-
-    public static double task3591(int h) throws IllegalArgumentException {
-        if (h < 0) {
-            throw new IllegalArgumentException("Высота над уровнем Земли должна быть неотрицательна");
-        }
-        double r = 6350;
-        double c = r + h;
-        return Math.sqrt(c * c - r * r);
     }
 
     public static double task3558(int a, int b) {

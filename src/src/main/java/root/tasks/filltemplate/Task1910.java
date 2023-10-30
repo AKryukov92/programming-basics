@@ -1,8 +1,10 @@
 package root.tasks.filltemplate;
 
-import root.tasks.MultipleInputValLayout;
+import root.tasks.StreamInputLayout;
 
-public class Task1910 extends MultipleInputValLayout {
+import java.util.Scanner;
+
+public class Task1910 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
@@ -38,7 +40,7 @@ public class Task1910 extends MultipleInputValLayout {
                 "Выведите на экран с новой строки значение строкового литерала \"Торопитесь, предложение ограничено!\"."
         );
         appendTaskDescEscaped("Убедитесь, что для всех исходных данных получается ожидаемый результат.");
-        appendCheckValuesHeader("companyName", "productName", "productCost");
+        appendCheckValuesHeader();
         appendCheckValuesRow("Рога и копыта", "копыта", "30 рублей за штуку");
         appendCheckValuesRow("Слоновод", "слоны", "15 попугаев");
         appendCheckValuesFooter();
@@ -46,18 +48,19 @@ public class Task1910 extends MultipleInputValLayout {
     }
 
     @Override
-    protected void logic(String... args) {
+    protected void logic(Readable Systemin) {
+        Scanner input = new Scanner(Systemin);
         String companyName;
         String productName;
         String productCost;
         String messagePart;
         System.out.println("Задача 1910");
         System.out.println("Введите название компании");
-        companyName = args[0];
+        companyName = input.nextLine();
         System.out.println("Введите наименование товара");
-        productName = args[1];
+        productName = input.nextLine();
         System.out.println("Введите цену товара");
-        productCost = args[2];
+        productCost = input.nextLine();
         messagePart = "Распродажа в " + companyName + "!";
         System.out.println(messagePart);
         messagePart = "Наши " + productName;

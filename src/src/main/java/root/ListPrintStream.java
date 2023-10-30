@@ -67,7 +67,7 @@ public class ListPrintStream extends PrintStream implements Readable {
             current = "";
         }
         if (inputs.hasNext()) {
-            String next = inputs.next() + " ";
+            String next = inputs.next() + "\n";
             outputs.add(Either.left(next));
             cb.put(next);
             return next.length();

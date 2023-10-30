@@ -372,7 +372,6 @@ public class Application {
                 .withGroup("Ограничения при вычислении корня")
                 .addExample(new Task8833())//взаимоисключающий
                 .addTask(new Task9020())//взаимоисключающий
-                .addCitation("link_c3_p11.2")
                 .addTask(new Task1934())//взаимоисключающий
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
 
@@ -384,10 +383,9 @@ public class Application {
 
                 .withGroup("Практика")
                 .addTask(new Task3490())//округление вниз
-                .addTask(9622)
-                .addCitation("link_c3_p12.1")
-                .addTask(7799)
-                .addTask(3591)
+                .addTask(new Task9622())//просто вычисления
+                .addTask(new Task7799())//подвох в условиях корректности
+                .addTask(new Task3591())//вычисления без формулы
                 .addTask(9130)
                 .addTask(5895)
                 .addTask(2461)

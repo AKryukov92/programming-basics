@@ -5,17 +5,9 @@ import root.tasks.OneInputValLayout;
 public class Task8833 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
-        appendTaskDescEscaped("При разработке программы мы первым делаем реализуем основную логику, а потом проверки." +
-                " Но в коде проверка исходных данных обычно располагается в начале, сразу после получения исходных данных и перед основной логикой.");
-        appendSubheading("Общий план работы программы");
-        appendOrderedNonEscaped(
-                "Получить исходные данные.",
-                "Проверить корректность исходных данных и сообщить об ошибке.",
-                "Если данные корректны, то выполнить полезные действия.",
-                "Сообщить пользователю результат."
-        );
         appendHeader();
-        appendTaskDescNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>");
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>. Сообщите об ошибке если пользователь ввел отрицательное число Воспользуйтесь стандартной функцией:");
+        appendCheckSingleNonEscaped("result = Math.sqrt(x);");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("7606");
         appendCheckValuesRow("9");
@@ -32,7 +24,7 @@ public class Task8833 extends OneInputValLayout {
         if (x < 0) {
             System.out.println("Значение X должно быть неотрицательным");
         }
-        if (x >= 0) {
+        if (0 <= x) {
             double result = Math.sqrt(x);
             System.out.printf("Корень из %.4f равен %.4f", x, result);
         }

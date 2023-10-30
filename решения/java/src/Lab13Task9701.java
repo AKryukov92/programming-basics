@@ -6,21 +6,6 @@ public class Lab13Task9701 {
     public static void main(String[] args) {
     }
 
-    private static void Step3591() {
-        System.out.println();
-        System.out.println("3591");
-        int[] in3591 = {0, 200, 6857, -500};
-        double[] out3591 = {0, 1606.2378, 11580.2569, -1};
-        for (int i = 0; i < in3591.length; i++) {
-            try {
-                double result = Lab02.task3591(in3591[i]);
-                System.out.printf("%.6f (%.6f)\n", result, out3591[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
     private static void Step5871() {
         System.out.println();
         System.out.println("5871");
@@ -175,37 +160,6 @@ public class Lab13Task9701 {
             try {
                 int result = Lab02.task3354(in3354[i]);
                 System.out.printf("%d (%d)\n", result, outs3354[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    private static void Step9298() {
-        System.out.println();
-        System.out.println("9298");
-        int[] in9298 = {1, 5, 0, -2};
-        int[] outs9298 = {6, 150, 0, 0};
-        for (int i = 0; i < in9298.length; i++) {
-            try {
-                int result = Lab02.task9298(in9298[i]);
-                System.out.printf("%d (%d)\n", result, outs9298[i]);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-
-    static void Step7799() {
-        System.out.println();
-        System.out.println("7799");
-        int[] in7799mass = {5, 7297, 10, 7, 9, 0};
-        int[] in7799a = {45, 30, 90, 91, 100, 30};
-        double[] outs7799 = {34.671920, 61972.336135, 0, 0, 0, 0};
-        for (int i = 0; i < in7799mass.length; i++) {
-            try {
-                double result = Lab02.task7799(in7799mass[i], in7799a[i]);
-                System.out.printf("%.6f (%.6f)\n", result, outs7799[i]);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }

@@ -12,6 +12,7 @@ public class Task4764 extends OneInputValLayout {
         appendCheckValuesRow("загадки");
         appendCheckValuesRow("сложные задачи");
         appendCheckValuesFooter();
+        --сказать про инициализацию и объявление
         appendFooter();
     }
 

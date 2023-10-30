@@ -20,18 +20,25 @@ public class Task9020 extends OneInputValLayout {
         appendCheckValuesRow("7573");
         appendCheckValuesRow("75");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Условие может содержать арифметические операторы. Например в этой задаче вы можете написать условие так:");
+        appendCheckSingleNonEscaped("if (61 - x < 0) {");
+        appendTaskDescEscaped("Это не единственный и не лучший вариант написания условия. Нужно знать что так можно.");
         appendFooter();
     }
 
     @Override
     protected void logic(String value) {
         double x = Double.parseDouble(value);
-        if (x > 61) {
+        if (61 - x < 0) {
             System.out.println("Подкоренное выражение должно быть неотрицательным");
         }
         if (x <= 61) {
             double result = 3 * Math.sqrt(61 - x);
             System.out.printf("Результат вычисления %.4f", result);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task9020());
     }
 }
