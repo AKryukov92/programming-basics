@@ -19,6 +19,20 @@ public class TaskCs1860 extends OneInputValLayout {
         appendCheckValuesRow("цели");
         appendCheckValuesRow("результату");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Одна из распространенных ошибок - не объявить переменную и дать команду на запись значения в переменную.");
+        appendCheckSingleNonEscaped(
+                "//для иллюстрации команда объявления пропущена String goal;\n" +
+                "goal = Console.ReadLine();\n" +
+                "Console.WriteLine(\"Мы стремимся к \" + goal);"
+        );
+        appendTaskDescEscaped("При попытке запустить такой код, компьютер выдаст ошибку: \"Имя \"goal\" не существует в текущем контексте.\"");
+        appendTaskDescEscaped("Другая распространенная ошибка - пропустить инициализацию переменной. То есть объявить переменную и сразу использовать её в команде печати на экран.");
+        appendCheckSingleNonEscaped(
+                "String goal;\n" +
+                "//для иллюстрации, команда записи значения пропущена: goal = Console.ReadLine();\n" +
+                "Console.WriteLine(\"Мы стремимся к \" + goal);"
+        );
+        appendTaskDescEscaped("В таком случае компьютер выдаст ошибку: \"Использование локальной переменной \"goal\", которой не присвоено значение.\"");
         appendFooter();
     }
 

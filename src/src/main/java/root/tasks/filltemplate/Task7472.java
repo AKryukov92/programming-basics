@@ -11,8 +11,8 @@ public class Task7472 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Дано две строки A и B. Нужно составить из них третью строку C, которая должна начинаться строкой B и заканчиваться строкой A.");
-        appendCheckValuesHeader("A", "B");
+        appendTaskDescEscaped("Пользователь вводит две строки(first и second). Нужно составить из них третью строку, которая должна начинаться строкой second и заканчиваться строкой first.");
+        appendCheckValuesHeader("first", "second");
         appendCheckValuesRow("начало", "конец");
         appendCheckValuesRow("сила", "знание");
         appendCheckValuesRow("курица", "яйцо");

@@ -6,7 +6,7 @@ public class Task8833 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>. Сообщите об ошибке если пользователь ввел отрицательное число Воспользуйтесь стандартной функцией:");
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula><sqrt><val>x</val></sqrt></formula>. Сообщите об ошибке если пользователь ввел отрицательное число. Воспользуйтесь стандартной функцией вычисления корня:");
         appendCheckSingleNonEscaped("result = Math.sqrt(x);");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("7606");
