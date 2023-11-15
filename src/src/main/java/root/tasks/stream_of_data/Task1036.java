@@ -36,9 +36,9 @@ public class Task1036 extends StreamInputLayout {
         String[] state = "X_X_X_ _o_o_o".split("_");
         String[] standard = "o_o_o_ _X_X_X".split("_");
         int emptyPosition = 3;
+        System.out.println(String.join("",state));
+        System.out.println("0123456");
         while(!end && s.hasNext()) {
-            System.out.println(String.join("",state));
-            System.out.println("0123456");
             int move = Integer.parseInt(s.next());
             int allowedMin;
             int allowedMax;
@@ -59,6 +59,8 @@ public class Task1036 extends StreamInputLayout {
             state[emptyPosition] = state[move];
             state[move] = " ";
             emptyPosition = move;
+            System.out.println(String.join("",state));
+            System.out.println("0123456");
             int i = 0;
             boolean correct = true;
             while (i < state.length) {
@@ -72,8 +74,6 @@ public class Task1036 extends StreamInputLayout {
                 end = true;
             }
         }
-        System.out.println(String.join("",state));
-        System.out.println("0123456");
     }
 
     public static void main(String[] args) {
