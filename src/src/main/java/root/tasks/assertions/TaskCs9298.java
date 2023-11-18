@@ -35,7 +35,7 @@ public class TaskCs9298 extends OneInputValLayout {
         appendTaskDescEscaped("Реализуйте чтение исходных данных");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                        "edge = input.nextDouble();\n");
+                        "edge = Double.Parse(Console.ReadLine());\n");
         appendTaskDescEscaped("Добавьте две конструкции ветвления: для корректных и некорректных данных. Всегда пишите фигурные скобочки у конструкций ветвления. Пишите открывающую и закрывающую скобку одновременно. Заполняйте внутреннее содержимое после того, как напишете открывающую и закрывающую часть блока. У людей часто возникают ошибки в логике программы из за того, что скобки расставлены неправильно.");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +

@@ -6,21 +6,22 @@ public class TaskCs4411 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры. При вводе чисел в консоль, между целой и дробной частью нужно ставить запятую, а не точку как в тестах.");
+        appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры.");
         appendCheckValuesHeader("X");
-        appendCheckValuesRow("11.13");
-        appendCheckValuesRow("-79.19");
-        appendCheckValuesRow("0");
-        appendCheckValuesRow("6.00006");
-        appendCheckValuesRow("9.00004");
+        appendCheckValuesRowCs("11.13");
+        appendCheckValuesRowCs("-79.19");
+        appendCheckValuesRowCs("0");
+        appendCheckValuesRowCs("6.00006");
+        appendCheckValuesRowCs("9.00004");
         appendCheckValuesFooter();
-        appendTaskDescEscaped("В этой задаче вам нужно получить от пользователя число. Для сохранения его в памяти нужно объявить переменную типа double.");
-        appendCheckSingleNonEscaped(
-                "double x;                             //объявление переменной типа double для исходных данных\n" +
-                "x = Double.Parse(Console.ReadLine()); //читаем значение от пользователя\n" +
-                "double result;                        //объявление переменной для результата\n" +
-                "result = x + 7;                       //вычисление результата\n" +
-                "Console.WriteLine(\"Результат равен {0:F4}\", result); //Выражение F4 обозначает, что нужно напечатать 4 знака после запятой");
+        appendTaskDescEscaped("В этой задаче вам нужно получить от пользователя число. Это число может иметь цифры после запятой. Для сохранения таких чисел в памяти нужно объявить переменную типа double.");
+        appendCheckSingleNonEscaped(escapeHtmlSymbols(getMain(getClass().getSimpleName())));
+        appendTaskDescNonEscaped("Если вы получили ошибку ");
+        appendCheckSingleNonEscaped("Необработанное исключение: System.FormatException: Входная строка имела неверный формат.\n" +
+                "   в System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)\n" +
+                "   в System.Double.Parse(String s)\n" +
+                "   в Example.Program.Main(String[] args) в C:\\Users\\Александр\\source\\repos\\Example\\Example\\Program.cs:строка 9");
+        appendTaskDescNonEscaped("Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <zoom>,</zoom> и точкой <zoom>.</zoom>. Если один из этих символов не подошел, используйте другой.");
         appendFooter();
     }
 

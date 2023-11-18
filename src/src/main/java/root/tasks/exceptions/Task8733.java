@@ -4,6 +4,7 @@ import root.tasks.OneInputValLayout;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task8733 extends OneInputValLayout {
@@ -41,15 +42,18 @@ public class Task8733 extends OneInputValLayout {
                         System.out.println("Заявленое количество " + n + ", фактическое количество " + i);
                         return;
                     }
-                    double current = fileReader.nextDouble();
-                    if (current < 20) {
-                        sum += current;
-                        count++;
+                    String temp = fileReader.nextLine();
+                    if (!temp.isEmpty()) {
+                        double current = Double.parseDouble(temp);
+                        if (current < 20) {
+                            sum += current;
+                            count++;
+                        }
                     }
                     i++;
                 }
                 while (fileReader.hasNext()) {
-                    fileReader.nextDouble();
+                    fileReader.nextLine();
                     i++;
                 }
                 if (i > n) {
@@ -65,7 +69,7 @@ public class Task8733 extends OneInputValLayout {
             }
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден " + target.getAbsolutePath());
-        } catch (java.util.InputMismatchException e){
+        } catch (InputMismatchException | NumberFormatException e) {
             System.out.println("Не удалось преобразовать строку в число");
         }
     }

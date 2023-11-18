@@ -15,7 +15,6 @@ import java.util.Set;
  */
 public class Lab15 {
     public static void main(String[] args) {
-        Step9990();
         Step7738();
         Step9924();
         Step7657();

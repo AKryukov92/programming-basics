@@ -29,6 +29,22 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.println("</tr>");
     }
 
+    protected void appendCheckValuesRowCs(String a) {
+        writer.print("<tr>");
+        testCounter++;
+        writer.print("<td>" + testCounter + "</td>");
+        writer.print("<td>");
+        writer.print(a.replaceAll("\\.", ","));
+        writer.print("</td>");
+        writer.print("<td class='preformatted'>");
+        PrintStream oldOut = System.out;
+        System.setOut(writer);
+        logic(a);
+        System.setOut(oldOut);
+        writer.print("</td>");
+        writer.println("</tr>");
+    }
+
     protected void appendCheckValuesRow(String a) {
         writer.print("<tr>");
         testCounter++;

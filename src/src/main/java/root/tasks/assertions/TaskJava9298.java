@@ -35,11 +35,11 @@ public class TaskJava9298 extends OneInputValLayout {
         appendTaskDescEscaped("Реализуйте чтение исходных данных");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                "edge = input.nextDouble();\n");
+                "edge = Double.parseDouble(input.nextLine());\n");
         appendTaskDescEscaped("Добавьте две конструкции ветвления: для корректных и некорректных данных. Всегда пишите фигурные скобочки у конструкций ветвления. Пишите открывающую и закрывающую скобку одновременно. Заполняйте внутреннее содержимое после того, как напишете открывающую и закрывающую часть блока. У людей часто возникают ошибки в логике программы из за того, что скобки расставлены неправильно.");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                        "edge = input.nextDouble();\n" +
+                        "edge = Double.parseDouble(input.nextLine());\n" +
                         "if () {\n" +
                         "//сообщение об ошибке\n" +
                         "}\n" +
@@ -49,7 +49,7 @@ public class TaskJava9298 extends OneInputValLayout {
         appendTaskDescEscaped("Подумайте, какое условие будет истинно для всех корректных данных, которые полезны для расчета результата.");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                "edge = input.nextDouble();\n" +
+                "edge = Double.parseDouble(input.nextLine());\n" +
                 "if () {\n" +
                 "//сообщение об ошибке\n" +
                 "}\n" +
@@ -59,7 +59,7 @@ public class TaskJava9298 extends OneInputValLayout {
         appendTaskDescEscaped("Подумайте какое условие будет истинно для всех некорректных данных.");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                "edge = input.nextDouble();\n" +
+                "edge = Double.parseDouble(input.nextLine());\n" +
                 "if (edge <= 0) {\n" +
                 "//сообщение об ошибке\n" +
                 "}\n" +
@@ -69,7 +69,7 @@ public class TaskJava9298 extends OneInputValLayout {
         appendTaskDescEscaped("Добавьте вычисления, вывод результата и сообщений об ошибке");
         appendCheckSingleNonEscaped(
                 "double edge;\n" +
-                "edge = input.nextDouble();\n" +
+                "edge = Double.parseDouble(input.nextLine());\n" +
                 "if (edge <= 0) {\n" +
                 "    //сообщение об ошибке\n" +
                 "    System.out.println(\"Значение edge должно быть положительным\");\n" +

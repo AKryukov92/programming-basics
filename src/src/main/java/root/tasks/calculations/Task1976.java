@@ -46,9 +46,9 @@ public class Task1976 extends StreamInputLayout {
         double area;
         System.out.println("Задача 1976");
         System.out.println("Введите высоту прямоугольника");
-        height = s.nextDouble();
+        height = Double.parseDouble(s.nextLine());
         System.out.println("Введите ширину прямоугольника");
-        width = s.nextDouble();
+        width = Double.parseDouble(s.nextLine());
         area = height * width;
         System.out.printf("Площадь прямоугольника со сторонами %.4f и %.4f равна %.4f", height, width, area);
     }

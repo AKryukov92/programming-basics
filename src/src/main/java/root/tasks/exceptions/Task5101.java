@@ -41,15 +41,18 @@ public class Task5101 extends OneInputValLayout {
                         System.out.println("Заявленое количество " + n + ", фактическое количество " + i);
                         return;
                     }
-                    double current = fileReader.nextDouble();
-                    if (current < 20) {
-                        sum += current;
-                        count++;
+                    String temp = fileReader.nextLine();
+                    if (!temp.isEmpty()) {
+                        double current = Double.parseDouble(temp);
+                        if (current < 20) {
+                            sum += current;
+                            count++;
+                        }
                     }
                     i++;
                 }
                 while (fileReader.hasNext()) {
-                    fileReader.nextDouble();
+                    fileReader.nextLine();
                     i++;
                 }
                 if (i > n) {

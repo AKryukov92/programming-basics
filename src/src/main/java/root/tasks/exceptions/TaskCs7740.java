@@ -13,11 +13,11 @@ public class TaskCs7740 extends OneInputValLayout {
         );
         appendTaskDescEscaped("Вычислить результат по формуле x + 7, где x вводится с клавиатуры");
         appendCheckValuesHeader("X");
-        appendCheckValuesRow("11.13");
-        appendCheckValuesRow("-7919");
-        appendCheckValuesRow("0");
-        appendCheckValuesRow("word");
-        appendCheckValuesRow("$14");
+        appendCheckValuesRowCs("11.13");
+        appendCheckValuesRowCs("-7919");
+        appendCheckValuesRowCs("0");
+        appendCheckValuesRowCs("word");
+        appendCheckValuesRowCs("$14");
         appendCheckValuesFooter();
         appendFooter();
     }

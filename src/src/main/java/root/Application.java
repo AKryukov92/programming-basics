@@ -391,7 +391,17 @@ public class Application {
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
 
                 .withGroup("Вычисление остатка от деления")
-                .addExample(new Task2801())//остаток от деления, не равно
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava2801())//остаток от деления, не равно
+            ;
+        } else {
+            taskBook
+                    .addExample(new TaskCs2801())//остаток от деления, не равно
+            ;
+        }
+        taskBook
                 .addTask(new Task2361())//остаток от деления, сложная вложенность
                 .addTask(new Task5063())//остаток от деления, кажется скучная
                 .addTask(new Task5870())//остаток от деления
