@@ -1,32 +1,19 @@
 package root.tasks.methods;
 
-import root.tasks.LayoutMaker;
-
-public class TaskJava4776 extends LayoutMaker {
+public class TaskJava4776 extends TaskCs4776 {
     @Override
-    protected void makeLayout() {
-        appendHeader();
-        appendSubheading("Реализуйте метод для решения задачи " + linkToTask(2790));
-        appendOrderedNonEscaped(
-                "В классе Library реализуйте публичный статический метод Task2790.",
-                "Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.",
-                "В теле метода вычислите результат и верните его"
-        );
-        appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrderedNonEscaped(
-                "Импортируйте классы \"org.junit.Assert\" и \"org.junit.Test\" в классе TestSuite",
-                "В классе TestSuite создайте публичный метод task2790test. Добавьте ему аннотацию @Test.",
-                "Метод task2790test ничего не возвращает.",
-                "В теле метода task2790test объявите переменную actual для хранения действительных чисел.",
-                "Вызовите статический метод task2790 класса Library.",
-                "Передайте ему в качестве аргументов число 6997",
-                "Результат вызова запишите в переменную actual.",
-                "Вызовите статический метод assertEquals из класса Assert. Передайте ему первым аргументом число 0.9205, вторым аргументом переменную actual, третьим аргументом число 0.0001",
-                "Вызовите статический метод task2790 с аргументом 31 и запишите результат в переменную actual.",
-                "Вызовите статический метод assertEquals из класса Assert. Передайте ему первым аргументом число 0.8572, вторым аргументом переменную actual, третьим аргументом число 0.0001",
-                "Добавьте проверку, что метод task2790 возвращает 0 если его вызвать с аргументом 90."
-        );
-        appendTaskDescEscaped("После запуска юнит-теста, он должен быть отмечен зеленым знаком.");
-        appendFooter();
+    protected void logic(String value) {
+        double result;
+        result = TaskCs4776.Library.task2790(69.97);
+        System.out.printf("%.4f", result);
+        //для наглядности проверки можно писать дополнительные условия
+        if (0.9395 <= result && result <= 0.9396) {
+            System.out.println("Верно");
+        } else {
+            System.out.println("Результат некорректный");
+        }
+        result = TaskCs4776.Library.task2790(31);
+        System.out.printf("%.4f", result);
+        System.out.printf("%.4f", TaskCs4776.Library.task2790(90));
     }
 }

@@ -1,31 +1,50 @@
 package root.tasks.methods;
 
-import root.tasks.LayoutMaker;
 import root.tasks.MethodsDictationHelper;
+import root.tasks.OneInputValLayout;
 
-public class TaskJava7611 extends LayoutMaker implements MethodsDictationHelper {
+public class TaskJava7611 extends OneInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading(implementMethodToSolve(4411));
+        appendTaskDescEscaped("Вычислить результат по формуле x + 7.");
         appendOrderedNonEscaped(
-                implementStatic("Library", "Task4411"),
+                implementStatic("Library", "task4411"),
                 itAccepts("1 действительное число"),
                 "Он возвращает действительное число",
                 "В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных"
         );
-        appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
-        appendOrderedNonEscaped(
-                "Вызовите статический метод Task4411 класса Library.",
-                "Передайте ему в качестве аргумента число 11.13",
-                "Результат вызова запишите в переменную result",
-                "Напечатайте в консоль значение переменной result",
-                "Вызовите метод Task4411 и передайте ему число -7919",
-                "Напечатайте в консоль результат второго вызова метода",
-                "Напечатайте в консоль результат вызова метода Task4411 с аргументом 0",
-                "В результате запуска метода main класса Program, в консоли должен появиться текст:"
-        );
-        appendCheckSingleNonEscaped("18.13\n-7912\n7");
+        appendTaskDescEscaped("Код метода будет выглядеть так:");
+        appendCheckSingleNonEscaped("public class Library {\n" +
+                "    public static double task4411(double x) {\n" +
+                "        double res;\n" +
+                "        res =  x + 7;\n" +
+                "        return res;\n" +
+                "    }\n" +
+                "}");
+        appendTaskDescEscaped("В методе main класса Program добавьте следующий код:");
+        appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
+        appendTaskDescEscaped("В результате запуска метода main класса Program, в консоли должен появиться текст:");
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
+    }
+
+    @Override
+    protected void logic(String val) {
+        double result;
+        result = Library.task4411(11.13);//в качестве аргумента передано число
+        System.out.printf("%.4f\n", result);
+        double value = -79.19;
+        result = Library.task4411(value);//в качестве аргумента передано значение переменной
+        System.out.printf("%.4f\n", result);
+        System.out.printf("%.4f\n", Library.task4411(0));//результат используется без промежуточной переменной
+    }
+
+    protected static class Library {
+        public static double task4411(double x) {
+            double res;
+            res =  x + 7;
+            return res;
+        }
     }
 }

@@ -209,23 +209,49 @@ zoom{
 <div class='task_desc'>
 Вычислить результат по формуле x + 7, где x вводится с клавиатуры.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
-<tr><td>1</td><td>11.13</td><td class='preformatted'>Результат равен 18,1300</td></tr>
-<tr><td>2</td><td>-79.19</td><td class='preformatted'>Результат равен -72,1900</td></tr>
-<tr><td>3</td><td>0</td><td class='preformatted'>Результат равен 7,0000</td></tr>
-<tr><td>4</td><td>6.00006</td><td class='preformatted'>Результат равен 13,0001</td></tr>
-<tr><td>5</td><td>9.00004</td><td class='preformatted'>Результат равен 16,0000</td></tr>
+<table class='stream_values'>
+<tr><th>Номер теста</th><th>Исходные данные</th><th>Результат (X)</th></tr>
+<tr class='test_row'><td rowspan='2'>1</td><td>11.13
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Результат равен 18,1300</td></tr>
+<tr class='test_row'><td rowspan='2'>2</td><td>-79.19
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Результат равен -72,1900</td></tr>
+<tr class='test_row'><td rowspan='2'>3</td><td>0
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Результат равен 7,0000</td></tr>
+<tr class='test_row'><td rowspan='2'>4</td><td>6.00006
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Результат равен 13,0001</td></tr>
+<tr class='test_row'><td rowspan='2'>5</td><td>9.00004
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Результат равен 16,0000</td></tr>
 </table>
 <div class='task_desc'>
-В этой задаче вам нужно получить от пользователя число. Для сохранения его в памяти нужно объявить переменную типа double.
+В этой задаче вам нужно получить от пользователя число. Это число может иметь цифры после запятой. Для сохранения таких чисел в памяти нужно объявить переменную типа double.
 </div>
-<div class='check_single preformatted'>Scanner input = new Scanner(System.in);
-double x;              //объявление переменной типа double для исходных данных
-x = input.nextDouble();//читаем значение от пользователя
-double result;         //объявление переменной для результата
-result = x + 7;        //вычисление результата
-System.out.printf("Результат равен %.4f", result); //Выражение F4 обозначает, что нужно напечатать 4 знака после запятой</div>
+<div class='check_single preformatted'>Scanner s = new Scanner(Systemin);
+double x;           //объявление переменной типа double для числа с цифрами после запятой
+x = Double.parseDouble(s.nextLine()); //читаем значение от пользователя
+double result;      //объявление переменной для результата
+result = x + 7;     //вычисление результата
+System.out.printf("Результат равен %.4f", result); //Выражение %.4f обозначает, что нужно напечатать 4 знака после запятой
+</div>
+<div class='task_desc'>
+Если вы получили ошибку:
+</div>
+<div class='check_single preformatted'>Exception in thread "main" java.util.InputMismatchException
+	at java.util.Scanner.throwFor(Scanner.java:864)
+	at java.util.Scanner.next(Scanner.java:1485)
+	at java.util.Scanner.nextDouble(Scanner.java:2413)</div>
+<div class='task_desc'>
+Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <zoom>,</zoom> и точкой <zoom>.</zoom>. Если один из этих символов не подошел, используйте другой.
+</div>
 </div>
 <div id='task8428' class='task_block'>
 <div class='task_id'>8428</div>

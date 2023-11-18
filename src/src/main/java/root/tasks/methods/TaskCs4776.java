@@ -1,31 +1,50 @@
 package root.tasks.methods;
 
-import root.tasks.LayoutMaker;
+import root.Console;
+import root.tasks.OneInputValLayout;
 
-public class TaskCs4776 extends LayoutMaker {
+public class TaskCs4776 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте метод для решения задачи " + linkToTask(2790));
+        appendTaskDescNonEscaped("Вычислить результат по формуле.<formula>\n" +
+                "\t\t<sqrt><val>\n" +
+                "\t\t\t1-sin<sup>2</sup>(xRad)\n" +
+                "\t\t</val></sqrt>\n" +
+                "\t</formula>");
+        appendTaskDescNonEscaped("Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче " + linkToTask(7711));
         appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task2790.",
                 "Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.",
                 "В теле метода вычислите результат и верните его"
         );
-        appendSubheading("Проверьте корректность работы метода с помощью юнит-теста");
-        appendOrderedNonEscaped(
-                "В классе TestSuite создайте публичный метод Task2790test. Добавьте ему атрибут TestMethod.",
-                "Метод Task2790test ничего не возвращает.",
-                "В теле метода Task2790test объявите переменную actual для хранения действительных чисел.",
-                "Вызовите статический метод task2790 класса Library.",
-                "Передайте ему в качестве аргументов число 6997",
-                "Результат вызова запишите в переменную actual.",
-                "Вызовите статический метод AreEqual из класса Assert. Передайте ему первым аргументом число 0.9205, вторым аргументом переменную actual, третьим аргументом число 0.0001",
-                "Вызовите статический метод Task2790 с аргументом 31 и запишите результат в переменную actual.",
-                "Вызовите статический метод AreEqual из класса Assert. Передайте ему первым аргументом число 0.8572, вторым аргументом переменную actual, третьим аргументом число 0.0001",
-                "Добавьте проверку, что метод Task2790 возвращает 0 если его вызвать с аргументом 90."
-        );
-        appendTaskDescEscaped("После запуска юнит-теста, он должен быть отмечен зеленым знаком.");
+        appendTaskDescEscaped("В методе main класса Program добавьте следующий код:");
+        appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
+        appendTaskDescEscaped("В результате запуска метода main класса Program, в консоли должен появиться текст:");
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
+    }
+
+    @Override
+    protected void logic(String value) {
+        double result;
+        result = Library.task2790(69.97);
+        Console.WriteLine("{0:4F}", result);
+        //для наглядности проверки можно писать дополнительные условия
+        if (0.9395 <= result && result <= 0.9396) {
+            Console.WriteLine("Верно");
+        } else {
+            Console.WriteLine("Результат некорректный");
+        }
+        result = Library.task2790(31);
+        Console.WriteLine("{0:4F}", result);
+        Console.WriteLine("{0:4F}", Library.task2790(90));
+    }
+
+    protected static class Library {
+        public static double task2790(double angleDegree) {
+            double angleRadian = angleDegree * Math.PI / 180;
+            return Math.sin(angleRadian);
+        }
     }
 }

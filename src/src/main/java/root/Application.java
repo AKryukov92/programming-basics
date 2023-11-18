@@ -993,8 +993,8 @@ public class Application {
                     .addTask(new TaskJava2772())
                     .addCitation("link_c2_p7.1")
 
-                    .addExample(new TaskCs7611())
-                    .addTask(new TaskCs4776())
+                    .addExample(new TaskJava7611())
+                    .addTask(new TaskJava4776())
             ;
         } else if (taskBook.isCsharp()) {
             taskBook
@@ -1004,8 +1004,8 @@ public class Application {
                     .addTask(new TaskCs2772())
                     .addCitation("link_c2_p7.1")
 
-                    .addExample(new TaskJava7611())
-                    .addTask(new TaskJava4776())
+                    .addExample(new TaskCs7611())
+                    .addTask(new TaskCs4776())
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");

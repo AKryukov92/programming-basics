@@ -9,16 +9,22 @@ public class Task7991 extends MultipleInputValLayout {
         int x = Integer.parseInt(args[0]);
         int y = Integer.parseInt(args[1]);
         int z = Integer.parseInt(args[2]);
-        if (-11 < x && x < 13) {
-            System.out.print(x);
-            System.out.print(" ");
+        if (-11 < x) {
+            if (x < 13) {
+                System.out.print(x);
+                System.out.print(" ");
+            }
         }
-        if (-11 < y && y < 13) {
-            System.out.print(y);
-            System.out.print(" ");
+        if (-11 < y) {
+            if (y < 13) {
+                System.out.print(y);
+                System.out.print(" ");
+            }
         }
-        if (-11 < z && z < 13) {
-            System.out.print(z);
+        if (-11 < z) {
+            if (z < 13) {
+                System.out.print(z);
+            }
         }
     }
 
@@ -37,7 +43,6 @@ public class Task7991 extends MultipleInputValLayout {
         appendCheckValuesRow("13", "-11", "6");
         appendCheckValuesRow("8", "13", "-11");
         appendCheckValuesFooter();
-        appendTaskDescEscaped("Эту задачу полезно решить двумя способами. Один способ - с помощью одной конструкции if(){} else if(){} else if(){}. Другой способ - сделать три отдельных if, у каждого из которых есть else.");
         appendFooter();
     }
 
