@@ -1242,35 +1242,37 @@ public class Application {
         //затем поиск в csv файле 6989. обратить внимание что мы сначала читаем файл, а данные из него обрабатываем потом. пользователь вводит несколько идентификаторов
         //задача на сопоставление двух листов 6170
         taskBook.withSourceDirectory("lab15")
-                .withGroup("Формирование листа")
-                .addExample(new Task5087())//наполнение "массива" неизвестным количеством элементов
         ;
         if (taskBook.isJava()) {
-            taskBook.addTask(new TaskJava8317())//делители числа
+            taskBook
+                    .withGroup("Формирование листа")
+                    .addExample(new TaskJava5087())//наполнение листа
+                    .addTask(new TaskJava3305())//целые числа в диапазоне
+                    .addTask(new TaskJava8317())//делители числа, наполнение листа, обработка исключений
+                    .withGroup("Формирование множества")
+                    .addExample(new TaskJava4568())//запись в сет
+                    .addTask(new Task9990())//чтение из файла, запись в сет
             ;
         } else {
-            taskBook.addTask(new TaskCs8317())//делители числа
+            taskBook
+                    .withGroup("Формирование листа")
+                    .addExample(new TaskCs5087())//наполнение листа
+                    .addTask(new TaskCs3305())//целые числа в диапазоне
+                    .addTask(new TaskCs8317())//делители числа
+                    .withGroup("Формирование множества")
+                    .addExample(new TaskCs4568())//запись в сет
+                    .addTask(new Task9990())//чтение из файла, запись в сет
             ;
         }
         taskBook
-                .addTask(8418)
-
-
-                .withGroup("Формирование множества")
-                .addExample(new Task4568())
-                .addTask(9990)
-                .addTask(new Task6590())
-
-                .withGroup("Вычисление агрегата по группам")
-                .addTask(9092)
-
-                .withGroup("Переопределение стандартного Equals")
-                .addExample(5449)
-                .addTask(9238)
-
-                .withGroup("Переопределение стандартного hashcode")
-                .addExample(9512)
-                .addTask(9924)
+                //пока отключено, потому что в первом знакомстве с коллекциями, люди еще не готовы использовать их для хранения классов
+//                .withGroup("Переопределение стандартного Equals")
+//                .addExample(5449)
+//                .addTask(9238)
+//
+//                .withGroup("Переопределение стандартного hashcode")
+//                .addExample(9512)
+//                .addTask(9924)
 
                 .withGroup("Формирование словаря")
                 //здесь надо задачу с бесконечным вводом по два элемента: ключ и значение
@@ -1281,6 +1283,10 @@ public class Application {
                 .addTask(5108)
                 .addTask(new Task7940())//заполнение расписания, наполнение листа, поиск подходящих, сравнение интервалов
                 .addTask(new Task3146())//wordcount
+
+                .withGroup("Вычисление агрегата по группам")
+                .addTask(9092)
+                .addTask(new Task6590())//задача решена через set и кажется это избыточно
 
                 .withGroup("Заполнение коллекции экземплярами классов из иерархии")
                 .addExample(3956)

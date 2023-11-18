@@ -64,14 +64,6 @@ public class Lab15 {
         }
     }
 
-    private static void Step9990() {
-        System.out.println();
-        System.out.println("9990");
-        for (int i = 1; i <= 4; i++){
-            task9990(".\\task9990\\test" + i + ".txt");
-        }
-    }
-
     private static void Step7657() {
         System.out.println();
         System.out.println("7657");
@@ -203,27 +195,6 @@ public class Lab15 {
         System.out.println(target.getAbsolutePath());
         try (Scanner scanner = new Scanner(target)){
             logic7657(scanner);
-        } catch (FileNotFoundException e) {
-            System.out.println("Файл не существует");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    static void logic9990(Scanner scanner){
-        Set<String> result = new HashSet<>();
-        while(scanner.hasNext()){
-            String line = scanner.next();
-            result.add(line);
-        }
-        System.out.println(String.join(", ", result));
-    }
-
-    static void task9990(String filename){
-        File target = new File(filename);
-        System.out.println(target.getAbsolutePath());
-        try (Scanner scanner = new Scanner(target)){
-            logic9990(scanner);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не существует");
         } catch (Exception e) {
