@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>15 Строки</title><style>.check_single {
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>15 Сортировка вставкой</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -34,6 +34,9 @@ table td, table th {
 }
 .check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
+}
+.check_values td, .check_values_v2 td {
+    max-width: 450px;
 }
 .lab_nav ol {
 	list-style:none;
@@ -92,17 +95,15 @@ table td, table th {
 }
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
-	white-space:pre;
+	white-space-collapse:preserve;
+    text-wrap:pretty;
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target, .check_values_v2 tr:target {
-    background-color:lightgrey;
-}
-.stream_values tr:nth-child(2) td:nth-child(3) {
+.stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
-    text-align:right;
+    text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
     border-top-width:0px;
@@ -114,10 +115,31 @@ table td, table th {
     border-bottom-width:0px;
     text-align:right;
 }
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
 .stream_values tr td:nth-child(2){
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
+}
+.stream_values tr.test_row td:first-of-type {
+    border-top-width:1px;
+    border-bottom-width:1px;
+    text-align:center;
+    width:15px;
+}
+.stream_values tr:last-of-type td {
+    border-bottom-width:1px;
+}
+.stream_values {
+    width:100%;
 }
 formula {
 	font-weight:bold;
@@ -175,966 +197,695 @@ spoiler:hover trans {
 	width:300px;
 }
 zoom{
-	background-color:gray;
+	background-color:lightgrey;
 	font-size:40pt;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Строки</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7491' class='example'>1*</a><li><a href='#task9631' class='example'>2*</a><li><a href='#task9812'>3</a><li><a href='#task9279'>4</a><li><a href='#task4845' class='example'>5*</a><li><a href='#task5728'>6</a><li><a href='#task7222'>7</a><li><a href='#task5923'>8</a><li><a href='#task8543'>9</a><li><a href='#task4265'>10</a><li><a href='#task2166'>11</a><li><a href='#task4996'>12</a><li><a href='#task9925' class='example'>13*</a><li><a href='#task3657' class='example'>14*</a><li><a href='#task6599'>15</a><li><a href='#task1618'>16</a><li><a href='#task1703'>17</a><li><a href='#task8887'>18</a><li><a href='#task9116'>19</a></ul></div><div id='task7491' class='task_block'>
-<div class='task_id'>7491</div>
+	padding:0px 10px;
+}
+.task_block:target zoom {
+    background-color:white;
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Сортировка вставкой</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Печать текста на экран</a></li><li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li><li>3 <a href='tasks 3.html'>Организация вычислений</a></li><li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li><li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li><li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li><li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li><li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li><li>9 <a href='tasks 9.html'>Вложенные циклы</a></li><li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li><li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li><li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li><li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li><li>14 <a href='tasks 14.html'>Поиск в массиве</a></li><li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li><li>16 <a href='tasks 16.html'>Строки</a></li><li>17 <a href='tasks 17.html'>Чтение файлов</a></li><li>18 <a href='tasks 18.html'>Запись в файлы</a></li><li>19 <a href='tasks 19.html'>Методы</a></li><li>20 <a href='tasks 20.html'>Исключения</a></li><li>21 <a href='tasks 21.html'>Составные типы данных</a></li><li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li><li>23 <a href='tasks 23.html'>Коллекции</a></li><li>24 <a href='tasks 24.html'>Рекурсия</a></li><li>25 <a href='tasks 25.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7035' class='example'>1*</a><li><a href='#task1522'>2</a><li><a href='#task1431'>3</a><li><a href='#task9271'>4</a><li><a href='#task8769'>5</a><li><a href='#task4707'>6</a><li><a href='#task1392'>7</a><li><a href='#task6492'>8</a><li><a href='#task1794'>9</a><li><a href='#task9182'>10</a><li><a href='#task5541'>11</a><li><a href='#task7066'>12</a></ul></div><div id='task7035' class='task_block'>
+<div class='task_id'>7035</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана фиксированная строка "abcdefwxyz". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#contains-java.lang.CharSequence-'>(открыть справку в новой вкладке)</a>
+Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти минимальное число и его индекс.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
-<tr><td>1</td><td>z</td><td class='preformatted'>Записываю значение 'z' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит true, значит фрагмент 'z' найден успешно
+<ol start='1'><li>В начале работы запомните индекс минимального как 0.</li><li>Затем просматривайте каждый элемент массива.</li><li>Если просматриваемый элемент массива меньше, чем элемент на индексе минимального, то запомните индекс просматриваемого</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные ()</th><th>Результат</th></tr>
+<tr><td>1</td><td>12 5 7 8 3 4 2</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 12 на индексе 0 и значение 5 на индексе 1
+Вместо 0 запоминаю 1
+Сравниваю значение 5 на индексе 1 и значение 7 на индексе 2
+Сравниваю значение 5 на индексе 1 и значение 8 на индексе 3
+Сравниваю значение 5 на индексе 1 и значение 3 на индексе 4
+Вместо 1 запоминаю 4
+Сравниваю значение 3 на индексе 4 и значение 4 на индексе 5
+Сравниваю значение 3 на индексе 4 и значение 2 на индексе 6
+Вместо 4 запоминаю 6
+В массиве {12,5,7,8,3,4,2} минимальный элемент это 2 на индексе 6
 </td></tr>
-<tr><td>2</td><td>bx</td><td class='preformatted'>Записываю значение 'bx' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит false, значит фрагмент 'bx' отсутствует
+<tr><td>2</td><td>2 3 4 5 12</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 2 на индексе 0 и значение 3 на индексе 1
+Сравниваю значение 2 на индексе 0 и значение 4 на индексе 2
+Сравниваю значение 2 на индексе 0 и значение 5 на индексе 3
+Сравниваю значение 2 на индексе 0 и значение 12 на индексе 4
+В массиве {2,3,4,5,12} минимальный элемент это 2 на индексе 0
 </td></tr>
-<tr><td>3</td><td>fw</td><td class='preformatted'>Записываю значение 'fw' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит true, значит фрагмент 'fw' найден успешно
+<tr><td>3</td><td>3 4 1 2 3 4 1 2 3 1 2</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 3 на индексе 0 и значение 4 на индексе 1
+Сравниваю значение 3 на индексе 0 и значение 1 на индексе 2
+Вместо 0 запоминаю 2
+Сравниваю значение 1 на индексе 2 и значение 2 на индексе 3
+Сравниваю значение 1 на индексе 2 и значение 3 на индексе 4
+Сравниваю значение 1 на индексе 2 и значение 4 на индексе 5
+Сравниваю значение 1 на индексе 2 и значение 1 на индексе 6
+Сравниваю значение 1 на индексе 2 и значение 2 на индексе 7
+Сравниваю значение 1 на индексе 2 и значение 3 на индексе 8
+Сравниваю значение 1 на индексе 2 и значение 1 на индексе 9
+Сравниваю значение 1 на индексе 2 и значение 2 на индексе 10
+В массиве {3,4,1,2,3,4,1,2,3,1,2} минимальный элемент это 1 на индексе 2
 </td></tr>
-<tr><td>4</td><td>abcd</td><td class='preformatted'>Записываю значение 'abcd' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит true, значит фрагмент 'abcd' найден успешно
+<tr><td>4</td><td>4 2 3 4 3 2</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 4 на индексе 0 и значение 2 на индексе 1
+Вместо 0 запоминаю 1
+Сравниваю значение 2 на индексе 1 и значение 3 на индексе 2
+Сравниваю значение 2 на индексе 1 и значение 4 на индексе 3
+Сравниваю значение 2 на индексе 1 и значение 3 на индексе 4
+Сравниваю значение 2 на индексе 1 и значение 2 на индексе 5
+В массиве {4,2,3,4,3,2} минимальный элемент это 2 на индексе 1
 </td></tr>
-<tr><td>5</td><td>abcdefwxyz000</td><td class='preformatted'>Записываю значение 'abcdefwxyz000' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит false, значит фрагмент 'abcdefwxyz000' отсутствует
+<tr><td>5</td><td>4 4 4 4 4 3 8 9</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 1
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 2
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 3
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 4
+Сравниваю значение 4 на индексе 0 и значение 3 на индексе 5
+Вместо 0 запоминаю 5
+Сравниваю значение 3 на индексе 5 и значение 8 на индексе 6
+Сравниваю значение 3 на индексе 5 и значение 9 на индексе 7
+В массиве {4,4,4,4,4,3,8,9} минимальный элемент это 3 на индексе 5
 </td></tr>
-<tr><td>6</td><td>abcdefwxyz</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит true, значит фрагмент 'abcdefwxyz' найден успешно
+<tr><td>6</td><td>4 4 4 4</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 1
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 2
+Сравниваю значение 4 на индексе 0 и значение 4 на индексе 3
+В массиве {4,4,4,4} минимальный элемент это 4 на индексе 0
 </td></tr>
-<tr><td>7</td><td>123</td><td class='preformatted'>Записываю значение '123' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-boolean check = haystack.contains(needle);
-Переменная check содержит false, значит фрагмент '123' отсутствует
+<tr><td>7</td><td>4 3</td><td class='preformatted'>Ход решения:
+Начинаю и запоминаю 0
+Сравниваю значение 4 на индексе 0 и значение 3 на индексе 1
+Вместо 0 запоминаю 1
+В массиве {4,3} минимальный элемент это 3 на индексе 1
 </td></tr>
 </table>
 </div>
-<div id='task9631' class='task_block'>
-<div class='task_id'>9631</div>
+<div id='task1522' class='task_block'>
+<div class='task_id'>1522</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана фиксированная строка "abcdefwxyz". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод indexOf <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-int-'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке. 
+Пользователь вводит данные - числа, разделенные символом "_". Найти разницу между максимальным и минимальным элементом.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
-<tr><td>1</td><td>z</td><td class='preformatted'>Записываю значение 'z' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит 9, значит Фрагмент 'z' находится на индексе '9'
-Длина введенного фрагмента 1
-После него есть еще 0 символов
+<tr><th>Номер теста</th><th>Исходные данные (N)</th><th>Результат (sum)</th></tr>
+<tr><td>1</td><td>9_8_7_6_5_4</td><td class='preformatted'>Ход решения:
+Промежуточное минимальное 8
+Промежуточное минимальное 7
+Промежуточное минимальное 6
+Промежуточное минимальное 5
+Промежуточное минимальное 4
+Итоговое минимальное 4
+Итоговое максимальное 9
+Разница 5
 </td></tr>
-<tr><td>2</td><td>a</td><td class='preformatted'>Записываю значение 'a' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит 0, значит Фрагмент 'a' находится на индексе '0'
-Длина введенного фрагмента 1
-После него есть еще 9 символов
+<tr><td>2</td><td>5_9_1_6_7_3</td><td class='preformatted'>Ход решения:
+Промежуточное максимальное 9
+Промежуточное минимальное 1
+Итоговое минимальное 1
+Итоговое максимальное 9
+Разница 8
 </td></tr>
-<tr><td>3</td><td>g</td><td class='preformatted'>Записываю значение 'g' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит -1, значит фрагмент 'g' отсутствует в строке
+<tr><td>3</td><td>100_5_64_3_87</td><td class='preformatted'>Ход решения:
+Промежуточное минимальное 5
+Промежуточное минимальное 3
+Итоговое минимальное 3
+Итоговое максимальное 100
+Разница 97
 </td></tr>
-<tr><td>4</td><td>abcd</td><td class='preformatted'>Записываю значение 'abcd' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит 0, значит Фрагмент 'abcd' находится на индексе '0'
-Длина введенного фрагмента 4
-После него есть еще 6 символов
+<tr><td>4</td><td>3_4_5_6_7_8</td><td class='preformatted'>Ход решения:
+Промежуточное максимальное 4
+Промежуточное максимальное 5
+Промежуточное максимальное 6
+Промежуточное максимальное 7
+Промежуточное максимальное 8
+Итоговое минимальное 3
+Итоговое максимальное 8
+Разница 5
 </td></tr>
-<tr><td>5</td><td>wxyz</td><td class='preformatted'>Записываю значение 'wxyz' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит 6, значит Фрагмент 'wxyz' находится на индексе '6'
-Длина введенного фрагмента 4
-После него есть еще 0 символов
+<tr><td>5</td><td>8_8_8_8_8_8</td><td class='preformatted'>Ход решения:
+Итоговое минимальное 8
+Итоговое максимальное 8
+Разница 0
 </td></tr>
-<tr><td>6</td><td>axby</td><td class='preformatted'>Записываю значение 'axby' в переменную needle
-Записываю значение 'abcdefwxyz' в переменную haystack
-Вызов метода выглядит так:
-int index = haystack.indexOf(needle);
-Переменная index содержит -1, значит фрагмент 'axby' отсутствует в строке
+<tr><td>6</td><td></td><td class='preformatted'>Исходная строка пуста
+</td></tr>
+<tr><td>7</td><td>5_-5_0</td><td class='preformatted'>Ход решения:
+Промежуточное минимальное -5
+Итоговое минимальное -5
+Итоговое максимальное 5
+Разница 10
 </td></tr>
 </table>
 </div>
-<div id='task9812' class='task_block'>
-<div class='task_id'>9812</div>
+<div id='task1431' class='task_block'>
+<div class='task_id'>1431</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана фиксированная строка "abcdefwxyz". Пользователь вводит два символа. Посчитать количество символов между введенными символами.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>CA</th><th>CB</th></tr>
-<tr>
-<td>1</td><td>a</td><td>x</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
-Фрагмент 'x' начинается на индексе 7
-Между ними находится 6 символов
-</td></tr>
-<tr>
-<td>2</td><td>a</td><td>w</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
-Фрагмент 'w' начинается на индексе 6
-Между ними находится 5 символов
-</td></tr>
-<tr>
-<td>3</td><td>a</td><td>d</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
-Фрагмент 'd' начинается на индексе 3
-Между ними находится 2 символов
-</td></tr>
-<tr>
-<td>4</td><td>a</td><td>b</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
-Фрагмент 'b' начинается на индексе 1
-Между ними находится 0 символов
-</td></tr>
-<tr>
-<td>5</td><td>w</td><td>d</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
-Фрагмент 'd' начинается на индексе 3
-Между ними находится 2 символов
-</td></tr>
-<tr>
-<td>6</td><td>w</td><td>f</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
-Фрагмент 'f' начинается на индексе 5
-Между ними находится 0 символов
-</td></tr>
-<tr>
-<td>7</td><td>g</td><td>z</td><td class='preformatted'>Значение CA отсутствует в строке
-</td></tr>
-<tr>
-<td>8</td><td>x</td><td>u</td><td class='preformatted'>Значение CB отсутствует в строке
-</td></tr>
-</table>
-</div>
-<div id='task9279' class='task_block'>
-<div class='task_id'>9279</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дана фиксированная строка "abcabcabbacbacbaaac". Пользователь вводит комбинацию из двух символов. Вывести первые три индекса, на которых встречается введенная подстрока.
+Пользователь вводит данные - целые числа, разделенные пробелами. Нужно найти два наибольших числа. Если есть два одинаковых числа с наибольшим значением, то вывести их оба.
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
-<tr><td>1</td><td>ab</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
-Записываю значение 'ab' в переменную value
-Первая подстрока находится на индексе 0
-Ищу вторую начиная с индекса 1
-Записываю индекс первой подстроки в переменную firstOccurrence
-Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
-int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
-Переменная secondOccurrence содержит 3, значит
-Вторая подстрока находится на индексе 3
-Ищу третью начиная с индекса 4
-Вызов метода выглядит так:
-int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
-Третья подстрока находится на индексе 6
+<tr><td>1</td><td>2 5 4 3 12</td><td class='preformatted'>Два наибольших числа:12 5
 </td></tr>
-<tr><td>2</td><td>bc</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
-Записываю значение 'bc' в переменную value
-Первая подстрока находится на индексе 1
-Ищу вторую начиная с индекса 2
-Записываю индекс первой подстроки в переменную firstOccurrence
-Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
-int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
-Переменная secondOccurrence содержит 4, значит
-Вторая подстрока находится на индексе 4
-Ищу третью начиная с индекса 5
-Вызов метода выглядит так:
-int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
-Указанная подстрока 'bc' встречается только дважды
+<tr><td>2</td><td>3 3 3 9 28</td><td class='preformatted'>Два наибольших числа:28 9
 </td></tr>
-<tr><td>3</td><td>ac</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
-Записываю значение 'ac' в переменную value
-Первая подстрока находится на индексе 9
-Ищу вторую начиная с индекса 10
-Записываю индекс первой подстроки в переменную firstOccurrence
-Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
-int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
-Переменная secondOccurrence содержит 12, значит
-Вторая подстрока находится на индексе 12
-Ищу третью начиная с индекса 13
-Вызов метода выглядит так:
-int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
-Третья подстрока находится на индексе 17
+<tr><td>3</td><td>10 0 3 33</td><td class='preformatted'>Два наибольших числа:33 10
 </td></tr>
-<tr><td>4</td><td>bb</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
-Записываю значение 'bb' в переменную value
-Первая подстрока находится на индексе 7
-Ищу вторую начиная с индекса 8
-Записываю индекс первой подстроки в переменную firstOccurrence
-Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
-int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
-Переменная secondOccurrence содержит -1, значит
-Указанная подстрока 'bb' встречается только один раз
+<tr><td>4</td><td>31 17 0 0</td><td class='preformatted'>Два наибольших числа:31 17
 </td></tr>
-<tr><td>5</td><td>xz</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
-Записываю значение 'xz' в переменную value
-Указанная подстрока 'xz' не найдена
+<tr><td>5</td><td>48 0 0 7</td><td class='preformatted'>Два наибольших числа:48 7
 </td></tr>
-<tr><td>6</td><td>cde</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
+<tr><td>6</td><td>24 37 2 8</td><td class='preformatted'>Два наибольших числа:37 24
 </td></tr>
-<tr><td>7</td><td>a</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
+<tr><td>7</td><td>0 49 0 9</td><td class='preformatted'>Два наибольших числа:49 9
+</td></tr>
+<tr><td>8</td><td>2 2 5 5</td><td class='preformatted'>Два наибольших числа:5 5
+</td></tr>
+<tr><td>9</td><td>9 8 7 9</td><td class='preformatted'>Два наибольших числа:9 9
+</td></tr>
+<tr><td>10</td><td>-9 -8 -4 -9</td><td class='preformatted'>Два наибольших числа:-4 -8
+</td></tr>
+<tr><td>11</td><td>2</td><td class='preformatted'>Максимум 2. В массиве 1 элемент.
+</td></tr>
+<tr><td>12</td><td>1000000</td><td class='preformatted'>Максимум 1000000. В массиве 1 элемент.
+</td></tr>
+<tr><td>13</td><td>2 3</td><td class='preformatted'>Два наибольших числа:3 2
+</td></tr>
+<tr><td>14</td><td>5 5</td><td class='preformatted'>Два наибольших числа:5 5
 </td></tr>
 </table>
 </div>
-<div id='task4845' class='task_block'>
-<div class='task_id'>4845</div>
+<div id='task9271' class='task_block'>
+<div class='task_id'>9271</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана фиксированная строка "abcdefwxyz". Пользователь вводит два числа: CA и CB. Если CA меньше CB, то вывести буквы на индексах от CA до CB, исключая CB. В ином случае, вывести буквы на индексах от CB до CA, исключая CA. Примените метод substring с двумя аргументами. <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-int-'>(открыть справку в новой вкладке)</a>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
+<tr><td>1</td><td>5 4 6 2 3 1</td><td class='preformatted'>4 3 5 1 2 0 </td></tr>
+<tr><td>2</td><td>1 2 3 4 1 2</td><td class='preformatted'>0 1 2 3 0 1 </td></tr>
+<tr><td>3</td><td>3 4 1 2 3 4 1 2 3 1 2</td><td class='preformatted'>2 3 0 1 2 3 0 1 2 0 1 </td></tr>
+<tr><td>4</td><td>4 2 3 4 3 2</td><td class='preformatted'>2 0 1 2 1 0 </td></tr>
+<tr><td>5</td><td>4 4 4 4 4 3 2 1</td><td class='preformatted'>3 3 3 3 3 2 1 0 </td></tr>
+<tr><td>6</td><td>4 4 4 4</td><td class='preformatted'>0 0 0 0 </td></tr>
+<tr><td>7</td><td></td><td class='preformatted'>Массив пуст
+</td></tr>
+<tr><td>8</td><td>4 3</td><td class='preformatted'>1 0 </td></tr>
+<tr><td>9</td><td>101 200 300 200 600 700</td><td class='preformatted'>0 99 199 99 499 599 </td></tr>
+</table>
+</div>
+<div id='task8769' class='task_block'>
+<div class='task_id'>8769</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит числа from и to и данные - целые числа, разделенные пробелами. Напечатать элементы, у которых индекс находится между from и to включительно. Между элементами с индексами from и to включительно нужно найти индекс минимального числа и его значение. 
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>data</th><th>from</th><th>to</th></tr>
+<tr><td>1</td><td>5 6 7 8 5 6</td><td>1</td><td>3</td><td class='preformatted'>Фрагмент массива: 6 7 8
+Минимальное среди них: 
+5 на индексе 0
+</td></tr>
+<tr><td>2</td><td>3 4 4 2 3 4 1 2 3 1 2</td><td>8</td><td>10</td><td class='preformatted'>Фрагмент массива: 3 1 2
+Минимальное среди них: 
+1 на индексе 9
+</td></tr>
+<tr><td>3</td><td>11 12 13 5 11 12</td><td>1</td><td>4</td><td class='preformatted'>Фрагмент массива: 12 13 5 11
+Минимальное среди них: 
+5 на индексе 3
+</td></tr>
+<tr><td>4</td><td>4 2 3 4 3 2</td><td>0</td><td>5</td><td class='preformatted'>Фрагмент массива: 4 2 3 4 3 2
+Минимальное среди них: 
+2 на индексе 1
+</td></tr>
+<tr><td>5</td><td>4 4 4 4 4 3 2 1</td><td>0</td><td>5</td><td class='preformatted'>Фрагмент массива: 4 4 4 4 4 3
+Минимальное среди них: 
+3 на индексе 5
+</td></tr>
+<tr><td>6</td><td>1 2 3 4 1 2</td><td>4</td><td>2</td><td class='preformatted'>Фрагмент массива: 3 4 1
+Минимальное среди них: 
+1 на индексе 0
+</td></tr>
+<tr><td>7</td><td>4 4 4 4</td><td>1</td><td>7</td><td class='preformatted'>Число to должно быть в интервале [0, размер массива)
+</td></tr>
+<tr><td>8</td><td>4 3</td><td>-1</td><td>0</td><td class='preformatted'>Число from должно быть в интервале [0, размер массива)
+</td></tr>
+<tr><td>9</td><td>1 2 3 4</td><td>5</td><td>10</td><td class='preformatted'>Число from должно быть в интервале [0, размер массива)
+</td></tr>
+</table>
+</div>
+<div id='task4707' class='task_block'>
+<div class='task_id'>4707</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Реализовать алгоритм сортировки по возрастанию:
+</div>
+<ol start='1'><li>Найдите индекс минимального значения в текущем списке</li><li>Обменяйте значение на этом индексе со значением первого неотсортированного индекса</li><li>Отсортируйте хвост списка, исключив из рассмотрения уже отсортированные элементы</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (array)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 9 1 1 5 1 1</td><td class='preformatted'>9 8 9 1 1 5 1 1
+Минимальное значение 1 на индексе 3. Первая неотсортированная позиция: 0
+1 8 9 9 1 5 1 1 
+Минимальное значение 1 на индексе 4. Первая неотсортированная позиция: 1
+1 1 9 9 8 5 1 1 
+Минимальное значение 1 на индексе 6. Первая неотсортированная позиция: 2
+1 1 1 9 8 5 9 1 
+Минимальное значение 1 на индексе 7. Первая неотсортированная позиция: 3
+1 1 1 1 8 5 9 9 
+Минимальное значение 5 на индексе 5. Первая неотсортированная позиция: 4
+1 1 1 1 5 8 9 9 
+Минимальное значение 8 на индексе 5. Первая неотсортированная позиция: 5
+1 1 1 1 5 8 9 9 
+Минимальное значение 9 на индексе 6. Первая неотсортированная позиция: 6
+1 1 1 1 5 8 9 9 
+</td></tr>
+<tr><td>2</td><td>1 2 3 4 1 3 4 4 4 4</td><td class='preformatted'>1 2 3 4 1 3 4 4 4 4
+Минимальное значение 1 на индексе 0. Первая неотсортированная позиция: 0
+1 2 3 4 1 3 4 4 4 4 
+Минимальное значение 1 на индексе 4. Первая неотсортированная позиция: 1
+1 1 3 4 2 3 4 4 4 4 
+Минимальное значение 2 на индексе 4. Первая неотсортированная позиция: 2
+1 1 2 4 3 3 4 4 4 4 
+Минимальное значение 3 на индексе 4. Первая неотсортированная позиция: 3
+1 1 2 3 4 3 4 4 4 4 
+Минимальное значение 3 на индексе 5. Первая неотсортированная позиция: 4
+1 1 2 3 3 4 4 4 4 4 
+Минимальное значение 4 на индексе 5. Первая неотсортированная позиция: 5
+1 1 2 3 3 4 4 4 4 4 
+Минимальное значение 4 на индексе 6. Первая неотсортированная позиция: 6
+1 1 2 3 3 4 4 4 4 4 
+Минимальное значение 4 на индексе 7. Первая неотсортированная позиция: 7
+1 1 2 3 3 4 4 4 4 4 
+Минимальное значение 4 на индексе 8. Первая неотсортированная позиция: 8
+1 1 2 3 3 4 4 4 4 4 
+</td></tr>
+<tr><td>3</td><td>5 5 5 5 5</td><td class='preformatted'>5 5 5 5 5
+Минимальное значение 5 на индексе 0. Первая неотсортированная позиция: 0
+5 5 5 5 5 
+Минимальное значение 5 на индексе 1. Первая неотсортированная позиция: 1
+5 5 5 5 5 
+Минимальное значение 5 на индексе 2. Первая неотсортированная позиция: 2
+5 5 5 5 5 
+Минимальное значение 5 на индексе 3. Первая неотсортированная позиция: 3
+5 5 5 5 5 
+</td></tr>
+<tr><td>4</td><td>1 9 1 30 9 1 100</td><td class='preformatted'>1 9 1 30 9 1 100
+Минимальное значение 1 на индексе 0. Первая неотсортированная позиция: 0
+1 9 1 30 9 1 100 
+Минимальное значение 1 на индексе 2. Первая неотсортированная позиция: 1
+1 1 9 30 9 1 100 
+Минимальное значение 1 на индексе 5. Первая неотсортированная позиция: 2
+1 1 1 30 9 9 100 
+Минимальное значение 9 на индексе 4. Первая неотсортированная позиция: 3
+1 1 1 9 30 9 100 
+Минимальное значение 9 на индексе 5. Первая неотсортированная позиция: 4
+1 1 1 9 9 30 100 
+Минимальное значение 30 на индексе 5. Первая неотсортированная позиция: 5
+1 1 1 9 9 30 100 
+</td></tr>
+<tr><td>5</td><td>1000000 1 1</td><td class='preformatted'>1000000 1 1
+Минимальное значение 1 на индексе 1. Первая неотсортированная позиция: 0
+1 1000000 1 
+Минимальное значение 1 на индексе 2. Первая неотсортированная позиция: 1
+1 1 1000000 
+</td></tr>
+</table>
+</div>
+<div id='task1392' class='task_block'>
+<div class='task_id'>1392</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти медиану для множества введенных элементов. Медиана — это число, которое является серединой множества чисел. Если множество содержит четное количество чисел, нужно вычислить среднее для двух чисел, находящихся в середине множества. Результат вывести с точностью 2 знака после запятой.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (numbers)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 9 1 1 5 1 1</td><td class='preformatted'>Отсортированный массив:
+1 1 1 1 5 8 9 9 
+В массиве четное количество элементов
+Медиана: (1 + 5) / 2 = 3,00
+</td></tr>
+<tr><td>2</td><td>1 9 8 9 1 1 5 1 1</td><td class='preformatted'>Отсортированный массив:
+1 1 1 1 1 5 8 9 9 
+В массиве НЕчетное количество элементов
+Медиана: 1
+</td></tr>
+<tr><td>3</td><td>1 2 3 4 1 3 4 4 4 4</td><td class='preformatted'>Отсортированный массив:
+1 1 2 3 3 4 4 4 4 4 
+В массиве четное количество элементов
+Медиана: (3 + 4) / 2 = 3,50
+</td></tr>
+<tr><td>4</td><td>5 5 5 5 5</td><td class='preformatted'>Отсортированный массив:
+5 5 5 5 5 
+В массиве НЕчетное количество элементов
+Медиана: 5
+</td></tr>
+<tr><td>5</td><td></td><td class='preformatted'>Массив пуст
+</td></tr>
+<tr><td>6</td><td>13</td><td class='preformatted'>Отсортированный массив:
+13 
+В массиве НЕчетное количество элементов
+Медиана: 13
+</td></tr>
+<tr><td>7</td><td>5000 1000</td><td class='preformatted'>Отсортированный массив:
+1000 5000 
+В массиве четное количество элементов
+Медиана: (1000 + 5000) / 2 = 3000,00
+</td></tr>
+<tr><td>8</td><td>1 9 1 30 9 1 100</td><td class='preformatted'>Отсортированный массив:
+1 1 1 9 9 30 100 
+В массиве НЕчетное количество элементов
+Медиана: 9
+</td></tr>
+<tr><td>9</td><td>1000000 1 1</td><td class='preformatted'>Отсортированный массив:
+1 1 1000000 
+В массиве НЕчетное количество элементов
+Медиана: 1
+</td></tr>
+</table>
+</div>
+<div id='task6492' class='task_block'>
+<div class='task_id'>6492</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит два массива данных одинакового размера. Первый массив содержит символы. Второй - числа. Для каждого элемента первого массива в результате получится отдельный <i>столбец</i>. Количество символов в этом <i>столбце</i> равно значению элемента из второго массива на том же индексе.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>CA</th><th>CB</th></tr>
+<th>Данные сверху(chars)</th><th>Данные слева(amounts)</th></tr>
 <tr>
-<td>1</td><td>0</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
-От CA до CB. Вызов метода выглядит так:
-String result = STR.substring(cb, ca);
-Переменная result содержит 'abc'
+<td>1</td><td>a s d</td><td>3 2 1</td><td class='preformatted'>Наибольшая высота столбца: 3
+asd
+as.
+a..
 </td></tr>
 <tr>
-<td>2</td><td>3</td><td>0</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
-От CB до CA. Вызов метода выглядит так:
-String result = STR.substring(cb, ca);
-Переменная result содержит 'abc'
+<td>2</td><td>z x c v b</td><td>1 3 5 0 4</td><td class='preformatted'>Наибольшая высота столбца: 5
+zxc.b
+.xc.b
+.xc.b
+..c.b
+..c..
 </td></tr>
 <tr>
-<td>3</td><td>3</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
-От CA до CB. Вызов метода выглядит так:
-String result = STR.substring(cb, ca);
-Переменная result содержит ''
+<td>3</td><td>q w e r t y</td><td>6 2 8 3 1 5</td><td class='preformatted'>Наибольшая высота столбца: 8
+qwerty
+qwer.y
+q.er.y
+q.e..y
+q.e..y
+q.e...
+..e...
+..e...
 </td></tr>
 <tr>
-<td>4</td><td>2</td><td>6</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
-От CA до CB. Вызов метода выглядит так:
-String result = STR.substring(cb, ca);
-Переменная result содержит 'cdef'
+<td>4</td><td>a s d f</td><td>3 3 3</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>5</td><td>0</td><td>9</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
-От CA до CB. Вызов метода выглядит так:
-String result = STR.substring(cb, ca);
-Переменная result содержит 'abcdefwxy'
+<td>5</td><td>z x c</td><td>1 2 3 4</td><td class='preformatted'>Длины массивов не совпадают
 </td></tr>
 <tr>
-<td>6</td><td>-1</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
+<td>6</td><td></td><td>1 2 3 4</td><td class='preformatted'>Отсутствуют данные о символах
 </td></tr>
 <tr>
-<td>7</td><td>20</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
-</td></tr>
-<tr>
-<td>8</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
-</td></tr>
-<tr>
-<td>9</td><td>7</td><td>17</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
+<td>7</td><td>f d s a</td><td></td><td class='preformatted'>Отсутствуют данные о количествах
 </td></tr>
 </table>
 </div>
-<div id='task5728' class='task_block'>
-<div class='task_id'>5728</div>
+<div id='task1794' class='task_block'>
+<div class='task_id'>1794</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дан текст
-</div>
-<div class='check_single preformatted'>&lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
-
-&lt;svg width="800" height="600"&gt;
-    &lt;circle cx="50" cy="50" r="40" stroke="green"
-        stroke-width="4" fill="yellow"/&gt;
-&lt;/svg&gt;</div>
-<div class='task_desc'>
-Пользователь вводит два фрагмента текста: open и close. Вывести на экран фрагмент текста (подстроку), который находится между open и close, исключая их. Нужно найти позицию того фрагмента close, который находится после окончания фрагмента open.
+Пользователь вводит массив чисел. Найти наибольшую разницу между соседними элементами массива. Сравнивать нужно разницу между следующим и предыдущим значением.
 </div>
 <table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>open</th><th>close</th></tr>
-<tr>
-<td>1</td><td>&lt;svg</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;svg' начинается на индексе 39 и заканчивается на индексе 43
-Фрагмент '&gt;' после open начинается на индексе 68
-Вырезаю фрагмент с индекса 43 до индекса 68
-Получился фрагмент:
- width="800" height="600"
+<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 6 5 4 2</td><td class='preformatted'>Разница между элементами на индексах 0 и 1 равна -3
+Эта разница считается максимальной
+Разница между элементами на индексах 1 и 2 равна -1
+Эта разница считается максимальной
+Разница между элементами на индексах 2 и 3 равна -1
+Разница между элементами на индексах 3 и 4 равна -2
+Наибольшая разница между соседними элементами равна -1
 </td></tr>
-<tr>
-<td>2</td><td>&lt;h1&gt;</td><td>&lt;/h1&gt;</td><td class='preformatted'>Фрагмент '&lt;h1&gt;' начинается на индексе 0 и заканчивается на индексе 4
-Фрагмент '&lt;/h1&gt;' после open начинается на индексе 32
-Вырезаю фрагмент с индекса 4 до индекса 32
-Получился фрагмент:
-Мой первый векторный рисунок
+<tr><td>2</td><td>3 5 6 10 1</td><td class='preformatted'>Разница между элементами на индексах 0 и 1 равна 2
+Эта разница считается максимальной
+Разница между элементами на индексах 1 и 2 равна 1
+Разница между элементами на индексах 2 и 3 равна 4
+Эта разница считается максимальной
+Разница между элементами на индексах 3 и 4 равна -9
+Наибольшая разница между соседними элементами равна 4
 </td></tr>
-<tr>
-<td>3</td><td>&lt;</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;' начинается на индексе 0 и заканчивается на индексе 1
-Фрагмент '&gt;' после open начинается на индексе 3
-Вырезаю фрагмент с индекса 1 до индекса 3
-Получился фрагмент:
-h1
+<tr><td>3</td><td>250 500 999 1000</td><td class='preformatted'>Разница между элементами на индексах 0 и 1 равна 250
+Эта разница считается максимальной
+Разница между элементами на индексах 1 и 2 равна 499
+Эта разница считается максимальной
+Разница между элементами на индексах 2 и 3 равна 1
+Наибольшая разница между соседними элементами равна 499
 </td></tr>
-<tr>
-<td>4</td><td>fill="</td><td>"</td><td class='preformatted'>Фрагмент 'fill="' начинается на индексе 145 и заканчивается на индексе 151
-Фрагмент '"' после open начинается на индексе 157
-Вырезаю фрагмент с индекса 151 до индекса 157
-Получился фрагмент:
-yellow
+<tr><td>4</td><td>2</td><td class='preformatted'>Массив должен содержать хотя бы 2 элемента
 </td></tr>
-<tr>
-<td>5</td><td>&lt;circle</td><td>/&gt;</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
-Фрагмент '/&gt;' после open начинается на индексе 158
-Вырезаю фрагмент с индекса 81 до индекса 158
-Получился фрагмент:
- cx="50" cy="50" r="40" stroke="green"
-        stroke-width="4" fill="yellow"
+<tr><td>5</td><td>10 0</td><td class='preformatted'>Разница между элементами на индексах 0 и 1 равна -10
+Эта разница считается максимальной
+Наибольшая разница между соседними элементами равна -10
 </td></tr>
-<tr>
-<td>6</td><td>h1</td><td>h1</td><td class='preformatted'>Фрагмент 'h1' начинается на индексе 1 и заканчивается на индексе 3
-Фрагмент 'h1' после open начинается на индексе 34
-Вырезаю фрагмент с индекса 3 до индекса 34
-Получился фрагмент:
-&gt;Мой первый векторный рисунок&lt;/
-</td></tr>
-<tr>
-<td>7</td><td>head</td><td>/head</td><td class='preformatted'>Значение head не найдено в тексте
-</td></tr>
-<tr>
-<td>8</td><td>&lt;circle</td><td>&lt;svg</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
-Фрагмент '&lt;svg' не найдено после фрагмента '&lt;circle'
+<tr><td>6</td><td></td><td class='preformatted'>Массив пуст
 </td></tr>
 </table>
 </div>
-<div id='task7222' class='task_block'>
-<div class='task_id'>7222</div>
+<div id='task9182' class='task_block'>
+<div class='task_id'>9182</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит цифры штрих кода в стандарте EAN-13. Расшифровать значение штрих кода. Номер товара EAN-13 имеет следующую структуру:
+Пользователь вводит данные - символы, разделенные пробелами. Создать новый массив и записать в него элементы первого массива без дубликатов.
 </div>
-<ol start='1'><li>первые 3 цифры — это префикс или код национальной организации-члена EAN International (для EAN Россия – 460-469);</li><li>следующие 6 цифр — это регистрационный номер предприятия — изготовителя;</li><li>следующая группа из 3-х цифр — это порядковый номер продукции внутри предприятия;</li><li>последняя 13-я цифра — контрольное число. Оно вычисляется из предыдущих двенадцати.</li></ol><table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (ean)</th><th>Результат</th></tr>
-<tr><td>1</td><td>4607009520018</td><td class='preformatted'>Код страны: 460
-Код изготовителя: 700952
-Код товара: 001
-Контрольное число: 8
+<ol start='1'><li>Отсортируйте массив по возрастанию</li><li>Просмотрите элементы массива, если следующий не равен текущему, то увеличьте значение счетчика.</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (numbers)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 7 6</td><td class='preformatted'>Отсортированный массив:
+6 7 8 9 
+Сравниваю 6 и 7
+Значения различаются
+Сравниваю 7 и 8
+Значения различаются
+Сравниваю 8 и 9
+Значения различаются
+Количество различных значений 4
 </td></tr>
-<tr><td>2</td><td>9785750200641</td><td class='preformatted'>Код страны: 978
-Код изготовителя: 575020
-Код товара: 064
-Контрольное число: 1
+<tr><td>2</td><td>9 9 7 7</td><td class='preformatted'>Отсортированный массив:
+7 7 9 9 
+Сравниваю 7 и 7
+Сравниваю 7 и 9
+Значения различаются
+Сравниваю 9 и 9
+Количество различных значений 2
 </td></tr>
-<tr><td>3</td><td>9785964300694</td><td class='preformatted'>Код страны: 978
-Код изготовителя: 596430
-Код товара: 069
-Контрольное число: 4
+<tr><td>3</td><td>9 2 7 5</td><td class='preformatted'>Отсортированный массив:
+2 5 7 9 
+Сравниваю 2 и 5
+Значения различаются
+Сравниваю 5 и 7
+Значения различаются
+Сравниваю 7 и 9
+Значения различаются
+Количество различных значений 4
 </td></tr>
-<tr><td>4</td><td>123456789012</td><td class='preformatted'>Некорректная длина штрих-кода
+<tr><td>4</td><td></td><td class='preformatted'>Массив пуст
 </td></tr>
-<tr><td>5</td><td>12345678901234567890</td><td class='preformatted'>Некорректная длина штрих-кода
+<tr><td>5</td><td>9 1 8 100 8 21 50 9 1</td><td class='preformatted'>Отсортированный массив:
+1 1 8 8 9 9 21 50 100 
+Сравниваю 1 и 1
+Сравниваю 1 и 8
+Значения различаются
+Сравниваю 8 и 8
+Сравниваю 8 и 9
+Значения различаются
+Сравниваю 9 и 9
+Сравниваю 9 и 21
+Значения различаются
+Сравниваю 21 и 50
+Значения различаются
+Сравниваю 50 и 100
+Значения различаются
+Количество различных значений 6
+</td></tr>
+<tr><td>6</td><td>4 4 4 4</td><td class='preformatted'>Отсортированный массив:
+4 4 4 4 
+Сравниваю 4 и 4
+Сравниваю 4 и 4
+Сравниваю 4 и 4
+Количество различных значений 1
 </td></tr>
 </table>
 </div>
-<div id='task5923' class='task_block'>
-<div class='task_id'>5923</div>
+<div id='task5541' class='task_block'>
+<div class='task_id'>5541</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана фиксированная строка "abcdefwxyz". Пользователь вводит два целых числа CA и CB. Удалить из исходной строчки CB штук символов, начиная с позиции CA. Вывести результат на экран. Один из вариантов решения - выполнить конкатенацию фрагментов от 0 до CA и от CB до конца строки.
+Пользователь вводит данные - символы, разделенные пробелами. Создать новый массив и записать в него элементы первого массива без дубликатов.
+</div>
+<ol start='1'><li>Отсортируйте массив по возрастанию</li><li>Просмотрите элементы массива, если следующий не равен текущему, то увеличьте значение счетчика.</li><li>Создайте новый массив с длиной, равной полученному счетчику.</li><li>Просмотрите элементы массива повторно. Если следующий не равен текущему, то запишите этот элемент в новый массив.</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (numbers)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 7 6</td><td class='preformatted'>Отсортированный массив:
+6 7 8 9 
+Количество различных значений 4
+Записываю 6 на индекс 0 массива различных
+Сравниваю 6 и 7
+Записываю 7 на индекс 1 массива различных
+Сравниваю 7 и 8
+Записываю 8 на индекс 2 массива различных
+Сравниваю 8 и 9
+Записываю 9 на индекс 3 массива различных
+Массив различных:
+6 7 8 9 </td></tr>
+<tr><td>2</td><td>9 9 7 7</td><td class='preformatted'>Отсортированный массив:
+7 7 9 9 
+Количество различных значений 2
+Записываю 7 на индекс 0 массива различных
+Сравниваю 7 и 7
+Сравниваю 7 и 9
+Записываю 9 на индекс 1 массива различных
+Сравниваю 9 и 9
+Массив различных:
+7 9 </td></tr>
+<tr><td>3</td><td>9 2 7 5</td><td class='preformatted'>Отсортированный массив:
+2 5 7 9 
+Количество различных значений 4
+Записываю 2 на индекс 0 массива различных
+Сравниваю 2 и 5
+Записываю 5 на индекс 1 массива различных
+Сравниваю 5 и 7
+Записываю 7 на индекс 2 массива различных
+Сравниваю 7 и 9
+Записываю 9 на индекс 3 массива различных
+Массив различных:
+2 5 7 9 </td></tr>
+<tr><td>4</td><td></td><td class='preformatted'>Массив пуст
+</td></tr>
+<tr><td>5</td><td>9 1 8 100 8 21 50 9 1</td><td class='preformatted'>Отсортированный массив:
+1 1 8 8 9 9 21 50 100 
+Количество различных значений 6
+Записываю 1 на индекс 0 массива различных
+Сравниваю 1 и 1
+Сравниваю 1 и 8
+Записываю 8 на индекс 1 массива различных
+Сравниваю 8 и 8
+Сравниваю 8 и 9
+Записываю 9 на индекс 2 массива различных
+Сравниваю 9 и 9
+Сравниваю 9 и 21
+Записываю 21 на индекс 3 массива различных
+Сравниваю 21 и 50
+Записываю 50 на индекс 4 массива различных
+Сравниваю 50 и 100
+Записываю 100 на индекс 5 массива различных
+Массив различных:
+1 8 9 21 50 100 </td></tr>
+<tr><td>6</td><td>4 4 4 4</td><td class='preformatted'>Отсортированный массив:
+4 4 4 4 
+Количество различных значений 1
+Записываю 4 на индекс 0 массива различных
+Сравниваю 4 и 4
+Сравниваю 4 и 4
+Сравниваю 4 и 4
+Массив различных:
+4 </td></tr>
+</table>
+</div>
+<div id='task7066' class='task_block'>
+<div class='task_id'>7066</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив, состоящий из пар элементов. Элементы массива разделены символом ';'. Элементы в паре разделены символом _. Нужно отсортировать массив по возрастанию числа и сохранить пары элементов вместе.
 </div>
 <table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>CA</th><th>CB</th></tr>
-<tr>
-<td>1</td><td>5</td><td>3</td><td class='preformatted'>abcdeyz
+<tr><th>Номер теста</th><th>Исходные данные (array)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9_nine;8_eight;7_seven;6_six;5_five;4_four;3_three</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 6 равен 3_three
+3_three	8_eight	7_seven	6_six	5_five	4_four	9_nine	
+Шаг 1
+Минимальный элемент на индексе 5 равен 4_four
+3_three	4_four	7_seven	6_six	5_five	8_eight	9_nine	
+Шаг 2
+Минимальный элемент на индексе 4 равен 5_five
+3_three	4_four	5_five	6_six	7_seven	8_eight	9_nine	
+Шаг 3
+Минимальный элемент на индексе 3 равен 6_six
+3_three	4_four	5_five	6_six	7_seven	8_eight	9_nine	
+Шаг 4
+Минимальный элемент на индексе 4 равен 7_seven
+3_three	4_four	5_five	6_six	7_seven	8_eight	9_nine	
+Шаг 5
+Минимальный элемент на индексе 5 равен 8_eight
+3_three	4_four	5_five	6_six	7_seven	8_eight	9_nine	
 </td></tr>
-<tr>
-<td>2</td><td>6</td><td>0</td><td class='preformatted'>abcdefwxyz
+<tr><td>2</td><td>9_nine;3_three;6_six;5_five;100_onehundred;4_four</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 1 равен 3_three
+3_three	9_nine	6_six	5_five	100_onehundred	4_four	
+Шаг 1
+Минимальный элемент на индексе 5 равен 4_four
+3_three	4_four	6_six	5_five	100_onehundred	9_nine	
+Шаг 2
+Минимальный элемент на индексе 3 равен 5_five
+3_three	4_four	5_five	6_six	100_onehundred	9_nine	
+Шаг 3
+Минимальный элемент на индексе 3 равен 6_six
+3_three	4_four	5_five	6_six	100_onehundred	9_nine	
+Шаг 4
+Минимальный элемент на индексе 5 равен 9_nine
+3_three	4_four	5_five	6_six	9_nine	100_onehundred	
 </td></tr>
-<tr>
-<td>3</td><td>0</td><td>7</td><td class='preformatted'>xyz
+<tr><td>3</td><td>2_one;2_two;2_three;2_four;2_five</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 0 равен 2_one
+2_one	2_two	2_three	2_four	2_five	
+Шаг 1
+Минимальный элемент на индексе 1 равен 2_two
+2_one	2_two	2_three	2_four	2_five	
+Шаг 2
+Минимальный элемент на индексе 2 равен 2_three
+2_one	2_two	2_three	2_four	2_five	
+Шаг 3
+Минимальный элемент на индексе 3 равен 2_four
+2_one	2_two	2_three	2_four	2_five	
 </td></tr>
-<tr>
-<td>4</td><td>-1</td><td>1</td><td class='preformatted'>Значение CA должно быть в интервале [0, длина строки)
+<tr><td>4</td><td>9_blue;17_green;-2_white;100_black;53_red</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 2 равен -2_white
+-2_white	17_green	9_blue	100_black	53_red	
+Шаг 1
+Минимальный элемент на индексе 2 равен 9_blue
+-2_white	9_blue	17_green	100_black	53_red	
+Шаг 2
+Минимальный элемент на индексе 2 равен 17_green
+-2_white	9_blue	17_green	100_black	53_red	
+Шаг 3
+Минимальный элемент на индексе 4 равен 53_red
+-2_white	9_blue	17_green	53_red	100_black	
 </td></tr>
-<tr>
-<td>5</td><td>9</td><td>3</td><td class='preformatted'>Сумма значений CA и CB должна быть меньше длины строки
+<tr><td>5</td><td>18_square;4_square;17_square;5_square;10000_square;999_square</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 1 равен 4_square
+4_square	18_square	17_square	5_square	10000_square	999_square	
+Шаг 1
+Минимальный элемент на индексе 3 равен 5_square
+4_square	5_square	17_square	18_square	10000_square	999_square	
+Шаг 2
+Минимальный элемент на индексе 2 равен 17_square
+4_square	5_square	17_square	18_square	10000_square	999_square	
+Шаг 3
+Минимальный элемент на индексе 3 равен 18_square
+4_square	5_square	17_square	18_square	10000_square	999_square	
+Шаг 4
+Минимальный элемент на индексе 5 равен 999_square
+4_square	5_square	17_square	18_square	999_square	10000_square	
 </td></tr>
-<tr>
-<td>6</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть неотрицательно
+<tr><td>6</td><td></td><td class='preformatted'>Массив пуст
 </td></tr>
-</table>
-</div>
-<div id='task8543' class='task_block'>
-<div class='task_id'>8543</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит дату в формате hh:mm dd.MM.yyyy, где
-</div>
-<ol start='1'><li>hh - номер часа в дне в 24 часовом формате</li><li>mm - номер минуты в часу</li><li>dd - номер дня в месяце</li><li>MM - номер месяца в году</li><li>yyyy - номер года</li></ol><div class='task_desc'>
-Извлечь из строки все фрагменты даты и подробно описать что означает дата. Используйте методы indexOf и substring.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (datetime)</th><th>Результат</th></tr>
-<tr><td>1</td><td>19:39 16.11.2016</td><td class='preformatted'>Минута 39
-Час 19
-День 16
-Месяц 11
-Год 2016
-</td></tr>
-<tr><td>2</td><td>0:0 1.1.1970</td><td class='preformatted'>Минута 0
-Час 0
-День 1
-Месяц 1
-Год 1970
-</td></tr>
-<tr><td>3</td><td>19:23 14.4.2023</td><td class='preformatted'>Минута 23
-Час 19
-День 14
-Месяц 4
-Год 2023
-</td></tr>
-<tr><td>4</td><td>14:39 9.10.2015</td><td class='preformatted'>Минута 39
-Час 14
-День 9
-Месяц 10
-Год 2015
-</td></tr>
-<tr><td>5</td><td>0:51 23.4.2016</td><td class='preformatted'>Минута 51
-Час 0
-День 23
-Месяц 4
-Год 2016
-</td></tr>
-</table>
-</div>
-<div id='task4265' class='task_block'>
-<div class='task_id'>4265</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит строчку. Если она начинается с символа "s", то нужно сделать все символы строчными (преобразовать в нижний регистр). Если начинается с "U", то нужно сделать все символы заглавными (преобразовать в верхний регистр). Иначе - ничего не делать. Вывести результат на экран. Примените метод toUpperCase <a href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toUpperCase--' target='_blank'>(открыть справку в новой вкладке)</a>. и toLowerCase <a href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--' target='_blank'>(открыть справку в новой вкладке)</a>
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (string)</th><th>Результат</th></tr>
-<tr><td>1</td><td>sABCDU</td><td class='preformatted'>Индекс буквы s равен 0. Значит всю строку нужно сделать строчной.
-sabcdu
-</td></tr>
-<tr><td>2</td><td>Uxyzs</td><td class='preformatted'>Индекс буквы U равен 0. Значит всю строку нужно сделать заглавной.
-UXYZS
-</td></tr>
-<tr><td>3</td><td>s</td><td class='preformatted'>Индекс буквы s равен 0. Значит всю строку нужно сделать строчной.
-s
-</td></tr>
-<tr><td>4</td><td>F123</td><td class='preformatted'></td></tr>
-<tr><td>5</td><td>Sopqr</td><td class='preformatted'></td></tr>
-</table>
-</div>
-<div id='task2166' class='task_block'>
-<div class='task_id'>2166</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дана фиксированная строка "abcdacadbacdaabaadc". Пользователь вводит комбинацию из двух символов. В исходной строке заменить эту комбинацию (подстроку) на пробелы. Воспользуйтесь методом replace. Найдите его в документации. Первый аргумент - старое значение. Второй аргумент - новое значение.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (substring)</th><th>Результат</th></tr>
-<tr><td>1</td><td>cd</td><td class='preformatted'>ab acadba aabaadc
-</td></tr>
-<tr><td>2</td><td>aa</td><td class='preformatted'>abcdacadbacd b dc
-</td></tr>
-<tr><td>3</td><td>xy</td><td class='preformatted'>abcdacadbacdaabaadc
-</td></tr>
-<tr><td>4</td><td>abc</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
- dacadbacdaabaadc
-</td></tr>
-<tr><td>5</td><td>f</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
-abcdacadbacdaabaadc
+<tr><td>7</td><td>4_four_thousands;5_five_thousands</td><td class='preformatted'>Шаг 0
+Минимальный элемент на индексе 0 равен 4_four_thousands
+4_four_thousands	5_five_thousands	
 </td></tr>
 </table>
 </div>
-<div id='task4996' class='task_block'>
-<div class='task_id'>4996</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит сообщение. Нужно зашифровать его азбукой Морзе. Между буквами нужно поставить пробел. Пробелы не кодируются. Для шифровки создайте два массива. Один массив содержит   Любая буква не из списка превращается в вопросительный знак.
-</div>
-<div class='task_desc'>
-<table class="check_values"><tr><td></td><td>?</td><td>..--..</td></tr><tr><td></td><td>А</td><td>.-</td></tr><tr><td></td><td>Б</td><td>-...</td></tr><tr><td></td><td>В</td><td>.--</td></tr><tr><td></td><td>Г</td><td>--.</td></tr><tr><td></td><td>Д</td><td>-..</td></tr><tr><td></td><td>Е</td><td>.</td></tr><tr><td></td><td>Ж</td><td>...-</td></tr><tr><td></td><td>З</td><td>--..</td></tr><tr><td></td><td>И</td><td>..</td></tr><tr><td></td><td>Й</td><td>.---</td></tr><tr><td></td><td>К</td><td>-.-</td></tr><tr><td></td><td>Л</td><td>.-..</td></tr><tr><td></td><td>М</td><td>--</td></tr><tr><td></td><td>Н</td><td>-.</td></tr><tr><td></td><td>О</td><td>---</td></tr><tr><td></td><td>П</td><td>.--.</td></tr><tr><td></td><td>Р</td><td>.-.</td></tr><tr><td></td><td>С</td><td>...</td></tr><tr><td></td><td>Т</td><td>-</td></tr><tr><td></td><td>У</td><td>..-</td></tr><tr><td></td><td>Ф</td><td>..-.</td></tr><tr><td></td><td>Х</td><td>....</td></tr><tr><td></td><td>Ц</td><td>-.-.</td></tr><tr><td></td><td>Ч</td><td>---.</td></tr><tr><td></td><td>Ш</td><td>----</td></tr><tr><td></td><td>Щ</td><td>--.-</td></tr><tr><td></td><td>Ъ</td><td>--.--</td></tr><tr><td></td><td>Ы</td><td>-.--</td></tr><tr><td></td><td>Ь</td><td>..-..</td></tr><tr><td></td><td>Э</td><td>..-..</td></tr><tr><td></td><td>Ю</td><td>..--</td></tr><tr><td></td><td>Я</td><td>.-.-</td></tr><tr><td></td><td>1</td><td>.----</td></tr><tr><td></td><td>2</td><td>..---</td></tr><tr><td></td><td>3</td><td>...--</td></tr><tr><td></td><td>4</td><td>....-</td></tr><tr><td></td><td>5</td><td>.....</td></tr><tr><td></td><td>6</td><td>-....</td></tr><tr><td></td><td>7</td><td>--...</td></tr><tr><td></td><td>8</td><td>---..</td></tr><tr><td></td><td>9</td><td>----.</td></tr><tr><td></td><td>0</td><td>-----</td></tr></table>
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (message)</th><th>Результат</th></tr>
-<tr><td>1</td><td>добрый день</td><td class='preformatted'>-.. --- -... .-. -.-- .--- -.. . -. ..-.. </td></tr>
-<tr><td>2</td><td>передавайте медленнее</td><td class='preformatted'>.--. . .-. . -.. .- .-- .- .--- - . -- . -.. .-.. . -. -. . . </td></tr>
-<tr><td>3</td><td>я ничего не понимаю</td><td class='preformatted'>.-.- -. .. ---. . --. --- -. . .--. --- -. .. -- .- ..-- </td></tr>
-<tr><td>4</td><td>помогите</td><td class='preformatted'>.--. --- -- --- --. .. - . </td></tr>
-<tr><td>5</td><td>на нас едет Sturmpanzerwagen</td><td class='preformatted'>-. .- -. .- ... . -.. . - ..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-..--..
-</td></tr>
-<tr><td>6</td><td>координаты цели 13 и 90</td><td class='preformatted'>-.- --- --- .-. -.. .. -. .- - -.-- -.-. . .-.. .. .---- ...-- .. ----. ----- </td></tr>
-<tr><td>7</td><td>промах</td><td class='preformatted'>.--. .-. --- -- .- .... </td></tr>
-<tr><td>8</td><td>попал</td><td class='preformatted'>.--. --- .--. .- .-.. </td></tr>
-<tr><td>9</td><td>конец связи</td><td class='preformatted'>-.- --- -. . -.-. ... .-- .-.- --.. .. </td></tr>
-</table>
-</div>
-<div id="task9925" class="task_block empty_on_print">
-	<div class="task_id">9925</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит несколько слов в строчку через запятую. Нужно определить количество введенных слов.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>один, два, три, четыре, пять</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>янв,фев,март</td>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>один</td>
-			<td>1</td>
-		</tr>
-	</table>
-</div><div id="task3657" class="task_block empty_on_print">
-	<div class="task_id">3657</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дата фиксированная строчка. Пользователь вводит символ. Нужно вывести все индексы, на которых встречается этот символ.</div>
-	<div class="check_single" style="word-wrap:break-word;">jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf
-</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>a</td>
-			<td>28 30 57 65 88 99 100 104 125 132 145 218 221 226 244 256 257 267 273 290 292 293 298 307 333 382 388 407 421 426 436 439 441 442 446 448 453 454 462 470 477 478 501 503 508 517 523 533 536 546 558 577 578 587 591 599 616 628 635 659 663 666 682 684 685 697 703 708 725 731 740 749 771 804 812 820 856 857 871 872 879 884 890 891 902 908 916 934 946 955 963 968 976 979 986</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>b</td>
-			<td>4 14 16 46 53 56 61 68 73 90 120 138 146 150 155 158 166 170 203 214 251 253 271 274 318 325 332 341 351 352 383 389 395 396 398 416 440 498 502 522 568 574 597 602 608 622 638 640 641 648 689 717 722 724 737 742 764 794 795 826 833 875 877 888 909 922 923 937 938 941 947 961 978 983 992</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>j</td>
-			<td>0 2 3 5 6 15 18 20 22 24 26 27 34 37 42 44 47 51 55 58 62 64 71 72 75 77 79 82 83 87 91 92 102 103 105 106 107 109 110 121 122 124 126 127 131 133 136 139 142 144 152 153 157 161 163 164 165 168 171 173 176 177 178 180 183 184 185 187 189 190 191 193 195 197 200 201 210 212 216 222 224 227 229 232 237 238 243 246 247 254 255 259 261 263 265 270 283 286 289 297 299 305 309 313 319 323 335 337 338 345 349 350 355 357 359 361 362 366 370 371 375 376 392 393 399 400 401 413 414 418 419 424 425 428 429 431 438 452 455 458 461 466 467 471 481 484 486 490 492 495 506 509 510 513 516 521 526 527 529 535 537 538 540 547 548 550 554 555 559 560 561 562 565 567 570 571 573 575 576 586 589 593 603 605 609 612 614 618 625 627 632 637 642 644 649 650 651 653 658 662 664 670 671 673 674 676 678 679 681 683 694 698 701 706 707 709 710 712 713 714 716 719 723 728 733 736 738 739 741 743 747 750 751 753 760 762 766 768 773 776 778 779 783 786 787 789 796 799 802 805 806 808 816 817 818 821 822 831 834 835 839 843 845 848 849 853 855 860 861 865 873 874 876 882 885 886 887 894 900 901 912 914 915 920 921 925 928 931 932 935 940 943 944 945 951 956 964 965 967 969 981 985 996 997</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>z</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>xy</td>
-			<td>Нужно ввести ровно один символ</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td>Нужно ввести ровно один символ</td>
-		</tr>
-	</table>
-</div><div id="task6599" class="task_block empty_on_print">
-	<div class="task_id">6599</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит строку символов, содержащую кавычки. Кавычки отмечают начало и конец фрагментов. Перед каждым символом &quot;[&quot; и &quot;]&quot; в исходном тексте поставить символ &quot;\&quot;. Заменить кавычки в начале фрагмента на символ &quot;[&quot;, а в конце фрагмента на символ &quot;]&quot;.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>a</td>
-			<td>a</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>"b"</td>
-			<td>[b]</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>"c</td>
-			<td>[c</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>d"</td>
-			<td>d[</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>"e"e</td>
-			<td>[e]e</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>f"f"f</td>
-			<td>f[f]f</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>"abc" "defgh" "i" "jklm"</td>
-			<td>[abc] [defgh] [i] [jklm]</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>abc" "def" "ghi" "jk" "lm"</td>
-			<td>abc[ ]def[ ]ghi[ ]jk[ ]lm[</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>"[abc"def] "[ghijklm]"</td>
-			<td>[\[abc]def\] [\[ghijklm\]]</td>
-		</tr>
-	</table>
-</div><div id="task1618" class="task_block empty_on_print">
-	<div class="task_id">1618</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит строку, состояющую из открывающихся и закрывающихся фигурных скобочек. Нужно вывести глубину вложенности для каждой скобочки.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{}</td>
-			<td>11</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{}}</td>
-			<td>1221</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{}}{}</td>
-			<td>122111</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{}{}}</td>
-			<td>122221</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{{{}{}}{{}{{}}{}}}{{}{}}}</td>
-			<td>12344443344455444322333321</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{</td>
-			<td>1 Неожиданный конец строки</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{}</td>
-			<td>122 Неожиданный конец строки</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{}}{</td>
-			<td>12211 Неожиданный конец строки</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{{}}{}{}}{{}{}{}</td>
-			<td>12332222211222222 Неожиданный конец строки</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>}</td>
-			<td>0 Неожиданный символ '}'</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{}}</td>
-			<td>110 Неожиданный символ '}'</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>{{{}{}}}{{}{}}{{}}}</td>
-			<td>1233332112222112210 Неожиданный символ '}'</td>
-		</tr>
-	</table>
-</div><div id="task1703" class="task_block empty_on_print">
-	<div class="task_id">1703</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит условное выражение. Например "x &gt; 3" или "y&lt;=-2". Выражение состоит из трех частей. В центре находится знак сравнения (один из &lt;, &lt;=, &gt;, &gt;=). Слева от него находится переменная (x, y или любая другая буква или слово). Справа находится число - ограничение, с которым проводится сравнение. Между частями выражения может быть 0 и более пробелов. Напечатать на экране словесное описание выражения.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>x&gt;3</td>
-			<td>Значение переменной x больше числа 3</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>r  &gt;=  1000</td>
-			<td>Значение переменной r больше либо равно числу 1000</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>value &lt;=-2</td>
-			<td>Значение переменной value меньше либо равно числу -2</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>y  &lt;  0</td>
-			<td>Значение переменной y меньше числа 0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>x  &lt;  </td>
-			<td>Справа от знака сравнения ожидается ограничение</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>&gt;13</td>
-			<td>Слева от знака сравнения ожидается переменная</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>y    0</td>
-			<td>Отсутствует знак сравнения</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>x+7</td>
-			<td>Отсутствует знак сравнения</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>a &lt; b &lt; c</td>
-			<td>В выражении должен быть только один знак сравнения</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>x &lt; xA && x + w &gt; xA</td>
-			<td>В выражении должен быть только один знак сравнения</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>x &gt; y &gt; z</td>
-			<td>В выражении должен быть только один знак сравнения</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>a x &lt; 17</td>
-			<td>Неожиданное выражение "a" слева от переменной "x"</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>y &gt; 19 23</td>
-			<td>Неожиданное выражение "23" справа от ограничения "19"</td>
-		</tr>
-	</table>
-</div><div id="task8887" class="task_block empty_on_print">
-	<div class="task_id">8887</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит вычислимое выражение с вызовом метода. Выражение может содержать несколько вызовов методов. При вызове метода в качестве аргумента другого метода нужно вывести "Вложенные вызовы методов не поддерживаются". Нужно вывести список вызванных методов и их аргументы.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">a = Math.Sqrt(x);</td>
-			<td class="preformatted">Метод Sqrt был вызван у Math
-В качестве аргумента было передано
-x</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">a = Math.Pow(a, n);</td>
-			<td class="preformatted">Метод Pow был вызван у Math
-В качестве аргумента было передано
-a
-n</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">result = String.Format("{0} шт и {1} см", amount, remainder);</td>
-			<td class="preformatted">Метод Format был вызван у String
-В качестве аргумента было передано
-"{0} шт и {1} см"
-amount
-remainder</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">str = Console.ReadLine();</td>
-			<td class="preformatted">Метод ReadLine был вызван у Console
-В качестве аргумента ничего не передавалось</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">Console.WriteLine();</td>
-			<td class="preformatted">Метод WriteLine был вызван у Console
-В качестве аргумента ничего не передавалось</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">result = 3 * Math.Sin(2*aRad) * Math.Cos(3*bRad);</td>
-			<td class="preformatted">Метод Sin был вызван у Math
-В качестве аргумента было передано
-2*aRad
-Метод Cos был вызван у Math
-В качестве аргумента было передано
-3*bRad.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">r = 3 * Math.Sqrt(61-x);</td>
-			<td class="preformatted">Метод Sqrt был вызван у Math
-В качестве аргумента было передано
-61-x.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">y = x+7;</td>
-			<td class="preformatted">Отсутствует вызов метода</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">last = arr.Length;</td>
-			<td class="preformatted">Отсутствует вызов метода</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">idx = "abcdacadbacdaabaadc".IndexOf("cd";</td>
-			<td class="preformatted">Неожиданный конец строки.</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">a = raw.Trim());</td>
-			<td class="preformatted">Неожиданный символ ')'</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">answer = -5 * Math.Sqrt(x + Math.Sqrt(y));</td>
-			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">distance = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));</td>
-			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">result = Math.Sqrt(Math.Pow(x, 2 + Math.Pow(y, 2));</td>
-			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">result = Math.Sqrt(1-Math.Pow(Math.Sin(xRad), 2)));</td>
-			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
-		</tr>
-	</table>
-</div><div id="task9116" class="task_block empty_on_print">
-	<div class="task_id">9116</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит строчку с пробелами в кавычках. Нужно убрать кавычки в начале и в конце строки, а также удалить пробелы в начале и в конце строки. Результат вывести на экран.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">"   12345"</td>
-			<td>12345</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">"abcdef    "</td>
-			<td>abcdef</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">"  xyz  "</td>
-			<td>xyz</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">"  a b  "</td>
-			<td>a b</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">" pq"rt "</td>
-			<td>pq"rt</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">asdf"</td>
-			<td>Строка должна начинаться и заканчиваться кавычкой</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">"xyz</td>
-			<td>Строка должна начинаться и заканчиваться кавычкой</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="preformatted">p"w"</td>
-			<td>Строка должна начинаться и заканчиваться кавычкой</td>
-		</tr>
-	</table>
-</div>Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>2 Организация вычислений</title><style>.check_single {
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>2 Заполнение шаблона данными от пользователя</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -34,6 +34,9 @@ table td, table th {
 }
 .check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
+}
+.check_values td, .check_values_v2 td {
+    max-width: 450px;
 }
 .lab_nav ol {
 	list-style:none;
@@ -92,17 +95,15 @@ table td, table th {
 }
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
-	white-space:pre;
+	white-space-collapse:preserve;
+    text-wrap:pretty;
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target, .check_values_v2 tr:target {
-    background-color:lightgrey;
-}
-.stream_values tr:nth-child(2) td:nth-child(3) {
+.stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
-    text-align:right;
+    text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
     border-top-width:0px;
@@ -114,10 +115,31 @@ table td, table th {
     border-bottom-width:0px;
     text-align:right;
 }
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
 .stream_values tr td:nth-child(2){
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
+}
+.stream_values tr.test_row td:first-of-type {
+    border-top-width:1px;
+    border-bottom-width:1px;
+    text-align:center;
+    width:15px;
+}
+.stream_values tr:last-of-type td {
+    border-bottom-width:1px;
+}
+.stream_values {
+    width:100%;
 }
 formula {
 	font-weight:bold;
@@ -175,357 +197,294 @@ spoiler:hover trans {
 	width:300px;
 }
 zoom{
-	background-color:gray;
+	background-color:lightgrey;
 	font-size:40pt;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Организация вычислений</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4411' class='example'>1*</a><li><a href='#task8428' class='example'>2*</a><li><a href='#task1976'>3</a><li><a href='#task3435'>4</a><li><a href='#task9865'>5</a><li><a href='#task7457'>6</a><li><a href='#task7237'>7</a><li><a href='#task7711' class='example'>8*</a><li><a href='#task3474'>9</a><li><a href='#task1262'>10</a><li><a href='#task9164'>11</a><li><a href='#task3558'>12</a><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a></ul></div><div id='task4411' class='task_block'>
-<div class='task_id'>4411</div>
+	padding:0px 10px;
+}
+.task_block:target zoom {
+    background-color:white;
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Заполнение шаблона данными от пользователя</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Печать текста на экран</a></li><li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li><li>3 <a href='tasks 3.html'>Организация вычислений</a></li><li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li><li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li><li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li><li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li><li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li><li>9 <a href='tasks 9.html'>Вложенные циклы</a></li><li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li><li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li><li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li><li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li><li>14 <a href='tasks 14.html'>Поиск в массиве</a></li><li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li><li>16 <a href='tasks 16.html'>Строки</a></li><li>17 <a href='tasks 17.html'>Чтение файлов</a></li><li>18 <a href='tasks 18.html'>Запись в файлы</a></li><li>19 <a href='tasks 19.html'>Методы</a></li><li>20 <a href='tasks 20.html'>Исключения</a></li><li>21 <a href='tasks 21.html'>Составные типы данных</a></li><li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li><li>23 <a href='tasks 23.html'>Коллекции</a></li><li>24 <a href='tasks 24.html'>Рекурсия</a></li><li>25 <a href='tasks 25.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1860' class='example'>1*</a><li><a href='#task4764'>2</a><li><a href='#task2429'>3</a><li><a href='#task7472'>4</a><li><a href='#task1910'>5</a><li><a href='#task4131' class='example'>6*</a><li><a href='#task7365'>7</a><li><a href='#task4140' class='example'>8*</a><li><a href='#task2959'>9</a><li><a href='#task7271'>10</a><li><a href='#task2632'>11</a><li><a href='#task4343'>12</a><li><a href='#task7474'>13</a></ul></div><div id='task1860' class='task_block'>
+<div class='task_id'>1860</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Вычислить результат по формуле x + 7, где x вводится с клавиатуры.
+Пользователь вводит слово (goal). Нужно напечатать на экран фразу "Мы стремимся к " и затем слово от пользователя.
+</div>
+<div class='check_single preformatted'>String goal;               //Объявить переменную для хранения текста
+goal = Console.ReadLine(); //Получить данные от пользователя и записать их в переменную
+Console.WriteLine("Мы стремимся к " + goal); //Напечатать текст на экран</div>
+<div class='task_desc'>
+Чтобы проверить эту программу, её нужно запустить несколько раз. При каждом запуске нужно вводить только одно слово из колонки Исходные данные. Задача решена правильно, если для всех исходных данных у вас получились соответствующие результаты.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
-<tr><td>1</td><td>11.13</td><td class='preformatted'>Результат равен 18,1300</td></tr>
-<tr><td>2</td><td>-7919</td><td class='preformatted'>Результат равен -7912,0000</td></tr>
-<tr><td>3</td><td>0</td><td class='preformatted'>Результат равен 7,0000</td></tr>
-<tr><td>4</td><td>6.00006</td><td class='preformatted'>Результат равен 13,0001</td></tr>
-<tr><td>5</td><td>9.00004</td><td class='preformatted'>Результат равен 16,0000</td></tr>
+<tr><th>Номер теста</th><th>Исходные данные (word)</th><th>Результат</th></tr>
+<tr><td>1</td><td>знаниям</td><td class='preformatted'>Мы стремимся к знаниям
+</td></tr>
+<tr><td>2</td><td>цели</td><td class='preformatted'>Мы стремимся к цели
+</td></tr>
+<tr><td>3</td><td>результату</td><td class='preformatted'>Мы стремимся к результату
+</td></tr>
 </table>
-</div>
-<div>Руководство по самостоятельному выполнению задачи <a href='конспекты/pre4411.html#initial' target='_blank'>(открыть в новом файле)</a></div><div id='task8428' class='task_block'>
 <div class='task_desc'>
-Какое название лучше выбрать для переменной? Эта проблема подробно рассмотрена в главе 11.1 "Общие принципы выбора имен переменных" части III книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=274" target="_blank">(открыть в новой вкладке)</a>
+Одна из распространенных ошибок - не объявить переменную и дать команду на запись значения в переменную.
+</div>
+<div class='check_single preformatted'>//для иллюстрации команда объявления пропущена String goal;
+goal = Console.ReadLine();
+Console.WriteLine("Мы стремимся к " + goal);</div>
+<div class='task_desc'>
+При попытке запустить такой код, компьютер выдаст ошибку: "Имя "goal" не существует в текущем контексте."
 </div>
 <div class='task_desc'>
-Обычно в шапке таблицы с тестовыми данными у вводимых значений будут указаны предпочтительные имена. Как правило это существительные английского языка, которые упоминались на русском языке при постановке задачи. Заведите словарик и записывайте в него все новые слова и их перевод. На английском языке проще найти помощь и ответы на сложные вопросы. Все технологии и инструменты программирования публикуют информацию о себе на английском языке. Расширяйте свой словарный запас!
+Другая распространенная ошибка - пропустить инициализацию переменной. То есть объявить переменную и сразу использовать её в команде печати на экран.
 </div>
-<div class='task_id'>8428</div>
+<div class='check_single preformatted'>String goal;
+//для иллюстрации, команда записи значения пропущена: goal = Console.ReadLine();
+Console.WriteLine("Мы стремимся к " + goal);</div>
+<div class='task_desc'>
+В таком случае компьютер выдаст ошибку: "Использование локальной переменной "goal", которой не присвоено значение."
+</div>
+</div>
+<div id='task4764' class='task_block'>
+<div class='task_id'>4764</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Перевести угол из градусов в радианы по формуле: <formula>angleRadian=angleDegree*&pi;/180</formula>, где angleDegree - угол в градусах(degrees), angleRadian - угол в радианах. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ).
+Пользователь вводит слово (problem). Нужно вывести это слово на экран и дописать слова "нас не остановят" в конце.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (angleDegree)</th><th>Результат (angleRadian)</th></tr>
-<tr><td>1</td><td>45</td><td class='preformatted'>45 градусов это 0,7854 радиан</td></tr>
-<tr><td>2</td><td>1125</td><td class='preformatted'>1125 градусов это 19,6350 радиан</td></tr>
-<tr><td>3</td><td>0</td><td class='preformatted'>0 градусов это 0,0000 радиан</td></tr>
-<tr><td>4</td><td>360</td><td class='preformatted'>360 градусов это 6,2832 радиан</td></tr>
-<tr><td>5</td><td>90</td><td class='preformatted'>90 градусов это 1,5708 радиан</td></tr>
-<tr><td>6</td><td>2000</td><td class='preformatted'>2000 градусов это 34,9066 радиан</td></tr>
+<tr><th>Номер теста</th><th>Исходные данные (problem)</th><th>Результат</th></tr>
+<tr><td>1</td><td>трудности</td><td class='preformatted'>трудности нас не остановят!
+</td></tr>
+<tr><td>2</td><td>загадки</td><td class='preformatted'>загадки нас не остановят!
+</td></tr>
+<tr><td>3</td><td>сложные задачи</td><td class='preformatted'>сложные задачи нас не остановят!
+</td></tr>
 </table>
 </div>
-<div id='task1976' class='task_block'>
-<div class='task_id'>1976</div>
+<div id='task2429' class='task_block'>
+<div class='task_id'>2429</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит слово (adjective). Нужно вывести его на экран, дописать слова "Программирование это " перед началом и "!"(восклицательный знак) в конце этой строки.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (adjective)</th><th>Результат</th></tr>
+<tr><td>1</td><td>просто</td><td class='preformatted'>Программирование это просто!</td></tr>
+<tr><td>2</td><td>интересно</td><td class='preformatted'>Программирование это интересно!</td></tr>
+<tr><td>3</td><td>перспективно</td><td class='preformatted'>Программирование это перспективно!</td></tr>
+</table>
+</div>
+<div id='task7472' class='task_block'>
+<div class='task_id'>7472</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две строки(first и second). Нужно составить из них третью строку, которая должна начинаться строкой second и заканчиваться строкой first.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>first</th><th>second</th></tr>
+<tr>
+<td>1</td><td>начало</td><td>конец</td><td class='preformatted'>конец начало
+</td></tr>
+<tr>
+<td>2</td><td>сила</td><td>знание</td><td class='preformatted'>знание сила
+</td></tr>
+<tr>
+<td>3</td><td>курица</td><td>яйцо</td><td class='preformatted'>яйцо курица
+</td></tr>
+<tr>
+<td>4</td><td>шаг</td><td>шаг</td><td class='preformatted'>шаг шаг
+</td></tr>
+</table>
+</div>
+<div id='task1910' class='task_block'>
+<div class='task_id'>1910</div>
 <h3>Задача</h3>
 <h4>Переведите алгоритм с естественного языка на ваш язык программирования.</h4>
-<div class='task_desc'>
-Объявите переменные
-</div>
-<ol start='1'><li>Объявите переменную temp для временного хранения строк получаемых от пользователя</li><li>Объявите переменную height для хранения высоты прямоугольника</li><li>Объявите переменную width для хранения ширины прямоугольника</li><li>Объявите переменную area для хранения результата - площади прямоугольника</li></ol><div class='task_desc'>
+<ol start='1'><li>Объявите переменную companyName для хранения названия компании.</li><li>Объявите переменную productName для хранения наименования товара.</li><li>Объявите переменную productCost для хранения цены на товар.</li><li>Объявите переменную messagePart для хранения фрагментов сообщения.</li></ol><div class='task_desc'>
 Получите данные от пользователя
 </div>
-<ol start='5'><li>Выведите на экран строковый литерал "Задача 1976"</li><li>Выведите на экран строковый литерал "Введите высоту прямоугольника".</li><li>Инициализируйте переменную temp - получите от пользователя строку и запишите ее в temp.</li><li>Инициализируйте переменную height - запишите в нее результат преобразования temp в число.</li><li>Выведите на экран строковый литерал "Введите ширину прямоугольника".</li><li>Получите от пользователя строку и запишите ее в temp.</li><li>Инициализируйте переменную width - запишите в нее результат преобразования temp в число.</li></ol><div class='task_desc'>
-Вычислите результат и оформите ответ
+<ol start='5'><li>Выведите на экран строковый литерал "Задача 1910".</li><li>Выведите на экран строковый литерал "Введите название компании".</li><li>Инициализируйте companyName - запишите в нее строку, полученную от пользователя.</li><li>Выведите на экран строковый литерал "Введите наименование товара".</li><li>Инициализируйте productName - запишите в нее строку, полученную от пользователя.</li><li>Выведите на экран строковый литерал "Введите цену товара".</li><li>Инициализируйте productCost - запишите в нее строку, полученную от пользователя.</li></ol><div class='task_desc'>
+Сформируйте ответ и выведите его на экран
 </div>
-<ol start='12'><li>Инициализируйте переменную area - умножьте переменную height на width и запишите результат в area.</li><li>Выведите на экран текст по шаблону "Площадь прямоугольника со сторонами $height и $width равна $area"</li></ol><h4>Убедитесь, что для всех исходных данных получается ожидаемый результат.</h4>
+<ol start='12'><li>Выполните конкатенацию строкового литерала "Распродажа в ", переменной companyName и строкового литерала "!".</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Выведите на экран значение переменной messagePart.</li><li>Выполните конкатенацию строкового литерала "наши " и переменной productName.</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Выполните конкатенацию переменной messagePart и строкового литерала " по супер цене. Всего ".</li><li>Запишите в переменную messagePart результат конкатенации.</li><li>Запишите в переменную messagePart результат конкатенации messagePart и переменной productCost.</li><li>Запишите в переменную messagePart результат конкатенации messagePart и строкового литерала "!".</li><li>Выведите на экран с новой строки значение переменной messagePart.</li><li>Выведите на экран с новой строки значение строкового литерала "Торопитесь, предложение ограничено!".</li></ol><div class='task_desc'>
+Убедитесь, что для всех исходных данных получается ожидаемый результат.
+</div>
+<table class='stream_values'>
+<tr><th>Номер теста</th><th>Исходные данные</th><th>Результат</th></tr>
+<tr class='test_row'><td rowspan='7'>1</td><td></td><td class='preformatted'>Задача 1910
+Введите название компании
+</td></tr>
+<tr><td>Рога и копыта
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Введите наименование товара
+</td></tr>
+<tr><td>копыта
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Введите цену товара
+</td></tr>
+<tr><td>30 рублей за штуку
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Распродажа в Рога и копыта!
+Наши копыта по супер цене. Всего 30 рублей за штуку!
+Торопитесь, предложение ограничено!
+</td></tr>
+<tr class='test_row'><td rowspan='7'>2</td><td></td><td class='preformatted'>Задача 1910
+Введите название компании
+</td></tr>
+<tr><td>Слоновод
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Введите наименование товара
+</td></tr>
+<tr><td>слоны
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Введите цену товара
+</td></tr>
+<tr><td>15 попугаев
+</td><td>
+</td></tr>
+<tr><td></td><td class='preformatted'>Распродажа в Слоновод!
+Наши слоны по супер цене. Всего 15 попугаев!
+Торопитесь, предложение ограничено!
+</td></tr>
+</table>
+</div>
+<div id='task4131' class='task_block'>
+<div class='task_id'>4131</div>
+<h3>Задача</h3>
+<h4>Переведите алгоритм с естественного языка на ваш язык программирования.</h4>
+<ol start='1'><li>Объявите переменную clientName для хранения имени клиента.</li><li>Объявите переменную companyName для хранения названия компании.</li></ol><div class='task_desc'>
+Инициализируйте переменные
+</div>
+<ol start='3'><li>Запишите в переменную clientName строковый литерал "Иван Иванович".</li><li>Запишите в переменную companyName строковый литерал "ООО Рога и копыта".</li></ol><div class='task_desc'>
+Оформите ответ
+</div>
+<ol start='5'><li>Выведите на экран строковый литерал "Задача 4131".</li><li>Выведите на экран на новой строке строковый литерал "Уважаемый ".</li><li>Выведите на экран значение переменной clientName.</li><li>Выведите на экран строковый литерал ". Поздравляем с Днем рождения."</li><li>Выведите на экран на новой строке строковый литерал: "Пусть каждый день будет наполнен счастьем! \nВаша ".</li><li>Выведите на экран значение переменной companyName.</li><li>Выведите на экран строковый литерал ".".</li></ol><div class='task_desc'>
+Запустите программу и проверьте, что у вас получился такой же результат:
+</div>
+<div class='check_single preformatted'>Задача 4131
+Уважаемый Иван Иванович. Поздравляем с Днем рождения.
+Пусть каждый день будет наполнен счастьем!
+Ваша ООО Рога и копыта.</div>
+</div>
+<div id='task7365' class='task_block'>
+<div class='task_id'>7365</div>
+<h3>Задача</h3>
+<h4>Переведите алгоритм с естественного языка на ваш язык программирования.</h4>
+<ol start='1'><li>Объявите переменную accountBalance для хранения баланса счета.</li><li>Объявите переменную messageText для хранения текста сообщения.</li><li>Инициализируйте переменную accountBalance - запишите в нее строковый литерал "0,37".</li><li>Выведите на экран строковый литерал "Задача 7365".</li><li>Запишите в переменную messageText строковый литерал "Пора пополнить счет!\n".</li><li>Запишите в переменную messageText результат конкатенации значения переменной messageText и строкового литерала "Баланс Вашего счета составляет ".</li><li>Запишите в переменную messageText результат конкатенации значений переменных messageText и accountBalance.</li><li>Запишите в переменную messageText результат конкатенации значения переменной messageText и строкового литерала " руб.".</li><li>Выведите на экран значение переменной messageText.</li></ol><div class='task_desc'>
+Запустите программу и проверьте, что у вас получился такой же результат
+</div>
+<div class='check_single preformatted'>Задача 7365
+Пора пополнить счет!
+Баланс Вашего счета составляет 0,37 руб.</div>
+</div>
+<div id='task4140' class='task_block'>
+<div class='task_id'>4140</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит фамилию и имя. Нужно оформить фразу по шаблону:
+</div>
+<div class='check_single preformatted'>Меня зовут $lastName, $firstName $lastName.</div>
+<div class='task_desc'>
+Выражения вида $lastName это условное обозначение для вас. Вместо этого выражения нужно написать значение переменной lastName. В C# это можно сделать с помощью команды Console.WriteLine(). В скобочках нужно написать:
+</div>
+<ol start='1'><li>Шаблон текста со специальными символами {0} в тех местах, где нужно написать переменную.</li><li>Переменные через запятую. Они пронумерованы начиная с 0. Этот номер ставится в специальных символах между фигурными скобками.</li></ol><div class='task_desc'>
+Команда для решения этой задачи выглядит так
+</div>
+<div class='check_single preformatted'>Console.WriteLine("Меня зовут {0}, {1} {0}", lastName, firstName);</div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>height</th><th>width</th></tr>
+<th>first name</th><th>last name</th></tr>
 <tr>
-<td>1</td><td>3</td><td>5</td><td class='preformatted'>Задача 1976
-Введите высоту прямоугольника
-Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 3 и 5 равна 15</td></tr>
+<td>1</td><td>Джеймс</td><td>Бонд</td><td class='preformatted'>Меня зовут Бонд, Джеймс Бонд</td></tr>
 <tr>
-<td>2</td><td>11</td><td>19</td><td class='preformatted'>Задача 1976
-Введите высоту прямоугольника
-Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 11 и 19 равна 209</td></tr>
+<td>2</td><td>капитан</td><td>Джек Воробей</td><td class='preformatted'>Меня зовут Джек Воробей, капитан Джек Воробей</td></tr>
 <tr>
-<td>3</td><td>2</td><td>23</td><td class='preformatted'>Задача 1976
-Введите высоту прямоугольника
-Введите ширину прямоугольника
-Площадь прямоугольника со сторонами 2 и 23 равна 46</td></tr>
+<td>3</td><td>Александр</td><td>Крюков</td><td class='preformatted'>Меня зовут Крюков, Александр Крюков</td></tr>
 </table>
 </div>
-<div id='task3435' class='task_block'>
-<div class='task_id'>3435</div>
+<div id='task2959' class='task_block'>
+<div class='task_id'>2959</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Перевести угол из радианов в градусы. <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BD" target="_blank">Радиан</a> - угол, соответствующий дуге, длина которой равна её радиусу. Единица измерения плоских углов в Международной системе единиц (СИ). Выведите ответ по шаблону "$angleRadian радиан это $angleDegree градусов". Точность чисел - 4 знака после запятой.
+Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $ID на введенное значение id.
 </div>
+<div class='check_single preformatted'>SELECT first_name, last_name, group
+FROM students WHERE student_id = '$ID';</div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (angleRadian)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0.7854</td><td class='preformatted'>0,7854 радиан это 45,0001 градусов
-</td></tr>
-<tr><td>2</td><td>19.6350</td><td class='preformatted'>19,6350 радиан это 1125,0026 градусов
-</td></tr>
-<tr><td>3</td><td>0</td><td class='preformatted'>0,0000 радиан это 0,0000 градусов
-</td></tr>
-<tr><td>4</td><td>6.2832</td><td class='preformatted'>6,2832 радиан это 360,0008 градусов
-</td></tr>
-<tr><td>5</td><td>1.5708</td><td class='preformatted'>1,5708 радиан это 90,0002 градусов
-</td></tr>
-<tr><td>6</td><td>34.9066</td><td class='preformatted'>34,9066 радиан это 2000,0009 градусов
-</td></tr>
+<tr><th>Номер теста</th><th>Исходные данные (id)</th><th>Результат</th></tr>
+<tr><td>1</td><td>123456789</td><td class='preformatted'>SELECT first_name, last_name, group
+FROM students WHERE student_id = '123456789';</td></tr>
+<tr><td>2</td><td>fa93f</td><td class='preformatted'>SELECT first_name, last_name, group
+FROM students WHERE student_id = 'fa93f';</td></tr>
 </table>
 </div>
-<div id='task9865' class='task_block'>
-<div class='task_id'>9865</div>
+<div id='task7271' class='task_block'>
+<div class='task_id'>7271</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дана скорость в <a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D0%B5%D0%BB_(%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8F)">узлах</a>. Нужно найти приблизительную скорость в километрах/час. Для быстрого приблизительного пересчёта в уме узлов в километры в час: «умножь на два и вычти 10 процентов». Выведите ответ по шаблону: "$knots узлов это $KmH км/ч". Точность чисел - 2 знака после запятой.
+Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $X на введенное значение x. $Y на введенное значение y.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (knots)</th><th>Результат</th></tr>
-<tr><td>1</td><td>15</td><td class='preformatted'>Умножили 15,0000 на 2 получили 30,0000
-10% от 30,0000 это 3,0000
-15,00 узлов это приблизительно 27,00 км/ч
-</td></tr>
-<tr><td>2</td><td>11</td><td class='preformatted'>Умножили 11,0000 на 2 получили 22,0000
-10% от 22,0000 это 2,2000
-11,00 узлов это приблизительно 19,80 км/ч
-</td></tr>
-<tr><td>3</td><td>1</td><td class='preformatted'>Умножили 1,0000 на 2 получили 2,0000
-10% от 2,0000 это 0,2000
-1,00 узлов это приблизительно 1,80 км/ч
-</td></tr>
-<tr><td>4</td><td>0</td><td class='preformatted'>Умножили 0,0000 на 2 получили 0,0000
-10% от 0,0000 это 0,0000
-0,00 узлов это приблизительно 0,00 км/ч
-</td></tr>
-</table>
-</div>
-<div id='task7457' class='task_block'>
-<div class='task_id'>7457</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дана скорость в километрах/час. Найти значение этой скорости в метрах/секунду. Выведите ответ по шаблону "$velocityInKmH км/ч это $velocityInMS м/с". Точность чисел составляет 2 знака после запятой.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (velocityInKmH)</th><th>Результат</th></tr>
-<tr><td>1</td><td>60</td><td class='preformatted'>60,00 км/ч
-60000,00 м/ч
-1000,00 м/мин
-16,67 м/с
-</td></tr>
-<tr><td>2</td><td>200</td><td class='preformatted'>200,00 км/ч
-200000,00 м/ч
-3333,33 м/мин
-55,56 м/с
-</td></tr>
-<tr><td>3</td><td>5</td><td class='preformatted'>5,00 км/ч
-5000,00 м/ч
-83,33 м/мин
-1,39 м/с
-</td></tr>
-<tr><td>4</td><td>0</td><td class='preformatted'>0,00 км/ч
-0,00 м/ч
-0,00 м/мин
-0,00 м/с
-</td></tr>
-</table>
-</div>
-<div id='task7237' class='task_block'>
-<div class='task_id'>7237</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (temperatureC)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0</td><td class='preformatted'>32,0000</td></tr>
-<tr><td>2</td><td>-5</td><td class='preformatted'>23,0000</td></tr>
-<tr><td>3</td><td>-40</td><td class='preformatted'>-40,0000</td></tr>
-<tr><td>4</td><td>-100</td><td class='preformatted'>-148,0000</td></tr>
-<tr><td>5</td><td>-17.7777</td><td class='preformatted'>0,0001</td></tr>
-<tr><td>6</td><td>20.5</td><td class='preformatted'>68,9000</td></tr>
-<tr><td>7</td><td>249.44445</td><td class='preformatted'>481,0000</td></tr>
-<tr><td>8</td><td>-273.15</td><td class='preformatted'>-459,6700</td></tr>
-</table>
-</div>
-<div id="link_c7_p32.5" class="task_block">
-	<div class="check_single"><p>Все реальные расчеты так или иначе связаны с единицами измерения. При этом стандартные единицы измерения в разных странах могут отличаться. Из за этого могут случаться аварии. Показательным примером является зонд Mars Climate Orbiter, потерпевший крушение 23 сентября 1999 года.</p>
-	<p>Цитата из книги "Совершенный код" Часть III. Глава 32.5 Методики комментирования</p>
-	<p><b>Указывайте единицы измерения численных величин</b> Если число представляет длину, укажите единицы представления: дюймы, футы, метры или километры. Если речь идет о времени, поясните, в чем оно выражено: в секундах, прошедших с 1 января 1980 года, миллисекундах, прошедших с момента запуска программы, или как-то иначе. Если это координаты, напишите, что они представляют (ширину, долготу и высоту) и в чем они выражены (в радианах или градусах), укажите систему координат и т. д. Не предполагайте, что единицы измерения очевидны — для нового программиста они такими не будут. Для кого-то, кто работает над другой частью системы, они такими не будут. После значительного изменения программы они тоже очевидными не будут. <b>Единицы измерения часто следует указывать в именах переменных</b>, а не в комментариях. Например, выражение вида distanceToSurface = marsLanderAltitude выглядит корректным, тогда как distanceToSurfaceInMeters = marsLanderAltitudeInFeet ясно указывает на ошибку</p>
-	</div>
-</div><div id='task7711' class='task_block'>
-<div class='task_id'>7711</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит угол, выраженный в градусах. Нужно перевести этот угол в радианы и вычислить результат по формуле <b>sin(angleRad)</b>. Для получения значения в радианах примените формулу, которую использовали в задаче <a href="tasks 2.html#task8428" target="_blank">ЛР2#8428(открыть в новой вкладке)</a>
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (angleDegree)</th><th>Результат</th></tr>
-<tr><td>1</td><td>45</td><td class='preformatted'>Угол 45,0000 градусов это 0,7854 радиан.
-Синус этого угла равен 0,7071</td></tr>
-<tr><td>2</td><td>90</td><td class='preformatted'>Угол 90,0000 градусов это 1,5708 радиан.
-Синус этого угла равен 1,0000</td></tr>
-<tr><td>3</td><td>360</td><td class='preformatted'>Угол 360,0000 градусов это 6,2832 радиан.
-Синус этого угла равен -0,0000</td></tr>
-<tr><td>4</td><td>1125</td><td class='preformatted'>Угол 1125,0000 градусов это 19,6350 радиан.
-Синус этого угла равен 0,7071</td></tr>
-<tr><td>5</td><td>7639</td><td class='preformatted'>Угол 7639,0000 градусов это 133,3257 радиан.
-Синус этого угла равен 0,9816</td></tr>
-</table>
-</div>
-<div>Руководство по самостоятельному выполнению задачи <a href='конспекты/pre7711.html#initial' target='_blank'>(открыть в новом файле)</a></div><div id='task3474' class='task_block'>
-<div class='task_id'>3474</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дан прямоугольный треугольник. В нем известна длина катета(cathetus) и прилежащий угол(angleDeg). Нужно найти формулу для вычисления длины гипотенузы в интернете и применить её. Точность результата - 4 знака после запятой. Результат вывести по шаблону.
-</div>
-<div class='check_single preformatted'>Значение угла в радианах $angleRad
-Косинус этого угла $cos
-Длина гипотенузы $hypotenuse</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат (hypotenuse)</th></tr>
-<tr><th>cathetus</th><th>angleDeg</th></tr>
-<tr>
-<td>1</td><td>40</td><td>30</td><td class='preformatted'>Значение угла в радианах 0,5236
-Косинус этого угла 0,8660
-Длина гипотенузы 46,1880
-</td></tr>
-<tr>
-<td>2</td><td>20</td><td>89</td><td class='preformatted'>Значение угла в радианах 1,5533
-Косинус этого угла 0,0175
-Длина гипотенузы 1145,9738
-</td></tr>
-<tr>
-<td>3</td><td>1000</td><td>1</td><td class='preformatted'>Значение угла в радианах 0,0175
-Косинус этого угла 0,9998
-Длина гипотенузы 1000,1523
-</td></tr>
-<tr>
-<td>4</td><td>70</td><td>45</td><td class='preformatted'>Значение угла в радианах 0,7854
-Косинус этого угла 0,7071
-Длина гипотенузы 98,9949
-</td></tr>
-</table>
-</div>
-<div id='task1262' class='task_block'>
-<div class='task_id'>1262</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Вычислить результат по формуле <formula>5cos(yRad)</formula>. Значение угла дано в градусах.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (yDeg)</th><th>Результат</th></tr>
-<tr><td>1</td><td>200</td><td class='preformatted'>200,0000 градусов это 3,4907 радиан
-результат вычисления -4,6985</td></tr>
-<tr><td>2</td><td>360</td><td class='preformatted'>360,0000 градусов это 6,2832 радиан
-результат вычисления 5,0000</td></tr>
-<tr><td>3</td><td>90</td><td class='preformatted'>90,0000 градусов это 1,5708 радиан
-результат вычисления 0,0000</td></tr>
-<tr><td>4</td><td>-50</td><td class='preformatted'>-50,0000 градусов это -0,8727 радиан
-результат вычисления 3,2139</td></tr>
-</table>
-</div>
-<div id='task9164' class='task_block'>
-<div class='task_id'>9164</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Вычислить результат по формуле. Значение угла дано в градусах. <formula>sin(aRad)cos(bRad)+cos(aRad)sin(bRad)</formula>
-</div>
+<div class='check_single preformatted'>INSERT INTO points (x, y) VALUES ('$X', '$Y');</div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>aDeg</th><th>bDeg</th></tr>
+<th>x</th><th>y</th></tr>
 <tr>
-<td>1</td><td>90</td><td>90</td><td class='preformatted'>0,0000</td></tr>
+<td>1</td><td>5</td><td>7</td><td class='preformatted'>INSERT INTO points (x, y) VALUES ('5', '7');</td></tr>
 <tr>
-<td>2</td><td>90</td><td>0</td><td class='preformatted'>1,0000</td></tr>
-<tr>
-<td>3</td><td>7559</td><td>7549</td><td class='preformatted'>-0,2079</td></tr>
+<td>2</td><td>-1</td><td>1000</td><td class='preformatted'>INSERT INTO points (x, y) VALUES ('-1', '1000');</td></tr>
 </table>
 </div>
-<div id='task3558' class='task_block'>
-<div class='task_id'>3558</div>
+<div id='task2632' class='task_block'>
+<div class='task_id'>2632</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Вычислить результат по формуле. Значение угла дано в градусах. <formula>3sin(2*aRad)cos(3*bRad)</formula>
+Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
 </div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>aDeg</th><th>bDeg</th></tr>
-<tr>
-<td>1</td><td>45</td><td>90</td><td class='preformatted'>-0,0000</td></tr>
-<tr>
-<td>2</td><td>200</td><td>45</td><td class='preformatted'>-1,3636</td></tr>
-<tr>
-<td>3</td><td>-70</td><td>20</td><td class='preformatted'>-0,9642</td></tr>
-<tr>
-<td>4</td><td>100</td><td>-135</td><td class='preformatted'>-0,7255</td></tr>
-</table>
-</div>
-<div id='task4913' class='task_block'>
-<div class='task_id'>4913</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.
-</div>
-<ol start='1'><li>Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula></li><li>Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula></li><li>Координату X<sub>b</sub> другой точки по формуле <formula>bx = ax + dX</formula>.</li><li>Координату Y<sub>b</sub> другой точки по формуле <formula>by = ay + dY</formula></li></ol><div class='task_desc'>
-Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.
-</div>
-<div class='check_single preformatted'>Приращение координат: &Delta;x = $dx; &Delta;y = $dy
-Координаты второй точки ($bx;$by)</div>
+<div class='check_single preformatted'>&lt;circle cx="$CX" cy="$CY" r="$R" fill="$FILL"/&gt;</div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>ax</th><th>ay</th><th>distance</th><th>angleDeg</th></tr>
-<tr><td>1</td><td>1</td><td>2</td><td>5</td><td>30</td><td class='preformatted'>Приращение координат: Δx = 4,3301 Δy = 2,5000
-Координаты второй точки (5,3301;4,5000)
-</td></tr>
-<tr><td>2</td><td>7</td><td>11</td><td>13</td><td>110</td><td class='preformatted'>Приращение координат: Δx = -4,4463 Δy = 12,2160
-Координаты второй точки (2,5537;23,2160)
-</td></tr>
-<tr><td>3</td><td>17</td><td>19</td><td>23</td><td>230</td><td class='preformatted'>Приращение координат: Δx = -14,7841 Δy = -17,6190
-Координаты второй точки (2,2159;1,3810)
-</td></tr>
-<tr><td>4</td><td>29</td><td>31</td><td>3</td><td>290</td><td class='preformatted'>Приращение координат: Δx = 1,0261 Δy = -2,8191
-Координаты второй точки (30,0261;28,1809)
-</td></tr>
-<tr><td>5</td><td>33</td><td>37</td><td>10</td><td>90</td><td class='preformatted'>Приращение координат: Δx = 0,0000 Δy = 10,0000
-Координаты второй точки (33,0000;47,0000)
-</td></tr>
-<tr><td>6</td><td>33</td><td>37</td><td>10</td><td>180</td><td class='preformatted'>Приращение координат: Δx = -10,0000 Δy = 0,0000
-Координаты второй точки (23,0000;37,0000)
-</td></tr>
-<tr><td>7</td><td>33</td><td>37</td><td>10</td><td>270</td><td class='preformatted'>Приращение координат: Δx = -0,0000 Δy = -10,0000
-Координаты второй точки (33,0000;27,0000)
-</td></tr>
-<tr><td>8</td><td>33</td><td>37</td><td>10</td><td>360</td><td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = -0,0000
-Координаты второй точки (43,0000;37,0000)
-</td></tr>
-<tr><td>9</td><td>1</td><td>2</td><td>10</td><td>0</td><td class='preformatted'>Приращение координат: Δx = 10,0000 Δy = 0,0000
-Координаты второй точки (11,0000;2,0000)
-</td></tr>
-<tr><td>10</td><td>1</td><td>2</td><td>-5</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td></tr>
-<tr><td>11</td><td>1</td><td>2</td><td>0</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td></tr>
-<tr><td>12</td><td>1</td><td>2</td><td>10</td><td>-5</td><td class='preformatted'>Угол должен быть неотрицательным
-</td></tr>
+<tr><th>cx</th><th>cy</th><th>r</th><th>fill</th></tr>
+<tr><td>1</td><td>50</td><td>50</td><td>40</td><td>yellow</td><td class='preformatted'>&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;</td></tr>
+<tr><td>2</td><td>400</td><td>300</td><td>200</td><td>green</td><td class='preformatted'>&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;</td></tr>
+<tr><td>3</td><td>254</td><td>356</td><td>100</td><td>#cc6600</td><td class='preformatted'>&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;</td></tr>
 </table>
 </div>
-<div id='task2790' class='task_block'>
-<div class='task_id'>2790</div>
+<div id='task4343' class='task_block'>
+<div class='task_id'>4343</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Вычислить результат по формуле. Значение угла дано в градусах.
+Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
 </div>
-<div class='task_desc'>
-<formula>
-		<sqrt><val>
-			1-sin<sup>2</sup>(xRad)
-		</val></sqrt>
-	</formula>
-</div>
+<div class='check_single preformatted'>User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;</div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (xDeg)</th><th>Результат</th></tr>
-<tr><td>1</td><td>6997</td><td class='preformatted'>0,9205</td></tr>
-<tr><td>2</td><td>31</td><td class='preformatted'>0,8572</td></tr>
-<tr><td>3</td><td>90</td><td class='preformatted'>0,0000</td></tr>
-<tr><td>4</td><td>0</td><td class='preformatted'>1,0000</td></tr>
-<tr><td>5</td><td>180</td><td class='preformatted'>1,0000</td></tr>
+<tr><th rowspan='2'>Номер теста</th><th colspan='5'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>user</th><th>pass</th><th>host</th><th>port</th><th>db</th></tr>
+<tr><td>1</td><td>test</td><td>pass</td><td>localhost</td><td>5432</td><td>my_db</td><td class='preformatted'>User ID=test;Password=pass;Host=localhost;Port=5432;Database=my_db;</td></tr>
+<tr><td>2</td><td>admin</td><td>7e8efd48d69c</td><td>production-node1</td><td>5432</td><td>bank</td><td class='preformatted'>User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td></tr>
+<tr><td>3</td><td>akryukov</td><td>123</td><td>localhost</td><td>dev-node1</td><td>bank</td><td class='preformatted'>User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td></tr>
 </table>
 </div>
-Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div id='task7474' class='task_block'>
+<div class='task_id'>7474</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $A, $B, $C на введенные значения a, b, c соответственно.
+</div>
+<div class='check_single preformatted'>Квадратное уравнение $A*x*x + $B*x + $C = 0.
+Его дискриминант вычисляется по формуле: d = $B*$B - 4*$A*$C</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>a</th><th>b</th><th>c</th></tr>
+<tr>
+<td>1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Квадратное уравнение 1*x*x + 2*x + 3 = 0.
+Его дискриминант вычисляется по формуле: d = 2*2 - 4*1*3</td></tr>
+<tr>
+<td>2</td><td>-3</td><td>0</td><td>2</td><td class='preformatted'>Квадратное уравнение -3*x*x + 0*x + 2 = 0.
+Его дискриминант вычисляется по формуле: d = 0*0 - 4*-3*2</td></tr>
+</table>
+</div>
+Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

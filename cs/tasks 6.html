@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>6 Реорганизация повторяющихся действий</title><style>.check_single {
+<!DOCTYPE html><html><head><meta charset='utf-8'/><title>6 Работа с интервалами значений</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -34,6 +34,9 @@ table td, table th {
 }
 .check_values td:first-child, .check_values_v2 td:first-child{
 	width:40px;
+}
+.check_values td, .check_values_v2 td {
+    max-width: 450px;
 }
 .lab_nav ol {
 	list-style:none;
@@ -92,17 +95,15 @@ table td, table th {
 }
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
-	white-space:pre;
+	white-space-collapse:preserve;
+    text-wrap:pretty;
 	text-align:left;
 	padding:10px;
 }
-.check_values tr:target, .check_values_v2 tr:target {
-    background-color:lightgrey;
-}
-.stream_values tr:nth-child(2) td:nth-child(3) {
+.stream_values tr td:nth-child(3) {
     border-top-width:0px;
     border-bottom-width:0px;
-    text-align:right;
+    text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
     border-top-width:0px;
@@ -114,10 +115,31 @@ table td, table th {
     border-bottom-width:0px;
     text-align:right;
 }
+.stream_values tr.test_row td:nth-child(2){
+    text-align:right;
+}
 .stream_values tr td:nth-child(2){
     border-top-width:0px;
     border-bottom-width:0px;
     text-align:left;
+}
+.stream_values .preformatted{
+    padding: 0px;
+}
+.stream_values tr.test_row td {
+    border-top-width:1px;
+}
+.stream_values tr.test_row td:first-of-type {
+    border-top-width:1px;
+    border-bottom-width:1px;
+    text-align:center;
+    width:15px;
+}
+.stream_values tr:last-of-type td {
+    border-bottom-width:1px;
+}
+.stream_values {
+    width:100%;
 }
 formula {
 	font-weight:bold;
@@ -175,761 +197,835 @@ spoiler:hover trans {
 	width:300px;
 }
 zoom{
-	background-color:gray;
+	background-color:lightgrey;
 	font-size:40pt;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Реорганизация повторяющихся действий</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Заполнение шаблона текстом</a></li><li>2 <a href='tasks 2.html'>Организация вычислений</a></li><li>3 <a href='tasks 3.html'>Проверка исходных данных</a></li><li>4 <a href='tasks 4.html'>Взаимоисключающие случаи</a></li><li>5 <a href='tasks 5.html'>Работа с интервалами значений</a></li><li>6 <a href='tasks 6.html'>Реорганизация повторяющихся действий</a></li><li>7 <a href='tasks 7.html'>Обработка неизвестного объема данных</a></li><li>8 <a href='tasks 8.html'>Вложенные циклы</a></li><li>9 <a href='tasks 9.html'>Базовые операции с массивами</a></li><li>10 <a href='tasks 10.html'>Перестановки элементов массива</a></li><li>11 <a href='tasks 11.html'>Использование числовых массивов</a></li><li>12 <a href='tasks 12.html'>Вычисление агрегатов</a></li><li>13 <a href='tasks 13.html'>Поиск в массиве</a></li><li>14 <a href='tasks 14.html'>Сортировка вставкой</a></li><li>15 <a href='tasks 15.html'>Строки</a></li><li>16 <a href='tasks 16.html'>Чтение файлов</a></li><li>17 <a href='tasks 17.html'>Запись в файлы</a></li><li>18 <a href='tasks 18.html'>Методы</a></li><li>19 <a href='tasks 19.html'>Исключения</a></li><li>20 <a href='tasks 20.html'>Составные типы данных</a></li><li>21 <a href='tasks 21.html'>Внутреннее состояние</a></li><li>22 <a href='tasks 22.html'>Коллекции</a></li><li>23 <a href='tasks 23.html'>Рекурсия</a></li><li>24 <a href='tasks 24.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1315' class='example'>1*</a><li><a href='#task1631'>2</a><li><a href='#task2594'>3</a><li><a href='#task3762'>4</a><li><a href='#task3550'>5</a><li><a href='#task1139'>6</a><li><a href='#task9969'>7</a><li><a href='#task5301'>8</a><li><a href='#task6790'>9</a><li><a href='#task3850'>10</a></ul><ul><li><a href='#task7086'>11</a><li><a href='#task6066' class='example'>12*</a><li><a href='#task1259'>13</a><li><a href='#task2565'>14</a><li><a href='#task2321'>15</a><li><a href='#task5053'>16</a><li><a href='#task6663'>17</a><li><a href='#task4338'>18</a><li><a href='#task7054'>19</a><li><a href='#task4531'>20</a></ul></div><div id='task1315' class='task_block'>
-<div class='task_id'>1315</div>
+	padding:0px 10px;
+}
+.task_block:target zoom {
+    background-color:white;
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Работа с интервалами значений</h1></a><div class='lab_nav'>Другие темы<ol><li>1 <a href='tasks 1.html'>Печать текста на экран</a></li><li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li><li>3 <a href='tasks 3.html'>Организация вычислений</a></li><li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li><li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li><li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li><li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li><li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li><li>9 <a href='tasks 9.html'>Вложенные циклы</a></li><li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li><li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li><li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li><li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li><li>14 <a href='tasks 14.html'>Поиск в массиве</a></li><li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li><li>16 <a href='tasks 16.html'>Строки</a></li><li>17 <a href='tasks 17.html'>Чтение файлов</a></li><li>18 <a href='tasks 18.html'>Запись в файлы</a></li><li>19 <a href='tasks 19.html'>Методы</a></li><li>20 <a href='tasks 20.html'>Исключения</a></li><li>21 <a href='tasks 21.html'>Составные типы данных</a></li><li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li><li>23 <a href='tasks 23.html'>Коллекции</a></li><li>24 <a href='tasks 24.html'>Рекурсия</a></li><li>25 <a href='tasks 25.html'>Даты</a></li></ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8715' class='example'>1*</a><li><a href='#task8867'>2</a><li><a href='#task7991'>3</a><li><a href='#task7865'>4</a><li><a href='#task9705'>5</a><li><a href='#task3883'>6</a><li><a href='#task8751'>7</a><li><a href='#task4858'>8</a><li><a href='#task3864'>9</a><li><a href='#task5635'>10</a><li><a href='#task1217'>11</a><li><a href='#task8718'>12</a></ul></div><div id='task8715' class='task_block'>
+<div class='task_id'>8715</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово "Введение", а после всех чисел - слово "Заключение". Перед каждым числом нужно написать слово "Глава".
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (total)</th><th>Результат</th></tr>
-<tr><td>1</td><td>3</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Заключение
-</td></tr>
-<tr><td>2</td><td>7</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Глава 5
-Глава 6
-Глава 7
-Заключение
-</td></tr>
-<tr><td>3</td><td>20</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Глава 5
-Глава 6
-Глава 7
-Глава 8
-Глава 9
-Глава 10
-Глава 11
-Глава 12
-Глава 13
-Глава 14
-Глава 15
-Глава 16
-Глава 17
-Глава 18
-Глава 19
-Глава 20
-Заключение
-</td></tr>
-</table>
-</div>
-<div id='task1631' class='task_block'>
-<div class='task_id'>1631</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Выведите на экран в столбик 10 чисел, начиная с A включительно. В конце каждой строки с числом должна быть выведена строка с тремя знаками "-".
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат</th></tr>
-<tr><td>1</td><td>8</td><td class='preformatted'>8---
-9---
-10---
-11---
-12---
-13---
-14---
-15---
-16---
-17---
-</td></tr>
-<tr><td>2</td><td>9</td><td class='preformatted'>9---
-10---
-11---
-12---
-13---
-14---
-15---
-16---
-17---
-18---
-</td></tr>
-<tr><td>3</td><td>-5</td><td class='preformatted'>-5---
--4---
--3---
--2---
--1---
-0---
-1---
-2---
-3---
-4---
-</td></tr>
-<tr><td>4</td><td>695</td><td class='preformatted'>695---
-696---
-697---
-698---
-699---
-700---
-701---
-702---
-703---
-704---
-</td></tr>
-</table>
-</div>
-<div class='task_desc'>
-Если возникают затруднения при решении задач, сделайте сначала подробное решение без цикла. Это поможет увидеть закономерность и компактно перефразировать с помощью цикла.
-</div>
-<div id='task2594' class='task_block'>
-<div class='task_id'>2594</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит строку (X). Вывести эту строку 7 раз в строчку. Написать кавычки слева и справа от результата.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
-<tr><td>1</td><td>#</td><td class='preformatted'>"#######"</td></tr>
-<tr><td>2</td><td>a</td><td class='preformatted'>"aaaaaaa"</td></tr>
-<tr><td>3</td><td>w</td><td class='preformatted'>"wwwwwww"</td></tr>
-<tr><td>4</td><td>bp</td><td class='preformatted'>"bpbpbpbpbpbpbp"</td></tr>
-<tr><td>5</td><td>qq</td><td class='preformatted'>"qqqqqqqqqqqqqq"</td></tr>
-</table>
-</div>
-<div id="link_c3_p10.8" class="task_block">
-	<div class="check_single">
-	<p>В данной лабораторной работе очень много проблем возникает при использовании одной и той же переменной для нескольких целей. Определите назначение каждой переменной, дайте ей соответствующее название и помните о нем в процессе решения задачи. Данной теме посвящена глава 10.8 "Единственность цели каждой переменной" части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=270" target="_blank">(открыть в новой вкладке)</a>. </p>
-	</div>
-</div><div id='task3762' class='task_block'>
-<div class='task_id'>3762</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Напечатать таблицу соответствия между весом в фунтах и весом в граммах для значений 1,2, ..., 20 фунтов (1 фунт = 453г). Над каждым столбцом написать единицу измерения: "грамм" или "фунт". Чтобы получились красивые колонки, добавьте спецсимвол табуляции между числами "\t"
-</div>
-<div class='check_single preformatted'>фунт	грамм
-1	453
-2	906
-3	1359
-4	1812
-5	2265
-6	2718
-7	3171
-8	3624
-9	4077
-10	4530
-11	4983
-12	5436
-13	5889
-14	6342
-15	6795
-16	7248
-17	7701
-18	8154
-19	8607
-20	9060
-</div>
-</div>
-<div id='task3550' class='task_block'>
-<div class='task_id'>3550</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число V. Вывести на экран таблицу умножения чисел от 1 до 9 включительно на V. В начале программы вывести сообщение по шаблону "Таблица умножения на $V". Каждую следующую строчку оформить по шаблону "$i x $v = $p", где i - число от 1 до 9, p - результат умножения V на i.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (V)</th><th>Результат</th></tr>
-<tr><td>1</td><td>2</td><td class='preformatted'>Таблица умножения на 2
-1 x 2 = 2
-2 x 2 = 4
-3 x 2 = 6
-4 x 2 = 8
-5 x 2 = 10
-6 x 2 = 12
-7 x 2 = 14
-8 x 2 = 16
-9 x 2 = 18
-</td></tr>
-<tr><td>2</td><td>3</td><td class='preformatted'>Таблица умножения на 3
-1 x 3 = 3
-2 x 3 = 6
-3 x 3 = 9
-4 x 3 = 12
-5 x 3 = 15
-6 x 3 = 18
-7 x 3 = 21
-8 x 3 = 24
-9 x 3 = 27
-</td></tr>
-<tr><td>3</td><td>-13</td><td class='preformatted'>Таблица умножения на -13
-1 x -13 = -13
-2 x -13 = -26
-3 x -13 = -39
-4 x -13 = -52
-5 x -13 = -65
-6 x -13 = -78
-7 x -13 = -91
-8 x -13 = -104
-9 x -13 = -117
-</td></tr>
-<tr><td>4</td><td>0</td><td class='preformatted'>Таблица умножения на 0
-1 x 0 = 0
-2 x 0 = 0
-3 x 0 = 0
-4 x 0 = 0
-5 x 0 = 0
-6 x 0 = 0
-7 x 0 = 0
-8 x 0 = 0
-9 x 0 = 0
-</td></tr>
-<tr><td>5</td><td>7</td><td class='preformatted'>Таблица умножения на 7
-1 x 7 = 7
-2 x 7 = 14
-3 x 7 = 21
-4 x 7 = 28
-5 x 7 = 35
-6 x 7 = 42
-7 x 7 = 49
-8 x 7 = 56
-9 x 7 = 63
-</td></tr>
-<tr><td>6</td><td>11</td><td class='preformatted'>Таблица умножения на 11
-1 x 11 = 11
-2 x 11 = 22
-3 x 11 = 33
-4 x 11 = 44
-5 x 11 = 55
-6 x 11 = 66
-7 x 11 = 77
-8 x 11 = 88
-9 x 11 = 99
-</td></tr>
-<tr><td>7</td><td>1027</td><td class='preformatted'>Таблица умножения на 1027
-1 x 1027 = 1027
-2 x 1027 = 2054
-3 x 1027 = 3081
-4 x 1027 = 4108
-5 x 1027 = 5135
-6 x 1027 = 6162
-7 x 1027 = 7189
-8 x 1027 = 8216
-9 x 1027 = 9243
-</td></tr>
-</table>
-</div>
-<div id='task1139' class='task_block'>
-<div class='task_id'>1139</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число x. Вывести на экран в строчку число x, а также 10 следующих чисел с шагом 3.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (x)</th><th>Результат</th></tr>
-<tr><td>1</td><td>2</td><td class='preformatted'>2 5 8 11 14 17 20 23 26 29 32 </td></tr>
-<tr><td>2</td><td>4</td><td class='preformatted'>4 7 10 13 16 19 22 25 28 31 34 </td></tr>
-<tr><td>3</td><td>-6</td><td class='preformatted'>-6 -3 0 3 6 9 12 15 18 21 24 </td></tr>
-<tr><td>4</td><td>1000</td><td class='preformatted'>1000 1003 1006 1009 1012 1015 1018 1021 1024 1027 1030 </td></tr>
-</table>
-</div>
-<div id='task9969' class='task_block'>
-<div class='task_id'>9969</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число start. Нужно вывести это число три раза в строку. А потом продолжая строку вывести 10 следующих чисел с шагом 7. Последнее получившееся число тоже нужно вывести три раза в строку.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (start)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0</td><td class='preformatted'>0 0 0 7 14 21 28 35 42 49 56 63 70 70 70 </td></tr>
-<tr><td>2</td><td>1</td><td class='preformatted'>1 1 1 8 15 22 29 36 43 50 57 64 71 71 71 </td></tr>
-<tr><td>3</td><td>19</td><td class='preformatted'>19 19 19 26 33 40 47 54 61 68 75 82 89 89 89 </td></tr>
-<tr><td>4</td><td>20</td><td class='preformatted'>20 20 20 27 34 41 48 55 62 69 76 83 90 90 90 </td></tr>
-<tr><td>5</td><td>1000</td><td class='preformatted'>1000 1000 1000 1007 1014 1021 1028 1035 1042 1049 1056 1063 1070 1070 1070 </td></tr>
-<tr><td>6</td><td>-14</td><td class='preformatted'>-14 -14 -14 -7 0 7 14 21 28 35 42 49 56 56 56 </td></tr>
-</table>
-</div>
-<div id='task5301' class='task_block'>
-<div class='task_id'>5301</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит целое число limit. Выведите на экран в строчку числа, начиная с 0 до limit, исключая limit. Шаг счетчика должен увеличиваться на 1 каждую итерацию цикла.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат</th></tr>
-<tr><td>1</td><td>100</td><td class='preformatted'>0 1 3 6 10 15 21 28 36 45 55 66 78 91 </td></tr>
-<tr><td>2</td><td>10</td><td class='preformatted'>0 1 3 6 </td></tr>
-<tr><td>3</td><td>150</td><td class='preformatted'>0 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 </td></tr>
-<tr><td>4</td><td>0</td><td class='preformatted'></td></tr>
-<tr><td>5</td><td>-10</td><td class='preformatted'></td></tr>
-</table>
-</div>
-<div id='task6790' class='task_block'>
-<div class='task_id'>6790</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число X. Оно обозначает количество градусов. Вычислить 20 следующих значений с шагом 50. Справа от каждого числа вывести соответствующее значение в радианах и результат вычисления функции 5*cos(x).
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0</td><td class='preformatted'>Градусы	Радианы	Функция
-    0	  0,0000	  5,0000
-   50	  0,8727	  3,2139
-  100	  1,7453	 -0,8682
-  150	  2,6180	 -4,3301
-  200	  3,4907	 -4,6985
-  250	  4,3633	 -1,7101
-  300	  5,2360	  2,5000
-  350	  6,1087	  4,9240
-  400	  6,9813	  3,8302
-  450	  7,8540	  0,0000
-  500	  8,7266	 -3,8302
-  550	  9,5993	 -4,9240
-  600	 10,4720	 -2,5000
-  650	 11,3446	  1,7101
-  700	 12,2173	  4,6985
-  750	 13,0900	  4,3301
-  800	 13,9626	  0,8682
-  850	 14,8353	 -3,2139
-  900	 15,7080	 -5,0000
-  950	 16,5806	 -3,2139
-</td></tr>
-<tr><td>2</td><td>20</td><td class='preformatted'>Градусы	Радианы	Функция
-   20	  0,3491	  4,6985
-   70	  1,2217	  1,7101
-  120	  2,0944	 -2,5000
-  170	  2,9671	 -4,9240
-  220	  3,8397	 -3,8302
-  270	  4,7124	 -0,0000
-  320	  5,5851	  3,8302
-  370	  6,4577	  4,9240
-  420	  7,3304	  2,5000
-  470	  8,2030	 -1,7101
-  520	  9,0757	 -4,6985
-  570	  9,9484	 -4,3301
-  620	 10,8210	 -0,8682
-  670	 11,6937	  3,2139
-  720	 12,5664	  5,0000
-  770	 13,4390	  3,2139
-  820	 14,3117	 -0,8682
-  870	 15,1844	 -4,3301
-  920	 16,0570	 -4,6985
-  970	 16,9297	 -1,7101
-</td></tr>
-<tr><td>3</td><td>97</td><td class='preformatted'>Градусы	Радианы	Функция
-   97	  1,6930	 -0,6093
-  147	  2,5656	 -4,1934
-  197	  3,4383	 -4,7815
-  247	  4,3110	 -1,9537
-  297	  5,1836	  2,2700
-  347	  6,0563	  4,8719
-  397	  6,9290	  3,9932
-  447	  7,8016	  0,2617
-  497	  8,6743	 -3,6568
-  547	  9,5470	 -4,9627
-  597	 10,4196	 -2,7232
-  647	 11,2923	  1,4619
-  697	 12,1649	  4,6025
-  747	 13,0376	  4,4550
-  797	 13,9103	  1,1248
-  847	 14,7829	 -3,0091
-  897	 15,6556	 -4,9931
-  947	 16,5283	 -3,4100
-  997	 17,4009	  0,6093
- 1047	 18,2736	  4,1934
-</td></tr>
-<tr><td>4</td><td>-33</td><td class='preformatted'>Градусы	Радианы	Функция
-  -33	 -0,5760	  4,1934
-   17	  0,2967	  4,7815
-   67	  1,1694	  1,9537
-  117	  2,0420	 -2,2700
-  167	  2,9147	 -4,8719
-  217	  3,7874	 -3,9932
-  267	  4,6600	 -0,2617
-  317	  5,5327	  3,6568
-  367	  6,4054	  4,9627
-  417	  7,2780	  2,7232
-  467	  8,1507	 -1,4619
-  517	  9,0234	 -4,6025
-  567	  9,8960	 -4,4550
-  617	 10,7687	 -1,1248
-  667	 11,6413	  3,0091
-  717	 12,5140	  4,9931
-  767	 13,3867	  3,4100
-  817	 14,2593	 -0,6093
-  867	 15,1320	 -4,1934
-  917	 16,0047	 -4,7815
-</td></tr>
-</table>
-</div>
-<div id='task3850' class='task_block'>
-<div class='task_id'>3850</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит три числа: начало интервала, конец интервала и количество частей. Нужно разделить интервал на несколько равных частей и написать на каких числах происходит разделение.
+Даны действительные числа a, b, c. Проверить, выполняются ли неравенства a&lt;b&lt;c.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>start</th><th>end</th><th>amount</th></tr>
-<tr><td>1</td><td>0</td><td>100</td><td>5</td><td class='preformatted'>Интервал от 0,0000 до 100,0000 делится на 20 частей шириной 5,0000. Получаются интервалы:
-от 0,0000 до 20,0000
-от 20,0000 до 40,0000
-от 40,0000 до 60,0000
-от 60,0000 до 80,0000
+<tr><th>A</th><th>B</th><th>C</th></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Истинно
 </td></tr>
-<tr><td>2</td><td>10</td><td>20</td><td>2</td><td class='preformatted'>Интервал от 10,0000 до 20,0000 делится на 5 частей шириной 2,0000. Получаются интервалы:
-от 10,0000 до 15,0000
+<tr><td>2</td><td>-4</td><td>0</td><td>5</td><td class='preformatted'>Истинно
 </td></tr>
-<tr><td>3</td><td>-50</td><td>50</td><td>4</td><td class='preformatted'>Интервал от -50,0000 до 50,0000 делится на 25 частей шириной 4,0000. Получаются интервалы:
-от -50,0000 до -25,0000
-от -25,0000 до 0,0000
-от 0,0000 до 25,0000
+<tr><td>3</td><td>-3</td><td>-2</td><td>-3</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>4</td><td>20</td><td>40</td><td>3</td><td class='preformatted'>Интервал от 20,0000 до 40,0000 делится на 7 частей шириной 3,0000. Получаются интервалы:
-от 20,0000 до 26,6667
-от 26,6667 до 33,3333
+<tr><td>4</td><td>7</td><td>4</td><td>-2</td><td class='preformatted'>Ложно
 </td></tr>
-</table>
-</div>
-<div id='task7086' class='task_block'>
-<div class='task_id'>7086</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число x. Вывести на экран две строчки чисел. Первая начинается с числа x, после которого написаны 10 следующих чисел с шагом 3. Вторая заканчивается числом x, перед которым написаны 10 предыдущих чисел с шагом 4.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (x)</th><th>Результат</th></tr>
-<tr><td>1</td><td>2</td><td class='preformatted'>2 5 8 11 14 17 20 23 26 29 32 
--38 -34 -30 -26 -22 -18 -14 -10 -6 -2 2 </td></tr>
-<tr><td>2</td><td>13</td><td class='preformatted'>13 16 19 22 25 28 31 34 37 40 43 
--27 -23 -19 -15 -11 -7 -3 1 5 9 13 </td></tr>
-<tr><td>3</td><td>-6</td><td class='preformatted'>-6 -3 0 3 6 9 12 15 18 21 24 
--46 -42 -38 -34 -30 -26 -22 -18 -14 -10 -6 </td></tr>
-<tr><td>4</td><td>1000</td><td class='preformatted'>1000 1003 1006 1009 1012 1015 1018 1021 1024 1027 1030 
-960 964 968 972 976 980 984 988 992 996 1000 </td></tr>
-</table>
-</div>
-<div id='task6066' class='task_block'>
-<div class='task_id'>6066</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Выведите на экран в строчку числа от А до В включительно. После каждого числа должен быть выведен символ ";". Если A &gt; B, то вывести сообщение об ошибке.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr>
-<td>1</td><td>8</td><td>12</td><td class='preformatted'>8;9;10;11;12;</td></tr>
-<tr>
-<td>2</td><td>5</td><td>5</td><td class='preformatted'>5;</td></tr>
-<tr>
-<td>3</td><td>695</td><td>702</td><td class='preformatted'>695;696;697;698;699;700;701;702;</td></tr>
-<tr>
-<td>4</td><td>3000</td><td>24</td><td class='preformatted'>Значение A должно быть не больше значения B
+<tr><td>5</td><td>0</td><td>5</td><td>-7</td><td class='preformatted'>Ложно
+</td></tr>
+<tr><td>6</td><td>4</td><td>4</td><td>4</td><td class='preformatted'>Ложно
+</td></tr>
+<tr><td>7</td><td>-2</td><td>4</td><td>3</td><td class='preformatted'>Ложно
+</td></tr>
+<tr><td>8</td><td>10</td><td>3</td><td>5</td><td class='preformatted'>Ложно
+</td></tr>
+<tr><td>9</td><td>5</td><td>1</td><td>7</td><td class='preformatted'>Ложно
 </td></tr>
 </table>
 </div>
-<div id='task1259' class='task_block'>
-<div class='task_id'>1259</div>
+<div id='task8867' class='task_block'>
+<div class='task_id'>8867</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит целое число. Это количество символов '*', которые нужно вывести в строчку. Вывести не более 20 символов.
+Даны действительные числа a, b, x. Если x принадлежит интервалу от a до b включительно, выведите ответ по шаблону:
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0</td><td class='preformatted'>Требуемое количество меньше 20
-</td></tr>
-<tr><td>2</td><td>1</td><td class='preformatted'>Требуемое количество меньше 20
-*</td></tr>
-<tr><td>3</td><td>10</td><td class='preformatted'>Требуемое количество меньше 20
-**********</td></tr>
-<tr><td>4</td><td>19</td><td class='preformatted'>Требуемое количество меньше 20
-*******************</td></tr>
-<tr><td>5</td><td>20</td><td class='preformatted'>Требуемое количество больше 20.
-********************</td></tr>
-<tr><td>6</td><td>21</td><td class='preformatted'>Требуемое количество больше 20.
-********************</td></tr>
-<tr><td>7</td><td>50</td><td class='preformatted'>Требуемое количество больше 20.
-********************</td></tr>
-<tr><td>8</td><td>1000</td><td class='preformatted'>Требуемое количество больше 20.
-********************</td></tr>
-<tr><td>9</td><td>-1</td><td class='preformatted'>Вводимое число должно быть неотрицательно
-</td></tr>
-<tr><td>10</td><td>-100</td><td class='preformatted'>Вводимое число должно быть неотрицательно
-</td></tr>
-<tr><td>11</td><td>-1000</td><td class='preformatted'>Вводимое число должно быть неотрицательно
-</td></tr>
-</table>
+<div class='check_single preformatted'>$x попадает в интервал от $a до $b</div>
 <div class='task_desc'>
-Попробуйте адаптировать решение задачи <a href="tasks 6.html#task2594" target="_blank">ЛР6#2594(открыть в новой вкладке)</a>
+В ином случае, выведите ответ по шаблону:
 </div>
-</div>
-<div id='task2565' class='task_block'>
-<div class='task_id'>2565</div>
-<h3>Задача</h3>
+<div class='check_single preformatted'>$x за пределами интервала от $a до $b</div>
 <div class='task_desc'>
-Выведите на экран в строчку числа от B до A включительно в обратном порядке. Слева от ряда чисел выведите символ "{", а справа - "}". Если A &gt; B, то вывести сообщение об ошибке.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr>
-<td>1</td><td>8</td><td>10</td><td class='preformatted'>{ 10 9 8 }
-</td></tr>
-<tr>
-<td>2</td><td>8</td><td>13</td><td class='preformatted'>{ 13 12 11 10 9 8 }
-</td></tr>
-<tr>
-<td>3</td><td>13</td><td>8</td><td class='preformatted'>Значение A должно быть не больше значения B
-</td></tr>
-<tr>
-<td>4</td><td>691</td><td>703</td><td class='preformatted'>{ 703 702 701 700 699 698 697 696 695 694 693 692 691 }
-</td></tr>
-<tr>
-<td>5</td><td>17</td><td>17</td><td class='preformatted'>{ 17 }
-</td></tr>
-<tr>
-<td>6</td><td>3000</td><td>24</td><td class='preformatted'>Значение A должно быть не больше значения B
-</td></tr>
-</table>
-</div>
-<div id="link_c4_p16.2" class="task_block">
-	<div class="check_single">Множество полезных советов по оформлению циклов можно найти в главе 16.2 "Управление циклом" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=386" target="_blank">(открыть в новой вкладке)</a>.
-	</div>
-</div><div id='task2321' class='task_block'>
-<div class='task_id'>2321</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Выведите на экран в строчку числа от А до В включительно по возрастанию. Перед списком чисел напишите в каком порядке они выводились. Значение A может быть как меньше, так и больше B.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr>
-<td>1</td><td>8</td><td>13</td><td class='preformatted'>От A до B
-8 9 10 11 12 13 </td></tr>
-<tr>
-<td>2</td><td>23</td><td>11</td><td class='preformatted'>От B до A
-11 12 13 14 15 16 17 18 19 20 21 22 23 </td></tr>
-<tr>
-<td>3</td><td>0</td><td>0</td><td class='preformatted'>От B до A
-0 </td></tr>
-<tr>
-<td>4</td><td>691</td><td>702</td><td class='preformatted'>От A до B
-691 692 693 694 695 696 697 698 699 700 701 702 </td></tr>
-<tr>
-<td>5</td><td>571</td><td>571</td><td class='preformatted'>От B до A
-571 </td></tr>
-<tr>
-<td>6</td><td>1201</td><td>1197</td><td class='preformatted'>От B до A
-1197 1198 1199 1200 1201 </td></tr>
-</table>
-</div>
-<div id='task5053' class='task_block'>
-<div class='task_id'>5053</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Выведите на экран <i>в строчку</i> числа от from до to включительно. Если from &lt; to,  то в порядке возрастания. Иначе - в порядке убывания. Перед списком чисел напишите в каком порядке они выводились.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>from</th><th>to</th></tr>
-<tr>
-<td>1</td><td>8</td><td>13</td><td class='preformatted'>По возрастанию
-8 9 10 11 12 13 </td></tr>
-<tr>
-<td>2</td><td>27</td><td>17</td><td class='preformatted'>По убыванию
-27 26 25 24 23 22 21 20 19 18 17 </td></tr>
-<tr>
-<td>3</td><td>19</td><td>19</td><td class='preformatted'>По убыванию
-19 </td></tr>
-<tr>
-<td>4</td><td>691</td><td>702</td><td class='preformatted'>По возрастанию
-691 692 693 694 695 696 697 698 699 700 701 702 </td></tr>
-</table>
-</div>
-<div id='task6663' class='task_block'>
-<div class='task_id'>6663</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число start. Нужно вывести числа от start до 25 включительно. Если число start меньше 25, то по возрастанию. Иначе - по убыванию. В конце нужно написать сколько чисел было выведено на экране.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (start)</th><th>Результат</th></tr>
-<tr><td>1</td><td>20</td><td class='preformatted'>20 21 22 23 24 25 
-Всего чисел: 6
-</td></tr>
-<tr><td>2</td><td>19</td><td class='preformatted'>19 20 21 22 23 24 25 
-Всего чисел: 7
-</td></tr>
-<tr><td>3</td><td>30</td><td class='preformatted'>30 29 28 27 26 25 
-Всего чисел: 6
-</td></tr>
-<tr><td>4</td><td>32</td><td class='preformatted'>32 31 30 29 28 27 26 25 
-Всего чисел: 8
-</td></tr>
-<tr><td>5</td><td>0</td><td class='preformatted'>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
-Всего чисел: 26
-</td></tr>
-<tr><td>6</td><td>25</td><td class='preformatted'>25 
-Всего чисел: 1
-</td></tr>
-<tr><td>7</td><td>40</td><td class='preformatted'>40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 
-Всего чисел: 16
-</td></tr>
-<tr><td>8</td><td>100</td><td class='preformatted'>100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 
-Всего чисел: 76
-</td></tr>
-</table>
-</div>
-<div id='task4338' class='task_block'>
-<div class='task_id'>4338</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Выведите на экран два столбика чисел от A до B включительно. Значение A может быть как меньше, так и больше B. Числа в левом столбике должны располагаться по возрастанию. Числа в правом столбике - по убыванию. В конце программы выведите количество напечатанных строк.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr>
-<td>1</td><td>3</td><td>11</td><td class='preformatted'>3 11
-4 10
-5 9
-6 8
-7 7
-8 6
-9 5
-10 4
-11 3
-</td></tr>
-<tr>
-<td>2</td><td>587</td><td>613</td><td class='preformatted'>587 613
-588 612
-589 611
-590 610
-591 609
-592 608
-593 607
-594 606
-595 605
-596 604
-597 603
-598 602
-599 601
-600 600
-601 599
-602 598
-603 597
-604 596
-605 595
-606 594
-607 593
-608 592
-609 591
-610 590
-611 589
-612 588
-613 587
-</td></tr>
-<tr>
-<td>3</td><td>50</td><td>41</td><td class='preformatted'>41 50
-42 49
-43 48
-44 47
-45 46
-46 45
-47 44
-48 43
-49 42
-50 41
-</td></tr>
-<tr>
-<td>4</td><td>1000</td><td>1000</td><td class='preformatted'>1000 1000
-</td></tr>
-</table>
-</div>
-<div id='task7054' class='task_block'>
-<div class='task_id'>7054</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит три числа: seed, amountOf7, amountOf3. Начиная с seed, вывести amountOf7 штук чисел в строчку по возрастанию с шагом 7. А потом начать с последнего полученного числа и вывести amountOf3 чисел в порядке уменьшения с шагом 3.
+Интервал считается корректным, если a &lt;= b. Если это не так, выведите сообщение об ошибке.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>seed</th><th>amount of 7</th><th>amount of 3</th></tr>
-<tr><td>1</td><td>0</td><td>3</td><td>2</td><td class='preformatted'>По возрастанию с шагом 7
-0 7 14 
-По убыванию с шагом 3
-14 11 </td></tr>
-<tr><td>2</td><td>10</td><td>4</td><td>3</td><td class='preformatted'>По возрастанию с шагом 7
-10 17 24 31 
-По убыванию с шагом 3
-31 28 25 </td></tr>
-<tr><td>3</td><td>1000</td><td>2</td><td>10</td><td class='preformatted'>По возрастанию с шагом 7
-1000 1007 
-По убыванию с шагом 3
-1007 1004 1001 998 995 992 989 986 983 980 </td></tr>
-<tr><td>4</td><td>600</td><td>0</td><td>5</td><td class='preformatted'>По возрастанию с шагом 7
-Нет чисел
-По убыванию с шагом 3
-600 597 594 591 588 </td></tr>
-<tr><td>5</td><td>500</td><td>7</td><td>0</td><td class='preformatted'>По возрастанию с шагом 7
-500 507 514 521 528 535 542 
-По убыванию с шагом 3
-Нет чисел
+<tr><th>A</th><th>B</th><th>X</th></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>2</td><td class='preformatted'>2 попадает в интервал от 1 до 3</td></tr>
+<tr><td>2</td><td>-4</td><td>5</td><td>0</td><td class='preformatted'>0 попадает в интервал от -4 до 5</td></tr>
+<tr><td>3</td><td>-2</td><td>7</td><td>-10</td><td class='preformatted'>-10 за пределами интервала от -2 до 7</td></tr>
+<tr><td>4</td><td>0</td><td>5</td><td>7</td><td class='preformatted'>7 за пределами интервала от 0 до 5</td></tr>
+<tr><td>5</td><td>4</td><td>4</td><td>4</td><td class='preformatted'>4 попадает в интервал от 4 до 4</td></tr>
+<tr><td>6</td><td>6</td><td>4</td><td>3</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
 </td></tr>
-<tr><td>6</td><td>100</td><td>-2</td><td>2</td><td class='preformatted'>Количество чисел должно быть неотрицательным
-</td></tr>
-<tr><td>7</td><td>100</td><td>4</td><td>-3</td><td class='preformatted'>Количество чисел должно быть неотрицательным
+<tr><td>7</td><td>4</td><td>-2</td><td>3</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
 </td></tr>
 </table>
 </div>
-<div id='task4531' class='task_block'>
-<div class='task_id'>4531</div>
+<div id='task7991' class='task_block'>
+<div class='task_id'>7991</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит границы двух интервалов: минусы и палочки. Интервал считается корректным если его правая граница больше левой и при этом если каждая граница меньше 120. Числа на оси координат увеличиваются вправо. Нужно изобразить интервалы в одной строке. Интервал минусов с помощью знака "-". Интервал палочек с помощью знака "|".  Область пересечения интервалов с помощью знака "+". Промежутки между интервалами заполните пробелами.
+Даны три действительных числа. Вывести только те числа, которые принадлежат интервалу (-11;13) исключая границы.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>X</th><th>Y</th><th>Z</th></tr>
+<tr><td>1</td><td>9</td><td>10</td><td>11</td><td class='preformatted'>9 10 11</td></tr>
+<tr><td>2</td><td>3</td><td>20</td><td>0</td><td class='preformatted'>3 0</td></tr>
+<tr><td>3</td><td>12</td><td>2</td><td>-40</td><td class='preformatted'>12 2 </td></tr>
+<tr><td>4</td><td>30</td><td>-5</td><td>7</td><td class='preformatted'>-5 7</td></tr>
+<tr><td>5</td><td>50</td><td>50</td><td>50</td><td class='preformatted'></td></tr>
+<tr><td>6</td><td>-4</td><td>25</td><td>15</td><td class='preformatted'>-4 </td></tr>
+<tr><td>7</td><td>-11</td><td>0</td><td>13</td><td class='preformatted'>0 </td></tr>
+<tr><td>8</td><td>13</td><td>-11</td><td>6</td><td class='preformatted'>6</td></tr>
+<tr><td>9</td><td>8</td><td>13</td><td>-11</td><td class='preformatted'>8 </td></tr>
+</table>
+<div class='task_desc'>
+Эту задачу полезно решить двумя способами. Один способ - с помощью одной конструкции if(){} else if(){} else if(){}. Другой способ - сделать три отдельных if, у каждого из которых есть else.
+</div>
+</div>
+<div id='task7865' class='task_block'>
+<div class='task_id'>7865</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны два интервала чисел Красный [-11;-3] Зеленый [5;19]. Пользователь вводит значение X. Определить, к какому интервалу относится число: к красному или к зеленому. Границы нужно проверять включительно.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (x)</th><th>Результат</th></tr>
+<tr><td>1</td><td>-5</td><td class='preformatted'>Красный
+</td></tr>
+<tr><td>2</td><td>-11</td><td class='preformatted'>Красный
+</td></tr>
+<tr><td>3</td><td>-3</td><td class='preformatted'>Красный
+</td></tr>
+<tr><td>4</td><td>10</td><td class='preformatted'>Зеленый
+</td></tr>
+<tr><td>5</td><td>5</td><td class='preformatted'>Зеленый
+</td></tr>
+<tr><td>6</td><td>19</td><td class='preformatted'>Зеленый
+</td></tr>
+<tr><td>7</td><td>0</td><td class='preformatted'>X не попадает ни в зеленый, ни в красный интервал
+</td></tr>
+<tr><td>8</td><td>-20</td><td class='preformatted'>X не попадает ни в зеленый, ни в красный интервал
+</td></tr>
+<tr><td>9</td><td>20</td><td class='preformatted'>X не попадает ни в зеленый, ни в красный интервал
+</td></tr>
+</table>
+</div>
+<div id='task9705' class='task_block'>
+<div class='task_id'>9705</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано несколько интервалов:
+</div>
+<ol start='1'><li>от 10 до 17</li><li>от 14 до 137</li><li>от 47 до 144</li><li>от 100 до 171</li></ol><div class='task_desc'>
+Нужно реализовать программу для проверки попадания числа x в эти интервалы. Границы проверяются исключительно.
+</div>
+<div class='task_desc'>
+Также нужно проанализировать итервалы и найти такое число, которое попадает в 1 и 2 интервал, и при этом не попадает в 3 и 4.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>0 за пределами интервала от 10 до 17 исключительно
+0 за пределами интервала от 14 до 137 исключительно
+0 за пределами интервала от 47 до 144 исключительно
+0 за пределами интервала от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>2</td><td>22</td><td class='preformatted'>22 за пределами интервала от 10 до 17 исключительно
+22 попадает в интервал от 14 до 137 исключительно
+22 за пределами интервала от 47 до 144 исключительно
+22 за пределами интервала от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>3</td><td>10</td><td class='preformatted'>10 за пределами интервала от 10 до 17 исключительно
+10 за пределами интервала от 14 до 137 исключительно
+10 за пределами интервала от 47 до 144 исключительно
+10 за пределами интервала от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>4</td><td>71</td><td class='preformatted'>71 за пределами интервала от 10 до 17 исключительно
+71 попадает в интервал от 14 до 137 исключительно
+71 попадает в интервал от 47 до 144 исключительно
+71 за пределами интервала от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>5</td><td>111</td><td class='preformatted'>111 за пределами интервала от 10 до 17 исключительно
+111 попадает в интервал от 14 до 137 исключительно
+111 попадает в интервал от 47 до 144 исключительно
+111 попадает в интервал от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>6</td><td>168</td><td class='preformatted'>168 за пределами интервала от 10 до 17 исключительно
+168 за пределами интервала от 14 до 137 исключительно
+168 за пределами интервала от 47 до 144 исключительно
+168 попадает в интервал от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+<tr><td>7</td><td>200</td><td class='preformatted'>200 за пределами интервала от 10 до 17 исключительно
+200 за пределами интервала от 14 до 137 исключительно
+200 за пределами интервала от 47 до 144 исключительно
+200 за пределами интервала от 100 до 171 исключительно
+Значение не подходит
+</td></tr>
+</table>
+</div>
+<div id='task3883' class='task_block'>
+<div class='task_id'>3883</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дано целое число А. Если значение A находится за пределами интервала от 1000 до 9999, то вывести сообщение об ошибке. Определите количество сотен. Для этого разделите A на 100 и найдите остаток от деления на 10. Определите количество единиц. Для этого найдите остаток от деления на 10. Если количество сотен равно количеству единиц, то оформить результат по шаблону 1. В ином случае - по шаблону 2.
+</div>
+<div class='check_single preformatted'>Количество сотен: $hundreds
+Количество единиц: $units
+Количество сотен равно количеству единиц.</div>
+<div class='check_single preformatted'>Количество сотен: $hundreds
+Количество единиц: $units
+Количество сотен не равно количеству единиц.</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1234</td><td class='preformatted'>Количество сотен: 2
+Количество единиц: 4
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>2</td><td>6543</td><td class='preformatted'>Количество сотен: 5
+Количество единиц: 3
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>3</td><td>9812</td><td class='preformatted'>Количество сотен: 8
+Количество единиц: 2
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>4</td><td>9171</td><td class='preformatted'>Количество сотен: 1
+Количество единиц: 1
+Количество сотен равно количеству единиц
+</td></tr>
+<tr><td>5</td><td>100</td><td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
+</td></tr>
+<tr><td>6</td><td>98765</td><td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
+</td></tr>
+</table>
+</div>
+<div id="link_c4_p19.3" class="task_block">
+	<div class="check_single"><p>Вы задумывались над тем, почему программы, содержащие символ ";" после условия вообще запускаются? Дело в том, что одиночный символ ";" это корректная команда "делай ничего". Использование такой команды это классический пример того, что <i>можно</i> делать, но <i>не нужно</i>. Им посвящена глава 19.3 "Пустые выражения" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=458" target="_blank">(открыть в новой вкладке)</a>.</p>
+	</div>
+</div><div id='task8751' class='task_block'>
+<div class='task_id'>8751</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Определить агрегатное состояние (state) и внутреннюю энергию (internalEnergy) воды массой 17 кг (mass). Пользователь вводит температуру в градусах Цельсия (temperatureCelsius). Температура перехода из кристалла в жидкость (кристаллизации) 0&#8451;. Температура перехода из жидкости в газ (конденсации) 100&#8451;. Удельная теплоемкость heatCapacity = 4.2 * 10 <sup>3</sup>Дж/кгK. Для вычисления теплоемкости, нужна температура в Кельвинах, которая вычисляется по формуле <formula>temperatureKelvins=temperatureCelsius + 273.15</formula>. Удельная теплота парообразования vaporisationHeat = 2.26 * 10<sup>6</sup>Дж/кг. Удельная теплота плавления fusionHeat = 3.3 * 10<sup>5</sup>Дж/кг. Внутренняя энергия зависит от агрегатного состояния и вычисляется по формуле:
+</div>
+<ol start='1'><li>Кристалл <formula>internalEnergy = mass * temperatureKelvins * heatCapacity Дж</formula></li><li>Жидкость <formula>internalEnergy = mass * (temperatureKelvins * heatCapacity + vaporisationHeat) Дж</formula></li><li>Газ <formula>internalEnergy = mass * (temperatureKelvins * heatCapacity + vaporisationHeat + fusionHeat) Дж</formula></li></ol><div class='task_desc'>
+Точность результатов два знака после запятой. Оформить ответ по шаблону:
+</div>
+<div class='check_single preformatted'>Агрегатное состояние: $state
+Внутренняя энергия: $internalEnergy Дж</div>
+<div class='task_desc'>
+Если агрегатное состояние не удается определить точно, нужно перед ответом добавить фразу "Вещество в переходном состоянии.".
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (temperatureCelsius)</th><th>Результат</th></tr>
+<tr><td>1</td><td>-273</td><td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 10710,00 Дж
+</td></tr>
+<tr><td>2</td><td>-10</td><td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 18788910,00 Дж
+</td></tr>
+<tr><td>3</td><td>-1</td><td class='preformatted'>Агрегатное состояние: кристалл
+Внутренняя энергия: 19431510,00 Дж
+</td></tr>
+<tr><td>4</td><td>0</td><td class='preformatted'>Вещество в переходном состоянии.
+Агрегатное состояние: кристалл
+Внутренняя энергия: 19502910,00 Дж
+Агрегатное состояние: жидкость
+Внутренняя энергия: 57922910,00 Дж
+
+</td></tr>
+<tr><td>5</td><td>99</td><td class='preformatted'>Агрегатное состояние: жидкость
+Внутренняя энергия: 64991510,00 Дж
+
+</td></tr>
+<tr><td>6</td><td>100</td><td class='preformatted'>Вещество в переходном состоянии.
+Агрегатное состояние: жидкость
+Внутренняя энергия: 65062910,00 Дж
+
+Агрегатное состояние: газ
+Внутренняя энергия: 70672910,00 Дж
+
+</td></tr>
+<tr><td>7</td><td>101</td><td class='preformatted'>Агрегатное состояние: газ
+Внутренняя энергия: 70744310,00 Дж
+
+</td></tr>
+<tr><td>8</td><td>-274</td><td class='preformatted'>Некорректная температура
+</td></tr>
+</table>
+</div>
+<div id='task4858' class='task_block'>
+<div class='task_id'>4858</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны два интервала чисел red(A;B) green(A;B). Нужно найти их середины и определить, чья середина находится справа, а чья - слева. Числа на оси координат увеличиваются вправо.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
 <tr><th>redA</th><th>redB</th><th>greenA</th><th>greenB</th></tr>
-<tr><td>1</td><td>5</td><td>30</td><td>50</td><td>65</td><td class='preformatted'>     -------------------------                    |||||||||||||||
-redA 5 redB 30 greenA 50 greenB 65
+<tr><td>1</td><td>2</td><td>3</td><td>5</td><td>7</td><td class='preformatted'>Середина красного 2,5000
+Середина зеленого 6,0000
+Красный слева, зеленый справа
 </td></tr>
-<tr><td>2</td><td>11</td><td>57</td><td>23</td><td>49</td><td class='preformatted'>           ------------++++++++++++++++++++++++++--------
-redA 11 greenA 23 greenB 49 redB 57
+<tr><td>2</td><td>11</td><td>17</td><td>13</td><td>19</td><td class='preformatted'>Середина красного 14,0000
+Середина зеленого 16,0000
+Красный слева, зеленый справа
 </td></tr>
-<tr><td>3</td><td>23</td><td>47</td><td>36</td><td>61</td><td class='preformatted'>                       -------------+++++++++++||||||||||||||
-redA 23 greenA 36 redB 47 greenB 61
+<tr><td>3</td><td>23</td><td>37</td><td>29</td><td>31</td><td class='preformatted'>Середина красного 30,0000
+Середина зеленого 30,0000
+Середины интервалов совпадают
 </td></tr>
-<tr><td>4</td><td>33</td><td>53</td><td>11</td><td>47</td><td class='preformatted'>           ||||||||||||||||||||||++++++++++++++------
-greenA 11 redA 33 greenB 47 redB 53
+<tr><td>4</td><td>43</td><td>53</td><td>41</td><td>47</td><td class='preformatted'>Середина красного 48,0000
+Середина зеленого 44,0000
+Зеленый слева, красный справа
 </td></tr>
-<tr><td>5</td><td>5</td><td>15</td><td>0</td><td>30</td><td class='preformatted'>|||||++++++++++|||||||||||||||
-greenA 0 redA 5 redB 15 greenB 30
+<tr><td>5</td><td>5</td><td>15</td><td>0</td><td>30</td><td class='preformatted'>Середина красного 10,0000
+Середина зеленого 15,0000
+Красный слева, зеленый справа
 </td></tr>
-<tr><td>6</td><td>37</td><td>51</td><td>19</td><td>31</td><td class='preformatted'>                   ||||||||||||      --------------
-greenA 19 greenB 31 redA 37 redB 51
+<tr><td>6</td><td>67</td><td>71</td><td>59</td><td>61</td><td class='preformatted'>Середина красного 69,0000
+Середина зеленого 60,0000
+Зеленый слева, красный справа
 </td></tr>
 <tr><td>7</td><td>79</td><td>73</td><td>83</td><td>89</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
 </td></tr>
 <tr><td>8</td><td>97</td><td>101</td><td>107</td><td>103</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
 </td></tr>
-<tr><td>9</td><td>-1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+</table>
+</div>
+<div class='task_desc'>
+Даны координаты srcX и srcY исходной точки, а также destX и destY точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах
+</div>
+<ol start='1'><li>Вычислите приращение координат. <formula>dx = destX - srcX</formula>; <formula>dy = destY - srcY</formula></li><li>Определите румб линии по формуле <formula>r = arctg<fraction class="abs"><numerator>dy</numerator><denominator>dx</denominator></fraction></formula>. Арктангенс из абсолютного значения результата деления.</li><li>Выберите формулу для вычисления угла по знакам приращения координат и определите дирекционный угол по ней<table class="check_values">
+		<tr>
+			<th rowspan="2">Четверть</th>
+			<th colspan="2">Знаки приращения координат</th>
+			<th rowspan="2">Связь между румбами и дирекционными углами</th>
+		</tr>
+		<tr>
+			<th>dx</th>
+			<th>dy</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0 и более</td>
+			<td>больше 0</td>
+			<td>angle = r</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>меньше 0</td>
+			<td>0 и более</td>
+			<td>angle = 180 - r</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0 и менее</td>
+			<td>меньше 0</td>
+			<td>angle = 180 + r</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>больше 0</td>
+			<td>0 и менее</td>
+			<td>angle = 360 - r</td>
+		</tr>
+	</table></li><li>Определите горизонтальное проложение (расстояние между точками).</li></ol><div class='task_desc'>
+Выведите на экран четверть угла, горизонтальное проложение и дирекционный угол в градусах, с точностью до 4 знаков после запятой.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>srcX</th><th>srcY</th><th>destX</th><th>destY</th></tr>
+<tr><td>1</td><td>10</td><td>10</td><td>13</td><td>14</td><td class='preformatted'>Угол в 1 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 53,1301
 </td></tr>
-<tr><td>10</td><td>1</td><td>-2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+<tr><td>2</td><td>24</td><td>4</td><td>3</td><td>17</td><td class='preformatted'>Угол в 2 четверти
+Горизонтальное проложение 24,6982
+Дирекционный угол 148,2405
 </td></tr>
-<tr><td>11</td><td>1</td><td>2</td><td>-3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+<tr><td>3</td><td>23</td><td>25</td><td>12</td><td>16</td><td class='preformatted'>Угол в 3 четверти
+Горизонтальное проложение 14,2127
+Дирекционный угол 219,2894
 </td></tr>
-<tr><td>12</td><td>1</td><td>2</td><td>3</td><td>-4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+<tr><td>4</td><td>3</td><td>11</td><td>13</td><td>5</td><td class='preformatted'>Угол в 4 четверти
+Горизонтальное проложение 11,6619
+Дирекционный угол 329,0362
 </td></tr>
-<tr><td>13</td><td>200</td><td>2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+<tr><td>5</td><td>5</td><td>5</td><td>5</td><td>10</td><td class='preformatted'>Угол в 1 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 90,0000
 </td></tr>
-<tr><td>14</td><td>1</td><td>200</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+<tr><td>6</td><td>10</td><td>5</td><td>5</td><td>5</td><td class='preformatted'>Угол в 2 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 180,0000
 </td></tr>
-<tr><td>15</td><td>1</td><td>2</td><td>200</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+<tr><td>7</td><td>5</td><td>10</td><td>5</td><td>5</td><td class='preformatted'>Угол в 3 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 270,0000
 </td></tr>
-<tr><td>16</td><td>1</td><td>2</td><td>3</td><td>200</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+<tr><td>8</td><td>5</td><td>5</td><td>10</td><td>5</td><td class='preformatted'>Угол в 4 четверти
+Горизонтальное проложение 5,0000
+Дирекционный угол 360,0000
 </td></tr>
 </table>
 </div>
-Версия 20230817. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div id="link_c4_p19.1" class="task_block">
+	<div class="check_single"><p>В некоторых заданиях могут получиться очень сложные условные выражения. Попробуйте их упростить. Несколько советов по этому поводу даны в главе 19.1 "Логические выражения" части IV книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=445" target="_blank">(открыть в новой вкладке)</a>.</p>
+	</div>
+</div><div id="task5635" class="task_block empty_on_print">
+	<div class="task_id">5635</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямоугольник, у которого верхний левый угол находится в точке (100;100), высота равна 70, ширина равна 90. Определить, лежит ли точка внутри прямоугольника, включая границы. Все координаты - <b>экранные</b>. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.</div>
+	<img src="images/example5635.png"/>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>X<sub>т</sub></th>
+			<th>Y<sub>т</sub></th>
+		</tr>
+		<!--Области-->
+		<tr>
+			<td></td>
+			<td>30</td>
+			<td>20</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>120</td>
+			<td>30</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>210</td>
+			<td>40</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>50</td>
+			<td>120</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>150</td>
+			<td>130</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>150</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>190</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>160</td>
+			<td>180</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>220</td>
+			<td>200</td>
+			<td>Точка снаружи</td>
+		</tr>
+		<!--Границы-->
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>110</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>130</td>
+			<td>100</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>190</td>
+			<td>140</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>180</td>
+			<td>170</td>
+			<td>Точка внутри</td>
+		</tr>
+		<!--Углы-->
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>100</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>190</td>
+			<td>100</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>170</td>
+			<td>Точка внутри</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>190</td>
+			<td>170</td>
+			<td>Точка внутри</td>
+		</tr>
+		<!--Некорректные координаты-->
+		<tr>
+			<td></td>
+			<td>-10</td>
+			<td>30</td>
+			<td>Координата X должна быть неотрицательной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>40</td>
+			<td>-20</td>
+			<td>Координата Y должна быть неотрицательной</td>
+		</tr>
+	</table>
+</div><div id="task1217" class="task_block empty_on_print">
+	<div class="task_id">1217</div>
+	<h3>Задача</h3>
+	<div class="task_desc">
+		Даны два интервала чисел (A1;B1) (A2;B2), A&lt;B. Нужно определить: пересекаются ли они. Найти границы пересекающихся интервалов.
+	</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A<sub>1</sub></th>
+			<th>B<sub>1</sub></th>
+			<th>A<sub>2</sub></th>
+			<th>B<sub>2</sub></th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>2</td>
+			<td>3</td>
+			<td>5</td>
+			<td>7</td>
+			<td>не пересекаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11</td>
+			<td>17</td>
+			<td>13</td>
+			<td>19</td>
+			<td>пересекаются (13;17)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>23</td>
+			<td>37</td>
+			<td>29</td>
+			<td>31</td>
+			<td>пересекаются (29;31)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>43</td>
+			<td>53</td>
+			<td>41</td>
+			<td>47</td>
+			<td>пересекаются (43;47)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>15</td>
+			<td>0</td>
+			<td>30</td>
+			<td>пересекаются (5;15)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>67</td>
+			<td>71</td>
+			<td>59</td>
+			<td>61</td>
+			<td>не пересекаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>79</td>
+			<td>73</td>
+			<td>83</td>
+			<td>89</td>
+			<td>Значение A должно быть меньше значения B</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>97</td>
+			<td>101</td>
+			<td>107</td>
+			<td>103</td>
+			<td>Значение A должно быть меньше значения B</td>
+		</tr>
+	</table>
+</div><div id="task8718" class="task_block empty_on_print">
+	<div class="task_id">8718</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит массу в граммах, оценочную стоимость в рублях и расстояние в километрах, на которое пересылается простая бандероль. Пересылка бандероли весом 100г стоит 40 рублей. За каждые последующие полные или неполные 20 г веса дополнительно взимается еще 2 рубля 50 копеек. За каждый полный или неполный 1 рубль оценочной стоимости взимается дополнительно 3 копейки. За каждые полные или неполные 500г веса бандероли в зависимости от расстояния пересылки дополнительно взимается плата согласно таблице:</div>
+	<table class="check_values">
+		<tr>
+			<th>№ тарифного пояса</th>
+			<th>Расстояние пересылки</th>
+			<th>Тариф</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>до 600 км</td>
+			<td>95,00</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>от 601 до 2000 км</td>
+			<td>105,00</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>от 2001 до 5000 км</td>
+			<td>120,00</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>от 5001 до 8000 км</td>
+			<td>135,00</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>свыше 8000 км</td>
+			<td>150,00</td>
+		</tr>
+	</table>
+	<div class="task_desc">Ответ оформить по шаблону:
+	<div class="check_single preformatted">Плата за посылку массой $mass грамм с оценочной стоимостью $declaredValue рублей, которую отправили на расстояние $distance км, составляет $cost рублей</div></div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="3">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>Масса (mass)</th>
+			<th>Оценочная стоимость (declaredValue)</th>
+			<th>Расстояние (distance)</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>450</td>
+			<td>Плата за посылку массой 80 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 450.0 км, составляет 135.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>700</td>
+			<td>Плата за посылку массой 80 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 700.0 км, составляет 145.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>2500</td>
+			<td>Плата за посылку массой 80 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 2500.0 км, составляет 160.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>6000</td>
+			<td>Плата за посылку массой 80 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 6000.0 км, составляет 175.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>10000</td>
+			<td>Плата за посылку массой 80 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 10000.0 км, составляет 190.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>0</td>
+			<td>450</td>
+			<td>Плата за посылку массой 100 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 450.0 км, составляет 135.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>101</td>
+			<td>0</td>
+			<td>450</td>
+			<td>Плата за посылку массой 101 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 450.0 км, составляет 137.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>0.5</td>
+			<td>450</td>
+			<td>Плата за посылку массой 100 грамм с оценочной стоимостью 0.50 рублей, которую отправили на расстояние 450 км, составляет 135.03 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>7.5</td>
+			<td>450</td>
+			<td>Плата за посылку массой 100 грамм с оценочной стоимостью 7.50 рублей, которую отправили на расстояние 450 км, составляет 135.24 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>100.68</td>
+			<td>450</td>
+			<td>Плата за посылку массой 100 грамм с оценочной стоимостью 100.68 рублей, которую отправили на расстояние 450 км, составляет 138.03 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>15.99</td>
+			<td>450</td>
+			<td>Плата за посылку массой 100 грамм с оценочной стоимостью 15.99 рублей, которую отправили на расстояние 450 км, составляет 135.48 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>115</td>
+			<td>0</td>
+			<td>500</td>
+			<td>Плата за посылку массой 115 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 500.0 км, составляет 137.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>115</td>
+			<td>0</td>
+			<td>800</td>
+			<td>Плата за посылку массой 115 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 800.0 км, составляет 147.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>115</td>
+			<td>0</td>
+			<td>3000</td>
+			<td>Плата за посылку массой 115 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 3000.0 км, составляет 162.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>115</td>
+			<td>0</td>
+			<td>5500</td>
+			<td>Плата за посылку массой 115 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 5500.0 км, составляет 177.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>115</td>
+			<td>0</td>
+			<td>8500</td>
+			<td>Плата за посылку массой 115 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 8500.0 км, составляет 192.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>500</td>
+			<td>0</td>
+			<td>550</td>
+			<td>Плата за посылку массой 500 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 500.0 км, составляет 185.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>501</td>
+			<td>0</td>
+			<td>550</td>
+			<td>Плата за посылку массой 501 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 500.0 км, составляет 282.5 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1700</td>
+			<td>0</td>
+			<td>550</td>
+			<td>Плата за посылку массой 1700 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 550.0 км, составляет 620.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1700</td>
+			<td>0</td>
+			<td>600</td>
+			<td>Плата за посылку массой 1700 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 600.0 км, составляет 620.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1700</td>
+			<td>0</td>
+			<td>601</td>
+			<td>Плата за посылку массой 1700 грамм с оценочной стоимостью 0.00 рублей, которую отправили на расстояние 601.0 км, составляет 660.00 рублей</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0</td>
+			<td>450</td>
+			<td>Масса должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-50</td>
+			<td>0</td>
+			<td>450</td>
+			<td>Масса должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>0</td>
+			<td>Дистанция должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>0</td>
+			<td>-100</td>
+			<td>Дистанция должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>80</td>
+			<td>-20</td>
+			<td>450</td>
+			<td>Оценочная стоимость должна быть неотрицательна</td>
+		</tr>
+	</table>
+</div>Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
