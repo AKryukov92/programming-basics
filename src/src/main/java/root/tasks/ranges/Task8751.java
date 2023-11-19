@@ -6,7 +6,7 @@ public class Task8751 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Определить агрегатное состояние (state) и внутреннюю энергию (internalEnergy) воды массой 17 кг (mass). Пользователь вводит температуру в градусах Цельсия (temperatureCelsius). Температура перехода из кристалла в жидкость (кристаллизации) 0&#8451;. Температура перехода из жидкости в газ (конденсации) 100&#8451;. Удельная теплоемкость heatCapacity = 4.2 * 10 <sup>3</sup>Дж/кгK. Для вычисления теплоемкости, нужна температура в Кельвинах, которая вычисляется по формуле <formula>temperatureKelvins=temperatureCelsius + 273.15</formula>. Удельная теплота парообразования vaporisationHeat = 2.26 * 10<sup>6</sup>Дж/кг. Удельная теплота плавления fusionHeat = 3.3 * 10<sup>5</sup>Дж/кг. Внутренняя энергия зависит от агрегатного состояния и вычисляется по формуле:");
+        appendTaskDescNonEscaped("Определить агрегатное состояние (state) и внутреннюю энергию (internalEnergy) воды массой 17 кг (mass). Пользователь вводит температуру в градусах Цельсия (temperatureCelsius). Температура перехода из кристалла в жидкость (кристаллизации) 0&#8451;. Температура перехода из жидкости в газ (конденсации) 100&#8451;. Удельная теплоемкость heatCapacity = 4.2 * 10 <sup>3</sup>Дж/кгK. Для вычисления теплоемкости, нужна температура в Кельвинах, которая вычисляется по формуле <formula>temperatureKelvins=temperatureCelsius + 273.15</formula>. Удельная теплота парообразования vaporisationHeat = 2.26 * 10<sup>6</sup>Дж/кг. Удельная теплота плавления fusionHeat = 3.3 * 10<sup>5</sup>Дж/кг. Если была указана температура меньше -273, нужно вывести сообщение об ошибке. Внутренняя энергия зависит от агрегатного состояния и вычисляется по формуле:");
         appendOrderedNonEscaped(
                 "Кристалл <formula>internalEnergy = mass * temperatureKelvins * heatCapacity Дж</formula>",
                 "Жидкость <formula>internalEnergy = mass * (temperatureKelvins * heatCapacity + vaporisationHeat) Дж</formula>",
@@ -42,7 +42,10 @@ public class Task8751 extends OneInputValLayout {
         double fusionHeat = 3.3E5;
         double m = 17;
         double temperatureKelvins = temperatureCelsius + 273.15;
-        if (temperatureCelsius == 0 || temperatureCelsius == 100){
+        if (temperatureCelsius == 0){
+            System.out.println("Вещество в переходном состоянии.");
+        }
+        if (temperatureCelsius == 100) {
             System.out.println("Вещество в переходном состоянии.");
         }
         if (temperatureCelsius <= 0) {
@@ -50,15 +53,17 @@ public class Task8751 extends OneInputValLayout {
             internalEnergy = m * temperatureKelvins * heatCapacity;
             System.out.printf("Внутренняя энергия: %.2f Дж\n", internalEnergy);
         }
-        if (0 <= temperatureCelsius && temperatureCelsius <= 100) {
-            System.out.println("Агрегатное состояние: жидкость");
-            internalEnergy = m * (temperatureKelvins * heatCapacity + vaporisationHeat);
-            System.out.printf("Внутренняя энергия: %.2f Дж\n%n", internalEnergy);
+        if (0 <= temperatureCelsius) {
+            if (temperatureCelsius <= 100) {
+                System.out.println("Агрегатное состояние: жидкость");
+                internalEnergy = m * (temperatureKelvins * heatCapacity + vaporisationHeat);
+                System.out.printf("Внутренняя энергия: %.2f Дж\n", internalEnergy);
+            }
         }
         if (100 <= temperatureCelsius) {
             System.out.println("Агрегатное состояние: газ");
             internalEnergy = m * (temperatureKelvins * heatCapacity + vaporisationHeat + fusionHeat);
-            System.out.printf("Внутренняя энергия: %.2f Дж\n%n", internalEnergy);
+            System.out.printf("Внутренняя энергия: %.2f Дж\n", internalEnergy);
         }
     }
 }

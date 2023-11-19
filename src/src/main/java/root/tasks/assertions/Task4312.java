@@ -36,7 +36,7 @@ public class Task4312 extends TwoInputValLayout {
         appendCheckValuesRow("-5", "-7");
         appendCheckValuesFooter();
         appendTaskDescEscaped("В этой задаче, корректные исходные данные нужно проверять двумя условиями. Длина основания должна быть положительна и одновременно высота должна быть положительна. Для оформления этой идеи в коде можно вкладывать одно условие внутри другого.");
-        appendCheckSingleNonEscaped("if (edge > 0) {\n" +
+        appendCheckSingleNonEscaped("if (edge > 0) {//условие для корректных данных\n" +
                 "    if (height > 0) {\n" +
                 "        //вычисления и печать результата на экран\n" +
                 "    }\n" +

@@ -24,13 +24,25 @@ public class Task7865 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         int x = Integer.parseInt(value);
-        if (-11<=x && x <=-3) {
-            System.out.println("Красный");
+        if (-11 <= x) {
+            if (x <= -3) {
+                System.out.println("Красный");
+            }
         }
-        else if (5<=x && x<=19) {
-            System.out.println("Зеленый");
+        if (5 <= x) {
+            if (x <= 19) {
+                System.out.println("Зеленый");
+            }
         }
-        else {
+        if (x < -11) {
+            System.out.println("X не попадает ни в зеленый, ни в красный интервал");
+        }
+        if (-3 < x) {
+            if (x < 5) {
+                System.out.println("X не попадает ни в зеленый, ни в красный интервал");
+            }
+        }
+        if (19 < x) {
             System.out.println("X не попадает ни в зеленый, ни в красный интервал");
         }
     }

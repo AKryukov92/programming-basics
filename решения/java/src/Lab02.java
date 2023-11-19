@@ -59,35 +59,6 @@ public class Lab02 {
         return 1.0 / r1 + 1.0 / r2;
     }
 
-    public static void task9130(double planetMass, double satelliteMass, double radius){
-        if (radius <= 0){
-            System.out.println("Радиус планеты должен быть положительным");
-            return;
-        }
-        if (planetMass <=0){
-            System.out.println("Масса планеты должна быть положительна");
-            return;
-        }
-        if (satelliteMass <= 0){
-            System.out.println("Масса спутника должна быть положительна");
-            return;
-        }
-        double g = 9.8067;
-        double result = g * planetMass * satelliteMass / radius / radius;
-        System.out.printf("На спутник действует сила тяжести %e Ньютон\n", result);
-    }
-
-    public static double task9130(int m1, int m2, int distance) throws IllegalArgumentException {
-        if (distance <= 0) {
-            throw new IllegalArgumentException("Значение distance должно быть положительным");
-        }
-        if (m1 <= 0 || m2 <= 0) {
-            throw new IllegalArgumentException("Значение mass должно быть положительным");
-        }
-        double g = 9.8067;
-        return g * m1 * m2 / distance / distance;
-    }
-
     public static double task5895(int a, int b, int c) {
         return Math.sqrt(a * a + b * b - 2 * a * b * Math.cos(c * Math.PI / 180));
     }

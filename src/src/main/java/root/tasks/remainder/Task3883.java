@@ -27,18 +27,25 @@ public class Task3883 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         int a = Integer.parseInt(value);
-        if (a < 1000 || a > 9999) {
+        if (a < 1000) {
             System.out.println("Значение A должно быть в интервале от 1000 до 9999 включительно");
-            return;
         }
-        int hundreds = a / 100 % 10;
-        int units = a % 10;
-        System.out.printf("Количество сотен: %d\n", hundreds);
-        System.out.printf("Количество единиц: %d\n", units);
-        if (hundreds == units) {
-            System.out.println("Количество сотен равно количеству единиц");
-        } else {
-            System.out.println("Количество сотен не равно количеству единиц.");
+        if (1000 <= a) {
+            if (a > 9999) {
+                System.out.println("Значение A должно быть в интервале от 1000 до 9999 включительно");
+            }
+            if (9999 <= a) {
+                int hundreds = a / 100 % 10;
+                int units = a % 10;
+                System.out.printf("Количество сотен: %d\n", hundreds);
+                System.out.printf("Количество единиц: %d\n", units);
+                if (hundreds == units) {
+                    System.out.println("Количество сотен равно количеству единиц");
+                }
+                if (hundreds != units) {
+                    System.out.println("Количество сотен не равно количеству единиц.");
+                }
+            }
         }
     }
 

@@ -34,22 +34,33 @@ public class Task6714 extends OneInputValLayout {
         String[] arr = value.split(",");
         if (arr.length != 4) {
             System.out.println("Должно быть введено 4 числа");
-            return;
         }
-        int redA = Integer.parseInt(arr[0]);
-        int redB = Integer.parseInt(arr[1]);
-        int greenA = Integer.parseInt(arr[2]);
-        int greenB = Integer.parseInt(arr[3]);
-        if (redB < redA || greenB < greenA) {
-            System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
-            return;
-        }
-        if (redB < greenA) {
-            System.out.println("Интервалы не пересекаются. Правый край красного левее левого края зеленого.");
-        } else if (greenB < redA) {
-            System.out.println("Интервалы не пересекаются. Правый край зеленого левее левого края красного");
-        } else {
-            System.out.println("Интервалы пересекаются");
+        if (arr.length == 4) {
+            int redA = Integer.parseInt(arr[0]);
+            int redB = Integer.parseInt(arr[1]);
+            int greenA = Integer.parseInt(arr[2]);
+            int greenB = Integer.parseInt(arr[3]);
+            if (redB < redA) {
+                System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
+            }
+            if (redA <= redB) {
+                if (greenB < greenA) {
+                    System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
+                }
+                if (greenA <= greenB) {
+                    if (redB < greenA) {
+                        System.out.println("Интервалы не пересекаются. Правый край красного левее левого края зеленого.");
+                    }
+                    if (greenA <= redB) {
+                        if (greenB < redA) {
+                            System.out.println("Интервалы не пересекаются. Правый край зеленого левее левого края красного");
+                        }
+                        if (redA <= greenB) {
+                            System.out.println("Интервалы пересекаются");
+                        }
+                    }
+                }
+            }
         }
     }
 }

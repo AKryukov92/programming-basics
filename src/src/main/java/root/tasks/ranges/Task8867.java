@@ -10,12 +10,19 @@ public class Task8867 extends MultipleInputValLayout {
         int x = Integer.parseInt(args[2]);
         if (a > b) {
             System.out.println("Некорректный интервал. Левая граница должна быть меньше правой.");
-            return;
         }
-        if (a <= x && x <= b) {
-            System.out.printf("%d попадает в интервал от %d до %d", x, a, b);
-        } else {
-            System.out.printf("%d за пределами интервала от %d до %d", x, a, b);
+        if (a <= b) {
+            if (a <= x) {
+                if (x <= b) {
+                    System.out.printf("%d попадает в интервал от %d до %d", x, a, b);
+                }
+                if (x > b) {
+                    System.out.printf("%d за пределами интервала от %d до %d", x, a, b);
+                }
+            }
+            if (x < a) {
+                System.out.printf("%d за пределами интервала от %d до %d", x, a, b);
+            }
         }
     }
 

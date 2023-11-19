@@ -30,7 +30,7 @@ public class Task3490 extends TwoInputValLayout {
         if (yarnDiameterCm > 0) {
             if (wireCoils > 0) {
                 double circle = yarnDiameterCm * Math.PI;
-                System.out.printf("Длина окружности катушки равна %.4f", circle);
+                System.out.printf("Длина окружности катушки равна %.4f\n", circle);
                 double result = Math.floor(circle * wireCoils);
                 System.out.printf("На катушку можно намотать %.0f см проволоки", result);
             }

@@ -5,6 +5,7 @@ import root.tasks.MultipleInputValLayout;
 public class Task3864 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
+        appendHeader();
         appendTaskDescNonEscaped("Даны координаты srcX и srcY исходной точки, а также destX и destY точки назначения. Решите обратную геодезическую задачу - определите горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол этого отрезка angle, выраженный в градусах");
         appendOrderedNonEscaped(
                 "Вычислите приращение координат. <formula>dx = destX - srcX</formula>; <formula>dy = destY - srcY</formula>",

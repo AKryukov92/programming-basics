@@ -26,10 +26,20 @@ public class Task8715 extends MultipleInputValLayout {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
         int c = Integer.parseInt(args[2]);
-        if (a<b && b<c) {
-            System.out.println("Истинно");
-        } else {
+        if (a < b) {
+            if (b < c) {
+                System.out.println("Истинно");
+            }
+            if (c <= b) {
+                System.out.println("Ложно");
+            }
+        }
+        if (b <= a) {
             System.out.println("Ложно");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task8715());
     }
 }

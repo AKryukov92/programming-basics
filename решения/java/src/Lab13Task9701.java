@@ -78,17 +78,6 @@ public class Lab13Task9701 {
         }
     }
 
-    private static void Step9130() {
-        System.out.println();
-        System.out.println("9130");
-        Lab02.task9130(5.972E24, 10000, 6371);
-        Lab02.task9130(6.39E23, 10000, 3396.2);
-        Lab02.task9130(6.39E23, 15000, 3396.2);
-        Lab02.task9130(6.39E23, 10000, -20000);
-        Lab02.task9130(6.39E23, -2000, 3396.2);
-        Lab02.task9130(-6.39E23, 10000, 3396.2);
-    }
-
     private static void Step8873() {
         System.out.println();
         System.out.println("8873");

@@ -9,6 +9,7 @@ import root.tasks.assignment_puzzles.*;
 import root.tasks.calculations.*;
 import root.tasks.call_methods.*;
 import root.tasks.collections.*;
+import root.tasks.combinations.*;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
 import root.tasks.datetime.*;
@@ -379,7 +380,17 @@ public class Application {
         //если сразу рассказать о логических операторах и return, то у людей потом будут проблемы с вложенностью циклов
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
-                .addExample(new TaskJava9298())//взаимоисключающий
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava9298())//взаимоисключающий
+            ;
+        } else {
+            taskBook
+                    .addExample(new TaskCs9298())//взаимоисключающий
+            ;
+        }
+        taskBook
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
                 .addTask(new Task6522())//взаимоисключающий
                 .addTask(new Task7619())//взаимоисключающий, несколько вариантов
@@ -411,7 +422,7 @@ public class Application {
                 .addTask(new Task9622())//просто вычисления
                 .addTask(new Task7799())//подвох в условиях корректности
                 .addTask(new Task3591())//вычисления без формулы
-                .addTask(9130)
+                .addExample(new Task9130())//научная нотация чисел
                 .addTask(5895)
                 .addTask(2461)
                 .addTask(2624)
@@ -464,19 +475,16 @@ public class Application {
     private static void fillRanges(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab05")
                 .withGroup("Работа с интервалами значений")
-                .addExample(new Task8715())
-                .addTask(new Task8867())
-                .addTask(new Task7991())
-                .addTask(new Task7865())
-                .addTask(new Task9705())
+                .addExample(new Task8715())//проверка двух условий одновременно
+                .addTask(new Task8867())//проверка попадания в интервал
+                .addTask(new Task7991())//проверка попадания в 1 интервал исключая границы
+                .addTask(new Task7865())//проверка попадания в 2 интервала
                 .addTask(new Task3883())//сравнение цифр в числе
-                .addCitation("link_c4_p19.3")
                 .addTask(new Task8751())//несколько if без else
                 .addTask(new Task4858())//сравнение интервалов
                 .addTask(new Task3864())//Обратная геодезическая задача. сравнение и тригонометрические функции
-                .addCitation("link_c4_p19.1")
+                .addTask(new Task9705())//очень объемная проверка 4 интервалов
                 .addTask(5635)
-                .addTask(1217)
                 .addTask(8718)
         ;
     }
@@ -667,13 +675,25 @@ public class Application {
                 .addTask(new Task7534())//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
-                .addTask(new Task6714())//использование массива чисел для получения данных от пользователя
-                .addTask(new Task1438())//пересечение прямоугольников
                 //угол между отрезками
                 //для трех точек - отклонение центральной от соседних
-                .addTask(3095)//комбинаторика. понятие "все комбинации"
-                .addTask(8122)//сложная задача с кучей концепций
-                .addTask(5900)
+                .addTask(5900)//вычисление контрольной суммы штрих-кода
+        ;
+        //идея "перечислить все комбинации чисел" нужна для того, чтобы люди осознавали сколько возможных значений у переменных может быть
+        //без этой идеи задачи на пересечение интервалов получаются вырожденные.
+        //люди проверяют только часть возможных ситуаций и не осознают все множество возможных значений
+        taskBook.withSourceDirectory("arrays")
+                .withGroup("Печать на экран комбинаций чисел")
+                .addExample(new Task4965())//все комбинации двух значений в большом диапазоне
+                .addTask(new Task1839())//все комбинации
+                .addTask(new Task7039())//все комбинации без повторений
+                //использование массива чисел для получения данных от пользователя.
+                .addTask(new Task3095())//все комбинации двух элементов из более большого массива
+                .addTask(new Task6915())//все комбинации из массива четырех чисел
+                //ради этой задачи это все было затеяно
+                .addTask(new Task6714())// пересекаются ли интервалы
+                .addTask(new Task1217())//определение области пересечения интервалов
+                .addTask(new Task1438())//пересечение прямоугольников
         ;
     }
 
@@ -752,6 +772,7 @@ public class Application {
                 .addTask(new Task9827())//сопоставление массивов MINUS
                 .addTask(new Task7793())//сопоставление, все виды
                 .addTask(new Task1036())//Гиперпрыгающие плазмошашки
+                .addTask(8122)//сложная задача с кучей концепций
         ;
     }
 
