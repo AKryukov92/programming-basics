@@ -5,26 +5,26 @@ import root.tasks.TwoInputValLayout;
 public class Task8158 extends TwoInputValLayout {
     @Override
     protected void logic(String firstValue, String secondValue) {
-        int firstPosition = -1;
-        int secondPosition = -1;
+        int countFirst = 0;
+        int countSecond = 0;
         String[] arr = "a,b,c,d,e,f,g,h,a,b,c,d,e".split(",");
         int i = 0;
         while (i < arr.length) {
             if (firstValue.equals(arr[i])) {
-                firstPosition = i;
+                countFirst = countFirst + 1;
             }
             if (secondValue.equals(arr[i])) {
-                secondPosition = i;
+                countSecond = countSecond + 1;
             }
             i = i + 1;
         }
-        if (firstPosition >= 0) {
-            System.out.println("Символ '" + firstValue + "' найден");
+        if (countFirst > 0) {
+            System.out.println("Символ '" + firstValue + "' найден. " + countFirst + " шт.");
         } else {
             System.out.println("Символ '" + firstValue + "' отсутствует");
         }
-        if (secondPosition >= 0) {
-            System.out.println("Символ '" + secondValue + "' найден");
+        if (countSecond > 0) {
+            System.out.println("Символ '" + secondValue + "' найден" + countSecond + " шт.");
         } else {
             System.out.println("Символ '" + secondValue + "' отсутствует");
         }

@@ -1,4 +1,4 @@
-package root.tasks.loops;
+package root.tasks.combinations;
 
 import root.tasks.MultipleInputValLayout;
 

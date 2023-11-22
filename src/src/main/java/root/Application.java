@@ -48,6 +48,7 @@ import root.tasks.write_files.Task7940;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -55,6 +56,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Created by Александр on 09.02.2019.
@@ -186,12 +188,13 @@ public class Application {
         }
     }
 
-    private static String getVersion() throws IOException {
-        String currentTag = runCmd("git tag --points-at HEAD");
-        if (currentTag == null) {
-            return runCmd("git describe --tags --abbrev=0") + "-dev";
-        } else {
-            return currentTag;
+    private static String getVersion() {
+        File versionFile = new File("./.version");
+        System.out.println("Version file is " + versionFile);
+        try (Scanner s = new Scanner(versionFile)) {
+            return s.nextLine();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -511,17 +514,25 @@ public class Application {
                 .addTask(new Task5149())//несколько чисел с указанным шагом
 
                 .withGroup("Цикл внутри условия")
-                .addExample(new Task6066())//вывод подряд с ошибкой
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava6066())//вывод подряд с ошибкой
+            ;
+        } else {
+            taskBook
+                    .addExample(new TaskCs3985())//вывод подряд с ошибкой
+            ;
+        }
+        taskBook
                 .addTask(new Task1259())//повторить не более 20 раз
                 .addTask(new Task2565())//по убыванию с ошибкой
                 .addTask(new Task8722())//два столбца разной высоты
-                .addCitation("link_c4_p16.2")
                 .addTask(new Task2321())//вывод по возрастанию от меньшему к большему
                 .addTask(new Task5053())//вывод по возрастанию/убыванию
                 .addTask(new Task6663())//вывод по возрастанию/убыванию
                 .addTask(new Task4338())//вывод в два столбика по убыванию и возрастанию
                 .addTask(new Task7054())//вывод указанного количества
-                .addTask(new Task4531())//изобразить интервалы символами
         ;
     }
 
@@ -549,7 +560,6 @@ public class Application {
                 // .addTask(4236)
 
                 .addExample(new Task2324())//подсчет суммы и количества. остановка при вводе специального числа
-                .addCitation("link_c4_p16.1")
                 .addTask(new Task8731())//подсчет суммы, от которой зависит продолжение цикла
                 .addTask(new Task4082())//повторение действий пока не будет введено специальное число
                 .addTask(new Task9126())//Компьютер угадывает число пользователя
@@ -693,6 +703,7 @@ public class Application {
                 //ради этой задачи это все было затеяно
                 .addTask(new Task6714())// пересекаются ли интервалы
                 .addTask(new Task1217())//определение области пересечения интервалов
+                .addTask(new Task4531())//изобразить пересекающиеся интервалы символами
                 .addTask(new Task1438())//пересечение прямоугольников
         ;
     }
@@ -754,10 +765,10 @@ public class Application {
                 .addTask(new Task6028())//вычисление синуса и проверка результатов.
 
                 .withGroup("Поиск в массиве и прерывание работы цикла")
-                .addExample(new Task2003())//return, отсутствие
+                .addExample(new Task4283())//поиск и подсчет количества
+                .addTask(new Task2003())//return, отсутствие
                 .addTask(new Task8158())//проверка наличия двух символов в массиве
                 .addTask(new Task1292())//вывод символов до указанного
-                .addTask(new Task4283())//break поиск и подсчет количества
                 .addTask(new Task7703())//многократный поиск и подсчет количества
                 .addTask(new Task2234())//поиск в массиве, отсутствие. вложенные циклы
                 .addTask(new Task4851())//создание нового массива, поиск элементов
@@ -1366,14 +1377,14 @@ public class Application {
     private static TaskBook[] makeNav(String[] themeList, String langAbbreviation) {
         TaskBook[] taskBooks = new TaskBook[themeList.length];
         StringBuilder themeNavContent = new StringBuilder();
-        themeNavContent.append("<div class='lab_nav'>Другие темы<ol>");
+        themeNavContent.append("<div class='lab_nav'>Другие темы<ol>\n");
         for (int i = 0; i < themeList.length; i++) {
             int labIndex = i + 1;
             taskBooks[i] = TaskBook.builder()
                     .withIndex(labIndex)
                     .withLangAbbreviation(langAbbreviation)
                     .withTheme(themeList[i]);
-            themeNavContent.append(String.format("<li>%d <a href='%s'>%s</a></li>",
+            themeNavContent.append(String.format("<li>%d <a href='%s'>%s</a></li>\n",
                     labIndex, taskBooks[i].getFilenameForLink(), themeList[i]));
         }
         themeNavContent.append("</ol></div>");

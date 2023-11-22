@@ -7,24 +7,25 @@ public class Task1631 extends OneInputValLayout {
     protected void logic(String value) {
         int a = Integer.parseInt(value);
         int i = a;
+        System.out.println("Начало");
         while (i < a + 10) {
             System.out.print(i);
             System.out.println("---");
             i++;
         }
+        System.out.println("Успех");
     }
 
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Выведите на экран в столбик 10 чисел, начиная с A включительно. В конце каждой строки с числом должна быть выведена строка с тремя знаками \"-\".");
+        appendTaskDescEscaped("Выведите на экран в столбик 10 чисел, начиная с A включительно. В конце каждой строки с числом должна быть выведена строка с тремя знаками \"-\". Перед числами напишите слово \"Начало\" после всех чисел напишите слово \"Успех\"");
         appendCheckValuesHeader("A");
         appendCheckValuesRow("8");
         appendCheckValuesRow("9");
         appendCheckValuesRow("-5");
         appendCheckValuesRow("695");
         appendCheckValuesFooter();
-        appendFooter();
         appendTaskDescNonEscaped("Переменные могут называться самыми разными словами и буквами.\n" +
                 "Из за этого людям сложно рассуждать о назначении различных переменных.\n" +
                 "Назначение переменной и её название могут не совпадать.\n" +
@@ -38,6 +39,7 @@ public class Task1631 extends OneInputValLayout {
                 "    print(i);\n" +
                 "    i = i + 1;\n" +
                 "}");
+        appendFooter();
     }
 
     public static void main(String[] args) {

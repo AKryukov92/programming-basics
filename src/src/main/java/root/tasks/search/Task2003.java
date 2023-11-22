@@ -10,13 +10,19 @@ public class Task2003 extends OneInputValLayout {
             return;
         }
         String[] arr = value.split(";");
+        int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals("x")) {
                 System.out.println("Символ 'x' найден на позиции '" + i + "'");
-                return;
+                count = count + 1;
             }
         }
-        System.out.println("Символ 'x' отсутствует");
+        if (count == 0) {
+            System.out.println("Символ 'x' отсутствует");
+        }
+        if (count > 0) {
+            System.out.println("Символ 'x' найден " + count + " раз");
+        }
     }
 
     @Override
@@ -27,7 +33,8 @@ public class Task2003 extends OneInputValLayout {
                 "Если полученное количество равно 0, то напишите фразу символ отсутствует.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("a;s;d;f");
-        appendCheckValuesRow("z;x;c;v");
+        appendCheckValuesRow("z;x;c;v;x");
+        appendCheckValuesRow("zx;df;ty;jk");
         appendCheckValuesRow("q;a;z;w;s;x;e;d;c");
         appendCheckValuesRow("");
         appendCheckValuesRow("x");
@@ -37,6 +44,6 @@ public class Task2003 extends OneInputValLayout {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Task2003().getContent());
+        System.out.println(new Task2003());
     }
 }
