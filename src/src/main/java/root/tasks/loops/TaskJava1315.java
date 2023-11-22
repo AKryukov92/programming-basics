@@ -4,7 +4,7 @@ import root.tasks.OneInputValLayout;
 
 import java.util.Scanner;
 
-public class Task1315 extends OneInputValLayout {
+public class TaskJava1315 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         int i = 1;
@@ -145,8 +145,9 @@ public class Task1315 extends OneInputValLayout {
         appendCheckValuesFooter();
 
         appendTaskDescNonEscaped("Конечная цель решения - компактная запись с помощью конструкции цикла. Чтобы к ней прийти, нужно сделать несколько промежуточных шагов. Первым делом нужно реализовать подробное решение для нескольких частных случаев. Нужно написать несколько условий. Первое должно работать для всех чисел. Следующее для всех чисел кроме первого. Шестое - для всех чисел, кроме первых шести. Подробное решение этой задачи выглядит так:");
-        appendCheckSingleNonEscaped("int total = Integer.parseInt(string);\n" +
-                "println(\"Введение\");\n" +
+        appendCheckSingleNonEscaped("Scanner s = new Scanner(System.in);\n" +
+                "int total = Integer.parseInt(s.nextLine());\n" +
+                "System.out.println(\"Введение\");\n" +
                 "if (1 <= total) {\n" +
                 "    System.out.println(\"Глава \" + 1);//Это действие будет работать когда пользователь вводит числа 1,2,3,4,5,6\n" +
                 "}\n" +
@@ -165,49 +166,51 @@ public class Task1315 extends OneInputValLayout {
                 "if (6 <= total) {\n" +
                 "    System.out.println(\"Глава \" + 6);//Это действие будет работать когда пользователь вводит число 6\n" +
                 "}\n" +
-                "println(\"Заключение\");");
+                "System.out.println(\"Заключение\");");
         appendTaskDescNonEscaped("Подробное решение работает корректно почти для всех тестов. В полученном результате нужно найти набор повторяющихся действий. В данном случае это:");
         appendCheckSingleNonEscaped("if (1 <= total) {\n" +
-                "    print(\"Глава \" + 1);\n" +
+                "    System.out.println(\"Глава \" + 1);\n" +
                 "}\n");
         appendTaskDescNonEscaped("Обратите внимания, что эти действия повторяются с небольшими изменениями. В них используются разные числа: 1, 2, 3 и так далее. Нужно это число заменить на переменную. Таким образом действия будут полностью идентичными. Код должен получиться таким:");
-        appendCheckSingleNonEscaped("int total = Integer.parseInt(string);\n" +
+        appendCheckSingleNonEscaped("Scanner s = new Scanner(System.in);\n" +
+                "int total = Integer.parseInt(s.nextLine());\n" +
                 "int i = 1;\n" +
-                "println(\"Введение\");\n" +
+                "System.out.println(\"Введение\");\n" +
                 "if (i <= total) {\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;//До этой команды значение переменной i равно 1. После неё оно станет равно 2.\n" +
                 "}\n" +
                 "if (i <= total) {//Значение i равно 2\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
                 "if (i <= total) {//Значение i равно 3\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
                 "if (i <= total) {//Значение i равно 4\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
                 "if (i <= total) {//Значение i равно 5\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
                 "if (i <= total) {//Значение i равно 6\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
-                "println(\"Заключение\");");
+                "System.out.println(\"Заключение\");");
         appendTaskDescNonEscaped("Как только вы написали код, который состоит из полностью одинаковых фрагментов, вы можете применить конструкцию while для автоматического повторения этих действий.");
-        appendCheckSingleNonEscaped("int total = Integer.parseInt(string);\n" +
+        appendCheckSingleNonEscaped("Scanner s = new Scanner(System.in);\n" +
+                "int total = Integer.parseInt(s.nextLine());\n" +
                 "int i = 1;\n" +
-                "println(\"Введение\");\n" +
+                "System.out.println(\"Введение\");\n" +
                 "while (i <= total) {\n" +
-                "    print(\"Глава \" + i);\n" +
+                "    System.out.println(\"Глава \" + i);\n" +
                 "    i = i + 1;\n" +
                 "}\n" +
-                "println(\"Заключение\");");
+                "System.out.println(\"Заключение\");");
         appendTaskDescNonEscaped("План решения задачи:");
         appendOrderedEscaped(
                 "Написать подробное решение для нескольких тестов с помощью условий",

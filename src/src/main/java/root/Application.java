@@ -495,7 +495,17 @@ public class Application {
     private static void fillLoops(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
-                .addExample(new Task1315())
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava1315())
+            ;
+        } else {
+            taskBook
+                    .addExample(new TaskCs1315())
+            ;
+        }
+        taskBook
                 .addTask(new Task1631())//несколько чисел в столбик с повторением оформления
                 .addTask(new Task2594())//повторить символ, оформление не повторяется
 

@@ -24,7 +24,7 @@ public class Task8158 extends TwoInputValLayout {
             System.out.println("Символ '" + firstValue + "' отсутствует");
         }
         if (countSecond > 0) {
-            System.out.println("Символ '" + secondValue + "' найден" + countSecond + " шт.");
+            System.out.println("Символ '" + secondValue + "' найден. " + countSecond + " шт.");
         } else {
             System.out.println("Символ '" + secondValue + "' отсутствует");
         }

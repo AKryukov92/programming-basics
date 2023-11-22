@@ -306,76 +306,76 @@ zoom{
 <div class='task_desc'>
 Конечная цель решения - компактная запись с помощью конструкции цикла. Чтобы к ней прийти, нужно сделать несколько промежуточных шагов. Первым делом нужно реализовать подробное решение для нескольких частных случаев. Нужно написать несколько условий. Первое должно работать для всех чисел. Следующее для всех чисел кроме первого. Шестое - для всех чисел, кроме первых шести. Подробное решение этой задачи выглядит так:
 </div>
-<div class='check_single preformatted'>int total = Integer.parseInt(string);
-println("Введение");
+<div class='check_single preformatted'>int total = int.Parse(Console.ReadLine());
+Console.WriteLine("Введение");
 if (1 <= total) {
-    System.out.println("Глава " + 1);//Это действие будет работать когда пользователь вводит числа 1,2,3,4,5,6
+    Console.WriteLine("Глава " + 1);//Это действие будет работать когда пользователь вводит числа 1,2,3,4,5,6
 }
 if (2 <= total) {
-    System.out.println("Глава " + 2);//Это действие будет работать когда пользователь вводит числа 2,3,4,5,6
+    Console.WriteLine("Глава " + 2);//Это действие будет работать когда пользователь вводит числа 2,3,4,5,6
 }
 if (3 <= total) {
-    System.out.println("Глава " + 3);//Это действие будет работать когда пользователь вводит числа 3,4,5,6
+    Console.WriteLine("Глава " + 3);//Это действие будет работать когда пользователь вводит числа 3,4,5,6
 }
 if (4 <= total) {
-    System.out.println("Глава " + 4);//Это действие будет работать когда пользователь вводит числа 4,5,6
+    Console.WriteLine("Глава " + 4);//Это действие будет работать когда пользователь вводит числа 4,5,6
 }
 if (5 <= total) {
-    System.out.println("Глава " + 5);//Это действие будет работать когда пользователь вводит числа 5,6
+    Console.WriteLine("Глава " + 5);//Это действие будет работать когда пользователь вводит числа 5,6
 }
 if (6 <= total) {
-    System.out.println("Глава " + 6);//Это действие будет работать когда пользователь вводит число 6
+    Console.WriteLine("Глава " + 6);//Это действие будет работать когда пользователь вводит число 6
 }
-println("Заключение");</div>
+Console.WriteLine("Заключение");</div>
 <div class='task_desc'>
 Подробное решение работает корректно почти для всех тестов. В полученном результате нужно найти набор повторяющихся действий. В данном случае это:
 </div>
 <div class='check_single preformatted'>if (1 <= total) {
-    print("Глава " + 1);
+    Console.WriteLine("Глава " + 1);
 }
 </div>
 <div class='task_desc'>
 Обратите внимания, что эти действия повторяются с небольшими изменениями. В них используются разные числа: 1, 2, 3 и так далее. Нужно это число заменить на переменную. Таким образом действия будут полностью идентичными. Код должен получиться таким:
 </div>
-<div class='check_single preformatted'>int total = Integer.parseInt(string);
+<div class='check_single preformatted'>int total = int.Parse(Console.ReadLine());
 int i = 1;
-println("Введение");
+Console.WriteLine("Введение");
 if (i <= total) {
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;//До этой команды значение переменной i равно 1. После неё оно станет равно 2.
 }
 if (i <= total) {//Значение i равно 2
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
 if (i <= total) {//Значение i равно 3
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
 if (i <= total) {//Значение i равно 4
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
 if (i <= total) {//Значение i равно 5
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
 if (i <= total) {//Значение i равно 6
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
-println("Заключение");</div>
+Console.WriteLine("Заключение");</div>
 <div class='task_desc'>
 Как только вы написали код, который состоит из полностью одинаковых фрагментов, вы можете применить конструкцию while для автоматического повторения этих действий.
 </div>
-<div class='check_single preformatted'>int total = Integer.parseInt(string);
+<div class='check_single preformatted'>int total = int.Parse(Console.ReadLine());
 int i = 1;
-println("Введение");
+Console.WriteLine("Введение");
 while (i <= total) {
-    print("Глава " + i);
+    Console.WriteLine("Глава " + i);
     i = i + 1;
 }
-println("Заключение");</div>
+Console.WriteLine("Заключение");</div>
 <div class='task_desc'>
 План решения задачи:
 </div>
