@@ -337,20 +337,6 @@ public class Lab05 {
         }
     }
 
-    public static String task5662(int a, int b, int c) {
-        if (a == 0) {
-            return "Данное уравнение не является квадратным";
-        }
-        double d = b * b - 4 * a * c;
-        if (d > 0) {
-            return "У уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 два вещественных корня";
-        } else if (d == 0) {
-            return "Уравнение " + a + "x^2 + " + b + "x + " + c + " = 0 имеет один корень";
-        } else {
-            return "Вещественных корней уравнения " + a + "x^2 + " + b + "x + " + c + " = 0 нет";
-        }
-    }
-
     public static void task1945_2(double areaCircle, double areaSquare) {
         if (areaCircle <= 0){
             System.out.println("Площадь круга должна быть положительной");

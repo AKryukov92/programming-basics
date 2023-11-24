@@ -229,7 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task5662'>7</a><li><a href='#task3669'>8</a><li><a href='#task1292'>9</a></ul><ul><li><a href='#task3946' class='example'>10*</a><li><a href='#task8920'>11</a><li><a href='#task6497'>12</a><li><a href='#task2936' class='example'>13*</a><li><a href='#task3539'>14</a><li><a href='#task6401' class='example'>15*</a><li><a href='#task7581'>16</a></ul></div><div class="task_block" id="info01">
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task3597'>7</a><li><a href='#task6573'>8</a><li><a href='#task1292'>9</a></ul><ul><li><a href='#task3946' class='example'>10*</a><li><a href='#task8920'>11</a><li><a href='#task6497'>12</a><li><a href='#task2936' class='example'>13*</a><li><a href='#task3539'>14</a><li><a href='#task6401' class='example'>15*</a><li><a href='#task7581'>16</a></ul></div><div class="task_block" id="info01">
     <h4>Подготовка проекта</h4>
 	<div class="task_desc">Создайте проект с помощью maven.
 <ol>
@@ -255,11 +255,11 @@ zoom{
 <div class='task_desc'>
 Пользователь вводит слово (goal). Нужно напечатать на экран фразу "Мы стремимся к " и затем слово от пользователя.
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task1860.</li><li>Он принимает в качестве аргумента 1 строку.</li><li>В теле метода task1860 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task8307.</li><li>Он принимает в качестве аргумента 1 строку.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
 Код метода будет выглядеть так:
 </div>
 <div class='check_single preformatted'>public class Library {
-    public static void task1860(String value) {
+    public static void task8307(String value) {
         System.out.println("Мы стремимся к " + value);
     }
 }</div>
@@ -267,11 +267,11 @@ zoom{
 В методе main класса Program добавьте следующий код:
 </div>
 <div class='check_single preformatted'>//вызов метода task1860 из класса Library
-Library.task1860("знаниям");//литерал "знаниям" передан в качестве аргумента
+Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
 String goal = "цели";
 //значение переменной goal передано в качестве аргумента
-Library.task1860(goal);//внутри метода это значение будет доступно под именем value
-Library.task1860("результату");
+Library.task8307(goal);//внутри метода это значение будет доступно под именем value
+Library.task8307("результату");
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -288,13 +288,14 @@ Library.task1860("результату");
 Пользователь вводит фамилию и имя. Нужно оформить фразу по шаблону:
 </div>
 <div class='check_single preformatted'>Меня зовут $lastName, $firstName $lastName.</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task4140.</li><li>Он принимает в качестве аргумента 2 строки.</li><li>В теле метода task4140 напечатайте в консоль решение задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-Вызовите метод task4140 в методе main класса Program с различными аргументами:
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task8813.</li><li>Он принимает в качестве аргумента 2 строки.</li><li>В теле метода task8813 напечатайте в консоль решение задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+Вызовите метод task8813 в методе main класса Program с различными аргументами:
 </div>
-<div class='check_single preformatted'>Library.task4140("Джеймс", "Бонд");
-Library.task4140("капитан", "Джек Воробей");
+<div class='check_single preformatted'>Library.task8813("Джеймс", "Бонд");
+Library.task8813("капитан", "Джек Воробей");
 String firstName = "Александр";
-Library.task4140(firstName, "Крюков");
+String lastName = "Крюков";
+Library.task8813(firstName, lastName);
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -311,16 +312,16 @@ Library.task4140(firstName, "Крюков");
 Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
 </div>
 <div class='check_single preformatted'>&lt;circle cx="$CX" cy="$CY" r="$R" fill="$FILL"/&gt;</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task2632.</li><li>Он принимает в качестве аргументов 3 целых числа и 1 строку</li><li>В теле метода task2632 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task5823.</li><li>Он принимает в качестве аргументов 3 целых числа и 1 строку</li><li>В теле метода task5823 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
 В методе main класса Program добавьте следующий код:
 </div>
 <div class='check_single preformatted'>int coordinateX = 50;
-Library.task2632(coordinateX, 50, 40, "yellow");
+Library.task5823(coordinateX, 50, 40, "yellow");
 coordinateX = 400;
-Library.task2632(coordinateX, 300, 200, "green");
+Library.task5823(coordinateX, 300, 200, "green");
 coordinateX = 254;
 String colorOrange = "#cc6600";
-Library.task2632(coordinateX, 356, 100, colorOrange);
+Library.task5823(coordinateX, 356, 100, colorOrange);
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -338,11 +339,11 @@ Library.task2632(coordinateX, 356, 100, colorOrange);
 </div>
 <div class='check_single preformatted'>Квадратное уравнение $A*x*x + $B*x + $C = 0.
 Его дискриминант вычисляется по формуле: d = $B*$B - 4*$A*$C</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task7474.</li><li>Он принимает в качестве аргументов 3 целых числа.</li><li>В теле метода task7474 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task2772.</li><li>Он принимает в качестве аргументов 3 целых числа.</li><li>В теле метода task2772 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
 В методе main класса Program добавьте следующий код:
 </div>
-<div class='check_single preformatted'>Library.task7474(1, 2, 3);
-Library.task7474(-3, 0, 2);
+<div class='check_single preformatted'>Library.task2772(1, 2, 3);
+Library.task2772(-3, 0, 2);
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -361,11 +362,11 @@ Library.task7474(-3, 0, 2);
 <div class='task_desc'>
 Вычислить результат по формуле x + 7.
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task4411.</li><li>Он принимает в качестве аргументов 1 действительное число.</li><li>Он возвращает действительное число</li><li>В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task7611.</li><li>Он принимает в качестве аргументов 1 действительное число.</li><li>Он возвращает действительное число</li><li>В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных</li></ol><div class='task_desc'>
 Код метода будет выглядеть так:
 </div>
 <div class='check_single preformatted'>public class Library {
-    public static double task4411(double x) {
+    public static double task7611(double x) {
         double res;
         res =  x + 7;
         return res;
@@ -375,12 +376,12 @@ Library.task7474(-3, 0, 2);
 В методе main класса Program добавьте следующий код:
 </div>
 <div class='check_single preformatted'>double result;
-result = Library.task4411(11.13);//в качестве аргумента передано число
+result = Library.task7611(11.13);//в качестве аргумента передано число
 System.out.printf("%.4f\n", result);
 double value = -79.19;
-result = Library.task4411(value);//в качестве аргумента передано значение переменной
+result = Library.task7611(value);//в качестве аргумента передано значение переменной
 System.out.printf("%.4f\n", result);
-System.out.printf("%.4f\n", Library.task4411(0));//результат используется без промежуточной переменной
+System.out.printf("%.4f\n", Library.task7611(0));//результат используется без промежуточной переменной
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -403,66 +404,107 @@ System.out.printf("%.4f\n", Library.task4411(0));//результат испол
 <div class='task_desc'>
 Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче <a href="tasks 3.html#task7711" target="_blank">ЛР3#7711(открыть в новой вкладке)</a>
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task2790.</li><li>Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.</li><li>В теле метода вычислите результат и верните его</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task4776.</li><li>Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.</li><li>В теле метода вычислите результат и верните его</li></ol><div class='task_desc'>
 В методе main класса Program добавьте следующий код:
 </div>
 <div class='check_single preformatted'>double result;
-result = TaskCs4776.Library.task2790(69.97);
-System.out.printf("%.4f", result);
+result = TaskCs4776.Library.task4776(69.97);
+System.out.printf("%.4f\n", result);
 //для наглядности проверки можно писать дополнительные условия
 if (0.9395 &lt;= result && result &lt;= 0.9396) {
     System.out.println("Верно");
 } else {
     System.out.println("Результат некорректный");
 }
-result = TaskCs4776.Library.task2790(31);
-System.out.printf("%.4f", result);
-System.out.printf("%.4f", TaskCs4776.Library.task2790(90));
+result = TaskCs4776.Library.task4776(31);
+System.out.printf("%.4f\n", result);
+System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
 </div>
-<div class='check_single preformatted'>0,9395Верно
-0,51501,0000</div>
+<div class='check_single preformatted'>0,9395
+Верно
+0,5150
+1,0000
 </div>
-<div class="task_block" id="task5662">
-	<div class="task_id">5662</div>
-    <h3>Задача</h3>
-	<h4>Реализуйте метод для решения задачи <a href="tasks 5.html#task5662" target="_blank">ЛР5#5662(открыть в новой вкладке)</a></h4>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task5662.</li>
-<li>Он принимает в качестве аргумента 3 действительных числа и возвращает строку.</li>
-<li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li>
-</ol>
-
-<h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start="4">
-<li>Убедитесь, что в классе TestSuite импортированы классы "org.junit.Assert" и "org.junit.Test".</li>
-<li>В классе TestSuite создайте публичный метод task5662test (далее "юнит-тест"). Добавьте ему аннотацию @Test. Сам метод ничего не возвращает и не принимает аргументы.</li>
-<li>В теле юнит-теста 5 раз вызовите статический метод task5662 класса Library. Каждый раз в качестве аргументов нужно передавать значения из разных тестов, описанных в задаче.</li>
-<li>Корректность результатов каждого вызова метода task5662 проверьте с помощью статического метода assertEquals класса Assert.</li>
-<li>Первый аргумент метода assertEquals это ожидаемое значение. Второй аргумент - результат вызова метода task5662. Третий аргумент (точность) в этом случае не указывается. Она нужна только для проверки действительных чисел.</li>
-<li>После запуска юнит-теста, он должен быть отмечен зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task3669">
-	<div class="task_id">3669</div>
-    <h3>Задача</h3>
-	<h4>Реализуйте метод для решения задачи <a href="tasks 13.html#task3669" target="_blank">ЛР13#3669(открыть в новой вкладке)</a></h4>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task3669.</li>
-<li>Он принимает в качестве аргумента 2 целых числа и возвращает большое целое число.</li>
-<li>В теле метода нужно вернуть результат решения задачи, используя значения аргументов в качестве исходных данных.</li>
-</ol>
-
-<h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start="4">
-<li>Убедитесь, что в классе TestSuite импортированы классы "org.junit.Assert" и "org.junit.Test".</li>
-<li>В классе TestSuite создайте публичный метод task3669test (далее "юнит-тест"). Добавьте ему аннотацию @Test. Сам метод ничего не возвращает и не принимает аргументы.</li>
-<li>В теле юнит-теста 6 раз вызовите статический метод task3669 класса Library. Каждый раз в качестве аргументов нужно передавать значения из разных тестов, описанных в задаче.</li>
-<li>Корректность результатов каждого вызова метода task3669 проверьте с помощью статического метода assertEquals класса Assert.</li>
-<li>После запуска юнит-теста, он должен быть отмечен зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task1292">
+</div>
+<div id='task3597' class='task_block'>
+<div class='task_id'>3597</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны вещественные числа a, b, c. Если a равно 0, вернуть сообщение об ошибке "Уравнение не является квадратным". Найдите в прошлых работах формулу для вычисления дискриминанта, вычислите его и напишите одно из трех сообщений в зависимости от полученного значения.
+</div>
+<ol start='1'><li>Если дискриминант равен 0, то у уравнения один вещественный корень.</li><li>Если дискриминант меньше 0, то у уравнения нет вещественных корней.</li><li>Если дискриминант больше 0, то у уравнения два вещественных корня.</li></ol><ol start='4'><li>В классе Library реализуйте публичный статический метод task3597.</li><li>Он принимает в качестве аргумента 3 действительных числа и возвращает строку.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>String result;
+result = Library.task3597(1, 2, 3);
+System.out.println(result);
+result = Library.task3597(11, 13, 19);
+System.out.println(result);
+double a, b, c;
+a = 3;
+b = 17;
+c = 5;
+System.out.println(Library.task3597(a, b, c));
+a = 5;
+b = 31;
+c = 29;
+System.out.println(Library.task3597(a, b, c));
+System.out.println(Library.task3597(3, 6, 3));
+System.out.println(Library.task3597(1, 2, 1));
+System.out.println(Library.task3597(0, 7, 13));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>Вещественных корней уравнения 1.0x^2 + 2.0x + 3.0 = 0 нет
+Вещественных корней уравнения 11.0x^2 + 13.0x + 19.0 = 0 нет
+У уравнения 3.0x^2 + 17.0x + 5.0 = 0 два вещественных корня
+У уравнения 5.0x^2 + 31.0x + 29.0 = 0 два вещественных корня
+Уравнение 3.0x^2 + 6.0x + 3.0 = 0 имеет один корень
+Уравнение 1.0x^2 + 2.0x + 1.0 = 0 имеет один корень
+Данное уравнение не является квадратным
+</div>
+</div>
+<div id='task6573' class='task_block'>
+<div class='task_id'>6573</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Найти произведение всех целых чисел от А до B включительно. Значение A может быть как меньше, так и больше B. Для хранения результата используйте переменную типа long. Этот тип поддерживает очень большие целые числа.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task6573.</li><li>Он принимает в качестве аргумента 2 целых числа и возвращает большое целое число.</li><li>В теле метода нужно вернуть результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>long result;
+result = Library.task6573(8, 13);
+System.out.println(result);
+result = Library.task6573(13, 8);
+System.out.println(result);
+int from, to;
+from = 159;
+to = 161;
+result = Library.task6573(from, to);
+System.out.println(result);
+from = -2;
+to = 600;
+System.out.println(Library.task6573(from, to));
+System.out.println(Library.task6573(648, 648));
+System.out.println(Library.task6573(35, 24));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>1235520
+1235520
+4095840
+0
+648
+399703747322880000
+</div>
+</div>
+<div class="task_block" id="task1292">
 	<div class="task_id">1292</div>
     <h3>Задача</h3>
 	<h4>Реализуйте метод для решения задачи <a href="tasks 5.html#task1292" target="_blank">ЛР5#1292(открыть в новой вкладке)</a></h4>

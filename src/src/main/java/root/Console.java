@@ -4,6 +4,9 @@ public class Console {
     public static void WriteLine(String line) {
         System.out.println(line);
     }
+    public static void WriteLine(long line) {
+        System.out.println(line);
+    }
     public static void Write(String line) {
         System.out.print(line);
     }

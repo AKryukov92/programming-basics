@@ -12,6 +12,7 @@ import root.tasks.collections.*;
 import root.tasks.combinations.*;
 import root.tasks.conditions.Task3770;
 import root.tasks.conditions.Task5116;
+import root.tasks.conditions.Task5662;
 import root.tasks.datetime.*;
 import root.tasks.exceptions.*;
 import root.tasks.internal_state.TaskJava2896;
@@ -451,7 +452,7 @@ public class Application {
                 .withGroup("Несколько взаимоисключающих случаев if(){} else if() {} else {}")
                 .addExample(8878)
                 .addTask(6291)
-                .addTask(5662)
+                .addTask(new Task5662())
                 .addTask(new Task5116())
                 .addTask(2291)
 
@@ -1029,32 +1030,38 @@ public class Application {
 
         if (taskBook.isJava()) {
             taskBook
-                    .addExample(new TaskJava8307())
-                    .addTask(new TaskJava8813())
-                    .addTask(new TaskJava5823())
-                    .addTask(new TaskJava2772())
+                    .addExample(new TaskJava8307())//метод с одним аргументом и печатью в консоль
+                    .addTask(new TaskJava8813())//метод с двумя аргументами и печатью в консоль
+                    .addTask(new TaskJava5823())//метод с тремя аргументами и печатью в консоль
+                    .addTask(new TaskJava2772())//метод с тремя аргументами и печатью в консоль
                     .addCitation("link_c2_p7.1")
 
-                    .addExample(new TaskJava7611())
-                    .addTask(new TaskJava4776())
+                    .addExample(new TaskJava7611())//метод с одним аргументом, возвращает число
+                    .addTask(new TaskJava4776())//метод с одним аргументом, возвращает число
+                    .addTask(new TaskJava3597())//метод с условиями и возвратом строки
+                    .addTask(new TaskJava6573())//метод с условием и циклом. возврат long
             ;
         } else if (taskBook.isCsharp()) {
             taskBook
-                    .addExample(new TaskCs8307())
-                    .addTask(new TaskCs8813())
-                    .addTask(new TaskCs5823())
-                    .addTask(new TaskCs2772())
+                    .addExample(new TaskCs8307())//метод с одним аргументом и печатью в консоль
+                    .addTask(new TaskCs8813())//метод с двумя аргументами и печатью в консоль
+                    .addTask(new TaskCs5823())//метод с тремя аргументами и печатью в консоль
+                    .addTask(new TaskCs2772())//метод с тремя аргументами и печатью в консоль
                     .addCitation("link_c2_p7.1")
 
-                    .addExample(new TaskCs7611())
-                    .addTask(new TaskCs4776())
+                    .addExample(new TaskCs7611())//метод с одним аргументом, возвращает число
+                    .addTask(new TaskCs4776())//метод с одним аргументом, возвращает число
+                    //методы с условиями это особенная тема.
+                    // если до этих пор не говорить студентам об else, то сейчас наверняка возникнуть проблемы вида
+                    //missing return statement
+                    //это хороший повод объяснить else
+                    .addTask(new TaskCs3597())//метод с условиями и возвратом строки
+                    .addTask(new TaskCs6573())//метод с условием и циклом. возврат long
             ;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
         taskBook
-                .addTask(5662)
-                .addTask(3669)
                 .addTask(1292)
                 .addCitation("link_c2_p7.2")
 

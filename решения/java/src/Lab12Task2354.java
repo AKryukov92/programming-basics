@@ -71,18 +71,6 @@ public class Lab12Task2354 {
         System.out.printf("%d (%d)\n", Lab05.task8174(0), 0);
     }
 
-    private static void Step5662() {
-        System.out.println();
-        System.out.println("5662");
-        System.out.println(Lab05.task5662(1, 2, 3));
-        System.out.println(Lab05.task5662(11, 13, 19));
-        System.out.println(Lab05.task5662(3, 17, 5));
-        System.out.println(Lab05.task5662(5, 31, 29));
-        System.out.println(Lab05.task5662(3, 6, 3));
-        System.out.println(Lab05.task5662(1, 2, 1));
-        System.out.println(Lab05.task5662(0, 7, 13));
-    }
-
     private static void Step3770() {
         System.out.println();
         System.out.println("3770");

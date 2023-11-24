@@ -10,9 +10,9 @@ public class TaskCs5823 extends OneInputValLayout implements MethodsDictationHel
         appendTaskDescEscaped("Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.");
         appendCheckSingleNonEscaped("&lt;circle cx=\"$CX\" cy=\"$CY\" r=\"$R\" fill=\"$FILL\"/&gt;");
         appendOrderedNonEscaped(
-                implementStatic("Library", "task2632"),
+                implementStatic("Library", "task5823"),
                 "Он принимает в качестве аргументов 3 целых числа и 1 строку",
-                "В теле метода task2632 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных."
+                "В теле метода task5823 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных."
         );
         appendTaskDescEscaped("В методе main класса Program добавьте следующий код:");
         appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
@@ -24,16 +24,16 @@ public class TaskCs5823 extends OneInputValLayout implements MethodsDictationHel
     @Override
     protected void logic(String args) {
         int x = 50;
-        Library.task2632(x, 50, 40, "yellow");//вызов метода task2632 с аргументами 50, 50, 40, "yellow"
+        Library.task5823(x, 50, 40, "yellow");//вызов метода task5823 с аргументами 50, 50, 40, "yellow"
         x = 400;
-        Library.task2632(x, 300, 200, "green");
+        Library.task5823(x, 300, 200, "green");
         x = 254;
         String colorOrange = "#cc6600";
-        Library.task2632(x, 356, 100, colorOrange);
+        Library.task5823(x, 356, 100, colorOrange);
     }
 
     protected static class Library {
-        public static void task2632(int cx, int cy, int r, String fill) {
+        public static void task5823(int cx, int cy, int r, String fill) {
             System.out.printf("&lt;circle cx=\"%d\" cy=\"%d\" r=\"%d\" fill=\"%s\"/&gt;\n", cx, cy, r, fill);
         }
     }

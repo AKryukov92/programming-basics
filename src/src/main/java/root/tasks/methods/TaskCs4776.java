@@ -14,7 +14,7 @@ public class TaskCs4776 extends OneInputValLayout {
                 "\t</formula>");
         appendTaskDescNonEscaped("Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче " + linkToTask(7711));
         appendOrderedNonEscaped(
-                "В классе Library реализуйте публичный статический метод Task2790.",
+                "В классе Library реализуйте публичный статический метод Task4776.",
                 "Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.",
                 "В теле метода вычислите результат и верните его"
         );
@@ -28,7 +28,7 @@ public class TaskCs4776 extends OneInputValLayout {
     @Override
     protected void logic(String value) {
         double result;
-        result = Library.task2790(69.97);
+        result = Library.task4776(69.97);
         Console.WriteLine("{0:4F}", result);
         //для наглядности проверки можно писать дополнительные условия
         if (0.9395 <= result && result <= 0.9396) {
@@ -36,13 +36,13 @@ public class TaskCs4776 extends OneInputValLayout {
         } else {
             Console.WriteLine("Результат некорректный");
         }
-        result = Library.task2790(31);
+        result = Library.task4776(31);
         Console.WriteLine("{0:4F}", result);
-        Console.WriteLine("{0:4F}", Library.task2790(90));
+        Console.WriteLine("{0:4F}", Library.task4776(90));
     }
 
     protected static class Library {
-        public static double task2790(double angleDegree) {
+        public static double task4776(double angleDegree) {
             double angleRadian = angleDegree * Math.PI / 180;
             return Math.sin(angleRadian);
         }

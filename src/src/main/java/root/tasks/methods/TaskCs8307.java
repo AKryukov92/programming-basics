@@ -8,13 +8,13 @@ public class TaskCs8307 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит слово (goal). Нужно напечатать на экран фразу \"Мы стремимся к \" и затем слово от пользователя.");
         appendOrderedNonEscaped(
-                "В классе Library реализуйте публичный статический метод task1860.",
+                "В классе Library реализуйте публичный статический метод task8307.",
                 "Он принимает в качестве аргумента 1 строку.",
-                "В теле метода task1860 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных."
+                "В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных."
         );
         appendTaskDescEscaped("Код метода будет выглядеть так:");
         appendCheckSingleNonEscaped("public class Library {\n" +
-                "    public static void task1860(String value) {\n" +
+                "    public static void task8307(String value) {\n" +
                 "        System.out.println(\"Мы стремимся к \" + value);\n" +
                 "    }\n" +
                 "}");
@@ -27,16 +27,16 @@ public class TaskCs8307 extends OneInputValLayout {
 
     @Override
     protected void logic(String value) {
-        //вызов метода task1860 из класса Library
-        Library.task1860("знаниям");//литерал "знаниям" передан в качестве аргумента
+        //вызов метода task8307 из класса Library
+        Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
         String goal = "цели";
         //значение переменной goal передано в качестве аргумента
-        Library.task1860(goal);//внутри метода это значение будет доступно под именем value
-        Library.task1860("результату");
+        Library.task8307(goal);//внутри метода это значение будет доступно под именем value
+        Library.task8307("результату");
     }
 
     protected static class Library {
-        public static void task1860(String value) {
+        public static void task8307(String value) {
             System.out.println("Мы стремимся к " + value);
         }
     }

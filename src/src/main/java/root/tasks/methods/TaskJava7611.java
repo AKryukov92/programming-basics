@@ -9,14 +9,14 @@ public class TaskJava7611 extends OneInputValLayout implements MethodsDictationH
         appendHeader();
         appendTaskDescEscaped("Вычислить результат по формуле x + 7.");
         appendOrderedNonEscaped(
-                implementStatic("Library", "task4411"),
+                implementStatic("Library", "task7611"),
                 itAccepts("1 действительное число"),
                 "Он возвращает действительное число",
                 "В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных"
         );
         appendTaskDescEscaped("Код метода будет выглядеть так:");
         appendCheckSingleNonEscaped("public class Library {\n" +
-                "    public static double task4411(double x) {\n" +
+                "    public static double task7611(double x) {\n" +
                 "        double res;\n" +
                 "        res =  x + 7;\n" +
                 "        return res;\n" +
@@ -32,18 +32,18 @@ public class TaskJava7611 extends OneInputValLayout implements MethodsDictationH
     @Override
     protected void logic(String val) {
         double result;
-        result = Library.task4411(11.13);//в качестве аргумента передано число
+        result = Library.task7611(11.13);//в качестве аргумента передано число
         System.out.printf("%.4f\n", result);
         double value = -79.19;
-        result = Library.task4411(value);//в качестве аргумента передано значение переменной
+        result = Library.task7611(value);//в качестве аргумента передано значение переменной
         System.out.printf("%.4f\n", result);
-        System.out.printf("%.4f\n", Library.task4411(0));//результат используется без промежуточной переменной
+        System.out.printf("%.4f\n", Library.task7611(0));//результат используется без промежуточной переменной
     }
 
     protected static class Library {
-        public static double task4411(double x) {
+        public static double task7611(double x) {
             double res;
-            res =  x + 7;
+            res = x + 7;
             return res;
         }
     }
