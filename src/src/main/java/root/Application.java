@@ -1058,6 +1058,10 @@ public class Application {
                     .addTask(new TaskCs3597())//метод с условиями и возвратом строки
                     .addTask(new TaskCs6573())//метод с условием и циклом. возврат long
             ;
+            //Хорошей идеей будет добавить здесь методы, которые возвращают String путем сбора большого ответа из нескольких маленьких частей
+            //result = "Введение"
+            //result = result + "Глава 1";
+            //return result;
         } else {
             throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
         }
