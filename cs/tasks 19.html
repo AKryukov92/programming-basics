@@ -229,7 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task3597'>7</a><li><a href='#task6573'>8</a><li><a href='#task1292'>9</a></ul><ul><li><a href='#task3946' class='example'>10*</a><li><a href='#task8920'>11</a><li><a href='#task6497'>12</a><li><a href='#task2936' class='example'>13*</a><li><a href='#task3539'>14</a><li><a href='#task6401' class='example'>15*</a><li><a href='#task7581'>16</a></ul></div><div class="task_block" id="info01">
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task3597'>7</a><li><a href='#task6573'>8</a><li><a href='#task1292'>9</a></ul><ul><li><a href='#task3946' class='example'>10*</a><li><a href='#task8920'>11</a><li><a href='#task1995' class='example'>12*</a><li><a href='#task6497'>13</a><li><a href='#task2936' class='example'>14*</a><li><a href='#task3539'>15</a><li><a href='#task6401' class='example'>16*</a><li><a href='#task7581'>17</a></ul></div><div class="task_block" id="info01">
     <h4>Подготовка проекта</h4>
     <div class="task_desc">
 <ol>
@@ -540,6 +540,43 @@ Console.WriteLine(Library.task6573(35, 24));
 <h4>Реализуйте метод для решения задачи <a href="tasks 14.html#task4283" target="_blank">ЛР14#4283(открыть в новой вкладке)</a></h4>
 <ol start='1'><li>В классе Library реализуйте публичный статический метод Task4283.</li><li>Он принимает в качестве аргументов 1 строковое значение и массив строковых значений. Метод возвращает целое число.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
 <ol start='4'><li>В классе TestSuite создайте юнит-тест для проверки задачи Task4283.</li><li>В теле юнит-теста 4 раза вызовите статический метод Task4283 класса Library. При каждом вызове в качестве аргументов нужно передавать значения из разных тестов, описанных в задаче.</li><li>Корректность результатов каждого вызова метода Task4283 проверьте с помощью статического метода AreEqual класса Assert.</li><li>После запуска юнит-теста, он должен быть отмечен зеленым знаком в списке методов.</li></ol></div>
+<div id='task1995' class='task_block'>
+<div class='task_id'>1995</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод compareArrays.</li><li>Он принимает в качестве аргументов 2 массива целых чисел</li><li>Он возвращает строку</li><li>В теле метода сформируйте ответ и верните его. Используйте значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>int[] standard = new int[]{5, 4, 3, 2, 1};
+int[] array = new int[]{5, 4, 3, 2, 1};
+System.out.println(Library.compareArrays(standard, array));
+array = new int[]{5, 4, 3};
+System.out.println(Library.compareArrays(standard, array));
+System.out.println(Library.compareArrays(
+        new int[]{9, 8, 7, 6},
+        new int[]{9, 8, 7, 6, 5}
+));
+standard = new int[]{9, 8, 7, 6, 5};
+array = new int[]{9, 111, 7};
+System.out.println(Library.compareArrays(standard, array));
+array = new int[]{6, 5, 4, 3, 2, 1};
+System.out.println(Library.compareArrays(
+        new int[]{6, 5, 0, 3},
+        array
+));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>Массивы одинаковы
+Массивы начинают различаться на индексе 3
+Массивы начинают различаться на индексе 4
+Массивы начинают различаться на индексе 1
+Массивы начинают различаться на индексе 2
+</div>
+</div>
 <div class="task_block" id="task6497">
 	<div class="task_id">6497</div>
     <h3>Задача</h3>

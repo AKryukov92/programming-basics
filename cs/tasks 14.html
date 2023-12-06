@@ -1255,34 +1255,50 @@ a+++++|
 <div class='task_id'>6988</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться.
+Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>left</th><th>right</th></tr>
+<th>standard</th><th>array</th></tr>
 <tr>
-<td>1</td><td>a s d f a</td><td>a s d f a</td><td class='preformatted'>Массивы одинаковы
+<td>1</td><td>a s d f a</td><td>a s d f a</td><td class='preformatted'>Длины массивов совпадают
+Сравниваю до индекса 5 исключительно
+Массивы одинаковы
 </td></tr>
 <tr>
-<td>2</td><td>a s d f a</td><td>a s d f g</td><td class='preformatted'>Массивы начинают различаться на индексе 4
+<td>2</td><td>a s d f a</td><td>a s d f g</td><td class='preformatted'>Длины массивов совпадают
+Сравниваю до индекса 5 исключительно
+Массивы начинают различаться на индексе 4
 </td></tr>
 <tr>
-<td>3</td><td>qwerty asdfgh zxcvb</td><td>qwerty asdfgh asdfgh</td><td class='preformatted'>Массивы начинают различаться на индексе 2
+<td>3</td><td>qwerty asdfgh zxcvb</td><td>qwerty asdfgh asdfgh</td><td class='preformatted'>Длины массивов совпадают
+Сравниваю до индекса 3 исключительно
+Массивы начинают различаться на индексе 2
 </td></tr>
 <tr>
-<td>4</td><td>qaz wsx edc</td><td>wsx edc qaz</td><td class='preformatted'>Массивы начинают различаться на индексе 0
+<td>4</td><td>qaz wsx edc</td><td>wsx edc qaz</td><td class='preformatted'>Длины массивов совпадают
+Сравниваю до индекса 3 исключительно
+Массивы начинают различаться на индексе 0
 </td></tr>
 <tr>
-<td>5</td><td>qaz wsx edc</td><td>qaz wsx edc rfv</td><td class='preformatted'>Массивы начинают различаться на индексе 3
+<td>5</td><td>qaz wsx edc</td><td>qaz wsx edc rfv</td><td class='preformatted'>Длина массива-эталона меньше длины проверяемого массива
+Сравниваю до индекса 3 исключительно
+Массивы начинают различаться на индексе 3
 </td></tr>
 <tr>
-<td>6</td><td>qaz wsx edc rfv tgb</td><td>qaz wsx edc rfv</td><td class='preformatted'>Массивы начинают различаться на индексе 4
+<td>6</td><td>qaz wsx edc rfv tgb</td><td>qaz wsx edc rfv</td><td class='preformatted'>Длина проверяемого массива меньше длины массива-эталона
+Сравниваю до индекса 4 исключительно
+Массивы начинают различаться на индексе 4
 </td></tr>
 <tr>
-<td>7</td><td>qaz wsx edc</td><td>qaz tgb ujm yhn</td><td class='preformatted'>Массивы начинают различаться на индексе 1
+<td>7</td><td>qaz wsx edc</td><td>qaz tgb ujm yhn</td><td class='preformatted'>Длина массива-эталона меньше длины проверяемого массива
+Сравниваю до индекса 3 исключительно
+Массивы начинают различаться на индексе 1
 </td></tr>
 <tr>
-<td>8</td><td>qaz wsx vbn rfv tgb</td><td>qaz wsx edc</td><td class='preformatted'>Массивы начинают различаться на индексе 2
+<td>8</td><td>qaz wsx vbn rfv tgb</td><td>qaz wsx edc</td><td class='preformatted'>Длина проверяемого массива меньше длины массива-эталона
+Сравниваю до индекса 3 исключительно
+Массивы начинают различаться на индексе 2
 </td></tr>
 </table>
 </div>

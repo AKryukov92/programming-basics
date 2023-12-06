@@ -25,6 +25,7 @@ public class Task5301 extends OneInputValLayout {
         appendCheckValuesRow("100");
         appendCheckValuesRow("10");
         appendCheckValuesRow("150");
+        appendCheckValuesRow("1");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-10");
         appendCheckValuesFooter();

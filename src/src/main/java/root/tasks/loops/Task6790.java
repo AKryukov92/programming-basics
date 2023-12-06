@@ -6,7 +6,7 @@ public class Task6790 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит число X. Оно обозначает количество градусов. Вычислить 20 следующих значений с шагом 50. Справа от каждого числа вывести соответствующее значение в радианах и результат вычисления функции y=5*cos(x).");
+        appendTaskDescEscaped("Пользователь вводит число X. Оно обозначает количество градусов. Вычислить 20 следующих значений с шагом 50 (iDeg). Справа от каждого числа вывести соответствующее значение в радианах (iRad) и результат вычисления функции y=5*cos(iRad).");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("0");
         appendCheckValuesRow("20");

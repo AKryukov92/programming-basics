@@ -6,8 +6,8 @@ public class Task6988 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться.");
-        appendCheckValuesHeader("left", "right");
+        appendTaskDescEscaped("Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.");
+        appendCheckValuesHeader("standard", "array");
         appendCheckValuesRow("a s d f a", "a s d f a");
         appendCheckValuesRow("a s d f a", "a s d f g");
         appendCheckValuesRow("qwerty asdfgh zxcvb", "qwerty asdfgh asdfgh");
@@ -21,23 +21,39 @@ public class Task6988 extends TwoInputValLayout {
     }
 
     @Override
-    protected void logic(String left, String right) {
-        String[] larr = left.split(" ");
-        String[] rarr = right.split(" ");
+    protected void logic(String standardStr, String arrayStr) {
+        String[] standard = standardStr.split(" ");
+        String[] array = arrayStr.split(" ");
+        int minLen;
+        if (standard.length < array.length) {
+            System.out.println("Длина массива-эталона меньше длины проверяемого массива");
+            minLen = standard.length;
+        } else if (array.length < standard.length){
+            System.out.println("Длина проверяемого массива меньше длины массива-эталона");
+            minLen = array.length;
+        } else {
+            System.out.println("Длины массивов совпадают");
+            minLen = array.length;
+        }
+        System.out.println("Сравниваю до индекса " + minLen + " исключительно");
         int i = 0;
-        while (i < larr.length && i < rarr.length) {
-            if (!larr[i].equals(rarr[i])) {
+        while (i < minLen) {
+            if (!standard[i].equals(array[i])) {
                 System.out.println("Массивы начинают различаться на индексе " + i);
                 return;
             }
             i = i + 1;
         }
-        if (larr.length < rarr.length) {
-            System.out.println("Массивы начинают различаться на индексе " + larr.length);
-        } else if (larr.length > rarr.length) {
-            System.out.println("Массивы начинают различаться на индексе " + rarr.length);
+        if (standard.length < array.length) {
+            System.out.println("Массивы начинают различаться на индексе " + standard.length);
+        } else if (standard.length > array.length) {
+            System.out.println("Массивы начинают различаться на индексе " + array.length);
         } else {
             System.out.println("Массивы одинаковы");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task6988());
     }
 }

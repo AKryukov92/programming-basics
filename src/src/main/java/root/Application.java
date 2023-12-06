@@ -120,7 +120,7 @@ public class Application {
         fillReadingFiles(taskBooksCs[16]);
         fillWritingFiles(taskBooksCs[17]);
 
-        unitTesting(taskBooksCs[18]);
+        methodsDecoration(taskBooksCs[18]);
         fillExceptions(taskBooksCs[19]);
         fillAbstractDataStructures(taskBooksCs[20]);
         fillInternalState(taskBooksCs[21]);
@@ -154,7 +154,7 @@ public class Application {
         fillReadingFiles(taskBooksJava[16]);
         fillWritingFiles(taskBooksJava[17]);
 
-        unitTesting(taskBooksJava[18]);
+        methodsDecoration(taskBooksJava[18]);
         fillExceptions(taskBooksJava[19]);
         fillAbstractDataStructures(taskBooksJava[20]);
         fillInternalState(taskBooksJava[21]);
@@ -1021,7 +1021,7 @@ public class Application {
         //рассчитываю, что ученики заметят это и смогут правильно переиспользовать код
     }
 
-    private static void unitTesting(TaskBook taskBook) {
+    private static void methodsDecoration(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
                 .addCitation("info01")
@@ -1078,6 +1078,7 @@ public class Application {
                     .addTask(6497)
 
                     .withGroup("Возврат массива в качестве результата")
+                    .addExample(new TaskJava1995())//сравнение массивов
                     .addExample(new TaskJava2936())
                     .addTask(new TaskJava3539())
 
@@ -1090,6 +1091,7 @@ public class Application {
             taskBook.addTask(new TaskCs8920())
 
                     .withGroup("Возврат массива в качестве результата")
+                    .addExample(new TaskCs1995())//сравнение массивов
                     .addTask(6497)//сначала среднее арифм. потом вычесть его из всех элементов
                     .addExample(new TaskCs2936())
                     .addTask(new TaskCs3539())
