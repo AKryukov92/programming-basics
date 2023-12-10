@@ -30,7 +30,7 @@ public class Task5568 extends OneInputValLayout {
         int row = 0;
         while (row <= 9) {
             int i = 0;
-            while (i <= width) {
+            while (i < width) {
                 System.out.print(row);
                 i++;
             }

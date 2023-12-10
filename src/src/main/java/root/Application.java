@@ -613,7 +613,17 @@ public class Application {
     private static void fillBasicArrayOperations(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
-                .addExample(new Task4425())//образец чтения из массива
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava4425())//образец чтения из массива
+            ;
+        } else if (taskBook.isCsharp()) {
+            taskBook
+                    .addExample(new TaskCs4425())//образец чтения из массива
+            ;
+        }
+        taskBook
                 .addTask(new Task7834())//элементы на конкретных индексах
                 .addTask(new Task5873())//следующий и предыдущий
                 .addTask(new Task3908())//третий с конца
@@ -625,9 +635,18 @@ public class Application {
                 .addTask(new Task9980())//чтение из массива по указанным индексам
 
                 .withGroup("Обработка массивов циклом")
-                .addExample(new Task5683())
+        ;
+        if (taskBook.isJava()) {
+            taskBook
+                    .addExample(new TaskJava5683())
+            ;
+        } else if (taskBook.isCsharp()) {
+            taskBook
+                    .addExample(new TaskCs5683())
+            ;
+        }
+        taskBook
                 .addTask(new Task8557())
-                .addCitation("link_c3_p12.8")
                 .addTask(new Task1223())
                 .addTask(new Task8311())
                 .addTask(new Task6563())

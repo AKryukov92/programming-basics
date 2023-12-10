@@ -16,7 +16,7 @@ public class TaskJava2801 extends TwoInputValLayout {
         appendCheckValuesRow("0", "23");
         appendCheckValuesRow("4", "0");
         appendCheckValuesFooter();
-        appendTaskDescNonEscaped("В этой задаче вам нужно работать только с целой частью чисел. Цифры после запятой нужно отбросить при делении. Поэтому можно воспользоваться типом \"целое число\". Переменная для целого числа объявляется так:");
+        appendTaskDescNonEscaped("В этой задаче вам нужно работать только с целой частью чисел. Цифры после запятой нужно отбросить при делении. Поэтому можно воспользоваться типом \"целое число\". Пример объявления переменной для целого числа можно увидеть в примере ниже:");
         appendCheckSingleNonEscaped(getLogic(getClass().getSimpleName()));
         appendFooter();
     }

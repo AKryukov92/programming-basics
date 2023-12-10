@@ -260,10 +260,10 @@ zoom{
 находится элемент со значением 'p'
 </td></tr>
 <tr>
-<td>4</td><td>qwer-tyui</td><td>3</td><td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+<td>4</td><td>qwer-tyui</td><td>3</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
 </td></tr>
 <tr>
-<td>5</td><td>qw-er-ty-ui</td><td>-1</td><td class='preformatted'>Число A должно быть в интервале [0, размер массива)
+<td>5</td><td>qw-er-ty-ui</td><td>-1</td><td class='preformatted'>Индекс A должен быть больше или равен 0
 </td></tr>
 <tr>
 <td>6</td><td>a--a</td><td>1</td><td class='preformatted'>В массиве длиной 3
@@ -279,12 +279,43 @@ zoom{
 <td>8</td><td></td><td>8</td><td class='preformatted'>Исходная строка пуста
 </td></tr>
 </table>
+<div class='task_desc'>
+Решение задачи выглядит так:
+</div>
+<div class='check_single preformatted'>if (firstValue.isEmpty()) {//условие истинно если вы ничего не ввели и нажали Enter
+    System.out.println("Исходная строка пуста");
+}
+if (!firstValue.isEmpty()) {//обратите внимание на восклицательный знак в начале. Условие с восклицательным знаком истинно, когда выражение после знака - ложно.
+    String[] arr;//объявление переменной для хранения массива текстовых фрагментов
+    arr = firstValue.split("-");//разбиение текстового фрагмента на части. Знак "-" называется разделитель.
+    //qw-er-ty-ui превращается в массив
+    //на индексе 0 элемент qw
+    //на индексе 1 элемент er
+    //на индексе 2 элемент ty
+    //на индексе 3 элемент ui
+    int a;//тип переменной - целое число. Её назначение - хранить индекс элемента
+    a = Integer.parseInt(secondValue);
+    if (a < 0) {//индексы в массиве начинаются с 0
+        System.out.println("Индекс A должен быть больше или равен 0");
+    }
+    if (arr.length <= a) {//длина массива всегда на 1 больше, чем индекс последнего числа
+        System.out.println("Индекс A должен быть строго меньше длины массива");
+    }
+    if (0 <= a) {
+        if (a < arr.length) {
+            System.out.println("В массиве длиной " + arr.length);
+            System.out.println("на индексе " + a);
+            System.out.println("находится элемент со значением '" + arr[a] + "'");
+        }
+    }
+}
+</div>
 </div>
 <div id='task7834' class='task_block'>
 <div class='task_id'>7834</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - символы, разделенные символом ","(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если элемент отсутствует, вывести сообщение "нет элемента на индексе X".
+Пользователь вводит данные - символы, разделенные символом ","(точка с запятой). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если длина массива слишком маленькая, чтобы содержать нужный индекс, нужно напечатать сообщение "нет элемента на индексе X".
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (arr)</th><th>Результат</th></tr>
@@ -344,12 +375,11 @@ zoom{
 <div class='task_id'>5873</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число T и данные - символы, разделенные пробелами.
-Вывести на экран элемент на индексе T.Если возможно, то вывести на экран следующий и предыдущий элементы.
+Пользователь вводит число idx и данные - символы, разделенные пробелами. Вывести на экран элемент на индексе idx. Если возможно, то вывести на экран следующий и предыдущий элементы.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>data</th><th>T</th></tr>
+<th>data</th><th>idx</th></tr>
 <tr>
 <td>1</td><td>as df gh jk</td><td>1</td><td class='preformatted'>В массиве длиной 4
 Элемент на индексе 1 содержит значение df
@@ -405,13 +435,13 @@ zoom{
 Следующий элемент не существует
 </td></tr>
 <tr>
-<td>10</td><td>single</td><td>1</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+<td>10</td><td>single</td><td>1</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
 </td></tr>
 <tr>
-<td>11</td><td>as df gh jk</td><td>4</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+<td>11</td><td>as df gh jk</td><td>4</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
 </td></tr>
 <tr>
-<td>12</td><td>as df gh jk</td><td>-1</td><td class='preformatted'>Число T должно быть в интервале [0, размер массива)
+<td>12</td><td>as df gh jk</td><td>-1</td><td class='preformatted'>Индекс A должен быть больше или равен 0
 </td></tr>
 <tr>
 <td>13</td><td></td><td>0</td><td class='preformatted'>Исходная строка пуста
@@ -709,7 +739,7 @@ op 4
 fgh 1
 jkl 2
 </td></tr>
-<tr><td>4</td><td></td><td class='preformatted'>
+<tr><td>4</td><td></td><td class='preformatted'> 0
 </td></tr>
 <tr><td>5</td><td>q w e r a s d f z x c v</td><td class='preformatted'>q 0
 w 1
@@ -725,6 +755,43 @@ c 10
 v 11
 </td></tr>
 </table>
+<div class='task_desc'>
+Подробное решение этой задачи выглядит так:
+</div>
+<div class='check_single preformatted'>if (str.isEmpty()) {
+    System.out.println("Исходная строка пуста");
+}
+if (!str.isEmpty()) {
+    String[] mas;
+    mas = str.split(" ");
+    int index = 0;//переменная объединяет два назначения:
+    //* Будущий счётчик цикла
+    //* Индекс (номер) элемента
+    if (index < mas.length) {
+        System.out.println(mas[index] + " " + index);
+        index = index + 1;
+    }
+    if (index < mas.length) {
+        System.out.println(mas[index] + " " + index);
+        index = index + 1;
+    }
+    if (index < mas.length) {
+        System.out.println(mas[index] + " " + index);
+        index = index + 1;
+    }
+    if (index < mas.length) {
+        System.out.println(mas[index] + " " + index);
+        index = index + 1;
+    }
+    if (index < mas.length) {
+        System.out.println(mas[index] + " " + index);
+        index = index + 1;
+    }
+}
+</div>
+<div class='task_desc'>
+Примените конструкцию цикла чтобы сделать решение универсальным.
+</div>
 </div>
 <div id='task8557' class='task_block'>
 <div class='task_id'>8557</div>
@@ -766,10 +833,7 @@ v 11
 <tr><td>4</td><td></td><td class='preformatted'></td></tr>
 </table>
 </div>
-<div id="link_c3_p12.8" class="task_block">
-	<div class="check_single">Несколько советов по оформлению массивов можно найти в главе 12.8 "Массивы" части III книги "Совершенный код" <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=322" target="_blank">(открыть в новой вкладке)</a>.
-	</div>
-</div><div id='task1223' class='task_block'>
+<div id='task1223' class='task_block'>
 <div class='task_id'>1223</div>
 <h3>Задача</h3>
 <div class='task_desc'>

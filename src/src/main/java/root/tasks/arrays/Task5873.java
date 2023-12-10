@@ -10,57 +10,66 @@ import java.nio.charset.StandardCharsets;
 public class Task5873 extends TwoInputValLayout {
     @Override
     protected void logic(String firstValue, String secondValue) {
-        int t = Integer.parseInt(secondValue);
+        int idx = Integer.parseInt(secondValue);
         if (firstValue.isEmpty()) {
             System.out.println("Исходная строка пуста");
-            return;
         }
-        String[] arr = firstValue.split(" ");
-        if (t < 0 || t >= arr.length) {
-            System.out.println("Число T должно быть в интервале [0, размер массива)");
-            return;
-        }
-        System.out.println("В массиве длиной " + arr.length);
-        System.out.println("Элемент на индексе " + t + " содержит значение " + arr[t]);
-        if (t == 0) {
-            System.out.println("Предыдущий элемент не существует");
-        } else {
-            System.out.println("Значение предыдущего элемента " + arr[t - 1]);
-        }
-        if (t == arr.length - 1) {
-            System.out.println("Следующий элемент не существует");
-        } else {
-            System.out.println("Значение следующего элемента " + arr[t + 1]);
+        if (!firstValue.isEmpty()) {
+            String[] arr = firstValue.split(" ");
+            if (idx < 0) {
+                System.out.println("Индекс A должен быть больше или равен 0");
+            }
+            if (arr.length <= idx) {
+                System.out.println("Индекс A должен быть строго меньше длины массива");
+            }
+            if (0 <= idx) {
+                if (idx < arr.length) {
+                    System.out.println("В массиве длиной " + arr.length);
+                    System.out.println("Элемент на индексе " + idx + " содержит значение " + arr[idx]);
+                    if (idx == 0) {
+                        System.out.println("Предыдущий элемент не существует");
+                    }
+                    if (0 < idx){
+                        System.out.println("Значение предыдущего элемента " + arr[idx - 1]);
+                    }
+                    if (idx == arr.length - 1) {
+                        System.out.println("Следующий элемент не существует");
+                    }
+                    if (idx < arr.length - 1){
+                        System.out.println("Значение следующего элемента " + arr[idx + 1]);
+                    }
+                }
+            }
         }
     }
 
     private void logic2(String firstValue, String secondValue) {
-        int t = Integer.parseInt(secondValue);
+        int idx = Integer.parseInt(secondValue);
         if (firstValue.isEmpty()) {
             System.out.println("Исходная строка пуста");
             return;
         }
         String[] arr = firstValue.split(" ");
-        if (t < 0 || t >= arr.length) {
+        if (idx < 0 || idx >= arr.length) {
             System.out.println("Число T должно быть в интервале [0, размер массива)");
             return;
         }
-        if (arr.length == 1 && t == 0) {
+        if (arr.length == 1 && idx == 0) {
             System.out.println("Элемент на индексе 0 содержит значение " + arr[0] + "\n" +
                     "Предыдущий элемент не существует\n" +
                     "Следующий элемент не существует");
-        } else if (t == 0) {
+        } else if (idx == 0) {
             System.out.println("Элемент на индексе 0 содержит значение " + arr[0] + "\n" +
                     "Предыдущий элемент не существует\n" +
-                    "Значение следующего элемента " + arr[t + 1]);
-        } else if (t == arr.length - 1) {
-            System.out.println("Элемент на индексе " + t + " содержит значение " + arr[t] + "\n" +
-                    "Значение предыдущего элемента " + arr[t - 1] + "\n" +
+                    "Значение следующего элемента " + arr[idx + 1]);
+        } else if (idx == arr.length - 1) {
+            System.out.println("Элемент на индексе " + idx + " содержит значение " + arr[idx] + "\n" +
+                    "Значение предыдущего элемента " + arr[idx - 1] + "\n" +
                     "Следующий элемент не существует");
         } else {
-            System.out.println("Элемент на индексе " + t + " содержит значение " + arr[t] + "\n" +
-                    "Значение предыдущего элемента " + arr[t - 1] + "\n" +
-                    "Значение следующего элемента " + arr[t + 1]);
+            System.out.println("Элемент на индексе " + idx + " содержит значение " + arr[idx] + "\n" +
+                    "Значение предыдущего элемента " + arr[idx - 1] + "\n" +
+                    "Значение следующего элемента " + arr[idx + 1]);
         }
     }
 
@@ -95,10 +104,10 @@ public class Task5873 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит число T и данные - символы, разделенные пробелами.\n" +
-                "Вывести на экран элемент на индексе T." +
+        appendTaskDescEscaped("Пользователь вводит число idx и данные - символы, разделенные пробелами. " +
+                "Вывести на экран элемент на индексе idx. " +
                 "Если возможно, то вывести на экран следующий и предыдущий элементы.");
-        appendCheckValuesHeader("data", "T");
+        appendCheckValuesHeader("data", "idx");
         appendCheckValuesRow("as df gh jk", "1");
         appendCheckValuesRow("a s d f g h j k", "3");
 

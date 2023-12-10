@@ -1,24 +1,6 @@
 package root.tasks.arrays;
 
-import root.tasks.OneInputValLayout;
-
-public class Task5683 extends OneInputValLayout {
-    @Override
-    protected void logic(String str) {
-        if (str.isEmpty()) {
-            System.out.println();
-            return;
-        }
-        String[] mas = str.split(" ");
-        int index = 0;
-        while (index < mas.length) {
-            System.out.print(mas[index]);
-            System.out.print(" ");
-            System.out.println(index);
-            index = index + 1;
-        }
-    }
-
+public class TaskCs5683 extends TaskJava5683 {
     @Override
     protected void makeLayout() {
         appendHeader();
@@ -30,10 +12,13 @@ public class Task5683 extends OneInputValLayout {
         appendCheckValuesRow("");
         appendCheckValuesRow("q w e r a s d f z x c v");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Подробное решение этой задачи выглядит так:");
+        appendCheckSingleNonEscaped(getMain(getClass().getSimpleName()));
+        appendTaskDescEscaped("Примените конструкцию цикла чтобы сделать решение универсальным.");
         appendFooter();
     }
 
     public static void main(String[] args) {
-        System.out.println(new Task5683().getContent());
+        System.out.println(new TaskCs5683().getContent());
     }
 }
