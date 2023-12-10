@@ -12,7 +12,7 @@ public class Console {
     }
     public static void WriteLine(String template, Object... args) {
         String actualTemplate =template.replaceAll("\\{\\d}", "%s")
-                .replaceAll("\\{\\d:\\dF}", "%.4f") + "\n" ;
+                .replaceAll("\\{\\d:F\\d}", "%.4f") + "\n" ;
         System.out.printf(actualTemplate, args);
     }
 }

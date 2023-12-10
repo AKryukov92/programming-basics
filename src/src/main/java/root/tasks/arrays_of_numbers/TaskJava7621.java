@@ -2,7 +2,30 @@ package root.tasks.arrays_of_numbers;
 
 import root.tasks.OneInputValLayout;
 
-public class Task7621 extends OneInputValLayout {
+public class TaskJava7621 extends OneInputValLayout {
+    private class Verbose {
+    protected void logic(String value) {
+        String[] arr = value.split(" ");
+        int sum = 0;//переменная для накопления суммы
+        System.out.println("Значение элемента на индексе 0 это " + arr[0]);
+        int at0 = Integer.parseInt(arr[0]);
+        sum = sum + at0;
+        System.out.println("Промежуточный итог: " + sum);
+        System.out.println("Значение элемента на индексе 1 это " + arr[1]);
+        int at1 = Integer.parseInt(arr[1]);
+        sum = sum + at1;
+        System.out.println("Промежуточный итог: " + sum);
+        System.out.println("Значение элемента на индексе 3 это " + arr[3]);
+        int at3 = Integer.parseInt(arr[3]);
+        sum = sum + at3;
+        System.out.println("Промежуточный итог: " + sum);
+        System.out.println("Значение элемента на индексе 4 это " + arr[4]);
+        int at4 = Integer.parseInt(arr[4]);
+        sum = sum + at4;
+        System.out.println("Промежуточный итог: " + sum);
+        System.out.println("Финальный итог: " + sum);
+    }
+    }
     @Override
     protected void logic(String value) {
         if (value.isEmpty()) {
@@ -61,10 +84,13 @@ public class Task7621 extends OneInputValLayout {
         appendCheckValuesRow("77777 44444");
         appendCheckValuesRow("987654");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Решение для идеальных исходных данных выглядит так:");
+        appendCheckSingleNonEscaped(getLogic(getClass().getSimpleName()));
+        appendTaskDescEscaped("Добавьте проверки и сообщения об ошибках в случае с маленькими массивами.");
         appendFooter();
     }
 
     public static void main(String[] args) {
-        System.out.println(new Task7621().getContent());
+        System.out.println(new TaskJava7621().getContent());
     }
 }

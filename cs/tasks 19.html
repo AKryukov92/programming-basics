@@ -229,6 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task3597'>7</a><li><a href='#task6573'>8</a><li><a href='#task1292'>9</a></ul><ul><li><a href='#task3946' class='example'>10*</a><li><a href='#task8920'>11</a><li><a href='#task1995' class='example'>12*</a><li><a href='#task6497'>13</a><li><a href='#task2936' class='example'>14*</a><li><a href='#task3539'>15</a><li><a href='#task6401' class='example'>16*</a><li><a href='#task7581'>17</a></ul></div><div class="task_block" id="info01">
     <h4>Подготовка проекта</h4>
     <div class="task_desc">
@@ -365,11 +366,11 @@ Library.task2772(-3, 0, 2);
 </div>
 <div class='check_single preformatted'>double result;
 result = Library.task7611(11.13);//в качестве аргумента передано число
-Console.WriteLine("{0:4F}", result);
+Console.WriteLine("{0:F4}", result);
 double value = -79.19;
 result = Library.task7611(value);//в качестве аргумента передано значение переменной
-Console.WriteLine("{0:4F}", result);
-Console.WriteLine("{0:4F}", Library.task7611(0));//результат используется без промежуточной переменной
+Console.WriteLine("{0:F4}", result);
+Console.WriteLine("{0:F4}", Library.task7611(0));//результат используется без промежуточной переменной
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -397,7 +398,7 @@ Console.WriteLine("{0:4F}", Library.task7611(0));//результат испол
 </div>
 <div class='check_single preformatted'>double result;
 result = Library.task4776(69.97);
-Console.WriteLine("{0:4F}", result);
+Console.WriteLine("{0:F4}", result);
 //для наглядности проверки можно писать дополнительные условия
 if (0.9395 &lt;= result && result &lt;= 0.9396) {
     Console.WriteLine("Верно");
@@ -405,8 +406,8 @@ if (0.9395 &lt;= result && result &lt;= 0.9396) {
     Console.WriteLine("Результат некорректный");
 }
 result = Library.task4776(31);
-Console.WriteLine("{0:4F}", result);
-Console.WriteLine("{0:4F}", Library.task4776(90));
+Console.WriteLine("{0:F4}", result);
+Console.WriteLine("{0:F4}", Library.task4776(90));
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:

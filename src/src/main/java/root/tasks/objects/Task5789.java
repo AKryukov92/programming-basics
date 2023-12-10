@@ -1,13 +1,13 @@
 package root.tasks.objects;
 
 import root.tasks.MultipleInputValLayout;
-import root.tasks.assertions.Task1058;
+import root.tasks.assertions.TaskJava1058;
 
 public class Task5789 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(Task1058.class.getSimpleName()));
+        appendSubheading("Реализуйте статический метод для решения задачи " + linkToTask(TaskJava1058.class.getSimpleName()));
         appendOrderedNonEscaped(
                 "В папке для исходного кода создайте класс Point.",
                 "В классе Point реализуйте публичный статический метод distanceBetween.",

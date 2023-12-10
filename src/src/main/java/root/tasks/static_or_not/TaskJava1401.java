@@ -2,7 +2,7 @@ package root.tasks.static_or_not;
 
 import root.tasks.LayoutMaker;
 import root.tasks.MethodsDictationHelper;
-import root.tasks.assertions.Task1058;
+import root.tasks.assertions.TaskJava1058;
 
 public class TaskJava1401 extends LayoutMaker implements MethodsDictationHelper {
     @Override
@@ -16,7 +16,7 @@ public class TaskJava1401 extends LayoutMaker implements MethodsDictationHelper 
                 "Создайте класс PointSuite в папке для тестов"
         );
         appendSubheading("Условие задачи совпадает с " + linkToTask(1058));
-        appendTaskDescEscaped(Task1058.getTaskDescription());
+        appendTaskDescEscaped(TaskJava1058.getTaskDescription());
         appendSubheading("Реализуйте статический метод distanceBetween");
         appendOrderedNonEscaped(
                 "Он принимает в качестве аргумента 2 экземпляра класса Point",

@@ -229,6 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1315' class='example'>1*</a><li><a href='#task1631'>2</a><li><a href='#task2594'>3</a><li><a href='#task3762'>4</a><li><a href='#task3550'>5</a><li><a href='#task1139'>6</a><li><a href='#task9969'>7</a><li><a href='#task5301'>8</a><li><a href='#task6790'>9</a><li><a href='#task3850'>10</a></ul><ul><li><a href='#task6059'>11</a><li><a href='#task7086'>12</a><li><a href='#task5149'>13</a><li><a href='#task6066' class='example'>14*</a><li><a href='#task1259'>15</a><li><a href='#task2565'>16</a><li><a href='#task8722'>17</a><li><a href='#task2321'>18</a><li><a href='#task5053'>19</a><li><a href='#task6663'>20</a><li><a href='#task4338'>21</a><li><a href='#task7054'>22</a></ul></div><div id='task1315' class='task_block'>
 <div class='task_id'>1315</div>
 <h3>Задача</h3>
@@ -660,7 +661,7 @@ while (i <= limit) {
 <div class='task_id'>6790</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число X. Оно обозначает количество градусов. Вычислить 20 следующих значений с шагом 50 (iDeg). Справа от каждого числа вывести соответствующее значение в радианах (iRad) и результат вычисления функции y=5*cos(iRad).
+Пользователь вводит число X. Оно обозначает количество градусов. Вычислить 20 следующих значений с шагом 50 (iDeg). Справа от каждого числа вывести соответствующее значение в радианах (iRad) и результат вычисления функции y=5*cos(iRad). Чтобы красиво оформить столбики чисел, напишите после чисел символ табуляции "\t".
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
@@ -753,6 +754,28 @@ while (i <= limit) {
 917	16,0047	-4,7815
 </td></tr>
 </table>
+<div class='task_desc'>
+Подробное решение для первых двух строк текста:
+</div>
+<div class='check_single preformatted'>double xRad, current, xDeg;
+xDeg = Integer.parseInt(value);
+int i = 0;
+System.out.println("Градусы\tРадианы\tФункция");
+if (i < 20) {
+    xRad = xDeg * Math.PI / 180;
+    current = 5 * Math.cos(xRad);
+    System.out.printf("%.0f\t%.4f\t%.4f\n", xDeg, xRad, current);
+    xDeg = xDeg + 50;
+    i = i + 1;
+}
+if (i < 20) {
+    xRad = xDeg * Math.PI / 180;
+    current = 5 * Math.cos(xRad);
+    System.out.printf("%.0f\t%.4f\t%.4f\n", xDeg, xRad, current);
+    xDeg = xDeg + 50;
+    i = i + 1;
+}
+</div>
 </div>
 <div id='task3850' class='task_block'>
 <div class='task_id'>3850</div>
@@ -768,18 +791,22 @@ while (i <= limit) {
 от 20,0000 до 40,0000
 от 40,0000 до 60,0000
 от 60,0000 до 80,0000
+от 80,0000 до 100,0000
 </td></tr>
 <tr><td>2</td><td>10</td><td>20</td><td>2</td><td class='preformatted'>Интервал от 10,0000 до 20,0000 делится на 2 частей шириной 5,0000. Получаются интервалы:
 от 10,0000 до 15,0000
+от 15,0000 до 20,0000
 </td></tr>
 <tr><td>3</td><td>-50</td><td>50</td><td>4</td><td class='preformatted'>Интервал от -50,0000 до 50,0000 делится на 4 частей шириной 25,0000. Получаются интервалы:
 от -50,0000 до -25,0000
 от -25,0000 до 0,0000
 от 0,0000 до 25,0000
+от 25,0000 до 50,0000
 </td></tr>
 <tr><td>4</td><td>20</td><td>40</td><td>3</td><td class='preformatted'>Интервал от 20,0000 до 40,0000 делится на 3 частей шириной 6,6667. Получаются интервалы:
 от 20,0000 до 26,6667
 от 26,6667 до 33,3333
+от 33,3333 до 40,0000
 </td></tr>
 </table>
 </div>
@@ -787,7 +814,7 @@ while (i <= limit) {
 <div class='task_id'>6059</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит два числа: P и M. Нужно вывести на экран две строчки чисел. В первой строчке 10 чисел с шагом 1 начиная с P. Во второй строчку 10 чисел с шагом 1 начиная с M.
+Пользователь вводит два числа: P и M. Нужно вывести на экран две строчки чисел. В первой строчке 10 чисел с шагом 1 начиная с P. Во второй строчке 10 чисел с шагом 1 начиная с M.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>

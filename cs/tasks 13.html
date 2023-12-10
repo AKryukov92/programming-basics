@@ -229,6 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7621' class='example'>1*</a><li><a href='#task3669'>2</a><li><a href='#task5951'>3</a><li><a href='#task2802'>4</a><li><a href='#task6580'>5</a><li><a href='#task8696' class='example'>6*</a><li><a href='#task5969'>7</a><li><a href='#task5170'>8</a><li><a href='#task3946'>9</a><li><a href='#task6497'>10</a><li><a href='#task5648'>11</a><li><a href='#task3788'>12</a></ul><ul><li><a href='#task7290' class='example'>13*</a><li><a href='#task2173'>14</a><li><a href='#task9576'>15</a><li><a href='#task4497'>16</a><li><a href='#task3218'>17</a><li><a href='#task7260'>18</a><li><a href='#task5795'>19</a><li><a href='#task8167'>20</a></ul></div><div id='task7621' class='task_block'>
 <div class='task_id'>7621</div>
 <h3>Задача</h3>
@@ -290,6 +291,32 @@ zoom{
 Финальный итог: 987654
 </td></tr>
 </table>
+<div class='task_desc'>
+Решение для идеальных исходных данных выглядит так:
+</div>
+<div class='check_single preformatted'>String[] arr = value.split(" ");
+int sum = 0;//переменная для накопления суммы
+Console.WriteLine("Значение элемента на индексе 0 это " + arr[0]);
+int at0 = Int32.Parse(arr[0]);
+sum = sum + at0;
+Console.WriteLine("Промежуточный итог: " + sum);
+Console.WriteLine("Значение элемента на индексе 1 это " + arr[1]);
+int at1 = Int32.Parse(arr[1]);
+sum = sum + at1;
+Console.WriteLine("Промежуточный итог: " + sum);
+Console.WriteLine("Значение элемента на индексе 3 это " + arr[3]);
+int at3 = Int32.Parse(arr[3]);
+sum = sum + at3;
+Console.WriteLine("Промежуточный итог: " + sum);
+Console.WriteLine("Значение элемента на индексе 4 это " + arr[4]);
+int at4 = Int32.Parse(arr[4]);
+sum = sum + at4;
+Console.WriteLine("Промежуточный итог: " + sum);
+Console.WriteLine("Финальный итог: " + sum);
+</div>
+<div class='task_desc'>
+Добавьте проверки и сообщения об ошибках в случае с маленькими массивами.
+</div>
 </div>
 <div id='task3669' class='task_block'>
 <div class='task_id'>3669</div>

@@ -16,15 +16,13 @@ public class Task8613 extends TwoInputValLayout {
         String[] fragments = firstValue.split(" ");
         String[] indexes = secondValue.split(" ");
         int i = 0;
-        while(i < indexes.length){
+        while (i < indexes.length) {
             int j = Integer.parseInt(indexes[i]);
             if (fragments.length > j) {
                 System.out.print("Значение элемента на индексе " + j + " это ");
                 System.out.println(fragments[j]);
             } else {
-                System.out.print("Фрагмент на индексе ");
-                System.out.print(j);
-                System.out.println(" отсутствует");
+                System.out.print("В массиве длиной " + fragments.length + " не может быть элемента на индексе " + j);
             }
             i = i + 1;
         }

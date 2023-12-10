@@ -107,6 +107,15 @@ public class TaskBook {
         return this;
     }
 
+    public TaskBook addTask(LayoutMaker layoutMakerCs, LayoutMaker layoutMakerJava) {
+        if (isJava()) {
+            addTask(layoutMakerJava);
+        } else if (isCsharp()) {
+            addTask(layoutMakerCs);
+        }
+        return this;
+    }
+
     public TaskBook addExample(int id) {
         checkIfAlreadyPresent(id);
         LabTask task = new LabTask(id, getSourceDirectory(), true)
@@ -121,6 +130,15 @@ public class TaskBook {
         checkIfAlreadyPresent(task.getId());
         taskById.put(task.getId(), task);
         fragmentsOfLastGroup.add(task);
+        return this;
+    }
+
+    public TaskBook addExample(LayoutMaker layoutMakerCs, LayoutMaker layoutMakerJava) {
+        if (isJava()) {
+            addExample(layoutMakerJava);
+        } else if (isCsharp()) {
+            addExample(layoutMakerCs);
+        }
         return this;
     }
 
@@ -213,7 +231,7 @@ public class TaskBook {
         }
         writer.write("Версия ");
         writer.write(gitHash);
-        writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
+        writer.write(". Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a>");
         writer.write("</body></html>");
         writer.close();
         System.out.println("Taskbook file with name " + result.getAbsolutePath() + " has been made.");

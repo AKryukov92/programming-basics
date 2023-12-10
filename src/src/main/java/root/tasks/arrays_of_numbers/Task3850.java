@@ -31,7 +31,7 @@ public class Task3850 extends MultipleInputValLayout {
         System.out.printf("Интервал от %.4f до %.4f делится на %.0f частей шириной %.4f. Получаются интервалы:\n",
                 start, end, amount, partWidth);
         double prev = start;
-        while (i < end) {
+        while (i <= end) {
             System.out.printf("от %.4f до %.4f\n", prev, i);
             prev = i;
             i += partWidth;

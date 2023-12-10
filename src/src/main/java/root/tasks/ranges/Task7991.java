@@ -11,19 +11,17 @@ public class Task7991 extends MultipleInputValLayout {
         int z = Integer.parseInt(args[2]);
         if (-11 < x) {
             if (x < 13) {
-                System.out.print(x);
-                System.out.print(" ");
+                System.out.println(x);
             }
         }
         if (-11 < y) {
             if (y < 13) {
-                System.out.print(y);
-                System.out.print(" ");
+                System.out.println(y);
             }
         }
         if (-11 < z) {
             if (z < 13) {
-                System.out.print(z);
+                System.out.println(z);
             }
         }
     }

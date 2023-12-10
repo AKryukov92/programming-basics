@@ -1,4 +1,4 @@
-package root.tasks.arrays_of_numbers;
+package root.tasks.combinations;
 
 import root.tasks.OneInputValLayout;
 
@@ -72,13 +72,30 @@ public class Task1217 extends OneInputValLayout {
                             System.out.println("Интервалы не пересекаются. Правая граница зеленого " + greenB + " левее левого края красного " + redA);
                         }
                         if (redA <= greenB) {//redA greenA redB greenB
-                            System.out.println("Интервалы пересекаются");
+                            if (greenA < redB) {
+                                if (redA < greenA) {
+                                    if (greenB < redB) {
+                                        System.out.println("Интервалы пересекаются в диапазоне от " + greenA + " до " + greenB + " зеленый внутри красного");
+                                    }
+                                    if (redB < greenB) {
+                                        System.out.println("Интервалы пересекаются в диапазоне от " + greenA + " до " + redB + " зеленый правее красного");
+                                    }
+                                }
+                                if (greenA < redA) {
+                                    if (greenB < redB) {
+                                        System.out.println("Интервалы пересекаются в диапазоне от " + redA + " до " + greenB + " зеленый левее красного");
+                                    }
+                                    if (redB < greenB) {
+                                        System.out.println("Интервалы пересекаются в диапазоне от " + redA + " до " + redB + " красный внутри зеленого");
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-
+    }
 
     public static void main(String[] args) {
         System.out.println(new Task1217());

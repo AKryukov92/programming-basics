@@ -29,7 +29,7 @@ public class TaskCs4776 extends OneInputValLayout {
     protected void logic(String value) {
         double result;
         result = Library.task4776(69.97);
-        Console.WriteLine("{0:4F}", result);
+        Console.WriteLine("{0:F4}", result);
         //для наглядности проверки можно писать дополнительные условия
         if (0.9395 <= result && result <= 0.9396) {
             Console.WriteLine("Верно");
@@ -37,8 +37,8 @@ public class TaskCs4776 extends OneInputValLayout {
             Console.WriteLine("Результат некорректный");
         }
         result = Library.task4776(31);
-        Console.WriteLine("{0:4F}", result);
-        Console.WriteLine("{0:4F}", Library.task4776(90));
+        Console.WriteLine("{0:F4}", result);
+        Console.WriteLine("{0:F4}", Library.task4776(90));
     }
 
     protected static class Library {

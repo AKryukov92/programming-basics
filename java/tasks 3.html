@@ -229,6 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4411' class='example'>1*</a><li><a href='#task8428' class='example'>2*</a><li><a href='#task1976'>3</a><li><a href='#task3435'>4</a><li><a href='#task9865'>5</a><li><a href='#task7457'>6</a><li><a href='#task7237'>7</a><li><a href='#task7711' class='example'>8*</a><li><a href='#task3474'>9</a><li><a href='#task1262'>10</a><li><a href='#task9164'>11</a><li><a href='#task3558'>12</a><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a></ul></div><div id='task4411' class='task_block'>
 <div class='task_id'>4411</div>
 <h3>Задача</h3>
@@ -271,10 +272,10 @@ System.out.printf("Результат равен %.4f", result); //Выраже�
 <div class='task_desc'>
 Если вы получили ошибку:
 </div>
-<div class='check_single preformatted'>Exception in thread "main" java.util.InputMismatchException
-	at java.util.Scanner.throwFor(Scanner.java:864)
-	at java.util.Scanner.next(Scanner.java:1485)
-	at java.util.Scanner.nextDouble(Scanner.java:2413)</div>
+<div class='check_single preformatted'>Exception in thread "main" java.lang.NumberFormatException: For input string: "11,13"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)</div>
 <div class='task_desc'>
 Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <zoom>,</zoom> и точкой <zoom>.</zoom>. Если один из этих символов не подошел, используйте другой.
 </div>

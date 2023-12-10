@@ -229,7 +229,67 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9774' class='example'>1*</a><li><a href='#task3940'>2</a><li><a href='#task6707'>3</a><li><a href='#task9525'>4</a><li><a href='#task3289'>5</a><li><a href='#task5380'>6</a><li><a href='#task8613'>7</a><li><a href='#task9213'>8</a><li><a href='#task1904'>9</a><li><a href='#task2390'>10</a><li><a href='#task7534'>11</a></ul><ul><li><a href='#task5900'>12</a><li><a href='#task4965' class='example'>13*</a><li><a href='#task1839'>14</a><li><a href='#task7039'>15</a><li><a href='#task3095'>16</a><li><a href='#task6915'>17</a><li><a href='#task6714'>18</a><li><a href='#task1217'>19</a><li><a href='#task4531'>20</a><li><a href='#task1438'>21</a></ul></div><div id='task9774' class='task_block'>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1058' class='example'>1*</a><li><a href='#task9774'>2</a><li><a href='#task3940'>3</a><li><a href='#task6707'>4</a><li><a href='#task9525'>5</a><li><a href='#task3289'>6</a><li><a href='#task5380'>7</a><li><a href='#task8613'>8</a><li><a href='#task9213'>9</a><li><a href='#task1904'>10</a><li><a href='#task2390'>11</a><li><a href='#task7534'>12</a><li><a href='#task9361'>13</a><li><a href='#task5900'>14</a></ul></div><div id='task1058' class='task_block'>
+<div class='task_id'>1058</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив из 4 значений, разделенных символов ','. Числа обозначают координаты двух точек A и B. Первое число это x точки A. Второе - y точки A. Третье x точки B. Четвертое y точки B. Вычислить расстояние между точками по формуле <br/>
+    <formula>
+      <sqrt><val>
+        (Bx - Ax)<sup>2</sup> + (By - Ay)<sup>2</sup>
+      </val></sqrt>
+    </formula>
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (coordinates)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1,1,3,4</td><td class='preformatted'>Координаты точки A(1,0000,1,0000)
+
+Координаты точки B(3,0000,4,0000)
+
+Расстояние между точками равно 3,6056
+</td></tr>
+<tr><td>2</td><td>-2,4,8,-10</td><td class='preformatted'>Координаты точки A(-2,0000,4,0000)
+
+Координаты точки B(8,0000,-10,0000)
+
+Расстояние между точками равно 17,2047
+</td></tr>
+<tr><td>3</td><td>0,0,-5,-7</td><td class='preformatted'>Координаты точки A(0,0000,0,0000)
+
+Координаты точки B(-5,0000,-7,0000)
+
+Расстояние между точками равно 8,6023
+</td></tr>
+<tr><td>4</td><td>0,0,0,0</td><td class='preformatted'>Координаты точки A(0,0000,0,0000)
+
+Координаты точки B(0,0000,0,0000)
+
+Расстояние между точками равно 0,0000
+</td></tr>
+<tr><td>5</td><td>-1,-3,2,9</td><td class='preformatted'>Координаты точки A(-1,0000,-3,0000)
+
+Координаты точки B(2,0000,9,0000)
+
+Расстояние между точками равно 12,3693
+</td></tr>
+</table>
+<div class='task_desc'>
+Каждый элемент массива содержит число. Нужно преобразовать числа и записать их в переменные.
+</div>
+<div class='check_single preformatted'>String[] arr = value.split(",");
+double ax = Double.Parse(arr[0]);
+double ay = Double.Parse(arr[1]);
+double bx = Double.Parse(arr[2]);
+double by = Double.Parse(arr[3]);
+Console.WriteLine("Координаты точки A({0:F4},{1:F4})\n", ax, ay);
+Console.WriteLine("Координаты точки B({0:F4},{1:F4})\n", bx, by);
+double result;
+result = Math.sqrt(Math.pow(bx - ax, 2) + Math.pow(by - ay, 2));
+Console.WriteLine("Расстояние между точками равно {0:F4}", result);
+</div>
+</div>
+<div id='task9774' class='task_block'>
 <div class='task_id'>9774</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -248,6 +308,29 @@ zoom{
 <td>4</td><td></td><td>73</td><td class='preformatted'>
 </td></tr>
 </table>
+<div class='task_desc'>
+Подробное решение задачи выглядит так:
+</div>
+<div class='check_single preformatted'>if (firstValue.isEmpty()) {
+    System.out.println();
+}
+if (!firstValue.isEmpty()) {
+    String[] arr = firstValue.split(" ");
+    int m = Int32.Parse(secondValue);
+    int num;
+    num = Integer.parseInt(arr[0]);
+    Console.Write(num * m + " ");
+    num = Integer.parseInt(arr[1]);
+    Console.Write(num * m + " ");
+    num = Integer.parseInt(arr[2]);
+    Console.Write(num * m + " ");
+    num = Integer.parseInt(arr[3]);
+    Console.Write(num * m + " ");
+}
+</div>
+<div class='task_desc'>
+Примените конструкцию цикла для реорганизации повторяющихся действий.
+</div>
 </div>
 <div id='task3940' class='task_block'>
 <div class='task_id'>3940</div>
@@ -427,9 +510,7 @@ zoom{
 Значение элемента на индексе 0 это a
 </td></tr>
 <tr>
-<td>2</td><td>qaz wsx edc</td><td>5 3 2 0</td><td class='preformatted'>Фрагмент на индексе 5 отсутствует
-Фрагмент на индексе 3 отсутствует
-Значение элемента на индексе 2 это edc
+<td>2</td><td>qaz wsx edc</td><td>5 3 2 0</td><td class='preformatted'>В массиве длиной 3 не может быть элемента на индексе 5В массиве длиной 3 не может быть элемента на индексе 3Значение элемента на индексе 2 это edc
 Значение элемента на индексе 0 это qaz
 </td></tr>
 <tr>
@@ -443,9 +524,7 @@ zoom{
 Значение элемента на индексе 5 это y
 </td></tr>
 <tr>
-<td>5</td><td>asdf qwer</td><td>9 8</td><td class='preformatted'>Фрагмент на индексе 9 отсутствует
-Фрагмент на индексе 8 отсутствует
-</td></tr>
+<td>5</td><td>asdf qwer</td><td>9 8</td><td class='preformatted'>В массиве длиной 2 не может быть элемента на индексе 9В массиве длиной 2 не может быть элемента на индексе 8</td></tr>
 <tr>
 <td>6</td><td></td><td>2 1 5</td><td class='preformatted'>Отсутствуют данные о фрагментах
 </td></tr>
@@ -493,39 +572,43 @@ zoom{
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (digits)</th><th>Результат</th></tr>
-<tr><td>1</td><td>9,8,7,6</td><td class='preformatted'>Промежуточный результат 0
-Промежуточный результат 90
-Промежуточный результат 980
-Промежуточный результат 9870
+<tr><td>1</td><td>9,8,7,6</td><td class='preformatted'>Промежуточный результат 9
+Промежуточный результат 98
+Промежуточный результат 987
+Промежуточный результат 9876
 Готовое число: 9876
 Результат сложения:9883
 </td></tr>
-<tr><td>2</td><td>1,2,3,4,5,6</td><td class='preformatted'>Промежуточный результат 0
-Промежуточный результат 10
-Промежуточный результат 120
-Промежуточный результат 1230
-Промежуточный результат 12340
-Промежуточный результат 123450
+<tr><td>2</td><td>1,2,3,4,5,6</td><td class='preformatted'>Промежуточный результат 1
+Промежуточный результат 12
+Промежуточный результат 123
+Промежуточный результат 1234
+Промежуточный результат 12345
+Промежуточный результат 123456
 Готовое число: 123456
 Результат сложения:123463
 </td></tr>
 <tr><td>3</td><td>0,0,0,7</td><td class='preformatted'>Промежуточный результат 0
 Промежуточный результат 0
 Промежуточный результат 0
-Промежуточный результат 0
+Промежуточный результат 7
 Готовое число: 7
 Результат сложения:14
 </td></tr>
-<tr><td>4</td><td>99</td><td class='preformatted'>Некорректное значение 99 ожидается один символ - цифра.
+<tr><td>4</td><td>5</td><td class='preformatted'>Промежуточный результат 5
+Готовое число: 5
+Результат сложения:12
 </td></tr>
-<tr><td>5</td><td>6,4,100</td><td class='preformatted'>Промежуточный результат 0
-Промежуточный результат 60
+<tr><td>5</td><td>99</td><td class='preformatted'>Некорректное значение 99 ожидается один символ - цифра.
+</td></tr>
+<tr><td>6</td><td>6,4,100</td><td class='preformatted'>Промежуточный результат 6
+Промежуточный результат 64
 Некорректное значение 100 ожидается один символ - цифра.
 </td></tr>
-<tr><td>6</td><td>-3</td><td class='preformatted'>Некорректное значение -3 ожидается один символ - цифра.
+<tr><td>7</td><td>-3</td><td class='preformatted'>Некорректное значение -3 ожидается один символ - цифра.
 </td></tr>
-<tr><td>7</td><td>3,8,-5</td><td class='preformatted'>Промежуточный результат 0
-Промежуточный результат 30
+<tr><td>8</td><td>3,8,-5</td><td class='preformatted'>Промежуточный результат 3
+Промежуточный результат 38
 Некорректное значение -5 ожидается один символ - цифра.
 </td></tr>
 </table>
@@ -602,6 +685,53 @@ ff
 </td></tr>
 <tr>
 <td>7</td><td>a a a</td><td></td><td class='preformatted'>Отсутствуют данные о количествах
+</td></tr>
+</table>
+</div>
+<div id='task9361' class='task_block'>
+<div class='task_id'>9361</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты в формате dd_MM_yyyy, где yyyy - четыре цифры года, MM - две цифры месяца, dd - две цифры дня. Нужно определить, какая из дат больше: первая или вторая.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>11_03_1685</td><td>05_03_1685</td><td class='preformatted'>Первая дата 11_03_1685 больше второй 05_03_1685
+</td></tr>
+<tr>
+<td>2</td><td>07_02_1986</td><td>02_07_1986</td><td class='preformatted'>Вторая дата 02_07_1986 больше первой 07_02_1986
+</td></tr>
+<tr>
+<td>3</td><td>11_01_1804</td><td>11_02_1804</td><td class='preformatted'>Вторая дата 11_02_1804 больше первой 11_01_1804
+</td></tr>
+<tr>
+<td>4</td><td>07_07_2003</td><td>07_07_1993</td><td class='preformatted'>Первая дата 07_07_2003 больше второй 07_07_1993
+</td></tr>
+<tr>
+<td>5</td><td>29_01_1785</td><td>29_03_1777</td><td class='preformatted'>Первая дата 29_01_1785 больше второй 29_03_1777
+</td></tr>
+<tr>
+<td>6</td><td>01_01_1970</td><td>01_01_1970</td><td class='preformatted'>Даты равны
+</td></tr>
+<tr>
+<td>7</td><td>04_28_1502</td><td>01_02_2023</td><td class='preformatted'>Месяц должен быть меньше 12
+</td></tr>
+<tr>
+<td>8</td><td>01_02_2023</td><td>07_15_1934</td><td class='preformatted'>Месяц должен быть меньше 12
+</td></tr>
+<tr>
+<td>9</td><td>01_02</td><td>01_02_2023</td><td class='preformatted'>Дата должна состоять из трех фрагментов
+</td></tr>
+<tr>
+<td>10</td><td>01_02_2023</td><td>01_02</td><td class='preformatted'>Дата должна состоять из трех фрагментов
+</td></tr>
+<tr>
+<td>11</td><td>4</td><td>01_02_2023</td><td class='preformatted'>Дата должна состоять из трех фрагментов
+</td></tr>
+<tr>
+<td>12</td><td>01_02_2023</td><td>14</td><td class='preformatted'>Дата должна состоять из трех фрагментов
 </td></tr>
 </table>
 </div>
@@ -682,377 +812,4 @@ ff
 			<td class="preformatted">Некорректная длина штрих-кода</td>
 		</tr>
 	</table>
-</div><div id='task4965' class='task_block'>
-<div class='task_id'>4965</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Число A меняется от 0 до 99 с шагом 19. Число B меняется от 0 до 99 с шагом 23. Напишите на экране все комбинации значений чисел A и B.
-</div>
-<div class='check_single preformatted'>0 0
-0 23
-0 46
-0 69
-0 92
-19 0
-19 23
-19 46
-19 69
-19 92
-38 0
-38 23
-38 46
-38 69
-38 92
-57 0
-57 23
-57 46
-57 69
-57 92
-76 0
-76 23
-76 46
-76 69
-76 92
-95 0
-95 23
-95 46
-95 69
-95 92
-</div>
-<div class='task_desc'>
-Эта задача решается с помощью вложенных циклов:
-</div>
-<div class='check_single preformatted'>int a = 0;
-while (a < 100) {
-    int b = 0;
-    while (b < 100) {
-        System.out.println(a + " " + b);
-        b = b + 23;
-    }
-    a = a + 19;
-}
-</div>
-</div>
-<div id='task1839' class='task_block'>
-<div class='task_id'>1839</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Напечатать на экран все комбинации чисел 0, 1, 2.
-</div>
-<div class='check_single preformatted'>0 0 0
-0 0 1
-0 0 2
-0 1 0
-0 1 1
-0 1 2
-0 2 0
-0 2 1
-0 2 2
-1 0 0
-1 0 1
-1 0 2
-1 1 0
-1 1 1
-1 1 2
-1 2 0
-1 2 1
-1 2 2
-2 0 0
-2 0 1
-2 0 2
-2 1 0
-2 1 1
-2 1 2
-2 2 0
-2 2 1
-2 2 2
-</div>
-</div>
-<div id='task7039' class='task_block'>
-<div class='task_id'>7039</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Напечатать на экран все комбинации чисел 0, 1, 2. Не пишите на экран комбинацию, в которой одна и та же цифра отображается несколько раз.
-</div>
-<div class='check_single preformatted'>0 1 2
-0 2 1
-1 0 2
-1 2 0
-2 0 1
-2 1 0
-</div>
-</div>
-<div id='task3095' class='task_block'>
-<div class='task_id'>3095</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - фрагменты строк, разделенные запятой. Напечатать на экран все комбинации с перестановками из двух элементов массива. Комбинация содержащие два одинаковых элемента нужно исключить.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (values)</th><th>Результат</th></tr>
-<tr><td>1</td><td>q,w,e,r</td><td class='preformatted'>q w
-q e
-q r
-w q
-w e
-w r
-e q
-e w
-e r
-r q
-r w
-r e
-</td></tr>
-<tr><td>2</td><td>as,df,gh</td><td class='preformatted'>as df
-as gh
-df as
-df gh
-gh as
-gh df
-</td></tr>
-<tr><td>3</td><td>zx,cv</td><td class='preformatted'>zx cv
-cv zx
-</td></tr>
-<tr><td>4</td><td>p,o,o,t,p</td><td class='preformatted'>p o
-p o
-p t
-o p
-o t
-o p
-o p
-o t
-o p
-t p
-t o
-t o
-t p
-p o
-p o
-p t
-</td></tr>
-<tr><td>5</td><td>single</td><td class='preformatted'></td></tr>
-<tr><td>6</td><td></td><td class='preformatted'>Нет данных
-</td></tr>
-</table>
-</div>
-<div id='task6915' class='task_block'>
-<div class='task_id'>6915</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дан массив из 4 чисел: 11, 37, 53, 89. Нужно написать все комбинации значений этих четырех чисел. Нужно не печатать на экран комбинации, в которых числа повторяются несколько раз.
-</div>
-<div class='check_single preformatted'>11,37,53,89
-11,37,89,53
-11,53,37,89
-11,53,89,37
-11,89,37,53
-11,89,53,37
-37,11,53,89
-37,11,89,53
-37,53,11,89
-37,53,89,11
-37,89,11,53
-37,89,53,11
-53,11,37,89
-53,11,89,37
-53,37,11,89
-53,37,89,11
-53,89,11,37
-53,89,37,11
-89,11,37,53
-89,11,53,37
-89,37,11,53
-89,37,53,11
-89,53,11,37
-89,53,37,11
-</div>
-</table>
-</div>
-<div id='task6714' class='task_block'>
-<div class='task_id'>6714</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит массив чисел через запятую.
-</div>
-<ol start='1'><li>Первое число обозначает начало 'красного' интервала чисел.</li><li>Второе число обозначает конец 'красного' интервала чисел.</li><li>Третье число - начало 'зеленого' интервала чисел.</li><li>Четвертое - конец 'зеленого' интервала чисел.</li></ol><div class='task_desc'>
-Интервал считается корректным если начало строго меньше чем конец. Нужно определить: пересекаются ли данные два интервала чисел. Если не пересекаются, то написать объяснение.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (values)</th><th>Результат</th></tr>
-<tr><td>1</td><td>2,3,5,7</td><td class='preformatted'>Интервалы не пересекаются. Правый край красного левее левого края зеленого.
-</td></tr>
-<tr><td>2</td><td>11,17,13,19</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>3</td><td>23,37,29,31</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>4</td><td>43,53,41,47</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>5</td><td>5,15,0,30</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>6</td><td>67,71,59,61</td><td class='preformatted'>Интервалы не пересекаются. Правый край зеленого левее левого края красного
-</td></tr>
-<tr><td>7</td><td>79,73,83,89</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
-</td></tr>
-<tr><td>8</td><td>97,101,107,103</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
-</td></tr>
-<tr><td>9</td><td>1,2,3</td><td class='preformatted'>Должно быть введено 4 числа
-</td></tr>
-<tr><td>10</td><td>1,2,3,4,5</td><td class='preformatted'>Должно быть введено 4 числа
-</td></tr>
-</table>
-</div>
-<div id='task1217' class='task_block'>
-<div class='task_id'>1217</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит массив чисел через запятую.
-</div>
-<ol start='1'><li>Первое число обозначает начало 'красного' интервала чисел.</li><li>Второе число обозначает конец 'красного' интервала чисел.</li><li>Третье число - начало 'зеленого' интервала чисел.</li><li>Четвертое - конец 'зеленого' интервала чисел.</li></ol><div class='task_desc'>
-Интервал считается корректным если начало строго меньше чем конец. Нужно определить начало и конец области пересечения интервалов. Если не пересекаются, то написать "не пересекаются".
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (a1,b1,a2,b2)</th><th>Результат</th></tr>
-<tr><td>1</td><td>11,37,53,89</td><td class='preformatted'>Интервалы не пересекаются. Правая граница красного 37 левее левого края зеленого 53
-</td></tr>
-<tr><td>2</td><td>11,37,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
-</td></tr>
-<tr><td>3</td><td>11,53,37,89</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>4</td><td>11,53,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>5</td><td>11,89,37,53</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>6</td><td>11,89,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>7</td><td>37,11,53,89</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>8</td><td>37,11,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>9</td><td>37,53,11,89</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>10</td><td>37,53,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>11</td><td>37,89,11,53</td><td class='preformatted'>Интервалы пересекаются
-</td></tr>
-<tr><td>12</td><td>37,89,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>13</td><td>53,11,37,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>14</td><td>53,11,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>15</td><td>53,37,11,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>16</td><td>53,37,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>17</td><td>53,89,11,37</td><td class='preformatted'>Интервалы не пересекаются. Правая граница зеленого 37 левее левого края красного 53
-</td></tr>
-<tr><td>18</td><td>53,89,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>19</td><td>89,11,37,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>20</td><td>89,11,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>21</td><td>89,37,11,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>22</td><td>89,37,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>23</td><td>89,53,11,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
-</td></tr>
-<tr><td>24</td><td>89,53,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
-</td></tr>
-<tr><td>25</td><td>1,2,3</td><td class='preformatted'>Должно быть введено 4 числа
-</td></tr>
-<tr><td>26</td><td>1,2,3,4,5</td><td class='preformatted'>Должно быть введено 4 числа
-</td></tr>
-</table>
-</div>
-<div id='task4531' class='task_block'>
-<div class='task_id'>4531</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит границы двух интервалов: минусы и палочки. Интервал считается корректным если его правая граница больше левой и при этом если каждая граница меньше 120. Числа на оси координат увеличиваются вправо. Нужно изобразить интервалы в одной строке. Интервал минусов с помощью знака "-". Интервал палочек с помощью знака "|".  Область пересечения интервалов с помощью знака "+". Промежутки между интервалами заполните пробелами.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>redA</th><th>redB</th><th>greenA</th><th>greenB</th></tr>
-<tr><td>1</td><td>5</td><td>30</td><td>50</td><td>65</td><td class='preformatted'>     -------------------------                    |||||||||||||||
-redA 5 redB 30 greenA 50 greenB 65
-</td></tr>
-<tr><td>2</td><td>11</td><td>57</td><td>23</td><td>49</td><td class='preformatted'>           ------------++++++++++++++++++++++++++--------
-redA 11 greenA 23 greenB 49 redB 57
-</td></tr>
-<tr><td>3</td><td>23</td><td>47</td><td>36</td><td>61</td><td class='preformatted'>                       -------------+++++++++++||||||||||||||
-redA 23 greenA 36 redB 47 greenB 61
-</td></tr>
-<tr><td>4</td><td>33</td><td>53</td><td>11</td><td>47</td><td class='preformatted'>           ||||||||||||||||||||||++++++++++++++------
-greenA 11 redA 33 greenB 47 redB 53
-</td></tr>
-<tr><td>5</td><td>5</td><td>15</td><td>0</td><td>30</td><td class='preformatted'>|||||++++++++++|||||||||||||||
-greenA 0 redA 5 redB 15 greenB 30
-</td></tr>
-<tr><td>6</td><td>37</td><td>51</td><td>19</td><td>31</td><td class='preformatted'>                   ||||||||||||      --------------
-greenA 19 greenB 31 redA 37 redB 51
-</td></tr>
-<tr><td>7</td><td>79</td><td>73</td><td>83</td><td>89</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
-</td></tr>
-<tr><td>8</td><td>97</td><td>101</td><td>107</td><td>103</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
-</td></tr>
-<tr><td>9</td><td>-1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>10</td><td>1</td><td>-2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>11</td><td>1</td><td>2</td><td>-3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>12</td><td>1</td><td>2</td><td>3</td><td>-4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>13</td><td>200</td><td>2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>14</td><td>1</td><td>200</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>15</td><td>1</td><td>2</td><td>200</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>16</td><td>1</td><td>2</td><td>3</td><td>200</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-</table>
-</div>
-<div id='task1438' class='task_block'>
-<div class='task_id'>1438</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит массив из 8 чисел. Первые 4 числа описывают зеленый прямоугольник. Следующие 4 числа - красный. Данные о каждом прямоугольнике идут по порядку: x левого верхнего угла, y левого верхнего угла, высота, ширина. Определить координаты верхнего левого угла, ширину и высоту прямоугольника, образующегося при их пересечении. Все координаты - экранные.<a href="tasks 6.html#task5635" target="_blank">ЛР6#5635(открыть в новой вкладке)</a>
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (Xr,Yr,Hr,Wr, Xg,Yg,Hg,Wg)</th><th>Результат</th></tr>
-<tr><td>1</td><td>10;10;200;100;50;50;300;350</td><td class='preformatted'>50;60;50;160
-</td></tr>
-<tr><td>2</td><td>25;25;200;200;225;225;200;200</td><td class='preformatted'>25;200;25;200
-</td></tr>
-<tr><td>3</td><td>102;200;100;200;0;500;100;120</td><td class='preformatted'>102;18;200;100
-</td></tr>
-<tr><td>4</td><td>500;200;100;200;10;400;100;120</td><td class='preformatted'>500;-370;200;100
-</td></tr>
-<tr><td>5</td><td>60;70;120;200;50;50;120;200</td><td class='preformatted'>60;190;70;100
-</td></tr>
-<tr><td>6</td><td>100;100;200;200;200;200;50;50</td><td class='preformatted'>200;50;200;50
-</td></tr>
-<tr><td>7</td><td>150;150;150;300;150;150;150;300</td><td class='preformatted'>150;300;150;150
-</td></tr>
-<tr><td>8</td><td>100;0;100;500;0;200;700;100</td><td class='preformatted'>100;0;0;100
-</td></tr>
-<tr><td>9</td><td>5;0;10;10;0;5;10;10</td><td class='preformatted'>5;5;5;5
-</td></tr>
-<tr><td>10</td><td>105;5;10;10;100;0;10;30</td><td class='preformatted'>105;10;5;5
-</td></tr>
-<tr><td>11</td><td>150;150;50;300;100;100;300;200</td><td class='preformatted'>150;150;150;50
-</td></tr>
-<tr><td>12</td><td>0;0;802;200;0;0;610;610</td><td class='preformatted'>0;200;0;610
-</td></tr>
-<tr><td>13</td><td>200;200;100;100;900;200;100;10</td><td class='preformatted'>200;100;200;100
-</td></tr>
-<tr><td>14</td><td>125;138;0;1;205;202;61;62</td><td class='preformatted'>125;1;138;0
-</td></tr>
-<tr><td>15</td><td>100;100;120;220;220;100;120;220</td><td class='preformatted'>220;100;100;120
-</td></tr>
-</table>
-</div>
-Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20230513-dev. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2023. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

@@ -6,7 +6,7 @@ public class Task6059 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит два числа: P и M. Нужно вывести на экран две строчки чисел. В первой строчке 10 чисел с шагом 1 начиная с P. Во второй строчку 10 чисел с шагом 1 начиная с M.");
+        appendTaskDescEscaped("Пользователь вводит два числа: P и M. Нужно вывести на экран две строчки чисел. В первой строчке 10 чисел с шагом 1 начиная с P. Во второй строчке 10 чисел с шагом 1 начиная с M.");
         appendCheckValuesHeader("P", "M");
         appendCheckValuesRow("0", "50");
         appendCheckValuesRow("50", "0");

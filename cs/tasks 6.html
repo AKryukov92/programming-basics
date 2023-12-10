@@ -229,7 +229,8 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8715' class='example'>1*</a><li><a href='#task8867'>2</a><li><a href='#task7991'>3</a><li><a href='#task7865'>4</a><li><a href='#task3883'>5</a><li><a href='#task8751'>6</a><li><a href='#task4858'>7</a><li><a href='#task3864'>8</a><li><a href='#task9705'>9</a><li><a href='#task5635'>10</a><li><a href='#task8718'>11</a></ul></div><div id='task8715' class='task_block'>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8715' class='example'>1*</a><li><a href='#task8867'>2</a><li><a href='#task7991'>3</a><li><a href='#task7865'>4</a><li><a href='#task3883'>5</a><li><a href='#task8751'>6</a><li><a href='#task4858'>7</a><li><a href='#task3864'>8</a><li><a href='#task5635'>9</a><li><a href='#task9705'>10</a><li><a href='#task8718'>11</a></ul></div><div id='task8715' class='task_block'>
 <div class='task_id'>8715</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -238,25 +239,52 @@ zoom{
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
 <tr><th>A</th><th>B</th><th>C</th></tr>
-<tr><td>1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Истинно
+<tr>
+<td>1</td><td>9</td><td>80</td><td>700</td><td class='preformatted'>Истинно
 </td></tr>
-<tr><td>2</td><td>-4</td><td>0</td><td>5</td><td class='preformatted'>Истинно
+<tr>
+<td>2</td><td>-4</td><td>0</td><td>5</td><td class='preformatted'>Истинно
 </td></tr>
-<tr><td>3</td><td>-3</td><td>-2</td><td>-3</td><td class='preformatted'>Ложно
+<tr>
+<td>3</td><td>-3</td><td>-2</td><td>-3</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>4</td><td>7</td><td>4</td><td>-2</td><td class='preformatted'>Ложно
+<tr>
+<td>4</td><td>7</td><td>4</td><td>-2</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>5</td><td>0</td><td>5</td><td>-7</td><td class='preformatted'>Ложно
+<tr>
+<td>5</td><td>0</td><td>5</td><td>-7</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>6</td><td>4</td><td>4</td><td>4</td><td class='preformatted'>Ложно
+<tr>
+<td>6</td><td>4</td><td>4</td><td>4</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>7</td><td>-2</td><td>4</td><td>3</td><td class='preformatted'>Ложно
+<tr>
+<td>7</td><td>-2</td><td>4</td><td>3</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>8</td><td>10</td><td>3</td><td>5</td><td class='preformatted'>Ложно
+<tr>
+<td>8</td><td>10</td><td>3</td><td>5</td><td class='preformatted'>Ложно
 </td></tr>
-<tr><td>9</td><td>5</td><td>1</td><td>7</td><td class='preformatted'>Ложно
+<tr>
+<td>9</td><td>5</td><td>1</td><td>7</td><td class='preformatted'>Ложно
 </td></tr>
 </table>
+<div class='task_desc'>
+В результате может быть только одно из двух слов. Но в коде нужно предусмотреть несколько ситуаций:
+</div>
+<div class='check_single preformatted'>int a = Int32.Parse(firstValue);
+int b = Int32.Parse(secondValue);
+int c = Int32.Parse(thirdValue);
+if (a < b) {
+    if (b < c) {
+        Console.WriteLine("Истинно");
+    }
+    if (c <= b) {
+        Console.WriteLine("Ложно");
+    }
+}
+if (b <= a) {
+    Console.WriteLine("Ложно");
+}
+</div>
 </div>
 <div id='task8867' class='task_block'>
 <div class='task_id'>8867</div>
@@ -295,15 +323,28 @@ zoom{
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
 <tr><th>X</th><th>Y</th><th>Z</th></tr>
-<tr><td>1</td><td>9</td><td>10</td><td>11</td><td class='preformatted'>9 10 11</td></tr>
-<tr><td>2</td><td>3</td><td>20</td><td>0</td><td class='preformatted'>3 0</td></tr>
-<tr><td>3</td><td>12</td><td>2</td><td>-40</td><td class='preformatted'>12 2 </td></tr>
-<tr><td>4</td><td>30</td><td>-5</td><td>7</td><td class='preformatted'>-5 7</td></tr>
+<tr><td>1</td><td>9</td><td>10</td><td>11</td><td class='preformatted'>9
+10
+11
+</td></tr>
+<tr><td>2</td><td>3</td><td>20</td><td>0</td><td class='preformatted'>3
+0
+</td></tr>
+<tr><td>3</td><td>12</td><td>2</td><td>-40</td><td class='preformatted'>12
+2
+</td></tr>
+<tr><td>4</td><td>30</td><td>-5</td><td>7</td><td class='preformatted'>-5
+7
+</td></tr>
 <tr><td>5</td><td>50</td><td>50</td><td>50</td><td class='preformatted'></td></tr>
-<tr><td>6</td><td>-4</td><td>25</td><td>15</td><td class='preformatted'>-4 </td></tr>
-<tr><td>7</td><td>-11</td><td>0</td><td>13</td><td class='preformatted'>0 </td></tr>
-<tr><td>8</td><td>13</td><td>-11</td><td>6</td><td class='preformatted'>6</td></tr>
-<tr><td>9</td><td>8</td><td>13</td><td>-11</td><td class='preformatted'>8 </td></tr>
+<tr><td>6</td><td>-4</td><td>25</td><td>15</td><td class='preformatted'>-4
+</td></tr>
+<tr><td>7</td><td>-11</td><td>0</td><td>13</td><td class='preformatted'>0
+</td></tr>
+<tr><td>8</td><td>13</td><td>-11</td><td>6</td><td class='preformatted'>6
+</td></tr>
+<tr><td>9</td><td>8</td><td>13</td><td>-11</td><td class='preformatted'>8
+</td></tr>
 </table>
 </div>
 <div id='task7865' class='task_block'>
@@ -348,16 +389,25 @@ zoom{
 Количество сотен не равно количеству единиц.</div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (A)</th><th>Результат</th></tr>
-<tr><td>1</td><td>1234</td><td class='preformatted'></td></tr>
-<tr><td>2</td><td>6543</td><td class='preformatted'></td></tr>
-<tr><td>3</td><td>9812</td><td class='preformatted'></td></tr>
-<tr><td>4</td><td>9171</td><td class='preformatted'></td></tr>
+<tr><td>1</td><td>1234</td><td class='preformatted'>Количество сотен: 2
+Количество единиц: 4
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>2</td><td>6543</td><td class='preformatted'>Количество сотен: 5
+Количество единиц: 3
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>3</td><td>9812</td><td class='preformatted'>Количество сотен: 8
+Количество единиц: 2
+Количество сотен не равно количеству единиц.
+</td></tr>
+<tr><td>4</td><td>9171</td><td class='preformatted'>Количество сотен: 1
+Количество единиц: 1
+Количество сотен равно количеству единиц
+</td></tr>
 <tr><td>5</td><td>100</td><td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
 </td></tr>
 <tr><td>6</td><td>98765</td><td class='preformatted'>Значение A должно быть в интервале от 1000 до 9999 включительно
-Количество сотен: 7
-Количество единиц: 5
-Количество сотен не равно количеству единиц.
 </td></tr>
 </table>
 </div>
@@ -527,6 +577,112 @@ zoom{
 </td></tr>
 </table>
 </div>
+<div id='task5635' class='task_block'>
+<div class='task_id'>5635</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана точка с координатами (X;Y) и прямоугольник, у которого верхний левый угол находится в точке (100;100), высота равна 70, ширина равна 90. Определить, лежит ли точка внутри прямоугольника, включая границы. Все координаты - <b>экранные</b>. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.<img src="images/example5635.png"/>
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>X</th><th>Y</th></tr>
+<tr>
+<td>1</td><td>30</td><td>20</td><td class='preformatted'>Координата X левее прямоугольника
+Координата Y выше прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>2</td><td>120</td><td>30</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y выше прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>3</td><td>210</td><td>40</td><td class='preformatted'>Координата X правее прямоугольника
+Координата Y выше прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>4</td><td>50</td><td>120</td><td class='preformatted'>Координата X левее прямоугольника
+Координата Y внутри прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>5</td><td>150</td><td>130</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>6</td><td>200</td><td>150</td><td class='preformatted'>Координата X правее прямоугольника
+Координата Y внутри прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>7</td><td>80</td><td>190</td><td class='preformatted'>Координата X левее прямоугольника
+Координата Y ниже прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>8</td><td>160</td><td>180</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y ниже прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>9</td><td>220</td><td>200</td><td class='preformatted'>Координата X правее прямоугольника
+Координата Y ниже прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>10</td><td>100</td><td>110</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>11</td><td>130</td><td>100</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>12</td><td>190</td><td>140</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>13</td><td>180</td><td>170</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>14</td><td>100</td><td>100</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>15</td><td>190</td><td>100</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>16</td><td>100</td><td>170</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>17</td><td>190</td><td>170</td><td class='preformatted'>Координата X внутри прямоугольника
+Координата Y внутри прямоугольника
+Точка внутри
+</td></tr>
+<tr>
+<td>18</td><td>-10</td><td>30</td><td class='preformatted'>Координата X левее прямоугольника
+Координата Y выше прямоугольника
+Точка снаружи
+</td></tr>
+<tr>
+<td>19</td><td>40</td><td>-20</td><td class='preformatted'>Координата X левее прямоугольника
+Координата Y выше прямоугольника
+Точка снаружи
+</td></tr>
+</table>
+</div>
 <div id='task9705' class='task_block'>
 <div class='task_id'>9705</div>
 <h3>Задача</h3>
@@ -537,7 +693,7 @@ zoom{
 Нужно реализовать программу для проверки попадания числа x в эти интервалы. Границы проверяются исключительно.
 </div>
 <div class='task_desc'>
-Также нужно проанализировать итервалы и найти такое число, которое попадает в 1 и 2 интервал, и при этом не попадает в 3 и 4.
+Также нужно найти такое число, которое попадает в 1 и 2 интервал, и при этом не попадает в 3 и 4. Это можно сделать двумя сравнениями, если проанализировать условие задачи.
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
@@ -557,7 +713,7 @@ zoom{
 22 попадает в интервал от 14 до 137 исключительно
 22 за пределами интервала от 47 до 144 исключительно
 22 за пределами интервала от 100 до 171 исключительно
-Значение найдено
+Значение не подходит
 </td></tr>
 <tr><td>4</td><td>10</td><td class='preformatted'>10 за пределами интервала от 10 до 17 исключительно
 10 за пределами интервала от 14 до 137 исключительно
@@ -591,141 +747,7 @@ zoom{
 </td></tr>
 </table>
 </div>
-<div id="task5635" class="task_block empty_on_print">
-	<div class="task_id">5635</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямоугольник, у которого верхний левый угол находится в точке (100;100), высота равна 70, ширина равна 90. Определить, лежит ли точка внутри прямоугольника, включая границы. Все координаты - <b>экранные</b>. Особенность <b>экранных координат</b> в том, что точка с экранными координатами (0;0) находится в верхнем левом углу экрана. Значения X увеличиваются слева направо. Значения Y увеличиваются сверху вниз.</div>
-	<img src="images/example5635.png"/>
-	<table class="check_values">
-		<tr>
-			<th rowspan="2">Номер теста</th>
-			<th colspan="2">Вводимые данные</th>
-			<th rowspan="2">Результат</th>
-		</tr>
-		<tr>
-			<th>X<sub>т</sub></th>
-			<th>Y<sub>т</sub></th>
-		</tr>
-		<!--Области-->
-		<tr>
-			<td></td>
-			<td>30</td>
-			<td>20</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>120</td>
-			<td>30</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>210</td>
-			<td>40</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>50</td>
-			<td>120</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>150</td>
-			<td>130</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>200</td>
-			<td>150</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>80</td>
-			<td>190</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>160</td>
-			<td>180</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>220</td>
-			<td>200</td>
-			<td>Точка снаружи</td>
-		</tr>
-		<!--Границы-->
-		<tr>
-			<td></td>
-			<td>100</td>
-			<td>110</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>130</td>
-			<td>100</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>190</td>
-			<td>140</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>180</td>
-			<td>170</td>
-			<td>Точка внутри</td>
-		</tr>
-		<!--Углы-->
-		<tr>
-			<td></td>
-			<td>100</td>
-			<td>100</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>190</td>
-			<td>100</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>100</td>
-			<td>170</td>
-			<td>Точка внутри</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>190</td>
-			<td>170</td>
-			<td>Точка внутри</td>
-		</tr>
-		<!--Некорректные координаты-->
-		<tr>
-			<td></td>
-			<td>-10</td>
-			<td>30</td>
-			<td>Координата X должна быть неотрицательной</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>40</td>
-			<td>-20</td>
-			<td>Координата Y должна быть неотрицательной</td>
-		</tr>
-	</table>
-</div><div id="task8718" class="task_block empty_on_print">
+<div id="task8718" class="task_block empty_on_print">
 	<div class="task_id">8718</div>
 	<h3>Задача</h3>
 	<div class="task_desc">Пользователь вводит массу в граммах, оценочную стоимость в рублях и расстояние в километрах, на которое пересылается простая бандероль. Пересылка бандероли весом 100г стоит 40 рублей. За каждые последующие полные или неполные 20 г веса дополнительно взимается еще 2 рубля 50 копеек. За каждый полный или неполный 1 рубль оценочной стоимости взимается дополнительно 3 копейки. За каждые полные или неполные 500г веса бандероли в зависимости от расстояния пересылки дополнительно взимается плата согласно таблице:</div>
@@ -736,27 +758,27 @@ zoom{
 			<th>Тариф</th>
 		</tr>
 		<tr>
-			<td>1</td>
+			<td></td>
 			<td>до 600 км</td>
 			<td>95,00</td>
 		</tr>
 		<tr>
-			<td>2</td>
+			<td></td>
 			<td>от 601 до 2000 км</td>
 			<td>105,00</td>
 		</tr>
 		<tr>
-			<td>3</td>
+			<td></td>
 			<td>от 2001 до 5000 км</td>
 			<td>120,00</td>
 		</tr>
 		<tr>
-			<td>4</td>
+			<td></td>
 			<td>от 5001 до 8000 км</td>
 			<td>135,00</td>
 		</tr>
 		<tr>
-			<td>4</td>
+			<td></td>
 			<td>свыше 8000 км</td>
 			<td>150,00</td>
 		</tr>

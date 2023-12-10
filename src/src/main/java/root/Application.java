@@ -93,7 +93,8 @@ public class Application {
             "Внутреннее состояние",
             "Коллекции",
             "Рекурсия",
-            "Даты"
+            "Даты",
+            "Комбинаторика"
     };
 
     private static TaskBook[] populateCsContent(String[] themeList) {
@@ -127,6 +128,8 @@ public class Application {
         fillCollections(taskBooksCs[22]);
         fillRecursion(taskBooksCs[23]);
         fillDateTime(taskBooksCs[24]);
+        fillCombinations(taskBooksCs[25]);
+
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
     }
@@ -176,6 +179,7 @@ public class Application {
 
         fillRecursion(taskBooksJava[23]);
         fillDateTime(taskBooksJava[24]);
+        fillCombinations(taskBooksJava[25]);
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -226,6 +230,8 @@ public class Application {
                     .addTask(new Task3240())
                     .addTask(new Task7058())
                     .addTask(new Task5792())
+                    //9523 not implemented
+                    //6986 not implemented
                     .withGroup("Отработка присваивания")
                     .addExample(new TaskCs3246())
                     .addTask(new TaskCs7332())
@@ -276,15 +282,7 @@ public class Application {
     private static void fillInputAndTemplates(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab01")
                 .withGroup("Получение строк от пользователя")
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs1860())
-            ;
-        } else {
-            taskBook.addExample(new TaskJava1860())
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs1860(), new TaskJava1860())
                 .addTask(new Task4764())
                 .addTask(new Task2429())
                 .addTask(new Task7472())
@@ -295,13 +293,7 @@ public class Application {
                 .addTask(new Task7365())
 
                 .withGroup("Оформление текста по шаблону")
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs4140());//вывод с помощью подстановочных символов
-        } else {
-            taskBook.addExample(new TaskJava4140());
-        }
-        taskBook
+                .addExample(new TaskCs4140(), new TaskJava4140())//вывод с помощью подстановочных символов
                 .addTask(new Task2959())
                 .addTask(new Task7271())
                 .addTask(new Task2632())
@@ -329,13 +321,7 @@ public class Application {
     private static void fillBasicCalculations(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab02")
                 .withGroup("Операторы и операнды")
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs4411());//преобразование в число, простая арифметика, вывод с нужной точностью
-        } else if (taskBook.isJava()) {
-            taskBook.addExample(new TaskJava4411());//преобразование в число, простая арифметика, вывод с нужной точностью
-        }
-        taskBook
+                .addExample(new TaskCs4411(), new TaskJava4411())//преобразование в число, простая арифметика, вывод с нужной точностью
                 .addExample(new Task8428())//перевод из градусов в радианы по готовой формуле
                 .addTask(new Task1976())//диктант
                 .addTask(new Task3435())//обратное действие, нужно вывести формулу из задачи про радианы
@@ -384,17 +370,7 @@ public class Application {
         //если сразу рассказать о логических операторах и return, то у людей потом будут проблемы с вложенностью циклов
         taskBook.withSourceDirectory("lab03")
                 .withGroup("Ограничения, связанные с предметной областью")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava9298())//взаимоисключающий
-            ;
-        } else {
-            taskBook
-                    .addExample(new TaskCs9298())//взаимоисключающий
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs9298(), new TaskJava9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
                 .addTask(new Task6522())//взаимоисключающий
                 .addTask(new Task7619())//взаимоисключающий, несколько вариантов
@@ -406,17 +382,7 @@ public class Application {
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
 
                 .withGroup("Вычисление остатка от деления")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava2801())//остаток от деления, не равно
-            ;
-        } else {
-            taskBook
-                    .addExample(new TaskCs2801())//остаток от деления, не равно
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs2801(), new TaskJava2801())//остаток от деления, не равно
                 .addTask(new Task2361())//остаток от деления, сложная вложенность
                 .addTask(new Task5063())//остаток от деления, кажется скучная
                 .addTask(new Task5870())//остаток от деления
@@ -479,7 +445,7 @@ public class Application {
     private static void fillRanges(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab05")
                 .withGroup("Работа с интервалами значений")
-                .addExample(new Task8715())//проверка двух условий одновременно
+                .addExample(new TaskCs8715(), new TaskJava8715())//проверка двух условий одновременно
                 .addTask(new Task8867())//проверка попадания в интервал
                 .addTask(new Task7991())//проверка попадания в 1 интервал исключая границы
                 .addTask(new Task7865())//проверка попадания в 2 интервала
@@ -487,8 +453,8 @@ public class Application {
                 .addTask(new Task8751())//несколько if без else
                 .addTask(new Task4858())//сравнение интервалов
                 .addTask(new Task3864())//Обратная геодезическая задача. сравнение и тригонометрические функции
+                .addTask(new Task5635())//проверка попадания точки в прямоугольник
                 .addTask(new Task9705())//очень объемная проверка 4 интервалов
-                .addTask(5635)
                 .addTask(8718)
         ;
     }
@@ -496,17 +462,7 @@ public class Application {
     private static void fillLoops(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab06")
                 .withGroup("Отличие действий, которые нужно повторять, от действий перед и после цикла")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava1315())
-            ;
-        } else {
-            taskBook
-                    .addExample(new TaskCs1315())
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs1315(), new TaskJava1315())
                 .addTask(new Task1631())//несколько чисел в столбик с повторением оформления
                 .addTask(new Task2594())//повторить символ, оформление не повторяется
 
@@ -516,7 +472,7 @@ public class Application {
                 .addTask(new Task1139())//10 следующих чисел с шагом
                 .addTask(new Task9969())//три раза, потом 10 раз, потом 3 раза
                 .addTask(new Task5301())//счётчик увеличивается каждую итерацию
-                .addTask(new Task6790())//по возрастанию и вычислить функцию
+                .addTask(new TaskCs6790(), new TaskJava6790())//по возрастанию и вычислить функцию
                 .addTask(new Task3850())//сформировать новый массив чисел
 
                 .withGroup("Один цикл за другим")
@@ -525,17 +481,7 @@ public class Application {
                 .addTask(new Task5149())//несколько чисел с указанным шагом
 
                 .withGroup("Цикл внутри условия")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava6066())//вывод подряд с ошибкой
-            ;
-        } else {
-            taskBook
-                    .addExample(new TaskCs3985())//вывод подряд с ошибкой
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs3985(), new TaskJava6066())//вывод подряд с ошибкой
                 .addTask(new Task1259())//повторить не более 20 раз
                 .addTask(new Task2565())//по убыванию с ошибкой
                 .addTask(new Task8722())//два столбца разной высоты
@@ -613,39 +559,16 @@ public class Application {
     private static void fillBasicArrayOperations(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Работа с массивами")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava4425())//образец чтения из массива
-            ;
-        } else if (taskBook.isCsharp()) {
-            taskBook
-                    .addExample(new TaskCs4425())//образец чтения из массива
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs4425(), new TaskJava4425())//образец чтения из массива
                 .addTask(new Task7834())//элементы на конкретных индексах
                 .addTask(new Task5873())//следующий и предыдущий
                 .addTask(new Task3908())//третий с конца
                 .addTask(new Task1433())//середина массива
-                .addTask(new Task3791())//независимые условия
-                .addTask(new Task9361())//пользователь вводит две даты dd_MM_yyyy выяснить какая из них больше.
-                .addTask(new Task1058())//parse array to distinct numbers. distance between points
-                .addTask(new Task6589())//parse array, range intersection
+                .addTask(new TaskCs3791(), new TaskJava3791())//независимые условия. совпадение фрагментов текста
                 .addTask(new Task9980())//чтение из массива по указанным индексам
 
                 .withGroup("Обработка массивов циклом")
-        ;
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava5683())
-            ;
-        } else if (taskBook.isCsharp()) {
-            taskBook
-                    .addExample(new TaskCs5683())
-            ;
-        }
-        taskBook
+                .addExample(new TaskCs5683(), new TaskJava5683())
                 .addTask(new Task8557())
                 .addTask(new Task1223())
                 .addTask(new Task8311())
@@ -657,23 +580,10 @@ public class Application {
     private static void fillSwapping(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Головоломки на перестановку")
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook.addTask(new TaskCs8775())
-                    .addTask(new TaskCs5510())
-                    .addTask(new TaskCs8072())
-                    .addTask(new TaskCs3985())
-            ;
-        } else if (taskBook.isJava()) {
-            taskBook.addTask(new TaskJava8775())
-                    .addTask(new TaskJava5510())
-                    .addTask(new TaskJava8072())
-                    .addTask(new TaskJava3985())
-            ;
-        } else {
-            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
-        taskBook
+                .addTask(new TaskCs8775(), new TaskJava8775())
+                .addTask(new TaskCs5510(), new TaskJava5510())
+                .addTask(new TaskCs8072(), new TaskJava8072())
+                .addTask(new TaskCs3985(), new TaskJava3985())
                 .withGroup("Запись в массив")
                 .addExample(new Task9923())//копируем последний в начало
                 .addTask(new Task1331())//запись значения в массив по индексу
@@ -702,7 +612,8 @@ public class Application {
     private static void fillArrayConversionToNumbers(TaskBook taskBook) {
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Конвертирование элементов")
-                .addExample(new Task9774())//операции над массивом
+                .addExample(new TaskCs1058(), new TaskJava1058())//parse array to distinct numbers. distance between points
+                .addTask(new TaskCs9774(), new TaskJava9774())//операции над массивом
                 .addTask(new Task3940())//просмотр массива и простая операция
                 .addTask(new Task6707())//просмотр массива с условием
                 .addTask(new Task9525())//просмотр массива с условиями
@@ -715,14 +626,18 @@ public class Application {
                 .addTask(new Task7534())//вложенные циклы
 
                 .withGroup("Задачи повышенного уровня сложности")
+                .addTask(new Task9361())//пользователь вводит две даты dd_MM_yyyy выяснить какая из них больше.
                 //угол между отрезками
                 //для трех точек - отклонение центральной от соседних
                 .addTask(5900)//вычисление контрольной суммы штрих-кода
         ;
+    }
+
+    private static void fillCombinations(TaskBook taskBook) {
         //идея "перечислить все комбинации чисел" нужна для того, чтобы люди осознавали сколько возможных значений у переменных может быть
         //без этой идеи задачи на пересечение интервалов получаются вырожденные.
         //люди проверяют только часть возможных ситуаций и не осознают все множество возможных значений
-        taskBook.withSourceDirectory("arrays")
+        taskBook.withSourceDirectory("combinations")
                 .withGroup("Печать на экран комбинаций чисел")
                 .addExample(new Task4965())//все комбинации двух значений в большом диапазоне
                 .addTask(new Task1839())//все комбинации
@@ -730,8 +645,8 @@ public class Application {
                 //использование массива чисел для получения данных от пользователя.
                 .addTask(new Task3095())//все комбинации двух элементов из более большого массива
                 .addTask(new Task6915())//все комбинации из массива четырех чисел
+
                 //ради этой задачи это все было затеяно
-                .addTask(new Task6714())// пересекаются ли интервалы
                 .addTask(new Task1217())//определение области пересечения интервалов
                 .addTask(new Task4531())//изобразить пересекающиеся интервалы символами
                 .addTask(new Task1438())//пересечение прямоугольников
@@ -742,7 +657,7 @@ public class Application {
         //задачки выглядят простыми, но в этот период студенты могут загрустить от постоянных новых сложных задачек. Поэтому надо дать на повторение.
         taskBook.withSourceDirectory("arrays")
                 .withGroup("Вычисление агрегатов из ряда чисел")
-                .addExample(new Task7621())//Вычисление суммы элементов на указанных индексах
+                .addExample(new TaskCs7621(), new TaskJava7621())//Вычисление суммы элементов на указанных индексах
 
                 .addTask(new Task3669())//произведение целых чисел, long, без массива, цикл в условии
                 .addTask(new Task5951())//сумма кубов, без массива, не универсальная
@@ -1129,13 +1044,7 @@ public class Application {
         taskBook.withSourceDirectory("lab13")
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
-        ;
-        if (taskBook.isCsharp()) {
-            taskBook.addExample(new TaskCs7740());//обработка не-чисел
-        } else if (taskBook.isJava()) {
-            taskBook.addExample(new TaskJava7740());//обработка не-чисел
-        }
-        taskBook
+                .addExample(new TaskCs7740(), new TaskJava7740())//обработка не-чисел
                 .addTask(new Task1439())//обработка не-чисел
                 .addTask(new Task5101())//подсчет количества в файле
                 .addTask(new Task8733())//среднее арифметическое в файле

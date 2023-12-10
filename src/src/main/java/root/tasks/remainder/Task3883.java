@@ -31,10 +31,10 @@ public class Task3883 extends OneInputValLayout {
             System.out.println("Значение A должно быть в интервале от 1000 до 9999 включительно");
         }
         if (1000 <= a) {
-            if (a > 9999) {
+            if (9999 < a) {
                 System.out.println("Значение A должно быть в интервале от 1000 до 9999 включительно");
             }
-            if (9999 <= a) {
+            if (a <= 9999) {
                 int hundreds = a / 100 % 10;
                 int units = a % 10;
                 System.out.printf("Количество сотен: %d\n", hundreds);

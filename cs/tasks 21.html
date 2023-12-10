@@ -229,6 +229,7 @@ zoom{
 <li>23 <a href='tasks 23.html'>Коллекции</a></li>
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
+<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task2686'>1</a><li><a href='#task5789' class='example'>2*</a><li><a href='#task6011'>3</a><li><a href='#task7040'>4</a><li><a href='#task1606'>5</a><li><a href='#task4574'>6</a><li><a href='#task6037'>7</a></ul><ul><li><a href='#task4491'>8</a><li><a href='#task1193'>9</a><li><a href='#task8347'>10</a><li><a href='#task7301' class='example'>11*</a><li><a href='#task2000'>12</a><li><a href='#task3864'>13</a><li><a href='#task4913'>14</a><li><a href='#task6522'>15</a><li><a href='#task8225'>16</a></ul></div><div id='task2686' class='task_block'>
 <div class='task_id'>2686</div>
 <h3>Задача</h3>
@@ -250,7 +251,7 @@ zoom{
 <div id='task5789' class='task_block'>
 <div class='task_id'>5789</div>
 <h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 10.html#task1058" target="_blank">ЛР10#1058(открыть в новой вкладке)</a></h4>
+<h4>Реализуйте статический метод для решения задачи <a href="tasks 12.html#task1058" target="_blank">ЛР12#1058(открыть в новой вкладке)</a></h4>
 <ol start='1'><li>В папке для исходного кода создайте класс Point.</li><li>В классе Point реализуйте публичный статический метод distanceBetween.</li><li>Он принимает в качестве аргумента 4 действительных числа.</li><li>Метод возвращает действительное число.</li></ol><table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
 <tr><th>ax</th><th>ay</th><th>bx</th><th>by</th></tr>
@@ -274,7 +275,7 @@ zoom{
 <div id='task6011' class='task_block'>
 <div class='task_id'>6011</div>
 <h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 10.html#task1058" target="_blank">ЛР10#1058(открыть в новой вкладке)</a>используя экземпляры класса</h4>
+<h4>Реализуйте статический метод для решения задачи <a href="tasks 12.html#task1058" target="_blank">ЛР12#1058(открыть в новой вкладке)</a>используя экземпляры класса</h4>
 <ol start='1'><li>Объявите у класса Point поля для действительных значений "x" и "y".</li><li>В классе Point реализуйте публичный статический метод distanceBetween.</li><li>Новый метод distanceBetween принимает в качестве аргументов 2 экземпляра класса Point.</li><li>Метод возвращает действительное число.</li><li>Для вычисления результата используйте поля "x" и "y" экземпляров класса Point, которые были переданы в качестве аргументов.</li></ol><table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
 <tr><th>a.x</th><th>a.y</th><th>b.x</th><th>b.y</th></tr>
@@ -338,14 +339,14 @@ zoom{
 <div id='task4574' class='task_block'>
 <div class='task_id'>4574</div>
 <h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 10.html#task6589" target="_blank">ЛР10#6589(открыть в новой вкладке)</a></h4>
+<h4>Реализуйте статический метод для решения задачи <a href="#task6589" target="_blank">ЛР#6589(открыть в новой вкладке)</a></h4>
 <ol start='1'><li>В папке исходным кодом создайте класс Range.</li><li>Объявите в классе Range поля "from" и "to" для целых чисел.</li><li>В классе Range реализуйте публичный статический метод hasIntersection.</li><li>Он принимает в качестве аргумента 4 целых числа и возвращает логическое значение.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
 <ol start='7'><li>В папке для юнит-тестов создайте класс RangeSuite.</li><li>В классе RangeSuite создайте юнит-тест hasIntersectionIntsTest.</li><li>В теле метода hasIntersectionIntsTest вызовите метод hasIntersection.</li><li>Передайте в качестве аргументов значения 2, 3, 5 и 7.</li><li>Проверьте, что метод hasIntersection вернул значение false.</li><li>В теле метода hasIntersectionIntsTest вызовите метод hasIntersection еще раз.</li><li>Передайте в качестве аргументов значения 11, 17, 13, 19.</li><li>Проверьте, что метод hasIntersection вернул значение true.</li><li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li></ol><h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
 <ol start='16'><li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionIntsWrongRedTest и hasIntersectionIntsWrongGreenTest.</li><li>Они должны проверять факт возникновения исключения IllegalArgumentException.</li><li>В теле метода hasIntersectionIntsWrongRedTest вызовите метод hasIntersection.</li><li>Передайте ему в качестве аргументов значения 79, 73, 83, 89.</li><li>В теле метода hasIntersectionIntsWrongGreenTest вызовите метод hasIntersection.</li><li>Передайте ему в качестве аргументов значения 97, 101, 107, 103.</li><li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
 <div id='task6037' class='task_block'>
 <div class='task_id'>6037</div>
 <h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 10.html#task6589" target="_blank">ЛР10#6589(открыть в новой вкладке)</a></h4>
+<h4>Реализуйте статический метод для решения задачи <a href="#task6589" target="_blank">ЛР#6589(открыть в новой вкладке)</a></h4>
 <ol start='1'><li>Объявите у класса Range поля для целочисленных значений "from" и "to".</li><li>В классе Range реализуйте еще один публичный статичекий метод hasIntersection.</li><li>Новый метод hasIntersection принимает в качестве аргументов 2 экземпляра класса Range и возвращает логическое значение.</li><li>В теле метода нужно вернуть результат решения задачи. В вычислениях нужно использовать поля "from" и "to" экземпляров класса Range, которые были переданы в качестве аргументов.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
 <ol start='6'><li>В классе RangeSuite создайте юнит-тест hasIntersectionRangesTest.</li><li>В теле метода hasIntersectionRangesTest создайте 2 переменных типа Range: left и right. Инициализируйте их экземплярами класса Range.</li><li>Инициализируйте поле "from" переменной red значением 23.</li><li>Инициализируйте поле "to" переменной red значением 27.</li><li>Инициализируйте поле "from" переменной green значением 29.</li><li>Инициализируйте поле "from" переменной green значением 31.</li><li>Вызовите статический метод hasIntersection класса Range и передайте ему в качестве аргументов значения переменных red и green.</li><li>Проверьте, что метод hasIntersection возвращает false.</li><li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li></ol><h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
 <ol start='15'><li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionRangesWrongRedTest и hasIntersectionRangesWrongGreenTest.</li><li>Они должны проверять факт возникновения исключения IllegalArgumentException.</li><li>В теле метода hasIntersectionRangesWrongRedTest инициализируйте два экземпляра класса Range: left и right.</li><li>Заполните значения их полей так, чтобы левый интервал получился некорректным.</li><li>Вызовите метод hasIntersection и передайте ему red и green в качестве аргументов.</li><li>В теле метода hasIntersectionRangesWrongGreenTest проверьте что метод hasIntersection выбрасывает исключение в случае, когда правый интервал некорректный.</li><li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>

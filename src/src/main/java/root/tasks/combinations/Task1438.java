@@ -1,4 +1,4 @@
-package root.tasks.arrays_of_numbers;
+package root.tasks.combinations;
 
 import root.tasks.OneInputValLayout;
 

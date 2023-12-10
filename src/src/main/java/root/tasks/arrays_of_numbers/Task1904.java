@@ -11,6 +11,7 @@ public class Task1904 extends OneInputValLayout {
         appendCheckValuesRow("9,8,7,6");
         appendCheckValuesRow("1,2,3,4,5,6");
         appendCheckValuesRow("0,0,0,7");
+        appendCheckValuesRow("5");
         appendCheckValuesRow("99");
         appendCheckValuesRow("6,4,100");
         appendCheckValuesRow("-3");
@@ -31,8 +32,8 @@ public class Task1904 extends OneInputValLayout {
                 System.out.println("Некорректное значение " + arr[i] + " ожидается один символ - цифра.");
                 return;
             }
-            System.out.println("Промежуточный результат " + num);
             num += current;
+            System.out.println("Промежуточный результат " + num);
             i = i + 1;
         }
         System.out.println("Готовое число: " + num);

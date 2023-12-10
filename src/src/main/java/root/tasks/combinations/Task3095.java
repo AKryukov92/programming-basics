@@ -6,7 +6,7 @@ public class Task3095 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит данные - фрагменты строк, разделенные запятой. Напечатать на экран все комбинации с перестановками из двух элементов массива. Комбинация содержащие два одинаковых элемента нужно исключить.");
+        appendTaskDescEscaped("Пользователь вводит данные - фрагменты строк, разделенные запятой. Напечатать на экран все комбинации с перестановками из двух элементов массива. Комбинации содержащие два одинаковых элемента нужно исключить.");
         appendCheckValuesHeader("values");
         appendCheckValuesRow("q,w,e,r");
         appendCheckValuesRow("as,df,gh");

@@ -25,7 +25,7 @@ public class Task9980 extends StreamInputLayout {
         int i = Integer.parseInt(source.next());
         while (i > 0) {
             if (i < arr.length) {
-                System.out.println("На индексе " + i + " находится элемент со значением" + arr[i]);
+                System.out.println("На индексе " + i + " находится элемент со значением " + arr[i]);
             } else {
                 System.out.println("В массиве длиной " + arr.length + " не существует элемента с индексом " + i);
             }

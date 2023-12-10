@@ -19,10 +19,10 @@ public class TaskJava4411 extends StreamInputLayout {
         appendTaskDescEscaped("В этой задаче вам нужно получить от пользователя число. Это число может иметь цифры после запятой. Для сохранения таких чисел в памяти нужно объявить переменную типа double.");
         appendCheckSingleNonEscaped(getLogic(getClass().getSimpleName()));
         appendTaskDescNonEscaped("Если вы получили ошибку:");
-        appendCheckSingleNonEscaped("Exception in thread \"main\" java.util.InputMismatchException\n" +
-                "\tat java.util.Scanner.throwFor(Scanner.java:864)\n" +
-                "\tat java.util.Scanner.next(Scanner.java:1485)\n" +
-                "\tat java.util.Scanner.nextDouble(Scanner.java:2413)");
+        appendCheckSingleNonEscaped("Exception in thread \"main\" java.lang.NumberFormatException: For input string: \"11,13\"\n" +
+                "\tat sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)\n" +
+                "\tat sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)\n" +
+                "\tat java.lang.Double.parseDouble(Double.java:538)");
         appendTaskDescNonEscaped("Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <zoom>,</zoom> и точкой <zoom>.</zoom>. Если один из этих символов не подошел, используйте другой.");
         appendFooter();
     }
