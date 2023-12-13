@@ -968,6 +968,7 @@ public class Application {
                     .addTask(new TaskJava8813())//метод с двумя аргументами и печатью в консоль
                     .addTask(new TaskJava5823())//метод с тремя аргументами и печатью в консоль
                     .addTask(new TaskJava2772())//метод с тремя аргументами и печатью в консоль
+                    .addTask(new TaskJava4757())//Найти разницу
                     .addCitation("link_c2_p7.1")
 
                     .addExample(new TaskJava7611())//метод с одним аргументом, возвращает число
@@ -981,6 +982,7 @@ public class Application {
                     .addTask(new TaskCs8813())//метод с двумя аргументами и печатью в консоль
                     .addTask(new TaskCs5823())//метод с тремя аргументами и печатью в консоль
                     .addTask(new TaskCs2772())//метод с тремя аргументами и печатью в консоль
+                    .addTask(new TaskCs4757())//Найти разницу
                     .addCitation("link_c2_p7.1")
 
                     .addExample(new TaskCs7611())//метод с одним аргументом, возвращает число
