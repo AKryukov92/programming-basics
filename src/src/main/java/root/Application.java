@@ -224,8 +224,8 @@ public class Application {
             taskBook.addExample(new TaskCs1662())
                     .addTask(new Task5321())
                     .addTask(new TaskCs8691())
-                    .addTask(new Task7920())
-                    .addExample(new Task7339())//конкатенация
+                    .addTask(new TaskCs7920())
+                    .addExample(new TaskCs7339())//конкатенация
                     .addTask(new TaskCs5901())
                     .addTask(new Task3240())
                     .addTask(new Task7058())
@@ -242,8 +242,8 @@ public class Application {
             taskBook.addExample(new TaskJava1662())
                     .addTask(new Task5321())
                     .addTask(new TaskJava8691())
-                    .addTask(new Task7920())
-                    .addExample(new Task7339())//конкатенация
+                    .addTask(new TaskJava7920())
+                    .addExample(new TaskJava7339())//конкатенация
                     .addTask(new TaskJava5901())
                     .addTask(new Task3240())
                     .addTask(new Task7058())
