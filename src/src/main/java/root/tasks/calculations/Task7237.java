@@ -6,7 +6,7 @@ public class Task7237 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Известно значение температуры по шкале Цельсия. Найти соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.");
+        appendTaskDescEscaped("Известно значение температуры по шкале Цельсия. Вычислить соответствующее значение температуры по шкале Фаренгейта. Для этого необходимо исходное значение температуры умножить на 1,8 и к результату прибавить 32.");
         appendCheckValuesHeader("temperatureC");
         appendCheckValuesRow("0");
         appendCheckValuesRow("-5");

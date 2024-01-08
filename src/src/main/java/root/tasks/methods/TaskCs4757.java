@@ -17,6 +17,12 @@ public class TaskCs4757 extends TwoInputValLayout {
 
     @Override
     protected void logic(String firstValue, String secondValue) {
-
+        int first = Integer.parseInt(firstValue);
+        int second = Integer.parseInt(secondValue);
+        if (first > second) {
+            System.out.println(first - second);
+        } else {
+            System.out.println(second - first);
+        }
     }
 }

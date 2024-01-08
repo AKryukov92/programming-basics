@@ -327,7 +327,7 @@ public class Application {
                 .addTask(new Task3435())//обратное действие, нужно вывести формулу из задачи про радианы
                 .addTask(new Task9865())//нужно перевести с естественного языка на ЯП
                 .addTask(new Task7457())//нужно вывести формулу с помощью школьных знаний
-                .addTask(new Task7237())
+                .addTask(new Task7237())//перевод температуры из цельсия в фаренгейты
 
                 .withGroup("Использование математических функций")
                 .addExample(new Task7711())//синус
@@ -964,15 +964,15 @@ public class Application {
 
         if (taskBook.isJava()) {
             taskBook
-                    .addExample(new TaskJava8307())//метод с одним аргументом и печатью в консоль
+                    .addExample(new TaskJava8307())//метод с одним аргументом
                     .addTask(new TaskJava8813())//метод с двумя аргументами и печатью в консоль
                     .addTask(new TaskJava5823())//метод с тремя аргументами и печатью в консоль
                     .addTask(new TaskJava2772())//метод с тремя аргументами и печатью в консоль
-                    .addTask(new TaskJava4757())//Найти разницу
                     .addCitation("link_c2_p7.1")
 
                     .addExample(new TaskJava7611())//метод с одним аргументом, возвращает число
                     .addTask(new TaskJava4776())//метод с одним аргументом, возвращает число
+                    .addExample(new TaskJava4757())//Найти разницу, объяснение "missing return statement"
                     .addTask(new TaskJava3597())//метод с условиями и возвратом строки
                     .addTask(new TaskJava6573())//метод с условием и циклом. возврат long
             ;
@@ -982,15 +982,12 @@ public class Application {
                     .addTask(new TaskCs8813())//метод с двумя аргументами и печатью в консоль
                     .addTask(new TaskCs5823())//метод с тремя аргументами и печатью в консоль
                     .addTask(new TaskCs2772())//метод с тремя аргументами и печатью в консоль
-                    .addTask(new TaskCs4757())//Найти разницу
                     .addCitation("link_c2_p7.1")
 
                     .addExample(new TaskCs7611())//метод с одним аргументом, возвращает число
                     .addTask(new TaskCs4776())//метод с одним аргументом, возвращает число
-                    //методы с условиями это особенная тема.
-                    // если до этих пор не говорить студентам об else, то сейчас наверняка возникнуть проблемы вида
-                    //missing return statement
-                    //это хороший повод объяснить else
+
+                    .addExample(new TaskCs4757())//Найти разницу, объяснение "не все ветви кода возвращают значения"
                     .addTask(new TaskCs3597())//метод с условиями и возвратом строки
                     .addTask(new TaskCs6573())//метод с условием и циклом. возврат long
             ;
