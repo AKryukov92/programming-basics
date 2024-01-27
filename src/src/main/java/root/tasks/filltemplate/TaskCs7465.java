@@ -18,18 +18,18 @@ public class TaskCs7465 extends TaskJava7465 {
         appendFooter();
     }
     public static class Verbose {
-        public static void logic() {
-            Console.WriteLine("первая строка");
-            Console.WriteLine("вторая строка");
-            Console.WriteLine(" с продолжением");
-            Console.WriteLine("третья");
-            Console.Write(" строка");
-            Console.Write("четвертая");
-            Console.WriteLine(" строка");
-            Console.Write(" с продолжением");
-            Console.WriteLine("пятая");
-            Console.WriteLine(" строка");
-        }
+    protected void logic() {
+        Console.WriteLine("первая строка");
+        Console.WriteLine("вторая строка");
+        Console.WriteLine(" с продолжением");
+        Console.WriteLine("третья");
+        Console.Write(" строка");
+        Console.Write("четвертая");
+        Console.WriteLine(" строка");
+        Console.Write(" с продолжением");
+        Console.WriteLine("пятая");
+        Console.WriteLine(" строка");
+    }
     }
 
     public static void main(String[] args) {

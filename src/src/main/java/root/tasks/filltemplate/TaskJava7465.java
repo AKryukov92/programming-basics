@@ -19,7 +19,7 @@ public class TaskJava7465 extends OneInputValLayout {
     }
 
     public static class Verbose {
-    public static void logic() {
+    protected void logic() {
         System.out.println("первая строка");
         System.out.println("вторая строка");
         System.out.println(" с продолжением");
@@ -44,7 +44,7 @@ public class TaskJava7465 extends OneInputValLayout {
         System.out.print(" строка");//убрать ln
         System.out.println(" с продолжением");//добавить ln
         System.out.print("пятая");//убрать ln
-        System.out.println("строка");//не важно что делать
+        System.out.println(" строка");//не важно что делать
     }
 
     public static void main(String[] args) {
