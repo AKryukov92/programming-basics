@@ -10,8 +10,8 @@ public class TaskJava2312 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("В файле содержатся три строки значений. Первая строка содержит адрес сервера (host). Вторая - имя пользователя (user). Третья - пароль (pass). Нужно прочитать эти данные и сформировать строку подключения ODBC по шаблону:");
-        appendCheckSingleNonEscaped("User ID=$USER;Password=$PASS;Host=$HOST;Port=5432;Database=dvdrental;");
+        appendTaskDescNonEscaped("В файле содержатся три строки. Первая строка содержит адрес сервера (host). Вторая - имя пользователя (user). Третья - пароль (pass). Нужно прочитать эти данные и сформировать строку подключения JDBC по шаблону:");
+        appendCheckSingleNonEscaped("postgresql://$USER:$PASS@$HOST:5432/dvdrental");
         appendCheckValuesHeader("filename");
         appendCheckValuesRowWithFile("files/task2312/config1.cfg");
         appendCheckValuesRowWithFile("files/task2312/config2.cfg");
@@ -24,7 +24,11 @@ public class TaskJava2312 extends OneInputValLayout {
         appendCheckSingleNonEscaped("File file = new File(path);");
         appendTaskDescNonEscaped("Чтение файла выполняется с помощью экземпляра класса Scanner. Слово file в скобочках это переменная, содержащая экземпляр класса File. В этот момент происходит открытие файла. Для чтения консоли у вас в такой команде было написано \"System.in\".");
         appendCheckSingleNonEscaped("Scanner fileReader = new Scanner(file);");
-        appendTaskDescNonEscaped("Если на самом деле файла нет, то при попытке его открыть, программа упадет с ошибкой");
+        appendTaskDescNonEscaped("Скорее всего, эта команда вызовет ошибку компиляции:");
+        appendCheckSingleNonEscaped("java: unreported exception java.io.FileNotFoundException; must be caught or declared to be thrown");
+        appendTaskDescNonEscaped("Это значит, что нужно обработать исключение. Эта тема будет разобрана позже. Сейчас добавьте выражение \"throws FileNotFoundException\" таким образом:");
+        appendCheckSingleNonEscaped("public static void main(String[] args) throws FileNotFoundException {");
+        appendTaskDescNonEscaped("Это выражение указывает на то, что программа должна упасть с технической ошибкой при попытке открыть файл, если на самом деле файла нет. Ошибка выглядит так:");
         appendCheckSingleNonEscaped("Exception in thread \"main\" java.io.FileNotFoundException: D:\\tfa\\src\\files\\task2312\\config3.cfg (Не удается найти указанный файл)\n" +
                 "\tat java.io.FileInputStream.open0(Native Method)\n" +
                 "\tat java.io.FileInputStream.open(FileInputStream.java:195)\n" +
@@ -47,8 +51,10 @@ public class TaskJava2312 extends OneInputValLayout {
                 "}\n" +
                 "if (fileReader.hasNext()) {//если в файле еще есть данные\n" +
                 "    String host = fileReader.nextLine();//читаем строку из файла и записываем её в переменную host\n" +
-                "}");
-        appendTaskDescNonEscaped();
+                "}\n");
+        appendTaskDescEscaped("В конце работы программы файлы нужно закрывать. Для этого нужно вызвать команду:");
+        appendCheckSingleNonEscaped("fileReader.close();");
+        appendTaskDescEscaped("Обратите внимание, что программа может закончиться как при выполнении всех действий, так и при вызове команды \"return;\". Добавьте закрытие файла во все варианты завершения программы.");
         appendFooter();
     }
 
@@ -77,7 +83,7 @@ public class TaskJava2312 extends OneInputValLayout {
                 return;
             }
             String password = fileReader.nextLine();
-            System.out.printf("User ID=%s;Password=%s;Host=%s;Port=5432;Database=dvdrental;", username, password, host);
+            System.out.printf("postgresql://%s:%s@%s:5432/dvdrental", username, password, host);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

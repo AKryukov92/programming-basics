@@ -811,7 +811,7 @@ public class Application {
         taskBook.withSourceDirectory("lab09")
 
                 .withGroup("Чтение файлов")
-                .addExample(new TaskJava2312())//чтение трех строк и обработка ошибок
+                .addExample(new TaskCs2312(), new TaskJava2312())//чтение трех строк и обработка ошибок
                 .addExample(new Task6175())//чтение в цикле и вывод на экран в том же цикле
                 .addTask(new Task5236())//чтение чисел, конвертирование и простой вывод
                 .addTask(new Task4488())//пропуск первой строки
