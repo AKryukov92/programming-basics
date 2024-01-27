@@ -96,6 +96,7 @@ table td, table th {
 .check_values .preformatted, .preformatted {
 	font-family:monospace;
 	white-space-collapse:preserve;
+	white-space:pre;
     text-wrap:pretty;
 	text-align:left;
 	padding:10px;
