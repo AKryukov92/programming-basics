@@ -6,7 +6,7 @@ public class Task4913 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Даны координаты X<sub>a</sub> и Y<sub>a</sub> исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.");
+        appendTaskDescNonEscaped("Даны координаты aX и aY исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.");
         appendOrderedNonEscaped(
                 "Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula>",
                 "Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula>",
@@ -14,7 +14,7 @@ public class Task4913 extends MultipleInputValLayout {
                 "Координату Y<sub>b</sub> другой точки по формуле <formula>by = ay + dY</formula>"
         );
         appendTaskDescNonEscaped("Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.");
-        appendCheckSingleNonEscaped("Приращение координат: &Delta;x = $dx; &Delta;y = $dy\n" +
+        appendCheckSingleNonEscaped("Приращение координат: dX = $dx; dY = $dy\n" +
                 "Координаты второй точки ($bx;$by)");
         appendCheckValuesHeader("ax", "ay", "distance", "angleDeg");
         appendCheckValuesRow("1", "2", "5", "30");
@@ -41,19 +41,21 @@ public class Task4913 extends MultipleInputValLayout {
         double angleDeg = Double.parseDouble(args[3]);
         if (distance <= 0) {
             System.out.println("Горизонтальное проложение линии должно быть положительно");
-            return;
         }
         if (angleDeg < 0) {
             System.out.println("Угол должен быть неотрицательным");
-            return;
         }
-        double dx = distance * Math.cos(Math.toRadians(angleDeg));
-        double dy = distance * Math.sin(Math.toRadians(angleDeg));
-        System.out.print("Приращение координат:");
-        System.out.printf(" \u0394x = %.4f \u0394y = %.4f\n", dx, dy);
-        double destX = ax + dx;
-        double destY = ay + dy;
-        System.out.printf("Координаты второй точки (%.4f;%.4f)\n", destX, destY);
+        if (distance > 0) {
+            if (angleDeg >= 0) {
+                double dx = distance * Math.cos(Math.toRadians(angleDeg));
+                double dy = distance * Math.sin(Math.toRadians(angleDeg));
+                System.out.print("Приращение координат:");
+                System.out.printf(" dX = %.4f dY = %.4f\n", dx, dy);
+                double destX = ax + dx;
+                double destY = ay + dy;
+                System.out.printf("Координаты второй точки (%.4f;%.4f)\n", destX, destY);
+            }
+        }
     }
 
     public static void main(String[] args) {

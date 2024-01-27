@@ -121,7 +121,7 @@ public class Application {
         fillReadingFiles(taskBooksCs[16]);
         fillWritingFiles(taskBooksCs[17]);
 
-        methodsDecoration(taskBooksCs[18]);
+        fillMethodsDecoration(taskBooksCs[18]);
         fillExceptions(taskBooksCs[19]);
         fillAbstractDataStructures(taskBooksCs[20]);
         fillInternalState(taskBooksCs[21]);
@@ -157,7 +157,7 @@ public class Application {
         fillReadingFiles(taskBooksJava[16]);
         fillWritingFiles(taskBooksJava[17]);
 
-        methodsDecoration(taskBooksJava[18]);
+        fillMethodsDecoration(taskBooksJava[18]);
         fillExceptions(taskBooksJava[19]);
         fillAbstractDataStructures(taskBooksJava[20]);
         fillInternalState(taskBooksJava[21]);
@@ -289,7 +289,8 @@ public class Application {
                 .addTask(new Task1910())
 
                 .withGroup("Диктант по присваиванию и конкатенации")
-                .addExample(new Task4131())
+                .addExample(new TaskCs7465(), new TaskJava7465())//println vs print
+                .addTask(new Task4131())
                 .addTask(new Task7365())
 
                 .withGroup("Оформление текста по шаблону")
@@ -335,8 +336,6 @@ public class Application {
                 .addTask(new Task1262())//косинус
                 .addTask(new Task9164())//синус и косинус
                 .addTask(new Task3558())//синус и косинус
-                .addTask(new Task4913())//прямая геодезическая задача
-                .addTask(new Task2790())//синус, корень
         ;
     }
 
@@ -376,7 +375,7 @@ public class Application {
                 .addTask(new Task7619())//взаимоисключающий, несколько вариантов
 
                 .withGroup("Ограничения при вычислении корня")
-                .addExample(new Task8833())//взаимоисключающий
+                .addExample(new Task8833())//взаимоисключающий, корень
                 .addTask(new Task9020())//взаимоисключающий
                 .addTask(new Task1934())//взаимоисключающий
                 .addTask(new Task3943())//взаимоисключающий, вложенный!
@@ -388,6 +387,8 @@ public class Application {
                 .addTask(new Task5870())//остаток от деления
 
                 .withGroup("Практика")
+                .addTask(new Task4913())//прямая геодезическая задача
+                .addTask(new Task2790())//синус, корень
                 .addTask(new Task3490())//округление вниз
                 .addTask(new Task9622())//просто вычисления
                 .addTask(new Task7799())//подвох в условиях корректности
@@ -955,7 +956,7 @@ public class Application {
         //рассчитываю, что ученики заметят это и смогут правильно переиспользовать код
     }
 
-    private static void methodsDecoration(TaskBook taskBook) {
+    private static void fillMethodsDecoration(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
                 .addCitation("info01")
