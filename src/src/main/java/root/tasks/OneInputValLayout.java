@@ -1,13 +1,23 @@
 package root.tasks;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 
 public abstract class OneInputValLayout extends LayoutMaker {
     private int testCounter = 0;
 
-    protected abstract void logic(String value);
+    protected abstract void logic(String value) throws SQLException;
+
+    protected void rethrowAsRuntime(String value) {
+        try {
+            logic(value);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
 
     protected void appendCheckValuesHeader(String valName, String resultName) {
         tableOpened = true;
@@ -39,7 +49,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(a);
+        rethrowAsRuntime(a);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -55,7 +65,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(a);
+        rethrowAsRuntime(a);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -71,7 +81,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(filename);
+        rethrowAsRuntime(filename);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -83,7 +93,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
             PrintStream tempStream = new PrintStream(baos, true, utf8);
             PrintStream oldOut = System.out;
             System.setOut(tempStream);
-            logic(a);
+            rethrowAsRuntime(a);
             System.setOut(oldOut);
             tempStream.close();
             return baos.toString(utf8);
@@ -97,7 +107,7 @@ public abstract class OneInputValLayout extends LayoutMaker {
         writer.print("<div class='check_single preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(filename);
+        rethrowAsRuntime(filename);
         System.setOut(oldOut);
         writer.println("</div>");
     }

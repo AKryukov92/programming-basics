@@ -231,6 +231,7 @@ zoom{
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
 <li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
+<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425' class='example'>1*</a><li><a href='#task3123' class='example'>2*</a><li><a href='#task9418'>3</a><li><a href='#task7480' class='example'>4*</a><li><a href='#task8811'>5</a><li><a href='#task1912'>6</a><li><a href='#task3696' class='example'>7*</a><li><a href='#task8381'>8</a><li><a href='#task8498'>9</a><li><a href='#task8096'>10</a><li><a href='#task8519' class='example'>11*</a><li><a href='#task2130'>12</a></ul></div><div id='task9425' class='task_block'>
 <div class='task_id'>9425</div>
 <h3>Задача</h3>
@@ -270,6 +271,28 @@ zoom{
 Год: 1995
 Месяц: 3
 День: 1
+</div>
+<div class='task_desc'>
+Если дата содержит время, то нужно использовать тип LocalDateTime. Если время отсутствует, то LocalDate. Пример преобразования даты из текста в LocalDate/LocalDateTime:
+</div>
+<div class='check_single preformatted'>String yMd = "yyyy-MM-dd";
+String str1 = "2023-06-28";
+LocalDate dt1 = LocalDate.parse(str1, DateTimeFormatter.ofPattern(yMd));
+System.out.println("Выражение " + str1 + " означает");
+System.out.println("Год: " + dt1.getYear());
+System.out.println("Месяц: " + dt1.getMonthValue());
+System.out.println("День: " + dt1.getDayOfMonth());
+
+String yMdhm = "yyyy-MM-dd HH:mm";
+String str2 = "2023-06-28 18:38";
+LocalDateTime dt2 = LocalDateTime.parse(str2, DateTimeFormatter.ofPattern(yMdhm));
+System.out.println("Выражение " + str2 + " означает");
+System.out.println("Год: " + dt2.getYear());
+System.out.println("Месяц: " + dt2.getMonthValue());
+System.out.println("День: " + dt2.getDayOfMonth());
+System.out.println("Час: " + dt2.getHour());
+System.out.println("Минута " + dt2.getMinute());
+System.out.println("Секунда " + dt2.getSecond());
 </div>
 </div>
 <div id='task3123' class='task_block'>
@@ -628,4 +651,4 @@ zoom{
 </td></tr>
 </table>
 </div>
-Версия 20231220-pr5. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

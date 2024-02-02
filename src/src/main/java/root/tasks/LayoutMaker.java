@@ -136,7 +136,11 @@ public abstract class LayoutMaker {
     }
 
     protected String linkToFile(String filename) {
-        if (filename.endsWith(".csv")) {
+        boolean downloadableExtension = filename.endsWith(".csv") ||
+                filename.endsWith(".db") ||
+                filename.endsWith(".exe") ||
+                filename.endsWith(".jar");
+        if (downloadableExtension) {
             String filenamePart = filename.substring(filename.lastIndexOf("/") + 1);
             return "<a href=\"" + filename + "\" target=\"_blank\">скачать " + filenamePart + "</a>";
         } else {

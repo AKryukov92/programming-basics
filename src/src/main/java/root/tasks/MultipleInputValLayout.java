@@ -3,11 +3,20 @@ package root.tasks;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 
 public abstract class MultipleInputValLayout extends LayoutMaker {
     private int testCounter = 0;
     private int headerCount;
-    protected abstract void logic(String... args);
+    protected abstract void logic(String... args) throws SQLException;
+
+    protected void rethrowAsRuntime(String... args) {
+        try {
+            logic(args);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
     protected void appendCheckValuesHeader(String... headers) {
         tableOpened = true;
         headerCount = headers.length;
@@ -41,7 +50,7 @@ public abstract class MultipleInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(values);
+        rethrowAsRuntime(values);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -53,7 +62,7 @@ public abstract class MultipleInputValLayout extends LayoutMaker {
             PrintStream tempStream = new PrintStream(baos, true, utf8);
             PrintStream oldOut = System.out;
             System.setOut(tempStream);
-            logic(values);
+            rethrowAsRuntime(values);
             System.setOut(oldOut);
             tempStream.close();
             return baos.toString(utf8);

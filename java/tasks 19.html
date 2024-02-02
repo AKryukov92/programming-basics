@@ -231,7 +231,8 @@ zoom{
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
 <li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task4757'>5</a><li><a href='#task7611' class='example'>6*</a><li><a href='#task4776'>7</a><li><a href='#task3597'>8</a><li><a href='#task6573'>9</a><li><a href='#task1292'>10</a></ul><ul><li><a href='#task3946' class='example'>11*</a><li><a href='#task8920'>12</a><li><a href='#task6497'>13</a><li><a href='#task1995' class='example'>14*</a><li><a href='#task2936' class='example'>15*</a><li><a href='#task3539'>16</a><li><a href='#task6401' class='example'>17*</a><li><a href='#task7581'>18</a></ul></div><div class="task_block" id="info01">
+<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task4757' class='example'>7*</a><li><a href='#task3597'>8</a><li><a href='#task6573'>9</a><li><a href='#task1292'>10</a></ul><ul><li><a href='#task3946' class='example'>11*</a><li><a href='#task8920'>12</a><li><a href='#task6497'>13</a><li><a href='#task1995' class='example'>14*</a><li><a href='#task2936' class='example'>15*</a><li><a href='#task3539'>16</a><li><a href='#task6401' class='example'>17*</a><li><a href='#task7581'>18</a></ul></div><div class="task_block" id="info01">
     <h4>Подготовка проекта</h4>
 	<div class="task_desc">Создайте проект с помощью maven.
 <ol>
@@ -257,23 +258,29 @@ zoom{
 <div class='task_desc'>
 Пользователь вводит слово (goal). Нужно напечатать на экран фразу "Мы стремимся к " и затем слово от пользователя.
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task8307.</li><li>Он принимает в качестве аргумента 1 строку.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task8307.</li><li>Метод принимает в качестве аргумента 1 строку.</li><li>Метод возвращает текст, который нужно напечатать на экран.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
 Код метода будет выглядеть так:
 </div>
 <div class='check_single preformatted'>public class Library {
     public static void task8307(String value) {
-        System.out.println("Мы стремимся к " + value);
+        String res;
+        res = "Мы стремимся к " + value;
+        return res;
     }
 }</div>
 <div class='task_desc'>
 В методе main класса Program добавьте следующий код:
 </div>
-<div class='check_single preformatted'>//вызов метода task1860 из класса Library
-Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
+<div class='check_single preformatted'>String result;
+//вызов метода task1860 из класса Library
+result = Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
+System.out.println(result);
 String goal = "цели";
 //значение переменной goal передано в качестве аргумента
-Library.task8307(goal);//внутри метода это значение будет доступно под именем value
-Library.task8307("результату");
+result = Library.task8307(goal);//внутри метода это значение будет доступно под именем value
+System.out.println(result);
+result = Library.task8307("результату");
+System.out.println(result);
 </div>
 <div class='task_desc'>
 В результате запуска метода main класса Program, в консоли должен появиться текст:
@@ -356,42 +363,6 @@ Library.task2772(-3, 0, 2);
 Его дискриминант вычисляется по формуле: d = 0*0 - 4*-3*2
 </div>
 </div>
-<div id='task4757' class='task_block'>
-<div class='task_id'>4757</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны два числа, нужно вычесть из большего числа меньшее.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>first</th><th>second</th></tr>
-<tr>
-<td>1</td><td>99</td><td>17</td><td class='preformatted'></td></tr>
-<tr>
-<td>2</td><td>14</td><td>5</td><td class='preformatted'></td></tr>
-</table>
-<div class='task_desc'>
-При работе с методами вы можете встретить ошибку компиляции "java: missing return statement". Пример когда у вас программа без ветвлений:
-</div>
-<div class='check_single preformatted'>public static int sum(int a, int b){
-    int result;
-    result = a + b;
-}//эта скобочка подчеркивается красным</div>
-<div class='task_desc'>
-Она возникает в случае когда вы написали метод примерно так:
-</div>
-<div class='check_single preformatted'>public static int diff(int a, int b) {
-    int result;
-    if (a < b) {
-        result = b - a;
-        return result;
-    }
-    if (b < a) {
-        result = a - b;
-        return result;
-    }
-}</div>
-</div>
 <div id="link_c2_p7.1" class="task_block">
 	<div class="check_single">В предыдущих заданиях на простых задачках вы тренировались в оформлении метода: передаче аргументов и возвращении значения значении. Когда же на практике нужно применять методы? Ответ на этот вопрос дан в главе 7.1 "Разумные причины создания методов" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=182" target="_blank">(открыть в новой вкладке)</a></div>
 </div><div id='task7611' class='task_block'>
@@ -466,6 +437,81 @@ System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
 0,5150
 1,0000
 </div>
+</div>
+<div id='task4757' class='task_block'>
+<div class='task_id'>4757</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны два числа, нужно вычесть из большего числа меньшее.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>first</th><th>second</th></tr>
+<tr>
+<td>1</td><td>99</td><td>17</td><td class='preformatted'>82
+</td></tr>
+<tr>
+<td>2</td><td>14</td><td>5</td><td class='preformatted'>9
+</td></tr>
+</table>
+<div class='task_desc'>
+При работе с методами вы можете встретить ошибку компиляции "не все пути к коду возвращают значение.". Пример когда у вас программа без ветвлений:
+</div>
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+}</div>
+<div class='task_desc'>
+В этом случае для исправления нужно только дописать команду "return result;" как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+    return result;//эта команда добавлена
+}</div>
+<div class='task_desc'>
+Если же ваша программа содержит ветвления (if), то ошибка "не все пути к коду возвращают значение" возникает в случае когда вы написали метод примерно так:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+}</div>
+<div class='task_desc'>
+При компиляции, компьютер выполняет предварительный анализ кода. В этом примере он видит что команды return находятся внутри ветвлений. Для компьютера возможна ситуация, когда оба условия if будут ложны, а значит ни одна из команд return не будет выполнена. В данном примере - когда a строго равно b. Первый вариант исправления - предусмотреть return "на всякий случай" как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+    return 0;//на всякий случай
+}</div>
+<div class='task_desc'>
+Другой вариант исправления - использовать if else. Если условие будет ложно, то будут выполнены команды из else. Если истинно - команды из if. Компьютер считает, что хотя бы одна из команд return будет выполнена Как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    else {//здесь раньше был if (b < a)
+        result = a - b;
+        return result;
+    }
+}</div>
 </div>
 <div id='task3597' class='task_block'>
 <div class='task_id'>3597</div>
@@ -688,4 +734,4 @@ System.out.println(Library.compareArrays(
 <ol start='5'><li>В классе TestSuite создайте юнит-тест для проверки задачи Task2003.</li><li>Объявите переменную result для хранения логических значений</li><li>В теле юнит-теста вызовите метод Task2003 класса Library.</li><li>Передайте ему в качестве исходных данных массив {a s d f}.</li><li>Результат вызова метода запишите в переменную result.</li><li>Вызовите метод IsFalse класса Assert и передайте ему в качестве аргумента переменную result.</li><li>Вызовите метод Task2003 еще раз с массивом {q a z w s x e d c}</li><li>Результат вызова метода запишите в переменную result.</li><li>Вызовите метод IsTrue класса Assert и передайте ему в качестве аргумента переменную result.</li><li>После запуска юнит-теста, он должен быть отмечен зеленым знаком в списке методов.</li></ol></div>
 <div id="link_c2_p7.3" class="task_block">
 	<div class="check_single">Использование методов уменьшит сложность вашей программы только в том случае, если имена методов будут отражать их назначение. Более подробно проблема именования методов рассмотрена в  главе 7.3 "Удачные имена методов" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=189" target="_blank">(открыть в новой вкладке)</a></div>
-</div>Версия 20231220-pr5. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

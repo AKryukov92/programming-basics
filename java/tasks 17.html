@@ -231,7 +231,93 @@ zoom{
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
 <li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task6175' class='example'>1*</a><li><a href='#task5236'>2</a><li><a href='#task4488'>3</a><li><a href='#task7396' class='example'>4*</a><li><a href='#task8605'>5</a><li><a href='#task7788' class='example'>6*</a><li><a href='#task6989'>7</a><li><a href='#task6170'>8</a><li><a href='#task8665'>9</a><li><a href='#task1761'>10</a><li><a href='#task4477'>11</a><li><a href='#task9417'>12</a><li><a href='#task3148'>13</a><li><a href='#task6648'>14</a></ul></div><div id='task6175' class='task_block'>
+<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task2312' class='example'>1*</a><li><a href='#task6175' class='example'>2*</a><li><a href='#task5236'>3</a><li><a href='#task4488'>4</a><li><a href='#task7396' class='example'>5*</a><li><a href='#task8605'>6</a><li><a href='#task7788' class='example'>7*</a><li><a href='#task6989'>8</a><li><a href='#task6170'>9</a><li><a href='#task8665'>10</a><li><a href='#task1761'>11</a><li><a href='#task4477'>12</a><li><a href='#task9417'>13</a><li><a href='#task3148'>14</a><li><a href='#task6648'>15</a></ul></div><div id='task2312' class='task_block'>
+<div class='task_id'>2312</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+В файле содержатся три строки. Первая строка содержит адрес сервера (host). Вторая - имя пользователя (user). Третья - пароль (pass). Нужно прочитать эти данные и сформировать строку подключения JDBC по шаблону:
+</div>
+<div class='check_single preformatted'>postgresql://$USER:$PASS@$HOST:5432/dvdrental</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
+<tr><td>1</td><td><a href="files/task2312/config1.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config1.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config1.cfg
+postgresql://postres:123@localhost:5432/dvdrental</td></tr>
+<tr><td>2</td><td><a href="files/task2312/config2.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config2.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config2.cfg
+postgresql://test_user:test_pass@127.0.0.1:5432/dvdrental</td></tr>
+<tr><td>3</td><td><a href="files/task2312/config3.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config3.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config3.cfg
+Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config3.cfg
+</td></tr>
+<tr><td>4</td><td><a href="files/task2312/config4.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config4.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config4.cfg
+Пароль не указан
+</td></tr>
+<tr><td>5</td><td><a href="files/task2312/config5.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config5.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config5.cfg
+Имя пользователя не указано
+</td></tr>
+<tr><td>6</td><td><a href="files/task2312/config6.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config6.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config6.cfg
+Адрес сервера не указан
+</td></tr>
+</table>
+<div class='task_desc'>
+Для того чтобы читать файл, нужно создать экземпляр класса File. В скобочках вместо path нужно подставить строковый литерал с адресом файла в файловой системе. Это может быть абсолютный "C:/temp/files/task2312/config1.cfg" или относительный путь "./files/task2312/config1.cfg". Относительный путь может выглядеть иначе в зависимости от расположения вашего проекта с решениями задач.
+</div>
+<div class='check_single preformatted'>File file = new File(path);</div>
+<div class='task_desc'>
+Чтение файла выполняется с помощью экземпляра класса Scanner. Слово file в скобочках это переменная, содержащая экземпляр класса File. В этот момент происходит открытие файла. Для чтения консоли у вас в такой команде было написано "System.in".
+</div>
+<div class='check_single preformatted'>Scanner fileReader = new Scanner(file);</div>
+<div class='task_desc'>
+Скорее всего, эта команда вызовет ошибку компиляции:
+</div>
+<div class='check_single preformatted'>java: unreported exception java.io.FileNotFoundException; must be caught or declared to be thrown</div>
+<div class='task_desc'>
+Это значит, что нужно обработать исключение. Эта тема будет разобрана позже. Сейчас добавьте выражение "throws FileNotFoundException" таким образом:
+</div>
+<div class='check_single preformatted'>public static void main(String[] args) throws FileNotFoundException {</div>
+<div class='task_desc'>
+Это выражение указывает на то, что программа должна упасть с технической ошибкой при попытке открыть файл, если на самом деле файла нет. Ошибка выглядит так:
+</div>
+<div class='check_single preformatted'>Exception in thread "main" java.io.FileNotFoundException: D:\tfa\src\files\task2312\config3.cfg (Не удается найти указанный файл)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.util.Scanner.<init>(Scanner.java:611)</div>
+<div class='task_desc'>
+Эту ошибку обычно не допускают и пишут сообщение об ошибке "файл не найден". Для этого проверьте условие "file.exists()" с помощью ветвления (if). Если это условие ложно, значит файл отсутствует. Если истинно - значит файл присутствует и его можно читать.
+</div>
+<div class='check_single preformatted'>if (!file.exists()) {//если файл не существует
+    System.out.println("Файл не найден " + file.getAbsolutePath());
+}
+if (file.exists()) {//если файл присутствует
+   //действия по чтению файла
+}</div>
+<div class='task_desc'>
+Выражение "file.getAbsolutePath()" нужно чтобы получить точный абсолютный путь к файлу. Это актуально в случае указания относительного пути и нужно чтобы понимать какой файл программа на самом деле попыталась открыть.
+</div>
+<div class='task_desc'>
+Чтение файла выполняется командой "fileReader.nextLine()". Это та же самая команда, что и для чтения данных из консоли. Файл это непредсказуемое хранилище данных. Он может присутствовать в файловой системе, но при этом не содержать данных. При попытке прочитать пустой файл, возникнет ошибка:
+</div>
+<div class='check_single preformatted'>Exception in thread "main" java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1540)</div>
+<div class='task_desc'>
+Чтобы избежать этой проблемы, нужно написать ветвление. Условие "fileReader.hasNext()" будет истинно в случае если из файла можно прочитать данные с помощью "fileReader.nextLine()".
+</div>
+<div class='check_single preformatted'>if (!fileReader.hasNext()) {//если в файле нечего читать
+    System.out.println("Адрес сервера не указан");
+}
+if (fileReader.hasNext()) {//если в файле еще есть данные
+    String host = fileReader.nextLine();//читаем строку из файла и записываем её в переменную host
+}
+</div>
+<div class='task_desc'>
+В конце работы программы файлы нужно закрывать. Для этого нужно вызвать команду:
+</div>
+<div class='check_single preformatted'>fileReader.close();</div>
+<div class='task_desc'>
+Обратите внимание, что программа может закончиться как при выполнении всех действий, так и при вызове команды "return;". Добавьте закрытие файла во все варианты завершения программы.
+</div>
+</div>
+<div id='task6175' class='task_block'>
 <div class='task_id'>6175</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -253,7 +339,7 @@ zoom{
 бетон
 дерево
 </td></tr>
-<tr><td>5</td><td><a href="files/task6175/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\adm\Desktop\tfa\src\files\task6175\test5.txt
+<tr><td>5</td><td><a href="files/task6175/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6175\test5.txt
 </td></tr>
 <tr><td>6</td><td><a href="files/task6175/test6.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test6.txt</a></td><td class='preformatted'>один два три четыре пять
 </td></tr>
@@ -297,7 +383,7 @@ zoom{
 К числу 134 прибавили 7, получилось 141
 К числу -321 прибавили 7, получилось -314
 </td></tr>
-<tr><td>4</td><td><a href="files/task5236/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test4.txt</a></td><td class='preformatted'>Файл не существует C:\Users\adm\Desktop\tfa\src\files\task5236\test4.txt
+<tr><td>4</td><td><a href="files/task5236/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test4.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5236\test4.txt
 </td></tr>
 <tr><td>5</td><td><a href="files/task5236/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test5.txt</a></td><td class='preformatted'>К числу 328 прибавили 7, получилось 335
 К числу 36 прибавили 7, получилось 43
@@ -330,7 +416,7 @@ zoom{
 </td></tr>
 <tr><td>4</td><td><a href="files/task4488/test4.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test4.txt</a></td><td class='preformatted'>Сказки 7
 </td></tr>
-<tr><td>5</td><td><a href="files/task4488/test5.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\adm\Desktop\tfa\src\files\task4488\test5.txt
+<tr><td>5</td><td><a href="files/task4488/test5.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task4488\test5.txt
 </td></tr>
 <tr><td>6</td><td><a href="files/task4488/test6.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test6.txt</a></td><td class='preformatted'>Файл пуст
 </td></tr>
@@ -353,7 +439,7 @@ zoom{
 Количество чисел в строке 9
 Их сумма равна 796
 </td></tr>
-<tr><td>2</td><td><a href="files/task7396/test2.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test2.txt</a></td><td class='preformatted'>Файл не существует C:\Users\adm\Desktop\tfa\src\files\task7396\test2.txt
+<tr><td>2</td><td><a href="files/task7396/test2.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test2.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task7396\test2.txt
 </td></tr>
 <tr><td>3</td><td><a href="files/task7396/test3.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test3.txt</a></td><td class='preformatted'>Количество чисел в строке 10
 Их сумма равна 498
@@ -617,7 +703,7 @@ $result</div>
 ------------
 -20
 </td></tr>
-<tr><td>5</td><td><a href="files/task1761/test5.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\adm\Desktop\tfa\src\files\task1761\test5.txt
+<tr><td>5</td><td><a href="files/task1761/test5.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task1761\test5.txt
 </td></tr>
 <tr><td>6</td><td><a href="files/task1761/test6.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test6.txt</a></td><td class='preformatted'>Неизвестная функция: 10000
 </td></tr>
@@ -903,7 +989,7 @@ qa ws ed rf uj </td></tr>
 Размер итогового массива равен 20
 В нем находится 2 значений.
 853 187 </td></tr>
-<tr><td>5</td><td><a href="files/task6648/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test5.txt</a></td><td class='preformatted'>Файл пуст C:\Users\adm\Desktop\tfa\src\files\task6648\test5.txt
+<tr><td>5</td><td><a href="files/task6648/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test5.txt</a></td><td class='preformatted'>Файл пуст C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6648\test5.txt
 </td></tr>
 <tr><td>6</td><td><a href="files/task6648/test6.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test6.txt</a></td><td class='preformatted'>ПЕРЕПОЛНЕНИЕ. Размер нового массива 20
 ПЕРЕПОЛНЕНИЕ. Размер нового массива 40
@@ -918,4 +1004,4 @@ qa ws ed rf uj </td></tr>
 456 515 131 202 410 889 656 667 790 924 278 906 785 390 937 394 528 984 690 490 414 828 354 653 124 653 336 384 798 700 187 862 827 194 802 738 672 573 761 826 583 830 874 339 986 733 817 521 668 569 540 721 522 382 688 851 632 694 317 875 211 918 103 598 266 236 873 340 936 572 123 475 697 878 873 155 944 991 994 476 244 461 840 271 868 973 858 697 976 806 635 756 531 295 966 779 388 426 508 485 968 834 737 576 390 465 862 761 422 595 155 413 315 208 539 159 284 910 599 820 135 673 676 540 417 399 315 335 985 343 724 103 995 694 430 384 786 857 360 751 116 129 445 856 591 588 321 638 348 580 454 291 488 755 210 790 834 654 792 675 702 753 890 879 257 859 145 563 225 449 780 351 573 320 351 141 385 794 849 322 377 901 986 213 715 571 885 764 385 654 470 791 173 934 895 901 358 941 294 511 479 643 665 836 500 248 776 785 834 835 941 487 598 769 200 483 401 179 627 824 501 808 157 887 333 166 472 516 762 826 258 557 372 987 524 798 488 923 183 529 810 688 738 876 826 393 755 629 465 529 271 839 477 852 709 276 951 781 737 676 115 737 918 296 927 374 770 768 884 269 131 239 216 173 268 596 378 758 735 610 772 638 386 943 640 736 797 174 132 554 342 263 899 615 290 990 135 624 428 948 300 197 532 212 236 454 967 506 154 416 422 286 301 974 127 852 351 339 241 407 659 638 336 290 523 726 590 731 951 703 358 320 671 387 866 862 637 796 690 619 306 425 341 977 981 942 194 692 853 666 833 429 537 973 416 341 295 625 140 921 651 286 978 206 613 527 752 345 117 572 829 963 148 957 316 568 281 230 554 714 525 870 244 337 362 480 210 237 660 176 408 761 357 355 447 283 170 104 657 379 376 481 110 990 154 888 417 369 478 395 877 108 459 483 174 259 622 312 582 803 635 490 199 179 929 345 996 870 152 917 122 479 848 551 902 577 807 139 108 129 698 559 520 177 527 263 851 355 750 735 976 620 906 835 295 447 812 940 129 660 329 400 637 757 282 890 376 916 350 746 279 723 180 835 287 551 532 660 216 493 227 511 183 190 630 570 562 538 487 787 701 850 994 775 502 505 517 289 243 225 989 735 848 281 512 135 524 812 930 843 152 388 223 817 515 932 636 660 461 717 203 730 640 166 418 108 995 769 402 227 196 469 618 444 649 568 175 707 372 979 933 228 757 611 496 190 808 126 875 355 766 658 347 748 862 886 224 654 912 266 205 139 257 660 972 925 801 321 741 291 904 899 270 495 786 907 119 365 616 417 642 208 732 516 996 507 161 824 634 348 984 427 687 400 182 192 244 483 837 508 165 563 539 523 455 594 849 503 559 276 458 473 262 600 197 885 790 497 701 283 285 857 543 251 143 451 816 527 557 475 205 833 202 846 689 926 826 216 381 325 416 753 920 393 907 696 923 408 394 268 175 621 356 317 194 345 640 681 682 740 275 144 163 591 520 920 948 162 191 341 711 223 817 838 330 268 491 115 608 693 750 253 436 836 354 165 250 393 117 191 369 774 377 946 118 409 959 680 745 752 859 781 231 988 272 685 629 684 757 495 657 332 813 410 586 165 982 862 207 368 436 167 345 268 700 755 473 319 255 645 285 613 330 408 757 789 926 201 543 851 894 393 989 600 609 193 833 219 344 741 231 423 834 411 240 214 391 448 751 274 976 321 383 709 673 336 372 693 460 845 593 701 763 260 949 578 403 294 707 778 872 501 822 722 118 295 288 593 537 629 118 557 170 973 136 567 833 960 824 420 530 820 569 637 258 223 775 627 889 179 883 189 335 720 716 546 323 779 751 244 277 432 478 461 614 204 657 760 545 314 329 790 796 673 496 845 930 705 825 398 407 695 860 658 326 113 593 309 297 381 472 182 410 473 237 411 545 627 113 507 578 410 987 192 153 575 330 649 535 607 905 782 627 178 135 930 581 333 917 607 157 937 517 933 519 879 585 474 298 605 975 776 318 477 718 421 538 346 529 646 618 415 726 932 251 116 161 280 512 536 873 690 947 476 555 353 128 991 894 690 725 585 441 438 656 537 306 516 208 561 206 221 971 597 941 725 673 512 360 154 928 949 475 458 850 719 136 965 120 571 476 796 615 591 474 924 394 561 133 400 867 372 940 608 820 212 229 359 337 609 368 229 286 267 183 438 215 529 822 820 370 771 462 127 792 248 604 140 572 202 245 239 784 114 902 422 153 280 338 423 458 297 470 555 608 914 601 978 631 986 526 777 773 493 192 725 397 916 457 137 256 863 567 591 574 723 745 156 273 788 684 172 331 506 161 181 737 734 131 605 844 458 811 547 925 896 962 832 712 239 915 768 163 616 520 594 831 140 574 894 512 554 423 996 959 705 649 417 835 477 117 357 432 312 382 458 724 690 932 536 235 902 874 652 446 739 409 106 452 258 213 985 258 684 353 916 207 694 827 214 356 132 817 182 984 960 753 653 324 708 229 959 791 116 295 265 900 583 620 815 217 661 139 828 720 425 682 106 686 152 197 141 869 874 857 855 350 566 208 571 539 555 627 353 520 269 472 908 122 322 500 789 354 158 196 972 754 653 269 442 598 517 963 936 727 328 585 399 973 998 485 855 790 927 553 812 644 519 906 803 937 333 657 115 820 556 959 547 313 505 677 964 108 421 581 873 416 394 462 971 411 866 368 788 770 357 280 876 649 989 769 765 248 357 467 697 447 306 220 738 621 524 555 997 501 669 887 379 996 590 921 361 823 552 962 321 241 148 997 679 319 281 857 820 379 563 380 658 143 451 128 793 736 823 245 946 689 499 553 342 959 252 112 472 814 248 728 402 138 162 427 969 437 352 133 312 380 247 927 306 805 731 719 621 648 666 745 318 835 366 940 423 433 604 832 173 928 355 655 636 524 365 340 393 373 100 384 746 145 892 420 751 655 277 295 654 741 573 963 259 781 537 197 547 790 752 271 524 554 107 702 517 637 449 709 489 230 866 184 863 565 280 778 950 210 410 915 679 257 730 148 442 579 958 438 339 463 709 409 550 562 896 231 324 272 389 662 901 180 180 405 667 699 257 541 729 836 795 214 145 784 340 895 568 511 989 180 371 978 746 297 869 423 271 919 822 957 219 618 892 740 577 256 671 858 527 674 556 345 920 168 759 530 581 525 289 153 100 289 871 976 880 162 360 159 766 458 905 633 555 937 719 801 306 150 235 697 412 254 550 381 856 799 162 791 656 220 659 273 877 893 743 340 933 885 883 975 889 742 614 497 453 443 905 497 812 886 479 294 317 359 322 446 356 664 975 490 730 469 361 547 242 175 621 209 808 819 346 202 488 352 786 255 518 921 608 575 952 328 622 384 526 794 561 420 494 823 841 211 492 771 347 231 281 639 964 921 880 530 109 884 131 567 858 187 889 791 595 608 388 731 277 317 649 648 536 946 389 361 968 138 858 937 512 394 767 685 138 585 816 457 270 777 607 710 704 723 559 592 533 714 231 949 308 969 978 710 692 497 733 476 310 372 829 711 938 824 812 606 133 898 765 122 570 687 722 836 292 421 254 928 706 132 861 383 878 450 569 249 249 856 123 411 138 950 713 808 260 717 150 598 563 131 167 257 207 514 370 408 796 586 410 614 307 137 682 206 484 962 318 997 891 293 114 543 665 225 855 501 788 402 430 161 954 626 483 791 871 888 787 776 195 895 899 617 297 345 242 587 770 117 225 861 604 810 768 466 719 218 253 960 213 305 304 657 601 979 827 402 208 428 132 290 319 269 817 937 665 355 294 661 620 921 757 106 863 104 886 599 369 339 883 845 785 559 996 824 383 781 271 796 157 903 130 822 368 336 399 882 529 131 187 995 653 199 737 600 163 130 562 464 582 626 386 895 523 906 102 244 457 805 824 131 383 710 132 743 183 611 341 178 306 272 695 787 222 936 481 877 343 226 713 793 838 529 740 719 953 905 656 683 519 197 823 695 317 434 651 976 470 829 863 243 160 983 517 143 271 129 418 508 519 558 593 573 438 585 943 356 345 138 914 955 293 926 285 646 307 133 158 833 729 535 447 334 300 523 780 846 540 512 792 811 642 165 951 996 327 246 374 327 776 410 451 984 112 818 415 764 857 211 465 732 991 933 243 762 143 610 496 750 711 661 120 978 467 838 178 345 585 983 252 380 766 590 903 746 234 536 956 970 105 129 282 805 963 582 391 901 483 559 218 169 403 194 407 613 286 160 463 271 734 912 843 349 994 708 456 486 553 998 929 737 463 965 452 140 905 381 297 193 377 585 161 539 289 673 356 429 207 469 691 401 392 582 205 522 168 142 394 742 282 449 761 277 541 690 329 570 652 854 711 113 456 828 100 344 244 315 764 365 285 663 221 815 838 602 683 932 288 996 615 831 899 372 635 337 213 379 310 960 482 472 374 558 143 403 453 289 324 852 340 763 707 904 720 773 835 </td></tr>
 </table>
 </div>
-Версия 20231220-pr5. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

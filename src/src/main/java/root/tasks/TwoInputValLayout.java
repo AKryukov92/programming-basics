@@ -3,12 +3,20 @@ package root.tasks;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 
 public abstract class TwoInputValLayout extends LayoutMaker {
     private int testCounter = 0;
 
-    protected abstract void logic(String firstValue, String secondValue);
+    protected abstract void logic(String firstValue, String secondValue) throws SQLException;
 
+    protected void rethrowAsRuntime(String firstValue, String secondValue) {
+        try {
+            logic(firstValue, secondValue);
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
     protected void appendCheckValuesHeader(String firstVal, String secondVal, String resultName) {
         tableOpened = true;
         writer.println("<table class='check_values_v2'>");
@@ -58,7 +66,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(firstVal, secondVal);
+        rethrowAsRuntime(firstVal, secondVal);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -77,7 +85,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(firstVal, secondVal);
+        rethrowAsRuntime(firstVal, secondVal);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -112,7 +120,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
         writer.print("<td class='preformatted'>");
         PrintStream oldOut = System.out;
         System.setOut(writer);
-        logic(firstVal, filename);
+        rethrowAsRuntime(firstVal, filename);
         System.setOut(oldOut);
         writer.print("</td>");
         writer.println("</tr>");
@@ -124,7 +132,7 @@ public abstract class TwoInputValLayout extends LayoutMaker {
             PrintStream tempStream = new PrintStream(baos, true, utf8);
             PrintStream oldOut = System.out;
             System.setOut(tempStream);
-            logic(a, b);
+            rethrowAsRuntime(a, b);
             System.setOut(oldOut);
             tempStream.close();
             return baos.toString(utf8);

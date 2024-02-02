@@ -42,6 +42,7 @@ import root.tasks.search.*;
 import root.tasks.search_in_array.*;
 import root.tasks.sorting.*;
 import root.tasks.sorting.Task5541;
+import root.tasks.sqlite.*;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
@@ -89,13 +90,13 @@ public class Application {
             "Методы",
             "Исключения",
             "Составные типы данных",
-            //"SQL СУБД",
             //"Web-сервер"
             "Внутреннее состояние",
             "Коллекции",
             "Рекурсия",
             "Даты",
-            "Комбинаторика"
+            "Комбинаторика",
+            "SQL СУБД"
     };
 
     private static TaskBook[] populateCsContent(String[] themeList) {
@@ -178,19 +179,16 @@ public class Application {
         //9. подготовить html страницу с формой для отправки данных на сервер action="/circle"
         //10. http сервер с двумя страницами: /add и /circle. add отдает пользователю html страницу. circle отдает пользователю
 
-        //запросы без параметров кажется не нужны. можно пропустить, чтобы не увеличивать количество сущностей
-        //задачи по работе с SQLite субд chinook:
-        ////выборка с параметром
-        ///подходят tracks (albumid), albums(artistid), playlist_track(trackid)
-        ////выборка с параметром и заполнение класса
-        ///подходят tracks (albumid), invoices(customerId), customers(supportRepId)
-        ////выборка с параметром и вложенным запросом where id in (select id)
-        ////добавление (с параметрами)
-        ////добавление связи многие-ко-многим
-
         fillRecursion(taskBooksJava[23]);
         fillDateTime(taskBooksJava[24]);
         fillCombinations(taskBooksJava[25]);
+        fillSQLite(taskBooksJava[26]);
+
+        //запросы на добавление данных в субд можно отложить до работы с веб-сервером, т.к. проверка там будет комплексная, а не просто табличка с данными
+        ////добавление (с параметрами)
+        ///подходит into tracks, into artists, into playlists,
+        ////добавление связи многие-ко-многим
+        //into playlists_tracks
         updateCrossTaskLinks(taskBooksJava);
         return taskBooksJava;
     }
@@ -665,6 +663,27 @@ public class Application {
         ;
     }
 
+    private static void fillSQLite(TaskBook taskBook) {
+        //запросы без параметров кажется не нужны. можно пропустить, чтобы не увеличивать количество сущностей
+        //задачи по работе с SQLite субд chinook:
+        taskBook.withSourceDirectory("sqlite")
+                .withGroup("запросы с параметром")
+                .addTask(new TaskJava7361())//select name from tracks where albumId=?
+                .addTask(new TaskJava8741())//select title from albums where artistId=?
+                .addTask(new TaskJava6275())//select name, composer, milliseconds, unitPrice from tracks where trackId=?
+                .addTask(new TaskJava1846())//select name, milliseconds, unitPrice from tracks where milliseconds < ? and unitPrice > ?
+                .addTask(new TaskJava6593())//select name, milliseconds, unitPrice from tracks where albumId = ? or albumId = ? or albumId = ?
+                .addTask(new TaskJava1759())//from tracks where name like ? or composer like = ?
+                .addTask(new TaskJava9761())//tracks join albums join genres
+                .addTask(new TaskJava4274())//from albums; from tracks
+                .addTask(new TaskJava6805())//from albums; from tracks like %%
+                .addTask(new TaskJava7845())//from tracks where albumId in (from albums where artistId=?)
+                .addTask(new TaskJava9857())//from tracks where trackId in (from playlist_tracks where trackId=?). суммирование значений из результата
+                .addTask(new TaskJava9479())//from invoices order by, datediff
+        ;
+        //если помнить о том, что эти данные потом пойдут для оформления веб-страницы, то нужно дать задачу студенту - вывести результат одной единственной командой println
+    }
+
     private static void fillAggregateCalculation(TaskBook taskBook) {
         //задачки выглядят простыми, но в этот период студенты могут загрустить от постоянных новых сложных задачек. Поэтому надо дать на повторение.
         taskBook.withSourceDirectory("arrays")
@@ -804,7 +823,7 @@ public class Application {
         taskBook
                 .addTask(new Task7222())//substring
                 .addTask(new Task5923())//substring+substring
-                .addTask(new Task8543())//расшифровка даты indexof substring
+                .addTask(new Task8543())//расшифровка даты indexOf substring
                 .addTask(new Task4265())//toUpper, toLower
                 .addTask(new Task2166())//replace
                 .addTask(new Task4996())//азбука Морзе
@@ -1287,7 +1306,7 @@ public class Application {
                 .addTask(7657)
                 .addTask(5108)
                 .addTask(new Task7940())//заполнение расписания, наполнение листа, поиск подходящих, сравнение интервалов
-                .addTask(new Task3146())//wordcount
+                .addTask(new Task3146())//word count
 
                 .withGroup("Вычисление агрегата по группам")
                 .addTask(9092)
@@ -1304,7 +1323,7 @@ public class Application {
 
     private static void fillDateTime(TaskBook taskBook) {
         taskBook.withSourceDirectory("datetime")
-                .addExample(new Task9425())//выбор форматирования для чтения дат
+                .addExample(new TaskCs9425(), new TaskJava9425())//выбор форматирования для чтения дат
                 .addExample(new Task3123())//вычисление разницы между двумя датами в часах, минутах, секундах
                 .addTask(new Task9418())//определение разницы между датами в секундах
                 .addExample(new Task7480())//сравнение двух дат "является ли позже"

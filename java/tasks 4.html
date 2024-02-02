@@ -231,7 +231,8 @@ zoom{
 <li>24 <a href='tasks 24.html'>Рекурсия</a></li>
 <li>25 <a href='tasks 25.html'>Даты</a></li>
 <li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task6522'>3</a><li><a href='#task7619'>4</a><li><a href='#task8833' class='example'>5*</a><li><a href='#task9020'>6</a><li><a href='#task1934'>7</a><li><a href='#task3943'>8</a><li><a href='#task2801' class='example'>9*</a><li><a href='#task2361'>10</a><li><a href='#task5063'>11</a><li><a href='#task5870'>12</a></ul><ul><li><a href='#task3490'>13</a><li><a href='#task9622'>14</a><li><a href='#task7799'>15</a><li><a href='#task3591'>16</a><li><a href='#task9130' class='example'>17*</a><li><a href='#task5895'>18</a><li><a href='#task2461'>19</a><li><a href='#task2624'>20</a><li><a href='#task5871'>21</a></ul></div><div id='task9298' class='task_block'>
+<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task6522'>3</a><li><a href='#task7619'>4</a><li><a href='#task8833' class='example'>5*</a><li><a href='#task9020'>6</a><li><a href='#task1934'>7</a><li><a href='#task3943'>8</a><li><a href='#task2801' class='example'>9*</a><li><a href='#task2361'>10</a><li><a href='#task5063'>11</a><li><a href='#task5870'>12</a></ul><ul><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a><li><a href='#task3490'>15</a><li><a href='#task9622'>16</a><li><a href='#task7799'>17</a><li><a href='#task3591'>18</a><li><a href='#task9130' class='example'>19*</a><li><a href='#task5895'>20</a><li><a href='#task2461'>21</a><li><a href='#task2624'>22</a><li><a href='#task5871'>23</a></ul></div><div id='task9298' class='task_block'>
 <div class='task_desc'>
 Основное внимание в этой практической работе уделено одной из техник защитного программирования - сообщениям об ошибке. Говорить пользователю о том, что он ввёл некорректные данные очень важно. Это может быть важнее, чем посчитать результат.
 </div>
@@ -699,6 +700,77 @@ if (divider != 0) {//если значение переменной divider не
 </td></tr>
 </table>
 </div>
+<div id='task4913' class='task_block'>
+<div class='task_id'>4913</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны координаты aX и aY исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.
+</div>
+<ol start='1'><li>Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula></li><li>Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula></li><li>Координату X<sub>b</sub> другой точки по формуле <formula>bx = ax + dX</formula>.</li><li>Координату Y<sub>b</sub> другой точки по формуле <formula>by = ay + dY</formula></li></ol><div class='task_desc'>
+Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.
+</div>
+<div class='check_single preformatted'>Приращение координат: dX = $dx; dY = $dy
+Координаты второй точки ($bx;$by)</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>ax</th><th>ay</th><th>distance</th><th>angleDeg</th></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>5</td><td>30</td><td class='preformatted'>Приращение координат: dX = 4,3301 dY = 2,5000
+Координаты второй точки (5,3301;4,5000)
+</td></tr>
+<tr><td>2</td><td>7</td><td>11</td><td>13</td><td>110</td><td class='preformatted'>Приращение координат: dX = -4,4463 dY = 12,2160
+Координаты второй точки (2,5537;23,2160)
+</td></tr>
+<tr><td>3</td><td>17</td><td>19</td><td>23</td><td>230</td><td class='preformatted'>Приращение координат: dX = -14,7841 dY = -17,6190
+Координаты второй точки (2,2159;1,3810)
+</td></tr>
+<tr><td>4</td><td>29</td><td>31</td><td>3</td><td>290</td><td class='preformatted'>Приращение координат: dX = 1,0261 dY = -2,8191
+Координаты второй точки (30,0261;28,1809)
+</td></tr>
+<tr><td>5</td><td>33</td><td>37</td><td>10</td><td>90</td><td class='preformatted'>Приращение координат: dX = 0,0000 dY = 10,0000
+Координаты второй точки (33,0000;47,0000)
+</td></tr>
+<tr><td>6</td><td>33</td><td>37</td><td>10</td><td>180</td><td class='preformatted'>Приращение координат: dX = -10,0000 dY = 0,0000
+Координаты второй точки (23,0000;37,0000)
+</td></tr>
+<tr><td>7</td><td>33</td><td>37</td><td>10</td><td>270</td><td class='preformatted'>Приращение координат: dX = -0,0000 dY = -10,0000
+Координаты второй точки (33,0000;27,0000)
+</td></tr>
+<tr><td>8</td><td>33</td><td>37</td><td>10</td><td>360</td><td class='preformatted'>Приращение координат: dX = 10,0000 dY = -0,0000
+Координаты второй точки (43,0000;37,0000)
+</td></tr>
+<tr><td>9</td><td>1</td><td>2</td><td>10</td><td>0</td><td class='preformatted'>Приращение координат: dX = 10,0000 dY = 0,0000
+Координаты второй точки (11,0000;2,0000)
+</td></tr>
+<tr><td>10</td><td>1</td><td>2</td><td>-5</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
+</td></tr>
+<tr><td>11</td><td>1</td><td>2</td><td>0</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
+</td></tr>
+<tr><td>12</td><td>1</td><td>2</td><td>10</td><td>-5</td><td class='preformatted'>Угол должен быть неотрицательным
+</td></tr>
+</table>
+</div>
+<div id='task2790' class='task_block'>
+<div class='task_id'>2790</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле. Значение угла дано в градусах.
+</div>
+<div class='task_desc'>
+<formula>
+		<sqrt><val>
+			1-sin<sup>2</sup>(xRad)
+		</val></sqrt>
+	</formula>
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (xDeg)</th><th>Результат</th></tr>
+<tr><td>1</td><td>6997</td><td class='preformatted'>0,9205</td></tr>
+<tr><td>2</td><td>31</td><td class='preformatted'>0,8572</td></tr>
+<tr><td>3</td><td>90</td><td class='preformatted'>0,0000</td></tr>
+<tr><td>4</td><td>0</td><td class='preformatted'>1,0000</td></tr>
+<tr><td>5</td><td>180</td><td class='preformatted'>1,0000</td></tr>
+</table>
+</div>
 <div id='task3490' class='task_block'>
 <div class='task_id'>3490</div>
 <h3>Задача</h3>
@@ -1062,4 +1134,4 @@ if (divider != 0) {//если значение переменной divider не
 			<td>Подкоренное выражение должно быть неотрицательным</td>
 		</tr>
 	</table>
-</div>Версия 20231220-pr5. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
