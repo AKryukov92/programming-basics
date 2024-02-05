@@ -5,9 +5,11 @@ public class TaskJava1995 extends TaskCs1995 {
     protected void logic(String firstValue) {
         int[] standard = new int[]{5, 4, 3, 2, 1};
         int[] array = new int[]{5, 4, 3, 2, 1};
-        System.out.println(Library.compareArrays(standard, array));
+        String result = Library.compareArrays(standard, array);
+        System.out.println(result);
         array = new int[]{5, 4, 3};
-        System.out.println(Library.compareArrays(standard, array));
+        result = Library.compareArrays(standard, array);
+        System.out.println(result);
         System.out.println(Library.compareArrays(
                 new int[]{9, 8, 7, 6},
                 new int[]{9, 8, 7, 6, 5}

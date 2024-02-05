@@ -46,9 +46,11 @@ public class TaskCs1995 extends OneInputValLayout implements MethodsDictationHel
     protected void logic(String firstValue) {
         int[] standard = new int[]{5, 4, 3, 2, 1};
         int[] array = new int[]{5, 4, 3, 2, 1};
-        Console.WriteLine(Library.compareArrays(standard, array));
+        String result = Library.compareArrays(standard, array);
+        Console.WriteLine(result);
         array = new int[]{5, 4, 3};
-        Console.WriteLine(Library.compareArrays(standard, array));
+        result = Library.compareArrays(standard, array);
+        Console.WriteLine(result);
         Console.WriteLine(Library.compareArrays(
                 new int[]{9, 8, 7, 6},
                 new int[]{9, 8, 7, 6, 5}

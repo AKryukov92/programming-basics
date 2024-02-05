@@ -435,7 +435,7 @@ public class Application {
                 .withGroup("Несколько условий последовательно, с дополнением ответа в каждом условии. Нужно для объяснения циклов и массивов потом")
                 .addExample(1186)
                 .addTask(8518)
-                .addTask(1292)
+                .addTask(new Task1292())
                 .addTask(new Task6686())//поиск максимума, последовательный ввод и сравнение
 
                 .withGroup("Просто задачи повышенного уровня сложности")
@@ -674,6 +674,7 @@ public class Application {
                 .addTask(new TaskJava1846())//select name, milliseconds, unitPrice from tracks where milliseconds < ? and unitPrice > ?
                 .addTask(new TaskJava6593())//select name, milliseconds, unitPrice from tracks where albumId = ? or albumId = ? or albumId = ?
                 .addTask(new TaskJava1759())//from tracks where name like ? or composer like = ?
+                .addTask(new TaskJava9764())//from artists; preparedStatement запрос без параметров
                 .addTask(new TaskJava9761())//tracks join albums join genres
                 .addTask(new TaskJava4274())//from albums; from tracks
                 .addTask(new TaskJava6805())//from albums; from tracks like %%
@@ -682,6 +683,7 @@ public class Application {
                 .addTask(new TaskJava9479())//from invoices order by, datediff
         ;
         //если помнить о том, что эти данные потом пойдут для оформления веб-страницы, то нужно дать задачу студенту - вывести результат одной единственной командой println
+        //при этом такие методы очень хорошо подходят, чтобы дать практику по коллекциям и заполнению классов-dto
     }
 
     private static void fillAggregateCalculation(TaskBook taskBook) {
@@ -700,7 +702,7 @@ public class Application {
                 .addTask(5969)//сумма целых чисел, которые кратны 7 от A до B, без массива
                 .addTask(5170)//подсчет количества делителей, без массива
                 .addTask(new Task3946())//среднее арифметическое
-                .addTask(6497)//абсолютное отклонение от среднего
+                .addTask(new Task6497())//абсолютное отклонение от среднего
                 .addTask(5648)//среднее квадратическое отклонение
                 .addTask(new Task3788())//подсчет чисел меньше 100, запись их в новый массив
 
@@ -992,86 +994,39 @@ public class Application {
                 .withSourceDirectory("lab12")
                 .addCitation("info01")
                 .withGroup("Проверка вспомогательной программой")
-        ;
+                .addExample(new TaskCs8307(), new TaskJava8307())//метод с одним аргументом
+                .addTask(new TaskCs8813(), new TaskJava8813())//метод с двумя аргументами и печатью в консоль
+                .addTask(new TaskCs5823(), new TaskJava5823())//метод с тремя аргументами и печатью в консоль
+                .addTask(new TaskCs2772(), new TaskJava2772())//метод с тремя аргументами и печатью в консоль
+                .addCitation("link_c2_p7.1")
 
-        if (taskBook.isJava()) {
-            taskBook
-                    .addExample(new TaskJava8307())//метод с одним аргументом
-                    .addTask(new TaskJava8813())//метод с двумя аргументами и печатью в консоль
-                    .addTask(new TaskJava5823())//метод с тремя аргументами и печатью в консоль
-                    .addTask(new TaskJava2772())//метод с тремя аргументами и печатью в консоль
-                    .addCitation("link_c2_p7.1")
+                .addExample(new TaskCs7611(), new TaskJava7611())//метод с одним аргументом, возвращает число
+                .addTask(new TaskCs4776(), new TaskJava4776())//метод с одним аргументом, возвращает число
+                .addExample(new TaskCs4757(), new TaskJava4757())//Найти разницу, объяснение "missing return statement"
+                .addTask(new TaskCs3597(), new TaskJava3597())//метод с условиями и возвратом строки
+                .addTask(new TaskCs6573(), new TaskJava6573())//метод с условием и циклом. возврат long
 
-                    .addExample(new TaskJava7611())//метод с одним аргументом, возвращает число
-                    .addTask(new TaskJava4776())//метод с одним аргументом, возвращает число
-                    .addExample(new TaskJava4757())//Найти разницу, объяснение "missing return statement"
-                    .addTask(new TaskJava3597())//метод с условиями и возвратом строки
-                    .addTask(new TaskJava6573())//метод с условием и циклом. возврат long
-            ;
-        } else if (taskBook.isCsharp()) {
-            taskBook
-                    .addExample(new TaskCs8307())//метод с одним аргументом и печатью в консоль
-                    .addTask(new TaskCs8813())//метод с двумя аргументами и печатью в консоль
-                    .addTask(new TaskCs5823())//метод с тремя аргументами и печатью в консоль
-                    .addTask(new TaskCs2772())//метод с тремя аргументами и печатью в консоль
-                    .addCitation("link_c2_p7.1")
-
-                    .addExample(new TaskCs7611())//метод с одним аргументом, возвращает число
-                    .addTask(new TaskCs4776())//метод с одним аргументом, возвращает число
-
-                    .addExample(new TaskCs4757())//Найти разницу, объяснение "не все ветви кода возвращают значения"
-                    .addTask(new TaskCs3597())//метод с условиями и возвратом строки
-                    .addTask(new TaskCs6573())//метод с условием и циклом. возврат long
-            ;
-            //Хорошей идеей будет добавить здесь методы, которые возвращают String путем сбора большого ответа из нескольких маленьких частей
-            //result = "Введение"
-            //result = result + "Глава 1";
-            //return result;
-        } else {
-            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
-        taskBook
-                .addTask(1292)
-                .addCitation("link_c2_p7.2")
+                .addExample(new Task3355())//сбор большого текста из фрагментов
+                .addTask(new Task3147())//сбор строки из фрагментов
 
                 .withGroup("Аргумент-массив")
-                .addExample(3946)
+                .addExample(new TaskCs6948(), new TaskJava6948())//принимает массив, возвращает число
+                .addTask(new Task8920())
+                .withGroup("Возврат массива в качестве результата")
+                .addExample(new TaskCs1995(), new TaskJava1995())//сравнение массивов
+                .addTask(new Task7759())//сначала среднее арифм. потом вычесть его из всех элементов
+                .addExample(new TaskCs2936(), new TaskJava2936())
+                .addTask(new TaskCs3539(), new TaskJava3539())
+
+                .withGroup("Возврат булевого значения")
+                .addExample(new TaskCs6401(), new TaskJava6401())
+                .addTask(new TaskCs7581(), new TaskJava7581())
+                .addCitation("link_c2_p7.3")
         ;
-
-        if (taskBook.isJava()) {
-            taskBook.addTask(new TaskJava8920())
-                    .addTask(6497)
-
-                    .withGroup("Возврат массива в качестве результата")
-                    .addExample(new TaskJava1995())//сравнение массивов
-                    .addExample(new TaskJava2936())
-                    .addTask(new TaskJava3539())
-
-                    .withGroup("Возврат булевого значения")
-                    .addExample(new TaskJava6401())
-                    .addTask(new TaskJava7581())
-                    .addCitation("link_c2_p7.3")
-            ;
-        } else if (taskBook.isCsharp()) {
-            taskBook.addTask(new TaskCs8920())
-
-                    .withGroup("Возврат массива в качестве результата")
-                    .addExample(new TaskCs1995())//сравнение массивов
-                    .addTask(6497)//сначала среднее арифм. потом вычесть его из всех элементов
-                    .addExample(new TaskCs2936())
-                    .addTask(new TaskCs3539())
-
-                    .withGroup("Возврат булевого значения")
-                    .addExample(new TaskCs6401())
-                    .addTask(new TaskCs7581())
-                    .addCitation("link_c2_p7.3")
-            ;
-        } else {
-            throw new RuntimeException("Неопознанный идентификатор языка '" + taskBook.getLangAbbreviation() + "'");
-        }
     }
 
     private static void fillExceptions(TaskBook taskBook) {
+        //очень важно познакомить человека с ошибкой UnhandledException и вариантами действий
         taskBook.withSourceDirectory("lab13")
                 .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
