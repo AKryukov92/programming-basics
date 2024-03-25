@@ -247,15 +247,15 @@ zoom{
 Месяц: 6
 День: 28
 Час: 18
-Минута 38
-Секунда 0
+Минута: 38
+Секунда: 0
 Выражение 28/06/2023 18:38:00 означает
 Год: 2023
 Месяц: 6
 День: 28
 Час: 18
-Минута 38
-Секунда 0
+Минута: 38
+Секунда: 0
 Выражение 3/4/23 означает
 Год: 2023
 Месяц: 4
@@ -265,34 +265,26 @@ zoom{
 Месяц: 6
 День: 28
 Час: 18
-Минута 44
-Секунда 0
+Минута: 44
+Секунда: 0
 Выражение 1995-03-01 означает
 Год: 1995
 Месяц: 3
 День: 1
 </div>
 <div class='task_desc'>
-Если дата содержит время, то нужно использовать тип LocalDateTime. Если время отсутствует, то LocalDate. Пример преобразования даты из текста в LocalDate/LocalDateTime:
+Пример преобразования даты из текста в DateTime:
 </div>
-<div class='check_single preformatted'>String yMd = "yyyy-MM-dd";
-String str1 = "2023-06-28";
-LocalDate dt1 = LocalDate.parse(str1, DateTimeFormatter.ofPattern(yMd));
-System.out.println("Выражение " + str1 + " означает");
-System.out.println("Год: " + dt1.getYear());
-System.out.println("Месяц: " + dt1.getMonthValue());
-System.out.println("День: " + dt1.getDayOfMonth());
-
-String yMdhm = "yyyy-MM-dd HH:mm";
-String str2 = "2023-06-28 18:38";
-LocalDateTime dt2 = LocalDateTime.parse(str2, DateTimeFormatter.ofPattern(yMdhm));
-System.out.println("Выражение " + str2 + " означает");
-System.out.println("Год: " + dt2.getYear());
-System.out.println("Месяц: " + dt2.getMonthValue());
-System.out.println("День: " + dt2.getDayOfMonth());
-System.out.println("Час: " + dt2.getHour());
-System.out.println("Минута " + dt2.getMinute());
-System.out.println("Секунда " + dt2.getSecond());
+<div class='check_single preformatted'>String format_yMd = "yyyy-MM-dd";
+String str = "2023-06-28";
+DateTime dt = DateTime.ParseExact(str, format_yMd, null);
+Console.WriteLine("Выражение " + str + " означает");
+Console.WriteLine("Год: " + dt.Year);
+Console.WriteLine("Месяц: " + dt.Month);
+Console.WriteLine("День: " + dt.Day);
+Console.WriteLine("Час: " + dt.Hour);
+Console.WriteLine("Минута " + dt.Minute);
+Console.WriteLine("Секунда " + dt.Second);
 </div>
 </div>
 <div id='task3123' class='task_block'>

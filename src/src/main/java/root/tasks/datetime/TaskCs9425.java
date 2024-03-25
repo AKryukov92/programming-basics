@@ -15,8 +15,8 @@ public class TaskCs9425 extends OneInputValLayout {
                 " Выбрать правильный формат чтобы программа прочитала дату."+
                 " Вывести на экран отдельно день, месяц и год, час, минуту, секунду.");
         appendCheckSingleNonEscaped(wrapLogic(""));
-        appendTaskDescEscaped("Если дата содержит время, то нужно использовать тип LocalDateTime. Если время отсутствует, то LocalDate. Пример преобразования даты из текста в LocalDate/LocalDateTime:");
-        appendCheckSingleNonEscaped(getLog'''ic(getClass().getSimpleName()));
+        appendTaskDescEscaped("Пример преобразования даты из текста в DateTime:");
+        appendCheckSingleNonEscaped(getMain(getClass().getSimpleName()));
     }
 
     private static class Verbose {
@@ -37,8 +37,8 @@ public class TaskCs9425 extends OneInputValLayout {
         System.out.println("Месяц: " + dt2.getMonthValue());
         System.out.println("День: " + dt2.getDayOfMonth());
         System.out.println("Час: " + dt2.getHour());
-        System.out.println("Минута " + dt2.getMinute());
-        System.out.println("Секунда " + dt2.getSecond());
+        System.out.println("Минута: " + dt2.getMinute());
+        System.out.println("Секунда: " + dt2.getSecond());
     }
     }
 
@@ -63,8 +63,8 @@ public class TaskCs9425 extends OneInputValLayout {
         System.out.println("Месяц: " + dt2.getMonthValue());
         System.out.println("День: " + dt2.getDayOfMonth());
         System.out.println("Час: " + dt2.getHour());
-        System.out.println("Минута " + dt2.getMinute());
-        System.out.println("Секунда " + dt2.getSecond());
+        System.out.println("Минута: " + dt2.getMinute());
+        System.out.println("Секунда: " + dt2.getSecond());
 
         String str3 = "28/06/2023 18:38:00";
         LocalDateTime dt3 = LocalDateTime.parse(str3, DateTimeFormatter.ofPattern(dMyhms));
@@ -73,8 +73,8 @@ public class TaskCs9425 extends OneInputValLayout {
         System.out.println("Месяц: " + dt3.getMonthValue());
         System.out.println("День: " + dt3.getDayOfMonth());
         System.out.println("Час: " + dt3.getHour());
-        System.out.println("Минута " + dt3.getMinute());
-        System.out.println("Секунда " + dt3.getSecond());
+        System.out.println("Минута: " + dt3.getMinute());
+        System.out.println("Секунда: " + dt3.getSecond());
 
         String str4 = "3/4/23";
         LocalDate dt4 = LocalDate.parse(str4, DateTimeFormatter.ofPattern(dmy));
@@ -90,8 +90,8 @@ public class TaskCs9425 extends OneInputValLayout {
         System.out.println("Месяц: " + dt5.getMonthValue());
         System.out.println("День: " + dt5.getDayOfMonth());
         System.out.println("Час: " + dt5.getHour());
-        System.out.println("Минута " + dt5.getMinute());
-        System.out.println("Секунда " + dt5.getSecond());
+        System.out.println("Минута: " + dt5.getMinute());
+        System.out.println("Секунда: " + dt5.getSecond());
 
         String str6 = "1995-03-01";
         LocalDate dt6 = LocalDate.parse(str6, DateTimeFormatter.ofPattern(yMd));
