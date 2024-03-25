@@ -19,6 +19,18 @@ public class Task3148 extends OneInputValLayout {
         appendCheckValuesRowWithFile("files/task3148/list5.txt");
         appendCheckValuesRowWithFile("files/task3148/list6.txt");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Данные в файлах dataX.csv можно посмотреть по этим ссылкам:");
+        appendOrderedNonEscaped(
+                linkToFile("files/task3148/data0.csv"),
+                linkToFile("files/task3148/data1.csv"),
+                linkToFile("files/task3148/data2.csv"),
+                linkToFile("files/task3148/data3.csv"),
+                linkToFile("files/task3148/data4.csv"),
+                linkToFile("files/task3148/data5.csv"),
+                linkToFile("files/task3148/data6.csv"),
+                linkToFile("files/task3148/data7.csv"),
+                linkToFile("files/task3148/data8.csv")
+        );
         appendFooter();
     }
 

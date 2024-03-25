@@ -8,13 +8,13 @@ public class Task4082 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Прием данных прекращается, когда введенное число попадает в интервал от 83 до 199, исключая границы. Определить количество чисел, которые на числовом ряду находятся слева и справа от данного интервала. Вывести в отформатированном виде.");
+        appendTaskDescEscaped("Пользователь вводит неизвестное количество целых чисел. Прием данных прекращается, когда введенное число попадает в интервал от 83 до 199, включая границы. Определить количество чисел, которые на числовом ряду находятся слева и справа от данного интервала. Вывести в отформатированном виде.");
         appendCheckValuesHeader();
         appendCheckValuesRow("10;20;100".split(";"));
         appendCheckValuesRow("10;200;30;400;80;1000;100".split(";"));
         appendCheckValuesRow("300;400;100".split(";"));
-        appendCheckValuesRow("1000;1000;83;150".split(";"));
-        appendCheckValuesRow("1;1;1;1;1;1;1;1;199;90".split(";"));
+        appendCheckValuesRow("1000;1000;83".split(";"));
+        appendCheckValuesRow("1;1;1;1;1;1;1;1;199".split(";"));
         appendCheckValuesFooter();
         appendFooter();
     }

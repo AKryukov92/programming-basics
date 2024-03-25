@@ -29,10 +29,11 @@ public class TaskJava9479 extends OneInputValLayout {
             while (resInvoices.next()) {
                 Date cur = resInvoices.getDate("invoiceDate");
                 long curTs = cur.getTime();
-                long diff = curTs-prevTs;
-                long diffHours = diff/60/60/1000;
+                long diff = curTs - prevTs;
+                long diffHours = diff / 3600000;
                 System.out.println("Разница между " + prev + " и " + cur + " равна " + diff + " миллисекунд (" + diffHours + " часов)");
                 prevTs = curTs;
+                prev = cur;
             }
         }
     }

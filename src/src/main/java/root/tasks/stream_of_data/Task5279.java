@@ -9,7 +9,7 @@ public class Task5279 extends StreamInputLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит число N. Если N меньше 0, нужно вывести соощение об ошибке. Затем пользователь вводит еще N штук чисел. Для каждого числа вывести предыдущее число, а также то что было перед предыдущим. Число N в этой логике не участвует.");
+        appendTaskDescEscaped("Пользователь вводит число N. Если N меньше или равно 0, нужно вывести соощение об ошибке. Затем пользователь вводит еще N штук чисел. Для каждого числа вывести предыдущее число, а также то что было перед предыдущим. Число N в этой логике не участвует.");
         appendCheckValuesHeader();
         appendCheckValuesRow("5,9,8,7,6,5".split(","));
         appendCheckValuesRow("4,71,63,52,49".split(","));
@@ -30,11 +30,8 @@ public class Task5279 extends StreamInputLayout {
         Scanner s = new Scanner(Systemin);
         int n = Integer.parseInt(s.next());
         System.out.println("Значение N равно " + n);
-        if (n < 0) {
+        if (n <= 0) {
             System.out.println("Значение N должно быть больше 0.");
-        }
-        if (n == 0) {
-            System.out.println("Итоговая сумма равна 0");
         }
         if (n > 0) {
             String current = s.next();

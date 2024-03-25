@@ -29,13 +29,11 @@ public class Task9126 extends StreamInputLayout {
             if (!source.hasNext()) return;
             int answer = Integer.parseInt(source.next());
             if (answer < 0) {
-                System.out.printf("Значит загаданное в интервале (%d,%d) ", lower, middle);
-                start = lower;
+                System.out.printf("Значит загаданное в интервале от %d до %d ", lower, middle);
                 end = middle;
             } else if (answer > 0){
-                System.out.printf("Значит загаданное в интервале (%d,%d) ", middle, higher);
+                System.out.printf("Значит загаданное в интервале от %d до %d ", middle, higher);
                 start = middle;
-                end = higher;
             } else {
                 break;
             }

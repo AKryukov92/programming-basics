@@ -12,6 +12,20 @@ public class Task9417 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Исходные данные находятся в нескольких файлах dataX.txt, где X - число от 0 до 10 включительно. Каждый файл содержит неизвестное количество целых чисел, записанных в столбик без дополнительного оформления. Посчитать сумму чисел в каждом файле, а также общую сумму. При возникновении ошибки, вывести сообщение, прекратить обработку текущего файла и перейти к обработке следующего.");
         appendCheckSingleNonEscaped(wrapLogic(""));
+        appendTaskDescEscaped("Данные в файлах можно посмотреть по этим ссылкам:");
+        appendOrderedNonEscaped(
+                linkToFile("files/task9417/data0.txt"),
+                linkToFile("files/task9417/data1.txt"),
+                linkToFile("files/task9417/data2.txt"),
+                linkToFile("files/task9417/data3.txt"),
+                linkToFile("files/task9417/data4.txt"),
+                linkToFile("files/task9417/data5.txt"),
+                linkToFile("files/task9417/data6.txt"),
+                linkToFile("files/task9417/data7.txt"),
+                linkToFile("files/task9417/data8.txt"),
+                linkToFile("files/task9417/data9.txt"),
+                linkToFile("files/task9417/data10.txt")
+        );
         appendFooter();
     }
 

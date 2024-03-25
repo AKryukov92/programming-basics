@@ -14,7 +14,7 @@ public class Task2368 extends StreamInputLayout {
         appendCheckValuesRow("1", "1000");
         appendCheckValuesRow("5,-13,12,13,7,3".split(","));
         appendCheckValuesRow("0", "");
-        appendCheckValuesRow("4,-7,-5,-13,12,0,-5,10,-6,5".split(","));
+        appendCheckValuesRow("4,-7,-5,-13,12".split(","));
         appendCheckValuesRow("-3", "");
         appendCheckValuesFooter();
         appendFooter();

@@ -8,7 +8,7 @@ public class TaskJava4274 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит идентификатор альбома(ArtistId). Напечатать на экран название(Title) альбома(Albums), а также названия (Name) треков (Tracks) из этого альбома и их длительность (Milliseconds).");
+        appendTaskDescEscaped("Пользователь вводит идентификатор альбома(AlbumId). Напечатать на экран название(Title) альбома(Albums), а также названия (Name) треков (Tracks) из этого альбома и их длительность (Milliseconds).");
         appendCheckValuesHeader("AlbumId");
         appendCheckValuesRow("10");
         appendCheckValuesRow("15");

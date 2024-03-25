@@ -19,9 +19,9 @@ public class Task4338 extends TwoInputValLayout {
     @Override
     protected void logic(String firstValue, String secondValue) {
         int a = Integer.parseInt(firstValue);
-        int b= Integer.parseInt(secondValue);
+        int b = Integer.parseInt(secondValue);
         int begin, end;
-        if (a < b){
+        if (a < b) {
             begin = a;
             end = b;
         } else {
@@ -29,11 +29,12 @@ public class Task4338 extends TwoInputValLayout {
             end = a;
         }
         int i = begin, j = end;
-        while(i <= end){
+        while (i <= end) {
             System.out.println(i + " " + j);
             i++;
             j--;
         }
+        System.out.println("Количество строк: " + (end - begin + 1));
     }
 
     public static void main(String[] args) {
