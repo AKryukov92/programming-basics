@@ -9,7 +9,7 @@ public class Task9271 extends OneInputValLayout {
         appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.");
         appendCheckValuesHeader("data");
         appendCheckValuesRow("5 4 6 2 3 1");
-        appendCheckValuesRow("1 2 3 4 1 2");
+        appendCheckValuesRow("-1 2 3 4 -1 2");
         appendCheckValuesRow("3 4 1 2 3 4 1 2 3 1 2");
         appendCheckValuesRow("4 2 3 4 3 2");
         appendCheckValuesRow("4 4 4 4 4 3 2 1");
@@ -40,9 +40,18 @@ public class Task9271 extends OneInputValLayout {
             }
         }
         int val = num[minIndex];
+        System.out.println("Минимальное число находится на индексе " + minIndex + " и равно " + val);
         for (int i = 0; i < num.length; i++) {
+            System.out.println("из " + num[i] + " вычитаю " + val);
             num[i] = num[i] - val;
+        }
+        System.out.println("Результат:");
+        for (int i = 0; i < num.length; i++) {
             System.out.print(num[i] + " ");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Task9271());
     }
 }

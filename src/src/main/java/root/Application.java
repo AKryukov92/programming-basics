@@ -1015,13 +1015,12 @@ public class Application {
                 .withGroup("Возврат массива в качестве результата")
                 .addExample(new TaskCs1995(), new TaskJava1995())//сравнение массивов
                 .addTask(new Task7759())//сначала среднее арифм. потом вычесть его из всех элементов
-                .addExample(new TaskCs2936(), new TaskJava2936())
-                .addTask(new TaskCs3539(), new TaskJava3539())
+                .addExample(new TaskCs2936(), new TaskJava2936())//умножить все элементы на M
+                .addTask(new TaskCs3539(), new TaskJava3539())//минимум, потом вычесть его из всех элементов
 
                 .withGroup("Возврат булевого значения")
                 .addExample(new TaskCs6401(), new TaskJava6401())
                 .addTask(new TaskCs7581(), new TaskJava7581())
-                .addCitation("link_c2_p7.3")
         ;
     }
 
