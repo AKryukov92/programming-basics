@@ -11,7 +11,7 @@ public class TaskJava4757 extends TwoInputValLayout {
         appendCheckValuesRow("99", "17");
         appendCheckValuesRow("14", "5");
         appendCheckValuesFooter();
-        appendTaskDescEscaped("При работе с методами вы можете встретить ошибку компиляции \"не все пути к коду возвращают значение.\"." +
+        appendTaskDescEscaped("При работе с методами вы можете встретить ошибку компиляции \"missing return statement\"." +
                 " Пример когда у вас программа без ветвлений:");
         appendCheckSingleNonEscaped("public static int Sum(int a, int b){\n" +
                 "    int result;\n" +
@@ -23,7 +23,7 @@ public class TaskJava4757 extends TwoInputValLayout {
                 "    result = a + b;\n" +
                 "    return result;//эта команда добавлена\n" +
                 "}");
-        appendTaskDescEscaped("Если же ваша программа содержит ветвления (if), то ошибка \"не все пути к коду возвращают значение\" возникает в случае когда вы написали метод примерно так:");
+        appendTaskDescEscaped("Если же ваша программа содержит ветвления (if), то ошибка \"missing return statement\" возникает в случае когда вы написали метод примерно так:");
         appendCheckSingleNonEscaped("public static int diff(int a, int b) {\n" +
                 "    int result;\n" +
                 "    if (a < b) {\n" +

@@ -444,8 +444,63 @@ Console.WriteLine("{0:F4}", Library.task4776(90));
 </td></tr>
 </table>
 <div class='task_desc'>
-При работе с методами вы можете встретить ошибку 
+При работе с методами вы можете встретить ошибку компиляции "не все пути к коду возвращают значение." (error CS0161: `Example.diff(int, int)': not all code paths return a value). Пример когда у вас прорамма без ветвлений:
 </div>
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+}</div>
+<div class='task_desc'>
+В этом случае для исправления нужно только дописать команду "return result;" как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+    return result;//эта команда добавлена
+}</div>
+<div class='task_desc'>
+Если же ваша программа содержит ветвления (if), то ошибка "не все пути к коду возвращают значение" возникает в случае когда вы написали метод примерно так:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+}</div>
+<div class='task_desc'>
+При компиляции, компьютер выполняет предварительный анализ кода. В этом примере он видит что команды return находятся внутри ветвлений. Для компьютера возможна ситуация, когда оба условия if будут ложны, а значит ни одна из команд return не будет выполнена. В данном примере - когда a строго равно b. Первый вариант исправления - предусмотреть return "на всякий случай" как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+    return 0;//на всякий случай
+}</div>
+<div class='task_desc'>
+Другой вариант исправления - использовать if else. Если условие будет ложно, то будут выполнены команды из else. Если истинно - команды из if. Компьютер считает, что хотя бы одна из команд return будет выполнена Как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    else {//здесь раньше был if (b < a)
+        result = a - b;
+        return result;
+    }
+}</div>
 </div>
 <div id='task3597' class='task_block'>
 <div class='task_id'>3597</div>

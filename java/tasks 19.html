@@ -455,7 +455,7 @@ System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
 </td></tr>
 </table>
 <div class='task_desc'>
-При работе с методами вы можете встретить ошибку компиляции "не все пути к коду возвращают значение.". Пример когда у вас программа без ветвлений:
+При работе с методами вы можете встретить ошибку компиляции "missing return statement". Пример когда у вас программа без ветвлений:
 </div>
 <div class='check_single preformatted'>public static int Sum(int a, int b){
     int result;
@@ -470,7 +470,7 @@ System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
     return result;//эта команда добавлена
 }</div>
 <div class='task_desc'>
-Если же ваша программа содержит ветвления (if), то ошибка "не все пути к коду возвращают значение" возникает в случае когда вы написали метод примерно так:
+Если же ваша программа содержит ветвления (if), то ошибка "missing return statement" возникает в случае когда вы написали метод примерно так:
 </div>
 <div class='check_single preformatted'>public static int diff(int a, int b) {
     int result;
