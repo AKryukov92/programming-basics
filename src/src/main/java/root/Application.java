@@ -1019,8 +1019,9 @@ public class Application {
                 .addTask(new TaskCs3539(), new TaskJava3539())//минимум, потом вычесть его из всех элементов
 
                 .withGroup("Возврат булевого значения")
-                .addExample(new TaskCs6401(), new TaskJava6401())
-                .addTask(new TaskCs7581(), new TaskJava7581())
+                .addExample(new TaskCs2121(), new TaskJava2121())//вернуть boolean
+                .addTask(new TaskCs6401(), new TaskJava6401())//вернуть boolean
+                .addTask(new TaskCs7581(), new TaskJava7581())//вернуть boolean, исходные данные - массив строк
         ;
     }
 

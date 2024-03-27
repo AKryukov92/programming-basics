@@ -245,11 +245,49 @@ zoom{
 <tr><td>1</td><td>11.13</td><td class='preformatted'>18,1300</td></tr>
 <tr><td>2</td><td>-7919</td><td class='preformatted'>-7912,0000</td></tr>
 <tr><td>3</td><td>0</td><td class='preformatted'>7,0000</td></tr>
-<tr><td>4</td><td>word</td><td class='preformatted'>Не удалось преобразовать строку в число
+<tr><td>4</td><td>word</td><td class='preformatted'>Не удалось преобразовать строку в число 'word'
 </td></tr>
-<tr><td>5</td><td>$14</td><td class='preformatted'>Не удалось преобразовать строку в число
+<tr><td>5</td><td>$14</td><td class='preformatted'>Не удалось преобразовать строку в число '$14'
 </td></tr>
 </table>
+<div class='task_desc'>
+Попробуйте решить задачу как раньше и в качестве исходных данных ввести 'word'.
+</div>
+<div class='check_single preformatted'>double x = Double.Parse(value);
+double result = x + 7;
+System.out.printf("%.4f", result);</div>
+<div class='task_desc'>
+При вводе 'word', у вас возникнет примерно такая ошибка:
+</div>
+<div class='check_single preformatted'>Exception in thread "main" java.lang.<b>NumberFormatException</b>: For input string: "word"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at root.tasks.exceptions.TaskJava7740.logic(TaskJava7740.java:32)
+	at root.tasks.OneInputValLayout.rethrowAsRuntime(OneInputValLayout.java:16)
+	at root.tasks.OneInputValLayout.appendCheckValuesRow(OneInputValLayout.java:68)
+	at root.tasks.exceptions.TaskJava7740.makeLayout(TaskJava7740.java:20)
+	at root.tasks.LayoutMaker.getContent(LayoutMaker.java:29)
+	at root.tasks.LayoutMaker.toString(LayoutMaker.java:232)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.io.PrintStream.println(PrintStream.java:821)
+	at root.tasks.exceptions.TaskJava7740.main(TaskJava7740.java:43)
+
+Process finished with exit code 1
+</div>
+<div class='task_desc'>
+Чтобы программа корректно обрабатывала такие ошибки, нужно добавить конструкцию try catch как в примере ниже:
+</div>
+<div class='check_single preformatted'>try {//внутри блока try предполагаем, что пользователь ввел число
+    double x = Double.parseDouble(value);
+    double result = x + 7;
+    System.out.printf("%.4f", result);
+} catch (NumberFormatException ex) {
+    //Слово NumberFormatException было в первое строке ошибки в варианте программы без try catch
+    //если преобразовать строку в число не получилось, компьютер перейдет в этот блок
+    System.out.println("Не удалось преобразовать строку в число '" + value + "'");
+}
+</div>
 </div>
 <div id='task1439' class='task_block'>
 <div class='task_id'>1439</div>
