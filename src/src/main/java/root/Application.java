@@ -10,11 +10,10 @@ import root.tasks.calculations.*;
 import root.tasks.call_methods.*;
 import root.tasks.collections.*;
 import root.tasks.combinations.*;
-import root.tasks.conditions.Task3770;
-import root.tasks.conditions.Task5116;
-import root.tasks.conditions.Task5662;
+import root.tasks.conditions.*;
 import root.tasks.datetime.*;
 import root.tasks.exceptions.*;
+import root.tasks.combinations.Task9734;
 import root.tasks.internal_state.TaskJava2896;
 import root.tasks.loops_with_conditions.*;
 import root.tasks.method_generalisation.Task6813;
@@ -69,6 +68,7 @@ public class Application {
             "Заполнение шаблона данными от пользователя",
             "Организация вычислений",
             "Проверка исходных данных",
+            "Запуск программы с известными исходными данными",
             "Взаимоисключающие случаи",
             "Работа с интервалами значений",
 
@@ -87,16 +87,17 @@ public class Application {
 
             "Чтение файлов",
             "Запись в файлы",
-            "Методы",
+            "Возврат значения",
             "Исключения",
             "Составные типы данных",
-            //"Web-сервер"
             "Внутреннее состояние",
             "Коллекции",
             "Рекурсия",
             "Даты",
             "Комбинаторика",
-            "SQL СУБД"
+            "SQL СУБД",
+            //объекты в html
+            //"Web-сервер"
     };
 
     private static TaskBook[] populateCsContent(String[] themeList) {
@@ -106,31 +107,32 @@ public class Application {
         fillInputAndTemplates(taskBooksCs[1]);
         fillBasicCalculations(taskBooksCs[2]);
         fillPreliminaryAssertions(taskBooksCs[3]);
-        fillMutualExclusives(taskBooksCs[4]);
-        fillRanges(taskBooksCs[5]);
+        fillPredefinedInput(taskBooksCs[4]);
+        fillMutualExclusives(taskBooksCs[5]);
+        fillRanges(taskBooksCs[6]);
 
-        fillLoops(taskBooksCs[6]);
-        fillStreamOfData(taskBooksCs[7]);
-        fillNestedLoops(taskBooksCs[8]);
-        fillBasicArrayOperations(taskBooksCs[9]);
-        fillSwapping(taskBooksCs[10]);
-        fillArrayConversionToNumbers(taskBooksCs[11]);
+        fillLoops(taskBooksCs[7]);
+        fillStreamOfData(taskBooksCs[8]);
+        fillNestedLoops(taskBooksCs[9]);
+        fillBasicArrayOperations(taskBooksCs[10]);
+        fillSwapping(taskBooksCs[11]);
+        fillArrayConversionToNumbers(taskBooksCs[12]);
 
-        fillAggregateCalculation(taskBooksCs[12]);
-        fillElementSearch(taskBooksCs[13]);
-        fillInsertionSort(taskBooksCs[14]);
-        fillStringMethods(taskBooksCs[15]);
-        fillReadingFiles(taskBooksCs[16]);
-        fillWritingFiles(taskBooksCs[17]);
+        fillAggregateCalculation(taskBooksCs[13]);
+        fillElementSearch(taskBooksCs[14]);
+        fillInsertionSort(taskBooksCs[15]);
+        fillStringMethods(taskBooksCs[16]);
+        fillReadingFiles(taskBooksCs[17]);
+        fillWritingFiles(taskBooksCs[18]);
 
-        fillMethodsDecoration(taskBooksCs[18]);
-        fillExceptions(taskBooksCs[19]);
-        fillAbstractDataStructures(taskBooksCs[20]);
-        fillInternalState(taskBooksCs[21]);
-        fillCollections(taskBooksCs[22]);
-        fillRecursion(taskBooksCs[23]);
-        fillDateTime(taskBooksCs[24]);
-        fillCombinations(taskBooksCs[25]);
+        fillMethodsDecoration(taskBooksCs[19]);
+        fillExceptions(taskBooksCs[20]);
+        fillAbstractDataStructures(taskBooksCs[21]);
+        fillInternalState(taskBooksCs[22]);
+        fillCollections(taskBooksCs[23]);
+        fillRecursion(taskBooksCs[24]);
+        fillDateTime(taskBooksCs[25]);
+        fillCombinations(taskBooksCs[26]);
 
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
@@ -142,28 +144,29 @@ public class Application {
         fillInputAndTemplates(taskBooksJava[1]);
         fillBasicCalculations(taskBooksJava[2]);
         fillPreliminaryAssertions(taskBooksJava[3]);
-        fillMutualExclusives(taskBooksJava[4]);
-        fillRanges(taskBooksJava[5]);
+        fillPredefinedInput(taskBooksJava[4]);
+        fillMutualExclusives(taskBooksJava[5]);
+        fillRanges(taskBooksJava[6]);
 
-        fillLoops(taskBooksJava[6]);
-        fillStreamOfData(taskBooksJava[7]);
-        fillNestedLoops(taskBooksJava[8]);
-        fillBasicArrayOperations(taskBooksJava[9]);
-        fillSwapping(taskBooksJava[10]);
-        fillArrayConversionToNumbers(taskBooksJava[11]);
+        fillLoops(taskBooksJava[7]);
+        fillStreamOfData(taskBooksJava[8]);
+        fillNestedLoops(taskBooksJava[9]);
+        fillBasicArrayOperations(taskBooksJava[10]);
+        fillSwapping(taskBooksJava[11]);
+        fillArrayConversionToNumbers(taskBooksJava[12]);
 
-        fillAggregateCalculation(taskBooksJava[12]);
-        fillElementSearch(taskBooksJava[13]);
-        fillInsertionSort(taskBooksJava[14]);
-        fillStringMethods(taskBooksJava[15]);
-        fillReadingFiles(taskBooksJava[16]);
-        fillWritingFiles(taskBooksJava[17]);
+        fillAggregateCalculation(taskBooksJava[13]);
+        fillElementSearch(taskBooksJava[14]);
+        fillInsertionSort(taskBooksJava[15]);
+        fillStringMethods(taskBooksJava[16]);
+        fillReadingFiles(taskBooksJava[17]);
+        fillWritingFiles(taskBooksJava[18]);
 
-        fillMethodsDecoration(taskBooksJava[18]);
-        fillExceptions(taskBooksJava[19]);
-        fillAbstractDataStructures(taskBooksJava[20]);
-        fillInternalState(taskBooksJava[21]);
-        fillCollections(taskBooksJava[22]);
+        fillMethodsDecoration(taskBooksJava[19]);
+        fillExceptions(taskBooksJava[20]);
+        fillAbstractDataStructures(taskBooksJava[21]);
+        fillInternalState(taskBooksJava[22]);
+        fillCollections(taskBooksJava[23]);
 
         //где то на этом этапе можно добавить реализацию http-сервера
         //на дом все те же самые задания, нужно хотя бы повторить. отличие - вместо круга прямоугольник
@@ -179,10 +182,10 @@ public class Application {
         //9. подготовить html страницу с формой для отправки данных на сервер action="/circle"
         //10. http сервер с двумя страницами: /add и /circle. add отдает пользователю html страницу. circle отдает пользователю
 
-        fillRecursion(taskBooksJava[23]);
-        fillDateTime(taskBooksJava[24]);
-        fillCombinations(taskBooksJava[25]);
-        fillSQLite(taskBooksJava[26]);
+        fillRecursion(taskBooksJava[24]);
+        fillDateTime(taskBooksJava[25]);
+        fillCombinations(taskBooksJava[26]);
+        fillSQLite(taskBooksJava[27]);
 
         //запросы на добавление данных в субд можно отложить до работы с веб-сервером, т.к. проверка там будет комплексная, а не просто табличка с данными
         ////добавление (с параметрами)
@@ -307,7 +310,6 @@ public class Application {
                 .addTask(new Task2959())
                 .addTask(new Task7271())
                 .addTask(new Task2632())
-                .addTask(new Task4343())
                 .addTask(new Task7474())
         ;
     }
@@ -380,8 +382,6 @@ public class Application {
                 .withGroup("Ограничения, связанные с предметной областью")
                 .addExample(new TaskCs9298(), new TaskJava9298())//взаимоисключающий
                 .addTask(new Task4312())//взаимоисключающий, несколько вариантов
-                .addTask(new Task6522())//взаимоисключающий
-                .addTask(new Task7619())//взаимоисключающий, несколько вариантов
 
                 .withGroup("Ограничения при вычислении корня")
                 .addExample(new Task8833())//взаимоисключающий, корень
@@ -391,18 +391,15 @@ public class Application {
 
                 .withGroup("Вычисление остатка от деления")
                 .addExample(new TaskCs2801(), new TaskJava2801())//остаток от деления, не равно
-                .addTask(new Task2361())//остаток от деления, сложная вложенность
                 .addTask(new Task5063())//остаток от деления, кажется скучная
                 .addTask(new Task5870())//остаток от деления
 
                 .withGroup("Практика")
-                .addTask(new Task4913())//прямая геодезическая задача
                 .addTask(new Task2790())//синус, корень
                 .addTask(new Task3490())//округление вниз
                 .addTask(new Task9622())//просто вычисления
                 .addTask(new Task7799())//подвох в условиях корректности
                 .addTask(new Task3591())//вычисления без формулы
-                .addExample(new Task9130())//научная нотация чисел
                 .addTask(5895)
                 .addTask(2461)
                 .addTask(2624)
@@ -410,12 +407,30 @@ public class Application {
         ;
     }
 
+    private static void fillPredefinedInput(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab01")
+                .withGroup("Методы без возвращаемого значения")
+                .addExample(new TaskCs8307(), new TaskJava8307())//метод с одним аргументом
+                .addTask(new TaskCs8813(), new TaskJava8813())//метод с двумя аргументами и печатью в консоль
+                .addTask(new TaskCs5823(), new TaskJava5823())//метод с тремя аргументами и печатью в консоль
+                .addTask(new TaskCs2772(), new TaskJava2772())//метод с тремя аргументами и печатью в консоль
+
+                .withGroup("Задачи с объемными исходными данными")
+                .addTask(new Task4343())//заполнение шаблона
+                .addTask(new Task6522())//взаимоисключающий
+                .addTask(new Task7619())//взаимоисключающий, несколько вариантов
+                .addTask(new Task4913())//прямая геодезическая задача
+                .addExample(new Task9130())//научная нотация чисел
+                .addTask(new Task2361())//остаток от деления, сложная вложенность
+        ;
+    }
+
     private static void fillMutualExclusives(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab04")
                 .withGroup("Взаимоисключающие случаи")
-                .addExample(3072)
+                .addExample(new Task3072())
                 .addTask(new Task3770())
-                .addTask(5980)
+                .addTask(new Task5980())
                 .addTask(8174)
                 .addTask(7178)
                 .addTask(new Task7243())
@@ -447,8 +462,7 @@ public class Application {
                 .addTask(2153)
                 .addTask(7937)
                 .addTask(8135)//несколько условий последовательно, с дополнением ответа в каждом условии
-                .addTask(6896)
-                .addTask(9734)
+                .addTask(new Task6896())//переливания, одно действие
         ;
     }
 
@@ -660,6 +674,7 @@ public class Application {
                 .addTask(new Task1217())//определение области пересечения интервалов
                 .addTask(new Task4531())//изобразить пересекающиеся интервалы символами
                 .addTask(new Task1438())//пересечение прямоугольников
+                .addTask(new Task9734())//переливания, осмысленные действия
         ;
     }
 
@@ -993,12 +1008,6 @@ public class Application {
         taskBook
                 .withSourceDirectory("lab12")
                 .addCitation("info01")
-                .withGroup("Проверка вспомогательной программой")
-                .addExample(new TaskCs8307(), new TaskJava8307())//метод с одним аргументом
-                .addTask(new TaskCs8813(), new TaskJava8813())//метод с двумя аргументами и печатью в консоль
-                .addTask(new TaskCs5823(), new TaskJava5823())//метод с тремя аргументами и печатью в консоль
-                .addTask(new TaskCs2772(), new TaskJava2772())//метод с тремя аргументами и печатью в консоль
-                .addCitation("link_c2_p7.1")
 
                 .addExample(new TaskCs7611(), new TaskJava7611())//метод с одним аргументом, возвращает число
                 .addTask(new TaskCs4776(), new TaskJava4776())//метод с одним аргументом, возвращает число
@@ -1008,6 +1017,7 @@ public class Application {
 
                 .addExample(new Task3355())//сбор большого текста из фрагментов
                 .addTask(new Task3147())//сбор строки из фрагментов
+                .addCitation("link_c2_p7.1")
 
                 .withGroup("Аргумент-массив")
                 .addExample(new TaskCs6948(), new TaskJava6948())//принимает массив, возвращает число

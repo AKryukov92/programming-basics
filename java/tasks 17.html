@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>17 Чтение файлов</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>17 Строки</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,817 +197,1000 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Чтение файлов</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Строки</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task2312' class='example'>1*</a><li><a href='#task6175' class='example'>2*</a><li><a href='#task5236'>3</a><li><a href='#task4488'>4</a><li><a href='#task7396' class='example'>5*</a><li><a href='#task8605'>6</a><li><a href='#task9417'>7</a><li><a href='#task3148'>8</a><li><a href='#task7788' class='example'>9*</a><li><a href='#task6989'>10</a><li><a href='#task6170'>11</a><li><a href='#task8665'>12</a><li><a href='#task1761'>13</a><li><a href='#task4477'>14</a><li><a href='#task6648'>15</a></ul></div><div id='task2312' class='task_block'>
-<div class='task_id'>2312</div>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7491' class='example'>1*</a><li><a href='#task9631' class='example'>2*</a><li><a href='#task9812'>3</a><li><a href='#task9279'>4</a><li><a href='#task4845' class='example'>5*</a><li><a href='#task5728'>6</a><li><a href='#task7222'>7</a><li><a href='#task5923'>8</a><li><a href='#task8543'>9</a><li><a href='#task4265'>10</a><li><a href='#task2166'>11</a><li><a href='#task4996'>12</a><li><a href='#task9925' class='example'>13*</a><li><a href='#task3657' class='example'>14*</a><li><a href='#task6599'>15</a><li><a href='#task1618'>16</a><li><a href='#task1703'>17</a><li><a href='#task8887'>18</a><li><a href='#task9116'>19</a></ul></div><div id='task7491' class='task_block'>
+<div class='task_id'>7491</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-В файле содержатся три строки. Первая строка содержит адрес сервера (host). Вторая - имя пользователя (user). Третья - пароль (pass). Нужно прочитать эти данные и сформировать строку подключения JDBC по шаблону:
-</div>
-<div class='check_single preformatted'>postgresql://$USER:$PASS@$HOST:5432/dvdrental</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task2312/config1.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config1.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config1.cfg
-postgresql://postres:123@localhost:5432/dvdrental</td></tr>
-<tr><td>2</td><td><a href="files/task2312/config2.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config2.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config2.cfg
-postgresql://test_user:test_pass@127.0.0.1:5432/dvdrental</td></tr>
-<tr><td>3</td><td><a href="files/task2312/config3.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config3.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config3.cfg
-Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config3.cfg
-</td></tr>
-<tr><td>4</td><td><a href="files/task2312/config4.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config4.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config4.cfg
-Пароль не указан
-</td></tr>
-<tr><td>5</td><td><a href="files/task2312/config5.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config5.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config5.cfg
-Имя пользователя не указано
-</td></tr>
-<tr><td>6</td><td><a href="files/task2312/config6.cfg" target="_blank">открыть в новой вкладке<br>files/task2312/config6.cfg</a></td><td class='preformatted'>Читаю конфигурацию из файла C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task2312\config6.cfg
-Адрес сервера не указан
-</td></tr>
-</table>
-<div class='task_desc'>
-Для того чтобы читать файл, нужно создать экземпляр класса File. В скобочках вместо path нужно подставить строковый литерал с адресом файла в файловой системе. Это может быть абсолютный "C:/temp/files/task2312/config1.cfg" или относительный путь "./files/task2312/config1.cfg". Относительный путь может выглядеть иначе в зависимости от расположения вашего проекта с решениями задач.
-</div>
-<div class='check_single preformatted'>File file = new File(path);</div>
-<div class='task_desc'>
-Чтение файла выполняется с помощью экземпляра класса Scanner. Слово file в скобочках это переменная, содержащая экземпляр класса File. В этот момент происходит открытие файла. Для чтения консоли у вас в такой команде было написано "System.in".
-</div>
-<div class='check_single preformatted'>Scanner fileReader = new Scanner(file);</div>
-<div class='task_desc'>
-Скорее всего, эта команда вызовет ошибку компиляции:
-</div>
-<div class='check_single preformatted'>java: unreported exception java.io.FileNotFoundException; must be caught or declared to be thrown</div>
-<div class='task_desc'>
-Это значит, что нужно обработать исключение. Эта тема будет разобрана позже. Сейчас добавьте выражение "throws FileNotFoundException" таким образом:
-</div>
-<div class='check_single preformatted'>public static void main(String[] args) throws FileNotFoundException {</div>
-<div class='task_desc'>
-Это выражение указывает на то, что программа должна упасть с технической ошибкой при попытке открыть файл, если на самом деле файла нет. Ошибка выглядит так:
-</div>
-<div class='check_single preformatted'>Exception in thread "main" java.io.FileNotFoundException: D:\tfa\src\files\task2312\config3.cfg (Не удается найти указанный файл)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(FileInputStream.java:195)
-	at java.io.FileInputStream.<init>(FileInputStream.java:138)
-	at java.util.Scanner.<init>(Scanner.java:611)</div>
-<div class='task_desc'>
-Эту ошибку обычно не допускают и пишут сообщение об ошибке "файл не найден". Для этого проверьте условие "file.exists()" с помощью ветвления (if). Если это условие ложно, значит файл отсутствует. Если истинно - значит файл присутствует и его можно читать.
-</div>
-<div class='check_single preformatted'>if (!file.exists()) {//если файл не существует
-    System.out.println("Файл не найден " + file.getAbsolutePath());
-}
-if (file.exists()) {//если файл присутствует
-   //действия по чтению файла
-}</div>
-<div class='task_desc'>
-Выражение "file.getAbsolutePath()" нужно чтобы получить точный абсолютный путь к файлу. Это актуально в случае указания относительного пути и нужно чтобы понимать какой файл программа на самом деле попыталась открыть.
-</div>
-<div class='task_desc'>
-Чтение файла выполняется командой "fileReader.nextLine()". Это та же самая команда, что и для чтения данных из консоли. Файл это непредсказуемое хранилище данных. Он может присутствовать в файловой системе, но при этом не содержать данных. При попытке прочитать пустой файл, возникнет ошибка:
-</div>
-<div class='check_single preformatted'>Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.util.Scanner.nextLine(Scanner.java:1540)</div>
-<div class='task_desc'>
-Чтобы избежать этой проблемы, нужно написать ветвление. Условие "fileReader.hasNext()" будет истинно в случае если из файла можно прочитать данные с помощью "fileReader.nextLine()".
-</div>
-<div class='check_single preformatted'>if (!fileReader.hasNext()) {//если в файле нечего читать
-    System.out.println("Адрес сервера не указан");
-}
-if (fileReader.hasNext()) {//если в файле еще есть данные
-    String host = fileReader.nextLine();//читаем строку из файла и записываем её в переменную host
-}
-</div>
-<div class='task_desc'>
-В конце работы программы файлы нужно закрывать. Для этого нужно вызвать команду:
-</div>
-<div class='check_single preformatted'>fileReader.close();</div>
-<div class='task_desc'>
-Обратите внимание, что программа может закончиться как при выполнении всех действий, так и при вызове команды "return;". Добавьте закрытие файла во все варианты завершения программы.
-</div>
-</div>
-<div id='task6175' class='task_block'>
-<div class='task_id'>6175</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Исходный файл содержит записи, написанные в столбик без дополнительного оформления. Нужно вывести записи из файла в столбик.
+Дана фиксированная строка "abcdefwxyz". Пользователь вводит одну строчку. При поиске введенная строка считается подстрокой. Сообщить пользователю: содержится ли подстрока в исходной строке. Воспользуйтесь методом String.Contains<a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#contains-java.lang.CharSequence-'>(открыть справку в новой вкладке)</a>
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task6175/test1.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test1.txt</a></td><td class='preformatted'>стол
-стул
-дверь
-шкаф
-кровать
+<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
+<tr><td>1</td><td>z</td><td class='preformatted'>Записываю значение 'z' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит true, значит фрагмент 'z' найден успешно
 </td></tr>
-<tr><td>2</td><td><a href="files/task6175/test2.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test2.txt</a></td><td class='preformatted'>космос
+<tr><td>2</td><td>bx</td><td class='preformatted'>Записываю значение 'bx' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит false, значит фрагмент 'bx' отсутствует
 </td></tr>
-<tr><td>3</td><td><a href="files/task6175/test3.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test3.txt</a></td><td class='preformatted'>Файл пуст
+<tr><td>3</td><td>fw</td><td class='preformatted'>Записываю значение 'fw' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит true, значит фрагмент 'fw' найден успешно
 </td></tr>
-<tr><td>4</td><td><a href="files/task6175/test4.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test4.txt</a></td><td class='preformatted'>кирпич
-бетон
-дерево
+<tr><td>4</td><td>abcd</td><td class='preformatted'>Записываю значение 'abcd' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит true, значит фрагмент 'abcd' найден успешно
 </td></tr>
-<tr><td>5</td><td><a href="files/task6175/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6175\test5.txt
+<tr><td>5</td><td>abcdefwxyz000</td><td class='preformatted'>Записываю значение 'abcdefwxyz000' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит false, значит фрагмент 'abcdefwxyz000' отсутствует
 </td></tr>
-<tr><td>6</td><td><a href="files/task6175/test6.txt" target="_blank">открыть в новой вкладке<br>files/task6175/test6.txt</a></td><td class='preformatted'>один два три четыре пять
+<tr><td>6</td><td>abcdefwxyz</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит true, значит фрагмент 'abcdefwxyz' найден успешно
+</td></tr>
+<tr><td>7</td><td>123</td><td class='preformatted'>Записываю значение '123' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+boolean check = haystack.contains(needle);
+Переменная check содержит false, значит фрагмент '123' отсутствует
 </td></tr>
 </table>
 </div>
-<div id='task5236' class='task_block'>
-<div class='task_id'>5236</div>
+<div id='task9631' class='task_block'>
+<div class='task_id'>9631</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Файл с исходными данными содержит целые числа, написанные в столбик без дополнительного оформления. Нужно прочитать все числа. К каждому числу прибавить 7 и вывести на экран в столбик.
+Дана фиксированная строка "abcdefwxyz". Пользователь вводит фрагмент текста. Определить сколько других символов находится после его окончания. Используйте метод indexOf <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-int-'>(открыть справку в новой вкладке)</a> чтобы найти начало фрагмента в исходной строке. 
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task5236/test1.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test1.txt</a></td><td class='preformatted'>К числу 15 прибавили 7, получилось 22
-К числу 18 прибавили 7, получилось 25
-К числу 3 прибавили 7, получилось 10
-К числу -3 прибавили 7, получилось 4
-К числу -27 прибавили 7, получилось -20
-К числу 0 прибавили 7, получилось 7
-К числу -400 прибавили 7, получилось -393
-К числу -3 прибавили 7, получилось 4
-К числу 330 прибавили 7, получилось 337
+<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
+<tr><td>1</td><td>z</td><td class='preformatted'>Записываю значение 'z' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит 9, значит Фрагмент 'z' находится на индексе '9'
+Длина введенного фрагмента 1
+После него есть еще 0 символов
 </td></tr>
-<tr><td>2</td><td><a href="files/task5236/test2.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test2.txt</a></td><td class='preformatted'>Файл пуст
+<tr><td>2</td><td>a</td><td class='preformatted'>Записываю значение 'a' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит 0, значит Фрагмент 'a' находится на индексе '0'
+Длина введенного фрагмента 1
+После него есть еще 9 символов
 </td></tr>
-<tr><td>3</td><td><a href="files/task5236/test3.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test3.txt</a></td><td class='preformatted'>К числу -208 прибавили 7, получилось -201
-К числу -453 прибавили 7, получилось -446
-К числу -9 прибавили 7, получилось -2
-К числу -378 прибавили 7, получилось -371
-К числу 361 прибавили 7, получилось 368
-К числу -119 прибавили 7, получилось -112
-К числу 222 прибавили 7, получилось 229
-К числу -371 прибавили 7, получилось -364
-К числу 244 прибавили 7, получилось 251
-К числу 463 прибавили 7, получилось 470
-К числу 398 прибавили 7, получилось 405
-К числу 474 прибавили 7, получилось 481
-К числу 448 прибавили 7, получилось 455
-К числу 104 прибавили 7, получилось 111
-К числу -6 прибавили 7, получилось 1
-К числу 134 прибавили 7, получилось 141
-К числу -321 прибавили 7, получилось -314
+<tr><td>3</td><td>g</td><td class='preformatted'>Записываю значение 'g' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит -1, значит фрагмент 'g' отсутствует в строке
 </td></tr>
-<tr><td>4</td><td><a href="files/task5236/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test4.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5236\test4.txt
+<tr><td>4</td><td>abcd</td><td class='preformatted'>Записываю значение 'abcd' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит 0, значит Фрагмент 'abcd' находится на индексе '0'
+Длина введенного фрагмента 4
+После него есть еще 6 символов
 </td></tr>
-<tr><td>5</td><td><a href="files/task5236/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test5.txt</a></td><td class='preformatted'>К числу 328 прибавили 7, получилось 335
-К числу 36 прибавили 7, получилось 43
+<tr><td>5</td><td>wxyz</td><td class='preformatted'>Записываю значение 'wxyz' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит 6, значит Фрагмент 'wxyz' находится на индексе '6'
+Длина введенного фрагмента 4
+После него есть еще 0 символов
 </td></tr>
-<tr><td>6</td><td><a href="files/task5236/test6.txt" target="_blank">открыть в новой вкладке<br>files/task5236/test6.txt</a></td><td class='preformatted'>К числу -148 прибавили 7, получилось -141
-К числу -311 прибавили 7, получилось -304
-К числу 383 прибавили 7, получилось 390
-К числу 448 прибавили 7, получилось 455
-К числу 199 прибавили 7, получилось 206
-К числу -237 прибавили 7, получилось -230
-К числу 235 прибавили 7, получилось 242
-К числу -56 прибавили 7, получилось -49
-К числу -39 прибавили 7, получилось -32
+<tr><td>6</td><td>axby</td><td class='preformatted'>Записываю значение 'axby' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит -1, значит фрагмент 'axby' отсутствует в строке
 </td></tr>
 </table>
 </div>
-<div id='task4488' class='task_block'>
-<div class='task_id'>4488</div>
+<div id='task9812' class='task_block'>
+<div class='task_id'>9812</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Исходный файл содержит множество записей, написанных в столбик без дополнительного оформления. Посчитать количество записей в файле, исключая первую запись. Вывести первую запись и количество остальных записей.
+Дана фиксированная строка "abcdefwxyz". Пользователь вводит два символа. Посчитать количество символов между введенными символами.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task4488/test1.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test1.txt</a></td><td class='preformatted'>Поэмы 14
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>CA</th><th>CB</th></tr>
+<tr>
+<td>1</td><td>a</td><td>x</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
+Фрагмент 'x' начинается на индексе 7
+Между ними находится 6 символов
 </td></tr>
-<tr><td>2</td><td><a href="files/task4488/test2.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test2.txt</a></td><td class='preformatted'>блокбастеры 0
+<tr>
+<td>2</td><td>a</td><td>w</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
+Фрагмент 'w' начинается на индексе 6
+Между ними находится 5 символов
 </td></tr>
-<tr><td>3</td><td><a href="files/task4488/test3.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test3.txt</a></td><td class='preformatted'>Научная и научно-популярная литература 160
+<tr>
+<td>3</td><td>a</td><td>d</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
+Фрагмент 'd' начинается на индексе 3
+Между ними находится 2 символов
 </td></tr>
-<tr><td>4</td><td><a href="files/task4488/test4.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test4.txt</a></td><td class='preformatted'>Сказки 7
+<tr>
+<td>4</td><td>a</td><td>b</td><td class='preformatted'>Фрагмент 'a' начинается на индексе 0
+Фрагмент 'b' начинается на индексе 1
+Между ними находится 0 символов
 </td></tr>
-<tr><td>5</td><td><a href="files/task4488/test5.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task4488\test5.txt
+<tr>
+<td>5</td><td>w</td><td>d</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
+Фрагмент 'd' начинается на индексе 3
+Между ними находится 2 символов
 </td></tr>
-<tr><td>6</td><td><a href="files/task4488/test6.txt" target="_blank">открыть в новой вкладке<br>files/task4488/test6.txt</a></td><td class='preformatted'>Файл пуст
+<tr>
+<td>6</td><td>w</td><td>f</td><td class='preformatted'>Фрагмент 'w' начинается на индексе 6
+Фрагмент 'f' начинается на индексе 5
+Между ними находится 0 символов
+</td></tr>
+<tr>
+<td>7</td><td>g</td><td>z</td><td class='preformatted'>Значение CA отсутствует в строке
+</td></tr>
+<tr>
+<td>8</td><td>x</td><td>u</td><td class='preformatted'>Значение CB отсутствует в строке
 </td></tr>
 </table>
 </div>
-<div id='task7396' class='task_block'>
-<div class='task_id'>7396</div>
+<div id='task9279' class='task_block'>
+<div class='task_id'>9279</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Каждая строка исходного файла содержит несколько целых чисел, разделенных символом ';'. Каждую строку нужно преобразовать в массив чисел, а затем найти сумму элементов этого массива.
+Дана фиксированная строка "abcabcabbacbacbaaac". Пользователь вводит комбинацию из двух символов. Вывести первые три индекса, на которых встречается введенная подстрока.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task7396/test1.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test1.txt</a></td><td class='preformatted'>Количество чисел в строке 2
-Их сумма равна -409
-Количество чисел в строке 3
-Их сумма равна 192
-Количество чисел в строке 1
-Их сумма равна 457
-Количество чисел в строке 9
-Их сумма равна 796
+<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
+<tr><td>1</td><td>ab</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
+Записываю значение 'ab' в переменную value
+Первая подстрока находится на индексе 0
+Ищу вторую начиная с индекса 1
+Записываю индекс первой подстроки в переменную firstOccurrence
+Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
+int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
+Переменная secondOccurrence содержит 3, значит
+Вторая подстрока находится на индексе 3
+Ищу третью начиная с индекса 4
+Вызов метода выглядит так:
+int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
+Третья подстрока находится на индексе 6
 </td></tr>
-<tr><td>2</td><td><a href="files/task7396/test2.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test2.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task7396\test2.txt
+<tr><td>2</td><td>bc</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
+Записываю значение 'bc' в переменную value
+Первая подстрока находится на индексе 1
+Ищу вторую начиная с индекса 2
+Записываю индекс первой подстроки в переменную firstOccurrence
+Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
+int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
+Переменная secondOccurrence содержит 4, значит
+Вторая подстрока находится на индексе 4
+Ищу третью начиная с индекса 5
+Вызов метода выглядит так:
+int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
+Указанная подстрока 'bc' встречается только дважды
 </td></tr>
-<tr><td>3</td><td><a href="files/task7396/test3.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test3.txt</a></td><td class='preformatted'>Количество чисел в строке 10
-Их сумма равна 498
-Количество чисел в строке 10
-Их сумма равна 781
-Количество чисел в строке 10
-Их сумма равна -1683
-Количество чисел в строке 10
-Их сумма равна 175
-Количество чисел в строке 10
-Их сумма равна 185
-Количество чисел в строке 10
-Их сумма равна -923
-Количество чисел в строке 10
-Их сумма равна -23
-Количество чисел в строке 10
-Их сумма равна -1385
-Количество чисел в строке 10
-Их сумма равна -186
-Количество чисел в строке 10
-Их сумма равна 1227
-Количество чисел в строке 10
-Их сумма равна -493
+<tr><td>3</td><td>ac</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
+Записываю значение 'ac' в переменную value
+Первая подстрока находится на индексе 9
+Ищу вторую начиная с индекса 10
+Записываю индекс первой подстроки в переменную firstOccurrence
+Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
+int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
+Переменная secondOccurrence содержит 12, значит
+Вторая подстрока находится на индексе 12
+Ищу третью начиная с индекса 13
+Вызов метода выглядит так:
+int thirdOccurrence = data.indexOf(value, secondOccurrence + 1);
+Третья подстрока находится на индексе 17
 </td></tr>
-<tr><td>4</td><td><a href="files/task7396/test4.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test4.txt</a></td><td class='preformatted'>Количество чисел в строке 10
-Их сумма равна -587
-Строка пуста
-Количество чисел в строке 10
-Их сумма равна 857
-Количество чисел в строке 10
-Их сумма равна -303
-Количество чисел в строке 10
-Их сумма равна 226
-Строка пуста
-Количество чисел в строке 10
-Их сумма равна -1824
-Количество чисел в строке 10
-Их сумма равна -108
-Количество чисел в строке 10
-Их сумма равна -395
-Строка пуста
-Строка пуста
-Количество чисел в строке 10
-Их сумма равна 798
-Количество чисел в строке 10
-Их сумма равна -160
-Количество чисел в строке 10
-Их сумма равна 65
+<tr><td>4</td><td>bb</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
+Записываю значение 'bb' в переменную value
+Первая подстрока находится на индексе 7
+Ищу вторую начиная с индекса 8
+Записываю индекс первой подстроки в переменную firstOccurrence
+Использую перегрузку метода с двумя аргументами. Вызов метода выглядит так:
+int secondOccurrence = data.indexOf(value, firstOccurrence + 1);
+Переменная secondOccurrence содержит -1, значит
+Указанная подстрока 'bb' встречается только один раз
 </td></tr>
-<tr><td>5</td><td><a href="files/task7396/test5.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test5.txt</a></td><td class='preformatted'>Файл пуст
+<tr><td>5</td><td>xz</td><td class='preformatted'>Записываю значение 'abcabcabbacbacbaaac' в переменную data
+Записываю значение 'xz' в переменную value
+Указанная подстрока 'xz' не найдена
 </td></tr>
-<tr><td>6</td><td><a href="files/task7396/test6.txt" target="_blank">открыть в новой вкладке<br>files/task7396/test6.txt</a></td><td class='preformatted'>Строка пуста
-Строка пуста
-Строка пуста
-Строка пуста
-Количество чисел в строке 100
-Их сумма равна -744
+<tr><td>6</td><td>cde</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
+</td></tr>
+<tr><td>7</td><td>a</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
 </td></tr>
 </table>
 </div>
-<div id='task8605' class='task_block'>
-<div class='task_id'>8605</div>
+<div id='task4845' class='task_block'>
+<div class='task_id'>4845</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Исходный файл <a href="files/task8605/dates.txt" target="_blank">открыть в новой вкладке<br>files/task8605/dates.txt</a> содержит список дат. Каждая строка содержит одну дату, описанную тремя числами: год, месяц и день. Написать пользователю, возможна ли такая дата и если нет, то почему.
-</div>
-<div class='check_single preformatted'>1750-07-28 Дата корректна
-1993-01-03 Дата корректна
-2023-01-31 Дата корректна
-2023-01-32 Количество дней в январе не должно превышать 31
-2023-02-29 Количество дней в феврале НЕвисокосного года не должно превышать 28
-2024-02-29 Дата корректна
-2023-03-31 Дата корректна
-2023-03-34 Количество дней в марте не должно превышать 31
-2023-04-31 Количество дней в апреле не должно превышать 31
-2023-04-30 Дата корректна
-2023-05-30 Дата корректна
-2023-05-31 Дата корректна
-2023-05-37 Количество дней в мае не должно превышать 31
-2023-06-30 Дата корректна
-2023-06-31 Количество дней в июне не должно превышать 30
-2023-07-30 Дата корректна
-2023-07-31 Дата корректна
-2023-07-34 Количество дней в июле не должно превышать 31
-2023-08-30 Дата корректна
-2023-08-31 Дата корректна
-2023-08-33 Количество дней в августе не должно превышать 31
-2023-09-30 Дата корректна
-2023-09-31 Количество дней в сентябре не должно превышать 30
-2023-10-30 Дата корректна
-2023-10-31 Дата корректна
-2023-10-36 Количество дней в октябре не должно превышать 31
-2023-11-30 Дата корректна
-2023-11-31 Количество дней в ноябре не должно превышать 30
-2023-12-30 Дата корректна
-2023-12-31 Дата корректна
-2023-12-39 Количество дней в декабре не должно превышать 31
-2023-13-01 Месяц должен быть от 1 до 12 включительно
-2023-14-01 Месяц должен быть от 1 до 12 включительно
-2023-01-60 Количество дней в январе не должно превышать 31
-2023-00-01 Дата корректна
-2023-04-00 Дата корректна
-2023-01 Дата должна состоять из трех чисел
-2023 Дата должна состоять из трех чисел
-</div>
-</div>
-<div id='task9417' class='task_block'>
-<div class='task_id'>9417</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Исходные данные находятся в нескольких файлах dataX.txt, где X - число от 0 до 10 включительно. Каждый файл содержит неизвестное количество целых чисел, записанных в столбик без дополнительного оформления. Посчитать сумму чисел в каждом файле, а также общую сумму. При возникновении ошибки, вывести сообщение, прекратить обработку текущего файла и перейти к обработке следующего.
-</div>
-<div class='check_single preformatted'>Обработка файла files/task9417/data0.txt
-Сумма в файле: 23066
-Обработка файла files/task9417/data1.txt
-Сумма в файле: 8807
-Обработка файла files/task9417/data2.txt
-Сумма в файле: 2573780
-Обработка файла files/task9417/data3.txt
-Сумма в файле: 203549
-Обработка файла files/task9417/data4.txt
-ОШИБКА: Файл не найден
-Обработка файла files/task9417/data5.txt
-Сумма в файле: 16426133
-Обработка файла files/task9417/data6.txt
-ОШИБКА: Не удалось преобразовать число
-Обработка файла files/task9417/data7.txt
-Сумма в файле: 329058743
-Обработка файла files/task9417/data8.txt
-ОШИБКА: Файл не найден
-Обработка файла files/task9417/data9.txt
-ОШИБКА: Не удалось преобразовать число
-Обработка файла files/task9417/data10.txt
-Сумма в файле: -27676
-Общая сумма: 348266402
-</div>
-<div class='task_desc'>
-Данные в файлах можно посмотреть по этим ссылкам:
-</div>
-<ol start='1'><li><a href="files/task9417/data0.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data0.txt</a></li><li><a href="files/task9417/data1.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data1.txt</a></li><li><a href="files/task9417/data2.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data2.txt</a></li><li><a href="files/task9417/data3.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data3.txt</a></li><li><a href="files/task9417/data4.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data4.txt</a></li><li><a href="files/task9417/data5.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data5.txt</a></li><li><a href="files/task9417/data6.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data6.txt</a></li><li><a href="files/task9417/data7.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data7.txt</a></li><li><a href="files/task9417/data8.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data8.txt</a></li><li><a href="files/task9417/data9.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data9.txt</a></li><li><a href="files/task9417/data10.txt" target="_blank">открыть в новой вкладке<br>files/task9417/data10.txt</a></li></ol></div>
-<div id='task3148' class='task_block'>
-<div class='task_id'>3148</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Исходные данные находятся в нескольких файлах dataX.csv, где X - целое число. Каждый файл содержит два столбика целых чисел, разделенных символом ";". При запуске программы нужно обработать только часть файлов. Список файлов для обработки находится в файле listY.txt, где Y - вводится с клавиатуры. Посчитать количество записей, в которых левое число меньше правого для каждого файла в списке, а также общее количество во всех файлах списка. При возникновении ошибки, вывести сообщение, прекратить обработку текущего файла и перейти к обработке следующего в списке.
+Дана фиксированная строка "abcdefwxyz". Пользователь вводит два числа: CA и CB. Если CA меньше CB, то вывести буквы на индексах от CA до CB, исключая CB. В ином случае, вывести буквы на индексах от CB до CA, исключая CA. Примените метод substring с двумя аргументами. <a target='_blank' href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-int-'>(открыть справку в новой вкладке)</a>
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (list filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task3148/list1.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list1.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list1.txt
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Общее количество подходящих записей: 248
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>CA</th><th>CB</th></tr>
+<tr>
+<td>1</td><td>0</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
+От CA до CB. Вызов метода выглядит так:
+String result = STR.substring(cb, ca);
+Переменная result содержит 'abc'
 </td></tr>
-<tr><td>2</td><td><a href="files/task3148/list2.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list2.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list2.txt
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Обработка файла files/task3148/data1.csv
-Количество подходящих записей в файле: 247
-Общее количество подходящих записей: 495
+<tr>
+<td>2</td><td>3</td><td>0</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
+От CB до CA. Вызов метода выглядит так:
+String result = STR.substring(cb, ca);
+Переменная result содержит 'abc'
 </td></tr>
-<tr><td>3</td><td><a href="files/task3148/list3.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list3.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list3.txt
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Обработка файла files/task3148/data2.csv
-Количество подходящих записей в файле: 785
-Обработка файла files/task3148/data4.csv
-ОШИБКА: Некорректный формат
-Обработка файла files/task3148/data6.csv
-ОШИБКА: Некорректный формат
-Обработка файла files/task3148/data8.csv
-Количество подходящих записей в файле: 0
-Общее количество подходящих записей: 1033
+<tr>
+<td>3</td><td>3</td><td>3</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
+От CA до CB. Вызов метода выглядит так:
+String result = STR.substring(cb, ca);
+Переменная result содержит ''
 </td></tr>
-<tr><td>4</td><td><a href="files/task3148/list4.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list4.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list4.txt
-Обработка файла files/task3148/data1.csv
-Количество подходящих записей в файле: 247
-Обработка файла files/task3148/data3.csv
-Количество подходящих записей в файле: 1507
-Обработка файла files/task3148/data5.csv
-ОШИБКА: Файл данных не найден
-Обработка файла files/task3148/data7.csv
-Количество подходящих записей в файле: 249
-Общее количество подходящих записей: 2003
+<tr>
+<td>4</td><td>2</td><td>6</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
+От CA до CB. Вызов метода выглядит так:
+String result = STR.substring(cb, ca);
+Переменная result содержит 'cdef'
 </td></tr>
-<tr><td>5</td><td><a href="files/task3148/list5.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list5.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list5.txt
-ОШИБКА: Список не найден
+<tr>
+<td>5</td><td>0</td><td>9</td><td class='preformatted'>Записываю значение 'abcdefwxyz' в переменную STR
+От CA до CB. Вызов метода выглядит так:
+String result = STR.substring(cb, ca);
+Переменная result содержит 'abcdefwxy'
 </td></tr>
-<tr><td>6</td><td><a href="files/task3148/list6.txt" target="_blank">открыть в новой вкладке<br>files/task3148/list6.txt</a></td><td class='preformatted'>Обработка списка files/task3148/list6.txt
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Обработка файла files/task3148/data0.csv
-Количество подходящих записей в файле: 248
-Общее количество подходящих записей: 744
+<tr>
+<td>6</td><td>-1</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
 </td></tr>
-</table>
-<div class='task_desc'>
-Данные в файлах dataX.csv можно посмотреть по этим ссылкам:
-</div>
-<ol start='1'><li><a href="files/task3148/data0.csv" target="_blank">скачать data0.csv</a></li><li><a href="files/task3148/data1.csv" target="_blank">скачать data1.csv</a></li><li><a href="files/task3148/data2.csv" target="_blank">скачать data2.csv</a></li><li><a href="files/task3148/data3.csv" target="_blank">скачать data3.csv</a></li><li><a href="files/task3148/data4.csv" target="_blank">скачать data4.csv</a></li><li><a href="files/task3148/data5.csv" target="_blank">скачать data5.csv</a></li><li><a href="files/task3148/data6.csv" target="_blank">скачать data6.csv</a></li><li><a href="files/task3148/data7.csv" target="_blank">скачать data7.csv</a></li><li><a href="files/task3148/data8.csv" target="_blank">скачать data8.csv</a></li></ol></div>
-<div id='task7788' class='task_block'>
-<div class='task_id'>7788</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Исходный файл <a href="files/task7788/composers.csv" target="_blank">скачать composers.csv</a> содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой ";". Атрибуты записаны в следующем порядке:
-</div>
-<ol start='1'><li>composer_id - идентификатор композитора</li><li>first_name - имя</li><li>last_name - фамилия</li><li>birth_date - дата рождения</li><li>birth_place - место рождения</li><li>death_date - дата смерти</li><li>death_place - место смерти</li><li>wiki_page - ссылка на страницу Википедии</li></ol><div class='task_desc'>
-Нужно вывести фамилию, дату и место смерти. Первой колонкой должен быть код композитора. Порядок вывода соответствует содержимому файла. Перед списком композиторов нужно вывести заголовки столбцов. После списка композиторов нужно вывести фразу "Всего композиторов" и количество записей в файле. Строка с заголовками столбцов не участвует в подсчёте количества.
-</div>
-<div class='check_single preformatted'>composer_id last_name death_date death_place
-80 'Bach' '1750-07-28' 'Leipzig'
-81 'van Beethoven' '1827-03-26' 'Vienna'
-82 'Handel' '1759-04-14' 'London,England'
-83 'Mozart' '1791-12-05' 'Vienna,Austria'
-84 'Chopin' '1849-10-17' 'Paris,France'
-85 'Purcell' '1695-11-21' 'Marcham Street,London,England'
-86 'Bach' '1782-01-01' 'London,England'
-87 'Bach' '1784-07-01' 'Berlin'
-88 'Glinka' '1857-02-15' 'Berlin'
-89 'Tchaikovsky' '1893-11-06' 'Saint Petersburg'
-Всего композиторов: 10
-</div>
-</div>
-<div id='task6989' class='task_block'>
-<div class='task_id'>6989</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Исходный файл <a href="files/task6989/composers.csv" target="_blank">скачать composers.csv</a> содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой ";". Атрибуты записаны в следующем порядке:
-</div>
-<ol start='1'><li>composer_id - идентификатор композитора</li><li>first_name - имя</li><li>last_name - фамилия</li><li>birth_date - дата рождения</li><li>birth_place - место рождения</li><li>death_date - дата смерти</li><li>death_place - место смерти</li><li>wiki_page - ссылка на страницу Википедии</li></ol><div class='task_desc'>
-Пользователь вводит число - идентификатор композитора. Нужно вывести имя, фамилию и место рождения композитора, у которого идентификатор равен введенному числу. Если композитор с нужным идентификатором отсутствует, сообщить об этом.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (composer_id)</th><th>Результат (ссылка на файл)</th></tr>
-<tr><td>1</td><td>88</td><td class='preformatted'>Имя: 'Mikhail'
-фамилия: 'Glinka'
-место рождения: 'Novospasskoye, Smolensk Governorate'</td></tr>
-<tr><td>2</td><td>85</td><td class='preformatted'>Имя: 'Henry'
-фамилия: 'Purcell'
-место рождения: 'Westminster, London, England'</td></tr>
-<tr><td>3</td><td>81</td><td class='preformatted'>Имя: 'Ludwig'
-фамилия: 'van Beethoven'
-место рождения: 'Bonn'</td></tr>
-<tr><td>4</td><td>82</td><td class='preformatted'>Имя: 'George'
-фамилия: 'Handel'
-место рождения: 'Halle, Duchy of Magdeburg, Bradenburg-Prussia'</td></tr>
-<tr><td>5</td><td>404</td><td class='preformatted'>Композитор с кодом 404 не найден
+<tr>
+<td>7</td><td>20</td><td>4</td><td class='preformatted'>Значение CA должно быть в интервале [0,длина строки)
 </td></tr>
-<tr><td>6</td><td>composer_id</td><td class='preformatted'>Композитор с кодом composer_id не найден
+<tr>
+<td>8</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
+</td></tr>
+<tr>
+<td>9</td><td>7</td><td>17</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
 </td></tr>
 </table>
 </div>
-<div id='task6170' class='task_block'>
-<div class='task_id'>6170</div>
+<div id='task5728' class='task_block'>
+<div class='task_id'>5728</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дано два исходных файла: список сотрудников и список отделов.В файле <a href="files/task6170/departments.csv" target="_blank">скачать departments.csv</a> содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую ",". Атрибуты записаны в следующем порядке:
+Дан текст
 </div>
-<ol start='1'><li>department_id - код отдела</li><li>department_name - наименование отдела</li><li>manager_id - код сотрудника-руководителя</li><li>location_id - код офиса</li></ol><div class='task_desc'>
-В файле <a href="files/task6170/employees.csv" target="_blank">скачать employees.csv</a> содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую ",". Атрибуты записаны в следующем порядке:
-</div>
-<ol start='1'><li>employee_id - код сотрудника</li><li>first_name - имя</li><li>last_name - фамилия</li><li>email - адрес почты без домена</li><li>phone_number - телефонный номер</li><li>hire_date - дата найма</li><li>job_id - код должности</li><li>salary - заработная плата</li><li>commission_pct - ставка коммиссии</li><li>manager_id - код руководителя</li><li>department_id - код отдела</li></ol><div class='task_desc'>
-Пользователь вводит число - код сотрудника. Нужно вывести имя, фамилию и НАИМЕНОВАНИЕ отдела сотрудника, у которого код равен введенному числу. Если такой сотрудник отсутствует, сообщить об этом.
+<div class='check_single preformatted'>&lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
+
+&lt;svg width="800" height="600"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="green"
+        stroke-width="4" fill="yellow"/&gt;
+&lt;/svg&gt;</div>
+<div class='task_desc'>
+Пользователь вводит два фрагмента текста: open и close. Вывести на экран фрагмент текста (подстроку), который находится между open и close, исключая их. Нужно найти позицию того фрагмента close, который находится после окончания фрагмента open.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (Код сотрудника)</th><th>Результат</th></tr>
-<tr><td>1</td><td>100</td><td class='preformatted'>Имя: 'Steven'
-Фамилия: 'King'
-Отдел: 'Executive'
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>open</th><th>close</th></tr>
+<tr>
+<td>1</td><td>&lt;svg</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;svg' начинается на индексе 39 и заканчивается на индексе 43
+Фрагмент '&gt;' после open начинается на индексе 68
+Вырезаю фрагмент с индекса 43 до индекса 68
+Получился фрагмент:
+ width="800" height="600"
 </td></tr>
-<tr><td>2</td><td>107</td><td class='preformatted'>Имя: 'Diana'
-Фамилия: 'Lorentz'
-Отдел: 'IT'
+<tr>
+<td>2</td><td>&lt;h1&gt;</td><td>&lt;/h1&gt;</td><td class='preformatted'>Фрагмент '&lt;h1&gt;' начинается на индексе 0 и заканчивается на индексе 4
+Фрагмент '&lt;/h1&gt;' после open начинается на индексе 32
+Вырезаю фрагмент с индекса 4 до индекса 32
+Получился фрагмент:
+Мой первый векторный рисунок
 </td></tr>
-<tr><td>3</td><td>149</td><td class='preformatted'>Имя: 'Eleni'
-Фамилия: 'Zlotkey'
-Отдел: 'Sales'
+<tr>
+<td>3</td><td>&lt;</td><td>&gt;</td><td class='preformatted'>Фрагмент '&lt;' начинается на индексе 0 и заканчивается на индексе 1
+Фрагмент '&gt;' после open начинается на индексе 3
+Вырезаю фрагмент с индекса 1 до индекса 3
+Получился фрагмент:
+h1
 </td></tr>
-<tr><td>4</td><td>202</td><td class='preformatted'>Имя: 'Pat'
-Фамилия: 'Fay'
-Отдел: 'Marketing'
+<tr>
+<td>4</td><td>fill="</td><td>"</td><td class='preformatted'>Фрагмент 'fill="' начинается на индексе 145 и заканчивается на индексе 151
+Фрагмент '"' после open начинается на индексе 157
+Вырезаю фрагмент с индекса 151 до индекса 157
+Получился фрагмент:
+yellow
 </td></tr>
-<tr><td>5</td><td>404</td><td class='preformatted'>Сотрудник с кодом 404 не найден
+<tr>
+<td>5</td><td>&lt;circle</td><td>/&gt;</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
+Фрагмент '/&gt;' после open начинается на индексе 158
+Вырезаю фрагмент с индекса 81 до индекса 158
+Получился фрагмент:
+ cx="50" cy="50" r="40" stroke="green"
+        stroke-width="4" fill="yellow"
 </td></tr>
-<tr><td>6</td><td>500</td><td class='preformatted'>Имя: 'Kryukov'
-Фамилия: 'Alexander'
-Отдел: с кодом 666 не найден
+<tr>
+<td>6</td><td>h1</td><td>h1</td><td class='preformatted'>Фрагмент 'h1' начинается на индексе 1 и заканчивается на индексе 3
+Фрагмент 'h1' после open начинается на индексе 34
+Вырезаю фрагмент с индекса 3 до индекса 34
+Получился фрагмент:
+&gt;Мой первый векторный рисунок&lt;/
+</td></tr>
+<tr>
+<td>7</td><td>head</td><td>/head</td><td class='preformatted'>Значение head не найдено в тексте
+</td></tr>
+<tr>
+<td>8</td><td>&lt;circle</td><td>&lt;svg</td><td class='preformatted'>Фрагмент '&lt;circle' начинается на индексе 74 и заканчивается на индексе 81
+Фрагмент '&lt;svg' не найдено после фрагмента '&lt;circle'
 </td></tr>
 </table>
 </div>
-<div id='task8665' class='task_block'>
-<div class='task_id'>8665</div>
+<div id='task7222' class='task_block'>
+<div class='task_id'>7222</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дано два исходных файла: список сотрудников и список отделов.В файле <a href="files/task8665/departments.csv" target="_blank">скачать departments.csv</a> содержатся записи об отделах. Каждая строка содержит атрибуты одного отдела, перечисленные через запятую ",". Атрибуты записаны в следующем порядке:
+Пользователь вводит цифры штрих кода в стандарте EAN-13. Расшифровать значение штрих кода. Номер товара EAN-13 имеет следующую структуру:
 </div>
-<ol start='1'><li>department_id - код отдела</li><li>department_name - наименование отдела</li><li>manager_id - код сотрудника-руководителя</li><li>location_id - код офиса</li></ol><div class='task_desc'>
-В файле <a href="files/task8665/employees.csv" target="_blank">скачать employees.csv</a> содержатся записи о сотрудниках. Каждая строка содержит атрибуты одного сотрудника, перечисленные через запятую ",". Атрибуты записаны в следующем порядке:
-</div>
-<ol start='1'><li>employee_id - код сотрудника</li><li>first_name - имя</li><li>last_name - фамилия</li><li>email - адрес почты без домена</li><li>phone_number - телефонный номер</li><li>hire_date - дата найма</li><li>job_id - код должности</li><li>salary - заработная плата</li><li>commission_pct - ставка коммиссии</li><li>manager_id - код руководителя</li><li>department_id - код отдела</li></ol><div class='task_desc'>
-Пользователь вводит наименование отдела. Нужно вывести код отдела, а также имя, фамилию и телефонный номер сотрудников, которые работают в данном отделе. Если такие отсутствуют, сообщить об этом. Пронумеруйте сотрудников при выводе.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (Наименование отдела)</th><th>Результат</th></tr>
-<tr><td>1</td><td>Administration</td><td class='preformatted'>Код отдела Administration равен 10
-0 Имя: 'Jennifer'
-Фамилия: 'Whalen'
-Телефонный номер: '515.123.4444'
+<ol start='1'><li>первые 3 цифры — это префикс или код национальной организации-члена EAN International (для EAN Россия – 460-469);</li><li>следующие 6 цифр — это регистрационный номер предприятия — изготовителя;</li><li>следующая группа из 3-х цифр — это порядковый номер продукции внутри предприятия;</li><li>последняя 13-я цифра — контрольное число. Оно вычисляется из предыдущих двенадцати.</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (ean)</th><th>Результат</th></tr>
+<tr><td>1</td><td>4607009520018</td><td class='preformatted'>Код страны: 460
+Код изготовителя: 700952
+Код товара: 001
+Контрольное число: 8
 </td></tr>
-<tr><td>2</td><td>Sales</td><td class='preformatted'>Код отдела Sales равен 80
-0 Имя: 'Eleni'
-Фамилия: 'Zlotkey'
-Телефонный номер: '011.44.1344.429018'
-1 Имя: 'Ellen'
-Фамилия: 'Abel'
-Телефонный номер: '011.44.1644.429267'
-2 Имя: 'Jonathon'
-Фамилия: 'Taylor'
-Телефонный номер: '011.44.1644.429265'
+<tr><td>2</td><td>9785750200641</td><td class='preformatted'>Код страны: 978
+Код изготовителя: 575020
+Код товара: 064
+Контрольное число: 1
 </td></tr>
-<tr><td>3</td><td>Military</td><td class='preformatted'>Отдел с наименованием Military не найден
+<tr><td>3</td><td>9785964300694</td><td class='preformatted'>Код страны: 978
+Код изготовителя: 596430
+Код товара: 069
+Контрольное число: 4
 </td></tr>
-<tr><td>4</td><td>Cleaning</td><td class='preformatted'>Код отдела Cleaning равен 200
-В данном отделе отсутвуют сотрудники
+<tr><td>4</td><td>123456789012</td><td class='preformatted'>Некорректная длина штрих-кода
+</td></tr>
+<tr><td>5</td><td>12345678901234567890</td><td class='preformatted'>Некорректная длина штрих-кода
 </td></tr>
 </table>
 </div>
-<div id='task1761' class='task_block'>
-<div class='task_id'>1761</div>
+<div id='task5923' class='task_block'>
+<div class='task_id'>5923</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Первая строка исходного файла содержит наименование агрегатной функции (functionName). Затем идет пустая строка. Остальные строки файла содержат целые числа, написаные в столбик без дополнительного оформления. Количество чисел в файле заранее неизвестно. Вычислить результат агрегатной функции.
+Дана фиксированная строка "abcdefwxyz". Пользователь вводит два целых числа CA и CB. Удалить из исходной строчки CB штук символов, начиная с позиции CA. Вывести результат на экран. Один из вариантов решения - выполнить конкатенацию фрагментов от 0 до CA и от CB до конца строки.
 </div>
-<ol start='1'><li>sum - сумма</li><li>avg - среднее арифметическое</li><li>max - максимальное</li><li>min - минимальное</li></ol><div class='task_desc'>
-Результат - целое число с округлением вниз. Ответ вывести по шаблону:
-</div>
-<div class='check_single preformatted'>$functionName
-------------
-$result</div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (command)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task1761/test1.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test1.txt</a></td><td class='preformatted'>sum
-------------
-10026
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>CA</th><th>CB</th></tr>
+<tr>
+<td>1</td><td>5</td><td>3</td><td class='preformatted'>abcdeyz
 </td></tr>
-<tr><td>2</td><td><a href="files/task1761/test2.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test2.txt</a></td><td class='preformatted'>avg
-------------
-2005
+<tr>
+<td>2</td><td>6</td><td>0</td><td class='preformatted'>abcdefwxyz
 </td></tr>
-<tr><td>3</td><td><a href="files/task1761/test3.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test3.txt</a></td><td class='preformatted'>max
-------------
-10000
+<tr>
+<td>3</td><td>0</td><td>7</td><td class='preformatted'>xyz
 </td></tr>
-<tr><td>4</td><td><a href="files/task1761/test4.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test4.txt</a></td><td class='preformatted'>min
-------------
--20
+<tr>
+<td>4</td><td>-1</td><td>1</td><td class='preformatted'>Значение CA должно быть в интервале [0, длина строки)
 </td></tr>
-<tr><td>5</td><td><a href="files/task1761/test5.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test5.txt</a></td><td class='preformatted'>Файл не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task1761\test5.txt
+<tr>
+<td>5</td><td>9</td><td>3</td><td class='preformatted'>Сумма значений CA и CB должна быть меньше длины строки
 </td></tr>
-<tr><td>6</td><td><a href="files/task1761/test6.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test6.txt</a></td><td class='preformatted'>Неизвестная функция: 10000
-</td></tr>
-<tr><td>7</td><td><a href="files/task1761/test7.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test7.txt</a></td><td class='preformatted'>Неизвестная функция: 
-</td></tr>
-<tr><td>8</td><td><a href="files/task1761/test8.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test8.txt</a></td><td class='preformatted'>После имени функции должна идти пустая строка.
-</td></tr>
-<tr><td>9</td><td><a href="files/task1761/test9.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test9.txt</a></td><td class='preformatted'>Отсутствуют данные для вычислений
-</td></tr>
-<tr><td>10</td><td><a href="files/task1761/test10.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test10.txt</a></td><td class='preformatted'>min
-------------
-9
-</td></tr>
-<tr><td>11</td><td><a href="files/task1761/test11.txt" target="_blank">открыть в новой вкладке<br>files/task1761/test11.txt</a></td><td class='preformatted'>Неизвестная функция: count
+<tr>
+<td>6</td><td>5</td><td>-2</td><td class='preformatted'>Значение CB должно быть неотрицательно
 </td></tr>
 </table>
 </div>
-<div id='task4477' class='task_block'>
-<div class='task_id'>4477</div>
+<div id='task8543' class='task_block'>
+<div class='task_id'>8543</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Файл с исходными данными содержит открывающие '{' и закрывающие '}' фигурные скобки. На каждой строке находится только одна скобка. Если в строке содержится что-то другое, нужно вывести сообщение об ошибке. Нужно определить максимальную глубину вложенности, вывести подробный ход решения.
+Пользователь вводит дату в формате hh:mm dd.MM.yyyy, где
+</div>
+<ol start='1'><li>hh - номер часа в дне в 24 часовом формате</li><li>mm - номер минуты в часу</li><li>dd - номер дня в месяце</li><li>MM - номер месяца в году</li><li>yyyy - номер года</li></ol><div class='task_desc'>
+Извлечь из строки все фрагменты даты и подробно описать что означает дата. Используйте методы indexOf и substring.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task4477/test1.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test1.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
-Закрылись скобки.
+<tr><th>Номер теста</th><th>Исходные данные (datetime)</th><th>Результат</th></tr>
+<tr><td>1</td><td>19:39 16.11.2016</td><td class='preformatted'>Минута 39
+Час 19
+День 16
+Месяц 11
+Год 2016
 </td></tr>
-<tr><td>2</td><td><a href="files/task4477/test2.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test2.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
-Закрылись скобки.
+<tr><td>2</td><td>0:0 1.1.1970</td><td class='preformatted'>Минута 0
+Час 0
+День 1
+Месяц 1
+Год 1970
 </td></tr>
-<tr><td>3</td><td><a href="files/task4477/test3.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test3.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
-Закрылись скобки.
-Скобки открылись.
- Текущая вложенность 1 не больше максимальной 1
-Закрылись скобки.
+<tr><td>3</td><td>19:23 14.4.2023</td><td class='preformatted'>Минута 23
+Час 19
+День 14
+Месяц 4
+Год 2023
 </td></tr>
-<tr><td>4</td><td><a href="files/task4477/test4.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test4.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
-Закрылись скобки.
-Скобки открылись.
- Текущая вложенность 1 не больше максимальной 2
-Закрылись скобки.
+<tr><td>4</td><td>14:39 9.10.2015</td><td class='preformatted'>Минута 39
+Час 14
+День 9
+Месяц 10
+Год 2015
 </td></tr>
-<tr><td>5</td><td><a href="files/task4477/test5.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test5.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
-Закрылись скобки.
-Скобки открылись.
- Текущая вложенность 1 не больше максимальной 1
-Закрылись скобки.
-Скобки открылись.
- Текущая вложенность 1 не больше максимальной 1
-Закрылись скобки.
-</td></tr>
-<tr><td>6</td><td><a href="files/task4477/test6.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test6.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
-  Скобки открылись.
-   Текущая вложенность 3 больше максимальной 2
-  Закрылись скобки.
- Закрылись скобки.
-Закрылись скобки.
-</td></tr>
-<tr><td>7</td><td><a href="files/task4477/test7.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test7.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
- Скобки открылись.
-  Текущая вложенность 2 не больше максимальной 2
- Закрылись скобки.
-Закрылись скобки.
-</td></tr>
-<tr><td>8</td><td><a href="files/task4477/test9.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test9.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
-Закрылись скобки.
-Неожиданная закрывающая скобка
-</td></tr>
-<tr><td>9</td><td><a href="files/task4477/test10.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test10.txt</a></td><td class='preformatted'>Неожиданный фрагмент '{}'
-</td></tr>
-<tr><td>10</td><td><a href="files/task4477/test11.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test11.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
-Закрылись скобки.
-Скобки открылись.
- Текущая вложенность 1 не больше максимальной 2
-Неожиданный конец файла
-</td></tr>
-<tr><td>11</td><td><a href="files/task4477/test12.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test12.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
-  Скобки открылись.
-   Текущая вложенность 3 больше максимальной 2
-  Закрылись скобки.
- Закрылись скобки.
- Скобки открылись.
-  Текущая вложенность 2 не больше максимальной 3
-  Скобки открылись.
-   Текущая вложенность 3 не больше максимальной 3
-  Закрылись скобки.
- Закрылись скобки.
-Закрылись скобки.
-Неожиданная закрывающая скобка
-</td></tr>
-<tr><td>12</td><td><a href="files/task4477/test13.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test13.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
-  Скобки открылись.
-   Текущая вложенность 3 больше максимальной 2
-   Скобки открылись.
-    Текущая вложенность 4 больше максимальной 3
-   Закрылись скобки.
-   Скобки открылись.
-    Текущая вложенность 4 не больше максимальной 4
-   Закрылись скобки.
-  Закрылись скобки.
-  Скобки открылись.
-   Текущая вложенность 3 не больше максимальной 4
-   Скобки открылись.
-    Текущая вложенность 4 не больше максимальной 4
-   Закрылись скобки.
-   Скобки открылись.
-    Текущая вложенность 4 не больше максимальной 4
-    Скобки открылись.
-     Текущая вложенность 5 больше максимальной 4
-    Закрылись скобки.
-   Закрылись скобки.
-   Скобки открылись.
-    Текущая вложенность 4 не больше максимальной 5
-   Закрылись скобки.
-  Закрылись скобки.
- Закрылись скобки.
- Скобки открылись.
-  Текущая вложенность 2 не больше максимальной 5
-  Скобки открылись.
-   Текущая вложенность 3 не больше максимальной 5
-  Закрылись скобки.
-  Скобки открылись.
-   Текущая вложенность 3 не больше максимальной 5
-  Закрылись скобки.
- Закрылись скобки.
-Закрылись скобки.
-</td></tr>
-<tr><td>13</td><td><a href="files/task4477/test14.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test14.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
-Неожиданный конец файла
-</td></tr>
-<tr><td>14</td><td><a href="files/task4477/test15.txt" target="_blank">открыть в новой вкладке<br>files/task4477/test15.txt</a></td><td class='preformatted'>Скобки открылись.
- Текущая вложенность 1 больше максимальной 0
- Скобки открылись.
-  Текущая вложенность 2 больше максимальной 1
- Закрылись скобки.
-Закрылись скобки.
-Неожиданная закрывающая скобка
+<tr><td>5</td><td>0:51 23.4.2016</td><td class='preformatted'>Минута 51
+Час 0
+День 23
+Месяц 4
+Год 2016
 </td></tr>
 </table>
 </div>
-<div id='task6648' class='task_block'>
-<div class='task_id'>6648</div>
+<div id='task4265' class='task_block'>
+<div class='task_id'>4265</div>
 <h3>Задача</h3>
-<h4>Смоделируйте работу стека без ограничения по количеству хранимых элементов</h4>
 <div class='task_desc'>
-В файле записаны слова 'push' и 'pop'. На следующей строке за 'push' находится . Это значение нужно записать в массив. Самое первое значение записывается на индекс 0. Изначальный размер массива равен 10. С каждым введенным элементом, индекс записи увеличивается на 1. Если пользователь ввел 'pop', то индекс записи уменьшается на 1. При попытке записи элемента на индекс, отсутствующий в массиве, нужно создать новый массив вдвое большего размера, переписать элементы из старого в новый, и далее использовать новый массив для записи.
+Пользователь вводит строчку. Если она начинается с символа "s", то нужно сделать все символы строчными (преобразовать в нижний регистр). Если начинается с "U", то нужно сделать все символы заглавными (преобразовать в верхний регистр). Иначе - ничего не делать. Вывести результат на экран. Примените метод toUpperCase <a href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toUpperCase--' target='_blank'>(открыть справку в новой вкладке)</a>. и toLowerCase <a href='https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toLowerCase--' target='_blank'>(открыть справку в новой вкладке)</a>
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (filename)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task6648/test1.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test1.txt</a></td><td class='preformatted'>Размер итогового массива равен 10
-В нем находится 0 значений.
+<tr><th>Номер теста</th><th>Исходные данные (string)</th><th>Результат</th></tr>
+<tr><td>1</td><td>sABCDU</td><td class='preformatted'>Индекс буквы s равен 0. Значит всю строку нужно сделать строчной.
+sabcdu
 </td></tr>
-<tr><td>2</td><td><a href="files/task6648/test2.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test2.txt</a></td><td class='preformatted'>Размер итогового массива равен 10
-В нем находится 3 значений.
-a d f </td></tr>
-<tr><td>3</td><td><a href="files/task6648/test3.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test3.txt</a></td><td class='preformatted'>Размер итогового массива равен 10
-В нем находится 5 значений.
-qa ws ed rf uj </td></tr>
-<tr><td>4</td><td><a href="files/task6648/test4.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test4.txt</a></td><td class='preformatted'>ПЕРЕПОЛНЕНИЕ. Размер нового массива 20
-Размер итогового массива равен 20
-В нем находится 2 значений.
-853 187 </td></tr>
-<tr><td>5</td><td><a href="files/task6648/test5.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test5.txt</a></td><td class='preformatted'>Файл пуст C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6648\test5.txt
+<tr><td>2</td><td>Uxyzs</td><td class='preformatted'>Индекс буквы U равен 0. Значит всю строку нужно сделать заглавной.
+UXYZS
 </td></tr>
-<tr><td>6</td><td><a href="files/task6648/test6.txt" target="_blank">открыть в новой вкладке<br>files/task6648/test6.txt</a></td><td class='preformatted'>ПЕРЕПОЛНЕНИЕ. Размер нового массива 20
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 40
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 80
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 160
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 320
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 640
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 1280
-ПЕРЕПОЛНЕНИЕ. Размер нового массива 2560
-Размер итогового массива равен 2560
-В нем находится 1988 значений.
-456 515 131 202 410 889 656 667 790 924 278 906 785 390 937 394 528 984 690 490 414 828 354 653 124 653 336 384 798 700 187 862 827 194 802 738 672 573 761 826 583 830 874 339 986 733 817 521 668 569 540 721 522 382 688 851 632 694 317 875 211 918 103 598 266 236 873 340 936 572 123 475 697 878 873 155 944 991 994 476 244 461 840 271 868 973 858 697 976 806 635 756 531 295 966 779 388 426 508 485 968 834 737 576 390 465 862 761 422 595 155 413 315 208 539 159 284 910 599 820 135 673 676 540 417 399 315 335 985 343 724 103 995 694 430 384 786 857 360 751 116 129 445 856 591 588 321 638 348 580 454 291 488 755 210 790 834 654 792 675 702 753 890 879 257 859 145 563 225 449 780 351 573 320 351 141 385 794 849 322 377 901 986 213 715 571 885 764 385 654 470 791 173 934 895 901 358 941 294 511 479 643 665 836 500 248 776 785 834 835 941 487 598 769 200 483 401 179 627 824 501 808 157 887 333 166 472 516 762 826 258 557 372 987 524 798 488 923 183 529 810 688 738 876 826 393 755 629 465 529 271 839 477 852 709 276 951 781 737 676 115 737 918 296 927 374 770 768 884 269 131 239 216 173 268 596 378 758 735 610 772 638 386 943 640 736 797 174 132 554 342 263 899 615 290 990 135 624 428 948 300 197 532 212 236 454 967 506 154 416 422 286 301 974 127 852 351 339 241 407 659 638 336 290 523 726 590 731 951 703 358 320 671 387 866 862 637 796 690 619 306 425 341 977 981 942 194 692 853 666 833 429 537 973 416 341 295 625 140 921 651 286 978 206 613 527 752 345 117 572 829 963 148 957 316 568 281 230 554 714 525 870 244 337 362 480 210 237 660 176 408 761 357 355 447 283 170 104 657 379 376 481 110 990 154 888 417 369 478 395 877 108 459 483 174 259 622 312 582 803 635 490 199 179 929 345 996 870 152 917 122 479 848 551 902 577 807 139 108 129 698 559 520 177 527 263 851 355 750 735 976 620 906 835 295 447 812 940 129 660 329 400 637 757 282 890 376 916 350 746 279 723 180 835 287 551 532 660 216 493 227 511 183 190 630 570 562 538 487 787 701 850 994 775 502 505 517 289 243 225 989 735 848 281 512 135 524 812 930 843 152 388 223 817 515 932 636 660 461 717 203 730 640 166 418 108 995 769 402 227 196 469 618 444 649 568 175 707 372 979 933 228 757 611 496 190 808 126 875 355 766 658 347 748 862 886 224 654 912 266 205 139 257 660 972 925 801 321 741 291 904 899 270 495 786 907 119 365 616 417 642 208 732 516 996 507 161 824 634 348 984 427 687 400 182 192 244 483 837 508 165 563 539 523 455 594 849 503 559 276 458 473 262 600 197 885 790 497 701 283 285 857 543 251 143 451 816 527 557 475 205 833 202 846 689 926 826 216 381 325 416 753 920 393 907 696 923 408 394 268 175 621 356 317 194 345 640 681 682 740 275 144 163 591 520 920 948 162 191 341 711 223 817 838 330 268 491 115 608 693 750 253 436 836 354 165 250 393 117 191 369 774 377 946 118 409 959 680 745 752 859 781 231 988 272 685 629 684 757 495 657 332 813 410 586 165 982 862 207 368 436 167 345 268 700 755 473 319 255 645 285 613 330 408 757 789 926 201 543 851 894 393 989 600 609 193 833 219 344 741 231 423 834 411 240 214 391 448 751 274 976 321 383 709 673 336 372 693 460 845 593 701 763 260 949 578 403 294 707 778 872 501 822 722 118 295 288 593 537 629 118 557 170 973 136 567 833 960 824 420 530 820 569 637 258 223 775 627 889 179 883 189 335 720 716 546 323 779 751 244 277 432 478 461 614 204 657 760 545 314 329 790 796 673 496 845 930 705 825 398 407 695 860 658 326 113 593 309 297 381 472 182 410 473 237 411 545 627 113 507 578 410 987 192 153 575 330 649 535 607 905 782 627 178 135 930 581 333 917 607 157 937 517 933 519 879 585 474 298 605 975 776 318 477 718 421 538 346 529 646 618 415 726 932 251 116 161 280 512 536 873 690 947 476 555 353 128 991 894 690 725 585 441 438 656 537 306 516 208 561 206 221 971 597 941 725 673 512 360 154 928 949 475 458 850 719 136 965 120 571 476 796 615 591 474 924 394 561 133 400 867 372 940 608 820 212 229 359 337 609 368 229 286 267 183 438 215 529 822 820 370 771 462 127 792 248 604 140 572 202 245 239 784 114 902 422 153 280 338 423 458 297 470 555 608 914 601 978 631 986 526 777 773 493 192 725 397 916 457 137 256 863 567 591 574 723 745 156 273 788 684 172 331 506 161 181 737 734 131 605 844 458 811 547 925 896 962 832 712 239 915 768 163 616 520 594 831 140 574 894 512 554 423 996 959 705 649 417 835 477 117 357 432 312 382 458 724 690 932 536 235 902 874 652 446 739 409 106 452 258 213 985 258 684 353 916 207 694 827 214 356 132 817 182 984 960 753 653 324 708 229 959 791 116 295 265 900 583 620 815 217 661 139 828 720 425 682 106 686 152 197 141 869 874 857 855 350 566 208 571 539 555 627 353 520 269 472 908 122 322 500 789 354 158 196 972 754 653 269 442 598 517 963 936 727 328 585 399 973 998 485 855 790 927 553 812 644 519 906 803 937 333 657 115 820 556 959 547 313 505 677 964 108 421 581 873 416 394 462 971 411 866 368 788 770 357 280 876 649 989 769 765 248 357 467 697 447 306 220 738 621 524 555 997 501 669 887 379 996 590 921 361 823 552 962 321 241 148 997 679 319 281 857 820 379 563 380 658 143 451 128 793 736 823 245 946 689 499 553 342 959 252 112 472 814 248 728 402 138 162 427 969 437 352 133 312 380 247 927 306 805 731 719 621 648 666 745 318 835 366 940 423 433 604 832 173 928 355 655 636 524 365 340 393 373 100 384 746 145 892 420 751 655 277 295 654 741 573 963 259 781 537 197 547 790 752 271 524 554 107 702 517 637 449 709 489 230 866 184 863 565 280 778 950 210 410 915 679 257 730 148 442 579 958 438 339 463 709 409 550 562 896 231 324 272 389 662 901 180 180 405 667 699 257 541 729 836 795 214 145 784 340 895 568 511 989 180 371 978 746 297 869 423 271 919 822 957 219 618 892 740 577 256 671 858 527 674 556 345 920 168 759 530 581 525 289 153 100 289 871 976 880 162 360 159 766 458 905 633 555 937 719 801 306 150 235 697 412 254 550 381 856 799 162 791 656 220 659 273 877 893 743 340 933 885 883 975 889 742 614 497 453 443 905 497 812 886 479 294 317 359 322 446 356 664 975 490 730 469 361 547 242 175 621 209 808 819 346 202 488 352 786 255 518 921 608 575 952 328 622 384 526 794 561 420 494 823 841 211 492 771 347 231 281 639 964 921 880 530 109 884 131 567 858 187 889 791 595 608 388 731 277 317 649 648 536 946 389 361 968 138 858 937 512 394 767 685 138 585 816 457 270 777 607 710 704 723 559 592 533 714 231 949 308 969 978 710 692 497 733 476 310 372 829 711 938 824 812 606 133 898 765 122 570 687 722 836 292 421 254 928 706 132 861 383 878 450 569 249 249 856 123 411 138 950 713 808 260 717 150 598 563 131 167 257 207 514 370 408 796 586 410 614 307 137 682 206 484 962 318 997 891 293 114 543 665 225 855 501 788 402 430 161 954 626 483 791 871 888 787 776 195 895 899 617 297 345 242 587 770 117 225 861 604 810 768 466 719 218 253 960 213 305 304 657 601 979 827 402 208 428 132 290 319 269 817 937 665 355 294 661 620 921 757 106 863 104 886 599 369 339 883 845 785 559 996 824 383 781 271 796 157 903 130 822 368 336 399 882 529 131 187 995 653 199 737 600 163 130 562 464 582 626 386 895 523 906 102 244 457 805 824 131 383 710 132 743 183 611 341 178 306 272 695 787 222 936 481 877 343 226 713 793 838 529 740 719 953 905 656 683 519 197 823 695 317 434 651 976 470 829 863 243 160 983 517 143 271 129 418 508 519 558 593 573 438 585 943 356 345 138 914 955 293 926 285 646 307 133 158 833 729 535 447 334 300 523 780 846 540 512 792 811 642 165 951 996 327 246 374 327 776 410 451 984 112 818 415 764 857 211 465 732 991 933 243 762 143 610 496 750 711 661 120 978 467 838 178 345 585 983 252 380 766 590 903 746 234 536 956 970 105 129 282 805 963 582 391 901 483 559 218 169 403 194 407 613 286 160 463 271 734 912 843 349 994 708 456 486 553 998 929 737 463 965 452 140 905 381 297 193 377 585 161 539 289 673 356 429 207 469 691 401 392 582 205 522 168 142 394 742 282 449 761 277 541 690 329 570 652 854 711 113 456 828 100 344 244 315 764 365 285 663 221 815 838 602 683 932 288 996 615 831 899 372 635 337 213 379 310 960 482 472 374 558 143 403 453 289 324 852 340 763 707 904 720 773 835 </td></tr>
+<tr><td>3</td><td>s</td><td class='preformatted'>Индекс буквы s равен 0. Значит всю строку нужно сделать строчной.
+s
+</td></tr>
+<tr><td>4</td><td>F123</td><td class='preformatted'></td></tr>
+<tr><td>5</td><td>Sopqr</td><td class='preformatted'></td></tr>
 </table>
 </div>
-Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div id='task2166' class='task_block'>
+<div class='task_id'>2166</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана фиксированная строка "abcdacadbacdaabaadc". Пользователь вводит комбинацию из двух символов. В исходной строке заменить эту комбинацию (подстроку) на пробелы. Воспользуйтесь методом replace. Найдите его в документации. Первый аргумент - старое значение. Второй аргумент - новое значение.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (substring)</th><th>Результат</th></tr>
+<tr><td>1</td><td>cd</td><td class='preformatted'>ab acadba aabaadc
+</td></tr>
+<tr><td>2</td><td>aa</td><td class='preformatted'>abcdacadbacd b dc
+</td></tr>
+<tr><td>3</td><td>xy</td><td class='preformatted'>abcdacadbacdaabaadc
+</td></tr>
+<tr><td>4</td><td>abc</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
+ dacadbacdaabaadc
+</td></tr>
+<tr><td>5</td><td>f</td><td class='preformatted'>Вводимая строка должна содержать ровно 2 символа
+abcdacadbacdaabaadc
+</td></tr>
+</table>
+</div>
+<div id='task4996' class='task_block'>
+<div class='task_id'>4996</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит сообщение. Нужно зашифровать его азбукой Морзе. Между буквами нужно поставить пробел. Пробелы не кодируются. Для шифровки создайте два массива. Один массив содержит   Любая буква не из списка превращается в вопросительный знак.
+</div>
+<div class='task_desc'>
+<table class="check_values"><tr><td></td><td>?</td><td>..--..</td></tr><tr><td></td><td>А</td><td>.-</td></tr><tr><td></td><td>Б</td><td>-...</td></tr><tr><td></td><td>В</td><td>.--</td></tr><tr><td></td><td>Г</td><td>--.</td></tr><tr><td></td><td>Д</td><td>-..</td></tr><tr><td></td><td>Е</td><td>.</td></tr><tr><td></td><td>Ж</td><td>...-</td></tr><tr><td></td><td>З</td><td>--..</td></tr><tr><td></td><td>И</td><td>..</td></tr><tr><td></td><td>Й</td><td>.---</td></tr><tr><td></td><td>К</td><td>-.-</td></tr><tr><td></td><td>Л</td><td>.-..</td></tr><tr><td></td><td>М</td><td>--</td></tr><tr><td></td><td>Н</td><td>-.</td></tr><tr><td></td><td>О</td><td>---</td></tr><tr><td></td><td>П</td><td>.--.</td></tr><tr><td></td><td>Р</td><td>.-.</td></tr><tr><td></td><td>С</td><td>...</td></tr><tr><td></td><td>Т</td><td>-</td></tr><tr><td></td><td>У</td><td>..-</td></tr><tr><td></td><td>Ф</td><td>..-.</td></tr><tr><td></td><td>Х</td><td>....</td></tr><tr><td></td><td>Ц</td><td>-.-.</td></tr><tr><td></td><td>Ч</td><td>---.</td></tr><tr><td></td><td>Ш</td><td>----</td></tr><tr><td></td><td>Щ</td><td>--.-</td></tr><tr><td></td><td>Ъ</td><td>--.--</td></tr><tr><td></td><td>Ы</td><td>-.--</td></tr><tr><td></td><td>Ь</td><td>..-..</td></tr><tr><td></td><td>Э</td><td>..-..</td></tr><tr><td></td><td>Ю</td><td>..--</td></tr><tr><td></td><td>Я</td><td>.-.-</td></tr><tr><td></td><td>1</td><td>.----</td></tr><tr><td></td><td>2</td><td>..---</td></tr><tr><td></td><td>3</td><td>...--</td></tr><tr><td></td><td>4</td><td>....-</td></tr><tr><td></td><td>5</td><td>.....</td></tr><tr><td></td><td>6</td><td>-....</td></tr><tr><td></td><td>7</td><td>--...</td></tr><tr><td></td><td>8</td><td>---..</td></tr><tr><td></td><td>9</td><td>----.</td></tr><tr><td></td><td>0</td><td>-----</td></tr></table>
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (message)</th><th>Результат</th></tr>
+<tr><td>1</td><td>добрый день</td><td class='preformatted'>-.. --- -... .-. -.-- .--- -.. . -. ..-.. </td></tr>
+<tr><td>2</td><td>передавайте медленнее</td><td class='preformatted'>.--. . .-. . -.. .- .-- .- .--- - . -- . -.. .-.. . -. -. . . </td></tr>
+<tr><td>3</td><td>я ничего не понимаю</td><td class='preformatted'>.-.- -. .. ---. . --. --- -. . .--. --- -. .. -- .- ..-- </td></tr>
+<tr><td>4</td><td>помогите</td><td class='preformatted'>.--. --- -- --- --. .. - . </td></tr>
+<tr><td>5</td><td>на нас едет Sturmpanzerwagen</td><td class='preformatted'>-. .- -. .- ... . -.. . - ..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+..--..
+</td></tr>
+<tr><td>6</td><td>координаты цели 13 и 90</td><td class='preformatted'>-.- --- --- .-. -.. .. -. .- - -.-- -.-. . .-.. .. .---- ...-- .. ----. ----- </td></tr>
+<tr><td>7</td><td>промах</td><td class='preformatted'>.--. .-. --- -- .- .... </td></tr>
+<tr><td>8</td><td>попал</td><td class='preformatted'>.--. --- .--. .- .-.. </td></tr>
+<tr><td>9</td><td>конец связи</td><td class='preformatted'>-.- --- -. . -.-. ... .-- .-.- --.. .. </td></tr>
+</table>
+</div>
+<div id="task9925" class="task_block empty_on_print">
+	<div class="task_id">9925</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит несколько слов в строчку через запятую. Нужно определить количество введенных слов.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>один, два, три, четыре, пять</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>янв,фев,март</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>один</td>
+			<td>1</td>
+		</tr>
+	</table>
+</div><div id="task3657" class="task_block empty_on_print">
+	<div class="task_id">3657</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Дата фиксированная строчка. Пользователь вводит символ. Нужно вывести все индексы, на которых встречается этот символ.</div>
+	<div class="check_single" style="word-wrap:break-word;">jijjbjjcidihddbjbcjdjhjdjijjahahdhjcfjcghcjgjgbjdcijibgjbajhdbjhjacgbdijjbdjdjhjigjjgigjahbjjihgiccaaijjajjjijjiiidfgfhgbjjdjajjfhdjajffjhbjghjijabfihbgjjibdjbcgjhjjjbdjibjhjccjjjfjicjjjdjdjjjfjhjhjffjjfbfhhfdhjdjibdjgadcajdjdajhjcijghgijjgchdjadjjdgfbibjjaaijfjcjgjdafcjbhabiggigdccjccjghjadaacffjajicfdijfacjcdfjhhigbjhhhjcbhhfcicbadjgjjddbhhfjfhgjjbbgijijcjgjjccdjifcjjcgfjjhcdhcabggfiabchjjfbbdbjjjgfcdiadcfffjjgbdjjdahhjjaijjdjfddhahjabaacdhahafghjaajchjcdjaihijjdcajhdigiaafhjiijgjfhdjijigjchbhdabacijcajjhfjfgjahffjbahfjjdjgiiahjajjdjfggihajjgjffgjjdhajjjjhcjdjbgjjdjbjjaadhdfhdijaijhaijfhibdadibjcjdfbjigjcjhaijfghbfcjfjagchjhcadjbdbbjhjgdhbjjjfjihchjahgjajgaficjjfjjdjhjjdjajaadgfbdccgjhhajicjdahcjjajjgjjjijbijigbjbaihjgiahjfhjbjjajbjcfcjcajjdjcghicdjdjgbcjijfcacjccjijjffdjigjjhjfcdhbbjhgjfhjgajjgjhdiachhjjjdajjidgbigicjdbjjhdgjihdjcjgijjdgfjgjaaghjjgddjhcfddaajjbjbiahijdajjjbfaachjgidgcjjahfdhcabdfjhjjaifhjjbbgjchjicjjcajhbbcjbgjjjabhdgjcggajhhddbgajjfjajfcccifaibagjcbfjaihdhhbdfijjf
+</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a</td>
+			<td>28 30 57 65 88 99 100 104 125 132 145 218 221 226 244 256 257 267 273 290 292 293 298 307 333 382 388 407 421 426 436 439 441 442 446 448 453 454 462 470 477 478 501 503 508 517 523 533 536 546 558 577 578 587 591 599 616 628 635 659 663 666 682 684 685 697 703 708 725 731 740 749 771 804 812 820 856 857 871 872 879 884 890 891 902 908 916 934 946 955 963 968 976 979 986</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>b</td>
+			<td>4 14 16 46 53 56 61 68 73 90 120 138 146 150 155 158 166 170 203 214 251 253 271 274 318 325 332 341 351 352 383 389 395 396 398 416 440 498 502 522 568 574 597 602 608 622 638 640 641 648 689 717 722 724 737 742 764 794 795 826 833 875 877 888 909 922 923 937 938 941 947 961 978 983 992</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>j</td>
+			<td>0 2 3 5 6 15 18 20 22 24 26 27 34 37 42 44 47 51 55 58 62 64 71 72 75 77 79 82 83 87 91 92 102 103 105 106 107 109 110 121 122 124 126 127 131 133 136 139 142 144 152 153 157 161 163 164 165 168 171 173 176 177 178 180 183 184 185 187 189 190 191 193 195 197 200 201 210 212 216 222 224 227 229 232 237 238 243 246 247 254 255 259 261 263 265 270 283 286 289 297 299 305 309 313 319 323 335 337 338 345 349 350 355 357 359 361 362 366 370 371 375 376 392 393 399 400 401 413 414 418 419 424 425 428 429 431 438 452 455 458 461 466 467 471 481 484 486 490 492 495 506 509 510 513 516 521 526 527 529 535 537 538 540 547 548 550 554 555 559 560 561 562 565 567 570 571 573 575 576 586 589 593 603 605 609 612 614 618 625 627 632 637 642 644 649 650 651 653 658 662 664 670 671 673 674 676 678 679 681 683 694 698 701 706 707 709 710 712 713 714 716 719 723 728 733 736 738 739 741 743 747 750 751 753 760 762 766 768 773 776 778 779 783 786 787 789 796 799 802 805 806 808 816 817 818 821 822 831 834 835 839 843 845 848 849 853 855 860 861 865 873 874 876 882 885 886 887 894 900 901 912 914 915 920 921 925 928 931 932 935 940 943 944 945 951 956 964 965 967 969 981 985 996 997</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>z</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>xy</td>
+			<td>Нужно ввести ровно один символ</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Нужно ввести ровно один символ</td>
+		</tr>
+	</table>
+</div><div id="task6599" class="task_block empty_on_print">
+	<div class="task_id">6599</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит строку символов, содержащую кавычки. Кавычки отмечают начало и конец фрагментов. Перед каждым символом &quot;[&quot; и &quot;]&quot; в исходном тексте поставить символ &quot;\&quot;. Заменить кавычки в начале фрагмента на символ &quot;[&quot;, а в конце фрагмента на символ &quot;]&quot;.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a</td>
+			<td>a</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"b"</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"c</td>
+			<td>[c</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>d"</td>
+			<td>d[</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"e"e</td>
+			<td>[e]e</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>f"f"f</td>
+			<td>f[f]f</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"abc" "defgh" "i" "jklm"</td>
+			<td>[abc] [defgh] [i] [jklm]</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abc" "def" "ghi" "jk" "lm"</td>
+			<td>abc[ ]def[ ]ghi[ ]jk[ ]lm[</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>"[abc"def] "[ghijklm]"</td>
+			<td>[\[abc]def\] [\[ghijklm\]]</td>
+		</tr>
+	</table>
+</div><div id="task1618" class="task_block empty_on_print">
+	<div class="task_id">1618</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит строку, состояющую из открывающихся и закрывающихся фигурных скобочек. Нужно вывести глубину вложенности для каждой скобочки.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{}</td>
+			<td>11</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{}}</td>
+			<td>1221</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{}}{}</td>
+			<td>122111</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{}{}}</td>
+			<td>122221</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{{{}{}}{{}{{}}{}}}{{}{}}}</td>
+			<td>12344443344455444322333321</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{</td>
+			<td>1 Неожиданный конец строки</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{}</td>
+			<td>122 Неожиданный конец строки</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{}}{</td>
+			<td>12211 Неожиданный конец строки</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{{}}{}{}}{{}{}{}</td>
+			<td>12332222211222222 Неожиданный конец строки</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>}</td>
+			<td>0 Неожиданный символ '}'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{}}</td>
+			<td>110 Неожиданный символ '}'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{{{}{}}}{{}{}}{{}}}</td>
+			<td>1233332112222112210 Неожиданный символ '}'</td>
+		</tr>
+	</table>
+</div><div id="task1703" class="task_block empty_on_print">
+	<div class="task_id">1703</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит условное выражение. Например "x &gt; 3" или "y&lt;=-2". Выражение состоит из трех частей. В центре находится знак сравнения (один из &lt;, &lt;=, &gt;, &gt;=). Слева от него находится переменная (x, y или любая другая буква или слово). Справа находится число - ограничение, с которым проводится сравнение. Между частями выражения может быть 0 и более пробелов. Напечатать на экране словесное описание выражения.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>x&gt;3</td>
+			<td>Значение переменной x больше числа 3</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>r  &gt;=  1000</td>
+			<td>Значение переменной r больше либо равно числу 1000</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>value &lt;=-2</td>
+			<td>Значение переменной value меньше либо равно числу -2</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>y  &lt;  0</td>
+			<td>Значение переменной y меньше числа 0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>x  &lt;  </td>
+			<td>Справа от знака сравнения ожидается ограничение</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>&gt;13</td>
+			<td>Слева от знака сравнения ожидается переменная</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>y    0</td>
+			<td>Отсутствует знак сравнения</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>x+7</td>
+			<td>Отсутствует знак сравнения</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a &lt; b &lt; c</td>
+			<td>В выражении должен быть только один знак сравнения</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>x &lt; xA && x + w &gt; xA</td>
+			<td>В выражении должен быть только один знак сравнения</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>x &gt; y &gt; z</td>
+			<td>В выражении должен быть только один знак сравнения</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>a x &lt; 17</td>
+			<td>Неожиданное выражение "a" слева от переменной "x"</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>y &gt; 19 23</td>
+			<td>Неожиданное выражение "23" справа от ограничения "19"</td>
+		</tr>
+	</table>
+</div><div id="task8887" class="task_block empty_on_print">
+	<div class="task_id">8887</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит вычислимое выражение с вызовом метода. Выражение может содержать несколько вызовов методов. При вызове метода в качестве аргумента другого метода нужно вывести "Вложенные вызовы методов не поддерживаются". Нужно вывести список вызванных методов и их аргументы.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = Math.Sqrt(x);</td>
+			<td class="preformatted">Метод Sqrt был вызван у Math
+В качестве аргумента было передано
+x</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = Math.Pow(a, n);</td>
+			<td class="preformatted">Метод Pow был вызван у Math
+В качестве аргумента было передано
+a
+n</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = String.Format("{0} шт и {1} см", amount, remainder);</td>
+			<td class="preformatted">Метод Format был вызван у String
+В качестве аргумента было передано
+"{0} шт и {1} см"
+amount
+remainder</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">str = Console.ReadLine();</td>
+			<td class="preformatted">Метод ReadLine был вызван у Console
+В качестве аргумента ничего не передавалось</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">Console.WriteLine();</td>
+			<td class="preformatted">Метод WriteLine был вызван у Console
+В качестве аргумента ничего не передавалось</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = 3 * Math.Sin(2*aRad) * Math.Cos(3*bRad);</td>
+			<td class="preformatted">Метод Sin был вызван у Math
+В качестве аргумента было передано
+2*aRad
+Метод Cos был вызван у Math
+В качестве аргумента было передано
+3*bRad.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">r = 3 * Math.Sqrt(61-x);</td>
+			<td class="preformatted">Метод Sqrt был вызван у Math
+В качестве аргумента было передано
+61-x.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">y = x+7;</td>
+			<td class="preformatted">Отсутствует вызов метода</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">last = arr.Length;</td>
+			<td class="preformatted">Отсутствует вызов метода</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">idx = "abcdacadbacdaabaadc".IndexOf("cd";</td>
+			<td class="preformatted">Неожиданный конец строки.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">a = raw.Trim());</td>
+			<td class="preformatted">Неожиданный символ ')'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">answer = -5 * Math.Sqrt(x + Math.Sqrt(y));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">distance = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = Math.Sqrt(Math.Pow(x, 2 + Math.Pow(y, 2));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">result = Math.Sqrt(1-Math.Pow(Math.Sin(xRad), 2)));</td>
+			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
+		</tr>
+	</table>
+</div><div id="task9116" class="task_block empty_on_print">
+	<div class="task_id">9116</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Пользователь вводит строчку с пробелами в кавычках. Нужно убрать кавычки в начале и в конце строки, а также удалить пробелы в начале и в конце строки. Результат вывести на экран.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">"   12345"</td>
+			<td>12345</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">"abcdef    "</td>
+			<td>abcdef</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">"  xyz  "</td>
+			<td>xyz</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">"  a b  "</td>
+			<td>a b</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">" pq"rt "</td>
+			<td>pq"rt</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">asdf"</td>
+			<td>Строка должна начинаться и заканчиваться кавычкой</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">"xyz</td>
+			<td>Строка должна начинаться и заканчиваться кавычкой</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="preformatted">p"w"</td>
+			<td>Строка должна начинаться и заканчиваться кавычкой</td>
+		</tr>
+	</table>
+</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

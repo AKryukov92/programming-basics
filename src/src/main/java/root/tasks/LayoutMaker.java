@@ -1,5 +1,7 @@
 package root.tasks;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -11,6 +13,9 @@ public abstract class LayoutMaker {
     PrintStream writer = System.out;
     private int nextOrderedIndex = 1;
 
+    protected String methodExample() {
+        throw new NotImplementedException();
+    }
     public int getId() {
         String className = this.getClass().getName();
         return Integer.parseInt(className.substring(className.length() - 4));
@@ -104,9 +109,15 @@ public abstract class LayoutMaker {
         appendTaskDescNonEscaped(escapeHtmlSymbols(taskDescription));
     }
 
+    protected String replaceCustomTags(String description){
+        return description
+                .replaceAll("<zoom>","<span class='zoom'>")
+                .replaceAll("</zoom>", "</span>");
+    }
+
     protected void appendTaskDescNonEscaped(String taskDescription) {
         writer.println("<div class='task_desc'>");
-        writer.println(taskDescription);
+        writer.println(replaceCustomTags(taskDescription));
         writer.println("</div>");
     }
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>21 Составные типы данных</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>21 Исключения</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,422 +197,790 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Составные типы данных</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Исключения</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task2686'>1</a><li><a href='#task5789' class='example'>2*</a><li><a href='#task6011'>3</a><li><a href='#task7040'>4</a><li><a href='#task1606'>5</a><li><a href='#task4574'>6</a><li><a href='#task6037'>7</a></ul><ul><li><a href='#task4491'>8</a><li><a href='#task1193'>9</a><li><a href='#task8347'>10</a><li><a href='#task7301' class='example'>11*</a><li><a href='#task2000'>12</a><li><a href='#task3864'>13</a><li><a href='#task4913'>14</a><li><a href='#task6522'>15</a><li><a href='#task8225'>16</a></ul></div><div id='task2686' class='task_block'>
-<div class='task_id'>2686</div>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7740' class='example'>1*</a><li><a href='#task1439'>2</a><li><a href='#task5101'>3</a><li><a href='#task8733'>4</a><li><a href='#task8139'>5</a><li><a href='#task5014'>6</a><li><a href='#task9354' class='example'>7*</a><li><a href='#task5259'>8</a><li><a href='#task9058'>9</a></ul><ul><li><a href='#task9020' class='example'>10*</a><li><a href='#task5871'>11</a><li><a href='#task7799'>12</a><li><a href='#task5170'>13</a><li><a href='#task7891'>14</a><li><a href='#task6882' class='example'>15*</a><li><a href='#task1212'>16</a><li><a href='#task9472'>17</a><li><a href='#task5081'>18</a></ul></div><div id="link_c2_p8.4" class="task_block">
+	<div class="check_single">В данной лабораторной работе внимание уделяется оформлению исключений в изучаемом языке программирования. Однако использование исключений не всегда оправдано. Полезные советы о том, когда лучше использовать механизм исключений, содержатся в главе 8.4 "Исключения" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=215" target="_blank">(открыть в новой вкладке)</a></div>
+</div><div id='task7740' class='task_block'>
+<div class='task_id'>7740</div>
 <h3>Задача</h3>
-<h4>Реализуйте статический метод для печати координат точки на экран</h4>
-<ol start='1'><li>В папке для исходного кода создайте класс Point.</li><li>Объявите у класса Point поля для действительных значений "x" и "y".</li><li>В классе Point реализуйте публичный статический метод print.</li><li>Он принимает в качестве аргумента 1 экземпляр класса Point.</li><li>Метод ничего не возвращает.</li><li>В теле метода напечатайте на экран фразу "Координаты точки: ($x $y)"</li><li>Вместо $x подставьте поле x класса Point. Вместо $y - поле y класса Point.</li></ol><table class='check_values_v2'>
+<ol start='1'><li>В решении Stage2 создайте проект Runner7740 типа "Консольное приложение".</li><li>Решите описанную ниже задачу. Исходные данные пользователь вводит вручную.</li><li>Обработайте потенциальное исключение, которое возникает когда пользователь вводит не числа.</li></ol><div class='task_desc'>
+Вычислить результат по формуле x + 7, где x вводится с клавиатуры
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
+<tr><td>1</td><td>11,13</td><td class='preformatted'>18,1300
+</td></tr>
+<tr><td>2</td><td>-7919</td><td class='preformatted'>-7912,0000
+</td></tr>
+<tr><td>3</td><td>0</td><td class='preformatted'>7,0000
+</td></tr>
+<tr><td>4</td><td>word</td><td class='preformatted'>Не удалось преобразовать строку в число
+</td></tr>
+<tr><td>5</td><td>$14</td><td class='preformatted'>Не удалось преобразовать строку в число
+</td></tr>
+</table>
+<div class='task_desc'>
+Попробуйте решить задачу как раньше и в качестве исходных данных ввести 'word'.
+</div>
+<div class='check_single preformatted'>double x = Double.Parse(value);
+double result = x + 7;
+Console.WriteLine("{0:F4}", result);</div>
+<div class='task_desc'>
+У вас возникнет примерно такая ошибка:
+</div>
+<div class='check_single preformatted'>System.<b>FormatException</b>: Input string was not in a correct format.
+  at System.Number.ThrowOverflowOrFormatException (System.Boolean overflow, System.String overflowResourceKey) [0x0001a] in <de882a77e7c14f8ba5d298093dde82b2>:0 
+  at System.Number.ParseDouble (System.ReadOnlySpan`1[T] value, System.Globalization.NumberStyles styles, System.Globalization.NumberFormatInfo info) [0x0007d] in <de882a77e7c14f8ba5d298093dde82b2>:0 
+  at System.Double.Parse (System.String s) [0x0001a] in <de882a77e7c14f8ba5d298093dde82b2>:0 
+  at HelloWorld.Main () [0x00006] in <06007635d88644c1b15027f9adf16620>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.FormatException: Input string was not in a correct format.
+  at System.Number.ThrowOverflowOrFormatException (System.Boolean overflow, System.String overflowResourceKey) [0x0001a] in <de882a77e7c14f8ba5d298093dde82b2>:0 
+  at System.Number.ParseDouble (System.ReadOnlySpan`1[T] value, System.Globalization.NumberStyles styles, System.Globalization.NumberFormatInfo info) [0x0007d] in <de882a77e7c14f8ba5d298093dde82b2>:0 
+  at System.Double.Parse (System.String s) [0x0001a] in <de882a77e7c14f8ba5d298093dde82b2>:0 </div>
+<div class='task_desc'>
+Чтобы программа корректно обрабатывала такие ошибки, нужно добавить конструкцию try catch как в примере ниже:
+</div>
+<div class='check_single preformatted'>try {//внутри блока try предполагаем, что пользователь ввел число
+    double x = Double.Parse(value);
+    double result = x + 7;
+    Console.WriteLine("{0:F4}", result);
+} catch (FormatException ex) {//Слово FormatException было в первое строке ошибки в варианте программы без try catch
+    //если преобразовать строку в число не получилось, компьютер перейдет в этот блок
+    Console.WriteLine("Не удалось преобразовать строку в число '" + value + "'");
+}</div>
+</div>
+<div id='task1439' class='task_block'>
+<div class='task_id'>1439</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое среди введенных чисел. Фрагменты строк не участвуют в подсчете количества элементов. Сообщить пользователю индекс и значение некорректных элементов.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 7 6 5</td><td class='preformatted'>Количество обработанных чисел 5 их сумма 35.0
+Среднее арифметическое 7,0000</td></tr>
+<tr><td>2</td><td>5 2 11 3 1 3 4 4 4 4</td><td class='preformatted'>Количество обработанных чисел 10 их сумма 41.0
+Среднее арифметическое 4,1000</td></tr>
+<tr><td>3</td><td>9 q 8 w 7 e 6 r 5 t</td><td class='preformatted'>Элемент №1 со значением q не число
+Элемент №3 со значением w не число
+Элемент №5 со значением e не число
+Элемент №7 со значением r не число
+Элемент №9 со значением t не число
+Количество обработанных чисел 5 их сумма 35.0
+Среднее арифметическое 7,0000</td></tr>
+<tr><td>4</td><td>q w e r</td><td class='preformatted'>Элемент №0 со значением q не число
+Элемент №1 со значением w не число
+Элемент №2 со значением e не число
+Элемент №3 со значением r не число
+Количество обработанных чисел 0 их сумма 0.0
+В исходном массиве отсутствовали числа
+</td></tr>
+<tr><td>5</td><td></td><td class='preformatted'>Элемент №0 со значением  не число
+Количество обработанных чисел 0 их сумма 0.0
+В исходном массиве отсутствовали числа
+</td></tr>
+<tr><td>6</td><td>0 0 0 0</td><td class='preformatted'>Количество обработанных чисел 4 их сумма 0.0
+Среднее арифметическое 0,0000</td></tr>
+</table>
+</div>
+<div id='task5101' class='task_block'>
+<div class='task_id'>5101</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Посчитать количество чисел в файле (C), исключая первое число. Проверить, равны ли числа N и C. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
+<tr><td>1</td><td><a href="files/task5101/test1.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test1.txt</a></td><td class='preformatted'>Заявленое количество 5, фактическое количество 6
+</td></tr>
+<tr><td>2</td><td><a href="files/task5101/test2.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test2.txt</a></td><td class='preformatted'>Заявленное и фактическое количество чисел совпадает и равно 0
+</td></tr>
+<tr><td>3</td><td><a href="files/task5101/test3.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test3.txt</a></td><td class='preformatted'>Заявленое количество 2511, фактическое количество 2512
+</td></tr>
+<tr><td>4</td><td><a href="files/task5101/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test4.txt</a></td><td class='preformatted'>Заявленое количество 3, фактическое количество 6
+</td></tr>
+<tr><td>5</td><td><a href="files/task5101/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test5.txt</a></td><td class='preformatted'>Заявленое количество 10, фактическое количество 7
+</td></tr>
+<tr><td>6</td><td><a href="files/task5101/test6.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test6.txt</a></td><td class='preformatted'>Файл пуст
+</td></tr>
+<tr><td>7</td><td><a href="files/task5101/test7.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test7.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5101\test7.txt
+</td></tr>
+<tr><td>8</td><td><a href="files/task5101/test8.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test8.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
+</td></tr>
+<tr><td>9</td><td><a href="files/task5101/test9.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test9.txt</a></td><td class='preformatted'>Заявленое количество 1, фактическое количество 2
+</td></tr>
+</table>
+</div>
+<div id='task8733' class='task_block'>
+<div class='task_id'>8733</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Оно не участвует в вычислениях. Найти среднее арифметическое только тех чисел, значение которых не превышает 20. Данные в файле написаны в столбик без дополнительного оформления.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
+<tr><td>1</td><td><a href="files/task8733/test1.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test1.txt</a></td><td class='preformatted'>Общее количество чисел 0
+Количество чисел 0 их сумма 0.0
+Среднее арифметическое 0</td></tr>
+<tr><td>2</td><td><a href="files/task8733/test2.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test2.txt</a></td><td class='preformatted'>Заявленое количество 10, фактическое количество 11
+</td></tr>
+<tr><td>3</td><td><a href="files/task8733/test3.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test3.txt</a></td><td class='preformatted'>Заявленое количество 564, фактическое количество 565
+</td></tr>
+<tr><td>4</td><td><a href="files/task8733/test4.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test4.txt</a></td><td class='preformatted'>Заявленое количество 373, фактическое количество 375
+</td></tr>
+<tr><td>5</td><td><a href="files/task8733/test5.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test5.txt</a></td><td class='preformatted'>Общее количество чисел 3
+Количество чисел 1 их сумма 12.0
+Среднее арифметическое 12,0000</td></tr>
+<tr><td>6</td><td><a href="files/task8733/test6.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test6.txt</a></td><td class='preformatted'>Заявленое количество 3601, фактическое количество 3596
+</td></tr>
+<tr><td>7</td><td><a href="files/task8733/test7.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test7.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
+</td></tr>
+<tr><td>8</td><td><a href="files/task8733/test8.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test8.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task8733\test8.txt
+</td></tr>
+<tr><td>9</td><td><a href="files/task8733/test9.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test9.txt</a></td><td class='preformatted'>Файл пуст
+</td></tr>
+</table>
+</div>
+<div class="task_block" id="task8139">
+	<div class="task_id">8139</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит целые числа в диапазоне от 1000 до 9999, написаные в столбик без дополнительного оформления.  Количество чисел заранее не известно. Определить, сколько раз встречаются такие числа, в которых есть две одинаковых цифры подряд. Например: 1123, 1223, 1233.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>569</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>253</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Не удается считать число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test5.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test6.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test7.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task8139/test8.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td>Некорректное число</td>
+		</tr>
+	</table>
+</div><div id='task5014' class='task_block'>
+<div class='task_id'>5014</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Файл с исходными данными содержит целые числа, написанные в столбик без дополнительного оформления. Нужно вывести числа из файла в строчку через запятую. Перед первым и после последнего числа запятой быть не должно. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
+<tr><td>1</td><td><a href="files/task5014/test1.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test1.txt</a></td><td class='preformatted'>1, 2, 3, 4, 5</td></tr>
+<tr><td>2</td><td><a href="files/task5014/test2.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test2.txt</a></td><td class='preformatted'>0</td></tr>
+<tr><td>3</td><td><a href="files/task5014/test3.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test3.txt</a></td><td class='preformatted'>Файл пуст
+</td></tr>
+<tr><td>4</td><td><a href="files/task5014/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test4.txt</a></td><td class='preformatted'>-1, -2, -3</td></tr>
+<tr><td>5</td><td><a href="files/task5014/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test5.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5014\test5.txt
+</td></tr>
+<tr><td>6</td><td><a href="files/task5014/test6.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test6.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
+</td></tr>
+</table>
+</div>
+<div id='task9354' class='task_block'>
+<div class='task_id'>9354</div>
+<h3>Задача</h3>
+<h4>Прочитайте условие задачи.</h4>
+<div class='task_desc'>
+Вычислить дискриминант квадратного уравнения по формуле <formula>discriminant = b<sup>2</sup>-4ac</formula>
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>a</th><th>b</th><th>c</th></tr>
+<tr><td>1</td><td>7</td><td>1</td><td>3</td><td class='preformatted'>Дискриминант уравнения y=7,000000x^2+1,000000x+3,000000 равен -83,000000</td></tr>
+<tr><td>2</td><td>7247</td><td>7243</td><td>7229</td><td class='preformatted'>Дискриминант уравнения y=7247,000000x^2+7243,000000x+7229,000000 равен -157093203,000000</td></tr>
+<tr><td>3</td><td>-11</td><td>-13</td><td>-17</td><td class='preformatted'>Дискриминант уравнения y=-11,000000x^2+-13,000000x+-17,000000 равен -579,000000</td></tr>
+<tr><td>4</td><td>0</td><td>1</td><td>3</td><td class='preformatted'>Уравнение y=0,000000x^2+1,000000x+3,000000 не является квадратным</td></tr>
+<tr><td>5</td><td>0</td><td>1000</td><td>2000</td><td class='preformatted'>Уравнение y=0,000000x^2+1000,000000x+2000,000000 не является квадратным</td></tr>
+</table>
+<h4>Реализуйте статический метод с тремя аргументами</h4>
+<ol start='1'><li>Объявите в классе Library публичный статический метод GetDiscriminant.</li><li>Он принимает в качестве аргумента 3 действительных числа.</li><li>Метод возвращает действительное число в качестве результата.</li><li>Если значение аргумента "a" равно 0, то метод должен выбросить исключение ArgumentException.</li></ol><h4>Проверьте корректность работы метода с помощью вспомогательной программы</h4>
+<ol start='5'><li>Создайте проект Runner9354</li><li>В проекте Runner9354 добавьте ссылку на проект CodeProject.</li><li>Добавьте команду using пространства имен из проекта CodeProject.</li><li>В методе Main класса Program вызовите метод GetDiscriminant класса Library.</li><li>Первым аргументом передайте ему значение 7, вторым - значение 1, третьим - значение 3.</li><li>Получите три действительных числа от пользователя и запишите их в переменные a, b, c</li><li>Вызовите метод getDiscriminant класса Library и передайте ему значения a, b, c в качестве аргументов.</li><li>Предусмотрите перехват исключения, которое может выбросить метод.</li><li>Проверьте программу по таблице тестовых и ожидаемых данных.</li></ol></div>
+<div id='task5259' class='task_block'>
+<div class='task_id'>5259</div>
+<h3>Задача</h3>
+<h4>Реализуйте метод для решения задачи <a href="tasks 4.html#task1934" target="_blank">ЛР4#1934(открыть в новой вкладке)</a></h4>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task1934.</li><li>Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.</li><li>Создайте проект Runner1934.</li><li>В проекте Runner1934 добавьте ссылку на проект CodeProject.</li><li>Добавьте команду using пространства имен из проекта CodeProject.</li></ol><h4>Реализуйте метод Main</h4>
+<ol start='7'><li>Выведите сообщение "Начало работы программы".</li><li>Выведите в консоль сообщение "Введите значения A и B".</li><li>Объявите переменные a и b для хранения целых чисел.</li><li>Инициализируйте переменные a и b значениями, полученными из консоли.</li><li>Объявите переменную result для хранения действительных чисел.</li><li>Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.</li><li>Результат вызова метода запишите в переменную result.</li><li>Выведите на экран сообщение "Результат равен " и значение переменной result с точностью 4 знака после запятой.</li><li>Выведите сообщение "Программа завершена успешно".</li><li>В результате запуска проекта Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки "Исходный результат". Возможны отличия в номерах строк и расположении файлов.</li></ol><h4>Проверьте, что метод выбрасывает необработанные исключения</h4>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>A</th><th>B</th></tr>
+<tr><td>1</td><td>5</td><td>-11</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+5
+-11
+Результат равен 43.8748
+Программа завершена успешно</td></tr>
+<tr><td>2</td><td>-3</td><td>-7</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+-3
+-7
+Результат равен -21.0000
+Программа завершена успешно</td></tr>
+<tr><td>3</td><td>13</td><td>15</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+13
+15
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно
+   at CodeProject.Library.Task1934(Int32 a, Int32 b) in E:\Stage2\CodeProject\Library.cs:line 197
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15</td></tr>
+<tr><td>4</td><td>word</td><td>4</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, 
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15</td></tr>
+<tr><td>5</td><td>11</td><td>incorrect</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+11
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options,
+       NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Runner1934.Program.Main(String[] args) in E:\Stage2\Runner1934\Program.cs:line 15</td></tr>
+</table>
+<h4>Обработайте исключения</h4>
+<ol start='17'><li>Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения "Подкоренное выражение должно быть неотрицательно"</li><li>Обработайте FormatException так, чтобы на экран выводилась фраза "Не удалось преобразовать строку в число"</li><li>Стек вызовов не должен выводиться не экран в случае ошибки</li><li>Фраза "Программа завершена успешно" не должна выводиться на экран в случае ошибки</li><li>Фраза "Результат равен" не должна выводиться на экран в случае ошибки</li></ol><h4>Проверьте, что результат работы совпадает с ожидаемым</h4>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>A</th><th>B</th></tr>
+<tr>
+<td>6</td><td>5</td><td>-11</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+Результат равен 43,8748
+Программа завершена успешно
+</td></tr>
+<tr>
+<td>7</td><td>-3</td><td>-7</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+Результат равен -21,0000
+Программа завершена успешно
+</td></tr>
+<tr>
+<td>8</td><td>13</td><td>15</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+Подкоренное выражение должно быть неотрицательно
+</td></tr>
+<tr>
+<td>9</td><td>word</td><td>4</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+Не удалось преобразовать строку в число
+</td></tr>
+<tr>
+<td>10</td><td>11</td><td>incorrect</td><td class='preformatted'>Начало работы программы
+Введите значения A и B
+Не удалось преобразовать строку в число
+</td></tr>
+</table>
+</div>
+<div id='task9058' class='task_block'>
+<div class='task_id'>9058</div>
+<h3>Задача</h3>
+<h4>Реализуйте метод для решения задачи <a href="tasks 4.html#task3943" target="_blank">ЛР4#3943(открыть в новой вкладке)</a></h4>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task3943.</li><li>Метод Task3943 должен возвращать результат решения задачи для корректных значений исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.</li><li>Создайте проект Runner3943.</li><li>В проекте Runner3943 добавьте ссылку на проект CodeProject.</li><li>Добавьте команду using пространства имен из проекта CodeProject.</li></ol><h4>Реализуйте метод Main</h4>
+<ol start='7'><li>Выведите сообщение "Начало работы программы".</li><li>Выведите в консоль сообщение "Введите значения x и y"</li><li>Объявите переменные x и y для хранения целых чисел.</li><li>Инициализируйте переменные x и y значениями, полученными из консоли.</li><li>Объявите переменную result для хранения действительных чисел.</li><li>Вызовите метод Task3943 класса Library и передайте ему x и y в качестве аргументов.</li><li>Результат вызова метода запишите в переменную result.</li><li>Выведите на экран сообщение "Результат равен" и значение переменной result с точностью 4 знака после запятой.</li><li>Выведите сообщение "Конец работы программы".</li></ol><h4>Проверьте, что программа выбрасывает необработанные исключения</h4>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>x</th><th>y</th></tr>
+<tr><td>1</td><td>-5</td><td>81</td><td class='preformatted'>Начало работы программы
+Введите значения x и y
+-5
+81
+Результат равен -10.0000
+Конец работы программы</td></tr>
+<tr><td>2</td><td>13</td><td>36</td><td class='preformatted'>Начало работы программы
+Введите значения x и y
+13
+36
+Результат равен -21,7945
+Конец работы программы</td></tr>
+<tr><td>3</td><td>-20</td><td>36</td><td class='preformatted'>Начало работы программы
+Введите значения x и y
+-20
+36
+Unhandled Exception: System.ArgumentException: Подкоренное выражение должно быть неотрицательно
+   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\Stage2\CodeProject\Library.cs:line 206
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15</td></tr>
+<tr><td>4</td><td>20</td><td>-50</td><td class='preformatted'>Начало работы программы
+Введите значения x и y
+20
+-50
+Unhandled Exception: System.ArgumentException: Значение y должно быть неотрицательным
+   at CodeProject.Library.Task3943(Int32 x, Int32 y) in E:\Stage2\CodeProject\Library.cs:line 210
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15</td></tr>
+<tr><td>5</td><td>word</td><td></td><td class='preformatted'>Начало работы программы
+Введите значения x и y
+word
+Unhandled Exception: System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number,
+      NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at Lab13Task3943.Program.Main(String[] args) in E:\Stage2\Lab13Task3943\Program.cs:line 15</td></tr>
+</table>
+<h4>Обработайте исключения</h4>
+<ol start='16'><li>Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения "Подкоренное выражение должно быть неотрицательно"</li><li>Обработайте FormatException так, чтобы на экран выводилась фраза "Не удалось преобразовать строку в число"</li><li>Стек вызовов не должен выводиться не экран в случае ошибки.</li><li>Фраза "Конец работы программы" должна выводиться на экран как в случае ошибки, так и в случае успешного результата.</li><li>Фраза "Результат равен" не должна выводиться на экран в случае ошибки</li></ol><h4>Проверьте, что результат работы совпадает с ожидаемым</h4>
+<table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
 <th>x</th><th>y</th></tr>
 <tr>
-<td>1</td><td>1</td><td>1</td><td class='preformatted'>Координаты точки: (1.0,1.0)
+<td>6</td><td>-5</td><td>81</td><td class='preformatted'>Начало работы программы
+Результат вычислений -10,0000Конец работы программы
 </td></tr>
 <tr>
-<td>2</td><td>3</td><td>4</td><td class='preformatted'>Координаты точки: (3.0,4.0)
+<td>7</td><td>13</td><td>36</td><td class='preformatted'>Начало работы программы
+Результат вычислений -21,7945Конец работы программы
 </td></tr>
 <tr>
-<td>3</td><td>0</td><td>0</td><td class='preformatted'>Координаты точки: (0.0,0.0)
+<td>8</td><td>-20</td><td>36</td><td class='preformatted'>Начало работы программы
+Подкоренное выражение должно быть неотрицательным
+Конец работы программы
+</td></tr>
+<tr>
+<td>9</td><td>20</td><td>-50</td><td class='preformatted'>Начало работы программы
+Значение y должно быть неотрицательным
+Конец работы программы
+</td></tr>
+<tr>
+<td>10</td><td>word</td><td></td><td class='preformatted'>Не удалось преобразовать строку в число
+Конец работы программы
 </td></tr>
 </table>
 </div>
-<div id='task5789' class='task_block'>
-<div class='task_id'>5789</div>
-<h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 12.html#task1058" target="_blank">ЛР12#1058(открыть в новой вкладке)</a></h4>
-<ol start='1'><li>В папке для исходного кода создайте класс Point.</li><li>В классе Point реализуйте публичный статический метод distanceBetween.</li><li>Он принимает в качестве аргумента 4 действительных числа.</li><li>Метод возвращает действительное число.</li></ol><table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>ax</th><th>ay</th><th>bx</th><th>by</th></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>3</td><td>4</td><td class='preformatted'>Координаты точки (1,1)
-Координаты точки (3,4)
-Расстояние между точками равно 3.605551275463989</td></tr>
-<tr><td>2</td><td>-2</td><td>4</td><td>8</td><td>-10</td><td class='preformatted'>Координаты точки (-2,4)
-Координаты точки (8,-10)
-Расстояние между точками равно 17.204650534085253</td></tr>
-<tr><td>3</td><td>0</td><td>0</td><td>-5</td><td>-7</td><td class='preformatted'>Координаты точки (0,0)
-Координаты точки (-5,-7)
-Расстояние между точками равно 8.602325267042627</td></tr>
-<tr><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td class='preformatted'>Координаты точки (0,0)
-Координаты точки (0,0)
-Расстояние между точками равно 0.0</td></tr>
-<tr><td>5</td><td>-1</td><td>-3</td><td>2</td><td>9</td><td class='preformatted'>Координаты точки (-1,-3)
-Координаты точки (2,9)
-Расстояние между точками равно 12.36931687685298</td></tr>
-</table>
-</div>
-<div id='task6011' class='task_block'>
-<div class='task_id'>6011</div>
-<h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="tasks 12.html#task1058" target="_blank">ЛР12#1058(открыть в новой вкладке)</a>используя экземпляры класса</h4>
-<ol start='1'><li>Объявите у класса Point поля для действительных значений "x" и "y".</li><li>В классе Point реализуйте публичный статический метод distanceBetween.</li><li>Новый метод distanceBetween принимает в качестве аргументов 2 экземпляра класса Point.</li><li>Метод возвращает действительное число.</li><li>Для вычисления результата используйте поля "x" и "y" экземпляров класса Point, которые были переданы в качестве аргументов.</li></ol><table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>a.x</th><th>a.y</th><th>b.x</th><th>b.y</th></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>3</td><td>4</td><td class='preformatted'>Координаты точки (1,0000,1,0000)
-Координаты точки (3,00004,0000)
-Расстояние между точками равно 3.605551275463989</td></tr>
-<tr><td>2</td><td>-2</td><td>4</td><td>8</td><td>-10</td><td class='preformatted'>Координаты точки (-2,0000,4,0000)
-Координаты точки (8,0000-10,0000)
-Расстояние между точками равно 17.204650534085253</td></tr>
-<tr><td>3</td><td>0</td><td>0</td><td>-5</td><td>-7</td><td class='preformatted'>Координаты точки (0,0000,0,0000)
-Координаты точки (-5,0000-7,0000)
-Расстояние между точками равно 8.602325267042627</td></tr>
-<tr><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td class='preformatted'>Координаты точки (0,0000,0,0000)
-Координаты точки (0,00000,0000)
-Расстояние между точками равно 0.0</td></tr>
-<tr><td>5</td><td>-1</td><td>-3</td><td>2</td><td>9</td><td class='preformatted'>Координаты точки (-1,0000,-3,0000)
-Координаты точки (2,00009,0000)
-Расстояние между точками равно 12.36931687685298</td></tr>
-</table>
-</div>
-<div id='task7040' class='task_block'>
-<div class='task_id'>7040</div>
-<h3>Задача</h3>
-<h4>Прочитайте условие задачи</h4>
-<div class='task_desc'>
-Даны три числа. Первые два обозначают левую и правую границы интервала. Нужно проверить, попадает ли третье число в описанный интервал. Левая граница включительно, правая - исключительно.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>left</th><th>right</th><th>x</th></tr>
-<tr><td>1</td><td>5</td><td>10</td><td>7</td><td class='preformatted'>Интервал [5,000000,10,000000) содержит число 7,000000</td></tr>
-<tr><td>2</td><td>20</td><td>30</td><td>3</td><td class='preformatted'>Число 3,000000 за пределами интервала [20,000000,30,000000)</td></tr>
-<tr><td>3</td><td>100</td><td>200</td><td>300</td><td class='preformatted'>Число 300,000000 за пределами интервала [100,000000,200,000000)</td></tr>
-<tr><td>4</td><td>10</td><td>15</td><td>10</td><td class='preformatted'>Интервал [10,000000,15,000000) содержит число 10,000000</td></tr>
-<tr><td>5</td><td>10</td><td>15</td><td>15</td><td class='preformatted'>Число 15,000000 за пределами интервала [10,000000,15,000000)</td></tr>
-<tr><td>6</td><td>999</td><td>1</td><td>100</td><td class='preformatted'>Некорректный интервал [999,000000,1,000000)</td></tr>
-</table>
-<h4>Реализуйте статический метод с тремя аргументами</h4>
-<ol start='1'><li>В папке с исходным кодом создайте класс Range</li><li>В классе Range реализуйте публичный статический метод contains</li><li>Он принимает в качестве аргумента 3 действительных числа и возвращает логическое значение.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start='6'><li>В папке для юнит-тестов создайте класс RangeSuite.</li><li>В классе RangeSuite создайте юнит-тест doublesContainDoubleTest.</li><li>Объявите переменную actual и запишите в неё результат вызова метода contains с аргументами 100, 200, 300.</li><li>Проверьте, что переменная actual содержит false.</li><li>Убедитесь, что метод contains возвращает true если передать ему в качестве аргументов 5, 10, 7</li><li>Проверьте, что при передаче значений 20, 30, 3 метод contains возвращает false.</li><li>Проверьте, что метод contains выбрасывает исключение если передать ему 999, 1, 100</li></ol></div>
-<div id='task1606' class='task_block'>
-<div class='task_id'>1606</div>
-<h3>Задача</h3>
-<h4>Прочитайте условие задачи. Оно совпадает с условием в задаче <a href="tasks 21.html#task7040" target="_blank">ЛР21#7040(открыть в новой вкладке)</a></h4>
-<div class='task_desc'>
-Даны три числа. Первые два обозначают левую и правую границы интервала. Нужно проверить, попадает ли третье число в описанный интервал. Левая граница включительно, правая - исключительно.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>range.from</th><th>range.to</th><th>x</th></tr>
-<tr><td>1</td><td>5</td><td>10</td><td>7</td><td class='preformatted'>Интервал [5,000000,10,000000) содержит число 7,000000</td></tr>
-<tr><td>2</td><td>20</td><td>30</td><td>3</td><td class='preformatted'>Число 3,000000 за пределами интервала [20,000000,30,000000)</td></tr>
-<tr><td>3</td><td>100</td><td>200</td><td>300</td><td class='preformatted'>Число 300,000000 за пределами интервала [100,000000,200,000000)</td></tr>
-<tr><td>4</td><td>10</td><td>15</td><td>10</td><td class='preformatted'>Интервал [10,000000,15,000000) содержит число 10,000000</td></tr>
-<tr><td>5</td><td>10</td><td>15</td><td>15</td><td class='preformatted'>Число 15,000000 за пределами интервала [10,000000,15,000000)</td></tr>
-<tr><td>6</td><td>10</td><td>5</td><td>7</td><td class='preformatted'>Некорректный интервал [10,000000,5,000000)</td></tr>
-<tr><td>7</td><td>30</td><td>20</td><td>3</td><td class='preformatted'>Некорректный интервал [30,000000,20,000000)</td></tr>
-</table>
-<h4>Реализуйте статический метод с двумя аргументами</h4>
-<ol start='1'><li>В папке с исходным кодом создайте класс Range.</li><li>Объявите в классе Range поля "from" и "to" для целых чисел.</li><li>В классе Range реализуйте публичный статический метод contains.</li><li>Он принимает в качестве аргумента 1 экземпляр класса Range, 1 действительное число и возвращает логическое значение.</li><li>Метод должен возвращать результат задачи</li><li>Если поле from больше поля to, то метод contains должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol></div>
-<div id='task4574' class='task_block'>
-<div class='task_id'>4574</div>
-<h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="#task6589" target="_blank">ЛР#6589(открыть в новой вкладке)</a></h4>
-<ol start='1'><li>В папке исходным кодом создайте класс Range.</li><li>Объявите в классе Range поля "from" и "to" для целых чисел.</li><li>В классе Range реализуйте публичный статический метод hasIntersection.</li><li>Он принимает в качестве аргумента 4 целых числа и возвращает логическое значение.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start='7'><li>В папке для юнит-тестов создайте класс RangeSuite.</li><li>В классе RangeSuite создайте юнит-тест hasIntersectionIntsTest.</li><li>В теле метода hasIntersectionIntsTest вызовите метод hasIntersection.</li><li>Передайте в качестве аргументов значения 2, 3, 5 и 7.</li><li>Проверьте, что метод hasIntersection вернул значение false.</li><li>В теле метода hasIntersectionIntsTest вызовите метод hasIntersection еще раз.</li><li>Передайте в качестве аргументов значения 11, 17, 13, 19.</li><li>Проверьте, что метод hasIntersection вернул значение true.</li><li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li></ol><h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
-<ol start='16'><li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionIntsWrongRedTest и hasIntersectionIntsWrongGreenTest.</li><li>Они должны проверять факт возникновения исключения IllegalArgumentException.</li><li>В теле метода hasIntersectionIntsWrongRedTest вызовите метод hasIntersection.</li><li>Передайте ему в качестве аргументов значения 79, 73, 83, 89.</li><li>В теле метода hasIntersectionIntsWrongGreenTest вызовите метод hasIntersection.</li><li>Передайте ему в качестве аргументов значения 97, 101, 107, 103.</li><li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
-<div id='task6037' class='task_block'>
-<div class='task_id'>6037</div>
-<h3>Задача</h3>
-<h4>Реализуйте статический метод для решения задачи <a href="#task6589" target="_blank">ЛР#6589(открыть в новой вкладке)</a></h4>
-<ol start='1'><li>Объявите у класса Range поля для целочисленных значений "from" и "to".</li><li>В классе Range реализуйте еще один публичный статичекий метод hasIntersection.</li><li>Новый метод hasIntersection принимает в качестве аргументов 2 экземпляра класса Range и возвращает логическое значение.</li><li>В теле метода нужно вернуть результат решения задачи. В вычислениях нужно использовать поля "from" и "to" экземпляров класса Range, которые были переданы в качестве аргументов.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start='6'><li>В классе RangeSuite создайте юнит-тест hasIntersectionRangesTest.</li><li>В теле метода hasIntersectionRangesTest создайте 2 переменных типа Range: left и right. Инициализируйте их экземплярами класса Range.</li><li>Инициализируйте поле "from" переменной red значением 23.</li><li>Инициализируйте поле "to" переменной red значением 27.</li><li>Инициализируйте поле "from" переменной green значением 29.</li><li>Инициализируйте поле "from" переменной green значением 31.</li><li>Вызовите статический метод hasIntersection класса Range и передайте ему в качестве аргументов значения переменных red и green.</li><li>Проверьте, что метод hasIntersection возвращает false.</li><li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li></ol><h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
-<ol start='15'><li>В классе RangeSuite создайте 2 юнит-теста hasIntersectionRangesWrongRedTest и hasIntersectionRangesWrongGreenTest.</li><li>Они должны проверять факт возникновения исключения IllegalArgumentException.</li><li>В теле метода hasIntersectionRangesWrongRedTest инициализируйте два экземпляра класса Range: left и right.</li><li>Заполните значения их полей так, чтобы левый интервал получился некорректным.</li><li>Вызовите метод hasIntersection и передайте ему red и green в качестве аргументов.</li><li>В теле метода hasIntersectionRangesWrongGreenTest проверьте что метод hasIntersection выбрасывает исключение в случае, когда правый интервал некорректный.</li><li>После запуска тестовых методов, они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
-<div id='task4491' class='task_block'>
-<div class='task_id'>4491</div>
-<h3>Задача</h3>
-<h4>Реализуйте метод для создания экземпляров класса Point со значениями по-умолчанию</h4>
-<ol start='1'><li>Убедитесь, что у класса Point объявлены поля для целочисленных значений "x" и "y".</li><li>В классе Point реализуйте статический метод "zero". Он не принимает аргументов и возвращает экземпляр класса Point.</li><li>В теле метода объявите переменную instance типа Point и инициализируйте ее экземпляром класса Point.</li><li>Инициализируйте поля "x" и "y" переменной instance значениями 0.</li><li>Верните переменную instance в качестве результата работы метода.</li></ol><h4>Используйте метод в тестовом методе distanceBetweenPointsTest</h4>
-<ol start='6'><li>Запишите в переменную src результат вызова метода zero.</li><li>Запишите в переменную dest результат вызова метода zero.</li><li>Проверьте, что результат вызова метода distanceBetween с аргументами src и dest вернет значение 0 с точностью 0.0001.</li><li>После запуска тестовых методов, все они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
-<div id='task1193' class='task_block'>
-<div class='task_id'>1193</div>
-<h3>Задача</h3>
-<h4>Реализуйте метод для создания экземпляров класса Point с указанием значений</h4>
-<ol start='1'><li>Убедитесь, что у класса Point объявлены поля для целочисленных значений "x" и "y".</li><li>В классе Point реализуйте статический метод "make". Он принимает в качестве аргументов два числа ("px" и "py") и возвращает экземпляр класса Point.</li><li>В теле метода объявите переменную instance типа Point и инициализируйте ее экземпляром класса Point.</li><li>Инициализируйте поле "x" переменной instance значением аргумента px.</li><li>Инициализируйте поле "y" переменной instance значением аргумента py.</li><li>Верните переменную instance в качестве результата работы метода.</li></ol><h4>Используйте метод в тестовом методе distanceBetweenPointsTest</h4>
-<ol start='7'><li>Запишите в переменную src результат вызова метода zero.</li><li>Вызовите метод make и передайте ему в качестве аргумента значения -5 и -7.</li><li>Результат вызова метода запишите в переменную dest.</li><li>Проверьте, что результат вызова метода distanceBetween с аргументами src и dest вернет значение 8.6023 с точностью 0.0001.</li><li>После запуска тестовых методов, все они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
-<div id='task8347' class='task_block'>
-<div class='task_id'>8347</div>
-<h3>Задача</h3>
-<h4>Прочитайте условие задачи</h4>
-<div class='task_desc'>
-Даны координаты двух точек: start, end. Они обозначают границы отрезка. Нужно найти координаты середины отрезка. Координата x середины отрезка вычисляется по формуле (startX + endX)/2. Координата y середины отрезка вычисляется по формуле (startY + endY)/2.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>startX</th><th>startY</th><th>endX</th><th>endY</th></tr>
-<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>10</td><td class='preformatted'>У отрезка (0,00;0,00) (0,00;10,00) середина находится в точке (0,00;5,00)</td></tr>
-<tr><td>2</td><td>0</td><td>0</td><td>20</td><td>0</td><td class='preformatted'>У отрезка (0,00;0,00) (20,00;0,00) середина находится в точке (10,00;0,00)</td></tr>
-<tr><td>3</td><td>0</td><td>30</td><td>0</td><td>0</td><td class='preformatted'>У отрезка (0,00;30,00) (0,00;0,00) середина находится в точке (0,00;15,00)</td></tr>
-<tr><td>4</td><td>40</td><td>0</td><td>0</td><td>0</td><td class='preformatted'>У отрезка (40,00;0,00) (0,00;0,00) середина находится в точке (20,00;0,00)</td></tr>
-<tr><td>5</td><td>11</td><td>13</td><td>89</td><td>61</td><td class='preformatted'>У отрезка (11,00;13,00) (89,00;61,00) середина находится в точке (50,00;37,00)</td></tr>
-<tr><td>6</td><td>50</td><td>50</td><td>50</td><td>50</td><td class='preformatted'>У отрезка (50,00;50,00) (50,00;50,00) середина находится в точке (50,00;50,00)</td></tr>
-</table>
-<h4>Реализуйте статический метод для решения задачи</h4>
-<ol start='1'><li>Убедитесь, что у класса Point объявлены поля для действительных значений "x" и "y".</li><li>В классе Point реализуйте публичный статический метод getMiddleOfSegment.</li><li>Он принимает в качестве аргумента 2 экземпляра класса Point и возвращает экземпляр класса Point.</li><li>Вычислите значения mx и my середины отрезка используя значения из аргументов в качестве исходных данных.</li><li>В теле метода создайте экземпляр класса Point, запишите в его поля вычисленные значения mx и my.</li><li>Верните полученный экземпляр класса Point как результат вызова метода.</li></ol><h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start='7'><li>В классе PointSuite создайте тест middleOfSegmentTest.</li><li>Объявите две переменные типа Point: src и dest.</li><li>Заполните переменные src и dest значениями (0;0) и (0;10).</li><li>Передайте src и dest как аргументы метода getMiddleOfSegment.</li><li>Найдите какой результат ожидается для этих исходных данных.</li><li>Объявите переменную expected типа Point. Запишите в её поля ожидаемый результат.</li><li>Сравните содержимое переменной expected с фактическим результатом</li><li>Повторите эти действия для значений src и dest равными (0;0) и (20;0)</li><li>Повторите эти действия для значений src и dest равными (0;30) и (0;0)</li><li>Повторите эти действия для значений src и dest равными (40;0) и (0;0)</li><li>Повторите эти действия для значений src и dest равными (11;13) и (89;81)</li></ol></div>
-<div id='task7301' class='task_block'>
-<div class='task_id'>7301</div>
-<h3>Задача</h3>
-<h4>Реализуйте параметризованный конструктор класса Point</h4>
-<div class='task_desc'>
-Конструктор класса - специальный метод, тело которого выполняется при создании экземпляра класса.
-</div>
-<ol start='1'><li>В папке для исходного кода создайте класс Point.</li><li>Объявите поля "x" и "y" для целых чисел.</li><li>В классе Point реализуйте конструктор. Это публичный метод, который принимает в качестве аргументов 2 целых числа ("px" и "py") и называется Point (как класс). У него должно отсутствовать указание типа возвращаемого значения.</li><li>В теле конструктора инициализируйте поля "x" и "y" значениями, которые были переданы в качестве аргументов.</li><li>Скорее всего у вас должны появиться ошибки компиляции в других методах. Замените явную инициализацию полей на вызов конструктора.</li></ol><h4>Используйте конструктор в тестовом методе distanceBetweenPointsTest</h4>
-<ol start='6'><li>Вызовите конструктор и передайте ему в качестве аргументов значения -1 и -3.</li><li>Результат вызова конструктора запишите в переменную src.</li><li>Вызовите конструктор и передайте ему в качестве аргументов значения 2 и 9.</li><li>Результат вызова конструктора запишите в переменную dest.</li><li>Проверьте, что результат вызова метода distanceBetween с аргументами src и dest вернет значение 12.3693 с точностью 0.0001.</li><li>После запуска тестовых методов, все они должны быть отмечены зеленым знаком в списке методов.</li></ol></div>
-<div id='task2000' class='task_block'>
-<div class='task_id'>2000</div>
-<h3>Задача</h3>
-<h4>Реализуйте параметризованный конструктор класса Range</h4>
-<ol start='1'><li>В папке для исходного кода создайте класс Range.</li><li>Объявите в классе Range поля "from" и "to" для чисел.</li><li>В классе Range реализуйте публичный метод, который принимает в качестве аргументов 2 целых числа и называется Range (как класс). У него должно отсутствовать указание типа возвращаемого значения.</li><li>В теле конструктора инициализируйте поля "x" и "y" значениями, которые были переданы в качестве аргументов.</li><li>Скорее всего у вас должны появиться ошибки компиляции в других методах. Замените явную инициализацию полей на вызов конструктора.</li></ol></div>
-<div class="task_block" id="task3864">
-	<div class="task_id">3864</div>
+<div class="task_block" id="task9020">
+	<div class="task_id">9020</div>
     <h3>Задача</h3>
-	<h4>Реализуйте статический метод для решения задачи <a href="tasks 6.html#task3864" target="_blank">ЛР6#3864(открыть в новой вкладке)</a></h4>
 <ol>
-<li>В папке для исходного кода создайте класс Direction.</li>
-<li>В классе Direction объявите поля для действительных значений "angle" и "distance".</li>
-<li>В классе Library реализуйте публичный статический метод BackwardTask.</li>
-<li>Он принимает в качестве аргумента два экземпляра класса Point и возвращает экземпляр класса Direction.</li>
-<li>В теле метода вычислите горизонтальное п<b>р</b>оложение и дирекционный угол, используя значения аргументов в качестве исходных данных.</li>
-<li>Сформируйте ответ в виде экземпляра класса Direction и верните его в качестве результата.</li>
+<li>В классе Library реализуйте публичный статический метод Task9020 для решения задачи <a href="tasks 4.html#task9020" target="_blank">ЛР4#9020(открыть в новой вкладке)</a>.</li>
+<li>Метод Task9020 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task9020 в случаях с корректными данными.</li>
 </ol>
 
-<h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
-<ol start="7">
-<li>В папке для юнит-тестов создайте класс GeodesySuite.</li>
-<li>В классе GeodesySuite создайте юнит-тест BackwardTaskTest.</li>
-<li>В теле юнит-теста объявите переменные src и dest типа Point и переменную direction типа Direction.</li>
-<li>Инициализируйте переменные экземплярами соответствующих классов.</li>
-<li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
-	<ol type="a">
-	<li>Инициализируйте поля x и y переменной src значениями X<sub>a</sub> и Y<sub>a</sub>.</li>
-	<li>Инициализируйте поля x и y переменной dest значениями X<sub>b</sub> и Y<sub>b</sub>.</li>
-	<li>Вызовите статический метод BackwardTask класса Library.</li>
-	<li>Передайте ему в качестве аргументов значения переменных src и dest.</li>
-	<li>Результат вызова метода запишите в переменную direction.</li>
-	<li>Проверьте, что значения полей distance и angle переменной dest соответствуют горизонтальному п<b>р</b>оложению и дирекционному углу соответственно.</li>
-	</ol>
-</li>
-<li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task4913">
-	<div class="task_id">4913</div>
-    <h3>Задача</h3>
-	<h4>Реализуйте статический метод для решения задачи <a href="tasks 4.html#task4913" target="_blank">ЛР4#4913(открыть в новой вкладке)</a></h4>
-<ol>
-<li>В классе Library реализуйте публичный статический метод ForwardTask.</li>
-<li>Он принимает в качестве аргумента экземпляр класса Point, экземпляр класса Direction и возвращает экземпляр класса Point.</li>
-<li>В теле метода вычислите координаты другой точки, используя значения аргументов в качестве исходных данных.</li>
-<li>Сформируйте ответ в виде экземпляра класса Point и верните его в качестве результата.</li>
-<li>Если методу был передан экземпляр класса Direction с некорректными значениями полей, метод должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
-</ol>
-
-<h4>Проверьте корректность работы метода с помощью юнит-теста</h4>
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
 <ol start="6">
-<li>В классе GeodesySuite создайте юнит-тест ForwardTaskTest.</li>
-<li>В теле юнит-теста объявите переменные src и dest типа Point и переменную direction типа Direction.</li>
-<li>Инициализируйте переменные экземплярами соответствующих классов.</li>
-<li>Для каждой строки тестовых данных из задачи напишите в теле юнит-теста фрагмент кода:
-	<ol type="a">
-	<li>Инициализируйте поля x и y переменной src значениями X<sub>a</sub> и Y<sub>a</sub>.</li>
-	<li>Инициализируйте поля distance и angle переменной direction значениями distance и angleDeg.</li>
-	<li>Вызовите статический метод ForwardTask класса Library.</li>
-	<li>Передайте ему в качестве аргументов значения переменных src и direction.</li>
-	<li>Результат вызова метода запишите в переменную dest.</li>
-	<li>Проверьте, что значения полей x и y переменной dest соответствуют значениям X<sub>b</sub> и Y<sub>b</sub> в тесте.</li>
-	</ol>
-</li>
-<li>После запуска тестового метода, он должен быть отмечен зеленым знаком в списке методов.</li>
+<li>В классе TestSuite создайте еще 3 юнит-теста. Назовите их как Task9020assertionX, где X - цифра от 1 до 3.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task9020assertionX вызовите метод Task9020 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task5871">
+	<div class="task_id">5871</div>
+    <h3>Задача</h3>
+
+<ol>
+<li>В классе Library реализуйте публичный статический метод Task5871 для решения задачи <a href="tasks 4.html#task5871" target="_blank">ЛР4#5871(открыть в новой вкладке)</a>.</li>
+<li>Метод Task5871 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task5871 в случаях с корректными данными.</li>
 </ol>
 
-<h4>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных</h4>
-<ol start="11">
-<li>В классе GeodesySuite создайте 3 юнит-теста ForwardTaskNegativeDistance, ForwardTaskZeroDistance, ForwardTaskNegativeAngle.</li>
-<li>Они должны проверять факт возникновения исключения ArgumentException.</li>
-<li>В теле юнит-теста ForwardTaskNegativeDistance вызовите метод ForwardTask и укажите такие аргументы, в которых горизонтальное проложение будет отрицательным.</li>
-<li>В теле юнит-теста ForwardTaskZeroDistance вызовите метод ForwardTask и укажите такие аргументы, в которых горизонтальное проложение будет равно 0.</li>
-<li>В теле юнит-теста ForwardTaskNegativeAngle вызовите метод ForwardTask и укажите такие аргументы, в которых дирекционный угол будет отрицательным.</li>
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="7">
+<li>В классе TestSuite создайте еще 4 юнит-теста. Назовите их как Task5871assertionX, где X - цифра от 1 до 4.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task5871assertionX вызовите метод Task5871 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
 </ol>
-</div><div id="task6522" class="task_block empty_on_print">
-	<div class="task_id">6522</div>
-	<h3>Задача</h3>
-	<h4>Реализуйте статический метод для решения задачи <a href="tasks 4.html#task6522" target="_blank">ЛР4#6522(открыть в новой вкладке)</a></h4>
+</div><div class="task_block" id="task7799">
+	<div class="task_id">7799</div>
+    <h3>Задача</h3>
 <ol>
-<li>В папке для исходного кода создайте класс LiquidPortion.</li>
-<li>Объявите у класса LiquidPortion поля для действительных значений volume и temperature.</li>
-<li>В классе Library реализуйте публичный статический метод MixLiquids.</li>
-<li>Он принимает в качестве аргумента два экземпляра класса LiquidPortion и возвращает экземпляр класса LiquidPortion.</li>
-<li>В теле метода вычислите объем и температуру получившейся смеси, используя значения аргументов в качестве исходных данных.</li>
-<li>Сформируйте ответ в виде экземпляра класса LiquidPortion и верните его в качестве результата.</li>
-<li>Если методу был передан экземпляр класса LiquidPortion с некорректными значениями полей, метод должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
-<li>В классе TestSuite создайте юнит тесты для проверки корректности работы метода.</li>
-<li>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных.</li>
+<li>В классе Library реализуйте публичный статический метод Task7799 для решения задачи <a href="tasks 4.html#task7799" target="_blank">ЛР4#7799(открыть в новой вкладке)</a>.</li>
+<li>Метод Task7799 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task7799 в случаях с корректными данными.</li>
 </ol>
-</div><div id="task8225" class="task_block empty_on_print">
-	<div class="task_id">8225</div>
-	<h3>Задача</h3>
-	<h4>Реализуйте статический метод для вычисления равнодействующей двух сил под произвольным углом</h4>
-<div class="task_desc">Для нахождения равнодействующей, нужно вычислить:
-</div>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="6">
+<li>В классе TestSuite cоздайте 2 юнит-теста. Назовите их как Task7799assertionX, где X - цифра от 1 до 2.</li>
+<li>Добавьте каждому из юнит-тестов атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task7799assertion вызовите метод Task7799 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, метод Task7799assertion должен быть отмечен зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task5170">
+	<div class="task_id">5170</div>
+    <h3>Задача</h3>
 <ol>
-<li>В папке для исходного кода создайте класс Force.</li>
-<li>Объявите у класса Force поля для действительных значений x, y и value.</li>
-<li>В классе Library реализуйте публичный статический метод FindResultant.</li>
-<li>Он принимает в качестве аргумента два экземпляра класса Force и возвращает экземпляр класса Force.</li>
-<li>В теле метода вычислите
-<ol type="a">
-<li>Скалярное произведение векторов приложения сил (<b>product<sub>a,b</sub></b>) как в задаче <a href="tasks 5.html#task6924" target="_blank">ЛР5#6924(открыть в новой вкладке)</a></li>
-<li>Угол между векторами (<b>angle<sub>a,b</sub></b>) как в задаче <a href="tasks 5.html#task6924" target="_blank">ЛР5#6924(открыть в новой вкладке)</a></li>
-<li>Координаты вектора равнодействующей сил по формулам <formula>x<sub>равн</sub>=x<sub>a</sub>+x<sub>b</sub></formula>; <formula>y<sub>равн</sub>=y<sub>a</sub>+y<sub>b</sub></formula></li>
-<li>Значение равнодействующей силы по формуле <formula>value<sub>равн</sub> = <sqrt><val>value<sub>a</sub><sup>2</sup>+value<sub>b</sub><sup>2</sup> + 2 * value<sub>a</sub> * value<sub>b</sub> * cos(angle<sub>a,b</sub>)</val></sqrt></formula></li>
-</ol></li>
-<li>Сформируйте ответ в виде экземпляра класса Force и верните его в качестве результата.</li>
-<li>Если методу был передан экземпляр класса Force с некорректными значениями полей, метод должен выбросить исключение содержащее текст ошибки из задачи.</li>
-<li>В классе TestSuite создайте юнит тесты для проверки корректности работы метода.</li>
-<li>Проверьте юнит-тестами, что метод выбрасывает ислючение при некорректных данных.</li>
+<li>В классе Library реализуйте публичный статический метод Task5170 для решения задачи <a href="tasks 14.html#task5170" target="_blank">ЛР14#5170(открыть в новой вкладке)</a>.</li>
+<li>Метод Task5170 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
+<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащий текст ошибки из задачи.</li>
+<li>Проверьте с помощью юнит-теста результат работы метода Task5170 в случаях с корректными данными.</li>
 </ol>
-<table class="check_values">
-	<tr>
-		<th rowspan="2">Номер теста</th>
-		<th colspan="6">Вводимые данные </th>
-		<th colspan="3">Результат</th>
-	</tr>
-	<tr>
-		<th>x<sub>a</sub></th>
-		<th>y<sub>a</sub></th>
-		<th>value<sub>a</sub></th>
-		<th>x<sub>b</sub></th>
-		<th>y<sub>b</sub></th>
-		<th>value<sub>b</sub></th>
-		<th>x<sub>равн</sub></th>
-		<th>y<sub>равн</sub></th>
-		<th>value<sub>равн</sub></th>
-	</tr>
-	<tr>
-		<td></td>
-		<td>-50</td>
-		<td>-86.6025</td>
-		<td>100</td>
-		<td>60</td>
-		<td>0</td>
-		<td>100</td>
-		<td>10</td>
-		<td>-86.6025</td>
-		<td>100</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>10</td>
-		<td>0</td>
-		<td>40</td>
-		<td>0</td>
-		<td>10</td>
-		<td>30</td>
-		<td>10</td>
-		<td>10</td>
-		<td>50</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>11</td>
-		<td>13</td>
-		<td>50</td>
-		<td>7</td>
-		<td>17</td>
-		<td>30</td>
-		<td>18</td>
-		<td>30</td>
-		<td>79.0916</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>-70.7106</td>
-		<td>50</td>
-		<td>100</td>
-		<td>60</td>
-		<td>0</td>
-		<td>100</td>
-		<td>-10.7106</td>
-		<td>50</td>
-		<td>60.5811</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>-86.6025</td>
-		<td>50</td>
-		<td>100</td>
-		<td>60</td>
-		<td>0</td>
-		<td>100</td>
-		<td>-26.6025</td>
-		<td>50</td>
-		<td>51.7638</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>3</td>
-		<td>4</td>
-		<td>1</td>
-		<td>4</td>
-		<td>3</td>
-		<td>1</td>
-		<td>7</td>
-		<td>7</td>
-		<td>1.9799</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>5</td>
-		<td>7</td>
-		<td>11</td>
-		<td>7</td>
-		<td>3</td>
-		<td>-20</td>
-		<td colspan="3">Сила не может быть отрицательной</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td>15</td>
-		<td>17</td>
-		<td>-4</td>
-		<td>19</td>
-		<td>13</td>
-		<td>5</td>
-		<td colspan="3">Сила не может быть отрицательной</td>
-	</tr>
-</table>
+
+<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
+<ol start="8">
+<li>В классе TestSuite создайте юнит-тест, который называется Task5170assertion.</li>
+<li>Добавьте ему атрибут ExpectedException. Укажите тип ожидаемого исключения как ArgumentException.</li>
+<li>В теле метода Task5170assertion вызовите метод Task5170 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
+<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
+</ol>
+</div><div class="task_block" id="task7891">
+	<div class="task_id">7891</div>
+    <h3>Задача</h3>
+	<h4>Реализуйте метод для решения задачи</h4>
+<ol>
+<li>В классе Library реализуйте публичный статический метод task7891.</li>
+<li>В качестве аргумента он принимает массив целых чисел.</li>
+<li>В теле функции создайте новый массив.
+Для каждой пары элементов из исходного массива нужно добавить три элемента в результирующий массив.
+Первый и второй элемент из тройки - копии исходной пары элементов. Третий элемент из тройки - сумма этой пары элементов.
+Если в исходном массиве нечетное количество элементов, функция должна выбросить исключение.</li>
+</ol>
+
+<h4>Проверьте корректность работы функции с помощью юнит-тестов</h4>
+<ol start="4">
+<li>Создайте юнит-тест для проверки задачи и подпишите его словами "в задаче 7891 должен получиться корректный результат".</li>
+<li>Объявите переменные data, actual и expected.</li>
+<li>Запишите в переменную data массив значений исходных данных для одного теста из задачи. Например 9,8, 7,6, 5,4</li>
+<li>Запишите в переменную expected массив значений, которые ожидаются в результате работы метода. Например 9,8,17, 7,6,13, 5,4,9</li>
+<li>Вызовите функцию task7891 и передайте ей переменную data в качестве аргумента.</li>
+<li>Запишите результат вызова функции в переменную actual.</li>
+<li>Проверьте, что содержимое массивов actual и expected одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
+<li>Проверьте, что содержимое массивов data и validate одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
+<li>Проверьте, что метод выбрасывает исключение при некорректных данных.</li>
+</ol>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Вводимые данные (array)</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9,8, 7,6, 5,4</td>
+			<td class="preformatted">9,8,17, 7,6,13, 5,4,9</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>11,13, 17,19, 23,29</td>
+			<td class="preformatted">11,13,24, 17,19,36, 23,29,52</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0,0</td>
+			<td class="preformatted">0,0,0</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="preformatted"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9,8, 7</td>
+			<td class="preformatted">В массиве должно быть четное количество элементов</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task6882">
+	<div class="task_id">6882</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Количество чисел заранее не известно. Определить минимальное число в файле. При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 0
+Всего чисел: 10</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 0
+Всего чисел: 1</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 5
+Всего чисел: 3359</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: 1023
+Всего чисел: 9905</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test5.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 116
+62,52</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test6.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
+22,47</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test7.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test8.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test9.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
+Я пришел к тебе с приветом,</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task6882/test10.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Минимальное число: -15
+Всего чисел: 16</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task1212">
+	<div class="task_id">1212</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Найти самую большую площадь прямоугольника.
+Информация о прямоугольниках находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка</a>) с разделителем &quot;;&quot;.
+Общее количество прямоугольников заранее неизвестно.
+В каждой строчке находится информация об отдельном прямоугольнике: x и y его верхнего-левого угла, ширина и высота.
+Например "68;59;32;15" значит что x = 68, y = 59, ширина = 32, высота = 15.
+При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Выражение</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 875
+Всего записей: 6</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 129276
+Всего записей: 104</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 3691856
+Всего записей: 37</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+2642;1610;6710</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число в строке 6
+7125;8872;g;4158;</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task1212/test9.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+6846,9127,9991,5478</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task9472">
+	<div class="task_id">9472</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Найти самую большую площадь фигуры.
+Информация о фигурах находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;.
+Общее количество фигур заранее неизвестно. В каждой строчке находится информация об отдельной фигуре: ее наименование и свойства.
+Обработайте потенциальные исключения.
+	<ul>
+		<li>Прямоугольник. Наименование rect, свойства: x и y его верхнего-левого угла, ширина и высота. Например "rect;68;59;32;15" - прямоугольник, x = 68, y = 59, ширина 32, высота 15</li>
+		<li>Круг. Наименование circle, свойства: x и y центра, радиус. Например "circle;72;98;14" - круг, x = 72, y = 98, радиус = 14</li>
+	</ul></div>
+	<table class="check_values">
+		<tr>
+			<th>Номер по порядку</th>
+			<th>Выражение</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test1.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 1480,0000
+Всего записей: 31</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test2.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Максимальная площадь: 907,9203
+Всего записей: 31</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test3.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл не существует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test4.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл пуст</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test5.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в стркое 0
+261;377;123;94</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test6.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+rect;71;55;14</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test7.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в строке 0
+circle;57;75</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task9472/test8.csv" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Некорректный формат данных в стркое 0
+polygon;0;0;1;2;3;4</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="task5081">
+	<div class="task_id">5081</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Исходный файл содержит множество строк с целыми числами. Внутри строки числа разделены запятой. Нужно найти сумму чисел в каждой строчке. При возникновении исключения, обработка файла продолжается, если это возможно. Строки с некорректными данными пропускаются.</div>
+	<table class="check_values">
+		<tr>
+			<th>Номер теста</th>
+			<th>Содержимое файла</th>
+			<th>Результат</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test1.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">15
+110
+31496</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test2.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число
+Строка пуста
+8</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test3.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Файл отсутствует</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><a href="files/task5081/test4.txt" target="_blank">открыть в новой вкладке</a></td>
+			<td class="preformatted">Не удалось преобразовать строку в число
+Не удалось преобразовать строку в число</td>
+		</tr>
+	</table>
 </div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

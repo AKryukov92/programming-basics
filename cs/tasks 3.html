@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>3 Организация вычислений</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>3 Организация вычислений</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,41 +197,42 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
 }</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Организация вычислений</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4411' class='example'>1*</a><li><a href='#task8428' class='example'>2*</a><li><a href='#task1976'>3</a><li><a href='#task3435'>4</a><li><a href='#task9865'>5</a><li><a href='#task7457'>6</a><li><a href='#task7237'>7</a><li><a href='#task7711' class='example'>8*</a><li><a href='#task3474'>9</a><li><a href='#task1262'>10</a><li><a href='#task9164'>11</a><li><a href='#task3558'>12</a></ul></div><div id='task4411' class='task_block'>
 <div class='task_id'>4411</div>
 <h3>Задача</h3>
@@ -263,7 +264,7 @@ Console.WriteLine("Результат равен {0:F4}", result); //Выраж�
    в System.Double.Parse(String s)
    в Example.Program.Main(String[] args) в C:\Users\Александр\source\repos\Example\Example\Program.cs:строка 9</div>
 <div class='task_desc'>
-Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <zoom>,</zoom> и точкой <zoom>.</zoom>. Если один из этих символов не подошел, используйте другой.
+Значит при вводе данных был напечатан неподходящий разделитель целой части. Такая проблема возникает из за различных настроек операционной системы. Обычно выбор между запятой <span class='zoom'>,</span> и точкой <span class='zoom'>.</span>. Если один из этих символов не подошел, используйте другой.
 </div>
 </div>
 <div id='task8428' class='task_block'>
@@ -274,7 +275,7 @@ Console.WriteLine("Результат равен {0:F4}", result); //Выраж�
 </div>
 <div class='check_single preformatted'>angleRadian = angleDegree * Math.PI / 180;</div>
 <div class='task_desc'>
-Выражение <zoom>Math.PI</zoom> обозначает &pi;. Его значение сохранено в переменной из стандартной библиотеке языка.
+Выражение <span class='zoom'>Math.PI</span> обозначает &pi;. Его значение сохранено в переменной из стандартной библиотеке языка.
 </div>
 <table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (angleDegree)</th><th>Результат (angleRadian)</th></tr>
@@ -289,7 +290,7 @@ Console.WriteLine("Результат равен {0:F4}", result); //Выраж�
 В языке поддерживается следующие операторы для чисел:
 </div>
 <ol start='1'><li><zoom>*</zoom> Умножение</li><li><zoom>/</zoom> Деление</li><li><zoom>+</zoom> Арифметическое сложение. Для строк этот оператор выполняет конкатенацию (склеивание).</li><li><zoom>-</zoom> Вычитание</li><li><zoom>%</zoom> Остаток от деления. Этот оператор будет рассмотрен позже.</li></ol><div class='task_desc'>
-В арифметических выражениях можно использовать круглые скобки <zoom>()</zoom>. Они работают как в математике - сначала вычисляется выражение внутри скобок, а затем все остальное.
+В арифметических выражениях можно использовать круглые скобки <span class='zoom'>()</span>. Они работают как в математике - сначала вычисляется выражение внутри скобок, а затем все остальное.
 </div>
 </div>
 <div id='task1976' class='task_block'>

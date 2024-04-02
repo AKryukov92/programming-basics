@@ -17,8 +17,8 @@ public class Task9249 extends TwoInputValLayout {
         appendCheckValuesRow("-90", "6");
         appendCheckValuesRow("6", "-7");
         appendCheckValuesFooter();
-        appendTaskDescEscaped("Решите задачу используя только одну переменную-счётчик. Для этого вам нужно добавить команду обнуления переменной. Пример программы");
-        appendCheckSingleNonEscaped(getLogic(getClass().getSimpleName()));
+        appendTaskDescEscaped("Решите задачу используя только одну переменную-счётчик. Чтобы второй цикл не пропускал действия, нужно добавить команду обнуления переменной:");
+        appendCheckSingleNonEscaped("i = 0;");
         appendFooter();
     }
 

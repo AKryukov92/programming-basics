@@ -174,7 +174,7 @@ public class TaskBook {
 
     private String makePageTop(String css) {
         return String.format("<!DOCTYPE html>" +
-                "<html>" +
+                "<html lang=\"ru\">" +
                 "<head>" +
                 "<meta charset='utf-8'/>" +
                 "<title>%d %s</title>" +

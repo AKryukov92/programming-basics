@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>26 Комбинаторика</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>26 Даты</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,378 +197,458 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Комбинаторика</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Даты</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4965' class='example'>1*</a><li><a href='#task1839'>2</a><li><a href='#task7039'>3</a><li><a href='#task3095'>4</a><li><a href='#task6915'>5</a><li><a href='#task1217'>6</a><li><a href='#task4531'>7</a><li><a href='#task1438'>8</a></ul></div><div id='task4965' class='task_block'>
-<div class='task_id'>4965</div>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425' class='example'>1*</a><li><a href='#task3123' class='example'>2*</a><li><a href='#task9418'>3</a><li><a href='#task7480' class='example'>4*</a><li><a href='#task8811'>5</a><li><a href='#task1912'>6</a><li><a href='#task3696' class='example'>7*</a><li><a href='#task8381'>8</a><li><a href='#task8498'>9</a><li><a href='#task8096'>10</a><li><a href='#task8519' class='example'>11*</a><li><a href='#task2130'>12</a></ul></div><div id='task9425' class='task_block'>
+<div class='task_id'>9425</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Число A меняется от 0 до 99 с шагом 19. Число B меняется от 0 до 99 с шагом 23. Напишите на экране все комбинации значений чисел A и B.
+Дано несколько дат в виде текста. Выбрать правильный формат чтобы программа прочитала дату. Вывести на экран отдельно день, месяц и год, час, минуту, секунду.
 </div>
-<div class='check_single preformatted'>0 0
-0 23
-0 46
-0 69
-0 92
-19 0
-19 23
-19 46
-19 69
-19 92
-38 0
-38 23
-38 46
-38 69
-38 92
-57 0
-57 23
-57 46
-57 69
-57 92
-76 0
-76 23
-76 46
-76 69
-76 92
-95 0
-95 23
-95 46
-95 69
-95 92
+<div class='check_single preformatted'>Выражение 2023-06-28 означает
+Год: 2023
+Месяц: 6
+День: 28
+Выражение 2023-06-28 18:38 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 38
+Секунда 0
+Выражение 28/06/2023 18:38:00 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 38
+Секунда 0
+Выражение 3/4/23 означает
+Год: 2023
+Месяц: 4
+День: 3
+Выражение 18:44 28.06.2023 означает
+Год: 2023
+Месяц: 6
+День: 28
+Час: 18
+Минута 44
+Секунда 0
+Выражение 1995-03-01 означает
+Год: 1995
+Месяц: 3
+День: 1
 </div>
 <div class='task_desc'>
-Эта задача решается с помощью вложенных циклов:
+Если дата содержит время, то нужно использовать тип LocalDateTime. Если время отсутствует, то LocalDate. Пример преобразования даты из текста в LocalDate/LocalDateTime:
 </div>
-<div class='check_single preformatted'>int a = 0;
-while (a < 100) {
-    int b = 0;
-    while (b < 100) {
-        System.out.println(a + " " + b);
-        b = b + 23;
-    }
-    a = a + 19;
-}
+<div class='check_single preformatted'>String yMd = "yyyy-MM-dd";
+String str1 = "2023-06-28";
+LocalDate dt1 = LocalDate.parse(str1, DateTimeFormatter.ofPattern(yMd));
+System.out.println("Выражение " + str1 + " означает");
+System.out.println("Год: " + dt1.getYear());
+System.out.println("Месяц: " + dt1.getMonthValue());
+System.out.println("День: " + dt1.getDayOfMonth());
+
+String yMdhm = "yyyy-MM-dd HH:mm";
+String str2 = "2023-06-28 18:38";
+LocalDateTime dt2 = LocalDateTime.parse(str2, DateTimeFormatter.ofPattern(yMdhm));
+System.out.println("Выражение " + str2 + " означает");
+System.out.println("Год: " + dt2.getYear());
+System.out.println("Месяц: " + dt2.getMonthValue());
+System.out.println("День: " + dt2.getDayOfMonth());
+System.out.println("Час: " + dt2.getHour());
+System.out.println("Минута " + dt2.getMinute());
+System.out.println("Секунда " + dt2.getSecond());
 </div>
 </div>
-<div id='task1839' class='task_block'>
-<div class='task_id'>1839</div>
+<div id='task3123' class='task_block'>
+<div class='task_id'>3123</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Напечатать на экран все комбинации чисел 0, 1, 2.
-</div>
-<div class='check_single preformatted'>0 0 0
-0 0 1
-0 0 2
-0 1 0
-0 1 1
-0 1 2
-0 2 0
-0 2 1
-0 2 2
-1 0 0
-1 0 1
-1 0 2
-1 1 0
-1 1 1
-1 1 2
-1 2 0
-1 2 1
-1 2 2
-2 0 0
-2 0 1
-2 0 2
-2 1 0
-2 1 1
-2 1 2
-2 2 0
-2 2 1
-2 2 2
-</div>
-</div>
-<div id='task7039' class='task_block'>
-<div class='task_id'>7039</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Напечатать на экран все комбинации чисел 0, 1, 2. Не пишите на экран комбинацию, в которой одна и та же цифра отображается несколько раз.
-</div>
-<div class='check_single preformatted'>0 1 2
-0 2 1
-1 0 2
-1 2 0
-2 0 1
-2 1 0
-</div>
-</div>
-<div id='task3095' class='task_block'>
-<div class='task_id'>3095</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - фрагменты строк, разделенные запятой. Напечатать на экран все комбинации с перестановками из двух элементов массива. Комбинации содержащие два одинаковых элемента нужно исключить.
+Дано две отметки времени. Нужно вычислить количество часов, минут секунд между ними. Для определения количества минут в текущем часу, нужно найти остаток от деления общего количества минут на 60. Для определения количества секунд в текущей минуте нужно применить такой же прием.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (values)</th><th>Результат</th></tr>
-<tr><td>1</td><td>q,w,e,r</td><td class='preformatted'>q w
-q e
-q r
-w q
-w e
-w r
-e q
-e w
-e r
-r q
-r w
-r e
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:56:13</td><td class='preformatted'>Между датами прошло 0 часов
+Всего минут 0. В текущем часе 0
+Всего секунд 13. В текущей минуте 13
 </td></tr>
-<tr><td>2</td><td>as,df,gh</td><td class='preformatted'>as df
-as gh
-df as
-df gh
-gh as
-gh df
+<tr>
+<td>2</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 0 часов
+Всего минут 3. В текущем часе 3
+Всего секунд 193. В текущей минуте 13
 </td></tr>
-<tr><td>3</td><td>zx,cv</td><td class='preformatted'>zx cv
-cv zx
+<tr>
+<td>3</td><td>03/07/2023 13:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 5 часов
+Всего минут 303. В текущем часе 3
+Всего секунд 18193. В текущей минуте 13
 </td></tr>
-<tr><td>4</td><td>p,o,o,t,p</td><td class='preformatted'>p o
-p o
-p t
-o p
-o t
-o p
-o p
-o t
-o p
-t p
-t o
-t o
-t p
-p o
-p o
-p t
+<tr>
+<td>4</td><td>03/07/2023 13:56:00</td><td>03/07/2024 18:59:13</td><td class='preformatted'>Между датами прошло 8789 часов
+Всего минут 527343. В текущем часе 3
+Всего секунд 31640593. В текущей минуте 13
 </td></tr>
-<tr><td>5</td><td>single</td><td class='preformatted'></td></tr>
-<tr><td>6</td><td></td><td class='preformatted'>Нет данных
+<tr>
+<td>5</td><td>28/06/2023 17:30:00</td><td>28/06/2023 18:00:00</td><td class='preformatted'>Между датами прошло 0 часов
+Всего минут 30. В текущем часе 30
+Всего секунд 1800. В текущей минуте 0
+</td></tr>
+<tr>
+<td>6</td><td>16/08/2009 10:00:00</td><td>16/08/2009 10:00:10</td><td class='preformatted'>Между датами прошло 0 часов
+Всего минут 0. В текущем часе 0
+Всего секунд 10. В текущей минуте 10
+</td></tr>
+<tr>
+<td>7</td><td>12/04/1961 09:07:00</td><td>12/04/1961 09:18:07</td><td class='preformatted'>Между датами прошло 0 часов
+Всего минут 11. В текущем часе 11
+Всего секунд 667. В текущей минуте 7
+</td></tr>
+<tr>
+<td>8</td><td>01/06/2023 16:00:00</td><td>01/06/2023 15:00:00</td><td class='preformatted'>Между датами прошло 1 часов
+Всего минут 60. В текущем часе 0
+Всего секунд 3600. В текущей минуте 0
 </td></tr>
 </table>
 </div>
-<div id='task6915' class='task_block'>
-<div class='task_id'>6915</div>
+<div id='task9418' class='task_block'>
+<div class='task_id'>9418</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дан массив из 4 чисел: 11, 37, 53, 89. Нужно написать все комбинации значений этих четырех чисел. Нужно не печатать на экран комбинации, в которых числа повторяются несколько раз.
-</div>
-<div class='check_single preformatted'>11,37,53,89
-11,37,89,53
-11,53,37,89
-11,53,89,37
-11,89,37,53
-11,89,53,37
-37,11,53,89
-37,11,89,53
-37,53,11,89
-37,53,89,11
-37,89,11,53
-37,89,53,11
-53,11,37,89
-53,11,89,37
-53,37,11,89
-53,37,89,11
-53,89,11,37
-53,89,37,11
-89,11,37,53
-89,11,53,37
-89,37,11,53
-89,37,53,11
-89,53,11,37
-89,53,37,11
-</div>
-</table>
-</div>
-<div id='task1217' class='task_block'>
-<div class='task_id'>1217</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит массив чисел через запятую.
-</div>
-<ol start='1'><li>Первое число обозначает начало 'красного' интервала чисел.</li><li>Второе число обозначает конец 'красного' интервала чисел.</li><li>Третье число - начало 'зеленого' интервала чисел.</li><li>Четвертое - конец 'зеленого' интервала чисел.</li></ol><div class='task_desc'>
-Интервал считается корректным если начало строго меньше чем конец. Нужно определить начало и конец области пересечения интервалов. Если не пересекаются, то написать "не пересекаются".
+Дано расстояние в метрах и две отметки времени - начало и конец движения. Нужно вычислить скорость в м/с.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (a1,b1,a2,b2)</th><th>Результат</th></tr>
-<tr><td>1</td><td>11,37,53,89</td><td class='preformatted'>Интервалы не пересекаются. Правая граница красного 37 левее левого края зеленого 53
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>distance</th><th>start</th><th>end</th></tr>
+<tr><td>1</td><td>7000</td><td>2023-06-28 17:30:00</td><td>2023-06-28 18:00:00</td><td class='preformatted'>Между двумя датами прошло 1800 секунд
+Скорость получается 3,8889 м/с</td></tr>
+<tr><td>2</td><td>100</td><td>2009-08-16 10:00:00</td><td>2009-08-16 10:00:10</td><td class='preformatted'>Между двумя датами прошло 10 секунд
+Скорость получается 10,0000 м/с</td></tr>
+<tr><td>3</td><td>5275970</td><td>1961-04-12 09:07:00</td><td>1961-04-12 09:18:07</td><td class='preformatted'>Между двумя датами прошло 667 секунд
+Скорость получается 7910,0000 м/с</td></tr>
+<tr><td>4</td><td>10000</td><td>2023-06-01 16:00:00</td><td>2023-06-01 15:00:00</td><td class='preformatted'>Между двумя датами прошло 3600 секунд
+Скорость получается 2,7778 м/с</td></tr>
+</table>
+</div>
+<div id='task7480' class='task_block'>
+<div class='task_id'>7480</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты. Сравните даты. Определите какая позже, какая раньше. Напечатать подробный ответ на экран.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>28.06.2023</td><td>20.06.2023</td><td class='preformatted'>Первая дата позже второй
 </td></tr>
-<tr><td>2</td><td>11,37,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
+<tr>
+<td>2</td><td>20.06.2023</td><td>28.06.2023</td><td class='preformatted'>Вторая дата позже первой
 </td></tr>
-<tr><td>3</td><td>11,53,37,89</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый правее красного
+<tr>
+<td>3</td><td>01.07.2023</td><td>07.01.2023</td><td class='preformatted'>Первая дата позже второй
 </td></tr>
-<tr><td>4</td><td>11,53,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>5</td><td>11,89,37,53</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый внутри красного
-</td></tr>
-<tr><td>6</td><td>11,89,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>7</td><td>37,11,53,89</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>8</td><td>37,11,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>9</td><td>37,53,11,89</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 красный внутри зеленого
-</td></tr>
-<tr><td>10</td><td>37,53,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>11</td><td>37,89,11,53</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый левее красного
-</td></tr>
-<tr><td>12</td><td>37,89,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>13</td><td>53,11,37,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>14</td><td>53,11,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
-</td></tr>
-<tr><td>15</td><td>53,37,11,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>16</td><td>53,37,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
-</td></tr>
-<tr><td>17</td><td>53,89,11,37</td><td class='preformatted'>Интервалы не пересекаются. Правая граница зеленого 37 левее левого края красного 53
-</td></tr>
-<tr><td>18</td><td>53,89,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
-</td></tr>
-<tr><td>19</td><td>89,11,37,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>20</td><td>89,11,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
-</td></tr>
-<tr><td>21</td><td>89,37,11,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>22</td><td>89,37,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
-</td></tr>
-<tr><td>23</td><td>89,53,11,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
-</td></tr>
-<tr><td>24</td><td>89,53,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
-</td></tr>
-<tr><td>25</td><td>1,2,3</td><td class='preformatted'>Должно быть введено 4 числа
-</td></tr>
-<tr><td>26</td><td>1,2,3,4,5</td><td class='preformatted'>Должно быть введено 4 числа
+<tr>
+<td>4</td><td>05.02.2001</td><td>05.02.2002</td><td class='preformatted'>Вторая дата позже первой
 </td></tr>
 </table>
 </div>
-<div id='task4531' class='task_block'>
-<div class='task_id'>4531</div>
+<div id='task8811' class='task_block'>
+<div class='task_id'>8811</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит границы двух интервалов: минусы и палочки. Интервал считается корректным если его правая граница больше левой и при этом если каждая граница меньше 120. Числа на оси координат увеличиваются вправо. Нужно изобразить интервалы в одной строке. Интервал минусов с помощью знака "-". Интервал палочек с помощью знака "|".  Область пересечения интервалов с помощью знака "+". Промежутки между интервалами заполните пробелами.
+Пользователь вводит три даты: start, end, appointment. Если appointment после start и до end исключительно, написать фразу 'ДАТА В ПЕРИОДЕ'. В любом другом случае написать - 'ДАТА ЗА ПРЕДЕЛАМИ'
 </div>
 <table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>redA</th><th>redB</th><th>greenA</th><th>greenB</th></tr>
-<tr><td>1</td><td>5</td><td>30</td><td>50</td><td>65</td><td class='preformatted'>     -------------------------                    |||||||||||||||
-redA 5 redB 30 greenA 50 greenB 65
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>start</th><th>end</th><th>appointment</th></tr>
+<tr><td>1</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
-<tr><td>2</td><td>11</td><td>57</td><td>23</td><td>49</td><td class='preformatted'>           ------------++++++++++++++++++++++++++--------
-redA 11 greenA 23 greenB 49 redB 57
+<tr><td>2</td><td>2023-07-01</td><td>2023-07-31</td><td>2023-07-15</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
 </td></tr>
-<tr><td>3</td><td>23</td><td>47</td><td>36</td><td>61</td><td class='preformatted'>                       -------------+++++++++++||||||||||||||
-redA 23 greenA 36 redB 47 greenB 61
+<tr><td>3</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
-<tr><td>4</td><td>33</td><td>53</td><td>11</td><td>47</td><td class='preformatted'>           ||||||||||||||||||||||++++++++++++++------
-greenA 11 redA 33 greenB 47 redB 53
+<tr><td>4</td><td>2023-07-01</td><td>2024-06-01</td><td>2024-01-01</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
 </td></tr>
-<tr><td>5</td><td>5</td><td>15</td><td>0</td><td>30</td><td class='preformatted'>|||||++++++++++|||||||||||||||
-greenA 0 redA 5 redB 15 greenB 30
+<tr><td>5</td><td>2023-01-15</td><td>2023-02-05</td><td>2023-01-19</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
 </td></tr>
-<tr><td>6</td><td>37</td><td>51</td><td>19</td><td>31</td><td class='preformatted'>                   ||||||||||||      --------------
-greenA 19 greenB 31 redA 37 redB 51
+<tr><td>6</td><td>2023-01-01</td><td>2020-01-01</td><td>2020-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
-<tr><td>7</td><td>79</td><td>73</td><td>83</td><td>89</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
+<tr><td>7</td><td>2023-07-26</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
-<tr><td>8</td><td>97</td><td>101</td><td>107</td><td>103</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
+<tr><td>8</td><td>2023-07-26</td><td>2023-08-01</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
-<tr><td>9</td><td>-1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>10</td><td>1</td><td>-2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>11</td><td>1</td><td>2</td><td>-3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>12</td><td>1</td><td>2</td><td>3</td><td>-4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
-</td></tr>
-<tr><td>13</td><td>200</td><td>2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>14</td><td>1</td><td>200</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>15</td><td>1</td><td>2</td><td>200</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
-</td></tr>
-<tr><td>16</td><td>1</td><td>2</td><td>3</td><td>200</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+<tr><td>9</td><td>2023-06-01</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
 </td></tr>
 </table>
 </div>
-<div id='task1438' class='task_block'>
-<div class='task_id'>1438</div>
+<div id='task1912' class='task_block'>
+<div class='task_id'>1912</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит массив из 8 чисел. Первые 4 числа описывают зеленый прямоугольник. Следующие 4 числа - красный. Данные о каждом прямоугольнике идут по порядку: x левого верхнего угла, y левого верхнего угла, высота, ширина. Определить координаты верхнего левого угла, ширину и высоту прямоугольника, образующегося при их пересечении. Все координаты - экранные.<a href="tasks 6.html#task5635" target="_blank">ЛР6#5635(открыть в новой вкладке)</a>
+Пользователь вводит время. Нужно определить какой прием пищи следующий. Завтрак идет с 8:00 до 9:00. Обед идет с 13:00 до 14:00. Ужин идет с 18:30 до 19:15.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (Xr,Yr,Hr,Wr, Xg,Yg,Hg,Wg)</th><th>Результат</th></tr>
-<tr><td>1</td><td>10;10;200;100;50;50;300;350</td><td class='preformatted'>50;60;50;160
+<tr><th>Номер теста</th><th>Исходные данные (currentTime)</th><th>Результат</th></tr>
+<tr><td>1</td><td>06:00</td><td class='preformatted'>Следующий прием пищи - завтрак
 </td></tr>
-<tr><td>2</td><td>25;25;200;200;225;225;200;200</td><td class='preformatted'>25;200;25;200
+<tr><td>2</td><td>08:30</td><td class='preformatted'>Завтрак еще не закончился
 </td></tr>
-<tr><td>3</td><td>102;200;100;200;0;500;100;120</td><td class='preformatted'>102;18;200;100
+<tr><td>3</td><td>10:00</td><td class='preformatted'>Следующий прием пищи - обед
 </td></tr>
-<tr><td>4</td><td>500;200;100;200;10;400;100;120</td><td class='preformatted'>500;-370;200;100
+<tr><td>4</td><td>13:15</td><td class='preformatted'>Обед еще не закончился
 </td></tr>
-<tr><td>5</td><td>60;70;120;200;50;50;120;200</td><td class='preformatted'>60;190;70;100
+<tr><td>5</td><td>16:00</td><td class='preformatted'>Следующий прием пищи - ужин
 </td></tr>
-<tr><td>6</td><td>100;100;200;200;200;200;50;50</td><td class='preformatted'>200;50;200;50
+<tr><td>6</td><td>19:00</td><td class='preformatted'>Ужин еще не закончился
 </td></tr>
-<tr><td>7</td><td>150;150;150;300;150;150;150;300</td><td class='preformatted'>150;300;150;150
+<tr><td>7</td><td>23:00</td><td class='preformatted'>Следующий прием пищи - завтрак
 </td></tr>
-<tr><td>8</td><td>100;0;100;500;0;200;700;100</td><td class='preformatted'>100;0;0;100
+</table>
+</div>
+<div id='task3696' class='task_block'>
+<div class='task_id'>3696</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату и число. Определить какая дата получится если прибавить указанное количество дней к исходной дате.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>date</th><th>days</th></tr>
+<tr>
+<td>1</td><td>07/08/2023</td><td>40</td><td class='preformatted'>При смещении 07/08/2023 на 40 дней 
+получается дата 16/09/2023
 </td></tr>
-<tr><td>9</td><td>5;0;10;10;0;5;10;10</td><td class='preformatted'>5;5;5;5
+<tr>
+<td>2</td><td>31/12/2023</td><td>4</td><td class='preformatted'>При смещении 31/12/2023 на 4 дней 
+получается дата 04/01/2024
 </td></tr>
-<tr><td>10</td><td>105;5;10;10;100;0;10;30</td><td class='preformatted'>105;10;5;5
+<tr>
+<td>3</td><td>15/02/2013</td><td>14</td><td class='preformatted'>При смещении 15/02/2013 на 14 дней 
+получается дата 01/03/2013
 </td></tr>
-<tr><td>11</td><td>150;150;50;300;100;100;300;200</td><td class='preformatted'>150;150;150;50
+<tr>
+<td>4</td><td>15/02/2012</td><td>14</td><td class='preformatted'>При смещении 15/02/2012 на 14 дней 
+получается дата 29/02/2012
 </td></tr>
-<tr><td>12</td><td>0;0;802;200;0;0;610;610</td><td class='preformatted'>0;200;0;610
+</table>
+</div>
+<div id='task8381' class='task_block'>
+<div class='task_id'>8381</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату. Нужно напечатать даты пяти дней до указанной и пяти дней после указанной.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
+<tr><td>1</td><td>05.07.2023</td><td class='preformatted'>Минус 5 дней 30.06.2023
+Минус 4 дней 01.07.2023
+Минус 3 дней 02.07.2023
+Минус 2 дней 03.07.2023
+Минус 1 дней 04.07.2023
+Плюс 1 дней 06.07.2023
+Плюс 2 дней 07.07.2023
+Плюс 3 дней 08.07.2023
+Плюс 4 дней 09.07.2023
+Плюс 5 дней 10.07.2023
 </td></tr>
-<tr><td>13</td><td>200;200;100;100;900;200;100;10</td><td class='preformatted'>200;100;200;100
+<tr><td>2</td><td>28.02.2023</td><td class='preformatted'>Минус 5 дней 23.02.2023
+Минус 4 дней 24.02.2023
+Минус 3 дней 25.02.2023
+Минус 2 дней 26.02.2023
+Минус 1 дней 27.02.2023
+Плюс 1 дней 01.03.2023
+Плюс 2 дней 02.03.2023
+Плюс 3 дней 03.03.2023
+Плюс 4 дней 04.03.2023
+Плюс 5 дней 05.03.2023
 </td></tr>
-<tr><td>14</td><td>125;138;0;1;205;202;61;62</td><td class='preformatted'>125;1;138;0
+<tr><td>3</td><td>29.02.2020</td><td class='preformatted'>Минус 5 дней 24.02.2020
+Минус 4 дней 25.02.2020
+Минус 3 дней 26.02.2020
+Минус 2 дней 27.02.2020
+Минус 1 дней 28.02.2020
+Плюс 1 дней 01.03.2020
+Плюс 2 дней 02.03.2020
+Плюс 3 дней 03.03.2020
+Плюс 4 дней 04.03.2020
+Плюс 5 дней 05.03.2020
 </td></tr>
-<tr><td>15</td><td>100;100;120;220;220;100;120;220</td><td class='preformatted'>220;100;100;120
+<tr><td>4</td><td>01.01.2010</td><td class='preformatted'>Минус 5 дней 27.12.2009
+Минус 4 дней 28.12.2009
+Минус 3 дней 29.12.2009
+Минус 2 дней 30.12.2009
+Минус 1 дней 31.12.2009
+Плюс 1 дней 02.01.2010
+Плюс 2 дней 03.01.2010
+Плюс 3 дней 04.01.2010
+Плюс 4 дней 05.01.2010
+Плюс 5 дней 06.01.2010
+</td></tr>
+</table>
+</div>
+<div id='task8498' class='task_block'>
+<div class='task_id'>8498</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит две даты. Определить, совпадают ли дни недели у этих дат.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>firstDate</th><th>secondDate</th></tr>
+<tr>
+<td>1</td><td>2023-07-03</td><td>2023-08-13</td><td class='preformatted'>Дни недели различаются.
+У первой даты понедельник
+У второй даты воскресенье
+</td></tr>
+<tr>
+<td>2</td><td>2023-08-14</td><td>2023-08-07</td><td class='preformatted'>Дни недели совпадают и равны понедельник
+</td></tr>
+<tr>
+<td>3</td><td>2023-01-01</td><td>2022-01-01</td><td class='preformatted'>Дни недели различаются.
+У первой даты воскресенье
+У второй даты суббота
+</td></tr>
+</table>
+</div>
+<div id='task8096' class='task_block'>
+<div class='task_id'>8096</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит дату. Эта дата находится в какой-то неделе. Нужно определить день, месяц и год каждого из дней недели рядом с этой датой. Для этого определите понедельник этой недели, а затем прибавьте к нему от 1 до 7 дней
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (input)</th><th>Результат</th></tr>
+<tr><td>1</td><td>2023-07-03</td><td class='preformatted'>Нужно отнять 0 дней чтобы получился понедельник
+понедельник это 2023-07-03
+вторник это 2023-07-04
+среда это 2023-07-05
+четверг это 2023-07-06
+пятница это 2023-07-07
+суббота это 2023-07-08
+воскресенье это 2023-07-09
+</td></tr>
+<tr><td>2</td><td>2023-07-02</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
+понедельник это 2023-06-26
+вторник это 2023-06-27
+среда это 2023-06-28
+четверг это 2023-06-29
+пятница это 2023-06-30
+суббота это 2023-07-01
+воскресенье это 2023-07-02
+</td></tr>
+<tr><td>3</td><td>2000-01-01</td><td class='preformatted'>Нужно отнять 5 дней чтобы получился понедельник
+понедельник это 1999-12-27
+вторник это 1999-12-28
+среда это 1999-12-29
+четверг это 1999-12-30
+пятница это 1999-12-31
+суббота это 2000-01-01
+воскресенье это 2000-01-02
+</td></tr>
+<tr><td>4</td><td>2010-01-03</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
+понедельник это 2009-12-28
+вторник это 2009-12-29
+среда это 2009-12-30
+четверг это 2009-12-31
+пятница это 2010-01-01
+суббота это 2010-01-02
+воскресенье это 2010-01-03
+</td></tr>
+</table>
+</div>
+<div id='task8519' class='task_block'>
+<div class='task_id'>8519</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана дата по Омску(UTC+06:00). Определить сколько времени будет в Москве(UTC+03:00), Новосибирске(UTC+07:00), Лондоне (UTC+01:00), на Кубе (UTC-05:00), в Непале (UTC+05:45)
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
+<tr><td>1</td><td>18:16 07.08.2023</td><td class='preformatted'>Когда в Омске 18:16 07.08.2023
+в Новосибирске 19:16 07.08.2023
+в Москве 15:16 07.08.2023
+в Лондоне 13:16 07.08.2023
+на Кубе 07:16 07.08.2023
+в Непале 18:01 07.08.2023
+</td></tr>
+<tr><td>2</td><td>23:11 28.06.2023</td><td class='preformatted'>Когда в Омске 23:11 28.06.2023
+в Новосибирске 00:11 29.06.2023
+в Москве 20:11 28.06.2023
+в Лондоне 18:11 28.06.2023
+на Кубе 12:11 28.06.2023
+в Непале 22:56 28.06.2023
+</td></tr>
+<tr><td>3</td><td>04:35 02.09.2015</td><td class='preformatted'>Когда в Омске 04:35 02.09.2015
+в Новосибирске 05:35 02.09.2015
+в Москве 01:35 02.09.2015
+в Лондоне 23:35 01.09.2015
+на Кубе 17:35 01.09.2015
+в Непале 04:20 02.09.2015
+</td></tr>
+</table>
+</div>
+<div id='task2130' class='task_block'>
+<div class='task_id'>2130</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит смещение по часовым поясам. Определить как изменится время 2023-06-28 18:27 по Гринвичу(UTC+00:00) при введенной пользователем таймзоне.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (timezone)</th><th>Результат</th></tr>
+<tr><td>1</td><td>UTC+01:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC+01:00 время будет равно 2023-06-28 19:27
+</td></tr>
+<tr><td>2</td><td>UTC+10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC+10:00 время будет равно 2023-06-29 04:27
+</td></tr>
+<tr><td>3</td><td>UTC</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC время будет равно 2023-06-28 18:27
+</td></tr>
+<tr><td>4</td><td>UTC-10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне UTC-10:00 время будет равно 2023-06-28 08:27
+</td></tr>
+<tr><td>5</td><td>Turkey</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне Turkey время будет равно 2023-06-28 21:27
+</td></tr>
+<tr><td>6</td><td>Africa/Lubumbashi</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
+то при таймзоне Africa/Lubumbashi время будет равно 2023-06-28 20:27
 </td></tr>
 </table>
 </div>

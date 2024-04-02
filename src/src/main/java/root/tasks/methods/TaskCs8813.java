@@ -13,6 +13,8 @@ public class TaskCs8813 extends TwoInputValLayout {
                 "Он принимает в качестве аргумента 2 строки.",
                 "В теле метода task8813 напечатайте в консоль решение задачи, используя значения аргументов в качестве исходных данных."
         );
+        appendTaskDescEscaped("Сигнатура метода будет выглядеть так:");
+        appendCheckSingleNonEscaped("static void task8813(String firstName, String lastName) {");
         appendTaskDescEscaped("Вызовите метод task8813 в методе main класса Program с различными аргументами:");
         appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
         appendTaskDescEscaped("В результате запуска метода main класса Program, в консоли должен появиться текст:");
@@ -25,7 +27,8 @@ public class TaskCs8813 extends TwoInputValLayout {
         Library.task8813("Джеймс", "Бонд");
         Library.task8813("капитан", "Джек Воробей");
         String firstName = "Александр";
-        Library.task8813(firstName, "Крюков");
+        String lastName = "Крюков";
+        Library.task8813(firstName, lastName);
     }
 
     protected static class Library {

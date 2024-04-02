@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>20 Исключения</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>20 Возврат значения</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,721 +197,671 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Исключения</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Возврат значения</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7740' class='example'>1*</a><li><a href='#task1439'>2</a><li><a href='#task5101'>3</a><li><a href='#task8733'>4</a><li><a href='#task8139'>5</a><li><a href='#task5014'>6</a><li><a href='#task9354' class='example'>7*</a><li><a href='#task5259' class='example'>8*</a></ul><ul><li><a href='#task9020' class='example'>9*</a><li><a href='#task5871'>10</a><li><a href='#task7799'>11</a><li><a href='#task5170'>12</a><li><a href='#task7891'>13</a><li><a href='#task6882' class='example'>14*</a><li><a href='#task1212'>15</a><li><a href='#task9472'>16</a><li><a href='#task5081'>17</a></ul></div><div id="link_c2_p8.4" class="task_block">
-	<div class="check_single">В данной лабораторной работе внимание уделяется оформлению исключений в изучаемом языке программирования. Однако использование исключений не всегда оправдано. Полезные советы о том, когда лучше использовать механизм исключений, содержатся в главе 8.4 "Исключения" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=215" target="_blank">(открыть в новой вкладке)</a></div>
-</div><div id='task7740' class='task_block'>
-<div class='task_id'>7740</div>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7611' class='example'>1*</a><li><a href='#task4776'>2</a><li><a href='#task4757' class='example'>3*</a><li><a href='#task3597'>4</a><li><a href='#task6573'>5</a><li><a href='#task3355' class='example'>6*</a><li><a href='#task3147'>7</a><li><a href='#task6948' class='example'>8*</a><li><a href='#task8920'>9</a></ul><ul><li><a href='#task1995' class='example'>10*</a><li><a href='#task7759'>11</a><li><a href='#task2936' class='example'>12*</a><li><a href='#task3539'>13</a><li><a href='#task2121' class='example'>14*</a><li><a href='#task6401'>15</a><li><a href='#task7581'>16</a></ul></div><div class="task_block" id="info01">
+    <h4>Подготовка проекта</h4>
+	<div class="task_desc">Создайте проект с помощью maven.
+<ol>
+	<li>Откройте IntellijIDEA. Выберите пункт меню File, затем New, затем Project.</li>
+	<li>В появившемся окне на панели слева выберите Maven. Нажмите Next.</li>
+	<li>В поле groupId укажите "(ваш логин на гитхабе).github.io". В поле artifactId укажите "stage2". Нажмите Next.</li>
+	<li>Проверьте что Project name содержит "stage2". Установите свойство Project location так, чтобы в нем был абсолютный путь к вашему репозиторию.</li>
+	<li>Нажмите Finish.</li>
+</ol>
+	</div>
+    <div class="task_desc">У вас должен создаться проект со следующей структурой файлов:</div>
+	<img src="images/maven_project_structure.png">
+<ol start="6">
+<li>Содержимое папки <i>с исходным кодом</i> "src/main/java" будет компилироваться и компоноваться в запускаемую программу.</li>
+<li>Папка "src/main/resources" предназначена для хранения файлов с исходными данными.</li>
+<li>В папке с исходным кодом создайте класс Library. Он будет содержать методы для решения задач.</li>
+<li>В папке с исходным кодом создайте класс Program. Это вспомогательная программа для проверки методов из класса Library.</li>
+<li>Создайте метод main в классе Program по аналогии с методами main из задач прошлых лабораторных.</li>
+</ol>
+</div><div id='task7611' class='task_block'>
+<div class='task_id'>7611</div>
 <h3>Задача</h3>
-<ol start='1'><li>В папке с исходным кодом создайте класс Runner7740</li><li>Создайте метод main в классе Runner7740 по аналогии с методами main из задач прошлых практических.</li><li>Решите описанную ниже задачу. Исходные данные пользователь вводит вручную.</li><li>Обработайте потенциальное исключение, которое возникает когда пользователь вводит не числа.</li></ol><div class='task_desc'>
-Вычислить результат по формуле x + 7, где x вводится с клавиатуры
+<div class='task_desc'>
+Вычислить результат по формуле x + 7.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task7611.</li><li>Он принимает в качестве аргументов 1 действительное число.</li><li>Он возвращает действительное число</li><li>В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных</li></ol><div class='task_desc'>
+Код метода будет выглядеть так:
+</div>
+<div class='check_single preformatted'>public class Library {
+    public static double task7611(double x) {
+        double res;
+        res =  x + 7;
+        return res;
+    }
+}</div>
+<div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>double result;
+result = Library.task7611(11.13);//в качестве аргумента передано число
+System.out.printf("%.4f\n", result);
+double value = -79.19;
+result = Library.task7611(value);//в качестве аргумента передано значение переменной
+System.out.printf("%.4f\n", result);
+System.out.printf("%.4f\n", Library.task7611(0));//результат используется без промежуточной переменной
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>18,1300
+-72,1900
+7,0000
+</div>
+</div>
+<div id='task4776' class='task_block'>
+<div class='task_id'>4776</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Вычислить результат по формуле.<formula>
+		<sqrt><val>
+			1-sin<sup>2</sup>(xRad)
+		</val></sqrt>
+	</formula>
+</div>
+<div class='task_desc'>
+Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче <a href="tasks 3.html#task7711" target="_blank">ЛР3#7711(открыть в новой вкладке)</a>
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task4776.</li><li>Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.</li><li>В теле метода вычислите результат и верните его</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>double result;
+result = TaskCs4776.Library.task4776(69.97);
+System.out.printf("%.4f\n", result);
+//для наглядности проверки можно писать дополнительные условия
+if (0.9395 &lt;= result && result &lt;= 0.9396) {
+    System.out.println("Верно");
+} else {
+    System.out.println("Результат некорректный");
+}
+result = TaskCs4776.Library.task4776(31);
+System.out.printf("%.4f\n", result);
+System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>0,9395
+Верно
+0,5150
+1,0000
+</div>
+</div>
+<div id='task4757' class='task_block'>
+<div class='task_id'>4757</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны два числа, нужно вычесть из большего числа меньшее.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (X)</th><th>Результат</th></tr>
-<tr><td>1</td><td>11.13</td><td class='preformatted'>18,1300</td></tr>
-<tr><td>2</td><td>-7919</td><td class='preformatted'>-7912,0000</td></tr>
-<tr><td>3</td><td>0</td><td class='preformatted'>7,0000</td></tr>
-<tr><td>4</td><td>word</td><td class='preformatted'>Не удалось преобразовать строку в число 'word'
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>first</th><th>second</th></tr>
+<tr>
+<td>1</td><td>99</td><td>17</td><td class='preformatted'>82
 </td></tr>
-<tr><td>5</td><td>$14</td><td class='preformatted'>Не удалось преобразовать строку в число '$14'
+<tr>
+<td>2</td><td>14</td><td>5</td><td class='preformatted'>9
 </td></tr>
 </table>
 <div class='task_desc'>
-Попробуйте решить задачу как раньше и в качестве исходных данных ввести 'word'.
+При работе с методами вы можете встретить ошибку компиляции "missing return statement". Пример когда у вас программа без ветвлений:
 </div>
-<div class='check_single preformatted'>double x = Double.Parse(value);
-double result = x + 7;
-System.out.printf("%.4f", result);</div>
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+}</div>
 <div class='task_desc'>
-При вводе 'word', у вас возникнет примерно такая ошибка:
+В этом случае для исправления нужно только дописать команду "return result;" как в примере ниже:
 </div>
-<div class='check_single preformatted'>Exception in thread "main" java.lang.<b>NumberFormatException</b>: For input string: "word"
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at root.tasks.exceptions.TaskJava7740.logic(TaskJava7740.java:32)
-	at root.tasks.OneInputValLayout.rethrowAsRuntime(OneInputValLayout.java:16)
-	at root.tasks.OneInputValLayout.appendCheckValuesRow(OneInputValLayout.java:68)
-	at root.tasks.exceptions.TaskJava7740.makeLayout(TaskJava7740.java:20)
-	at root.tasks.LayoutMaker.getContent(LayoutMaker.java:29)
-	at root.tasks.LayoutMaker.toString(LayoutMaker.java:232)
-	at java.lang.String.valueOf(String.java:2994)
-	at java.io.PrintStream.println(PrintStream.java:821)
-	at root.tasks.exceptions.TaskJava7740.main(TaskJava7740.java:43)
-
-Process finished with exit code 1
+<div class='check_single preformatted'>public static int Sum(int a, int b){
+    int result;
+    result = a + b;
+    return result;//эта команда добавлена
+}</div>
+<div class='task_desc'>
+Если же ваша программа содержит ветвления (if), то ошибка "missing return statement" возникает в случае когда вы написали метод примерно так:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+}</div>
+<div class='task_desc'>
+При компиляции, компьютер выполняет предварительный анализ кода. В этом примере он видит что команды return находятся внутри ветвлений. Для компьютера возможна ситуация, когда оба условия if будут ложны, а значит ни одна из команд return не будет выполнена. В данном примере - когда a строго равно b. Первый вариант исправления - предусмотреть return "на всякий случай" как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    if (b < a) {
+        result = a - b;
+        return result;
+    }
+    return 0;//на всякий случай
+}</div>
+<div class='task_desc'>
+Другой вариант исправления - использовать if else. Если условие будет ложно, то будут выполнены команды из else. Если истинно - команды из if. Компьютер считает, что хотя бы одна из команд return будет выполнена Как в примере ниже:
+</div>
+<div class='check_single preformatted'>public static int diff(int a, int b) {
+    int result;
+    if (a < b) {
+        result = b - a;
+        return result;
+    }
+    else {//здесь раньше был if (b < a)
+        result = a - b;
+        return result;
+    }
+}</div>
+</div>
+<div id='task3597' class='task_block'>
+<div class='task_id'>3597</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны вещественные числа a, b, c. Если a равно 0, вернуть сообщение об ошибке "Уравнение не является квадратным". Найдите в прошлых работах формулу для вычисления дискриминанта, вычислите его и напишите одно из трех сообщений в зависимости от полученного значения.
+</div>
+<ol start='1'><li>Если дискриминант равен 0, то у уравнения один вещественный корень.</li><li>Если дискриминант меньше 0, то у уравнения нет вещественных корней.</li><li>Если дискриминант больше 0, то у уравнения два вещественных корня.</li></ol><ol start='4'><li>В классе Library реализуйте публичный статический метод task3597.</li><li>Он принимает в качестве аргумента 3 действительных числа и возвращает строку.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>String result;
+result = Library.task3597(1, 2, 3);
+System.out.println(result);
+result = Library.task3597(11, 13, 19);
+System.out.println(result);
+double a, b, c;
+a = 3;
+b = 17;
+c = 5;
+System.out.println(Library.task3597(a, b, c));
+a = 5;
+b = 31;
+c = 29;
+System.out.println(Library.task3597(a, b, c));
+System.out.println(Library.task3597(3, 6, 3));
+System.out.println(Library.task3597(1, 2, 1));
+System.out.println(Library.task3597(0, 7, 13));
 </div>
 <div class='task_desc'>
-Чтобы программа корректно обрабатывала такие ошибки, нужно добавить конструкцию try catch как в примере ниже:
+В результате запуска метода main класса Program, в консоли должен появиться текст:
 </div>
-<div class='check_single preformatted'>try {//внутри блока try предполагаем, что пользователь ввел число
-    double x = Double.parseDouble(value);
-    double result = x + 7;
-    System.out.printf("%.4f", result);
-} catch (NumberFormatException ex) {
-    //Слово NumberFormatException было в первое строке ошибки в варианте программы без try catch
-    //если преобразовать строку в число не получилось, компьютер перейдет в этот блок
-    System.out.println("Не удалось преобразовать строку в число '" + value + "'");
+<div class='check_single preformatted'>Вещественных корней уравнения 1.0x^2 + 2.0x + 3.0 = 0 нет
+Вещественных корней уравнения 11.0x^2 + 13.0x + 19.0 = 0 нет
+У уравнения 3.0x^2 + 17.0x + 5.0 = 0 два вещественных корня
+У уравнения 5.0x^2 + 31.0x + 29.0 = 0 два вещественных корня
+Уравнение 3.0x^2 + 6.0x + 3.0 = 0 имеет один корень
+Уравнение 1.0x^2 + 2.0x + 1.0 = 0 имеет один корень
+Данное уравнение не является квадратным
+</div>
+</div>
+<div id='task6573' class='task_block'>
+<div class='task_id'>6573</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Найти произведение всех целых чисел от А до B включительно. Значение A может быть как меньше, так и больше B. Для хранения результата используйте переменную типа long. Этот тип поддерживает очень большие целые числа.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task6573.</li><li>Он принимает в качестве аргумента 2 целых числа и возвращает большое целое число.</li><li>В теле метода нужно вернуть результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>long result;
+result = Library.task6573(8, 13);
+System.out.println(result);
+result = Library.task6573(13, 8);
+System.out.println(result);
+int from, to;
+from = 159;
+to = 161;
+result = Library.task6573(from, to);
+System.out.println(result);
+from = -2;
+to = 600;
+System.out.println(Library.task6573(from, to));
+System.out.println(Library.task6573(648, 648));
+System.out.println(Library.task6573(35, 24));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>1235520
+1235520
+4095840
+0
+648
+399703747322880000
+</div>
+</div>
+<div id='task3355' class='task_block'>
+<div class='task_id'>3355</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово "Введение", а после всех чисел - слово "Заключение". Перед каждым числом нужно написать слово "Глава".
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task3355.</li><li>Метод принимает одно целое число как аргумент и возвращает строку.</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (total)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>Введение
+Заключение
+</td></tr>
+<tr><td>2</td><td>1</td><td class='preformatted'>Введение
+Глава 1
+Заключение
+</td></tr>
+<tr><td>3</td><td>2</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Заключение
+</td></tr>
+<tr><td>4</td><td>3</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Глава 3
+Заключение
+</td></tr>
+<tr><td>5</td><td>4</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Глава 3
+Глава 4
+Заключение
+</td></tr>
+<tr><td>6</td><td>6</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Глава 3
+Глава 4
+Глава 5
+Глава 6
+Заключение
+</td></tr>
+<tr><td>7</td><td>5</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Глава 3
+Глава 4
+Глава 5
+Заключение
+</td></tr>
+<tr><td>8</td><td>20</td><td class='preformatted'>Введение
+Глава 1
+Глава 2
+Глава 3
+Глава 4
+Глава 5
+Глава 6
+Глава 7
+Глава 8
+Глава 9
+Глава 10
+Глава 11
+Глава 12
+Глава 13
+Глава 14
+Глава 15
+Глава 16
+Глава 17
+Глава 18
+Глава 19
+Глава 20
+Заключение
+</td></tr>
+</table>
+</div>
+<div id='task3147' class='task_block'>
+<div class='task_id'>3147</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит символ (needle), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно выводить все эти буквы в строчку, пока не будет выведена буква X.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task1292.</li><li>Он принимает символ и возвращает строку.</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
+<tr><td>1</td><td>a</td><td class='preformatted'>a
+</td></tr>
+<tr><td>2</td><td>b</td><td class='preformatted'>ab
+</td></tr>
+<tr><td>3</td><td>d</td><td class='preformatted'>abcd
+</td></tr>
+<tr><td>4</td><td>h</td><td class='preformatted'>abcdefgh
+</td></tr>
+<tr><td>5</td><td>i</td><td class='preformatted'>abcdefgh
+</td></tr>
+</table>
+</div>
+<div id="link_c2_p7.1" class="task_block">
+	<div class="check_single">В предыдущих заданиях на простых задачках вы тренировались в оформлении метода: передаче аргументов и возвращении значения значении. Когда же на практике нужно применять методы? Ответ на этот вопрос дан в главе 7.1 "Разумные причины создания методов" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=182" target="_blank">(открыть в новой вкладке)</a></div>
+</div><div id='task6948' class='task_block'>
+<div class='task_id'>6948</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое введенных элементов. Вывести с точностью 6 знаков после запятой.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task6948.</li><li>В качестве аргумента принимает массив целых чисел.</li><li>Возвращает действительное число.</li></ol><div class='task_desc'>
+Добавьте в метод main класса Program следующий код
+</div>
+<div class='check_single preformatted'>int[] values;
+values = new int[]{9, 8, 9, 1, 1, 5, 1, 1};
+double result;
+result = Library.task6948(values);
+System.out.printf("%.6f\n", result);
+values = new int[]{1, 2, 3, 4, 1, 3, 4, 4, 4, 4};
+result = Library.task6948(values);
+System.out.printf("%.6f\n", result);
+result = Library.task6948(new int[]{5, 5, 5, 5, 5});
+System.out.printf("%.6f\n", result);
+result = Library.task6948(new int[]{});
+System.out.printf("%.6f\n", result);
+int[] array = new int[]{1, 9, 1, 30, 9, 1, 100};
+System.out.printf("%.6f\n", Library.task6948(array));
+System.out.printf("%.6f\n",
+        Library.task6948(new int[]{
+                100000, 1, 1
+        })
+);
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, должен получиться такой результат:
+</div>
+<div class='check_single preformatted'>4,375000
+3,000000
+5,000000
+0,000000
+21,571429
+33334,000000
+</div>
+</div>
+<div id='task8920' class='task_block'>
+<div class='task_id'>8920</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит фрагмент K и данные - символы, разделенные пробелами. Посчитать сколько раз встречается фрагмент K в массиве.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task8920</li><li>Метод принимает два аргумента: строку и массив строк</li><li>Метод возвращает число</li></ol><table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>K</th><th>data</th></tr>
+<tr>
+<td>1</td><td>e</td><td>q w e r q w</td><td class='preformatted'>1
+</td></tr>
+<tr>
+<td>2</td><td>t</td><td>q w e r q w e r q w e</td><td class='preformatted'>0
+</td></tr>
+<tr>
+<td>3</td><td>w</td><td>e w w w w w</td><td class='preformatted'>5
+</td></tr>
+<tr>
+<td>4</td><td>q</td><td>r r r r r r</td><td class='preformatted'>0
+</td></tr>
+<tr>
+<td>5</td><td>qw</td><td>qw er ty qw</td><td class='preformatted'>2
+</td></tr>
+</table>
+</div>
+<div id='task1995' class='task_block'>
+<div class='task_id'>1995</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод compareArrays.</li><li>Он принимает в качестве аргументов 2 массива целых чисел</li><li>Он возвращает строку</li><li>В теле метода сформируйте ответ и верните его. Используйте значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
+В методе main класса Program добавьте следующий код:
+</div>
+<div class='check_single preformatted'>int[] standard = new int[]{5, 4, 3, 2, 1};
+int[] array = new int[]{5, 4, 3, 2, 1};
+String result = Library.compareArrays(standard, array);
+System.out.println(result);
+array = new int[]{5, 4, 3};
+result = Library.compareArrays(standard, array);
+System.out.println(result);
+System.out.println(Library.compareArrays(
+        new int[]{9, 8, 7, 6},
+        new int[]{9, 8, 7, 6, 5}
+));
+standard = new int[]{9, 8, 7, 6, 5};
+array = new int[]{9, 111, 7};
+System.out.println(Library.compareArrays(standard, array));
+array = new int[]{6, 5, 4, 3, 2, 1};
+System.out.println(Library.compareArrays(
+        new int[]{6, 5, 0, 3},
+        array
+));
+</div>
+<div class='task_desc'>
+В результате запуска метода main класса Program, в консоли должен появиться текст:
+</div>
+<div class='check_single preformatted'>Массивы одинаковы
+Массивы начинают различаться на индексе 3
+Массивы начинают различаться на индексе 4
+Массивы начинают различаться на индексе 1
+Массивы начинают различаться на индексе 2
+</div>
+</div>
+<div id='task7759' class='task_block'>
+<div class='task_id'>7759</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти абсолютное отклонение каждого элемента от среднего арифметического данных значений.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task7759</li><li>Метод принимает один аргумент - массив целых чисел</li><li>Метод возвращает массив действительных чисел</li></ol><table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (numbers)</th><th>Результат</th></tr>
+<tr><td>1</td><td>9 8 9 1 1 5 1 1</td><td class='preformatted'>4,6250  3,6250  4,6250  3,3750  3,3750  0,6250  3,3750  3,3750  </td></tr>
+<tr><td>2</td><td>1 2 3 4 1 3 4 4 4 4</td><td class='preformatted'>2,0000  1,0000  0,0000  1,0000  2,0000  0,0000  1,0000  1,0000  1,0000  1,0000  </td></tr>
+<tr><td>3</td><td>5 5 5 5 5</td><td class='preformatted'>0,0000  0,0000  0,0000  0,0000  0,0000  </td></tr>
+<tr><td>4</td><td></td><td class='preformatted'></td></tr>
+<tr><td>5</td><td>1 1 1 9 9 100 30</td><td class='preformatted'>20,5714  20,5714  20,5714  12,5714  12,5714  78,4286  8,4286  </td></tr>
+<tr><td>6</td><td>1000000 1 1</td><td class='preformatted'>666666,0000  333333,0000  333333,0000  </td></tr>
+</table>
+</div>
+<div id='task2936' class='task_block'>
+<div class='task_id'>2936</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число M и данные - целые числа, разделенные пробелами. Умножить все элементы массива на M.
+</div>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task2936.</li><li>Он принимает в качестве аргументов 1 действительное число и массив действительных чисел.</li><li>Методв возвращает массив действительных чисел.</li><li>В теле метода создайте новый массив и заполните его значениями, которые получатся в результате решения задачи.</li><li>Массив, который был передан в качестве аргумента, измениться не должен</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double[] data, result;
+data = new double[]{9, 8, 7, 6, 5, 4};
+result = Library.task2936(31, data);
+System.out.println("При умножении массива");
+int i = 0;
+while (i < data.length) {
+    System.out.print(data[i] + "  ");
+    i++;
+}
+System.out.println("\nна число 31, получился массив ");
+i = 0;
+while (i < result.length) {
+    System.out.print(result[i] + "  ");
+    i++;
 }
 </div>
+<div class='task_desc'>
+В результате запуска метода main должен получиться следующий результат:
 </div>
-<div id='task1439' class='task_block'>
-<div class='task_id'>1439</div>
+<div class='check_single preformatted'>При умножении массива
+9.0  8.0  7.0  6.0  5.0  4.0  
+на число 31, получился массив 
+279.0  248.0  217.0  186.0  155.0  124.0  </div>
+</div>
+<div id='task3539' class='task_block'>
+<div class='task_id'>3539</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое среди введенных чисел. Фрагменты строк не участвуют в подсчете количества элементов. Сообщить пользователю индекс и значение некорректных элементов.
+Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
-<tr><td>1</td><td>9 8 7 6 5</td><td class='preformatted'>Количество обработанных чисел 5 их сумма 35.0
-Среднее арифметическое 7,0000</td></tr>
-<tr><td>2</td><td>5 2 11 3 1 3 4 4 4 4</td><td class='preformatted'>Количество обработанных чисел 10 их сумма 41.0
-Среднее арифметическое 4,1000</td></tr>
-<tr><td>3</td><td>9 q 8 w 7 e 6 r 5 t</td><td class='preformatted'>Элемент №1 со значением q не число
-Элемент №3 со значением w не число
-Элемент №5 со значением e не число
-Элемент №7 со значением r не число
-Элемент №9 со значением t не число
-Количество обработанных чисел 5 их сумма 35.0
-Среднее арифметическое 7,0000</td></tr>
-<tr><td>4</td><td>q w e r</td><td class='preformatted'>Элемент №0 со значением q не число
-Элемент №1 со значением w не число
-Элемент №2 со значением e не число
-Элемент №3 со значением r не число
-Количество обработанных чисел 0 их сумма 0.0
-В исходном массиве отсутствовали числа
-</td></tr>
-<tr><td>5</td><td></td><td class='preformatted'>Элемент №0 со значением  не число
-Количество обработанных чисел 0 их сумма 0.0
-В исходном массиве отсутствовали числа
-</td></tr>
-<tr><td>6</td><td>0 0 0 0</td><td class='preformatted'>Количество обработанных чисел 4 их сумма 0.0
-Среднее арифметическое 0,0000</td></tr>
-</table>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task3539</li><li>Он принимает в качестве аргумента массив действительных чисел</li><li>В теле метода создайте новый массив и заполните его значениями, которые получатся в результате решения задачи.</li><li>Массив, который был передан в качестве аргумента, измениться не должен</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double[] data = new double[]{4, 2, 3, 4, 3, 2};
+double[] result = Library.task3539(data);
+System.out.println("Исходный массив:");
+int i = 0;
+while (i < data.length) {
+    System.out.print(data[i] + " ");
+    i += 1;
+}
+System.out.println("\nРезультат обработки:");
+i = 0;
+while (i < result.length) {
+    System.out.print(result[i] + " ");
+    i += 1;
+}
 </div>
-<div id='task5101' class='task_block'>
-<div class='task_id'>5101</div>
+<div class='task_desc'>
+В результате запуска метода main должен получиться следующий результат:
+</div>
+<div class='check_single preformatted'>Исходный массив:
+4.0 2.0 3.0 4.0 3.0 2.0 
+Результат обработки:
+2.0 0.0 1.0 2.0 1.0 0.0 </div>
+</div>
+<div id='task2121' class='task_block'>
+<div class='task_id'>2121</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Посчитать количество чисел в файле (C), исключая первое число. Проверить, равны ли числа N и C. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.
+Даны два числа: P и Q. Нужно сравнить их.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task5101/test1.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test1.txt</a></td><td class='preformatted'>Заявленое количество 5, фактическое количество 6
-</td></tr>
-<tr><td>2</td><td><a href="files/task5101/test2.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test2.txt</a></td><td class='preformatted'>Заявленное и фактическое количество чисел совпадает и равно 0
-</td></tr>
-<tr><td>3</td><td><a href="files/task5101/test3.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test3.txt</a></td><td class='preformatted'>Заявленое количество 2511, фактическое количество 2512
-</td></tr>
-<tr><td>4</td><td><a href="files/task5101/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test4.txt</a></td><td class='preformatted'>Заявленое количество 3, фактическое количество 6
-</td></tr>
-<tr><td>5</td><td><a href="files/task5101/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test5.txt</a></td><td class='preformatted'>Заявленое количество 10, фактическое количество 7
-</td></tr>
-<tr><td>6</td><td><a href="files/task5101/test6.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test6.txt</a></td><td class='preformatted'>Файл пуст
-</td></tr>
-<tr><td>7</td><td><a href="files/task5101/test7.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test7.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5101\test7.txt
-</td></tr>
-<tr><td>8</td><td><a href="files/task5101/test8.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test8.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
-</td></tr>
-<tr><td>9</td><td><a href="files/task5101/test9.txt" target="_blank">открыть в новой вкладке<br>files/task5101/test9.txt</a></td><td class='preformatted'>Заявленое количество 1, фактическое количество 2
-</td></tr>
-</table>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task2121.</li><li>Он принимает два целых числа.</li><li>Метод возвращает логическое значение.</li><li>Если P &lt;= Q, метод должен вернуть true</li><li>Если Q &lt; P, метод должен вернуть false</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>int p = 0, q = 7;
+boolean result = Library.Task2121(p, q);
+System.out.println(result);
+System.out.println(Library.Task2121(14, 9));
+System.out.println(Library.Task2121(5, 5));
 </div>
-<div id='task8733' class='task_block'>
-<div class='task_id'>8733</div>
+<div class='task_desc'>
+В результате запуска метода main должен получиться следующий результат:
+</div>
+<div class='check_single preformatted'>true
+false
+true
+</div>
+<div class='task_desc'>
+Метод для решения задачи будет выглядеть так:
+</div>
+<div class='check_single preformatted'>public static boolean Task2121(int P, int Q) {
+    if (P <= Q) {
+        return true;
+    } else {
+        return false;
+    }
+}</div>
+<div class='check_single preformatted'>Если для ответа вам достаточно одного логического выражения, то метод можно сократить до:</div>
+<div class='check_single preformatted'>public static boolean Task2121(int P, int Q) {
+    return P <= Q;
+}</div>
+</div>
+<div id='task6401' class='task_block'>
+<div class='task_id'>6401</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Первое число в файле – количество чисел (N). Оно не участвует в вычислениях. Найти среднее арифметическое только тех чисел, значение которых не превышает 20. Данные в файле написаны в столбик без дополнительного оформления.
+A и B обозначают границы интервала. Нужно проверить, принадлежит ли значение X указанному интервалу.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task8733/test1.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test1.txt</a></td><td class='preformatted'>Общее количество чисел 0
-Количество чисел 0 их сумма 0.0
-Среднее арифметическое 0</td></tr>
-<tr><td>2</td><td><a href="files/task8733/test2.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test2.txt</a></td><td class='preformatted'>Заявленое количество 10, фактическое количество 11
-</td></tr>
-<tr><td>3</td><td><a href="files/task8733/test3.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test3.txt</a></td><td class='preformatted'>Заявленое количество 564, фактическое количество 565
-</td></tr>
-<tr><td>4</td><td><a href="files/task8733/test4.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test4.txt</a></td><td class='preformatted'>Заявленое количество 373, фактическое количество 375
-</td></tr>
-<tr><td>5</td><td><a href="files/task8733/test5.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test5.txt</a></td><td class='preformatted'>Общее количество чисел 3
-Количество чисел 1 их сумма 12.0
-Среднее арифметическое 12,0000</td></tr>
-<tr><td>6</td><td><a href="files/task8733/test6.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test6.txt</a></td><td class='preformatted'>Заявленое количество 3601, фактическое количество 3596
-</td></tr>
-<tr><td>7</td><td><a href="files/task8733/test7.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test7.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
-</td></tr>
-<tr><td>8</td><td><a href="files/task8733/test8.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test8.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task8733\test8.txt
-</td></tr>
-<tr><td>9</td><td><a href="files/task8733/test9.txt" target="_blank">открыть в новой вкладке<br>files/task8733/test9.txt</a></td><td class='preformatted'>Файл пуст
-</td></tr>
-</table>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task6401.</li><li>Он принимает три действительных числа: A, B, X и возвращает логическое значение.</li><li>Если X принадлежит интервалу от A до B включительно, метод должен вернуть значение true.</li><li>Если X за пределами интервала от A до B включительно, метод должен вернуть значение false.</li><li>Если A < B, значит интервал от A до B. Если B < A, значит интервал от B до A.</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double a = -2, b = 7;
+boolean result;
+double x = -10;
+result = Library.Task6401(a, b, x);
+if (result) {
+    System.out.println(x + " принадлежит интервалу");
+} else {
+    System.out.println(x + " за пределами интервала");
+}
+result = Library.Task6401(b, a, x);
+if (result) {
+    System.out.println(x + " принадлежит интервалу");
+} else {
+    System.out.println(x + " за пределами интервала");
+}
+x = 0;
+if (Library.Task6401(-2, 7, x)) {
+    System.out.println(x + " принадлежит интервалу");
+} else {
+    System.out.println(x + " за пределами интервала");
+}
+
+if (Library.Task6401(7, -2, x)) {
+    System.out.println(x + " принадлежит интервалу");
+} else {
+    System.out.println(x + " за пределами интервала");
+}
+System.out.println(Library.Task6401(-2, 7, 15));
+System.out.println(Library.Task6401(-2, 7, 4));
 </div>
-<div class="task_block" id="task8139">
-	<div class="task_id">8139</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Исходный файл содержит целые числа в диапазоне от 1000 до 9999, написаные в столбик без дополнительного оформления.  Количество чисел заранее не известно. Определить, сколько раз встречаются такие числа, в которых есть две одинаковых цифры подряд. Например: 1123, 1223, 1233.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Содержимое файла</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test1.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>Некорректное число</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test2.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>569</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test3.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>253</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test4.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>Не удается считать число</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test5.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>Некорректное число</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test6.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test7.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>Файл не существует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task8139/test8.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td>Некорректное число</td>
-		</tr>
-	</table>
-</div><div id='task5014' class='task_block'>
-<div class='task_id'>5014</div>
+<div class='task_desc'>
+В результате запуска метода main должен получиться следующий результат:
+</div>
+<div class='check_single preformatted'>-10.0 за пределами интервала
+-10.0 за пределами интервала
+0.0 принадлежит интервалу
+0.0 принадлежит интервалу
+false
+true
+</div>
+</div>
+<div id='task7581' class='task_block'>
+<div class='task_id'>7581</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Файл с исходными данными содержит целые числа, написанные в столбик без дополнительного оформления. Нужно вывести числа из файла в строчку через запятую. Перед первым и после последнего числа запятой быть не должно. Перехватить сгенерированные исключения и вывести указанное сообщение об ошибке.
+Определить, присутствует ли в данном массиве символ "x". Чтобы определить, что символ отсутствует, сравнивайте каждый элемент массива с эталоном "x". Если они равны, тогда возвращайте значение true. Если весь массив был просмотрен, а равных элементов не было найдено, верните false.
 </div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (file)</th><th>Результат</th></tr>
-<tr><td>1</td><td><a href="files/task5014/test1.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test1.txt</a></td><td class='preformatted'>1, 2, 3, 4, 5</td></tr>
-<tr><td>2</td><td><a href="files/task5014/test2.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test2.txt</a></td><td class='preformatted'>0</td></tr>
-<tr><td>3</td><td><a href="files/task5014/test3.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test3.txt</a></td><td class='preformatted'>Файл пуст
-</td></tr>
-<tr><td>4</td><td><a href="files/task5014/test4.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test4.txt</a></td><td class='preformatted'>-1, -2, -3</td></tr>
-<tr><td>5</td><td><a href="files/task5014/test5.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test5.txt</a></td><td class='preformatted'>Файл не найден C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task5014\test5.txt
-</td></tr>
-<tr><td>6</td><td><a href="files/task5014/test6.txt" target="_blank">открыть в новой вкладке<br>files/task5014/test6.txt</a></td><td class='preformatted'>Не удалось преобразовать строку в число
-</td></tr>
-</table>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод Task7581.</li><li>Он принимает массив строковых значений и возвращает логическое значение.</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>String[] arr = "a;s;d;f".split(";");
+boolean result = Library.Task7581(arr);
+System.out.println(result);
+arr = new String[]{"z", "x", "c", "v", "x"};
+System.out.println(Library.Task7581(arr));
+result = Library.Task7581("zx;df;ty;jk".split(";"));
+System.out.println(result);
+System.out.println(
+        Library.Task7581(
+                "q;a;z;w;s;x;e;d;c".split(";")
+        )
+);
+System.out.println(Library.Task7581(new String[0]));
 </div>
-<div id='task9354' class='task_block'>
-<div class='task_id'>9354</div>
-<h3>Задача</h3>
-<h4>Прочитайте условие задачи.</h4>
 <div class='task_desc'>
-Вычислить дискриминант квадратного уравнения по формуле <formula>discriminant = b<sup>2</sup>-4ac</formula>
+В результате запуска метода main должен получиться следующий результат:
 </div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>a</th><th>b</th><th>c</th></tr>
-<tr><td>1</td><td>7</td><td>1</td><td>3</td><td class='preformatted'>Дискриминант уравнения y=7,000000x^2+1,000000x+3,000000 равен -83,000000</td></tr>
-<tr><td>2</td><td>7247</td><td>7243</td><td>7229</td><td class='preformatted'>Дискриминант уравнения y=7247,000000x^2+7243,000000x+7229,000000 равен -157093203,000000</td></tr>
-<tr><td>3</td><td>-11</td><td>-13</td><td>-17</td><td class='preformatted'>Дискриминант уравнения y=-11,000000x^2+-13,000000x+-17,000000 равен -579,000000</td></tr>
-<tr><td>4</td><td>0</td><td>1</td><td>3</td><td class='preformatted'>Уравнение y=0,000000x^2+1,000000x+3,000000 не является квадратным</td></tr>
-<tr><td>5</td><td>0</td><td>1000</td><td>2000</td><td class='preformatted'>Уравнение y=0,000000x^2+1000,000000x+2000,000000 не является квадратным</td></tr>
-</table>
-<h4>Реализуйте статический метод с тремя аргументами</h4>
-<ol start='1'><li>Объявите в классе Library публичный статический метод getDiscriminant.</li><li>Он принимает в качестве аргумента 3 действительных числа.</li><li>Метод возвращает действительное число в качестве результата.</li><li>Если значение аргумента "a" равно 0, то метод должен выбросить исключение IllegalArgumentException.</li></ol><h4>Проверьте корректность работы метода с помощью вспомогательной программы</h4>
-<ol start='5'><li>В методе main класса Program вызовите метод getDiscriminant класса Library.</li><li>Первым аргументом передайте ему значение 7, вторым - значение 1, третьим - значение 3.</li><li>Получите три действительных числа от пользователя и запишите их в переменные a, b, c</li><li>Вызовите метод getDiscriminant класса Library и передайте ему значения a, b, c в качестве аргументов.</li><li>Предусмотрите перехват исключения, которое может выбросить метод.</li><li>Проверьте программу по таблице тестовых и ожидаемых данных</li></ol></div>
-<div id='task5259' class='task_block'>
-<div class='task_id'>5259</div>
-<h3>Задача</h3>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task1934 для решения задачи<a href="tasks 4.html#task1934" target="_blank">ЛР4#1934(открыть в новой вкладке)</a></li><li>Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.</li><li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.</li><li>В папке с исходным кодом создайте класс Runner1934.</li><li>Создайте метод main в классе Runner1934 по аналогии с методами main из задач прошлых практических.</li><li>Создайте еще один метод в классе Runner1934. Назовите его step1934. Он ничего не возвращает и не принимает аргументов.</li></ol><h4>Реализуйте метод Main</h4>
-<ol start='7'><li>Выведите сообщение "Начало работы программы".</li><li>Выведите в консоль сообщение "Введите значения A и B".</li><li>Объявите переменные a и b для хранения целых чисел.</li><li>Инициализируйте переменные a и b значениями, полученными из консоли.</li><li>Объявите переменную result для хранения действительных чисел.</li><li>Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.</li><li>Результат вызова метода запишите в переменную result.</li><li>Выведите на экран сообщение "Результат равен " и значение переменной result с точностью 4 знака после запятой.</li><li>Выведите сообщение "Программа завершена успешно".</li><li>В результате запуска метода main класса Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки "Исходный результат". Возможны отличия в номерах строк и расположении файлов.</li></ol><h4>Проверьте, что метод выбрасывает необработанные исключения</h4>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr><td>1</td><td>5</td><td>-11</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-5
--11
-Результат равен 43.8748
-Программа завершена успешно</td></tr>
-<tr><td>2</td><td>-3</td><td>-7</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
--3
--7
-Результат равен -21.0000
-Программа завершена успешно</td></tr>
-<tr><td>3</td><td>13</td><td>15</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-13
-15
-Exception in thread "main" java.lang.IllegalArgumentException:
-    Подкоренное выражение должно быть неотрицательно
-	at Library.task1934(Library.java:6)
-	at Runner1934.main(Runner1934.java:36)</td></tr>
-<tr><td>4</td><td>word</td><td>4</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-word
-Exception in thread "main" java.util.InputMismatchException
-    at java.util.Scanner.throwFor(Scanner.java:864)
-    at java.util.Scanner.next(Scanner.java:1485)
-    at java.util.Scanner.nextInt(Scanner.java:2117)
-    at java.util.Scanner.nextInt(Scanner.java:2076)
-    at Runner1934.main(Runner1934.java:35)</td></tr>
-<tr><td>5</td><td>11</td><td>incorrect</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-11
-word
-Exception in thread "main" java.util.InputMismatchException
-    at java.util.Scanner.throwFor(Scanner.java:864)
-    at java.util.Scanner.next(Scanner.java:1485)
-    at java.util.Scanner.nextInt(Scanner.java:2117)
-    at java.util.Scanner.nextInt(Scanner.java:2076)
-    at Runner1934.main(Runner1934.java:35)</td></tr>
-</table>
-<h4>Обработайте исключения</h4>
-<ol start='17'><li>Обработайте IllegalArgumentException так, чтобы на экран выводилось сообщение из исключения "Подкоренное выражение должно быть неотрицательно"</li><li>Обработайте InputMismatchException так, чтобы на экран выводилась фраза "Не удалось преобразовать строку в число"</li><li>Стек вызовов не должен выводиться не экран в случае ошибки</li><li>Фраза "Программа завершена успешно" не должна выводиться на экран в случае ошибки</li><li>Фраза "Результат равен" не должна выводиться на экран в случае ошибки</li></ol><h4>Проверьте, что результат работы совпадает с ожидаемым</h4>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>A</th><th>B</th></tr>
-<tr>
-<td>6</td><td>5</td><td>-11</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-Результат равен 43,8748
-Программа завершена успешно
-</td></tr>
-<tr>
-<td>7</td><td>-3</td><td>-7</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-Результат равен -21,0000
-Программа завершена успешно
-</td></tr>
-<tr>
-<td>8</td><td>13</td><td>15</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-Подкоренное выражение должно быть неотрицательно
-</td></tr>
-<tr>
-<td>9</td><td>word</td><td>4</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-Не удалось преобразовать строку в число
-</td></tr>
-<tr>
-<td>10</td><td>11</td><td>incorrect</td><td class='preformatted'>Начало работы программы
-Введите значения A и B
-Не удалось преобразовать строку в число
-</td></tr>
-</table>
+<div class='check_single preformatted'>false
+true
+false
+true
+false
 </div>
-<div class="task_block" id="task9020">
-	<div class="task_id">9020</div>
-    <h3>Задача</h3>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task9020 для решения задачи <a href="tasks 4.html#task9020" target="_blank">ЛР4#9020(открыть в новой вкладке)</a>.</li>
-<li>Метод task9020 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
-<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
-<li>Проверьте с помощью юнит-теста результат работы метода task9020 в случаях с корректными данными.</li>
-</ol>
-
-<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
-<ol start="6">
-<li>В классе TestSuite создайте еще 3 юнит-теста. Назовите их как task9020assertionX, где X - цифра от 1 до 3.</li>
-<li>Добавьте ему аннотацию @Test с элементом expected равным IllegalArgumentException.class.</li>
-<li>В теле метода task9020assertionX вызовите метод task9020 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
-<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task5871">
-	<div class="task_id">5871</div>
-    <h3>Задача</h3>
-
-<ol>
-<li>В классе Library реализуйте публичный статический метод task5871 для решения задачи <a href="tasks 4.html#task5871" target="_blank">ЛР4#5871(открыть в новой вкладке)</a>.</li>
-<li>Метод task5871 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
-<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
-<li>Проверьте с помощью юнит-теста результат работы метода task5871 в случаях с корректными данными.</li>
-</ol>
-
-<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
-<ol start="7">
-<li>В классе TestSuite создайте еще 3 юнит-теста. Назовите их как task5871assertionX, где X - цифра от 1 до 2.</li>
-<li>Добавьте этим методам аннотацию @Test с элементом expected равным IllegalArgumentException.class.</li>
-<li>В теле метода task5871assertionX вызовите метод task5871 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
-<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task7799">
-	<div class="task_id">7799</div>
-    <h3>Задача</h3>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task7799 для решения задачи <a href="tasks 4.html#task7799" target="_blank">ЛР4#7799(открыть в новой вкладке)</a>.</li>
-<li>Метод task7799 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
-<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
-<li>Проверьте с помощью юнит-теста результат работы метода task7799 в случаях с корректными данными.</li>
-</ol>
-
-<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
-<ol start="6">
-<li>В классе TestSuite cоздайте 1 юнит-тест task7799assertion.</li>
-<li>Добавьте ему аннотацию @Test с элементом expected равным IllegalArgumentException.class.</li>
-<li>В теле метода task7799assertion вызовите метод task7799 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
-<li>После запуска юнит-тестов, метод task7799assertion должен быть отмечен зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task5170">
-	<div class="task_id">5170</div>
-    <h3>Задача</h3>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task5170 для решения задачи <a href="tasks 13.html#task5170" target="_blank">ЛР13#5170(открыть в новой вкладке)</a>.</li>
-<li>Метод task5170 должен возвращать результат решения задачи для корректных значений исходных данных.</li>
-<li>Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащий текст ошибки из задачи.</li>
-<li>Проверьте с помощью юнит-теста результат работы метода task5170 в случаях с корректными данными.</li>
-</ol>
-
-<h4>Проверьте юнит-тестами, что метод выбрасывает исключение при некорректных данных</h4>
-<ol start="8">
-<li>В классе TestSuite создайте юнит-тест, который называется task5170assertion.</li>
-<li>Добавьте ему аннотацию @Test с элементом expected равным IllegalArgumentException.class.</li>
-<li>В теле метода task5170assertion вызовите метод task5170 класса Library и укажите аргументы, которые приводят к выбрасыванию исключения.</li>
-<li>После запуска юнит-тестов, они должны быть отмечены зеленым знаком в списке методов.</li>
-</ol>
-</div><div class="task_block" id="task7891">
-	<div class="task_id">7891</div>
-    <h3>Задача</h3>
-	<h4>Реализуйте метод для решения задачи</h4>
-<ol>
-<li>В классе Library реализуйте публичный статический метод task7891.</li>
-<li>В качестве аргумента он принимает массив целых чисел.</li>
-<li>В теле функции создайте новый массив.
-Для каждой пары элементов из исходного массива нужно добавить три элемента в результирующий массив.
-Первый и второй элемент из тройки - копии исходной пары элементов. Третий элемент из тройки - сумма этой пары элементов.
-Если в исходном массиве нечетное количество элементов, функция должна выбросить исключение.</li>
-</ol>
-
-<h4>Проверьте корректность работы функции с помощью юнит-тестов</h4>
-<ol start="4">
-<li>Создайте юнит-тест для проверки задачи и подпишите его словами "в задаче 7891 должен получиться корректный результат".</li>
-<li>Объявите переменные data, actual и expected.</li>
-<li>Запишите в переменную data массив значений исходных данных для одного теста из задачи. Например 9,8, 7,6, 5,4</li>
-<li>Запишите в переменную expected массив значений, которые ожидаются в результате работы метода. Например 9,8,17, 7,6,13, 5,4,9</li>
-<li>Вызовите функцию task7891 и передайте ей переменную data в качестве аргумента.</li>
-<li>Запишите результат вызова функции в переменную actual.</li>
-<li>Проверьте, что содержимое массивов actual и expected одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
-<li>Проверьте, что содержимое массивов data и validate одинаковое с помощью функции expect в сочетании с функцией toEqual.</li>
-<li>Проверьте, что метод выбрасывает исключение при некорректных данных.</li>
-</ol>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Вводимые данные (array)</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>9,8, 7,6, 5,4</td>
-			<td class="preformatted">9,8,17, 7,6,13, 5,4,9</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>11,13, 17,19, 23,29</td>
-			<td class="preformatted">11,13,24, 17,19,36, 23,29,52</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>0,0</td>
-			<td class="preformatted">0,0,0</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td class="preformatted"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>9,8, 7</td>
-			<td class="preformatted">В массиве должно быть четное количество элементов</td>
-		</tr>
-	</table>
-</div><div class="task_block" id="task6882">
-	<div class="task_id">6882</div>
-    <h3>Задача</h3>
-	<div class="task_desc">Исходный файл содержит целые числа, написаные в столбик без дополнительного оформления. Количество чисел заранее не известно. Определить минимальное число в файле. При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Содержимое файла</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test1.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Минимальное число: 0
-Всего чисел: 10</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test2.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Минимальное число: 0
-Всего чисел: 1</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test3.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Минимальное число: 5
-Всего чисел: 3359</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test4.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Минимальное число: 1023
-Всего чисел: 9905</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test5.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число в строке 116
-62,52</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test6.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
-22,47</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test7.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл пуст</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test8.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл не существует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test9.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число в строке 0
-Я пришел к тебе с приветом,</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task6882/test10.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Минимальное число: -15
-Всего чисел: 16</td>
-		</tr>
-	</table>
-</div><div class="task_block" id="task1212">
-	<div class="task_id">1212</div>
-    <h3>Задача</h3>
-	<div class="task_desc">Найти самую большую площадь прямоугольника.
-Информация о прямоугольниках находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка</a>) с разделителем &quot;;&quot;.
-Общее количество прямоугольников заранее неизвестно.
-В каждой строчке находится информация об отдельном прямоугольнике: x и y его верхнего-левого угла, ширина и высота.
-Например "68;59;32;15" значит что x = 68, y = 59, ширина = 32, высота = 15.
-При возникновении исключения, нужно прервать обработку файла и вывести сообщение.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер по порядку</th>
-			<th>Выражение</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test1.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Максимальная площадь: 875
-Всего записей: 6</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test2.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Максимальная площадь: 129276
-Всего записей: 104</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test3.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл не существует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test4.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл пуст</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test5.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Максимальная площадь: 3691856
-Всего записей: 37</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test6.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в строке 0
-2642;1610;6710</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test7.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл не существует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test8.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число в строке 6
-7125;8872;g;4158;</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task1212/test9.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в строке 0
-6846,9127,9991,5478</td>
-		</tr>
-	</table>
-</div><div class="task_block" id="task9472">
-	<div class="task_id">9472</div>
-    <h3>Задача</h3>
-	<div class="task_desc">Найти самую большую площадь фигуры.
-Информация о фигурах находится в CSV файле (<a href="https://ru.wikipedia.org/wiki/CSV" target="_blank">справка в новой вкладке</a>) с разделителем &quot;;&quot;.
-Общее количество фигур заранее неизвестно. В каждой строчке находится информация об отдельной фигуре: ее наименование и свойства.
-Обработайте потенциальные исключения.
-	<ul>
-		<li>Прямоугольник. Наименование rect, свойства: x и y его верхнего-левого угла, ширина и высота. Например "rect;68;59;32;15" - прямоугольник, x = 68, y = 59, ширина 32, высота 15</li>
-		<li>Круг. Наименование circle, свойства: x и y центра, радиус. Например "circle;72;98;14" - круг, x = 72, y = 98, радиус = 14</li>
-	</ul></div>
-	<table class="check_values">
-		<tr>
-			<th>Номер по порядку</th>
-			<th>Выражение</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test1.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Максимальная площадь: 1480,0000
-Всего записей: 31</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test2.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Максимальная площадь: 907,9203
-Всего записей: 31</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test3.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл не существует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test4.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл пуст</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test5.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в стркое 0
-261;377;123;94</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test6.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в строке 0
-rect;71;55;14</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test7.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в строке 0
-circle;57;75</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task9472/test8.csv" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Некорректный формат данных в стркое 0
-polygon;0;0;1;2;3;4</td>
-		</tr>
-	</table>
-</div><div class="task_block" id="task5081">
-	<div class="task_id">5081</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Исходный файл содержит множество строк с целыми числами. Внутри строки числа разделены запятой. Нужно найти сумму чисел в каждой строчке. При возникновении исключения, обработка файла продолжается, если это возможно. Строки с некорректными данными пропускаются.</div>
-	<table class="check_values">
-		<tr>
-			<th>Номер теста</th>
-			<th>Содержимое файла</th>
-			<th>Результат</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task5081/test1.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">15
-110
-31496</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task5081/test2.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число
-Строка пуста
-8</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task5081/test3.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Файл отсутствует</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><a href="files/task5081/test4.txt" target="_blank">открыть в новой вкладке</a></td>
-			<td class="preformatted">Не удалось преобразовать строку в число
-Не удалось преобразовать строку в число</td>
-		</tr>
-	</table>
-</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>
+Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

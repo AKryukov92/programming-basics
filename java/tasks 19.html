@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>19 Методы</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>19 Запись в файлы</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,781 +197,902 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Методы</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Запись в файлы</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task7611' class='example'>5*</a><li><a href='#task4776'>6</a><li><a href='#task4757' class='example'>7*</a><li><a href='#task3597'>8</a><li><a href='#task6573'>9</a><li><a href='#task3355' class='example'>10*</a><li><a href='#task3147'>11</a></ul><ul><li><a href='#task6948' class='example'>12*</a><li><a href='#task8920'>13</a><li><a href='#task1995' class='example'>14*</a><li><a href='#task7759'>15</a><li><a href='#task2936' class='example'>16*</a><li><a href='#task3539'>17</a><li><a href='#task2121' class='example'>18*</a><li><a href='#task6401'>19</a><li><a href='#task7581'>20</a></ul></div><div class="task_block" id="info01">
-    <h4>Подготовка проекта</h4>
-	<div class="task_desc">Создайте проект с помощью maven.
-<ol>
-	<li>Откройте IntellijIDEA. Выберите пункт меню File, затем New, затем Project.</li>
-	<li>В появившемся окне на панели слева выберите Maven. Нажмите Next.</li>
-	<li>В поле groupId укажите "(ваш логин на гитхабе).github.io". В поле artifactId укажите "stage2". Нажмите Next.</li>
-	<li>Проверьте что Project name содержит "stage2". Установите свойство Project location так, чтобы в нем был абсолютный путь к вашему репозиторию.</li>
-	<li>Нажмите Finish.</li>
-</ol>
-	</div>
-    <div class="task_desc">У вас должен создаться проект со следующей структурой файлов:</div>
-	<img src="images/maven_project_structure.png">
-<ol start="6">
-<li>Содержимое папки <i>с исходным кодом</i> "src/main/java" будет компилироваться и компоноваться в запускаемую программу.</li>
-<li>Папка "src/main/resources" предназначена для хранения файлов с исходными данными.</li>
-<li>В папке с исходным кодом создайте класс Library. Он будет содержать методы для решения задач.</li>
-<li>В папке с исходным кодом создайте класс Program. Это вспомогательная программа для проверки методов из класса Library.</li>
-<li>Создайте метод main в классе Program по аналогии с методами main из задач прошлых лабораторных.</li>
-</ol>
-</div><div id='task8307' class='task_block'>
-<div class='task_id'>8307</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит слово (goal). Нужно напечатать на экран фразу "Мы стремимся к " и затем слово от пользователя.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task8307.</li><li>Метод принимает в качестве аргумента 1 строку.</li><li>Метод возвращает текст, который нужно напечатать на экран.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
-Код метода будет выглядеть так:
-</div>
-<div class='check_single preformatted'>public class Library {
-    public static void task8307(String value) {
-        String res;
-        res = "Мы стремимся к " + value;
-        return res;
-    }
-}</div>
-<div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>String result;
-//вызов метода task1860 из класса Library
-result = Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
-System.out.println(result);
-String goal = "цели";
-//значение переменной goal передано в качестве аргумента
-result = Library.task8307(goal);//внутри метода это значение будет доступно под именем value
-System.out.println(result);
-result = Library.task8307("результату");
-System.out.println(result);
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>Мы стремимся к знаниям
-Мы стремимся к цели
-Мы стремимся к результату
-</div>
-</div>
-<div id='task8813' class='task_block'>
-<div class='task_id'>8813</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит фамилию и имя. Нужно оформить фразу по шаблону:
-</div>
-<div class='check_single preformatted'>Меня зовут $lastName, $firstName $lastName.</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task8813.</li><li>Он принимает в качестве аргумента 2 строки.</li><li>В теле метода task8813 напечатайте в консоль решение задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-Вызовите метод task8813 в методе main класса Program с различными аргументами:
-</div>
-<div class='check_single preformatted'>Library.task8813("Джеймс", "Бонд");
-Library.task8813("капитан", "Джек Воробей");
-String firstName = "Александр";
-String lastName = "Крюков";
-Library.task8813(firstName, lastName);
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>Меня зовут Бонд, Джеймс Бонд
-Меня зовут Джек Воробей, капитан Джек Воробей
-Меня зовут Крюков, Александр Крюков
-</div>
-</div>
-<div id='task5823' class='task_block'>
-<div class='task_id'>5823</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
-</div>
-<div class='check_single preformatted'>&lt;circle cx="$CX" cy="$CY" r="$R" fill="$FILL"/&gt;</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task5823.</li><li>Он принимает в качестве аргументов 3 целых числа и 1 строку</li><li>В теле метода task5823 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>int coordinateX = 50;
-Library.task5823(coordinateX, 50, 40, "yellow");
-coordinateX = 400;
-Library.task5823(coordinateX, 300, 200, "green");
-coordinateX = 254;
-String colorOrange = "#cc6600";
-Library.task5823(coordinateX, 356, 100, colorOrange);
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;
-&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;
-&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;
-</div>
-</div>
-<div id='task2772' class='task_block'>
-<div class='task_id'>2772</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями. $A, $B, $C на введенные значения a, b, c соответственно.
-</div>
-<div class='check_single preformatted'>Квадратное уравнение $A*x*x + $B*x + $C = 0.
-Его дискриминант вычисляется по формуле: d = $B*$B - 4*$A*$C</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task2772.</li><li>Он принимает в качестве аргументов 3 целых числа.</li><li>В теле метода task2772 напечатайте в консоль решение задачи, используя значение аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>Library.task2772(1, 2, 3);
-Library.task2772(-3, 0, 2);
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>Квадратное уравнение 1*x*x + 2*x + 3 = 0.
-Его дискриминант вычисляется по формуле: d = 2*2 - 4*1*3
-Квадратное уравнение -3*x*x + 0*x + 2 = 0.
-Его дискриминант вычисляется по формуле: d = 0*0 - 4*-3*2
-</div>
-</div>
-<div id="link_c2_p7.1" class="task_block">
-	<div class="check_single">В предыдущих заданиях на простых задачках вы тренировались в оформлении метода: передаче аргументов и возвращении значения значении. Когда же на практике нужно применять методы? Ответ на этот вопрос дан в главе 7.1 "Разумные причины создания методов" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=182" target="_blank">(открыть в новой вкладке)</a></div>
-</div><div id='task7611' class='task_block'>
-<div class='task_id'>7611</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Вычислить результат по формуле x + 7.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task7611.</li><li>Он принимает в качестве аргументов 1 действительное число.</li><li>Он возвращает действительное число</li><li>В теле метода верните результат решения задачи, используя значение аргумента в качестве исходных данных</li></ol><div class='task_desc'>
-Код метода будет выглядеть так:
-</div>
-<div class='check_single preformatted'>public class Library {
-    public static double task7611(double x) {
-        double res;
-        res =  x + 7;
-        return res;
-    }
-}</div>
-<div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>double result;
-result = Library.task7611(11.13);//в качестве аргумента передано число
-System.out.printf("%.4f\n", result);
-double value = -79.19;
-result = Library.task7611(value);//в качестве аргумента передано значение переменной
-System.out.printf("%.4f\n", result);
-System.out.printf("%.4f\n", Library.task7611(0));//результат используется без промежуточной переменной
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>18,1300
--72,1900
-7,0000
-</div>
-</div>
-<div id='task4776' class='task_block'>
-<div class='task_id'>4776</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Вычислить результат по формуле.<formula>
-		<sqrt><val>
-			1-sin<sup>2</sup>(xRad)
-		</val></sqrt>
-	</formula>
-</div>
-<div class='task_desc'>
-Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче <a href="tasks 3.html#task7711" target="_blank">ЛР3#7711(открыть в новой вкладке)</a>
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task4776.</li><li>Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.</li><li>В теле метода вычислите результат и верните его</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>double result;
-result = TaskCs4776.Library.task4776(69.97);
-System.out.printf("%.4f\n", result);
-//для наглядности проверки можно писать дополнительные условия
-if (0.9395 &lt;= result && result &lt;= 0.9396) {
-    System.out.println("Верно");
-} else {
-    System.out.println("Результат некорректный");
-}
-result = TaskCs4776.Library.task4776(31);
-System.out.printf("%.4f\n", result);
-System.out.printf("%.4f\n", TaskCs4776.Library.task4776(90));
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>0,9395
-Верно
-0,5150
-1,0000
-</div>
-</div>
-<div id='task4757' class='task_block'>
-<div class='task_id'>4757</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны два числа, нужно вычесть из большего числа меньшее.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>first</th><th>second</th></tr>
-<tr>
-<td>1</td><td>99</td><td>17</td><td class='preformatted'>82
-</td></tr>
-<tr>
-<td>2</td><td>14</td><td>5</td><td class='preformatted'>9
-</td></tr>
-</table>
-<div class='task_desc'>
-При работе с методами вы можете встретить ошибку компиляции "missing return statement". Пример когда у вас программа без ветвлений:
-</div>
-<div class='check_single preformatted'>public static int Sum(int a, int b){
-    int result;
-    result = a + b;
-}</div>
-<div class='task_desc'>
-В этом случае для исправления нужно только дописать команду "return result;" как в примере ниже:
-</div>
-<div class='check_single preformatted'>public static int Sum(int a, int b){
-    int result;
-    result = a + b;
-    return result;//эта команда добавлена
-}</div>
-<div class='task_desc'>
-Если же ваша программа содержит ветвления (if), то ошибка "missing return statement" возникает в случае когда вы написали метод примерно так:
-</div>
-<div class='check_single preformatted'>public static int diff(int a, int b) {
-    int result;
-    if (a < b) {
-        result = b - a;
-        return result;
-    }
-    if (b < a) {
-        result = a - b;
-        return result;
-    }
-}</div>
-<div class='task_desc'>
-При компиляции, компьютер выполняет предварительный анализ кода. В этом примере он видит что команды return находятся внутри ветвлений. Для компьютера возможна ситуация, когда оба условия if будут ложны, а значит ни одна из команд return не будет выполнена. В данном примере - когда a строго равно b. Первый вариант исправления - предусмотреть return "на всякий случай" как в примере ниже:
-</div>
-<div class='check_single preformatted'>public static int diff(int a, int b) {
-    int result;
-    if (a < b) {
-        result = b - a;
-        return result;
-    }
-    if (b < a) {
-        result = a - b;
-        return result;
-    }
-    return 0;//на всякий случай
-}</div>
-<div class='task_desc'>
-Другой вариант исправления - использовать if else. Если условие будет ложно, то будут выполнены команды из else. Если истинно - команды из if. Компьютер считает, что хотя бы одна из команд return будет выполнена Как в примере ниже:
-</div>
-<div class='check_single preformatted'>public static int diff(int a, int b) {
-    int result;
-    if (a < b) {
-        result = b - a;
-        return result;
-    }
-    else {//здесь раньше был if (b < a)
-        result = a - b;
-        return result;
-    }
-}</div>
-</div>
-<div id='task3597' class='task_block'>
-<div class='task_id'>3597</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны вещественные числа a, b, c. Если a равно 0, вернуть сообщение об ошибке "Уравнение не является квадратным". Найдите в прошлых работах формулу для вычисления дискриминанта, вычислите его и напишите одно из трех сообщений в зависимости от полученного значения.
-</div>
-<ol start='1'><li>Если дискриминант равен 0, то у уравнения один вещественный корень.</li><li>Если дискриминант меньше 0, то у уравнения нет вещественных корней.</li><li>Если дискриминант больше 0, то у уравнения два вещественных корня.</li></ol><ol start='4'><li>В классе Library реализуйте публичный статический метод task3597.</li><li>Он принимает в качестве аргумента 3 действительных числа и возвращает строку.</li><li>В теле метода верните результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>String result;
-result = Library.task3597(1, 2, 3);
-System.out.println(result);
-result = Library.task3597(11, 13, 19);
-System.out.println(result);
-double a, b, c;
-a = 3;
-b = 17;
-c = 5;
-System.out.println(Library.task3597(a, b, c));
-a = 5;
-b = 31;
-c = 29;
-System.out.println(Library.task3597(a, b, c));
-System.out.println(Library.task3597(3, 6, 3));
-System.out.println(Library.task3597(1, 2, 1));
-System.out.println(Library.task3597(0, 7, 13));
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>Вещественных корней уравнения 1.0x^2 + 2.0x + 3.0 = 0 нет
-Вещественных корней уравнения 11.0x^2 + 13.0x + 19.0 = 0 нет
-У уравнения 3.0x^2 + 17.0x + 5.0 = 0 два вещественных корня
-У уравнения 5.0x^2 + 31.0x + 29.0 = 0 два вещественных корня
-Уравнение 3.0x^2 + 6.0x + 3.0 = 0 имеет один корень
-Уравнение 1.0x^2 + 2.0x + 1.0 = 0 имеет один корень
-Данное уравнение не является квадратным
-</div>
-</div>
-<div id='task6573' class='task_block'>
-<div class='task_id'>6573</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Найти произведение всех целых чисел от А до B включительно. Значение A может быть как меньше, так и больше B. Для хранения результата используйте переменную типа long. Этот тип поддерживает очень большие целые числа.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task6573.</li><li>Он принимает в качестве аргумента 2 целых числа и возвращает большое целое число.</li><li>В теле метода нужно вернуть результат решения задачи, используя значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>long result;
-result = Library.task6573(8, 13);
-System.out.println(result);
-result = Library.task6573(13, 8);
-System.out.println(result);
-int from, to;
-from = 159;
-to = 161;
-result = Library.task6573(from, to);
-System.out.println(result);
-from = -2;
-to = 600;
-System.out.println(Library.task6573(from, to));
-System.out.println(Library.task6573(648, 648));
-System.out.println(Library.task6573(35, 24));
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>1235520
-1235520
-4095840
-0
-648
-399703747322880000
-</div>
-</div>
-<div id='task3355' class='task_block'>
-<div class='task_id'>3355</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово "Введение", а после всех чисел - слово "Заключение". Перед каждым числом нужно написать слово "Глава".
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task3355.</li><li>Метод принимает одно целое число как аргумент и возвращает строку.</li></ol><table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (total)</th><th>Результат</th></tr>
-<tr><td>1</td><td>0</td><td class='preformatted'>Введение
-Заключение
-</td></tr>
-<tr><td>2</td><td>1</td><td class='preformatted'>Введение
-Глава 1
-Заключение
-</td></tr>
-<tr><td>3</td><td>2</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Заключение
-</td></tr>
-<tr><td>4</td><td>3</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Заключение
-</td></tr>
-<tr><td>5</td><td>4</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Заключение
-</td></tr>
-<tr><td>6</td><td>6</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Глава 5
-Глава 6
-Заключение
-</td></tr>
-<tr><td>7</td><td>5</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Глава 5
-Заключение
-</td></tr>
-<tr><td>8</td><td>20</td><td class='preformatted'>Введение
-Глава 1
-Глава 2
-Глава 3
-Глава 4
-Глава 5
-Глава 6
-Глава 7
-Глава 8
-Глава 9
-Глава 10
-Глава 11
-Глава 12
-Глава 13
-Глава 14
-Глава 15
-Глава 16
-Глава 17
-Глава 18
-Глава 19
-Глава 20
-Заключение
-</td></tr>
-</table>
-</div>
-<div id='task3147' class='task_block'>
-<div class='task_id'>3147</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит символ (needle), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно выводить все эти буквы в строчку, пока не будет выведена буква X.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task1292.</li><li>Он принимает символ и возвращает строку.</li></ol><table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (needle)</th><th>Результат</th></tr>
-<tr><td>1</td><td>a</td><td class='preformatted'>a
-</td></tr>
-<tr><td>2</td><td>b</td><td class='preformatted'>ab
-</td></tr>
-<tr><td>3</td><td>d</td><td class='preformatted'>abcd
-</td></tr>
-<tr><td>4</td><td>h</td><td class='preformatted'>abcdefgh
-</td></tr>
-<tr><td>5</td><td>i</td><td class='preformatted'>abcdefgh
-</td></tr>
-</table>
-</div>
-<div id='task6948' class='task_block'>
-<div class='task_id'>6948</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое введенных элементов. Вывести с точностью 6 знаков после запятой.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task6948.</li><li>В качестве аргумента принимает массив целых чисел.</li><li>Возвращает действительное число.</li></ol><div class='task_desc'>
-Добавьте в метод main класса Program следующий код
-</div>
-<div class='check_single preformatted'>int[] values;
-values = new int[]{9, 8, 9, 1, 1, 5, 1, 1};
-double result;
-result = Library.task6948(values);
-System.out.printf("%.6f\n", result);
-values = new int[]{1, 2, 3, 4, 1, 3, 4, 4, 4, 4};
-result = Library.task6948(values);
-System.out.printf("%.6f\n", result);
-result = Library.task6948(new int[]{5, 5, 5, 5, 5});
-System.out.printf("%.6f\n", result);
-result = Library.task6948(new int[]{});
-System.out.printf("%.6f\n", result);
-int[] array = new int[]{1, 9, 1, 30, 9, 1, 100};
-System.out.printf("%.6f\n", Library.task6948(array));
-System.out.printf("%.6f\n",
-        Library.task6948(new int[]{
-                100000, 1, 1
-        })
-);
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, должен получиться такой результат:
-</div>
-<div class='check_single preformatted'>4,375000
-3,000000
-5,000000
-0,000000
-21,571429
-33334,000000
-</div>
-</div>
-<div id='task8920' class='task_block'>
-<div class='task_id'>8920</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит фрагмент K и данные - символы, разделенные пробелами. Посчитать сколько раз встречается фрагмент K в массиве.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task8920</li><li>Метод принимает два аргумента: строку и массив строк</li><li>Метод возвращает число</li></ol><table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>K</th><th>data</th></tr>
-<tr>
-<td>1</td><td>e</td><td>q w e r q w</td><td class='preformatted'>1
-</td></tr>
-<tr>
-<td>2</td><td>t</td><td>q w e r q w e r q w e</td><td class='preformatted'>0
-</td></tr>
-<tr>
-<td>3</td><td>w</td><td>e w w w w w</td><td class='preformatted'>5
-</td></tr>
-<tr>
-<td>4</td><td>q</td><td>r r r r r r</td><td class='preformatted'>0
-</td></tr>
-<tr>
-<td>5</td><td>qw</td><td>qw er ty qw</td><td class='preformatted'>2
-</td></tr>
-</table>
-</div>
-<div id='task1995' class='task_block'>
-<div class='task_id'>1995</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод compareArrays.</li><li>Он принимает в качестве аргументов 2 массива целых чисел</li><li>Он возвращает строку</li><li>В теле метода сформируйте ответ и верните его. Используйте значения аргументов в качестве исходных данных.</li></ol><div class='task_desc'>
-В методе main класса Program добавьте следующий код:
-</div>
-<div class='check_single preformatted'>int[] standard = new int[]{5, 4, 3, 2, 1};
-int[] array = new int[]{5, 4, 3, 2, 1};
-String result = Library.compareArrays(standard, array);
-System.out.println(result);
-array = new int[]{5, 4, 3};
-result = Library.compareArrays(standard, array);
-System.out.println(result);
-System.out.println(Library.compareArrays(
-        new int[]{9, 8, 7, 6},
-        new int[]{9, 8, 7, 6, 5}
-));
-standard = new int[]{9, 8, 7, 6, 5};
-array = new int[]{9, 111, 7};
-System.out.println(Library.compareArrays(standard, array));
-array = new int[]{6, 5, 4, 3, 2, 1};
-System.out.println(Library.compareArrays(
-        new int[]{6, 5, 0, 3},
-        array
-));
-</div>
-<div class='task_desc'>
-В результате запуска метода main класса Program, в консоли должен появиться текст:
-</div>
-<div class='check_single preformatted'>Массивы одинаковы
-Массивы начинают различаться на индексе 3
-Массивы начинают различаться на индексе 4
-Массивы начинают различаться на индексе 1
-Массивы начинают различаться на индексе 2
-</div>
-</div>
-<div id='task7759' class='task_block'>
-<div class='task_id'>7759</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - целые числа, разделенные пробелами. Найти абсолютное отклонение каждого элемента от среднего арифметического данных значений.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task7759</li><li>Метод принимает один аргумент - массив целых чисел</li><li>Метод возвращает массив действительных чисел</li></ol><table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (numbers)</th><th>Результат</th></tr>
-<tr><td>1</td><td>9 8 9 1 1 5 1 1</td><td class='preformatted'>4,6250  3,6250  4,6250  3,3750  3,3750  0,6250  3,3750  3,3750  </td></tr>
-<tr><td>2</td><td>1 2 3 4 1 3 4 4 4 4</td><td class='preformatted'>2,0000  1,0000  0,0000  1,0000  2,0000  0,0000  1,0000  1,0000  1,0000  1,0000  </td></tr>
-<tr><td>3</td><td>5 5 5 5 5</td><td class='preformatted'>0,0000  0,0000  0,0000  0,0000  0,0000  </td></tr>
-<tr><td>4</td><td></td><td class='preformatted'></td></tr>
-<tr><td>5</td><td>1 1 1 9 9 100 30</td><td class='preformatted'>20,5714  20,5714  20,5714  12,5714  12,5714  78,4286  8,4286  </td></tr>
-<tr><td>6</td><td>1000000 1 1</td><td class='preformatted'>666666,0000  333333,0000  333333,0000  </td></tr>
-</table>
-</div>
-<div id='task2936' class='task_block'>
-<div class='task_id'>2936</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит число M и данные - целые числа, разделенные пробелами. Умножить все элементы массива на M.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task2936.</li><li>Он принимает в качестве аргументов 1 действительное число и массив действительных чисел.</li><li>Методв возвращает массив действительных чисел.</li><li>В теле метода создайте новый массив и заполните его значениями, которые получатся в результате решения задачи.</li><li>Массив, который был передан в качестве аргумента, измениться не должен</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double[] data, result;
-data = new double[]{9, 8, 7, 6, 5, 4};
-result = Library.task2936(31, data);
-System.out.println("При умножении массива");
-int i = 0;
-while (i < data.length) {
-    System.out.print(data[i] + "  ");
-    i++;
-}
-System.out.println("\nна число 31, получился массив ");
-i = 0;
-while (i < result.length) {
-    System.out.print(result[i] + "  ");
-    i++;
-}
-</div>
-<div class='task_desc'>
-В результате запуска метода main должен получиться следующий результат:
-</div>
-<div class='check_single preformatted'>При умножении массива
-9.0  8.0  7.0  6.0  5.0  4.0  
-на число 31, получился массив 
-279.0  248.0  217.0  186.0  155.0  124.0  </div>
-</div>
-<div id='task3539' class='task_block'>
-<div class='task_id'>3539</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task3539</li><li>Он принимает в качестве аргумента массив действительных чисел</li><li>В теле метода создайте новый массив и заполните его значениями, которые получатся в результате решения задачи.</li><li>Массив, который был передан в качестве аргумента, измениться не должен</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double[] data = new double[]{4, 2, 3, 4, 3, 2};
-double[] result = Library.task3539(data);
-System.out.println("Исходный массив:");
-int i = 0;
-while (i < data.length) {
-    System.out.print(data[i] + " ");
-    i += 1;
-}
-System.out.println("\nРезультат обработки:");
-i = 0;
-while (i < result.length) {
-    System.out.print(result[i] + " ");
-    i += 1;
-}
-</div>
-<div class='task_desc'>
-В результате запуска метода main должен получиться следующий результат:
-</div>
-<div class='check_single preformatted'>Исходный массив:
-4.0 2.0 3.0 4.0 3.0 2.0 
-Результат обработки:
-2.0 0.0 1.0 2.0 1.0 0.0 </div>
-</div>
-<div id='task2121' class='task_block'>
-<div class='task_id'>2121</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны два числа: P и Q. Нужно сравнить их.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task2121.</li><li>Он принимает два целых числа.</li><li>Метод возвращает логическое значение.</li><li>Если P &lt;= Q, метод должен вернуть true</li><li>Если Q &lt; P, метод должен вернуть false</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>int p = 0, q = 7;
-boolean result = Library.Task2121(p, q);
-System.out.println(result);
-System.out.println(Library.Task2121(14, 9));
-System.out.println(Library.Task2121(5, 5));
-</div>
-<div class='task_desc'>
-В результате запуска метода main должен получиться следующий результат:
-</div>
-<div class='check_single preformatted'>true
-false
-true
-</div>
-<div class='task_desc'>
-Метод для решения задачи будет выглядеть так:
-</div>
-<div class='check_single preformatted'>public static boolean Task2121(int P, int Q) {
-    if (P <= Q) {
-        return true;
-    } else {
-        return false;
-    }
-}</div>
-<div class='check_single preformatted'>Если для ответа вам достаточно одного логического выражения, то метод можно сократить до:</div>
-<div class='check_single preformatted'>public static boolean Task2121(int P, int Q) {
-    return P <= Q;
-}</div>
-</div>
-<div id='task6401' class='task_block'>
-<div class='task_id'>6401</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-A и B обозначают границы интервала. Нужно проверить, принадлежит ли значение X указанному интервалу.
-</div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task6401.</li><li>Он принимает три действительных числа: A, B, X и возвращает логическое значение.</li><li>Если X принадлежит интервалу от A до B включительно, метод должен вернуть значение true.</li><li>Если X за пределами интервала от A до B включительно, метод должен вернуть значение false.</li><li>Если A < B, значит интервал от A до B. Если B < A, значит интервал от B до A.</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>double a = -2, b = 7;
-boolean result;
-double x = -10;
-result = Library.Task6401(a, b, x);
-if (result) {
-    System.out.println(x + " принадлежит интервалу");
-} else {
-    System.out.println(x + " за пределами интервала");
-}
-result = Library.Task6401(b, a, x);
-if (result) {
-    System.out.println(x + " принадлежит интервалу");
-} else {
-    System.out.println(x + " за пределами интервала");
-}
-x = 0;
-if (Library.Task6401(-2, 7, x)) {
-    System.out.println(x + " принадлежит интервалу");
-} else {
-    System.out.println(x + " за пределами интервала");
-}
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9300' class='example'>1*</a><li><a href='#task3951'>2</a><li><a href='#task7343'>3</a><li><a href='#task7060'>4</a><li><a href='#task6409'>5</a><li><a href='#task2386' class='example'>6*</a><li><a href='#task2910'>7</a><li><a href='#task2549'>8</a><li><a href='#task4342'>9</a><li><a href='#task9159'>10</a><li><a href='#task5309'>11</a><li><a href='#task3290'>12</a><li><a href='#task5345'>13</a><li><a href='#task6812'>14</a></ul></div><div class="task_block" id="info1">
+	<div class="task_desc"><p>SVG (от англ. Scalable Vector Graphics — масштабируемая векторная графика) — язык разметки двумерной векторной графики в формате XML.</p>
+	<p>Особенности SVG:
+	<ul>
+	<li>SVG рисунок это текстовый файл с расширением .svg</li>
+	<li>SVG рисунки могут встраиваться в HTML страницы (с расширением .html)</li>
+	<li>SVG широко используется для описания векторной графики в Интернете</li>
+	<li>SVG описывает рисунок в формате XML.</li>
+	<li>Рисунки в формате SVG не теряют качество при масштабировании, растяжении или сжатии.</li>
+	<li>Все элементы SVG рисунка могут быть анимированы</li>
+	<li>SVG соответствует международным стандартам DOM и XSL</li>
+	</ul></p>
+	<p>Существует множество программ для их редактирования, например Inkscape, CorelDRAW, Adobe Illustrator. В рамках данной лабораторной работы мы будем создавать векторные рисунки с помощью функций текстового вывода в файл.</p>
+	<p>Для того, чтобы немедленно увидеть результат наших действий, мы воспользуемся возможностью встраивать SVG рисунки внутрь HTML страниц.</p>
+	<p>Создайте текстовый файл, скопируйте в него следующий код.</p>
+	<div class="preformatted check_single">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;Мой первый векторный рисунок&lt;/h1&gt;
 
-if (Library.Task6401(7, -2, x)) {
-    System.out.println(x + " принадлежит интервалу");
-} else {
-    System.out.println(x + " за пределами интервала");
-}
-System.out.println(Library.Task6401(-2, 7, 15));
-System.out.println(Library.Task6401(-2, 7, 4));
+&lt;svg width=&quot;800&quot; height=&quot;600&quot;&gt;
+	&lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
+&lt;/svg&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+	</div>
+	<p>Сохраните файл с расширением «.html».
+	Откройте получившийся файл в браузере. В результате вы должны увидеть следующее изображение.</p>
+	<img src="images/Main example.png"/>
+	<p>Обратите внимание:
+	<ul>
+		<li>Описание SVG рисунка начинается с элемента &lt;svg&gt;</li>
+		<li>Высота и ширина SVG рисунка описывается атрибутами элемента &lt;svg&gt;.
+Высоте соответствует height. Ширине соответствует width.</li>
+		<li>Элемент &lt;circle&gt; используется для создания круга.</li>
+		<li>Атрибуты cx и cy описывают координаты центра круга по оси X и Y.
+Если они не будут указаны, то центр будет находиться в точке (0,0)</li>
+		<li>Атрибут r описывает радиус круга.</li>
+		<li>Атрибут stroke указывает на цвет обводки круга, а stroke-width – на толщину линии.
+Данный круг обведен зеленой (green) линией толщиной 4 пикселя.</li>
+		<li>Атрибут fill описывает цвет заливки круга. В данном примере он желтый (yellow).</li>
+		<li>Описание SVG рисунка заканчивается элементом &lt;/svg&gt;</li>
+	</ul></p>
+	</div>
+	</div><div class="task_block empty_on_print" id="task9300">
+	<div class="task_id">9300</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Написать программу для построения кругов в формате SVG. Пользователь вводит координаты центра круга (cx, cy), его радиус (r) и толщину обводки (stroke-width). Цвет круга – желтый, цвет обводки – зеленый. Если круг не видно на рисунке или видно частично, то нужно вывести сообщение об ошибке.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>cx</th>
+			<th>cy</th>
+			<th>r</th>
+			<th>stroke-<br/>width</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>0</td>
+			<td>20</td>
+			<td>5</td>
+			<td>Левая точка круга должна иметь неотрицательные координаты</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>300</td>
+			<td>200</td>
+			<td>0</td>
+			<td><img src="images/task9300test2.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>600</td>
+			<td>400</td>
+			<td>60</td>
+			<td>10</td>
+			<td><img src="images/task9300test3.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>254</td>
+			<td>356</td>
+			<td>100</td>
+			<td>80</td>
+			<td><img src="images/task9300test5.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>300</td>
+			<td>50</td>
+			<td>100</td>
+			<td><img src="images/task9300test6.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>300</td>
+			<td>300</td>
+			<td>0</td>
+			<td>25</td>
+			<td>Толщина обводки должна быть меньше диаметра круга</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>100</td>
+			<td>150</td>
+			<td>20</td>
+			<td>Левая точка круга должна иметь неотрицательные координаты</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>300</td>
+			<td>250</td>
+			<td>80</td>
+			<td>162</td>
+			<td>Толщина обводки должна быть меньше диаметра круга</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>600</td>
+			<td>800</td>
+			<td>50</td>
+			<td>100</td>
+			<td>Нижняя точка круга должна быть в пределах рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>900</td>
+			<td>200</td>
+			<td>51</td>
+			<td>102</td>
+			<td>Правая точка круга должна быть в пределах рисунка</td>
+		</tr>
+	</table>
+</div><div class="task_block" id="info2">
+<div class="task_desc">Формат SVG также поддерживает следующие фигуры:
+<ul>
+	<li>Прямоугольники</li>
+	<li>Линии</li>
+	<li>а также некоторые другие</li>
+</ul>
+Прямоугольник описывается элементом &lt;rect&gt;.
+<ul>
+	<li>Положение прямоугольника определяется координатами его верхнего левого угла и описывается атрибутами x и y.</li>
+	<li>Ширина и высота прямоугольника зависит от атрибутов width и height соответственно.</li>
+	<li>Цвет заливки, цвет обводки и толщина обводки описывается, так же как и для круга.</li>
+	<li>У всех фигур есть также свойство opacity. Оно отвечает за прозрачность фигуры и представляет собой дробное число от 0 до 1.</li>
+</ul>
+Линия описывается элементом &lt;line&gt;
+<ul>
+	<li>
+	Положение линии описывается двумя точками: x1, y1 и x2, y2.</li>
+	<li>Цвет линии описывается атрибутом stroke.
+	Толщина линии описывается атрибутом stroke-width.</li>
+</ul>
 </div>
-<div class='task_desc'>
-В результате запуска метода main должен получиться следующий результат:
-</div>
-<div class='check_single preformatted'>-10.0 за пределами интервала
--10.0 за пределами интервала
-0.0 принадлежит интервалу
-0.0 принадлежит интервалу
-false
-true
-</div>
-</div>
-<div id='task7581' class='task_block'>
-<div class='task_id'>7581</div>
+</div><div class="task_block empty_on_print" id="task3951">
+	<div class="task_id">3951</div>
+    <h3>Задача</h3>
+	<div class="task_desc">Написать программу для построения красного прямоугольника с синей обводкой, толщиной 2 пикселя. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника. Если прямоугольник получается невидимым, то вывести сообщение об ошибке.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>x</th>
+			<th>y</th>
+			<th>width</th>
+			<th>height</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>300</td>
+			<td>250</td>
+			<td>250</td>
+			<td><img src="images/task3951test1.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>135</td>
+			<td>100</td>
+			<td>350</td>
+			<td>100</td>
+			<td><img src="images/task3951test3.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>100</td>
+			<td>200</td>
+			<td>300</td>
+			<td><img src="images/task3951test4.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>200</td>
+			<td>1</td>
+			<td>100</td>
+			<td><img src="images/task3951test6.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>120</td>
+			<td>120</td>
+			<td>0</td>
+			<td>180</td>
+			<td>Ширина прямоугольника должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>200</td>
+			<td>100</td>
+			<td>0</td>
+			<td>Высота прямоугольника должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>400</td>
+			<td>300</td>
+			<td>420</td>
+			<td>100</td>
+			<td>Правая сторона прямоугольника должна быть в пределах рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1200</td>
+			<td>600</td>
+			<td>50</td>
+			<td>100</td>
+			<td>Правая сторона прямоугольника должна быть в пределах рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>601</td>
+			<td>601</td>
+			<td>51</td>
+			<td>101</td>
+			<td>Нижняя сторона прямоугольника должна быть в пределах рисунка</td>
+		</tr>
+	</table>
+</div><div class="task_block empty_on_print" id="task7343">
+	<div class="task_id">7343</div>
+    <h3>Задача</h3>
+	<div class="task_desc"><p>Написать программу для построения композиции: Четыре одинаковых желтых круга, с центрами в различных углах красного полупрозрачного (opacity=”0.5”) прямоугольника. Прямоугольник находится перед кругами. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) прямоугольника, а также радиус (r) кругов. Если хотя бы один круг не видно на рисунке, выводить сообщение об ошибке. Если прямоугольник не видно на рисунке, выводить сообщение об ошибке.</p>
+	<p><img src="images/task7343example.png" class="example_image"/></p></div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="5">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>x</th>
+			<th>y</th>
+			<th>width</th>
+			<th>height</th>
+			<th>r</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>200</td>
+			<td>300</td>
+			<td>100</td>
+			<td>40</td>
+			<td><img src="images/task7343test1.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>150</td>
+			<td>180</td>
+			<td>120</td>
+			<td>300</td>
+			<td>50</td>
+			<td><img src="images/task7343test2.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>200</td>
+			<td>100</td>
+			<td>100</td>
+			<td>120</td>
+			<td><img src="images/task7343test5.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>250</td>
+			<td>250</td>
+			<td>0</td>
+			<td>100</td>
+			<td>20</td>
+			<td>Ширина прямоугольника должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>120</td>
+			<td>120</td>
+			<td>0</td>
+			<td>25</td>
+			<td>Высота прямоугольника должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>700</td>
+			<td>100</td>
+			<td>150</td>
+			<td>200</td>
+			<td>20</td>
+			<td>Правая точка круга должна быть в пределах рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>300</td>
+			<td>300</td>
+			<td>200</td>
+			<td>200</td>
+			<td>0</td>
+			<td>Радиус круга должен быть положительным</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>25</td>
+			<td>25</td>
+			<td>100</td>
+			<td>100</td>
+			<td>50</td>
+			<td>Верхняя точка круга должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>700</td>
+			<td>500</td>
+			<td>99</td>
+			<td>102</td>
+			<td>3</td>
+			<td>Правая точка круга должна быть в пределах рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-10</td>
+			<td>810</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>Верхняя точка круга должна быть положительной</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>650</td>
+			<td>80</td>
+			<td>80</td>
+			<td>45</td>
+			<td>Нижняя точка круга должна быть в пределах рисунка</td>
+		</tr>
+	</table>
+</div><div class="task_block empty_on_print" id="task7060">
+	<div class="task_id">7060</div>
+    <h3>Задача</h3>
+	<div class="task_desc"><p>Написать программу для построения двух прямоугольников: синего и красного. Закрасить площадь пересечения прямоугольников желтым цветом. Пользователь вводит координаты верхнего левого угла (x,y), ширину (width) и высоту (height) синего и красного прямоугольников. Если хотя бы один из прямоугольников не видно на рисунке, то выводить сообщение об ошибке.</p><p><img src="images/task7060example.png" style="height:90px;"/></p></div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="8">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		
+	<tr>
+		<th>X<sub>1</sub></th>
+		<th>Y<sub>1</sub></th>
+		<th>W<sub>1</sub></th>
+		<th>H<sub>1</sub></th>
+		<th>X<sub>2</sub></th>
+		<th>Y<sub>2</sub></th>
+		<th>W<sub>2</sub></th>
+		<th>H<sub>2</sub></th>
+	</tr>
+	<tr>
+		<td></td>
+		<td>10</td>
+		<td>10</td>
+		<td>200</td>
+		<td>100</td>
+		<td>50</td>
+		<td>50</td>
+		<td>300</td>
+		<td>350</td>
+		<td><img src="images/task7060test1.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>25</td>
+		<td>25</td>
+		<td>200</td>
+		<td>200</td>
+		<td>225</td>
+		<td>225</td>
+		<td>200</td>
+		<td>200</td>
+		<td><img src="images/task7060test2.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>500</td>
+		<td>200</td>
+		<td>100</td>
+		<td>200</td>
+		<td>10</td>
+		<td>400</td>
+		<td>100</td>
+		<td>120</td>
+		<td><img src="images/task7060test3.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>60</td>
+		<td>70</td>
+		<td>120</td>
+		<td>200</td>
+		<td>50</td>
+		<td>50</td>
+		<td>120</td>
+		<td>200</td>
+		<td><img src="images/task7060test4.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>100</td>
+		<td>100</td>
+		<td>200</td>
+		<td>200</td>
+		<td>200</td>
+		<td>200</td>
+		<td>50</td>
+		<td>50</td>
+		<td><img src="images/task7060test5.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>150</td>
+		<td>150</td>
+		<td>150</td>
+		<td>300</td>
+		<td>150</td>
+		<td>150</td>
+		<td>150</td>
+		<td>300</td>
+		<td><img src="images/task7060test6.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>100</td>
+		<td>0</td>
+		<td>100</td>
+		<td>500</td>
+		<td>0</td>
+		<td>200</td>
+		<td>700</td>
+		<td>100</td>
+		<td><img src="images/task7060test7.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>5</td>
+		<td>0</td>
+		<td>10</td>
+		<td>10</td>
+		<td>0</td>
+		<td>5</td>
+		<td>10</td>
+		<td>10</td>
+		<td><img src="images/task7060test8.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>200</td>
+		<td>200</td>
+		<td>100</td>
+		<td>100</td>
+		<td>900</td>
+		<td>200</td>
+		<td>100</td>
+		<td>10</td>
+		<td>Правая сторона прямоугольника должна быть в пределах рисунка</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>102</td>
+		<td>200</td>
+		<td>100</td>
+		<td>20</td>
+		<td>0</td>
+		<td>500</td>
+		<td>100</td>
+		<td>120</td>
+		<td>Нижняя сторона прямоугольника должна быть в пределах рисунка</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>105</td>
+		<td>5</td>
+		<td>10</td>
+		<td>10</td>
+		<td>100</td>
+		<td>0</td>
+		<td>10</td>
+		<td>30</td>
+		<td><img src="images/task7060test11.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>150</td>
+		<td>150</td>
+		<td>50</td>
+		<td>300</td>
+		<td>100</td>
+		<td>100</td>
+		<td>300</td>
+		<td>200</td>
+		<td><img src="images/task7060test12.png" class="example_image"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>0</td>
+		<td>0</td>
+		<td>802</td>
+		<td>200</td>
+		<td>0</td>
+		<td>0</td>
+		<td>610</td>
+		<td>610</td>
+		<td>Правая сторона прямоугольника должна быть в пределах рисунка</td>
+	</tr>
+	</table>
+</div><div class="task_block empty_on_print" id="task6409">
+	<div class="task_id">6409</div>
+    <h3>Задача</h3>
+	<div class="task_desc"><p>Написать программу для построения равнобедренного треугольника при помощи синих линий. Пользователь вводит координаты одной точки (x,y), длину основания (A) и длину одной из сторон (L). Первая линия направлена горизонтально вправо от данной точки, две других линии направлены вниз (Рис.1).</p>
+	<p><img src="images/task6409example.png" class="example_image"/></p></div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>x</th>
+			<th>y</th>
+			<th>A</th>
+			<th>L</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td>500</td>
+			<td>300</td>
+			<td><img src="images/task6409test1.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>300</td>
+			<td>20</td>
+			<td>20</td>
+			<td>200</td>
+			<td><img src="images/task6409test2.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>200</td>
+			<td>200</td>
+			<td>200</td>
+			<td><img src="images/task6409test5.png" class="example_image"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>25</td>
+			<td>25</td>
+			<td>0</td>
+			<td>110</td>
+			<td>Длина основания должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>100</td>
+			<td>102</td>
+			<td>200</td>
+			<td>0</td>
+			<td>Длина боковой стороны должна быть положительна</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>600</td>
+			<td>100</td>
+			<td>210</td>
+			<td>100</td>
+			<td>Невозможно сформировать треугольник с данными длинами сторон</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>200</td>
+			<td>200</td>
+			<td>100</td>
+			<td>Невозможно сформировать треугольник с данными длинами сторон</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>640</td>
+			<td>120</td>
+			<td>240</td>
+			<td>Фигура не помещается внутри рисунка</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>807</td>
+			<td>120</td>
+			<td>200</td>
+			<td>300</td>
+			<td>Фигура не помещается внутри рисунка</td>
+		</tr>
+	</table>
+</div><div id='task2386' class='task_block'>
+<div class='task_id'>2386</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Определить, присутствует ли в данном массиве символ "x". Чтобы определить, что символ отсутствует, сравнивайте каждый элемент массива с эталоном "x". Если они равны, тогда возвращайте значение true. Если весь массив был просмотрен, а равных элементов не было найдено, верните false.
+Выведите на экран в столбик 50 случайных целые чисел от 0 до 40 включительно
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод Task7581.</li><li>Он принимает массив строковых значений и возвращает логическое значение.</li><li>В методе main класса Program добавьте код для проверки:</li></ol><div class='check_single preformatted'>String[] arr = "a;s;d;f".split(";");
-boolean result = Library.Task7581(arr);
-System.out.println(result);
-arr = new String[]{"z", "x", "c", "v", "x"};
-System.out.println(Library.Task7581(arr));
-result = Library.Task7581("zx;df;ty;jk".split(";"));
-System.out.println(result);
-System.out.println(
-        Library.Task7581(
-                "q;a;z;w;s;x;e;d;c".split(";")
-        )
-);
-System.out.println(Library.Task7581(new String[0]));
+<div class='check_single preformatted'>Числа от 0 до 4025
+20
+10
+22
+28
+5
+5
+24
+40
+30
+15
+2
+8
+14
+30
+28
+15
+13
+6
+1
+1
+36
+21
+25
+3
+11
+28
+38
+12
+10
+23
+18
+31
+39
+5
+16
+32
+17
+17
+17
+30
+23
+18
+21
+31
+5
+3
+11
+18
+25</div>
 </div>
+<div id='task2910' class='task_block'>
+<div class='task_id'>2910</div>
+<h3>Задача</h3>
 <div class='task_desc'>
-В результате запуска метода main должен получиться следующий результат:
+Выведите на экран два столбика чисел по 50 штук. В первом случайные целые числа от 0 до 40 включительно, во втором столбике - число из первого столбика плюс 100.
 </div>
-<div class='check_single preformatted'>false
-true
-false
-true
-false
+<div class='check_single preformatted'>Числа от 0 до 40 и прибавление 1009 109
+35 135
+17 117
+32 132
+40 140
+3 103
+37 137
+11 111
+7 107
+10 110
+8 108
+6 106
+23 123
+38 138
+6 106
+6 106
+18 118
+13 113
+16 116
+30 130
+26 126
+35 135
+25 125
+5 105
+39 139
+16 116
+23 123
+22 122
+7 107
+25 125
+18 118
+35 135
+6 106
+31 131
+5 105
+17 117
+36 136
+36 136
+24 124
+26 126
+32 132
+17 117
+24 124
+2 102
+26 126
+39 139
+33 133
+7 107
+25 125
+33 133</div>
 </div>
+<div id='task2549' class='task_block'>
+<div class='task_id'>2549</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Выведите на экран в столбик 50 случайных чисел от 400 до 999 включительно.
 </div>
-Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div class='check_single preformatted'>Числа от 400 до 999:663
+761
+440
+459
+504
+510
+944
+971
+719
+816
+685
+449
+873
+629
+531
+681
+526
+745
+871
+777
+708
+710
+415
+808
+924
+580
+674
+788
+402
+894
+743
+800
+627
+555
+962
+678
+943
+406
+761
+598
+933
+747
+700
+515
+654
+485
+843
+518
+825
+961</div>
+</div>
+<div id="task4342" class="task_block">
+	<div class="task_id">4342</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вывести на экран 10 случайных чисел в промежутке от 0 до 30. Числа не должны повторяться.</div>
+</div><div id="task9159" class="task_block">
+	<div class="task_id">9159</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Магазин обслужил за день X покупателей, каждый из которых потратил на покупки какую то сумму. Суммы расходов заполнить случайным образом в пределах от 100 до 999. Посчитать дневную прибыль магазина и сумму среднего потребительского чека.</div>
+</div><div id="task5309" class="task_block">
+	<div class="task_id">5309</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Случайным образом сгенерировать 100 чисел, которые не вызовут ошибку при решении задачи <a href="[2] лаб. ОСАЛП.html#task5201" target="_blank">5201 (открыть в отдельной вкладке)</a>. Вывести эти числа и результат решения целевой задачи в формате CSV с разделителем &quot;;&quot; и заголовком.</div>
+	<div class="check_single preformatted">R;C
+13;81.6814
+17;106.8142</div>
+</div><div id="task3290" class="task_block">
+	<div class="task_id">3290</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Случайным образом сгенерировать 100 пар чисел, которые не вызовут ошибку при решении задачи <a href="tasks 4.html#task3943" target="_blank">ЛР4#3943(открыть в новой вкладке)</a>. Вывести эти числа и результат решения целевой задачи в формате CSV с разделителем &quot;;&quot; и заголовком.</div>
+	<div class="check_single preformatted">x;y;r
+-5;81;-10.0000
+7507;7499;-435.7062
+</div>
+</div><div id="task5345" class="task_block">
+	<div class="task_id">5345</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Случайным образом сгенерировать тестовые данные для задачи <a href="tasks 6.html#task6556" target="_blank">ЛР6#6556(открыть в новой вкладке)</a>. 50 групп чисел для результата &quot;Размещение возможно&quot;, 50 групп для результата &quot;Размещение невозможно&quot; и по 20 групп для каждого случая ошибки. Вывести числа, результаты решения и сообщения об ошибке в формате CSV с разделителем &quot;;&quot; и заголовком.</div>
+	<div class="check_single preformatted">a;b;c;d;результат
+3;5;7;9;Размещение возможно
+13;11;7;19;Размещение невозможно
+23;3;9;11;Размещение невозможно
+-2;8;9;7;Значение A должно быть неотрицательным
+3;-4;5;6;Значение B должно быть неотрицательным
+13;15;-17;19;Значение C должно быть неотрицательным
+6911;5881;3203;-4639;Значение D должно быть неотрицательным
+</div>
+</div><div id="task6812" class="task_block">
+	<div class="task_id">6812</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Случайным образом сгенерировать тестовые данные для задачи <a href="tasks 27.html#task1217" target="_blank">ЛР27#1217(открыть в новой вкладке)</a>. По 30 групп чисел для каждого класса эквивалентности результатов и по 20 групп для каждого случая ошибки. Вывести числа, результаты решения и сообщения об ошибке в формате CSV с разделителем &quot;;&quot; и заголовком. Экранировать символы из текста результата (Заменить ";" на "\;").</div>
+	<div class="check_single preformatted">A1;B1;A2;B2;Результат
+2;3;5;7;не пересекаются
+11;17;13;19;пересекаются (13\;17)
+23;37;29;31;пересекаются (29\;31)
+43;53;41;47;пересекаются (43\;47)
+5;15;0;30;пересекаются (5\;15)
+67;71;59;61;не пересекаются
+79;73;83;89;Значение A должно быть меньше значения B
+97;101;107;103;Значение A должно быть меньше значения B
+</div>
+</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

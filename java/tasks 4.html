@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>4 Проверка исходных данных</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>4 Проверка исходных данных</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,42 +197,43 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
 }</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Проверка исходных данных</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task6522'>3</a><li><a href='#task7619'>4</a><li><a href='#task8833' class='example'>5*</a><li><a href='#task9020'>6</a><li><a href='#task1934'>7</a><li><a href='#task3943'>8</a><li><a href='#task2801' class='example'>9*</a><li><a href='#task2361'>10</a><li><a href='#task5063'>11</a><li><a href='#task5870'>12</a></ul><ul><li><a href='#task4913'>13</a><li><a href='#task2790'>14</a><li><a href='#task3490'>15</a><li><a href='#task9622'>16</a><li><a href='#task7799'>17</a><li><a href='#task3591'>18</a><li><a href='#task9130' class='example'>19*</a><li><a href='#task5895'>20</a><li><a href='#task2461'>21</a><li><a href='#task2624'>22</a><li><a href='#task5871'>23</a></ul></div><div id='task9298' class='task_block'>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9298' class='example'>1*</a><li><a href='#task4312'>2</a><li><a href='#task8833' class='example'>3*</a><li><a href='#task9020'>4</a><li><a href='#task1934'>5</a><li><a href='#task3943'>6</a><li><a href='#task2801' class='example'>7*</a><li><a href='#task5063'>8</a><li><a href='#task5870'>9</a></ul><ul><li><a href='#task2790'>10</a><li><a href='#task3490'>11</a><li><a href='#task9622'>12</a><li><a href='#task7799'>13</a><li><a href='#task3591'>14</a><li><a href='#task5895'>15</a><li><a href='#task2461'>16</a><li><a href='#task2624'>17</a><li><a href='#task5871'>18</a></ul></div><div id='task9298' class='task_block'>
 <div class='task_desc'>
 Основное внимание в этой практической работе уделено одной из техник защитного программирования - сообщениям об ошибке. Говорить пользователю о том, что он ввёл некорректные данные очень важно. Это может быть важнее, чем посчитать результат.
 </div>
@@ -350,114 +351,6 @@ if (edge > 0) {
         //вычисления и печать результата на экран
     }
 }</div>
-</div>
-<div id='task6522' class='task_block'>
-<div class='task_desc'>
-Обратите внимание, что ситуаций с неправильными данными может быть значительно больше, чем ситуаций с правильными данными. Код для предотвращения нежелательных ситуаций может получиться объемнее, чем код для решения задачи.
-</div>
-<div class='task_id'>6522</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Смешали volume<sub>1</sub> литров воды с температурой temperature<sub>1</sub> градусов Цельсия с volume<sub>2</sub> литрами воды с температурой temperature<sub>2</sub> градусов Цельсия. Вычислите объем <formula>volume=volume<sub>1</sub>+volume<sub>2</sub></formula> и температуру образовавшейся смеси по формуле<formula>
-		temperature=
-		<fraction>
-			<numerator>
-				(temperature<sub>1</sub>*volume<sub>1</sub>+temperature<sub>2</sub>*volume<sub>2</sub>)
-			</numerator>
-			<denominator>
-				volume<sub>1</sub>+volume<sub>2</sub>
-			</denominator>
-		</fraction>
-	</formula>Оформите результат по шаблону
-</div>
-<div class='check_single preformatted'>Объем смеси: $volume л
-Температура смеси: $temperature &#8451;</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>volume1</th><th>temperature1</th><th>volume2</th><th>temperature2</th></tr>
-<tr><td>1</td><td>1</td><td>30</td><td>3</td><td>20</td><td class='preformatted'>Объем смеси: 4,0000 л
-Температура смеси: 22,5000 °C</td></tr>
-<tr><td>2</td><td>1</td><td>-20</td><td>10</td><td>20</td><td class='preformatted'>Объем смеси: 11,0000 л
-Температура смеси: 16,3636 °C</td></tr>
-<tr><td>3</td><td>5</td><td>90</td><td>1</td><td>-10</td><td class='preformatted'>Объем смеси: 6,0000 л
-Температура смеси: 73,3333 °C</td></tr>
-<tr><td>4</td><td>-2</td><td>10</td><td>5</td><td>50</td><td class='preformatted'>Объем должен быть неотрицательным
-</td></tr>
-<tr><td>5</td><td>4</td><td>100</td><td>-10</td><td>4</td><td class='preformatted'>Объем должен быть неотрицательным
-</td></tr>
-<tr><td>6</td><td>20</td><td>-800</td><td>20</td><td>30</td><td class='preformatted'>Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>7</td><td>20</td><td>10</td><td>30</td><td>-500</td><td class='preformatted'>Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>8</td><td>-7</td><td>-1000</td><td>6</td><td>71</td><td class='preformatted'>Объем должен быть неотрицательным
-Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>9</td><td>15</td><td>-180</td><td>-21</td><td>90</td><td class='preformatted'>Объем должен быть неотрицательным
-</td></tr>
-<tr><td>10</td><td>31</td><td>10</td><td>-2</td><td>-300</td><td class='preformatted'>Объем должен быть неотрицательным
-Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>11</td><td>-7</td><td>-1000</td><td>-21</td><td>71</td><td class='preformatted'>Объем должен быть неотрицательным
-Объем должен быть неотрицательным
-Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>12</td><td>15</td><td>-180</td><td>-21</td><td>-300</td><td class='preformatted'>Объем должен быть неотрицательным
-Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>13</td><td>-7</td><td>-400</td><td>-5</td><td>-500</td><td class='preformatted'>Объем должен быть неотрицательным
-Объем должен быть неотрицательным
-Температура должна быть выше абсолютного нуля (-273.15)
-Температура должна быть выше абсолютного нуля (-273.15)
-</td></tr>
-<tr><td>14</td><td>0</td><td>30</td><td>3</td><td>20</td><td class='preformatted'>Объем должен быть неотрицательным
-</td></tr>
-<tr><td>15</td><td>5</td><td>90</td><td>0</td><td>40</td><td class='preformatted'>Объем должен быть неотрицательным
-</td></tr>
-</table>
-</div>
-<div id='task7619' class='task_block'>
-<div class='task_desc'>
-Представьте, что вы пишете программное обеспечение для банкомата. Полезным действием будет выдача банкнот. Пользователь пришел к банкомату, вставил карту, увидел что на счету 10 тысяч, нажал 'снять деньги' и ввел миллион. Банкомат выдал ему миллион, а затем написал сообщение 'недостаточно средств на счету'. Правильно ли действовал банкомат? Именно поэтому мы проверяем исходные данные перед тем, как совершаем полезные действия.
-</div>
-<div class='task_id'>7619</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Два автомобиля едут навстречу друг другу с постоянными скоростями velocity1 и velocity2 км/час. Определить, через какое время автомобили встретятся, если расстояние между ними было distance км.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>velocity1</th><th>velocity2</th><th>distance</th></tr>
-<tr>
-<td>1</td><td>31</td><td>47</td><td>6833</td><td class='preformatted'>Автомобили встретятся через 87,6026 часов</td></tr>
-<tr>
-<td>2</td><td>0</td><td>7</td><td>6829</td><td class='preformatted'>Автомобили встретятся через 975,5714 часов</td></tr>
-<tr>
-<td>3</td><td>6</td><td>0</td><td>100</td><td class='preformatted'>Автомобили встретятся через 16,6667 часов</td></tr>
-<tr>
-<td>4</td><td>17</td><td>19</td><td>0</td><td class='preformatted'>Автомобили встретятся через 0,0000 часов</td></tr>
-<tr>
-<td>5</td><td>-11</td><td>13</td><td>200</td><td class='preformatted'>Скорость должна быть неотрицательна
-</td></tr>
-<tr>
-<td>6</td><td>79</td><td>-67</td><td>400</td><td class='preformatted'>Скорость должна быть неотрицательна
-</td></tr>
-<tr>
-<td>7</td><td>10</td><td>20</td><td>-500</td><td class='preformatted'>Расстояние должно быть неотрицательным
-</td></tr>
-<tr>
-<td>8</td><td>-20</td><td>-73</td><td>300</td><td class='preformatted'>Скорость должна быть неотрицательна
-Скорость должна быть неотрицательна
-</td></tr>
-<tr>
-<td>9</td><td>60</td><td>-120</td><td>-600</td><td class='preformatted'>Скорость должна быть неотрицательна
-Расстояние должно быть неотрицательным
-</td></tr>
-<tr>
-<td>10</td><td>-2</td><td>-3</td><td>-1</td><td class='preformatted'>Скорость должна быть неотрицательна
-Скорость должна быть неотрицательна
-Расстояние должно быть неотрицательным
-</td></tr>
-</table>
 </div>
 <div id='task8833' class='task_block'>
 <div class='task_id'>8833</div>
@@ -604,57 +497,6 @@ if (divider != 0) {//если значение переменной divider не
 }
 </div>
 </div>
-<div id='task2361' class='task_block'>
-<div class='task_id'>2361</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дан рулон материала длиной totalM метров. Расход материала на одно изделие - partCm сантиметров материала. Вычислите сколько изделий получится изготовить и сколько материала останется. Оформите результат по шаблону:
-</div>
-<div class='check_single preformatted'>Длина рулона в сантиметрах равна $totalCm
-Из этого материала получится $amount изделий и останется $remainder см</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>totalM</th><th>partCm</th></tr>
-<tr>
-<td>1</td><td>400</td><td>17</td><td class='preformatted'>Длина рулона в сантиметрах равна 40000
-Из этого материала получится 2352 изделий и останется 16 см
-</td></tr>
-<tr>
-<td>2</td><td>103</td><td>29</td><td class='preformatted'>Длина рулона в сантиметрах равна 10300
-Из этого материала получится 355 изделий и останется 5 см
-</td></tr>
-<tr>
-<td>3</td><td>2</td><td>12</td><td class='preformatted'>Длина рулона в сантиметрах равна 200
-Из этого материала получится 16 изделий и останется 8 см
-</td></tr>
-<tr>
-<td>4</td><td>2</td><td>313</td><td class='preformatted'>Длина рулона в сантиметрах равна 200
-Материала не хватат даже на одно изделие
-</td></tr>
-<tr>
-<td>5</td><td>3</td><td>400</td><td class='preformatted'>Длина рулона в сантиметрах равна 300
-Материала не хватат даже на одно изделие
-</td></tr>
-<tr>
-<td>6</td><td>300</td><td>-70</td><td class='preformatted'>Расход материала должен быть положительным
-Длина рулона в сантиметрах равна 30000
-</td></tr>
-<tr>
-<td>7</td><td>5</td><td>-10</td><td class='preformatted'>Расход материала должен быть положительным
-Длина рулона в сантиметрах равна 500
-</td></tr>
-<tr>
-<td>8</td><td>11</td><td>0</td><td class='preformatted'>Расход материала должен быть положительным
-Длина рулона в сантиметрах равна 1100
-</td></tr>
-<tr>
-<td>9</td><td>-800</td><td>20</td><td class='preformatted'>Длина рулона должна быть положительна
-</td></tr>
-<tr>
-<td>10</td><td>0</td><td>23</td><td class='preformatted'>Длина рулона должна быть положительна
-</td></tr>
-</table>
-</div>
 <div id='task5063' class='task_block'>
 <div class='task_id'>5063</div>
 <h3>Задача</h3>
@@ -697,55 +539,6 @@ if (divider != 0) {//если значение переменной divider не
 <tr><td>8</td><td>-1</td><td class='preformatted'>Количество времени должно быть неотрицательным
 </td></tr>
 <tr><td>9</td><td>-20</td><td class='preformatted'>Количество времени должно быть неотрицательным
-</td></tr>
-</table>
-</div>
-<div id='task4913' class='task_block'>
-<div class='task_id'>4913</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Даны координаты aX и aY исходной точки, горизонтальное п<b>р</b>оложение между точками (длина линии, distance) и дирекционный угол angle, выраженный в градусах. Решите прямую геодезическую задачу - определите координаты другого конца отрезка.
-</div>
-<ol start='1'><li>Приращение координаты x по формуле <formula>dX = distance * cos(angleRad)</formula></li><li>Приращение координаты y по формуле <formula>dY = distance * sin(angleRad)</formula></li><li>Координату X<sub>b</sub> другой точки по формуле <formula>bx = ax + dX</formula>.</li><li>Координату Y<sub>b</sub> другой точки по формуле <formula>by = ay + dY</formula></li></ol><div class='task_desc'>
-Выведите на экран приращение координат dx и dy, а также координаты X<sub>b</sub> и Y<sub>b</sub> другой точки с точностью 4 знака после запятой по шаблону.
-</div>
-<div class='check_single preformatted'>Приращение координат: dX = $dx; dY = $dy
-Координаты второй точки ($bx;$by)</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>ax</th><th>ay</th><th>distance</th><th>angleDeg</th></tr>
-<tr><td>1</td><td>1</td><td>2</td><td>5</td><td>30</td><td class='preformatted'>Приращение координат: dX = 4,3301 dY = 2,5000
-Координаты второй точки (5,3301;4,5000)
-</td></tr>
-<tr><td>2</td><td>7</td><td>11</td><td>13</td><td>110</td><td class='preformatted'>Приращение координат: dX = -4,4463 dY = 12,2160
-Координаты второй точки (2,5537;23,2160)
-</td></tr>
-<tr><td>3</td><td>17</td><td>19</td><td>23</td><td>230</td><td class='preformatted'>Приращение координат: dX = -14,7841 dY = -17,6190
-Координаты второй точки (2,2159;1,3810)
-</td></tr>
-<tr><td>4</td><td>29</td><td>31</td><td>3</td><td>290</td><td class='preformatted'>Приращение координат: dX = 1,0261 dY = -2,8191
-Координаты второй точки (30,0261;28,1809)
-</td></tr>
-<tr><td>5</td><td>33</td><td>37</td><td>10</td><td>90</td><td class='preformatted'>Приращение координат: dX = 0,0000 dY = 10,0000
-Координаты второй точки (33,0000;47,0000)
-</td></tr>
-<tr><td>6</td><td>33</td><td>37</td><td>10</td><td>180</td><td class='preformatted'>Приращение координат: dX = -10,0000 dY = 0,0000
-Координаты второй точки (23,0000;37,0000)
-</td></tr>
-<tr><td>7</td><td>33</td><td>37</td><td>10</td><td>270</td><td class='preformatted'>Приращение координат: dX = -0,0000 dY = -10,0000
-Координаты второй точки (33,0000;27,0000)
-</td></tr>
-<tr><td>8</td><td>33</td><td>37</td><td>10</td><td>360</td><td class='preformatted'>Приращение координат: dX = 10,0000 dY = -0,0000
-Координаты второй точки (43,0000;37,0000)
-</td></tr>
-<tr><td>9</td><td>1</td><td>2</td><td>10</td><td>0</td><td class='preformatted'>Приращение координат: dX = 10,0000 dY = 0,0000
-Координаты второй точки (11,0000;2,0000)
-</td></tr>
-<tr><td>10</td><td>1</td><td>2</td><td>-5</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td></tr>
-<tr><td>11</td><td>1</td><td>2</td><td>0</td><td>45</td><td class='preformatted'>Горизонтальное проложение линии должно быть положительно
-</td></tr>
-<tr><td>12</td><td>1</td><td>2</td><td>10</td><td>-5</td><td class='preformatted'>Угол должен быть неотрицательным
 </td></tr>
 </table>
 </div>
@@ -875,45 +668,6 @@ if (divider != 0) {//если значение переменной divider не
 <tr><td>2</td><td>6857</td><td class='preformatted'>Расстояние до горизонта равно 11580,2569</td></tr>
 <tr><td>3</td><td>0</td><td class='preformatted'>Расстояние до горизонта равно 0,0000</td></tr>
 <tr><td>4</td><td>-500</td><td class='preformatted'>Высота над уровнем Земли должна быть неотрицательна
-</td></tr>
-</table>
-</div>
-<div id='task9130' class='task_block'>
-<div class='task_id'>9130</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Определить силу тяжести, которая действует на спутник массой satelliteMass, поблизости от планеты массой planetMass и радиусом radius.
-	<formula>
-		force=g
-		<fraction>
-			<numerator>planetMass*satelliteMass</numerator>
-			<denominator>radius<sup>2</sup></denominator>
-		</fraction>
-	</formula>, где g - <a href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F">ускорение свободного падения</a>, приблизительно равное 9,8067. Результат вывести по шаблону
-</div>
-<div class='check_single preformatted'>На спутник действует сила тяжести $force Ньютон</div>
-<div class='task_desc'>
-Обратите внимание, что масса планеты дана в научной нотации. В некоторых источниках это называется экспоненциальной записью <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C">(ссылка на страницу Википедии)</a>. Этот формат по-умолчанию поддерживается обычными командами ввода действительных чисел. Для того, чтобы вывести на экран число в такой нотации в Java нужно применить команду:
-</div>
-<div class='check_single preformatted'>System.out.printf("На спутник действует сила тяжести %e Ньютон\n", force);</div>
-<div class='task_desc'>
-В C# команда будет выглядеть так:
-</div>
-<div class='check_single preformatted'>Console.WriteLine("На спутник действует сила тяжести {0:E} Ньютон", force);</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>planetMass</th><th>satelliteMass</th><th>radius</th></tr>
-<tr><td>1</td><td>5.972E24</td><td>10000</td><td>6371</td><td class='preformatted'>На спутник действует сила тяжести 1,442871e+22 Ньютон
-</td></tr>
-<tr><td>2</td><td>6.39E23</td><td>10000</td><td>3396.2</td><td class='preformatted'>На спутник действует сила тяжести 5,432969e+21 Ньютон
-</td></tr>
-<tr><td>3</td><td>6.39E23</td><td>15000</td><td>3396.2</td><td class='preformatted'>На спутник действует сила тяжести 8,149454e+21 Ньютон
-</td></tr>
-<tr><td>4</td><td>6.39E23</td><td>15000</td><td>-20000</td><td class='preformatted'>Радиус планеты должен быть положительным
-</td></tr>
-<tr><td>5</td><td>6.39E23</td><td>-2000</td><td>3396.2</td><td class='preformatted'>Масса спутника должна быть положительна
-</td></tr>
-<tr><td>6</td><td>-6.39E23</td><td>10000</td><td>3396.2</td><td class='preformatted'>Масса планеты должна быть положительна
 </td></tr>
 </table>
 </div>

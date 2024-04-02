@@ -6,7 +6,7 @@ public class Task4075 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Выведите на экран рамку шириной width. Решите задачу используя только одну переменную-счетчик.");
+        appendTaskDescEscaped("Выведите на экран рамку шириной width. Это число обозначает общее количество символов в строке, включая крайний правый и крайний левый. Решите задачу используя только одну переменную-счетчик.");
         appendCheckValuesHeader("width");
         appendCheckValuesRow("5");
         appendCheckValuesRow("2");

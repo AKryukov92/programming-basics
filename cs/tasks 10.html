@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>10 Базовые операции с массивами</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>10 Вложенные циклы</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,684 +197,1061 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Базовые операции с массивами</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Вложенные циклы</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4425' class='example'>1*</a><li><a href='#task7834'>2</a><li><a href='#task5873'>3</a><li><a href='#task3908'>4</a><li><a href='#task1433'>5</a><li><a href='#task3791'>6</a><li><a href='#task9980'>7</a><li><a href='#task5683' class='example'>8*</a><li><a href='#task8557'>9</a><li><a href='#task1223'>10</a><li><a href='#task8311'>11</a><li><a href='#task6563'>12</a><li><a href='#task7295'>13</a></ul></div><div id='task4425' class='task_block'>
-<div class='task_id'>4425</div>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9249' class='example'>1*</a><li><a href='#task4075'>2</a><li><a href='#task8395'>3</a><li><a href='#task7323'>4</a><li><a href='#task5568'>5</a><li><a href='#task2592'>6</a><li><a href='#task6355'>7</a></ul><ul><li><a href='#task3519'>8</a><li><a href='#task6332'>9</a><li><a href='#task7517'>10</a><li><a href='#task5448'>11</a><li><a href='#task6572'>12</a><li><a href='#task5238'>13</a><li><a href='#task2084'>14</a><li><a href='#task5411'>15</a><li><a href='#task5171'>16</a><li><a href='#task1862'>17</a></ul></div><div id='task9249' class='task_block'>
+<div class='task_id'>9249</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число A и данные - символы, разделенные тире '-'. Вывести на экран элемент на индексе A. Результат оформить по шаблону
-</div>
-<div class='check_single preformatted'>В массиве длиной $arrLength
-на индексе $A
-находится элемент со значением '$value'</div>
-<div class='task_desc'>
-Если в данных два разделителя подряд, то возникает элемент содержащий пустую строку.
+Пользователь вводит два числа: R и T. Вывести две строки символов "#". В первой строке должно быть R штук символов. Во второй строке T штук. Если какое-либо число будет отрицательно, должна получиться пустая строка.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>data</th><th>A</th></tr>
+<th>R</th><th>T</th></tr>
 <tr>
-<td>1</td><td>qw-er-ty-ui</td><td>0</td><td class='preformatted'>В массиве длиной 4
-на индексе 0
-находится элемент со значением 'qw'
-</td></tr>
+<td>1</td><td>5</td><td>11</td><td class='preformatted'>Первая строчка
+#####
+Вторая строчка
+###########</td></tr>
 <tr>
-<td>2</td><td>qw-er-ty-ui</td><td>3</td><td class='preformatted'>В массиве длиной 4
-на индексе 3
-находится элемент со значением 'ui'
-</td></tr>
+<td>2</td><td>11</td><td>5</td><td class='preformatted'>Первая строчка
+###########
+Вторая строчка
+#####</td></tr>
 <tr>
-<td>3</td><td>q-w-e-r-t-y-u-i-o-p</td><td>9</td><td class='preformatted'>В массиве длиной 10
-на индексе 9
-находится элемент со значением 'p'
-</td></tr>
+<td>3</td><td>20</td><td>3</td><td class='preformatted'>Первая строчка
+####################
+Вторая строчка
+###</td></tr>
 <tr>
-<td>4</td><td>qwer-tyui</td><td>3</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
-</td></tr>
+<td>4</td><td>3</td><td>20</td><td class='preformatted'>Первая строчка
+###
+Вторая строчка
+####################</td></tr>
 <tr>
-<td>5</td><td>qw-er-ty-ui</td><td>-1</td><td class='preformatted'>Индекс A должен быть больше или равен 0
-</td></tr>
-<tr>
-<td>6</td><td>a--a</td><td>1</td><td class='preformatted'>В массиве длиной 3
-на индексе 1
-находится элемент со значением ''
-</td></tr>
-<tr>
-<td>7</td><td>b-b-    -b</td><td>2</td><td class='preformatted'>В массиве длиной 4
-на индексе 2
-находится элемент со значением '    '
-</td></tr>
-<tr>
-<td>8</td><td></td><td>8</td><td class='preformatted'>Исходная строка пуста
-</td></tr>
-</table>
-<div class='task_desc'>
-Решение задачи выглядит так:
-</div>
-<div class='check_single preformatted'>String data = Console.ReadLine();
-int a;//тип переменной - целое число. Её назначение - хранить индекс элемента
-a = Int32.Parse(Console.ReadLine());
-if (String.IsNullOrEmpty(data)) //условие истинно если вы ничего не ввели и нажали Enter
-{
-    Console.WriteLine("Исходная строка пуста");
-}
-if (!String.IsNullOrEmpty(data)) //Условие с восклицательным знаком в начале истинно, когда выражение после знака - ложно.
-{
-    String[] arr;//объявление переменной для хранения массива текстовых фрагментов
-    arr = data.Split('-');//разбиение текстового фрагмента на части. Знак "-" называется разделитель.
-    //qw-er-ty-ui превращается в массив
-    //на индексе 0 элемент qw
-    //на индексе 1 элемент er
-    //на индексе 2 элемент ty
-    //на индексе 3 элемент ui
-    if (a < 0)//индексы в массиве начинаются с 0
-    {
-        Console.WriteLine("Индекс A должен быть больше или равен 0");
-    }
-    if (arr.Length <= a)//длина массива всегда на 1 больше, чем индекс последнего числа
-    {
-        Console.WriteLine("Индекс A должен быть строго меньше длины массива");
-    }
-    if (0 <= a)
-    {
-        if (a < arr.Length)
-        {
-            Console.WriteLine("В массиве длиной " + arr.Length);
-            Console.WriteLine("на индексе " + a);
-            Console.WriteLine("находится элемент со значением '" + arr[a] + "'");
-        }
-    }
-}
+<td>5</td><td>0</td><td>7</td><td class='preformatted'>Первая строчка
 
+Вторая строчка
+#######</td></tr>
+<tr>
+<td>6</td><td>4</td><td>0</td><td class='preformatted'>Первая строчка
+####
+Вторая строчка
+</td></tr>
+<tr>
+<td>7</td><td>-90</td><td>6</td><td class='preformatted'>Первая строчка
+
+Вторая строчка
+######</td></tr>
+<tr>
+<td>8</td><td>6</td><td>-7</td><td class='preformatted'>Первая строчка
+######
+Вторая строчка
+</td></tr>
+</table>
+<div class='task_desc'>
+Решите задачу используя только одну переменную-счётчик. Чтобы второй цикл не пропускал действия, нужно добавить команду обнуления переменной:
 </div>
+<div class='check_single preformatted'>i = 0;</div>
 </div>
-<div id='task7834' class='task_block'>
-<div class='task_id'>7834</div>
+<div id='task4075' class='task_block'>
+<div class='task_id'>4075</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - символы, разделенные символом ","(запятая). Вывести на экран элементы на индексах 0, 2, 3, 5 в столбик. Если длина массива слишком маленькая, чтобы содержать нужный индекс, нужно напечатать сообщение "нет элемента на индексе X".
+Выведите на экран рамку шириной width. Это число обозначает общее количество символов в строке, включая крайний правый и крайний левый. Решите задачу используя только одну переменную-счетчик.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (arr)</th><th>Результат</th></tr>
-<tr><td>1</td><td>a,s,d,f,g,h,j,k</td><td class='preformatted'>В массиве длиной 8
-Значение элемента на индексе 0 это a
-Значение элемента на индексе 2 это d
-Значение элемента на индексе 3 это f
-Значение элемента на индексе 5 это h
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>5</td><td class='preformatted'>+---+
+|...|
++---+</td></tr>
+<tr><td>2</td><td>2</td><td class='preformatted'>++
+||
+++</td></tr>
+<tr><td>3</td><td>15</td><td class='preformatted'>+-------------+
+|.............|
++-------------+</td></tr>
+<tr><td>4</td><td>1</td><td class='preformatted'>Число width должно быть 2 или более
 </td></tr>
-<tr><td>2</td><td>q,w,e,r,t,y,u</td><td class='preformatted'>В массиве длиной 7
-Значение элемента на индексе 0 это q
-Значение элемента на индексе 2 это e
-Значение элемента на индексе 3 это r
-Значение элемента на индексе 5 это y
+<tr><td>5</td><td>0</td><td class='preformatted'>Число width должно быть 2 или более
 </td></tr>
-<tr><td>3</td><td>q,w,e,r,t,y</td><td class='preformatted'>В массиве длиной 6
-Значение элемента на индексе 0 это q
-Значение элемента на индексе 2 это e
-Значение элемента на индексе 3 это r
-Значение элемента на индексе 5 это y
-</td></tr>
-<tr><td>4</td><td>qa,ws,ed,rf,tg</td><td class='preformatted'>В массиве длиной 5
-Значение элемента на индексе 0 это qa
-Значение элемента на индексе 2 это ed
-Значение элемента на индексе 3 это rf
-Нет элемента на индексе 5
-</td></tr>
-<tr><td>5</td><td>za,xs,cd,vf</td><td class='preformatted'>В массиве длиной 4
-Значение элемента на индексе 0 это za
-Значение элемента на индексе 2 это cd
-Значение элемента на индексе 3 это vf
-Нет элемента на индексе 5
-</td></tr>
-<tr><td>6</td><td>qaz,wsx,edc</td><td class='preformatted'>В массиве длиной 3
-Значение элемента на индексе 0 это qaz
-Значение элемента на индексе 2 это edc
-Нет элемента на индексе 3
-Нет элемента на индексе 5
-</td></tr>
-<tr><td>7</td><td>qwerty,asdfg</td><td class='preformatted'>В массиве длиной 2
-Значение элемента на индексе 0 это qwerty
-Нет элемента на индексе 2
-Нет элемента на индексе 3
-Нет элемента на индексе 5
-</td></tr>
-<tr><td>8</td><td>zxcvbnm</td><td class='preformatted'>В массиве длиной 1
-Значение элемента на индексе 0 это zxcvbnm
-Нет элемента на индексе 2
-Нет элемента на индексе 3
-Нет элемента на индексе 5
-</td></tr>
-<tr><td>9</td><td></td><td class='preformatted'>Исходная строка пуста
+<tr><td>6</td><td>-10</td><td class='preformatted'>Число width должно быть 2 или более
 </td></tr>
 </table>
 </div>
-<div id='task5873' class='task_block'>
-<div class='task_id'>5873</div>
+<div id='task8395' class='task_block'>
+<div class='task_id'>8395</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число idx и данные - символы, разделенные пробелами. Вывести на экран элемент на индексе idx. Если возможно, то вывести на экран следующий и предыдущий элементы.
+Пользователь вводит число width. Выведите на экран буквы латинского алфавита a,b,c,d,e,f,g,h. Каждая буква должна быть на новой строчке. Количество букв в строчке вводится с клавиатуры. Если width меньше 1 или больше 20, вывести сообщение об ошибке.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1</td><td class='preformatted'>a
+b
+c
+d
+e
+f
+g
+h
+</td></tr>
+<tr><td>2</td><td>3</td><td class='preformatted'>aaa
+bbb
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+</td></tr>
+<tr><td>3</td><td>5</td><td class='preformatted'>aaaaa
+bbbbb
+ccccc
+ddddd
+eeeee
+fffff
+ggggg
+hhhhh
+</td></tr>
+<tr><td>4</td><td>19</td><td class='preformatted'>aaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbb
+ccccccccccccccccccc
+ddddddddddddddddddd
+eeeeeeeeeeeeeeeeeee
+fffffffffffffffffff
+ggggggggggggggggggg
+hhhhhhhhhhhhhhhhhhh
+</td></tr>
+<tr><td>5</td><td>20</td><td class='preformatted'>aaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccc
+dddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeee
+ffffffffffffffffffff
+gggggggggggggggggggg
+hhhhhhhhhhhhhhhhhhhh
+</td></tr>
+<tr><td>6</td><td>0</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>7</td><td>-7</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>8</td><td>21</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+<tr><td>9</td><td>1000</td><td class='preformatted'>Значение width должно быть в интервале от 1 до 20 включительно
+</td></tr>
+</table>
+</div>
+<div id='task7323' class='task_block'>
+<div class='task_id'>7323</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит два числа: width и diff. Выведите на экран две строки символов "*". В первой строке должно быть width штук символов. Количество символов во второй строчке отличается на значение diff.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>data</th><th>idx</th></tr>
+<th>width</th><th>diff</th></tr>
 <tr>
-<td>1</td><td>as df gh jk</td><td>1</td><td class='preformatted'>В массиве длиной 4
-Элемент на индексе 1 содержит значение df
-Значение предыдущего элемента as
-Значение следующего элемента gh
+<td>1</td><td>4</td><td>3</td><td class='preformatted'>Первая строка 4 символов
+****
+Во второй строке нужно вывести 7 символов
+*******</td></tr>
+<tr>
+<td>2</td><td>10</td><td>5</td><td class='preformatted'>Первая строка 10 символов
+**********
+Во второй строке нужно вывести 15 символов
+***************</td></tr>
+<tr>
+<td>3</td><td>7</td><td>0</td><td class='preformatted'>Первая строка 7 символов
+*******
+Во второй строке нужно вывести 7 символов
+*******</td></tr>
+<tr>
+<td>4</td><td>7</td><td>-3</td><td class='preformatted'>Первая строка 7 символов
+*******
+Во второй строке нужно вывести 4 символов
+****</td></tr>
+<tr>
+<td>5</td><td>2</td><td>-2</td><td class='preformatted'>Первая строка 2 символов
+**
+Во второй строке нужно вывести 0 символов
 </td></tr>
 <tr>
-<td>2</td><td>a s d f g h j k</td><td>3</td><td class='preformatted'>В массиве длиной 8
-Элемент на индексе 3 содержит значение f
-Значение предыдущего элемента d
-Значение следующего элемента g
+<td>6</td><td>0</td><td>5</td><td class='preformatted'>Первая строка 0 символов
+
+Во второй строке нужно вывести 5 символов
+*****</td></tr>
+<tr>
+<td>7</td><td>7</td><td>-11</td><td class='preformatted'>Количество символов во второй строке должно быть неотрицательным
 </td></tr>
 <tr>
-<td>3</td><td>asdf ghjk</td><td>0</td><td class='preformatted'>В массиве длиной 2
-Элемент на индексе 0 содержит значение asdf
-Предыдущий элемент не существует
-Значение следующего элемента ghjk
-</td></tr>
-<tr>
-<td>4</td><td>as df gh jk</td><td>0</td><td class='preformatted'>В массиве длиной 4
-Элемент на индексе 0 содержит значение as
-Предыдущий элемент не существует
-Значение следующего элемента df
-</td></tr>
-<tr>
-<td>5</td><td>a s d f g h j k</td><td>0</td><td class='preformatted'>В массиве длиной 8
-Элемент на индексе 0 содержит значение a
-Предыдущий элемент не существует
-Значение следующего элемента s
-</td></tr>
-<tr>
-<td>6</td><td>a s d f g h j k</td><td>7</td><td class='preformatted'>В массиве длиной 8
-Элемент на индексе 7 содержит значение k
-Значение предыдущего элемента j
-Следующий элемент не существует
-</td></tr>
-<tr>
-<td>7</td><td>as df gh jk</td><td>3</td><td class='preformatted'>В массиве длиной 4
-Элемент на индексе 3 содержит значение jk
-Значение предыдущего элемента gh
-Следующий элемент не существует
-</td></tr>
-<tr>
-<td>8</td><td>asdf ghjk</td><td>1</td><td class='preformatted'>В массиве длиной 2
-Элемент на индексе 1 содержит значение ghjk
-Значение предыдущего элемента asdf
-Следующий элемент не существует
-</td></tr>
-<tr>
-<td>9</td><td>single</td><td>0</td><td class='preformatted'>В массиве длиной 1
-Элемент на индексе 0 содержит значение single
-Предыдущий элемент не существует
-Следующий элемент не существует
-</td></tr>
-<tr>
-<td>10</td><td>single</td><td>1</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
-</td></tr>
-<tr>
-<td>11</td><td>as df gh jk</td><td>4</td><td class='preformatted'>Индекс A должен быть строго меньше длины массива
-</td></tr>
-<tr>
-<td>12</td><td>as df gh jk</td><td>-1</td><td class='preformatted'>Индекс A должен быть больше или равен 0
-</td></tr>
-<tr>
-<td>13</td><td></td><td>0</td><td class='preformatted'>Исходная строка пуста
+<td>8</td><td>-2</td><td>4</td><td class='preformatted'>Количество символов в первой строке должно быть неотрицательным
 </td></tr>
 </table>
 </div>
-<div id='task3908' class='task_block'>
-<div class='task_id'>3908</div>
+<div id='task5568' class='task_block'>
+<div class='task_id'>5568</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - символы, разделенные символом "#". Вывести на экран третий с конца элемент.
-</div>
-<div class='check_single preformatted'>В массиве длиной $length
-Индекс третьего элемента с конца $index
-Значение этого элемента $value</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (arr)</th><th>Результат</th></tr>
-<tr><td>1</td><td>qa#ws#ed#rf</td><td class='preformatted'>В массиве длиной 4
-Индекс третьего элемента с конца 1
-Значение этого элемента ws
-</td></tr>
-<tr><td>2</td><td>qaz#wsx#edc#rfv</td><td class='preformatted'>В массиве длиной 4
-Индекс третьего элемента с конца 1
-Значение этого элемента wsx
-</td></tr>
-<tr><td>3</td><td>q#w#e</td><td class='preformatted'>В массиве длиной 3
-Индекс третьего элемента с конца 0
-Значение этого элемента q
-</td></tr>
-<tr><td>4</td><td>one#two</td><td class='preformatted'>Массив слишком маленький
-</td></tr>
-<tr><td>5</td><td>single</td><td class='preformatted'>Массив слишком маленький
-</td></tr>
-<tr><td>6</td><td></td><td class='preformatted'>Исходная строка пуста
-</td></tr>
-</table>
-</div>
-<div id='task1433' class='task_block'>
-<div class='task_id'>1433</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - символы, разделенные символом ";"(точка с запятой). Вывести на экран индекс середины массива и элемент по этому индексу. Для четного количества элементов взять индекс ближе к началу массива. Для определения середины, вычтите 1 из длины, а затем разделите полученное значение на 2. Округлите итоговое значение вниз.
+Выведите на экран цифры от 0 до 9. Каждая цифра должна быть на своей строчке. Количество цифр в строчке width вводится с клавиатуры. Вывести не более 20 символов в строке.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные ()</th><th>Результат</th></tr>
-<tr><td>1</td><td>q;w;e</td><td class='preformatted'>Длина массива: 3 Индекс: 1, элемент: w</td></tr>
-<tr><td>2</td><td>q;w;e;r</td><td class='preformatted'>Длина массива: 4 Индекс: 1, элемент: w</td></tr>
-<tr><td>3</td><td>q;w;e;r;t;y;u;i;o</td><td class='preformatted'>Длина массива: 9 Индекс: 4, элемент: t</td></tr>
-<tr><td>4</td><td>q;w;e;r;t;y;u;i;o;p</td><td class='preformatted'>Длина массива: 10 Индекс: 4, элемент: t</td></tr>
-<tr><td>5</td><td>q</td><td class='preformatted'>Длина массива: 1 Индекс: 0, элемент: q</td></tr>
-</table>
-</div>
-<div id='task3791' class='task_block'>
-<div class='task_id'>3791</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - символы, разделенные пробелами. Если массив длиннее 4 элементов или короче 4 элементов, вывести сообщение об ошибке. Если в массиве совпадает первый и второй элемент, написать "Первая пара". Если в массиве совпадает второй и третий элемент, написать "Середина". Если в массиве совпадает третий и четвертый элемент, написать "Третья пара". Если в массиве совпадает первый и четвертый элемент, написать "Границы". Если проходит несколько проверок, писать несколько сообщений. Порядок сообщений может отличаться.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (array)</th><th>Результат</th></tr>
-<tr><td>1</td><td>aa,aa,aa,aa</td><td class='preformatted'>Первая пара
-Середина
-Третья пара
-Границы
+<tr><th>Номер теста</th><th>Исходные данные (width)</th><th>Результат</th></tr>
+<tr><td>1</td><td>1</td><td class='preformatted'>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
 </td></tr>
-<tr><td>2</td><td>aa,aa,a,aaa</td><td class='preformatted'>Первая пара
+<tr><td>2</td><td>3</td><td class='preformatted'>000
+111
+222
+333
+444
+555
+666
+777
+888
+999
 </td></tr>
-<tr><td>3</td><td>aa,b,b,ccc</td><td class='preformatted'>Середина
+<tr><td>3</td><td>7</td><td class='preformatted'>0000000
+1111111
+2222222
+3333333
+4444444
+5555555
+6666666
+7777777
+8888888
+9999999
 </td></tr>
-<tr><td>4</td><td>z,x,ccc,ccc</td><td class='preformatted'>Третья пара
+<tr><td>4</td><td>11</td><td class='preformatted'>00000000000
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+77777777777
+88888888888
+99999999999
 </td></tr>
-<tr><td>5</td><td>z,x,ccc,z</td><td class='preformatted'>Границы
+<tr><td>5</td><td>19</td><td class='preformatted'>0000000000000000000
+1111111111111111111
+2222222222222222222
+3333333333333333333
+4444444444444444444
+5555555555555555555
+6666666666666666666
+7777777777777777777
+8888888888888888888
+9999999999999999999
 </td></tr>
-<tr><td>6</td><td>qt,qt,w,w</td><td class='preformatted'>Первая пара
-Третья пара
+<tr><td>6</td><td>20</td><td class='preformatted'>00000000000000000000
+11111111111111111111
+22222222222222222222
+33333333333333333333
+44444444444444444444
+55555555555555555555
+66666666666666666666
+77777777777777777777
+88888888888888888888
+99999999999999999999
 </td></tr>
-<tr><td>7</td><td>qt,qt,w,q</td><td class='preformatted'>Первая пара
+<tr><td>7</td><td>21</td><td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
 </td></tr>
-<tr><td>8</td><td>t,y,y,y</td><td class='preformatted'>Середина
-Третья пара
-</td></tr>
-<tr><td>9</td><td>t,y,t,t</td><td class='preformatted'>Третья пара
-Границы
-</td></tr>
-<tr><td>10</td><td>n,n,m,n</td><td class='preformatted'>Первая пара
-Границы
-</td></tr>
-<tr><td>11</td><td>n,n,n,m</td><td class='preformatted'>Первая пара
-Середина
-</td></tr>
-<tr><td>12</td><td>aa,aa,aa,aa,aa</td><td class='preformatted'>В исходных данных должно быть ровно 4 элемента. Обнаружено 5
-</td></tr>
-<tr><td>13</td><td>aa,aa,aa</td><td class='preformatted'>В исходных данных должно быть ровно 4 элемента. Обнаружено 3
-</td></tr>
-<tr><td>14</td><td>p,o,p,o</td><td class='preformatted'></td></tr>
-<tr><td>15</td><td>aa,s,d,f</td><td class='preformatted'></td></tr>
-</table>
-</div>
-<div id='task9980' class='task_block'>
-<div class='task_id'>9980</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дан массив 'one','two','three','four','five'. Затем пользователь может вводить неизвестное количество чисел. Когда пользователь вводит отрицательное число, нужно прекратить прием чисел и завершить работу программы. Если пользователь ввёл 0 или положительное число, то нужно вывести элемент массива на указанном индексе. Если пользователь вводит число, которое больше или равно размеру массива, выведите сообщение об ошибке и продолжите прием чисел.
-</div>
-<table class='stream_values'>
-<tr><th>Номер теста</th><th>Исходные данные</th><th>Результат</th></tr>
-<tr class='test_row'><td rowspan='6'>1</td><td>2
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 2 находится элемент со значением three
-</td></tr>
-<tr><td>3
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 3 находится элемент со значением four
-</td></tr>
-<tr><td>-1
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом -1
-</td></tr>
-<tr class='test_row'><td rowspan='10'>2</td><td>1
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 1 находится элемент со значением two
-</td></tr>
-<tr><td>4
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 4 находится элемент со значением five
-</td></tr>
-<tr><td>5
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом 5
-</td></tr>
-<tr><td>10
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом 10
-</td></tr>
-<tr><td>-1
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом -1
-</td></tr>
-<tr class='test_row'><td rowspan='8'>3</td><td>0
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 0 находится элемент со значением one
-</td></tr>
-<tr><td>2
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 2 находится элемент со значением three
-</td></tr>
-<tr><td>4
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>На индексе 4 находится элемент со значением five
-</td></tr>
-<tr><td>-99
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом -99
-</td></tr>
-<tr class='test_row'><td rowspan='2'>4</td><td>-2
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>В массиве длиной 5 не существует элемента с индексом -2
+<tr><td>8</td><td>50</td><td class='preformatted'>Значение width должно быть в интервале от 0 до 20 включительно
 </td></tr>
 </table>
 </div>
-<div id='task5683' class='task_block'>
-<div class='task_id'>5683</div>
+<div id='task2592' class='task_block'>
+<div class='task_id'>2592</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - символы, разделенные пробелами. Вывести элементы массива на экран в столбик и пронумеровать их, начиная с нуля.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (str)</th><th>Результат</th></tr>
-<tr><td>1</td><td>qw er ty</td><td class='preformatted'>qw 0
-er 1
-ty 2
-</td></tr>
-<tr><td>2</td><td>qw er ty ui op</td><td class='preformatted'>qw 0
-er 1
-ty 2
-ui 3
-op 4
-</td></tr>
-<tr><td>3</td><td>asd fgh jkl</td><td class='preformatted'>asd 0
-fgh 1
-jkl 2
-</td></tr>
-<tr><td>4</td><td></td><td class='preformatted'> 0
-</td></tr>
-<tr><td>5</td><td>q w e r a s d f z x c v</td><td class='preformatted'>q 0
-w 1
-e 2
-r 3
-a 4
-s 5
-d 6
-f 7
-z 8
-x 9
-c 10
-v 11
-</td></tr>
-</table>
-<div class='task_desc'>
-Подробное решение этой задачи выглядит так:
-</div>
-<div class='check_single preformatted'>String str = Console.ReadLine();
-String[] mas;
-mas = str.Split(' ');
-int index = 0;//переменная объединяет два назначения:
-//* Будущий счётчик цикла
-//* Индекс (номер) элемента
-if (index < mas.Length)
-{
-    Console.WriteLine(mas[index] + " " + index);
-    index = index + 1;
-}
-if (index < mas.Length)
-{
-    Console.WriteLine(mas[index] + " " + index);
-    index = index + 1;
-}
-if (index < mas.Length)
-{
-    Console.WriteLine(mas[index] + " " + index);
-    index = index + 1;
-}
-if (index < mas.Length)
-{
-    Console.WriteLine(mas[index] + " " + index);
-    index = index + 1;
-}
-if (index < mas.Length)
-{
-    Console.WriteLine(mas[index] + " " + index);
-    index = index + 1;
-}
-</div>
-<div class='task_desc'>
-Примените конструкцию цикла чтобы сделать решение универсальным.
-</div>
-</div>
-<div id='task8557' class='task_block'>
-<div class='task_id'>8557</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - названия глав, разделенные запятыми. Вывести содержание. Каждый пункт оформить по шаблону "Глава $i $name", где i - номер главы, name - название соответствующей главы. Нумерация глав должна начинаться с 1.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
-<tr><td>1</td><td>Заполнение шаблона текстом,Организация вычислений,Проверка исходных данных,Взаимоисключающие случаи,Работа с интервалами значений,Реорганизация повторяющихся действий,Вложенные циклы,Массивы,Вычисление агрегатов,Строки,Обработка неизвестного объема данных,Запись в файлы,Методы,Исключения,Классы и объекты,Коллекции</td><td class='preformatted'>Глава 1 Заполнение шаблона текстом
-Глава 2 Организация вычислений
-Глава 3 Проверка исходных данных
-Глава 4 Взаимоисключающие случаи
-Глава 5 Работа с интервалами значений
-Глава 6 Реорганизация повторяющихся действий
-Глава 7 Вложенные циклы
-Глава 8 Массивы
-Глава 9 Вычисление агрегатов
-Глава 10 Строки
-Глава 11 Обработка неизвестного объема данных
-Глава 12 Запись в файлы
-Глава 13 Методы
-Глава 14 Исключения
-Глава 15 Классы и объекты
-Глава 16 Коллекции
-</td></tr>
-<tr><td>2</td><td>Печать текста на экране,Диктант по присваиванию,Получение строк от пользователя,Оформление текста по шаблону,Сокращение повторений в тексте</td><td class='preformatted'>Глава 1 Печать текста на экране
-Глава 2 Диктант по присваиванию
-Глава 3 Получение строк от пользователя
-Глава 4 Оформление текста по шаблону
-Глава 5 Сокращение повторений в тексте
-</td></tr>
-<tr><td>3</td><td>введение,завязка,кульминация,развязка,заключение</td><td class='preformatted'>Глава 1 введение
-Глава 2 завязка
-Глава 3 кульминация
-Глава 4 развязка
-Глава 5 заключение
-</td></tr>
-<tr><td>4</td><td></td><td class='preformatted'></td></tr>
-</table>
-</div>
-<div id='task1223' class='task_block'>
-<div class='task_id'>1223</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит данные - символы, разделенные символом "," (запятая). Вывести данные в обратном порядке в строчку без запятых.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
-<tr><td>1</td><td>q,w,e,r,t,y</td><td class='preformatted'>y t r e w q </td></tr>
-<tr><td>2</td><td>q,w,e,r,t,y,q,w,e,r</td><td class='preformatted'>r e w q y t r e w q </td></tr>
-<tr><td>3</td><td>as,df,gh,jk</td><td class='preformatted'>jk gh df as </td></tr>
-<tr><td>4</td><td>zxcv</td><td class='preformatted'>zxcv </td></tr>
-<tr><td>5</td><td></td><td class='preformatted'></td></tr>
-</table>
-</div>
-<div id='task8311' class='task_block'>
-<div class='task_id'>8311</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит два числа B и E и данные - символы, разделенные пробелами. Значение B может быть как меньше, так и больше E. Нужно вывести элементы, у которых индекс находится между B и E включительно.
+Выведите на экран прямоугольник из символов. Символ S, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>data</th><th>B</th><th>E</th></tr>
-<tr>
-<td>1</td><td>z x c v b</td><td>0</td><td>3</td><td class='preformatted'>z x c v </td></tr>
-<tr>
-<td>2</td><td>z x c v b</td><td>1</td><td>3</td><td class='preformatted'>x c v </td></tr>
-<tr>
-<td>3</td><td>z x c v b</td><td>2</td><td>3</td><td class='preformatted'>c v </td></tr>
-<tr>
-<td>4</td><td>z x c v b a s d f g h</td><td>3</td><td>10</td><td class='preformatted'>v b a s d f g h </td></tr>
-<tr>
-<td>5</td><td>z x c v b a s d f g h</td><td>2</td><td>2</td><td class='preformatted'>c </td></tr>
-<tr>
-<td>6</td><td>z x c v b a s d f g h</td><td>8</td><td>2</td><td class='preformatted'>c v b a s d f </td></tr>
-<tr>
-<td>7</td><td>z x c v b a s d f g h</td><td>11</td><td>8</td><td class='preformatted'>Число B должно быть в интервале [0, размер массива)
+<tr><th>S</th><th>W</th><th>H</th></tr>
+<tr><td>1</td><td>#</td><td>5</td><td>3</td><td class='preformatted'>#####
+#####
+#####
 </td></tr>
-<tr>
-<td>8</td><td>z x c v b a s d f g h</td><td>-1</td><td>5</td><td class='preformatted'>Число B должно быть в интервале [0, размер массива)
+<tr><td>2</td><td>?</td><td>7</td><td>10</td><td class='preformatted'>???????
+???????
+???????
+???????
+???????
+???????
+???????
+???????
+???????
+???????
 </td></tr>
-<tr>
-<td>9</td><td>z x c v b a s d f g h</td><td>8</td><td>50</td><td class='preformatted'>Число E должно быть в интервале [0, размер массива)
+<tr><td>3</td><td>*</td><td>90</td><td>0</td><td class='preformatted'></td></tr>
+<tr><td>4</td><td>=</td><td>0</td><td>15</td><td class='preformatted'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td></tr>
+<tr><td>5</td><td>o</td><td>-2</td><td>8</td><td class='preformatted'>Значение width должно быть 0 или более
+</td></tr>
+<tr><td>6</td><td>!</td><td>20</td><td>-6</td><td class='preformatted'>Значение height должно быть 0 или более
 </td></tr>
 </table>
 </div>
-<div id='task6563' class='task_block'>
-<div class='task_id'>6563</div>
+<div id='task6355' class='task_block'>
+<div class='task_id'>6355</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит данные - фрагменты текста, разделенные пробелами. Вывести данные на экран в три столбика. Второй столбик содержит по одному введенному элементу в строке. Первый столбик - предыдущий элемент. Третий столбик - следующий элемент. Если предыдущий отсутствует, нужно написать BEGIN. Если следующий отсутствует - END.
+Пользователь вводит число seed. Вывести 10 строчек по 7 чисел в каждой. В первой строчке - числа начиная с seed по возрастанию c шагом 1. Во второй строчке - с шагом 2 и так далее. В строчке 10 шаг должен быть равен 10. После двоеточия поставьте символ табуляции "\t"
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (data)</th><th>Результат</th></tr>
-<tr><td>1</td><td>qw er ty</td><td class='preformatted'>BEGIN qw er
-qw er ty
-er ty END
+<tr><th>Номер теста</th><th>Исходные данные (seed)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>Числа от 0 до 7 с шагом 1:	0 1 2 3 4 5 6 7 
+Числа от 0 до 14 с шагом 2:	0 2 4 6 8 10 12 14 
+Числа от 0 до 21 с шагом 3:	0 3 6 9 12 15 18 21 
+Числа от 0 до 28 с шагом 4:	0 4 8 12 16 20 24 28 
+Числа от 0 до 35 с шагом 5:	0 5 10 15 20 25 30 35 
+Числа от 0 до 42 с шагом 6:	0 6 12 18 24 30 36 42 
+Числа от 0 до 49 с шагом 7:	0 7 14 21 28 35 42 49 
+Числа от 0 до 56 с шагом 8:	0 8 16 24 32 40 48 56 
+Числа от 0 до 63 с шагом 9:	0 9 18 27 36 45 54 63 
+Числа от 0 до 70 с шагом 10:	0 10 20 30 40 50 60 70 
 </td></tr>
-<tr><td>2</td><td>qw er ty ui op</td><td class='preformatted'>BEGIN qw er
-qw er ty
-er ty ui
-ty ui op
-ui op END
+<tr><td>2</td><td>2</td><td class='preformatted'>Числа от 2 до 9 с шагом 1:	2 3 4 5 6 7 8 9 
+Числа от 2 до 16 с шагом 2:	2 4 6 8 10 12 14 16 
+Числа от 2 до 23 с шагом 3:	2 5 8 11 14 17 20 23 
+Числа от 2 до 30 с шагом 4:	2 6 10 14 18 22 26 30 
+Числа от 2 до 37 с шагом 5:	2 7 12 17 22 27 32 37 
+Числа от 2 до 44 с шагом 6:	2 8 14 20 26 32 38 44 
+Числа от 2 до 51 с шагом 7:	2 9 16 23 30 37 44 51 
+Числа от 2 до 58 с шагом 8:	2 10 18 26 34 42 50 58 
+Числа от 2 до 65 с шагом 9:	2 11 20 29 38 47 56 65 
+Числа от 2 до 72 с шагом 10:	2 12 22 32 42 52 62 72 
 </td></tr>
-<tr><td>3</td><td>asd fgh jkl</td><td class='preformatted'>BEGIN asd fgh
-asd fgh jkl
-fgh jkl END
+<tr><td>3</td><td>1000</td><td class='preformatted'>Числа от 1000 до 1007 с шагом 1:	1000 1001 1002 1003 1004 1005 1006 1007 
+Числа от 1000 до 1014 с шагом 2:	1000 1002 1004 1006 1008 1010 1012 1014 
+Числа от 1000 до 1021 с шагом 3:	1000 1003 1006 1009 1012 1015 1018 1021 
+Числа от 1000 до 1028 с шагом 4:	1000 1004 1008 1012 1016 1020 1024 1028 
+Числа от 1000 до 1035 с шагом 5:	1000 1005 1010 1015 1020 1025 1030 1035 
+Числа от 1000 до 1042 с шагом 6:	1000 1006 1012 1018 1024 1030 1036 1042 
+Числа от 1000 до 1049 с шагом 7:	1000 1007 1014 1021 1028 1035 1042 1049 
+Числа от 1000 до 1056 с шагом 8:	1000 1008 1016 1024 1032 1040 1048 1056 
+Числа от 1000 до 1063 с шагом 9:	1000 1009 1018 1027 1036 1045 1054 1063 
+Числа от 1000 до 1070 с шагом 10:	1000 1010 1020 1030 1040 1050 1060 1070 
 </td></tr>
-<tr><td>4</td><td>single</td><td class='preformatted'>BEGIN single END
-</td></tr>
-<tr><td>5</td><td>first second</td><td class='preformatted'>BEGIN first second
-first second END
-</td></tr>
-<tr><td>6</td><td></td><td class='preformatted'>Нет данных
-</td></tr>
-<tr><td>7</td><td>q w e r a s d f z x c v</td><td class='preformatted'>BEGIN q w
-q w e
-w e r
-e r a
-r a s
-a s d
-s d f
-d f z
-f z x
-z x c
-x c v
-c v END
+<tr><td>4</td><td>-20</td><td class='preformatted'>Числа от -20 до -13 с шагом 1:	-20 -19 -18 -17 -16 -15 -14 -13 
+Числа от -20 до -6 с шагом 2:	-20 -18 -16 -14 -12 -10 -8 -6 
+Числа от -20 до 1 с шагом 3:	-20 -17 -14 -11 -8 -5 -2 1 
+Числа от -20 до 8 с шагом 4:	-20 -16 -12 -8 -4 0 4 8 
+Числа от -20 до 15 с шагом 5:	-20 -15 -10 -5 0 5 10 15 
+Числа от -20 до 22 с шагом 6:	-20 -14 -8 -2 4 10 16 22 
+Числа от -20 до 29 с шагом 7:	-20 -13 -6 1 8 15 22 29 
+Числа от -20 до 36 с шагом 8:	-20 -12 -4 4 12 20 28 36 
+Числа от -20 до 43 с шагом 9:	-20 -11 -2 7 16 25 34 43 
+Числа от -20 до 50 с шагом 10:	-20 -10 0 10 20 30 40 50 
 </td></tr>
 </table>
 </div>
-<div id='task7295' class='task_block'>
-<div class='task_id'>7295</div>
+<div id='task3519' class='task_block'>
+<div class='task_id'>3519</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дан массив 'one','two','three','four','five', 'six'. Пользователь вводит число. Оно обозначает позицию в массиве, на которую будут записываться другие буквы. Затем пользователь вводит два строковых значения. Первое записывается на указанную позицию. Второе - на следующую. После ввода букв, нужно напечатать получившийся массив на экране. Затем пользователь может ввести данные повторно. Программа должна обрабатывать бесконечное количество чисел.
+Дано начало и конец интервала, а также ширина вывода. Вывести все числа в указанном интервале по возрастанию. Количество чисел на всех строках, кроме последней, должно быть равно ширине вывода.
 </div>
-<table class='stream_values'>
-<tr><th>Номер теста</th><th>Исходные данные</th><th>Результат</th></tr>
-
-<tr class='test_row'><td rowspan='4'>1</td><td>2
-</td><td>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>A</th><th>B</th><th>width</th></tr>
+<tr><td>1</td><td>2</td><td>10</td><td>3</td><td class='preformatted'>2 3 4 
+5 6 7 
+8 9 10 
 </td></tr>
-<tr><td>aaaa
-</td><td>
+<tr><td>2</td><td>100</td><td>105</td><td>1</td><td class='preformatted'>100 
+101 
+102 
+103 
+104 
+105 
 </td></tr>
-<tr><td>bbbb
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>one two aaaa bbbb five six </td></tr>
-
-
-<tr class='test_row'><td rowspan='8'>2</td><td>1
-</td><td>
-</td></tr>
-<tr><td>zx
-</td><td>
-</td></tr>
-<tr><td>cv
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>one zx cv four five six </td></tr>
-<tr><td>3
-</td><td>
-</td></tr>
-<tr><td>as
-</td><td>
-</td></tr>
-<tr><td>df
-</td><td>
-</td></tr>
-<tr><td></td><td class='preformatted'>one zx cv as df six </td></tr>
+<tr><td>3</td><td>0</td><td>10</td><td>3</td><td class='preformatted'>0 1 2 
+3 4 5 
+6 7 8 
+9 10 </td></tr>
+<tr><td>4</td><td>0</td><td>10</td><td>4</td><td class='preformatted'>0 1 2 3 
+4 5 6 7 
+8 9 10 </td></tr>
+<tr><td>5</td><td>20</td><td>11</td><td>4</td><td class='preformatted'>11 12 13 14 
+15 16 17 18 
+19 20 </td></tr>
+<tr><td>6</td><td>0</td><td>96</td><td>10</td><td class='preformatted'>0 1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 16 17 18 19 
+20 21 22 23 24 25 26 27 28 29 
+30 31 32 33 34 35 36 37 38 39 
+40 41 42 43 44 45 46 47 48 49 
+50 51 52 53 54 55 56 57 58 59 
+60 61 62 63 64 65 66 67 68 69 
+70 71 72 73 74 75 76 77 78 79 
+80 81 82 83 84 85 86 87 88 89 
+90 91 92 93 94 95 96 </td></tr>
+<tr><td>7</td><td>-9</td><td>9</td><td>7</td><td class='preformatted'>-9 -8 -7 -6 -5 -4 -3 
+-2 -1 0 1 2 3 4 
+5 6 7 8 9 </td></tr>
+<tr><td>8</td><td>0</td><td>0</td><td>10</td><td class='preformatted'>0 </td></tr>
+<tr><td>9</td><td>2</td><td>7</td><td>20</td><td class='preformatted'>2 3 4 5 6 7 </td></tr>
+<tr><td>10</td><td>1</td><td>2</td><td>0</td><td class='preformatted'></td></tr>
+<tr><td>11</td><td>3</td><td>4</td><td>-6</td><td class='preformatted'>3 4 </td></tr>
 </table>
 </div>
-Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+<div id='task6332' class='task_block'>
+<div class='task_id'>6332</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит число. Вывести его и 10 следующих чисел в столбик с шагом 1. Справа от каждого третьего числа вывести решетки в строчку. Количество решеток равно числу, которое выводилось в начале строки. Количество решеток должно быть не более 30. Есди число в строке отрицательное - не выводить решетки.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (start)</th><th>Результат</th></tr>
+<tr><td>1</td><td>0</td><td class='preformatted'>0
+1
+2 ##
+3
+4
+5 #####
+6
+7
+8 ########
+9
+10
+11 ###########
+</td></tr>
+<tr><td>2</td><td>10</td><td class='preformatted'>10
+11
+12 ############
+13
+14
+15 ###############
+16
+17
+18 ##################
+19
+20
+21 #####################
+</td></tr>
+<tr><td>3</td><td>-10</td><td class='preformatted'>-10
+-9
+-8 
+-7
+-6
+-5 
+-4
+-3
+-2 
+-1
+0
+1 #
+</td></tr>
+<tr><td>4</td><td>100</td><td class='preformatted'>100
+101
+102 ##############################
+103
+104
+105 ##############################
+106
+107
+108 ##############################
+109
+110
+111 ##############################
+</td></tr>
+<tr><td>5</td><td>22</td><td class='preformatted'>22
+23
+24 ########################
+25
+26
+27 ###########################
+28
+29
+30 ##############################
+31
+32
+33 ##############################
+</td></tr>
+</table>
+</div>
+<div id="task7517" class="task_block empty_on_print">
+	<div class="task_id">7517</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вывести на экран прямоугольную сетку координат. Пользователь вводит ширину W и высоту H.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>W</th>
+			<th>H</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>1</td>
+			<td>1</td>
+			<td class="preformatted"> 0
+0.|
+ -
+</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>3</td>
+			<td class="preformatted"> 0123456
+0.......|
+1.......|
+2.......|
+ -------
+</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td class="preformatted"> 01234
+0.....|
+1.....|
+2.....|
+3.....|
+4.....|
+ -----</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>17</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>23</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-3</td>
+			<td>11</td>
+			<td>Значение W должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>-7</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div><div id="task5448" class="task_block empty_on_print">
+	<div class="task_id">5448</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран лесенку из символов. Символ S и высота лесенки H вводятся с клавиатуры.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>S</th>
+			<th>H</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>#</td>
+			<td>6</td>
+			<td class="preformatted">#
+##
+###
+####
+#####
+######</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>\</td>
+			<td>3</td>
+			<td class="preformatted">\
+\\
+\\\</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>^</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>*</td>
+			<td>-2</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>56</td>
+			<td>-3</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div><div id="task6572" class="task_block empty_on_print">
+	<div class="task_id">6572</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран по диагонали нечетные целые числа от А до В включительно по возрастанию. Значение A может быть как меньше, так и больше B.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>8</td>
+			<td>13</td>
+			<td class="preformatted">9
+.11
+..13</br></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>691</td>
+			<td>703</td>
+			<td class="preformatted">691
+.693
+..695
+...697
+....699
+.....701
+......703</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>19</td>
+			<td>3</td>
+			<td class="preformatted">3
+.5
+..7
+...9
+....11
+.....13
+......15
+.......17
+........19</td>
+		</tr>
+	</table>
+</div><div id="task5238" class="task_block empty_on_print">
+	<div class="task_id">5238</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Вывести на экран прямоугольник из символов. Квадрат разделен на две части. Верхняя левая часть заполнена символом &quot;+&quot;. Правая нижняя часть - &quot;#&quot;. Первая строка полностью заполнена знаками &quot;+&quot;, в каждой следующей строке справа, вместо одного из плюсов, пишется &quot;#&quot;. Пользователь вводит ширину W и высоту H.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>W</th>
+			<th>H</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>5</td>
+			<td class="preformatted">+++++
+++++#
++++##
+++###
++####</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>4</td>
+			<td>5</td>
+			<td class="preformatted">++++
++++#
+++##
++###
+####</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3</td>
+			<td>7</td>
+			<td class="preformatted">+++
+++#
++##
+###
+###
+###
+###
+###</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9</td>
+			<td>4</td>
+			<td class="preformatted">+++++++++
+++++++++#
++++++++##
+++++++###</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0</td>
+			<td>5</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-11</td>
+			<td>4</td>
+			<td>Значение W должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>29</td>
+			<td>-2</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div><div id="task2084" class="task_block empty_on_print">
+	<div class="task_id">2084</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран в строчку через запятую нечетные числа от А до В включительно. Если A &lt; B, то в порядке возрастания. Иначе - в порядке убывания. Перед первым и после последнего числа запятой быть не должно.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>20</td>
+			<td>30</td>
+			<td>21, 23, 25, 27, 29</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>8</td>
+			<td>13</td>
+			<td>9, 11, 13</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>571</td>
+			<td>580</td>
+			<td>571, 573, 575, 577, 579</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>691</td>
+			<td>703</td>
+			<td>691, 693, 695, 697, 699, 701, 703</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>-71</td>
+			<td>-96</td>
+			<td>-71, -73, -75, -77, -79, -81, -83, -85, -87, -89, -91, -93, -95</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>64</td>
+			<td>58</td>
+			<td>63, 61, 59</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>19</td>
+			<td>7</td>
+			<td>19, 17, 15, 13, 11, 9, 7</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>401</td>
+			<td>390</td>
+			<td>401, 399, 397, 395, 393, 391</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>800</td>
+			<td>785</td>
+			<td>799, 797, 795, 793, 791, 789, 787, 785</td>
+		</tr>
+	</table>
+</div><div id="task5411" class="task_block empty_on_print">
+	<div class="task_id">5411</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран ряд чисел от P до Q включительно по возрастанию. Значение P может быть как меньше, так и больше Q. До середины строчки ставить между числами знак &quot;&lt;&quot;. После середины строчки - &quot;&gt;&quot;.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="2">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>P</th>
+			<th>Q</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>7</td>
+			<td>11</td>
+			<td>7&lt;8&lt;9&gt;10&gt;11</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>211</td>
+			<td>223</td>
+			<td>211&lt;212&lt;213&lt;214&lt;215&lt;216&lt;217&gt;218&gt;219&gt;220&gt;221&gt;222&gt;223</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>37</td>
+			<td>29</td>
+			<td>29&lt;30&lt;31&lt;32&lt;33&gt;34&gt;35&gt;36&gt;37</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>16</td>
+			<td>20</td>
+			<td>16&lt;17&lt;18&gt;19&gt;20</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>9</td>
+			<td>0</td>
+			<td>0&lt;1&lt;2&lt;3&lt;4&gt;5&gt;6&gt;7&gt;8&gt;9</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>600</td>
+			<td>600</td>
+			<td>600</td>
+		</tr>
+	</table>
+</div><div id="task5171" class="task_block empty_on_print">
+	<div class="task_id">5171</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран прямоугольник из чередующихся строк символов. Символ S1, S2, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>S1</th>
+			<th>S2</th>
+			<th>W</th>
+			<th>H</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>#</td>
+			<td>0</td>
+			<td>5</td>
+			<td>3</td>
+			<td class="preformatted">#####
+00000
+#####</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>?</td>
+			<td>-</td>
+			<td>7</td>
+			<td>10</td>
+			<td class="preformatted">???????
+-------
+???????
+-------
+???????
+-------
+???????
+-------
+???????
+-------</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>*</td>
+			<td>!</td>
+			<td>90</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>=</td>
+			<td>+</td>
+			<td>0</td>
+			<td>15</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>o</td>
+			<td>T</td>
+			<td>-2</td>
+			<td>8</td>
+			<td>Значение W должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>!</td>
+			<td>.</td>
+			<td>20</td>
+			<td>-6</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div><div id="task1862" class="task_block empty_on_print">
+	<div class="task_id">1862</div>
+	<h3>Задача</h3>
+	<div class="task_desc">Выведите на экран прямоугольник из чередующихся колонок символов. Символ S1, S2, ширина прямоугольника W, высота прямоугольника H вводятся с клавиатуры.</div>
+	<table class="check_values">
+		<tr>
+			<th rowspan="2">Номер теста</th>
+			<th colspan="4">Вводимые данные</th>
+			<th rowspan="2">Результат</th>
+		</tr>
+		<tr>
+			<th>S1</th>
+			<th>S2</th>
+			<th>W</th>
+			<th>H</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>#</td>
+			<td>0</td>
+			<td>5</td>
+			<td>3</td>
+			<td class="preformatted">#0#0#
+#0#0#
+#0#0#</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>?</td>
+			<td>-</td>
+			<td>7</td>
+			<td>10</td>
+			<td class="preformatted">?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?
+?-?-?-?</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>*</td>
+			<td>!</td>
+			<td>90</td>
+			<td>0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>=</td>
+			<td>+</td>
+			<td>0</td>
+			<td>15</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>o</td>
+			<td>T</td>
+			<td>-2</td>
+			<td>8</td>
+			<td>Значение W должно быть неотрицательно</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>!</td>
+			<td>.</td>
+			<td>20</td>
+			<td>-6</td>
+			<td>Значение H должно быть неотрицательно</td>
+		</tr>
+	</table>
+</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

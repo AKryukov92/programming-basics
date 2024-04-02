@@ -14,4 +14,16 @@ public class TaskJava8307 extends TaskCs8307 {
         result = Library.task8307("результату");
         System.out.println(result);
     }
+    @Override
+    protected String methodExample() {
+        return "public class Program {\n" +
+                "    public static void task8307(String value) {//сигнатура метода\n" +
+                "        String res;\n" +
+                "        res = \"Мы стремимся к \" + value;\n" +
+                "        System.out.println(res);\n" +
+                "    }\n" +
+                "    static void main(String[] args) {\n" +
+                "    }\n" +
+                "}";
+    }
 }

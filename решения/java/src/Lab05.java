@@ -70,12 +70,6 @@ public class Lab05 {
 
     public static void taskX() {
         System.out.println();
-        System.out.println("3072");
-        System.out.println(task3072(173, 179).print());
-        System.out.println(task3072(359, 271).print());
-        System.out.println(task3072(439, -761).print());
-        System.out.println(task3072(0, -15).print());
-        System.out.println();
         System.out.println("5635");
         int[] in5635xt = {30, 120, 210, 50, 150, 200, 80, 160, 220, 100, 130, 190, 180, 100, 190, 100, 190, -10, 40};
         int[] in5635yt = {20, 30, 40, 120, 130, 150, 190, 180, 200, 110, 100, 140, 170, 100, 100, 170, 170, 30, -20};
@@ -224,28 +218,6 @@ public class Lab05 {
 
     public static boolean task8878(int a, int b) {
         return a < b;
-    }
-
-    public static class class3072 {
-        int max;
-        int min;
-
-        public class3072(int max, int min) {
-            this.max = max;
-            this.min = min;
-        }
-
-        public String print() {
-            return "Максимальное " + max + ", минимальное " + min;
-        }
-    }
-
-    public static class3072 task3072(int p, int q) {
-        if (p > q) {
-            return new class3072(p, q);
-        } else {
-            return new class3072(q, p);
-        }
     }
 
     public static void task5980(double k) {

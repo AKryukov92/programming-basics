@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'/><title>2 Заполнение шаблона данными от пользователя</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>2 Заполнение шаблона данными от пользователя</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -43,14 +43,14 @@ table td, table th {
 }
 .nav {
 	position:fixed;
-	top:0px;
-	right:0px;
+	top:0;
+	right:0;
 	margin:15px;
 	clear:both;
 }
 .nav ul{
 	list-style-type:none;
-	padding:0px;
+	padding:0;
 	float:left;
 }
 .nav li {
@@ -102,30 +102,30 @@ table td, table th {
 	padding:10px;
 }
 .stream_values tr td:nth-child(3) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values tr:nth-child(2) td:nth-child(2) {
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr td:nth-child(1){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:right;
 }
 .stream_values tr.test_row td:nth-child(2){
     text-align:right;
 }
 .stream_values tr td:nth-child(2){
-    border-top-width:0px;
-    border-bottom-width:0px;
+    border-top-width:0;
+    border-bottom-width:0;
     text-align:left;
 }
 .stream_values .preformatted{
-    padding: 0px;
+    padding: 0;
 }
 .stream_values tr.test_row td {
     border-top-width:1px;
@@ -197,42 +197,43 @@ spoiler:hover trans {
 	color:white;
 	width:300px;
 }
-zoom{
+.zoom{
 	background-color:lightgrey;
 	font-size:40pt;
-	padding:0px 10px;
+	padding:0 10px;
 }
-.task_block:target zoom {
+.task_block:target .zoom {
     background-color:white;
 }</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Заполнение шаблона данными от пользователя</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
 <li>4 <a href='tasks 4.html'>Проверка исходных данных</a></li>
-<li>5 <a href='tasks 5.html'>Взаимоисключающие случаи</a></li>
-<li>6 <a href='tasks 6.html'>Работа с интервалами значений</a></li>
-<li>7 <a href='tasks 7.html'>Реорганизация повторяющихся действий</a></li>
-<li>8 <a href='tasks 8.html'>Обработка неизвестного объема данных</a></li>
-<li>9 <a href='tasks 9.html'>Вложенные циклы</a></li>
-<li>10 <a href='tasks 10.html'>Базовые операции с массивами</a></li>
-<li>11 <a href='tasks 11.html'>Перестановки элементов массива</a></li>
-<li>12 <a href='tasks 12.html'>Использование числовых массивов</a></li>
-<li>13 <a href='tasks 13.html'>Вычисление агрегатов</a></li>
-<li>14 <a href='tasks 14.html'>Поиск в массиве</a></li>
-<li>15 <a href='tasks 15.html'>Сортировка вставкой</a></li>
-<li>16 <a href='tasks 16.html'>Строки</a></li>
-<li>17 <a href='tasks 17.html'>Чтение файлов</a></li>
-<li>18 <a href='tasks 18.html'>Запись в файлы</a></li>
-<li>19 <a href='tasks 19.html'>Методы</a></li>
-<li>20 <a href='tasks 20.html'>Исключения</a></li>
-<li>21 <a href='tasks 21.html'>Составные типы данных</a></li>
-<li>22 <a href='tasks 22.html'>Внутреннее состояние</a></li>
-<li>23 <a href='tasks 23.html'>Коллекции</a></li>
-<li>24 <a href='tasks 24.html'>Рекурсия</a></li>
-<li>25 <a href='tasks 25.html'>Даты</a></li>
-<li>26 <a href='tasks 26.html'>Комбинаторика</a></li>
-<li>27 <a href='tasks 27.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1860' class='example'>1*</a><li><a href='#task4764'>2</a><li><a href='#task2429'>3</a><li><a href='#task7472'>4</a><li><a href='#task1910'>5</a><li><a href='#task7465' class='example'>6*</a><li><a href='#task4131'>7</a><li><a href='#task7365'>8</a><li><a href='#task4140' class='example'>9*</a><li><a href='#task2959'>10</a><li><a href='#task7271'>11</a><li><a href='#task2632'>12</a><li><a href='#task4343'>13</a><li><a href='#task7474'>14</a></ul></div><div id='task1860' class='task_block'>
+<li>5 <a href='tasks 5.html'>Запуск программы с известными исходными данными</a></li>
+<li>6 <a href='tasks 6.html'>Взаимоисключающие случаи</a></li>
+<li>7 <a href='tasks 7.html'>Работа с интервалами значений</a></li>
+<li>8 <a href='tasks 8.html'>Реорганизация повторяющихся действий</a></li>
+<li>9 <a href='tasks 9.html'>Обработка неизвестного объема данных</a></li>
+<li>10 <a href='tasks 10.html'>Вложенные циклы</a></li>
+<li>11 <a href='tasks 11.html'>Базовые операции с массивами</a></li>
+<li>12 <a href='tasks 12.html'>Перестановки элементов массива</a></li>
+<li>13 <a href='tasks 13.html'>Использование числовых массивов</a></li>
+<li>14 <a href='tasks 14.html'>Вычисление агрегатов</a></li>
+<li>15 <a href='tasks 15.html'>Поиск в массиве</a></li>
+<li>16 <a href='tasks 16.html'>Сортировка вставкой</a></li>
+<li>17 <a href='tasks 17.html'>Строки</a></li>
+<li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
+<li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
+<li>20 <a href='tasks 20.html'>Возврат значения</a></li>
+<li>21 <a href='tasks 21.html'>Исключения</a></li>
+<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
+<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
+<li>24 <a href='tasks 24.html'>Коллекции</a></li>
+<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
+<li>26 <a href='tasks 26.html'>Даты</a></li>
+<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
+<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task1860' class='example'>1*</a><li><a href='#task4764'>2</a><li><a href='#task2429'>3</a><li><a href='#task7472'>4</a><li><a href='#task1910'>5</a><li><a href='#task7465' class='example'>6*</a><li><a href='#task4131'>7</a><li><a href='#task7365'>8</a><li><a href='#task4140' class='example'>9*</a><li><a href='#task2959'>10</a><li><a href='#task7271'>11</a><li><a href='#task2632'>12</a><li><a href='#task7474'>13</a></ul></div><div id='task1860' class='task_block'>
 <div class='task_id'>1860</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -510,21 +511,6 @@ FROM students WHERE student_id = 'fa93f';</td></tr>
 <tr><td>1</td><td>50</td><td>50</td><td>40</td><td>yellow</td><td class='preformatted'>&lt;circle cx="50" cy="50" r="40" fill="yellow"/&gt;</td></tr>
 <tr><td>2</td><td>400</td><td>300</td><td>200</td><td>green</td><td class='preformatted'>&lt;circle cx="400" cy="300" r="200" fill="green"/&gt;</td></tr>
 <tr><td>3</td><td>254</td><td>356</td><td>100</td><td>#cc6600</td><td class='preformatted'>&lt;circle cx="254" cy="356" r="100" fill="#cc6600"/&gt;</td></tr>
-</table>
-</div>
-<div id='task4343' class='task_block'>
-<div class='task_id'>4343</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит несколько значений. Вывести данный фрагмент текста, заменив названия переменных их значениями.
-</div>
-<div class='check_single preformatted'>User ID=$USER;Password=$PASS;Host=$HOST;Port=$PORT;Database=$DB;</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='5'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>user</th><th>pass</th><th>host</th><th>port</th><th>db</th></tr>
-<tr><td>1</td><td>test</td><td>pass</td><td>localhost</td><td>5432</td><td>my_db</td><td class='preformatted'>User ID=test;Password=pass;Host=localhost;Port=5432;Database=my_db;</td></tr>
-<tr><td>2</td><td>admin</td><td>7e8efd48d69c</td><td>production-node1</td><td>5432</td><td>bank</td><td class='preformatted'>User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td></tr>
-<tr><td>3</td><td>akryukov</td><td>123</td><td>localhost</td><td>dev-node1</td><td>bank</td><td class='preformatted'>User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td></tr>
 </table>
 </div>
 <div id='task7474' class='task_block'>

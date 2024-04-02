@@ -9,24 +9,42 @@ public class TaskCs8307 extends OneInputValLayout {
         appendHeader();
         appendTaskDescEscaped("Пользователь вводит слово (goal). Нужно напечатать на экран фразу \"Мы стремимся к \" и затем слово от пользователя.");
         appendOrderedNonEscaped(
-                "В классе Library реализуйте публичный статический метод task8307.",
+                "В классе Program реализуйте публичный статический метод task8307.",
                 "Метод принимает в качестве аргумента 1 строку.",
                 "Метод возвращает текст, который нужно напечатать на экран.",
                 "В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных."
         );
         appendTaskDescEscaped("Код метода будет выглядеть так:");
-        appendCheckSingleNonEscaped("public class Library {\n" +
-                "    public static void task8307(String value) {\n" +
-                "        String res;\n" +
-                "        res = \"Мы стремимся к \" + value;\n" +
-                "        return res;\n" +
-                "    }\n" +
-                "}");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescEscaped("Метод - блок кода, содержащий ряд инструкций. Программа инициирует выполнение инструкций вызывая метод и указывая все аргументы, необходимые для этого метода.");
+        appendTaskDescEscaped("Сигнатура метода - части метода, которые нужны для его объявления. На данном этапе обучения будут использоваться следующие элементы:");
+        resetOrdered();
+        appendOrderedNonEscaped(
+                "public - ключевое слово, необязательное. Модификатор доступа. На данном этапе обучения его наличие или отсутствие ни на что не повлияет.",
+                "static - ключевое слово. На данном этапе обучения обязательно. Объявление методов без него будет рассмотрено в будущих практических.",
+                "void - ключевое слово. На данном этапе обучения обязательно. Объявление методов с альтернативами этому слову будет рассмотрено в будущах практических.",
+                "Имя метода - произвольный текст. Подчиняется правилам именования переменных.",
+                "Параметры (аргументы) метода - заключаются в круглые скобки, выглядят как объявление переменных через запятую. Метод без параметра оформляется с пустыми скобками."
+        );
+        appendTaskDescNonEscaped("Источник - <a href='https://learn.microsoft.com/ru-ru/dotnet/csharp/methods'>Статья на Microsoft Learn</a>, <a href='https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html'>Oracle java documentation</a>");
         appendTaskDescEscaped("В методе main класса Program добавьте следующий код:");
         appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
-        appendTaskDescEscaped("В результате запуска метода main класса Program, в консоли должен появиться текст:");
+        appendTaskDescEscaped("В результате запуска программы, в консоли должен появиться текст:");
         appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
+    }
+
+    @Override
+    protected String methodExample() {
+        return "class Program {\n" +
+                "    public static void task8307(String value) {//сигнатура метода\n" +
+                "        String res;\n" +
+                "        res = \"Мы стремимся к \" + value;\n" +
+                "        Console.WriteLine(res);\n" +
+                "    }\n" +
+                "    static void Main(string[] args) {\n" +
+                "    }\n" +
+                "}";
     }
 
     @Override
