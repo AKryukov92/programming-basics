@@ -43,6 +43,8 @@ public class TaskCs8307 extends OneInputValLayout {
                 "        Console.WriteLine(res);\n" +
                 "    }\n" +
                 "    static void Main(string[] args) {\n" +
+                "        String temp = Console.ReadLine();\n" +
+                "        task8307(temp);\n" +
                 "    }\n" +
                 "}";
     }

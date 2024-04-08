@@ -87,28 +87,6 @@ public class Lab05 {
             }
         }
         System.out.println();
-        System.out.println("3878");
-        int[] in3878xt = {2, 1, 0, 0, 1, 2, -1};
-        int[] in3878yt = {2, 3, 0, 1, 1, 2, 1};
-        int[] in3878xp1 = {1, 0, 1, 1, 1, 0, 1};
-        int[] in3878yp1 = {1, 0, 1, 1, 1, 4, 1};
-        int[] in3878xp2 = {3, 2, 2, 2, 2, 4, 2};
-        int[] in3878yp2 = {3, 6, 2, 2, 2, 0, 2};
-        for (int i = 0; i < in3878xt.length; i++) {
-            try {
-                Point t = makePointByXY(in3878xt[i], in3878yt[i]);
-                Point p1 = makePointByXY(in3878xp1[i], in3878yp1[i]);
-                Point p2 = makePointByXY(in3878xp2[i], in3878yp2[i]);
-                if (task3878(t, p1, p2)) {
-                    System.out.println("Точка принадлежит прямой");
-                } else {
-                    System.out.println("Точка не принадлежит прямой");
-                }
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        System.out.println();
         System.out.println("4858");
         int[] in4858a1 = {2, 11, 23, 43, 5, 67, 79, 97};
         int[] in4858b1 = {3, 17, 37, 53, 15, 71, 73, 101};
@@ -120,52 +98,6 @@ public class Lab05 {
                 System.out.println(value);
             } catch (IllegalArgumentException ex) {
                 System.out.println(ex.getMessage());
-            }
-        }
-        System.out.println();
-        System.out.println("1217");
-        int[] in1217a1 = {2, 11, 23, 43, 5, 67, 79, 97};
-        int[] in1217b1 = {3, 17, 37, 53, 15, 71, 73, 101};
-        int[] in1217a2 = {5, 13, 29, 41, 0, 59, 83, 107};
-        int[] in1217b2 = {7, 19, 31, 47, 30, 61, 89, 103};
-        for (int i = 0; i < in1217a1.length; i++) {
-            try {
-                Interval i1 = makeIntervalByEnds(in1217a1[i], in1217b1[i]);
-                Interval i2 = makeIntervalByEnds(in1217a2[i], in1217b2[i]);
-                if (task1217check(i1, i2)) {
-                    System.out.print("Пересекаются ");
-                    Interval x = task1217intersection(i1, i2);
-                    System.out.println("(" + x.a + "; " + x.b + ")");
-                } else {
-                    System.out.println("Не пересекаются");
-                }
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        System.out.println();
-        System.out.println("1438");
-        int[] in1438x1 = {10, 25, 102, 500, 60, 100, 150, 100, 5, 105, 150, 0, 200, 125, 100};
-        int[] in1435y1 = {10, 25, 200, 200, 70, 100, 150, 0, 0, 5, 150, 0, 200, 138, 100};
-        int[] in1435h1 = {200, 200, 100, 100, 120, 200, 150, 100, 10, 10, 50, 802, 100, 0, 120};
-        int[] in1435w1 = {100, 200, 200, 200, 200, 200, 300, 500, 10, 10, 300, 200, 100, 1, 220};
-        int[] in1435x2 = {50, 225, 0, 10, 50, 200, 150, 0, 0, 100, 100, 0, 900, 205, 220};
-        int[] in1435y2 = {50, 225, 500, 400, 50, 200, 150, 200, 5, 0, 100, 0, 200, 202, 100};
-        int[] in1435h2 = {300, 200, 100, 100, 120, 50, 150, 700, 10, 10, 300, 610, 100, 61, 120};
-        int[] in1435w2 = {350, 200, 120, 120, 200, 50, 300, 100, 10, 30, 200, 610, 10, 62, 220};
-        for (int i = 0; i < in1438x1.length; i++) {
-            try {
-                Rectangle r1 = makeRectangleByXYHW(in1438x1[i], in1435y1[i], in1435h1[i], in1435w1[i]);
-                Rectangle r2 = makeRectangleByXYHW(in1435x2[i], in1435y2[i], in1435h2[i], in1435w2[i]);
-                if (task1438check(r1, r2)) {
-                    System.out.print("Пересекаются");
-                    Rectangle rx = task1438intersect(r1, r2);
-                    System.out.printf("{\"x\":%d,\"y\":%d,\"w\":%d,\"h\":%d}\n", rx.x, rx.y, rx.w, rx.h);
-                } else {
-                    System.out.println("Не пересекаются");
-                }
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
             }
         }
         System.out.println();
@@ -499,22 +431,6 @@ public class Lab05 {
         return Integer.toString(a);
     }
 
-    public static boolean task6556(int a, int b, int c, int d) throws IllegalArgumentException {
-        if (a < 0) {
-            throw new IllegalArgumentException("Значение A должно быть неотрицательным");
-        }
-        if (b < 0) {
-            throw new IllegalArgumentException("Значение B должно быть неотрицательным");
-        }
-        if (c < 0) {
-            throw new IllegalArgumentException("Значение C должно быть неотрицательным");
-        }
-        if (d < 0) {
-            throw new IllegalArgumentException("Значение D должно быть неотрицательным");
-        }
-        return a < c && b < d;
-    }
-
     public static class Point {
         public final int x;
         public final int y;
@@ -589,14 +505,6 @@ public class Lab05 {
                 t.y <= r.y + r.h;
     }
 
-    public static boolean task3878(Point t, Point p1, Point p2) {
-        return (t.x - p1.x) / (p2.x - p1.x) == (t.y - p1.y) / (p2.y - p1.y);
-    }
-
-    public static boolean task1217check(Interval i1, Interval i2) {
-        return !(i1.b <= i2.a || i2.b <= i1.a);
-    }
-
     public static Interval task1217intersection(Interval i1, Interval i2) {
         if (i1.a < i2.a && i2.a < i1.b) {
             if (i2.b > i1.b) {
@@ -611,14 +519,6 @@ public class Lab05 {
                 return new Interval(i1.a, i2.b);
             }
         }
-    }
-
-    public static boolean task1438check(Rectangle r1, Rectangle r2) {
-        Interval r1x = new Interval(r1.x, r1.x + r1.w);
-        Interval r2x = new Interval(r2.x, r2.x + r2.w);
-        Interval r1y = new Interval(r1.y, r1.y + r1.h);
-        Interval r2y = new Interval(r2.y, r2.y + r2.h);
-        return task1217check(r1x, r2x) && task1217check(r1y, r2y);
     }
 
     public static Rectangle task1438intersect(Rectangle r1, Rectangle r2) {

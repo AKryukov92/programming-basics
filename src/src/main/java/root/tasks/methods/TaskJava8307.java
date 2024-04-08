@@ -23,6 +23,9 @@ public class TaskJava8307 extends TaskCs8307 {
                 "        System.out.println(res);\n" +
                 "    }\n" +
                 "    static void main(String[] args) {\n" +
+                "        Scanner s = new Scanner(System.in);\n" +
+                "        String temp = s.nextLine();\n" +
+                "        task8307(temp);\n" +
                 "    }\n" +
                 "}";
     }

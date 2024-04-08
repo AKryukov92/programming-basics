@@ -2,7 +2,7 @@ package root.tasks.calculations;
 
 import root.tasks.MultipleInputValLayout;
 
-public class Task2375 extends MultipleInputValLayout {
+public class TaskCs2375 extends MultipleInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
@@ -18,7 +18,17 @@ public class Task2375 extends MultipleInputValLayout {
         appendCheckValuesRow("4", "80", "4", "1");
         appendCheckValuesRow("7", "19", "7", "19");
         appendCheckValuesFooter();
+        appendTaskDescEscaped("Для удобства проверки, вы можете написать ожидаемый результат простым текстом, а следующей строкой - вывести на экран результат запуска метода.");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescEscaped("Оформите все тестовые случаи таким образом. Таким образом вы сможете быстро увидеть в каких случаях фактический результат отличается от ожидаемого.");
         appendFooter();
+    }
+
+    @Override
+    protected String methodExample() {
+        return "Console.WriteLine(\"Должно быть: Остаток на счету: 0 рублей -42 копеек\"); //здесь пишите текст из тестовых данных\n" +
+                "Console.Write(\"Получилось :\");\n" +
+                "task2375(2,87,3,45);";
     }
 
     @Override
@@ -52,6 +62,6 @@ public class Task2375 extends MultipleInputValLayout {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Task2375());
+        System.out.println(new TaskCs2375());
     }
 }

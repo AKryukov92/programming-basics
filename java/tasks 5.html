@@ -233,7 +233,7 @@ spoiler:hover trans {
 <li>26 <a href='tasks 26.html'>Даты</a></li>
 <li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
 <li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task4343'>5</a><li><a href='#task6522'>6</a><li><a href='#task7619'>7</a><li><a href='#task4913'>8</a><li><a href='#task9130' class='example'>9*</a><li><a href='#task2361'>10</a></ul></div><div id='task8307' class='task_block'>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task4343'>5</a><li><a href='#task6556'>6</a><li><a href='#task3878'>7</a></ul><ul><li><a href='#task2375' class='example'>8*</a><li><a href='#task6522'>9</a><li><a href='#task7619'>10</a><li><a href='#task4913'>11</a><li><a href='#task9130' class='example'>12*</a><li><a href='#task2361'>13</a><li><a href='#task7243'>14</a><li><a href='#task8135'>15</a><li><a href='#task6896'>16</a></ul></div><div id='task8307' class='task_block'>
 <div class='task_id'>8307</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -249,6 +249,9 @@ spoiler:hover trans {
         System.out.println(res);
     }
     static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String temp = s.nextLine();
+        task8307(temp);
     }
 }</div>
 <div class='task_desc'>
@@ -373,6 +376,104 @@ Library.task2772(-3, 0, 2);
 <tr><td>2</td><td>admin</td><td>7e8efd48d69c</td><td>production-node1</td><td>5432</td><td>bank</td><td class='preformatted'>User ID=admin;Password=7e8efd48d69c;Host=production-node1;Port=5432;Database=bank;</td></tr>
 <tr><td>3</td><td>akryukov</td><td>123</td><td>localhost</td><td>dev-node1</td><td>bank</td><td class='preformatted'>User ID=akryukov;Password=123;Host=localhost;Port=dev-node1;Database=bank;</td></tr>
 </table>
+</div>
+<div id='task6556' class='task_block'>
+<div class='task_id'>6556</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны вещественные положительные числа a, b, c, d. Выяснить, можно ли прямоугольник шириной widthA и высотой heightA уместить внутри прямоугольника шириной widthB и высотой heightB. Каждая из сторон одного прямоугольника была параллельна или перпендикулярна каждой стороне второго прямоугольника.
+</div>
+<img src="images/task6556.png"/>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>widthA</th><th>heightA</th><th>widthB</th><th>heightB</th></tr>
+<tr><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td><td class='preformatted'>Размещение возможно
+</td></tr>
+<tr><td>2</td><td>7</td><td>1</td><td>11</td><td>3</td><td class='preformatted'>Размещение возможно
+</td></tr>
+<tr><td>3</td><td>1</td><td>7</td><td>11</td><td>3</td><td class='preformatted'>Размещение невозможно
+</td></tr>
+<tr><td>4</td><td>2</td><td>13</td><td>5</td><td>19</td><td class='preformatted'>Размещение возможно
+</td></tr>
+<tr><td>5</td><td>13</td><td>11</td><td>7</td><td>19</td><td class='preformatted'>Размещение невозможно
+</td></tr>
+<tr><td>6</td><td>11</td><td>13</td><td>7</td><td>19</td><td class='preformatted'>Размещение невозможно
+</td></tr>
+<tr><td>7</td><td>23</td><td>3</td><td>9</td><td>11</td><td class='preformatted'>Размещение невозможно
+</td></tr>
+<tr><td>8</td><td>-2</td><td>8</td><td>9</td><td>7</td><td class='preformatted'>Значение A должно быть неотрицательным
+</td></tr>
+<tr><td>9</td><td>3</td><td>-4</td><td>5</td><td>6</td><td class='preformatted'>Значение B должно быть неотрицательным
+</td></tr>
+<tr><td>10</td><td>13</td><td>15</td><td>-17</td><td>19</td><td class='preformatted'>Значение C должно быть неотрицательным
+</td></tr>
+<tr><td>11</td><td>6911</td><td>5881</td><td>3203</td><td>-4639</td><td class='preformatted'>Значение D должно быть неотрицательным
+</td></tr>
+</table>
+</div>
+<div id='task3878' class='task_block'>
+<div class='task_id'>3878</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Дана точка с координатами (X<sub>т</sub>;Y<sub>т</sub>) и прямая, проходящая через точки (X<sub>п1</sub>;Y<sub>п1</sub>) (X<sub>п2</sub>;Y<sub>п2</sub>). Точка принадлежит прямой, если истинно выражение:
+<formula><fraction><numerator>X<sub>т</sub>-X<sub>п1</sub></numerator><denominator>X<sub>п2</sub> - X<sub>п1</sub></denominator></fraction> = <fraction><numerator>Y<sub>т</sub> - Y<sub>п1</sub></numerator><denominator>Y<sub>п2</sub> - Y<sub>п1</sub></denominator></fraction></formula> Вывести на экран сообщение: "Точка принадлежит прямой" или "Точка не принадлежит прямой".
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='6'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>Xт</th><th>Yт</th><th>Xп1</th><th>Yп1</th><th>Xп2</th><th>Yп2</th></tr>
+<tr><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>3</td><td>3</td><td class='preformatted'>Точка принадлежит прямой
+</td></tr>
+<tr><td>2</td><td>1</td><td>3</td><td>0</td><td>0</td><td>2</td><td>6</td><td class='preformatted'>Точка принадлежит прямой
+</td></tr>
+<tr><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>2</td><td class='preformatted'>Точка принадлежит прямой
+</td></tr>
+<tr><td>4</td><td>0</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td class='preformatted'>Точка не принадлежит прямой
+</td></tr>
+<tr><td>5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td class='preformatted'>Точка принадлежит прямой
+</td></tr>
+<tr><td>6</td><td>2</td><td>2</td><td>0</td><td>4</td><td>4</td><td>0</td><td class='preformatted'>Точка принадлежит прямой
+</td></tr>
+<tr><td>7</td><td>-1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td class='preformatted'>Точка не принадлежит прямой
+</td></tr>
+</table>
+</div>
+<div id='task2375' class='task_block'>
+<div class='task_id'>2375</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит количество денег на счету и стоимость покупки. Вычесть стоимость покупки из количества денег на счету.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>accountRoubles</th><th>accountKop</th><th>priceRoubles</th><th>priceKop</th></tr>
+<tr><td>1</td><td>3</td><td>87</td><td>2</td><td>89</td><td class='preformatted'>Остаток на счету: 0 рублей 98 копеек
+</td></tr>
+<tr><td>2</td><td>2</td><td>87</td><td>3</td><td>89</td><td class='preformatted'>Остаток на счету: -1 рублей 2 копеек
+</td></tr>
+<tr><td>3</td><td>10</td><td>87</td><td>3</td><td>89</td><td class='preformatted'>Остаток на счету: 6 рублей 98 копеек
+</td></tr>
+<tr><td>4</td><td>2</td><td>87</td><td>3</td><td>45</td><td class='preformatted'>Остаток на счету: 0 рублей -42 копеек
+</td></tr>
+<tr><td>5</td><td>3</td><td>57</td><td>2</td><td>74</td><td class='preformatted'>Остаток на счету: 0 рублей 83 копеек
+</td></tr>
+<tr><td>6</td><td>10</td><td>87</td><td>3</td><td>45</td><td class='preformatted'>Остаток на счету: 7 рублей 42 копеек
+</td></tr>
+<tr><td>7</td><td>4</td><td>1</td><td>4</td><td>80</td><td class='preformatted'>Остаток на счету: 0 рублей -79 копеек
+</td></tr>
+<tr><td>8</td><td>4</td><td>80</td><td>4</td><td>1</td><td class='preformatted'>Остаток на счету: 0 рублей 79 копеек
+</td></tr>
+<tr><td>9</td><td>7</td><td>19</td><td>7</td><td>19</td><td class='preformatted'>Остаток на счету: 0 рублей 0 копеек
+</td></tr>
+</table>
+<div class='task_desc'>
+Для удобства проверки, вы можете написать ожидаемый результат простым текстом, а следующей строкой - вывести на экран результат запуска метода.
+</div>
+<div class='check_single preformatted'>System.out.println("Должно быть: Остаток на счету: 0 рублей -42 копеек"); //здесь пишите текст из тестовых данных
+System.out.print("Получилось :");
+task2375(2,87,3,45);</div>
+<div class='task_desc'>
+Оформите все тестовые случаи таким образом. Таким образом вы сможете быстро увидеть в каких случаях фактический результат отличается от ожидаемого.
+</div>
 </div>
 <div id='task6522' class='task_block'>
 <div class='task_desc'>
@@ -618,6 +719,180 @@ Library.task2772(-3, 0, 2);
 </td></tr>
 <tr>
 <td>10</td><td>0</td><td>23</td><td class='preformatted'>Длина рулона должна быть положительна
+</td></tr>
+</table>
+</div>
+<div id='task7243' class='task_block'>
+<div class='task_id'>7243</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны две ёмкости объемом 5 и 8 литров. Пользователь вводит два целых числа - фактическое количество воды в них. Определить, сколько воды получится в этих ёмкостях при переливании из маленькой в большую. Переливание происходит "до краев". Излишки остаются в маленькой ёмкости. Ответ оформить по шаблону:
+</div>
+<div class='check_single preformatted'>Было в маленькой $small из 5, в большой $large из 8
+Стало в маленькой $resultSmall из 5, в большой $resultLarge из 8</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
+<th>small</th><th>large</th></tr>
+<tr>
+<td>1</td><td>5</td><td>8</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Стало: в маленькой 5 из 5, в большой 8 из 8</td></tr>
+<tr>
+<td>2</td><td>0</td><td>0</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
+Стало: в маленькой 0 из 5, в большой 0 из 8</td></tr>
+<tr>
+<td>3</td><td>5</td><td>0</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Стало: в маленькой 0 из 5, в большой 5 из 8</td></tr>
+<tr>
+<td>4</td><td>5</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 1 из 8
+Стало: в маленькой 0 из 5, в большой 6 из 8</td></tr>
+<tr>
+<td>5</td><td>5</td><td>3</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 3 из 8
+Стало: в маленькой 0 из 5, в большой 8 из 8</td></tr>
+<tr>
+<td>6</td><td>5</td><td>4</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Стало: в маленькой 1 из 5, в большой 8 из 8</td></tr>
+<tr>
+<td>7</td><td>4</td><td>5</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 5 из 8
+Стало: в маленькой 1 из 5, в большой 8 из 8</td></tr>
+<tr>
+<td>8</td><td>3</td><td>7</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 7 из 8
+Стало: в маленькой 2 из 5, в большой 8 из 8</td></tr>
+<tr>
+<td>9</td><td>-1</td><td>2</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr>
+<td>10</td><td>20</td><td>3</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr>
+<td>11</td><td>1</td><td>-4</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+</td></tr>
+<tr>
+<td>12</td><td>2</td><td>19</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+</td></tr>
+</table>
+</div>
+<div id='task8135' class='task_block'>
+<div class='task_id'>8135</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит вещественные числа a, b, c. Оформить квадратное уравнение с учетом знаков. В результате не должно быть знаков + и - рядом. Если какой-то из множителей равен 1, то он не пишется. Если какой-то из множителей равен 0, то все слагаемое не пишется.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>a</th><th>b</th><th>c</th></tr>
+<tr><td>1</td><td>5</td><td>2</td><td>3</td><td class='preformatted'>5*x^2 +2*x +3 = 0
+</td></tr>
+<tr><td>2</td><td>-2</td><td>2</td><td>3</td><td class='preformatted'>-2*x^2 +2*x +3 = 0
+</td></tr>
+<tr><td>3</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>x^2 +2*x +3 = 0
+</td></tr>
+<tr><td>4</td><td>-1</td><td>2</td><td>3</td><td class='preformatted'>-1*x^2 +2*x +3 = 0
+</td></tr>
+<tr><td>5</td><td>0</td><td>2</td><td>3</td><td class='preformatted'>2*x +3 = 0
+</td></tr>
+<tr><td>6</td><td>5</td><td>1</td><td>7</td><td class='preformatted'>5*x^2 +x +7 = 0
+</td></tr>
+<tr><td>7</td><td>5</td><td>-1</td><td>7</td><td class='preformatted'>5*x^2 -1*x +7 = 0
+</td></tr>
+<tr><td>8</td><td>5</td><td>-3</td><td>7</td><td class='preformatted'>5*x^2 -3*x +7 = 0
+</td></tr>
+<tr><td>9</td><td>5</td><td>0</td><td>7</td><td class='preformatted'>5*x^2 +7 = 0
+</td></tr>
+<tr><td>10</td><td>5</td><td>3</td><td>-4</td><td class='preformatted'>5*x^2 +3*x -4 = 0
+</td></tr>
+<tr><td>11</td><td>5</td><td>3</td><td>-1</td><td class='preformatted'>5*x^2 +3*x -1 = 0
+</td></tr>
+<tr><td>12</td><td>5</td><td>3</td><td>1</td><td class='preformatted'>5*x^2 +3*x +1 = 0
+</td></tr>
+<tr><td>13</td><td>5</td><td>3</td><td>0</td><td class='preformatted'>5*x^2 +3*x  = 0
+</td></tr>
+</table>
+<div class='task_desc'>
+Для удобства проверки, вы можете оформить ответ в виде:
+</div>
+<div class='check_single preformatted'>Должно быть: 5*x^2 -3*x +7 = 0 //здесь пишите текст из тестовых данных
+Получилось : 5*x^2 -3*x +7 = 0//здесь расположите результат вызова метода</div>
+<div class='task_desc'>
+Оформите все тестовые случаи таким образом. Таким образом вы сможете быстро увидеть в каких случаях фактический результат отличается от ожидаемого.
+</div>
+</div>
+<div id='task6896' class='task_block'>
+<div class='task_id'>6896</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны две ёмкости объемом 5 и 8 литров. Пользователь вводит два целых числа - фактическое количество воды в них. Затем нужно вывести пользователю список возможных действий:
+</div>
+<ol start='1'><li>Налить из крана в маленькую ёмкость</li><li>Налить из крана в большую ёмкость</li><li>Налить из маленькой ёмкости в большую</li><li>Налить из большой ёмкости в маленькую</li><li>Вылить из маленькой ёмкости в раковину</li><li>Вылить из большой ёмкости в раковину</li></ol><div class='task_desc'>
+После этого пользователь вводит еще одно число - номер действия. Определить, сколько воды получится в этих ёмкостях после выполнения действия с указанным номером. Переливание происходит "до краев". Излишки остаются в исходной ёмкости.
+</div>
+<table class='check_values_v2'>
+<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>small</th><th>large</th><th>action</th></tr>
+<tr><td>1</td><td>5</td><td>8</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>2</td><td>0</td><td>8</td><td>1</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>3</td><td>5</td><td>8</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Выбрано действие: 2
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>4</td><td>5</td><td>0</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Выбрано действие: 2
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>5</td><td>3</td><td>7</td><td>3</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 7 из 8
+Выбрано действие: 3
+Стало: в маленькой 2 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>6</td><td>2</td><td>5</td><td>3</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 5 из 8
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 7 из 8
+</td></tr>
+<tr><td>7</td><td>2</td><td>6</td><td>4</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 6 из 8
+Выбрано действие: 4
+Стало: в маленькой 5 из 5, в большой 3 из 8
+</td></tr>
+<tr><td>8</td><td>1</td><td>3</td><td>4</td><td class='preformatted'>Было: в маленькой 1 из 5, в большой 3 из 8
+Выбрано действие: 4
+Стало: в маленькой 4 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>9</td><td>3</td><td>8</td><td>5</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 8 из 8
+Выбрано действие: 5
+Стало: в маленькой 0 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>10</td><td>0</td><td>8</td><td>5</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Выбрано действие: 5
+Стало: в маленькой 0 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>11</td><td>5</td><td>7</td><td>6</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 7 из 8
+Выбрано действие: 6
+Стало: в маленькой 5 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>12</td><td>5</td><td>0</td><td>6</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Выбрано действие: 6
+Стало: в маленькой 5 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>13</td><td>-1</td><td>6</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr><td>14</td><td>20</td><td>6</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr><td>15</td><td>3</td><td>-2</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+</td></tr>
+<tr><td>16</td><td>3</td><td>19</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+</td></tr>
+<tr><td>17</td><td>3</td><td>4</td><td>0</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 4 из 8
+Выбрано действие: 0
+Номер действия должен быть цифрой от 1 до 6
+Стало: в маленькой 3 из 5, в большой 4 из 8
+</td></tr>
+<tr><td>18</td><td>2</td><td>3</td><td>7</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 3 из 8
+Выбрано действие: 7
+Номер действия должен быть цифрой от 1 до 6
+Стало: в маленькой 2 из 5, в большой 3 из 8
 </td></tr>
 </table>
 </div>
