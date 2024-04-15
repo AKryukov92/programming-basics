@@ -1,56 +1,52 @@
 package root.tasks.exceptions;
 
-import root.tasks.MultipleInputValLayout;
-
-public class TaskJava9354 extends MultipleInputValLayout {
+public class TaskJava9354 extends TaskCs9354 {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Прочитайте условие задачи.");
-        appendTaskDescNonEscaped("Вычислить дискриминант квадратного уравнения по формуле <formula>discriminant = b<sup>2</sup>-4ac</formula>");
-        appendCheckValuesHeader("a", "b","c");
-        appendCheckValuesRow("7", "1", "3");
-        appendCheckValuesRow("7247", "7243", "7229");
-        appendCheckValuesRow("-11", "-13", "-17");
-        appendCheckValuesRow("0", "1", "3");
-        appendCheckValuesRow("0", "1000", "2000");
-        appendCheckValuesFooter();
-        appendSubheading("Реализуйте статический метод с тремя аргументами");
+        appendTaskDescNonEscaped("Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>area=6*edge<sup>2</sup></formula>.");
         appendOrderedEscaped(
-                "Объявите в классе Library публичный статический метод getDiscriminant.",
-                "Он принимает в качестве аргумента 3 действительных числа.",
+                "Объявите в классе Library публичный статический метод task9354.",
+                "Он принимает в качестве аргумента действительное число (edge).",
                 "Метод возвращает действительное число в качестве результата.",
-                "Если значение аргумента \"a\" равно 0, то метод должен выбросить исключение IllegalArgumentException."
+                "Если значение аргумента \"edge\" меньше или равно 0, то метод должен выбросить исключение."
         );
-        appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
-        appendOrderedEscaped(
-                "В методе main класса Program вызовите метод getDiscriminant класса Library.",
-                "Первым аргументом передайте ему значение 7, вторым - значение 1, третьим - значение 3.",
-                "Получите три действительных числа от пользователя и запишите их в переменные a, b, c",
-                "Вызовите метод getDiscriminant класса Library и передайте ему значения a, b, c в качестве аргументов.",
-                "Предусмотрите перехват исключения, которое может выбросить метод.",
-                "Проверьте программу по таблице тестовых и ожидаемых данных"
-        );
+        appendTaskDescEscaped("Для того, чтобы выбросить исключение, нужно добавить в тело метода следующий код:");
+        appendCheckSingleNonEscaped("if (edge <= 0) {\n" +
+                "    throw new Exception(\"Значение edge должно быть положительным\");\n" +
+                "}");
+        appendTaskDescEscaped("Когда метод может выбросить исключение, то в его сигнатуре нужно добавлять выражение throws Exception. Сигнатура этого метода выглядит так:");
+        appendCheckSingleNonEscaped("public static double task9354(double edge) throws Exception");
+        appendTaskDescEscaped("В методе main класса Program добавьте код для проверки:");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescEscaped("В результате запуска метода main, в консоли должен появиться следующий текст:");
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
     }
 
-    public static double getDiscriminant(double a, double b, double c) {
-        if (a == 0) {
-            throw new IllegalArgumentException();
-        }
-        return b * b - 4 * a * c;
+    @Override
+    protected String methodExample() {
+        return "try {\n" +
+                "    double e = 7;\n" +
+                "    double res = Library.task9354(e);//Если эту команду написать за пределами блока try-catch, то возникнет ошибка компиляции:\n" +
+                "    // java: unreported exception java.lang.Exception; must be caught or declared to be thrown\n" +
+                "    System.out.printf(\"Площадь поверхности куба равна %.4f\", res);\n" +
+                "    res = Library.task9354(7247);\n" +
+                "    System.out.printf(\"Площадь поверхности куба равна %.4f\", res);\n" +
+                "    res = Library.task9354(-11);\n" +
+                "    System.out.printf(\"Площадь поверхности куба равна %.4f\", res);\n" +
+                "} catch (Exception e) {\n" +
+                "    System.out.println(e.getMessage());\n" +
+                "}\n" +
+                "try {\n" +
+                "    double res = Library.task9354(0);\n" +
+                "    System.out.printf(\"Площадь поверхности куба равна %.4f\", res);\n" +
+                "} catch (Exception e) {\n" +
+                "    System.out.println(e.getMessage());\n" +
+                "}";
     }
 
-    @Override
-    protected void logic(String... args) {
-        double a = Double.parseDouble(args[0]);
-        double b = Double.parseDouble(args[1]);
-        double c = Double.parseDouble(args[2]);
-        try {
-            double result = getDiscriminant(a, b, c);
-            System.out.printf("Дискриминант уравнения y=%fx^2+%fx+%f равен %f", a, b, c, result);
-        } catch (IllegalArgumentException ex) {
-            System.out.printf("Уравнение y=%fx^2+%fx+%f не является квадратным", a, b, c);
-        }
+    public static void main(String[] args) {
+        System.out.println(new TaskJava9354());
     }
 }

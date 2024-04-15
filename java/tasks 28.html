@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>28 SQL СУБД</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>28 Комбинаторика</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -165,21 +165,6 @@ numerator {
 denominator {
 	display:block;
 }
-spoiler {
-	color:darkgrey;
-}
-spoiler origin {
-	display:none;
-}
-spoiler:hover origin {
-	display:inline;
-}
-spoiler trans {
-	display:inline;
-}
-spoiler:hover trans {
-	display:none;
-}
 .comment{
 	color:darkgrey;
 }
@@ -204,7 +189,7 @@ spoiler:hover trans {
 }
 .task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>SQL СУБД</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Комбинаторика</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
@@ -225,769 +210,798 @@ spoiler:hover trans {
 <li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
 <li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
 <li>20 <a href='tasks 20.html'>Возврат значения</a></li>
-<li>21 <a href='tasks 21.html'>Исключения</a></li>
-<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
-<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
-<li>24 <a href='tasks 24.html'>Коллекции</a></li>
-<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
-<li>26 <a href='tasks 26.html'>Даты</a></li>
-<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
-<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7361'>1</a><li><a href='#task8741'>2</a><li><a href='#task6275'>3</a><li><a href='#task1846'>4</a><li><a href='#task6593'>5</a><li><a href='#task1759'>6</a><li><a href='#task9764'>7</a><li><a href='#task9761'>8</a><li><a href='#task4274'>9</a><li><a href='#task6805'>10</a><li><a href='#task7845'>11</a><li><a href='#task9857'>12</a><li><a href='#task9479'>13</a></ul></div><div id='task7361' class='task_block'>
-<div class='task_id'>7361</div>
+<li>21 <a href='tasks 21.html'>Перехват исключений</a></li>
+<li>22 <a href='tasks 22.html'>Выбрасывание исключений</a></li>
+<li>23 <a href='tasks 23.html'>Составные типы данных</a></li>
+<li>24 <a href='tasks 24.html'>Внутреннее состояние</a></li>
+<li>25 <a href='tasks 25.html'>Коллекции</a></li>
+<li>26 <a href='tasks 26.html'>Рекурсия</a></li>
+<li>27 <a href='tasks 27.html'>Даты</a></li>
+<li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
+<li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4965' class='example'>1*</a><li><a href='#task1839'>2</a><li><a href='#task7039'>3</a><li><a href='#task3095'>4</a><li><a href='#task6915'>5</a><li><a href='#task1217'>6</a><li><a href='#task4531'>7</a><li><a href='#task1438'>8</a><li><a href='#task9734'>9</a></ul></div><div id='task4965' class='task_block'>
+<div class='task_id'>4965</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит идентификатор альбома(AlbumId). Напечатать на экран названия(Name) треков(Tracks), которые в него входят.
+Число A меняется от 0 до 99 с шагом 19. Число B меняется от 0 до 99 с шагом 23. Напишите на экране все комбинации значений чисел A и B.
+</div>
+<div class='check_single preformatted'>0 0
+0 23
+0 46
+0 69
+0 92
+19 0
+19 23
+19 46
+19 69
+19 92
+38 0
+38 23
+38 46
+38 69
+38 92
+57 0
+57 23
+57 46
+57 69
+57 92
+76 0
+76 23
+76 46
+76 69
+76 92
+95 0
+95 23
+95 46
+95 69
+95 92
 </div>
 <div class='task_desc'>
-Чтобы использовать СУБД, нужно добавить библиотеки:
+Эта задача решается с помощью вложенных циклов:
 </div>
-<ol start='1'><li><a href="files/task7361/slf4j-api-1.7.36.jar" target="_blank">скачать slf4j-api-1.7.36.jar</a></li><li><a href="files/task7361/sqlite-jdbc-3.44.1.0.jar" target="_blank">скачать sqlite-jdbc-3.44.1.0.jar</a></li></ol><div class='task_desc'>
-Файл базы данных это <a href="files/task7361/chinook.db" target="_blank">скачать chinook.db</a>
-</div>
-<div class='task_desc'>
-Чтобы отладить запрос, можно воспользоваться утилитами: 
-</div>
-<ol start='3'><li><a href="files/task7361/sqlite3.exe" target="_blank">скачать sqlite3.exe</a></li><li><a href="files/task7361/sqldiff.exe" target="_blank">скачать sqldiff.exe</a></li><li><a href="files/task7361/sqlite3_analyzer.exe" target="_blank">скачать sqlite3_analyzer.exe</a></li></ol><table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (AlbumId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>10</td><td class='preformatted'>Cochise
-Show Me How to Live
-Gasoline
-What You Are
-Like a Stone
-Set It Off
-Shadow on the Sun
-I am the Highway
-Exploder
-Hypnotize
-Bring'em Back Alive
-Light My Way
-Getaway Car
-The Last Remaining Light
-</td></tr>
-<tr><td>2</td><td>15</td><td class='preformatted'>Heart Of Gold
-Snowblind
-Like A Bird
-Blood In The Wall
-The Beginning...At Last
-</td></tr>
-<tr><td>3</td><td>413</td><td class='preformatted'></td></tr>
-<tr><td>4</td><td>3</td><td class='preformatted'>Fast As a Shark
-Restless and Wild
-Princess of the Dawn
-</td></tr>
-</table>
-<div class='task_desc'>
-В методе main нужно дописать "throws" как в примере ниже:
-</div>
-<div class='check_single preformatted'>public static void main(String[] args) throws SQLException {</div>
-<div class='task_desc'>
-Пример кода для получения данных из БД:
-</div>
-<div class='check_single preformatted'>String path = "./files/sqlite/chinook.db";
-//Устанави подключение к файлу Базы Данных
-Connection connection = DriverManager.getConnection("jdbc:sqlite:" + path);
-//Подготовь запрос
-String sql = "select Name from tracks where AlbumId=?";
-PreparedStatement statement = connection.prepareStatement(sql);
-//укажи, что вместо вопроса нужно подставить значение от пользователя
-statement.setInt(1, Integer.parseInt(albumId));
-//выполни запрос
-ResultSet rs = statement.executeQuery();
-//если в результате есть данные, перейди к первой/следующей строчке
-while (rs.next()) {
-    //в текущей строчке результата(таблицы) прочитай данные из колонки Name
-    String name = rs.getString("Name");
-    System.out.println(name);//выведи данные на экран
+<div class='check_single preformatted'>int a = 0;
+while (a < 100) {
+    int b = 0;
+    while (b < 100) {
+        System.out.println(a + " " + b);
+        b = b + 23;
+    }
+    a = a + 19;
 }
 </div>
 </div>
-<div id='task8741' class='task_block'>
-<div class='task_id'>8741</div>
+<div id='task1839' class='task_block'>
+<div class='task_id'>1839</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит идентификатор исполнителя(ArtistId). Напечатать на экран названия(Title) альбомов(albums) указанного исполнителя.
+Напечатать на экран все комбинации чисел 0, 1, 2.
+</div>
+<div class='check_single preformatted'>0 0 0
+0 0 1
+0 0 2
+0 1 0
+0 1 1
+0 1 2
+0 2 0
+0 2 1
+0 2 2
+1 0 0
+1 0 1
+1 0 2
+1 1 0
+1 1 1
+1 1 2
+1 2 0
+1 2 1
+1 2 2
+2 0 0
+2 0 1
+2 0 2
+2 1 0
+2 1 1
+2 1 2
+2 2 0
+2 2 1
+2 2 2
+</div>
+</div>
+<div id='task7039' class='task_block'>
+<div class='task_id'>7039</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Напечатать на экран все комбинации чисел 0, 1, 2. Не пишите на экран комбинацию, в которой одна и та же цифра отображается несколько раз.
+</div>
+<div class='check_single preformatted'>0 1 2
+0 2 1
+1 0 2
+1 2 0
+2 0 1
+2 1 0
+</div>
+</div>
+<div id='task3095' class='task_block'>
+<div class='task_id'>3095</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит данные - фрагменты строк, разделенные запятой. Напечатать на экран все комбинации с перестановками из двух элементов массива. Комбинации содержащие два одинаковых элемента нужно исключить.
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (ArtistId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>8</td><td class='preformatted'>Audioslave
-Out Of Exile
-Revelations
+<tr><th>Номер теста</th><th>Исходные данные (values)</th><th>Результат</th></tr>
+<tr><td>1</td><td>q,w,e,r</td><td class='preformatted'>q w
+q e
+q r
+w q
+w e
+w r
+e q
+e w
+e r
+r q
+r w
+r e
 </td></tr>
-<tr><td>2</td><td>118</td><td class='preformatted'>Live On Two Legs [Live]
-Pearl Jam
-Riot Act
-Ten
-Vs.
+<tr><td>2</td><td>as,df,gh</td><td class='preformatted'>as df
+as gh
+df as
+df gh
+gh as
+gh df
 </td></tr>
-<tr><td>3</td><td>315</td><td class='preformatted'></td></tr>
-<tr><td>4</td><td>256</td><td class='preformatted'>Mendelssohn: A Midsummer Night's Dream
+<tr><td>3</td><td>zx,cv</td><td class='preformatted'>zx cv
+cv zx
+</td></tr>
+<tr><td>4</td><td>p,o,o,t,p</td><td class='preformatted'>p o
+p o
+p t
+o p
+o t
+o p
+o p
+o t
+o p
+t p
+t o
+t o
+t p
+p o
+p o
+p t
+</td></tr>
+<tr><td>5</td><td>single</td><td class='preformatted'></td></tr>
+<tr><td>6</td><td></td><td class='preformatted'>Нет данных
 </td></tr>
 </table>
 </div>
-<div id='task6275' class='task_block'>
-<div class='task_id'>6275</div>
+<div id='task6915' class='task_block'>
+<div class='task_id'>6915</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит идентификатор трека(TrackId). Нужно вывести информацию о треке: Название (Name), композитор (Composer), длительность (Milliseconds), цену (UnitPrice).
+Дан массив из 4 чисел: 11, 37, 53, 89. Нужно написать все комбинации значений этих четырех чисел. Нужно не печатать на экран комбинации, в которых числа повторяются несколько раз.
+</div>
+<div class='check_single preformatted'>11,37,53,89
+11,37,89,53
+11,53,37,89
+11,53,89,37
+11,89,37,53
+11,89,53,37
+37,11,53,89
+37,11,89,53
+37,53,11,89
+37,53,89,11
+37,89,11,53
+37,89,53,11
+53,11,37,89
+53,11,89,37
+53,37,11,89
+53,37,89,11
+53,89,11,37
+53,89,37,11
+89,11,37,53
+89,11,53,37
+89,37,11,53
+89,37,53,11
+89,53,11,37
+89,53,37,11
+</div>
+</table>
+</div>
+<div id='task1217' class='task_block'>
+<div class='task_id'>1217</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит массив чисел через запятую.
+</div>
+<ol start='1'><li>Первое число обозначает начало 'красного' интервала чисел.</li><li>Второе число обозначает конец 'красного' интервала чисел.</li><li>Третье число - начало 'зеленого' интервала чисел.</li><li>Четвертое - конец 'зеленого' интервала чисел.</li></ol><div class='task_desc'>
+Интервал считается корректным если начало строго меньше чем конец. Нужно определить начало и конец области пересечения интервалов. Если не пересекаются, то написать "не пересекаются".
 </div>
 <table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (TrackId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>91</td><td class='preformatted'>Название: Shadow on the Sun
-Композитор: Audioslave/Chris Cornell
-Длительность: 343457
-Цена: 0.99
+<tr><th>Номер теста</th><th>Исходные данные (a1,b1,a2,b2)</th><th>Результат</th></tr>
+<tr><td>1</td><td>11,37,53,89</td><td class='preformatted'>Интервалы не пересекаются. Правая граница красного 37 левее левого края зеленого 53
 </td></tr>
-<tr><td>2</td><td>144</td><td class='preformatted'>Название: Heart Of Gold
-Композитор: null
-Длительность: 194873
-Цена: 0.99
+<tr><td>2</td><td>11,37,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
 </td></tr>
-<tr><td>3</td><td>3</td><td class='preformatted'>Название: Fast As a Shark
-Композитор: F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffman
-Длительность: 230619
-Цена: 0.99
+<tr><td>3</td><td>11,53,37,89</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый правее красного
 </td></tr>
-<tr><td>4</td><td>5</td><td class='preformatted'>Название: Princess of the Dawn
-Композитор: Deaffy & R.A. Smith-Diesel
-Длительность: 375418
-Цена: 0.99
+<tr><td>4</td><td>11,53,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
+</td></tr>
+<tr><td>5</td><td>11,89,37,53</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый внутри красного
+</td></tr>
+<tr><td>6</td><td>11,89,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
+</td></tr>
+<tr><td>7</td><td>37,11,53,89</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
+</td></tr>
+<tr><td>8</td><td>37,11,89,53</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
+</td></tr>
+<tr><td>9</td><td>37,53,11,89</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 красный внутри зеленого
+</td></tr>
+<tr><td>10</td><td>37,53,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
+</td></tr>
+<tr><td>11</td><td>37,89,11,53</td><td class='preformatted'>Интервалы пересекаются в диапазоне от 37 до 53 зеленый левее красного
+</td></tr>
+<tr><td>12</td><td>37,89,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
+</td></tr>
+<tr><td>13</td><td>53,11,37,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
+</td></tr>
+<tr><td>14</td><td>53,11,89,37</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 11
+</td></tr>
+<tr><td>15</td><td>53,37,11,89</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
+</td></tr>
+<tr><td>16</td><td>53,37,89,11</td><td class='preformatted'>Некорректный интервал. Левая граница 53 должна быть меньше правой 37
+</td></tr>
+<tr><td>17</td><td>53,89,11,37</td><td class='preformatted'>Интервалы не пересекаются. Правая граница зеленого 37 левее левого края красного 53
+</td></tr>
+<tr><td>18</td><td>53,89,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 37 должна быть меньше правой 11
+</td></tr>
+<tr><td>19</td><td>89,11,37,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
+</td></tr>
+<tr><td>20</td><td>89,11,53,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 11
+</td></tr>
+<tr><td>21</td><td>89,37,11,53</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
+</td></tr>
+<tr><td>22</td><td>89,37,53,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 37
+</td></tr>
+<tr><td>23</td><td>89,53,11,37</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
+</td></tr>
+<tr><td>24</td><td>89,53,37,11</td><td class='preformatted'>Некорректный интервал. Левая граница 89 должна быть меньше правой 53
+</td></tr>
+<tr><td>25</td><td>1,2,3</td><td class='preformatted'>Должно быть введено 4 числа
+</td></tr>
+<tr><td>26</td><td>1,2,3,4,5</td><td class='preformatted'>Должно быть введено 4 числа
 </td></tr>
 </table>
 </div>
-<div id='task1846' class='task_block'>
-<div class='task_id'>1846</div>
+<div id='task4531' class='task_block'>
+<div class='task_id'>4531</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит длительность(upperMilliseconds) - целое число и цену(lowerUnitPrice) - действительное число. Вывести длительность(Milliseconds), цену(UnitPrice), название(Name) и композитора(Composer) всех треков, у которых длительность меньше указанной, а цена выше указанной.
+Пользователь вводит границы двух интервалов: минусы и палочки. Интервал считается корректным если его правая граница больше левой и при этом если каждая граница меньше 120. Числа на оси координат увеличиваются вправо. Нужно изобразить интервалы в одной строке. Интервал минусов с помощью знака "-". Интервал палочек с помощью знака "|".  Область пересечения интервалов с помощью знака "+". Промежутки между интервалами заполните пробелами.
 </div>
 <table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>upperMilliseconds</th><th>lowerUnitPrice</th></tr>
-<tr>
-<td>1</td><td>10000</td><td>0.01</td><td class='preformatted'>4884	0.99	Now Sports	null
-6373	0.99	A Statistic	null
-6635	0.99	Oprah	null
-1071	0.99	É Uma Partida De Futebol	Samuel Rosa
-7941	0.99	Commercial 1	L. Muggerud
+<tr><th rowspan='2'>Номер теста</th><th colspan='4'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
+<tr><th>redA</th><th>redB</th><th>greenA</th><th>greenB</th></tr>
+<tr><td>1</td><td>5</td><td>30</td><td>50</td><td>65</td><td class='preformatted'>     -------------------------                    |||||||||||||||
+redA 5 redB 30 greenA 50 greenB 65
 </td></tr>
-<tr>
-<td>2</td><td>1250000</td><td>1.00</td><td class='preformatted'>1237791	1.99	Michael's Birthday	null
-112712	1.99	LOST Season 4 Trailer	null
-497163	1.99	LOST In 8:15	null
+<tr><td>2</td><td>11</td><td>57</td><td>23</td><td>49</td><td class='preformatted'>           ------------++++++++++++++++++++++++++--------
+redA 11 greenA 23 greenB 49 redB 57
 </td></tr>
-<tr>
-<td>3</td><td>500000</td><td>1.00</td><td class='preformatted'>112712	1.99	LOST Season 4 Trailer	null
-497163	1.99	LOST In 8:15	null
+<tr><td>3</td><td>23</td><td>47</td><td>36</td><td>61</td><td class='preformatted'>                       -------------+++++++++++||||||||||||||
+redA 23 greenA 36 redB 47 greenB 61
+</td></tr>
+<tr><td>4</td><td>33</td><td>53</td><td>11</td><td>47</td><td class='preformatted'>           ||||||||||||||||||||||++++++++++++++------
+greenA 11 redA 33 greenB 47 redB 53
+</td></tr>
+<tr><td>5</td><td>5</td><td>15</td><td>0</td><td>30</td><td class='preformatted'>|||||++++++++++|||||||||||||||
+greenA 0 redA 5 redB 15 greenB 30
+</td></tr>
+<tr><td>6</td><td>37</td><td>51</td><td>19</td><td>31</td><td class='preformatted'>                   ||||||||||||      --------------
+greenA 19 greenB 31 redA 37 redB 51
+</td></tr>
+<tr><td>7</td><td>79</td><td>73</td><td>83</td><td>89</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
+</td></tr>
+<tr><td>8</td><td>97</td><td>101</td><td>107</td><td>103</td><td class='preformatted'>Некорректный интервал. Левая граница должна быть меньше правой.
+</td></tr>
+<tr><td>9</td><td>-1</td><td>1</td><td>2</td><td>3</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+</td></tr>
+<tr><td>10</td><td>1</td><td>-2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+</td></tr>
+<tr><td>11</td><td>1</td><td>2</td><td>-3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+</td></tr>
+<tr><td>12</td><td>1</td><td>2</td><td>3</td><td>-4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть неотрицательна.
+</td></tr>
+<tr><td>13</td><td>200</td><td>2</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+</td></tr>
+<tr><td>14</td><td>1</td><td>200</td><td>3</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+</td></tr>
+<tr><td>15</td><td>1</td><td>2</td><td>200</td><td>4</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
+</td></tr>
+<tr><td>16</td><td>1</td><td>2</td><td>3</td><td>200</td><td class='preformatted'>Обнаружена некорректная граница. Каждая граница должна быть меньше 120.
 </td></tr>
 </table>
 </div>
-<div id='task6593' class='task_block'>
-<div class='task_id'>6593</div>
+<div id='task1438' class='task_block'>
+<div class='task_id'>1438</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит три идентификатора альбома(albumId). Нужно вывести длительность(Milliseconds), идентификатор альбома(AlbumId), цену(UnitPrice) и наименование(Name) треков, которые входят в один из указанных альбомов.
+Пользователь вводит массив из 8 чисел. Первые 4 числа описывают зеленый прямоугольник. Следующие 4 числа - красный. Данные о каждом прямоугольнике идут по порядку: x левого верхнего угла, y левого верхнего угла, высота, ширина. Определить координаты верхнего левого угла, ширину и высоту прямоугольника, образующегося при их пересечении. Все координаты - экранные.<a href="tasks 7.html#task5635" target="_blank">ЛР7#5635(открыть в новой вкладке)</a>
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (Xr,Yr,Hr,Wr, Xg,Yg,Hg,Wg)</th><th>Результат</th></tr>
+<tr><td>1</td><td>10;10;200;100;50;50;300;350</td><td class='preformatted'>50;60;50;160
+</td></tr>
+<tr><td>2</td><td>25;25;200;200;225;225;200;200</td><td class='preformatted'>25;200;25;200
+</td></tr>
+<tr><td>3</td><td>102;200;100;200;0;500;100;120</td><td class='preformatted'>102;18;200;100
+</td></tr>
+<tr><td>4</td><td>500;200;100;200;10;400;100;120</td><td class='preformatted'>500;-370;200;100
+</td></tr>
+<tr><td>5</td><td>60;70;120;200;50;50;120;200</td><td class='preformatted'>60;190;70;100
+</td></tr>
+<tr><td>6</td><td>100;100;200;200;200;200;50;50</td><td class='preformatted'>200;50;200;50
+</td></tr>
+<tr><td>7</td><td>150;150;150;300;150;150;150;300</td><td class='preformatted'>150;300;150;150
+</td></tr>
+<tr><td>8</td><td>100;0;100;500;0;200;700;100</td><td class='preformatted'>100;0;0;100
+</td></tr>
+<tr><td>9</td><td>5;0;10;10;0;5;10;10</td><td class='preformatted'>5;5;5;5
+</td></tr>
+<tr><td>10</td><td>105;5;10;10;100;0;10;30</td><td class='preformatted'>105;10;5;5
+</td></tr>
+<tr><td>11</td><td>150;150;50;300;100;100;300;200</td><td class='preformatted'>150;150;150;50
+</td></tr>
+<tr><td>12</td><td>0;0;802;200;0;0;610;610</td><td class='preformatted'>0;200;0;610
+</td></tr>
+<tr><td>13</td><td>200;200;100;100;900;200;100;10</td><td class='preformatted'>200;100;200;100
+</td></tr>
+<tr><td>14</td><td>125;138;0;1;205;202;61;62</td><td class='preformatted'>125;1;138;0
+</td></tr>
+<tr><td>15</td><td>100;100;120;220;220;100;120;220</td><td class='preformatted'>220;100;100;120
+</td></tr>
+</table>
+</div>
+<div id='task9734' class='task_block'>
+<div class='task_id'>9734</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Даны две ёмкости объемом 5 и 8 литров. Пользователь вводит два целых числа - фактическое количество воды в них. Затем нужно вывести пользователю список осмысленных действий. Полный список действий:
+</div>
+<ol start='1'><li>Налить из крана в маленькую ёмкость</li><li>Налить из крана в большую ёмкость</li><li>Налить из маленькой ёмкости в большую</li><li>Налить из большой ёмкости в маленькую</li><li>Вылить из маленькой ёмкости в раковину</li><li>Вылить из большой ёмкости в раковину</li></ol><div class='task_desc'>
+Бессмысленными считаются действия, которые не изменят содержимое ёмкостей:
+</div>
+<ol start='1'><li>Вылить из пустой ёмкости</li><li>Налить в полную ёмкость</li></ol><div class='task_desc'>
+Получившийся список действий должны быть пронумерован по порядку от 1 до конца с шагом 1. После этого пользователь вводит еще одно число - номер действия. Определить, сколько воды получится в этих ёмкостях после выполнения действия с указанным номером. Переливание происходит "до краев". Излишки остаются в исходной ёмкости.
 </div>
 <table class='check_values_v2'>
 <tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>firstAlbumId</th><th>secondAlbumId</th><th>thirdAlbumId</th></tr>
-<tr><td>1</td><td>87</td><td>138</td><td>15</td><td class='preformatted'>194873	15	0.99	Heart Of Gold
-420022	15	0.99	Snowblind
-276532	15	0.99	Like A Bird
-284368	15	0.99	Blood In The Wall
-271960	15	0.99	The Beginning...At Last
-356101	87	0.99	Doce De Carnaval (Candy All)
-294530	87	0.99	Lamento De Carnaval
-265273	87	0.99	Pretinha
-749897	138	0.99	No Quarter
-657293	138	0.99	Stairway To Heaven
-766354	138	0.99	Moby Dick
-863895	138	0.99	Whole Lotta Love
+<tr><th>small</th><th>large</th><th>action</th></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+Выбрано действие: 0
+Стало: в маленькой 0 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>2</td><td>50</td><td>15</td><td>3</td><td class='preformatted'>230619	3	0.99	Fast As a Shark
-252051	3	0.99	Restless and Wild
-375418	3	0.99	Princess of the Dawn
-194873	15	0.99	Heart Of Gold
-420022	15	0.99	Snowblind
-276532	15	0.99	Like A Bird
-284368	15	0.99	Blood In The Wall
-271960	15	0.99	The Beginning...At Last
-1196094	50	0.99	Space Truckin'
-913658	50	0.99	Going Down / Highway Star
-854700	50	0.99	Mistreated (Alternate Version)
-763924	50	0.99	You Fool No One (Alternate Version)
+<tr><td>2</td><td>0</td><td>0</td><td>1</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>3</td><td>269</td><td>500</td><td>600</td><td class='preformatted'>384497	269	0.99	Say Hello 2 Heaven
-672773	269	0.99	Reach Down
-246292	269	0.99	Hunger Strike
-225278	269	0.99	Pushin Forward Back
-304458	269	0.99	Call Me a Dog
-342539	269	0.99	Times of Trouble
-250565	269	0.99	Wooden Jesus
-244226	269	0.99	Your Savior
-414474	269	0.99	Four Walled World
-231803	269	0.99	All Night Thing
+<tr><td>3</td><td>0</td><td>0</td><td>2</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+Выбрано действие: 2
+Стало: в маленькой 0 из 5, в большой 8 из 8
 </td></tr>
-</table>
-</div>
-<div id='task1759' class='task_block'>
-<div class='task_id'>1759</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит текст. Нужно найти идентификатор(TrackId), полное название(Name) и композитора(Composer) треков(tracks), у которых введенный текст присутствует в поле название(Name) или композитор(Composer).
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (search)</th><th>Результат</th></tr>
-<tr><td>1</td><td>bizet</td><td class='preformatted'>3447	Carmen: Overture	Georges Bizet
+<tr><td>4</td><td>0</td><td>0</td><td>3</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+Выбрано действие: 3
+Номер действия должен быть цифрой от 1 до 2 включительно
+Стало: в маленькой 0 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>2</td><td>cop</td><td class='preformatted'>162	Cornucopia	Tony Iommi, Bill Ward, Geezer Butler, Ozzy Osbourne
-1098	Copacabana (Live)	null
-2723	Gyroscope	The Tea Party
-3427	Fanfare for the Common Man	Aaron Copland
+<tr><td>5</td><td>0</td><td>6</td><td>1</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из большой ёмкости в маленькую
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 6 из 8
 </td></tr>
-<tr><td>3</td><td>glass</td><td class='preformatted'>2862	The Glass Ballerina	null
-3224	Through a Looking Glass	null
-3251	Through the Looking Glass, Pt. 2	null
-3252	Through the Looking Glass, Pt. 1	null
-3503	Koyaanisqatsi	Philip Glass
+<tr><td>6</td><td>0</td><td>6</td><td>2</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из большой ёмкости в маленькую
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 0 из 5, в большой 8 из 8
 </td></tr>
-<tr><td>4</td><td>beat</td><td class='preformatted'>3024	Two Hearts Beat As One	U2
+<tr><td>7</td><td>0</td><td>6</td><td>3</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из большой ёмкости в маленькую
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 5 из 5, в большой 1 из 8
 </td></tr>
-<tr><td>5</td><td>story</td><td class='preformatted'>1455	Just Another Story	Toby Smith
-1778	You're What's Happening (In The World Today)	Allen Story/George Gordy/Robert Gordy
-2819	Battlestar Galactica: The Story So Far	null
+<tr><td>8</td><td>0</td><td>6</td><td>4</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из большой ёмкости в маленькую
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 0 из 5, в большой 0 из 8
 </td></tr>
-</table>
-</div>
-<div id='task9764' class='task_block'>
-<div class='task_id'>9764</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Нужно вывести на экран список идентификаторов (artistId) и имен (name) всех исполнителей (artists).
-</div>
-<div class='check_single preformatted'>1 AC/DC
-2 Accept
-3 Aerosmith
-4 Alanis Morissette
-5 Alice In Chains
-6 Antônio Carlos Jobim
-7 Apocalyptica
-8 Audioslave
-9 BackBeat
-10 Billy Cobham
-11 Black Label Society
-12 Black Sabbath
-13 Body Count
-14 Bruce Dickinson
-15 Buddy Guy
-16 Caetano Veloso
-17 Chico Buarque
-18 Chico Science & Nação Zumbi
-19 Cidade Negra
-20 Cláudio Zoli
-21 Various Artists
-22 Led Zeppelin
-23 Frank Zappa & Captain Beefheart
-24 Marcos Valle
-25 Milton Nascimento & Bebeto
-26 Azymuth
-27 Gilberto Gil
-28 João Gilberto
-29 Bebel Gilberto
-30 Jorge Vercilo
-31 Baby Consuelo
-32 Ney Matogrosso
-33 Luiz Melodia
-34 Nando Reis
-35 Pedro Luís & A Parede
-36 O Rappa
-37 Ed Motta
-38 Banda Black Rio
-39 Fernanda Porto
-40 Os Cariocas
-41 Elis Regina
-42 Milton Nascimento
-43 A Cor Do Som
-44 Kid Abelha
-45 Sandra De Sá
-46 Jorge Ben
-47 Hermeto Pascoal
-48 Barão Vermelho
-49 Edson, DJ Marky & DJ Patife Featuring Fernanda Porto
-50 Metallica
-51 Queen
-52 Kiss
-53 Spyro Gyra
-54 Green Day
-55 David Coverdale
-56 Gonzaguinha
-57 Os Mutantes
-58 Deep Purple
-59 Santana
-60 Santana Feat. Dave Matthews
-61 Santana Feat. Everlast
-62 Santana Feat. Rob Thomas
-63 Santana Feat. Lauryn Hill & Cee-Lo
-64 Santana Feat. The Project G&B
-65 Santana Feat. Maná
-66 Santana Feat. Eagle-Eye Cherry
-67 Santana Feat. Eric Clapton
-68 Miles Davis
-69 Gene Krupa
-70 Toquinho & Vinícius
-71 Vinícius De Moraes & Baden Powell
-72 Vinícius De Moraes
-73 Vinícius E Qurteto Em Cy
-74 Vinícius E Odette Lara
-75 Vinicius, Toquinho & Quarteto Em Cy
-76 Creedence Clearwater Revival
-77 Cássia Eller
-78 Def Leppard
-79 Dennis Chambers
-80 Djavan
-81 Eric Clapton
-82 Faith No More
-83 Falamansa
-84 Foo Fighters
-85 Frank Sinatra
-86 Funk Como Le Gusta
-87 Godsmack
-88 Guns N' Roses
-89 Incognito
-90 Iron Maiden
-91 James Brown
-92 Jamiroquai
-93 JET
-94 Jimi Hendrix
-95 Joe Satriani
-96 Jota Quest
-97 João Suplicy
-98 Judas Priest
-99 Legião Urbana
-100 Lenny Kravitz
-101 Lulu Santos
-102 Marillion
-103 Marisa Monte
-104 Marvin Gaye
-105 Men At Work
-106 Motörhead
-107 Motörhead & Girlschool
-108 Mônica Marianno
-109 Mötley Crüe
-110 Nirvana
-111 O Terço
-112 Olodum
-113 Os Paralamas Do Sucesso
-114 Ozzy Osbourne
-115 Page & Plant
-116 Passengers
-117 Paul D'Ianno
-118 Pearl Jam
-119 Peter Tosh
-120 Pink Floyd
-121 Planet Hemp
-122 R.E.M. Feat. Kate Pearson
-123 R.E.M. Feat. KRS-One
-124 R.E.M.
-125 Raimundos
-126 Raul Seixas
-127 Red Hot Chili Peppers
-128 Rush
-129 Simply Red
-130 Skank
-131 Smashing Pumpkins
-132 Soundgarden
-133 Stevie Ray Vaughan & Double Trouble
-134 Stone Temple Pilots
-135 System Of A Down
-136 Terry Bozzio, Tony Levin & Steve Stevens
-137 The Black Crowes
-138 The Clash
-139 The Cult
-140 The Doors
-141 The Police
-142 The Rolling Stones
-143 The Tea Party
-144 The Who
-145 Tim Maia
-146 Titãs
-147 Battlestar Galactica
-148 Heroes
-149 Lost
-150 U2
-151 UB40
-152 Van Halen
-153 Velvet Revolver
-154 Whitesnake
-155 Zeca Pagodinho
-156 The Office
-157 Dread Zeppelin
-158 Battlestar Galactica (Classic)
-159 Aquaman
-160 Christina Aguilera featuring BigElf
-161 Aerosmith & Sierra Leone's Refugee Allstars
-162 Los Lonely Boys
-163 Corinne Bailey Rae
-164 Dhani Harrison & Jakob Dylan
-165 Jackson Browne
-166 Avril Lavigne
-167 Big & Rich
-168 Youssou N'Dour
-169 Black Eyed Peas
-170 Jack Johnson
-171 Ben Harper
-172 Snow Patrol
-173 Matisyahu
-174 The Postal Service
-175 Jaguares
-176 The Flaming Lips
-177 Jack's Mannequin & Mick Fleetwood
-178 Regina Spektor
-179 Scorpions
-180 House Of Pain
-181 Xis
-182 Nega Gizza
-183 Gustavo & Andres Veiga & Salazar
-184 Rodox
-185 Charlie Brown Jr.
-186 Pedro Luís E A Parede
-187 Los Hermanos
-188 Mundo Livre S/A
-189 Otto
-190 Instituto
-191 Nação Zumbi
-192 DJ Dolores & Orchestra Santa Massa
-193 Seu Jorge
-194 Sabotage E Instituto
-195 Stereo Maracana
-196 Cake
-197 Aisha Duo
-198 Habib Koité and Bamada
-199 Karsh Kale
-200 The Posies
-201 Luciana Souza/Romero Lubambo
-202 Aaron Goldberg
-203 Nicolaus Esterhazy Sinfonia
-204 Temple of the Dog
-205 Chris Cornell
-206 Alberto Turco & Nova Schola Gregoriana
-207 Richard Marlow & The Choir of Trinity College, Cambridge
-208 English Concert & Trevor Pinnock
-209 Anne-Sophie Mutter, Herbert Von Karajan & Wiener Philharmoniker
-210 Hilary Hahn, Jeffrey Kahane, Los Angeles Chamber Orchestra & Margaret Batjer
-211 Wilhelm Kempff
-212 Yo-Yo Ma
-213 Scholars Baroque Ensemble
-214 Academy of St. Martin in the Fields & Sir Neville Marriner
-215 Academy of St. Martin in the Fields Chamber Ensemble & Sir Neville Marriner
-216 Berliner Philharmoniker, Claudio Abbado & Sabine Meyer
-217 Royal Philharmonic Orchestra & Sir Thomas Beecham
-218 Orchestre Révolutionnaire et Romantique & John Eliot Gardiner
-219 Britten Sinfonia, Ivor Bolton & Lesley Garrett
-220 Chicago Symphony Chorus, Chicago Symphony Orchestra & Sir Georg Solti
-221 Sir Georg Solti & Wiener Philharmoniker
-222 Academy of St. Martin in the Fields, John Birch, Sir Neville Marriner & Sylvia McNair
-223 London Symphony Orchestra & Sir Charles Mackerras
-224 Barry Wordsworth & BBC Concert Orchestra
-225 Herbert Von Karajan, Mirella Freni & Wiener Philharmoniker
-226 Eugene Ormandy
-227 Luciano Pavarotti
-228 Leonard Bernstein & New York Philharmonic
-229 Boston Symphony Orchestra & Seiji Ozawa
-230 Aaron Copland & London Symphony Orchestra
-231 Ton Koopman
-232 Sergei Prokofiev & Yuri Temirkanov
-233 Chicago Symphony Orchestra & Fritz Reiner
-234 Orchestra of The Age of Enlightenment
-235 Emanuel Ax, Eugene Ormandy & Philadelphia Orchestra
-236 James Levine
-237 Berliner Philharmoniker & Hans Rosbaud
-238 Maurizio Pollini
-239 Academy of St. Martin in the Fields, Sir Neville Marriner & William Bennett
-240 Gustav Mahler
-241 Felix Schmidt, London Symphony Orchestra & Rafael Frühbeck de Burgos
-242 Edo de Waart & San Francisco Symphony
-243 Antal Doráti & London Symphony Orchestra
-244 Choir Of Westminster Abbey & Simon Preston
-245 Michael Tilson Thomas & San Francisco Symphony
-246 Chor der Wiener Staatsoper, Herbert Von Karajan & Wiener Philharmoniker
-247 The King's Singers
-248 Berliner Philharmoniker & Herbert Von Karajan
-249 Sir Georg Solti, Sumi Jo & Wiener Philharmoniker
-250 Christopher O'Riley
-251 Fretwork
-252 Amy Winehouse
-253 Calexico
-254 Otto Klemperer & Philharmonia Orchestra
-255 Yehudi Menuhin
-256 Philharmonia Orchestra & Sir Neville Marriner
-257 Academy of St. Martin in the Fields, Sir Neville Marriner & Thurston Dart
-258 Les Arts Florissants & William Christie
-259 The 12 Cellists of The Berlin Philharmonic
-260 Adrian Leaper & Doreen de Feis
-261 Roger Norrington, London Classical Players
-262 Charles Dutoit & L'Orchestre Symphonique de Montréal
-263 Equale Brass Ensemble, John Eliot Gardiner & Munich Monteverdi Orchestra and Choir
-264 Kent Nagano and Orchestre de l'Opéra de Lyon
-265 Julian Bream
-266 Martin Roscoe
-267 Göteborgs Symfoniker & Neeme Järvi
-268 Itzhak Perlman
-269 Michele Campanella
-270 Gerald Moore
-271 Mela Tenenbaum, Pro Musica Prague & Richard Kapp
-272 Emerson String Quartet
-273 C. Monteverdi, Nigel Rogers - Chiaroscuro; London Baroque; London Cornett & Sackbu
-274 Nash Ensemble
-275 Philip Glass Ensemble
-</div>
-</div>
-<div id='task9761' class='task_block'>
-<div class='task_id'>9761</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит идентификатор трека(TrackId). Нужно вывести информацию о треке: Название (Name), композитор (Composer), длительность (Milliseconds), цену (UnitPrice). Также определите по AlbumId название(title) альбома(album), в который входит этот трек. Определите по GenreId название (name) жанра (genres).
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (TrackId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>91</td><td class='preformatted'>Название: Shadow on the Sun
-Композитор: Audioslave/Chris Cornell
-Длительность: 343457
-Цена: 0.99
-Альбом: Audioslave
-Жанр: Rock
+<tr><td>9</td><td>0</td><td>6</td><td>5</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из большой ёмкости в маленькую
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 5
+Номер действия должен быть цифрой от 1 до 4 включительно
+Стало: в маленькой 0 из 5, в большой 6 из 8
 </td></tr>
-<tr><td>2</td><td>144</td><td class='preformatted'>Название: Heart Of Gold
-Композитор: null
-Длительность: 194873
-Цена: 0.99
-Альбом: Alcohol Fueled Brewtality Live! [Disc 2]
-Жанр: Metal
+<tr><td>10</td><td>0</td><td>8</td><td>1</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
 </td></tr>
-<tr><td>3</td><td>3</td><td class='preformatted'>Название: Fast As a Shark
-Композитор: F. Baltes, S. Kaufman, U. Dirkscneider & W. Hoffman
-Длительность: 230619
-Цена: 0.99
-Альбом: Restless and Wild
-Жанр: Rock
+<tr><td>11</td><td>0</td><td>8</td><td>2</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 5 из 5, в большой 3 из 8
 </td></tr>
-<tr><td>4</td><td>5</td><td class='preformatted'>Название: Princess of the Dawn
-Композитор: Deaffy & R.A. Smith-Diesel
-Длительность: 375418
-Цена: 0.99
-Альбом: Restless and Wild
-Жанр: Rock
+<tr><td>12</td><td>0</td><td>8</td><td>3</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 0 из 8
 </td></tr>
-</table>
-</div>
-<div class='task_desc'>
-Эту задачу можно решить через JOIN или через отправку нескольких запросов.
-</div>
-<div id='task4274' class='task_block'>
-<div class='task_id'>4274</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит идентификатор альбома(AlbumId). Напечатать на экран название(Title) альбома(Albums), а также названия (Name) треков (Tracks) из этого альбома и их длительность (Milliseconds).
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (AlbumId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>10</td><td class='preformatted'>Альбом: Audioslave
-Cochise 222380
-Show Me How to Live 277890
-Gasoline 279457
-What You Are 249391
-Like a Stone 294034
-Set It Off 263262
-Shadow on the Sun 343457
-I am the Highway 334942
-Exploder 206053
-Hypnotize 206628
-Bring'em Back Alive 329534
-Light My Way 303595
-Getaway Car 299598
-The Last Remaining Light 317492
+<tr><td>13</td><td>0</td><td>8</td><td>4</td><td class='preformatted'>Было: в маленькой 0 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Номер действия должен быть цифрой от 1 до 3 включительно
+Стало: в маленькой 0 из 5, в большой 8 из 8
 </td></tr>
-<tr><td>2</td><td>15</td><td class='preformatted'>Альбом: Alcohol Fueled Brewtality Live! [Disc 2]
-Heart Of Gold 194873
-Snowblind 420022
-Like A Bird 276532
-Blood In The Wall 284368
-The Beginning...At Last 271960
+<tr><td>14</td><td>2</td><td>0</td><td>1</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>3</td><td>413</td><td class='preformatted'></td></tr>
-<tr><td>4</td><td>3</td><td class='preformatted'>Альбом: Restless and Wild
-Fast As a Shark 230619
-Restless and Wild 252051
-Princess of the Dawn 375418
+<tr><td>15</td><td>2</td><td>0</td><td>2</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 2 из 5, в большой 8 из 8
 </td></tr>
-</table>
-</div>
-<div id='task6805' class='task_block'>
-<div class='task_id'>6805</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит текст. Нужно найти идентификаторы(albumId,trackId) и полные названия(title,name) треков(tracks) и альбомов(albums), у которых в названии(title,name) присутствует введенный текст. Нужно выполнить конкатенацию символа "%", текста от пользователя и еще одного символа "%". Полученное значение нужно передать как параметр запроса.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (search)</th><th>Результат</th></tr>
-<tr><td>1</td><td>sym</td><td class='preformatted'>Треки:
-3276 Sympton of the Universe
-3359 Symphony No. 3 in E-flat major, Op. 55, "Eroica" - Scherzo: Allegro Vivace
-3414 Symphony No. 104 in D Major "London": IV. Finale: Spiritoso
-3415 Symphony No.5 in C Minor: I. Allegro con brio
-3431 Symphony No.1 in D Major, Op.25 "Classical", Allegro Con Brio
-3442 Wellington's Victory or the Battle Symphony, Op.91: 2. Symphony of Triumph
-3446 Symphonie Fantastique, Op. 14: V. Songe d'une nuit du sabbat
-3454 Symphony No. 41 in C Major, K. 551, "Jupiter": IV. Molto allegro
-3485 Symphony No. 3 Op. 36 for Orchestra and Soprano "Symfonia Piesni Zalosnych" \ Lento E Largo - Tranquillissimo
-3486 Act IV, Symphony
-3489 Symphony No. 2: III. Allegro vivace
-3494 Symphony No. 2, Op. 16 -  "The Four Temperaments": II. Allegro Comodo e Flemmatico
-Альбомы:
-283 Haydn: Symphonies 99 - 104
-284 Beethoven: Symhonies Nos. 5 & 6
-298 Prokofiev: Symphony No.1
-312 Berlioz: Symphonie Fantastique
-320 Mozart: Symphonies Nos. 40 & 41
-324 Beethoven: Symphony No. 6 'Pastoral' Etc.
-330 Górecki: Symphony No. 3
-336 Prokofiev: Symphony No.5 & Stravinksy: Le Sacre Du Printemps
-338 Nielsen: The Six Symphonies
+<tr><td>16</td><td>2</td><td>0</td><td>3</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 2 из 8
 </td></tr>
-<tr><td>2</td><td>space</td><td class='preformatted'>Треки:
-620 Space Truckin'
-778 Space Trucking
-785 Space Truckin'
-1028 Enough Space
-1465 Space Cowboy
-3110 Headspace
-3239 Fire In Space
-Альбомы:
-118 The Return Of The Space Cowboy
+<tr><td>17</td><td>2</td><td>0</td><td>4</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 0 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>3</td><td>beat</td><td class='preformatted'>Треки:
-3024 Two Hearts Beat As One
-Альбомы:
-12 BackBeat Soundtrack
+<tr><td>18</td><td>2</td><td>0</td><td>5</td><td class='preformatted'>Было: в маленькой 2 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 5
+Номер действия должен быть цифрой от 1 до 4 включительно
+Стало: в маленькой 2 из 5, в большой 0 из 8
 </td></tr>
-<tr><td>4</td><td>story</td><td class='preformatted'>Треки:
-1455 Just Another Story
-2819 Battlestar Galactica: The Story So Far
-Альбомы:
-226 Battlestar Galactica: The Story So Far
+<tr><td>19</td><td>3</td><td>6</td><td>1</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 6 из 8
 </td></tr>
-</table>
-</div>
-<div id='task7845' class='task_block'>
-<div class='task_id'>7845</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит идентификатор исполнителя (artistId), нужно вывести список названий(name) треков(tracks) этого исполнителя. Связь треков и исполнителей определить по таблице альбомов.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (artistId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>1</td><td class='preformatted'>Идентификаторы альбомов исполнителя:
-1 4 
-Треки исполнителя:
-For Those About To Rock (We Salute You)    Put The Finger On You    Let's Get It Up    Inject The Venom    Snowballed    Evil Walks    C.O.D.    Breaking The Rules    Night Of The Long Knives    Spellbound    Go Down    Dog Eat Dog    Let There Be Rock    Bad Boy Boogie    Problem Child    Overdose    Hell Ain't A Bad Place To Be    Whole Lotta Rosie    </td></tr>
-<tr><td>2</td><td>59</td><td class='preformatted'>Идентификаторы альбомов исполнителя:
-46 197 198 
-Треки исполнителя:
-(Da Le) Yaleo    Love Of My Life    Put Your Lights On    Africa Bamba    Smooth    Do You Like The Way    Maria Maria    Migra    Corazon Espinado    Wishing It Was    El Farol    Primavera    The Calling    Jingo    El Corazon Manda    La Puesta Del Sol    Persuasion    As The Years Go by    Soul Sacrifice    Fried Neckbones And Home Fries    Santana Jam    Evil Ways    We've Got To Get Together/Jingo    Rock Me    Just Ain't Good Enough    Funky Piano    The Way You Do To Mer    </td></tr>
-<tr><td>3</td><td>152</td><td class='preformatted'>Идентификаторы альбомов исполнителя:
-242 243 244 245 
-Треки исполнителя:
-Where Have All The Good Times Gone?    Hang 'Em High    Cathedral    Secrets    Intruder    (Oh) Pretty Woman    Dancing In The Street    Little Guitars (Intro)    Little Guitars    Big Bad Bill (Is Sweet William Now)    The Full Bug    Happy Trails    Eruption    Ain't Talkin' 'bout Love    Runnin' With The Devil    Dance the Night Away    And the Cradle Will Rock...    Unchained    Jump    Panama    Why Can't This Be Love    Dreams    When It's Love    Poundcake    Right Now    Can't Stop Loving You    Humans Being    Can't Get This Stuff No More    Me Wise Magic    Runnin' With The Devil    Eruption    You Really Got Me    Ain't Talkin' 'Bout Love    I'm The One    Jamie's Cryin'    Atomic Punk    Feel Your Love Tonight    Little Dreamer    Ice Cream Man    On Fire    Neworld    Without You    One I Want    From Afar    Dirty Water Dog    Once    Fire in the Hole    Josephina    Year to the Day    Primary    Ballot or the Bullet    How Many Say I    </td></tr>
-</table>
-</div>
-<div class='task_desc'>
-Задачу можно решить двумя способами: множеством запросов в цикле, а также с помощью where in
-</div>
-<div id='task9857' class='task_block'>
-<div class='task_id'>9857</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит идентификатор плейлиста(playlistId). Вывести длительность(milliseconds) и названия(name) всех треков(tracks), которые находятся в этом плейлисте. Связь определить по таблице playlist_track. В конце вывести суммарную длительность плейлиста.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (playlistId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>16</td><td class='preformatted'>идентификаторы треков плейлиста:
-52   2003   2004   2005   2007   2010   2013   2194   2195   2198   2206   2512   2516   2550   3367   
-286641	Man In The Box
-301296	Smells Like Teen Spirit
-254928	In Bloom
-219219	Come As You Are
-256992	Lithium
-223973	Drain You
-196440	On A Plain
-293720	Evenflow
-341080	Alive
-318981	Jeremy
-235598	Daughter
-312476	Outshined
-320365	Black Hole Sun
-314017	Plush
-246292	Hunger Strike
-Суммарная длительность треков плейлиста 4122018
+<tr><td>20</td><td>3</td><td>6</td><td>1</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 6 из 8
 </td></tr>
-<tr><td>2</td><td>13</td><td class='preformatted'>идентификаторы треков плейлиста:
-3479   3480   3481   3482   3483   3484   3485   3486   3487   3488   3489   3490   3491   3492   3493   3494   3495   3496   3497   3498   3499   3500   3501   3502   3503   
-339567	Prometheus Overture, Op. 43
-299350	Sonata for Solo Violin: IV: Presto
-387826	A Midsummer Night's Dream, Op.61 Incidental Music: No.7 Notturno
-225933	Suite No. 3 in D, BWV 1068: III. Gavotte I & II
-110266	Concert pour 4 Parties de V**les, H. 545: I. Prelude
-289388	Adios nonino
-567494	Symphony No. 3 Op. 36 for Orchestra and Soprano "Symfonia Piesni Zalosnych" \ Lento E Largo - Tranquillissimo
-364296	Act IV, Symphony
-385506	3 Gymnopédies: No.1 - Lent Et Grave, No.3 - Lent Et Douloureux
-142081	Music for the Funeral of Queen Mary: VI. "Thou Knowest, Lord, the Secrets of Our Hearts"
-376510	Symphony No. 2: III. Allegro vivace
-285673	Partita in E Major, BWV 1006A: I. Prelude
-234746	Le Sacre Du Printemps: I.iv. Spring Rounds
-133768	Sing Joyfully
-333669	Metopes, Op. 29: Calypso
-286998	Symphony No. 2, Op. 16 -  "The Four Temperaments": II. Allegro Comodo e Flemmatico
-265541	24 Caprices, Op. 1, No. 24, for Solo Violin, in A Minor
-51780	Étude 1, In C Major - Preludio (Presto) - Liszt
-261849	Erlkonig, D.328
-493573	Concerto for Violin, Strings and Continuo in G Major, Op. 3, No. 9: I. Allegro
-286741	Pini Di Roma (Pinien Von Rom) \ I Pini Della Via Appia
-139200	String Quartet No. 12 in C Minor, D. 703 "Quartettsatz": II. Andante - Allegro assai
-66639	L'orfeo, Act 3, Sinfonia (Orchestra)
-221331	Quintet for Horn, Violin, 2 Violas, and Cello in E Flat Major, K. 407/386c: III. Allegro
-206005	Koyaanisqatsi
-Суммарная длительность треков плейлиста 6755730
+<tr><td>21</td><td>3</td><td>6</td><td>2</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 3 из 5, в большой 8 из 8
 </td></tr>
-</table>
-</div>
-<div id='task9479' class='task_block'>
-<div class='task_id'>9479</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит идентификатор клиента (customerId). Нужно вывести на экран, сколько времени проходило между датами его чеков.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (customerId)</th><th>Результат</th></tr>
-<tr><td>1</td><td>59</td><td class='preformatted'>Разница между 2009-04-05 и 2009-07-08 равна 8121600000 миллисекунд (2256 часов)
-Разница между 2009-07-08 и 2010-02-26 равна 20134800000 миллисекунд (5593 часов)
-Разница между 2010-02-26 и 2011-08-20 равна 46652400000 миллисекунд (12959 часов)
-Разница между 2011-08-20 и 2011-09-30 равна 3542400000 миллисекунд (984 часов)
-Разница между 2011-09-30 и 2012-05-30 равна 20995200000 миллисекунд (5832 часов)
+<tr><td>22</td><td>3</td><td>6</td><td>3</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 1 из 5, в большой 8 из 8
 </td></tr>
-<tr><td>2</td><td>27</td><td class='preformatted'>Разница между 2009-06-10 и 2011-01-15 равна 50461200000 миллисекунд (14017 часов)
-Разница между 2011-01-15 и 2011-04-19 равна 8118000000 миллисекунд (2255 часов)
-Разница между 2011-04-19 и 2011-07-22 равна 8121600000 миллисекунд (2256 часов)
-Разница между 2011-07-22 и 2012-03-11 равна 20131200000 миллисекунд (5592 часов)
-Разница между 2012-03-11 и 2013-09-02 равна 46656000000 миллисекунд (12960 часов)
-Разница между 2013-09-02 и 2013-10-13 равна 3542400000 миллисекунд (984 часов)
+<tr><td>23</td><td>1</td><td>6</td><td>3</td><td class='preformatted'>Было: в маленькой 1 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 7 из 8
 </td></tr>
-<tr><td>3</td><td>2</td><td class='preformatted'>Разница между 2009-01-01 и 2009-02-11 равна 3542400000 миллисекунд (984 часов)
-Разница между 2009-02-11 и 2009-10-12 равна 20991600000 миллисекунд (5831 часов)
-Разница между 2009-10-12 и 2011-05-19 равна 50457600000 миллисекунд (14016 часов)
-Разница между 2011-05-19 и 2011-08-21 равна 8121600000 миллисекунд (2256 часов)
-Разница между 2011-08-21 и 2011-11-23 равна 8121600000 миллисекунд (2256 часов)
-Разница между 2011-11-23 и 2012-07-13 равна 20131200000 миллисекунд (5592 часов)
+<tr><td>24</td><td>3</td><td>6</td><td>4</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 5 из 5, в большой 4 из 8
+</td></tr>
+<tr><td>25</td><td>1</td><td>2</td><td>4</td><td class='preformatted'>Было: в маленькой 1 из 5, в большой 2 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 3 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>26</td><td>3</td><td>6</td><td>5</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 5
+Стало: в маленькой 0 из 5, в большой 6 из 8
+</td></tr>
+<tr><td>27</td><td>3</td><td>6</td><td>6</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 6
+Стало: в маленькой 3 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>28</td><td>3</td><td>6</td><td>7</td><td class='preformatted'>Было: в маленькой 3 из 5, в большой 6 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из крана в большую ёмкость
+3. Налить из маленькой ёмкости в большую
+4. Налить из большой ёмкости в маленькую
+5. Вылить из маленькой ёмкости в раковину
+6. Вылить из большой ёмкости в раковину
+Выбрано действие: 7
+Номер действия должен быть цифрой от 1 до 6 включительно
+Стало: в маленькой 3 из 5, в большой 6 из 8
+</td></tr>
+<tr><td>29</td><td>4</td><td>8</td><td>1</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>30</td><td>4</td><td>8</td><td>2</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 5 из 5, в большой 7 из 8
+</td></tr>
+<tr><td>31</td><td>4</td><td>8</td><td>3</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>32</td><td>4</td><td>8</td><td>4</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 4 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>33</td><td>4</td><td>8</td><td>5</td><td class='preformatted'>Было: в маленькой 4 из 5, в большой 8 из 8
+Введите номер действия:
+1. Налить из крана в маленькую ёмкость
+2. Налить из большой ёмкости в маленькую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 5
+Номер действия должен быть цифрой от 1 до 4 включительно
+Стало: в маленькой 4 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>34</td><td>5</td><td>0</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>35</td><td>5</td><td>0</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 0 из 5, в большой 5 из 8
+</td></tr>
+<tr><td>36</td><td>5</td><td>0</td><td>3</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>37</td><td>5</td><td>0</td><td>4</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 0 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+Выбрано действие: 4
+Номер действия должен быть цифрой от 1 до 3 включительно
+Стало: в маленькой 5 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>38</td><td>5</td><td>4</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>39</td><td>5</td><td>2</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 2 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 0 из 5, в большой 7 из 8
+</td></tr>
+<tr><td>40</td><td>5</td><td>4</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 1 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>41</td><td>5</td><td>4</td><td>3</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Стало: в маленькой 0 из 5, в большой 4 из 8
+</td></tr>
+<tr><td>42</td><td>5</td><td>4</td><td>4</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 4
+Стало: в маленькой 5 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>43</td><td>5</td><td>4</td><td>5</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 4 из 8
+Введите номер действия:
+1. Налить из крана в большую ёмкость
+2. Налить из маленькой ёмкости в большую
+3. Вылить из маленькой ёмкости в раковину
+4. Вылить из большой ёмкости в раковину
+Выбрано действие: 5
+Номер действия должен быть цифрой от 1 до 4 включительно
+Стало: в маленькой 5 из 5, в большой 4 из 8
+</td></tr>
+<tr><td>44</td><td>5</td><td>8</td><td>1</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Введите номер действия:
+1. Вылить из маленькой ёмкости в раковину
+2. Вылить из большой ёмкости в раковину
+Выбрано действие: 1
+Стало: в маленькой 0 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>45</td><td>5</td><td>8</td><td>2</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Введите номер действия:
+1. Вылить из маленькой ёмкости в раковину
+2. Вылить из большой ёмкости в раковину
+Выбрано действие: 2
+Стало: в маленькой 5 из 5, в большой 0 из 8
+</td></tr>
+<tr><td>46</td><td>5</td><td>8</td><td>3</td><td class='preformatted'>Было: в маленькой 5 из 5, в большой 8 из 8
+Введите номер действия:
+1. Вылить из маленькой ёмкости в раковину
+2. Вылить из большой ёмкости в раковину
+Выбрано действие: 3
+Номер действия должен быть цифрой от 1 до 2 включительно
+Стало: в маленькой 5 из 5, в большой 8 из 8
+</td></tr>
+<tr><td>47</td><td>-1</td><td>0</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr><td>48</td><td>20</td><td>0</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в маленькой емкости должно быть от 0 до 5 литров включительно
+</td></tr>
+<tr><td>49</td><td>0</td><td>-2</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
+</td></tr>
+<tr><td>50</td><td>0</td><td>19</td><td>1</td><td class='preformatted'>Фактическое количество жидкости в большой емкости должно быть от 0 до 8 литров включительно
 </td></tr>
 </table>
 </div>

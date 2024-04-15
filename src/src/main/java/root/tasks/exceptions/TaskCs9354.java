@@ -1,59 +1,81 @@
 package root.tasks.exceptions;
 
-import root.tasks.MultipleInputValLayout;
+import root.tasks.OneInputValLayout;
 
-public class TaskCs9354 extends MultipleInputValLayout {
+public class TaskCs9354 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading("Прочитайте условие задачи.");
-        appendTaskDescNonEscaped("Вычислить дискриминант квадратного уравнения по формуле <formula>discriminant = b<sup>2</sup>-4ac</formula>");
-        appendCheckValuesHeader("a", "b","c");
-        appendCheckValuesRow("7", "1", "3");
-        appendCheckValuesRow("7247", "7243", "7229");
-        appendCheckValuesRow("-11", "-13", "-17");
-        appendCheckValuesRow("0", "1", "3");
-        appendCheckValuesRow("0", "1000", "2000");
-        appendCheckValuesFooter();
-        appendSubheading("Реализуйте статический метод с тремя аргументами");
+        appendTaskDescNonEscaped("Дана длина ребра куба. Найти площадь его боковой поверхности по формуле <formula>area=6*edge<sup>2</sup></formula>.");
         appendOrderedEscaped(
-                "Объявите в классе Library публичный статический метод GetDiscriminant.",
-                "Он принимает в качестве аргумента 3 действительных числа.",
+                "Объявите в классе Library публичный статический метод task9354.",
+                "Он принимает в качестве аргумента действительное число (edge).",
                 "Метод возвращает действительное число в качестве результата.",
-                "Если значение аргумента \"a\" равно 0, то метод должен выбросить исключение ArgumentException."
+                "Если значение аргумента \"edge\" меньше или равно 0, то метод должен выбросить исключение."
         );
-        appendSubheading("Проверьте корректность работы метода с помощью вспомогательной программы");
-        appendOrderedEscaped(
-                "Создайте проект Runner9354",
-                "В проекте Runner9354 добавьте ссылку на проект CodeProject.",
-                "Добавьте команду using пространства имен из проекта CodeProject.",
-                "В методе Main класса Program вызовите метод GetDiscriminant класса Library.",
-                "Первым аргументом передайте ему значение 7, вторым - значение 1, третьим - значение 3.",
-                "Получите три действительных числа от пользователя и запишите их в переменные a, b, c",
-                "Вызовите метод getDiscriminant класса Library и передайте ему значения a, b, c в качестве аргументов.",
-                "Предусмотрите перехват исключения, которое может выбросить метод.",
-                "Проверьте программу по таблице тестовых и ожидаемых данных."
-        );
+        appendTaskDescEscaped("Для того, чтобы выбросить исключение, нужно добавить в тело метода следующий код:");
+        appendCheckSingleNonEscaped("if (edge <= 0) {\n" +
+                "    throw new Exception(\"Значение edge должно быть положительным\");\n" +
+                "}");
+        appendTaskDescEscaped("В методе main класса Program добавьте код для проверки:");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescEscaped("В результате запуска метода main, в консоли должен появиться следующий текст:");
+        appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
     }
 
-    public static double getDiscriminant(double a, double b, double c) {
-        if (a == 0) {
-            throw new IllegalArgumentException();
+    @Override
+    protected String methodExample() {
+        return "double e = 7;\n" +
+                "double res = Library.task9354(e);\n" +
+                "Console.WriteLine(\"Площадь поверхности куба равна {0:F4}\", res);\n" +
+                "res = Library.task9354(7247);\n" +
+                "Console.WriteLine(\"Площадь поверхности куба равна {0:F4}\", res);\n" +
+                "try {\n" +
+                "    res = Library.task9354(-11);\n" +
+                "    Console.WriteLine(\"Площадь поверхности куба равна {0:F4}\", res);\n" +
+                "} catch (Exception e) {\n" +
+                "    Console.WriteLine(e.Message);\n" +
+                "}\n" +
+                "try {\n" +
+                "    double res = Library.task9354(0);\n" +
+                "    Console.WriteLine(\"Площадь поверхности куба равна {0:F4}\", res);\n" +
+                "} catch (Exception e) {\n" +
+                "    Console.WriteLine(e.Message);\n" +
+                "}";
+    }
+
+    static class Library {
+        public static double task9354(double edge) throws Exception {
+            if (edge <= 0) {
+                throw new Exception("Значение edge должно быть положительным");
+            }
+            return edge * edge * 6;
         }
-        return b * b - 4 * a * c;
     }
 
     @Override
-    protected void logic(String... args) {
-        double a = Double.parseDouble(args[0]);
-        double b = Double.parseDouble(args[1]);
-        double c = Double.parseDouble(args[2]);
+    protected void logic(String arg) {
         try {
-            double result = getDiscriminant(a, b, c);
-            System.out.printf("Дискриминант уравнения y=%fx^2+%fx+%f равен %f", a, b, c, result);
-        } catch (IllegalArgumentException ex) {
-            System.out.printf("Уравнение y=%fx^2+%fx+%f не является квадратным", a, b, c);
+            double e = 7;
+            double res = Library.task9354(e);
+            System.out.printf("Площадь поверхности куба равна %.4f\n", res);
+            res = Library.task9354(7247);
+            System.out.printf("Площадь поверхности куба равна %.4f\n", res);
+            res = Library.task9354(-11);
+            System.out.printf("Площадь поверхности куба равна %.4f\n", res);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+        try {
+            double res = Library.task9354(0);
+            System.out.printf("Площадь поверхности куба равна %.4f\n", res);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new TaskCs9354());
     }
 }

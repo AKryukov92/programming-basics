@@ -88,7 +88,8 @@ public class Application {
             "Чтение файлов",
             "Запись в файлы",
             "Возврат значения",
-            "Исключения",
+            "Перехват исключений",
+            "Выбрасывание исключений",
             "Составные типы данных",
             "Внутреннее состояние",
             "Коллекции",
@@ -125,14 +126,15 @@ public class Application {
         fillReadingFiles(taskBooksCs[17]);
         fillWritingFiles(taskBooksCs[18]);
 
-        fillMethodsDecoration(taskBooksCs[19]);
-        fillExceptions(taskBooksCs[20]);
-        fillAbstractDataStructures(taskBooksCs[21]);
-        fillInternalState(taskBooksCs[22]);
-        fillCollections(taskBooksCs[23]);
-        fillRecursion(taskBooksCs[24]);
-        fillDateTime(taskBooksCs[25]);
-        fillCombinations(taskBooksCs[26]);
+        fillMethodsReturningValue(taskBooksCs[19]);
+        fillCatchingExceptions(taskBooksCs[20]);
+        fillThrowingException(taskBooksCs[21]);
+        fillAbstractDataStructures(taskBooksCs[22]);
+        fillInternalState(taskBooksCs[23]);
+        fillCollections(taskBooksCs[24]);
+        fillRecursion(taskBooksCs[25]);
+        fillDateTime(taskBooksCs[26]);
+        fillCombinations(taskBooksCs[27]);
 
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
@@ -162,11 +164,12 @@ public class Application {
         fillReadingFiles(taskBooksJava[17]);
         fillWritingFiles(taskBooksJava[18]);
 
-        fillMethodsDecoration(taskBooksJava[19]);
-        fillExceptions(taskBooksJava[20]);
-        fillAbstractDataStructures(taskBooksJava[21]);
-        fillInternalState(taskBooksJava[22]);
-        fillCollections(taskBooksJava[23]);
+        fillMethodsReturningValue(taskBooksJava[19]);
+        fillCatchingExceptions(taskBooksJava[20]);
+        fillThrowingException(taskBooksJava[21]);
+        fillAbstractDataStructures(taskBooksJava[22]);
+        fillInternalState(taskBooksJava[23]);
+        fillCollections(taskBooksJava[24]);
 
         //где то на этом этапе можно добавить реализацию http-сервера
         //на дом все те же самые задания, нужно хотя бы повторить. отличие - вместо круга прямоугольник
@@ -182,10 +185,10 @@ public class Application {
         //9. подготовить html страницу с формой для отправки данных на сервер action="/circle"
         //10. http сервер с двумя страницами: /add и /circle. add отдает пользователю html страницу. circle отдает пользователю
 
-        fillRecursion(taskBooksJava[24]);
-        fillDateTime(taskBooksJava[25]);
-        fillCombinations(taskBooksJava[26]);
-        fillSQLite(taskBooksJava[27]);
+        fillRecursion(taskBooksJava[25]);
+        fillDateTime(taskBooksJava[26]);
+        fillCombinations(taskBooksJava[27]);
+        fillSQLite(taskBooksJava[28]);
 
         //запросы на добавление данных в субд можно отложить до работы с веб-сервером, т.к. проверка там будет комплексная, а не просто табличка с данными
         ////добавление (с параметрами)
@@ -1004,7 +1007,7 @@ public class Application {
         //рассчитываю, что ученики заметят это и смогут правильно переиспользовать код
     }
 
-    private static void fillMethodsDecoration(TaskBook taskBook) {
+    private static void fillMethodsReturningValue(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
                 .addCitation("info01")
@@ -1017,7 +1020,6 @@ public class Application {
 
                 .addExample(new Task3355())//сбор большого текста из фрагментов
                 .addTask(new Task3147())//сбор строки из фрагментов
-                .addCitation("link_c2_p7.1")
 
                 .withGroup("Аргумент-массив")
                 .addExample(new TaskCs6948(), new TaskJava6948())//принимает массив, возвращает число
@@ -1035,10 +1037,9 @@ public class Application {
         ;
     }
 
-    private static void fillExceptions(TaskBook taskBook) {
+    private static void fillCatchingExceptions(TaskBook taskBook) {
         //очень важно познакомить человека с ошибкой UnhandledException и вариантами действий
         taskBook.withSourceDirectory("lab13")
-                .addCitation("link_c2_p8.4")
                 .withGroup("Обработка исключения при преобразовании string->int в консольной программе")
                 .addExample(new TaskCs7740(), new TaskJava7740())//обработка не-чисел
                 .addTask(new Task1439())//обработка не-чисел
@@ -1046,6 +1047,15 @@ public class Application {
                 .addTask(new Task8733())//среднее арифметическое в файле
                 .addTask(8139)//чтение файла, подсчет количества особенных, обработка не-чисел
                 .addTask(new Task5014())//чтение файла, вывод первого и остальных, обработка не-чисел
+                .withGroup("Работа с файлами, перехват исключений на различных этапах работы программы")
+                .addExample(6882)
+                .addTask(1212)
+                .addTask(9472)
+                .addTask(5081)
+        ;
+    }
+    private static void fillThrowingException(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab13")
                 .withGroup("Выбрасывание исключения, проверка в консольной программе")
         ;
         if (taskBook.isCsharp()) {
@@ -1075,11 +1085,6 @@ public class Application {
                 .addTask(5170)
                 .addTask(7891)
 
-                .withGroup("Работа с файлами, перехват исключений на различных этапах работы программы")
-                .addExample(6882)
-                .addTask(1212)
-                .addTask(9472)
-                .addTask(5081)
         ;
     }
 

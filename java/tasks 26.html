@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>26 Даты</title><style>.check_single {
+<!DOCTYPE html><html lang="ru"><head><meta charset='utf-8'/><title>26 Рекурсия</title><style>.check_single {
     margin:15px;
 	border:1px solid black;
 	padding:5px;
@@ -165,21 +165,6 @@ numerator {
 denominator {
 	display:block;
 }
-spoiler {
-	color:darkgrey;
-}
-spoiler origin {
-	display:none;
-}
-spoiler:hover origin {
-	display:inline;
-}
-spoiler trans {
-	display:inline;
-}
-spoiler:hover trans {
-	display:none;
-}
 .comment{
 	color:darkgrey;
 }
@@ -204,7 +189,7 @@ spoiler:hover trans {
 }
 .task_block:target .zoom {
     background-color:white;
-}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Даты</h1></a><div class='lab_nav'>Другие темы<ol>
+}</style><meta name="author" content="Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019"/></head><body class='section'><a name='heading'><h1>Рекурсия</h1></a><div class='lab_nav'>Другие темы<ol>
 <li>1 <a href='tasks 1.html'>Печать текста на экран</a></li>
 <li>2 <a href='tasks 2.html'>Заполнение шаблона данными от пользователя</a></li>
 <li>3 <a href='tasks 3.html'>Организация вычислений</a></li>
@@ -225,430 +210,156 @@ spoiler:hover trans {
 <li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
 <li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
 <li>20 <a href='tasks 20.html'>Возврат значения</a></li>
-<li>21 <a href='tasks 21.html'>Исключения</a></li>
-<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
-<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
-<li>24 <a href='tasks 24.html'>Коллекции</a></li>
-<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
-<li>26 <a href='tasks 26.html'>Даты</a></li>
-<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
-<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9425' class='example'>1*</a><li><a href='#task3123' class='example'>2*</a><li><a href='#task9418'>3</a><li><a href='#task7480' class='example'>4*</a><li><a href='#task8811'>5</a><li><a href='#task1912'>6</a><li><a href='#task3696' class='example'>7*</a><li><a href='#task8381'>8</a><li><a href='#task8498'>9</a><li><a href='#task8096'>10</a><li><a href='#task8519' class='example'>11*</a><li><a href='#task2130'>12</a></ul></div><div id='task9425' class='task_block'>
-<div class='task_id'>9425</div>
+<li>21 <a href='tasks 21.html'>Перехват исключений</a></li>
+<li>22 <a href='tasks 22.html'>Выбрасывание исключений</a></li>
+<li>23 <a href='tasks 23.html'>Составные типы данных</a></li>
+<li>24 <a href='tasks 24.html'>Внутреннее состояние</a></li>
+<li>25 <a href='tasks 25.html'>Коллекции</a></li>
+<li>26 <a href='tasks 26.html'>Рекурсия</a></li>
+<li>27 <a href='tasks 27.html'>Даты</a></li>
+<li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
+<li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task4106'>1</a><li><a href='#task1068'>2</a><li><a href='#task6646'>3</a></ul></div><div id='task4106' class='task_block'>
+<div class='task_id'>4106</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дано несколько дат в виде текста. Выбрать правильный формат чтобы программа прочитала дату. Вывести на экран отдельно день, месяц и год, час, минуту, секунду.
+Написать подробную версию программы.
 </div>
-<div class='check_single preformatted'>Выражение 2023-06-28 означает
-Год: 2023
-Месяц: 6
-День: 28
-Выражение 2023-06-28 18:38 означает
-Год: 2023
-Месяц: 6
-День: 28
-Час: 18
-Минута 38
-Секунда 0
-Выражение 28/06/2023 18:38:00 означает
-Год: 2023
-Месяц: 6
-День: 28
-Час: 18
-Минута 38
-Секунда 0
-Выражение 3/4/23 означает
-Год: 2023
-Месяц: 4
-День: 3
-Выражение 18:44 28.06.2023 означает
-Год: 2023
-Месяц: 6
-День: 28
-Час: 18
-Минута 44
-Секунда 0
-Выражение 1995-03-01 означает
-Год: 1995
-Месяц: 3
-День: 1
+<div class='check_single preformatted'>private static void work(int n) {
+    if (n < 0) {
+        return;
+    }
+    work(n-2);
+    print(n);
+    work(n-3);
+}
+public static void main(String[] args) {
+    work(6);
+}</div>
 </div>
-<div class='task_desc'>
-Если дата содержит время, то нужно использовать тип LocalDateTime. Если время отсутствует, то LocalDate. Пример преобразования даты из текста в LocalDate/LocalDateTime:
-</div>
-<div class='check_single preformatted'>String yMd = "yyyy-MM-dd";
-String str1 = "2023-06-28";
-LocalDate dt1 = LocalDate.parse(str1, DateTimeFormatter.ofPattern(yMd));
-System.out.println("Выражение " + str1 + " означает");
-System.out.println("Год: " + dt1.getYear());
-System.out.println("Месяц: " + dt1.getMonthValue());
-System.out.println("День: " + dt1.getDayOfMonth());
-
-String yMdhm = "yyyy-MM-dd HH:mm";
-String str2 = "2023-06-28 18:38";
-LocalDateTime dt2 = LocalDateTime.parse(str2, DateTimeFormatter.ofPattern(yMdhm));
-System.out.println("Выражение " + str2 + " означает");
-System.out.println("Год: " + dt2.getYear());
-System.out.println("Месяц: " + dt2.getMonthValue());
-System.out.println("День: " + dt2.getDayOfMonth());
-System.out.println("Час: " + dt2.getHour());
-System.out.println("Минута " + dt2.getMinute());
-System.out.println("Секунда " + dt2.getSecond());
-</div>
-</div>
-<div id='task3123' class='task_block'>
-<div class='task_id'>3123</div>
+<div id='task1068' class='task_block'>
+<div class='task_id'>1068</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Дано две отметки времени. Нужно вычислить количество часов, минут секунд между ними. Для определения количества минут в текущем часу, нужно найти остаток от деления общего количества минут на 60. Для определения количества секунд в текущей минуте нужно применить такой же прием.
+Написать сокращенное решение.
+</div>
+<div class='check_single preformatted'>private static void level1() {
+        System.out.println("Предисловие");
+        System.out.println("Глава 1");
+        level2();
+    }
+    private static void level2() {
+        System.out.println("Глава 2");
+        level3();
+    }
+    private static void level3() {
+        System.out.println("Глава 3");
+        level4();
+    }
+    private static void level4() {
+        System.out.println("Глава 4");
+        System.out.println("Заключение");
+    }
+    public static void main(String[] args) {
+        level1();
+    }</div>
+</div>
+<div id='task6646' class='task_block'>
+<div class='task_id'>6646</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь указывает путь к папке. Нужно реализовать подсчет суммы чисел во всех вложенных файлах и папках. В папке может быть несколько файлов. Каждый файл содержит неизвестное количество целых чисел. Пустые файлы нужно пропустить. Подсчитывать только сумму корректных целых чисел. Некорректные значения нужно пропустить, не прекращая работу программы.
 </div>
 <table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>firstDate</th><th>secondDate</th></tr>
-<tr>
-<td>1</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:56:13</td><td class='preformatted'>Между датами прошло 0 часов
-Всего минут 0. В текущем часе 0
-Всего секунд 13. В текущей минуте 13
+<tr><th>Номер теста</th><th>Исходные данные (path)</th><th>Результат</th></tr>
+<tr><td>1</td><td><a href="files/task6646/test1" target="_blank">открыть в новой вкладке<br>files/task6646/test1</a></td><td class='preformatted'>Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1\data.txt
+Сумма в файле 90
+Сумма в папке 90 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2\data1.txt
+Сумма в файле 107
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2\data2.txt
+Сумма в файле 34000
+Сумма в папке 34107 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3\data1.txt
+Сумма в файле 900000
+Сумма в папке 900000 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3
+Сумма в папке 934197 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1
 </td></tr>
-<tr>
-<td>2</td><td>03/07/2023 18:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 0 часов
-Всего минут 3. В текущем часе 3
-Всего секунд 193. В текущей минуте 13
+<tr><td>2</td><td><a href="files/task6646/test2" target="_blank">открыть в новой вкладке<br>files/task6646/test2</a></td><td class='preformatted'>Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\data.txt
+Сумма в файле 30000
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part1\data.txt
+Сумма в файле 60
+Сумма в папке 60 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part2
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part2\data.txt
+Сумма в файле 7
+Сумма в папке 7 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1\part2
+Сумма в папке 30067 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter2
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter2\part1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter2\part1\data.txt
+Сумма в файле 200
+Сумма в папке 200 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter2\part1
+Сумма в папке 200 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\chapter2
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2\data.txt
+Сумма в файле 8000
+Сумма в папке 38267 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test2
 </td></tr>
-<tr>
-<td>3</td><td>03/07/2023 13:56:00</td><td>03/07/2023 18:59:13</td><td class='preformatted'>Между датами прошло 5 часов
-Всего минут 303. В текущем часе 3
-Всего секунд 18193. В текущей минуте 13
+<tr><td>3</td><td><a href="files/task6646/test3" target="_blank">открыть в новой вкладке<br>files/task6646/test3</a></td><td class='preformatted'>Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter1\data.txt
+Сумма в файле 0
+Сумма в папке 0 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter2
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter2\data.txt
+Сумма в файле 17
+Сумма в папке 17 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3\chapter2
+Сумма в папке 17 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test3
 </td></tr>
-<tr>
-<td>4</td><td>03/07/2023 13:56:00</td><td>03/07/2024 18:59:13</td><td class='preformatted'>Между датами прошло 8789 часов
-Всего минут 527343. В текущем часе 3
-Всего секунд 31640593. В текущей минуте 13
+<tr><td>4</td><td><a href="files/task6646/test4" target="_blank">открыть в новой вкладке<br>files/task6646/test4</a></td><td class='preformatted'>Путь не существует C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test4
 </td></tr>
-<tr>
-<td>5</td><td>28/06/2023 17:30:00</td><td>28/06/2023 18:00:00</td><td class='preformatted'>Между датами прошло 0 часов
-Всего минут 30. В текущем часе 30
-Всего секунд 1800. В текущей минуте 0
+<tr><td>5</td><td><a href="files/task6646/test5" target="_blank">открыть в новой вкладке<br>files/task6646/test5</a></td><td class='preformatted'>Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4\level5
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4\level5\level6
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4\level5\level6\data.txt
+Запись содержит не число one
+Запись содержит не число three
+Сумма в файле 987654324
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4\level5\level6
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4\level5
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3\level4
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2\level3
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1\level2
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5\level1
+Сумма в папке 987654324 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test5
 </td></tr>
-<tr>
-<td>6</td><td>16/08/2009 10:00:00</td><td>16/08/2009 10:00:10</td><td class='preformatted'>Между датами прошло 0 часов
-Всего минут 0. В текущем часе 0
-Всего секунд 10. В текущей минуте 10
-</td></tr>
-<tr>
-<td>7</td><td>12/04/1961 09:07:00</td><td>12/04/1961 09:18:07</td><td class='preformatted'>Между датами прошло 0 часов
-Всего минут 11. В текущем часе 11
-Всего секунд 667. В текущей минуте 7
-</td></tr>
-<tr>
-<td>8</td><td>01/06/2023 16:00:00</td><td>01/06/2023 15:00:00</td><td class='preformatted'>Между датами прошло 1 часов
-Всего минут 60. В текущем часе 0
-Всего секунд 3600. В текущей минуте 0
-</td></tr>
-</table>
-</div>
-<div id='task9418' class='task_block'>
-<div class='task_id'>9418</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дано расстояние в метрах и две отметки времени - начало и конец движения. Нужно вычислить скорость в м/с.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>distance</th><th>start</th><th>end</th></tr>
-<tr><td>1</td><td>7000</td><td>2023-06-28 17:30:00</td><td>2023-06-28 18:00:00</td><td class='preformatted'>Между двумя датами прошло 1800 секунд
-Скорость получается 3,8889 м/с</td></tr>
-<tr><td>2</td><td>100</td><td>2009-08-16 10:00:00</td><td>2009-08-16 10:00:10</td><td class='preformatted'>Между двумя датами прошло 10 секунд
-Скорость получается 10,0000 м/с</td></tr>
-<tr><td>3</td><td>5275970</td><td>1961-04-12 09:07:00</td><td>1961-04-12 09:18:07</td><td class='preformatted'>Между двумя датами прошло 667 секунд
-Скорость получается 7910,0000 м/с</td></tr>
-<tr><td>4</td><td>10000</td><td>2023-06-01 16:00:00</td><td>2023-06-01 15:00:00</td><td class='preformatted'>Между двумя датами прошло 3600 секунд
-Скорость получается 2,7778 м/с</td></tr>
-</table>
-</div>
-<div id='task7480' class='task_block'>
-<div class='task_id'>7480</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит две даты. Сравните даты. Определите какая позже, какая раньше. Напечатать подробный ответ на экран.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>firstDate</th><th>secondDate</th></tr>
-<tr>
-<td>1</td><td>28.06.2023</td><td>20.06.2023</td><td class='preformatted'>Первая дата позже второй
-</td></tr>
-<tr>
-<td>2</td><td>20.06.2023</td><td>28.06.2023</td><td class='preformatted'>Вторая дата позже первой
-</td></tr>
-<tr>
-<td>3</td><td>01.07.2023</td><td>07.01.2023</td><td class='preformatted'>Первая дата позже второй
-</td></tr>
-<tr>
-<td>4</td><td>05.02.2001</td><td>05.02.2002</td><td class='preformatted'>Вторая дата позже первой
-</td></tr>
-</table>
-</div>
-<div id='task8811' class='task_block'>
-<div class='task_id'>8811</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит три даты: start, end, appointment. Если appointment после start и до end исключительно, написать фразу 'ДАТА В ПЕРИОДЕ'. В любом другом случае написать - 'ДАТА ЗА ПРЕДЕЛАМИ'
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='3'>Исходные данные</th><th rowspan='2'>Результат</th></tr>
-<tr><th>start</th><th>end</th><th>appointment</th></tr>
-<tr><td>1</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-<tr><td>2</td><td>2023-07-01</td><td>2023-07-31</td><td>2023-07-15</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
-</td></tr>
-<tr><td>3</td><td>2023-07-01</td><td>2023-08-01</td><td>2023-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-<tr><td>4</td><td>2023-07-01</td><td>2024-06-01</td><td>2024-01-01</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
-</td></tr>
-<tr><td>5</td><td>2023-01-15</td><td>2023-02-05</td><td>2023-01-19</td><td class='preformatted'>ДАТА В ПЕРИОДЕ
-</td></tr>
-<tr><td>6</td><td>2023-01-01</td><td>2020-01-01</td><td>2020-01-01</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-<tr><td>7</td><td>2023-07-26</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-<tr><td>8</td><td>2023-07-26</td><td>2023-08-01</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-<tr><td>9</td><td>2023-06-01</td><td>2023-07-26</td><td>2023-07-26</td><td class='preformatted'>ДАТА ЗА ПРЕДЕЛАМИ
-</td></tr>
-</table>
-</div>
-<div id='task1912' class='task_block'>
-<div class='task_id'>1912</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит время. Нужно определить какой прием пищи следующий. Завтрак идет с 8:00 до 9:00. Обед идет с 13:00 до 14:00. Ужин идет с 18:30 до 19:15.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (currentTime)</th><th>Результат</th></tr>
-<tr><td>1</td><td>06:00</td><td class='preformatted'>Следующий прием пищи - завтрак
-</td></tr>
-<tr><td>2</td><td>08:30</td><td class='preformatted'>Завтрак еще не закончился
-</td></tr>
-<tr><td>3</td><td>10:00</td><td class='preformatted'>Следующий прием пищи - обед
-</td></tr>
-<tr><td>4</td><td>13:15</td><td class='preformatted'>Обед еще не закончился
-</td></tr>
-<tr><td>5</td><td>16:00</td><td class='preformatted'>Следующий прием пищи - ужин
-</td></tr>
-<tr><td>6</td><td>19:00</td><td class='preformatted'>Ужин еще не закончился
-</td></tr>
-<tr><td>7</td><td>23:00</td><td class='preformatted'>Следующий прием пищи - завтрак
-</td></tr>
-</table>
-</div>
-<div id='task3696' class='task_block'>
-<div class='task_id'>3696</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит дату и число. Определить какая дата получится если прибавить указанное количество дней к исходной дате.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>date</th><th>days</th></tr>
-<tr>
-<td>1</td><td>07/08/2023</td><td>40</td><td class='preformatted'>При смещении 07/08/2023 на 40 дней 
-получается дата 16/09/2023
-</td></tr>
-<tr>
-<td>2</td><td>31/12/2023</td><td>4</td><td class='preformatted'>При смещении 31/12/2023 на 4 дней 
-получается дата 04/01/2024
-</td></tr>
-<tr>
-<td>3</td><td>15/02/2013</td><td>14</td><td class='preformatted'>При смещении 15/02/2013 на 14 дней 
-получается дата 01/03/2013
-</td></tr>
-<tr>
-<td>4</td><td>15/02/2012</td><td>14</td><td class='preformatted'>При смещении 15/02/2012 на 14 дней 
-получается дата 29/02/2012
-</td></tr>
-</table>
-</div>
-<div id='task8381' class='task_block'>
-<div class='task_id'>8381</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит дату. Нужно напечатать даты пяти дней до указанной и пяти дней после указанной.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
-<tr><td>1</td><td>05.07.2023</td><td class='preformatted'>Минус 5 дней 30.06.2023
-Минус 4 дней 01.07.2023
-Минус 3 дней 02.07.2023
-Минус 2 дней 03.07.2023
-Минус 1 дней 04.07.2023
-Плюс 1 дней 06.07.2023
-Плюс 2 дней 07.07.2023
-Плюс 3 дней 08.07.2023
-Плюс 4 дней 09.07.2023
-Плюс 5 дней 10.07.2023
-</td></tr>
-<tr><td>2</td><td>28.02.2023</td><td class='preformatted'>Минус 5 дней 23.02.2023
-Минус 4 дней 24.02.2023
-Минус 3 дней 25.02.2023
-Минус 2 дней 26.02.2023
-Минус 1 дней 27.02.2023
-Плюс 1 дней 01.03.2023
-Плюс 2 дней 02.03.2023
-Плюс 3 дней 03.03.2023
-Плюс 4 дней 04.03.2023
-Плюс 5 дней 05.03.2023
-</td></tr>
-<tr><td>3</td><td>29.02.2020</td><td class='preformatted'>Минус 5 дней 24.02.2020
-Минус 4 дней 25.02.2020
-Минус 3 дней 26.02.2020
-Минус 2 дней 27.02.2020
-Минус 1 дней 28.02.2020
-Плюс 1 дней 01.03.2020
-Плюс 2 дней 02.03.2020
-Плюс 3 дней 03.03.2020
-Плюс 4 дней 04.03.2020
-Плюс 5 дней 05.03.2020
-</td></tr>
-<tr><td>4</td><td>01.01.2010</td><td class='preformatted'>Минус 5 дней 27.12.2009
-Минус 4 дней 28.12.2009
-Минус 3 дней 29.12.2009
-Минус 2 дней 30.12.2009
-Минус 1 дней 31.12.2009
-Плюс 1 дней 02.01.2010
-Плюс 2 дней 03.01.2010
-Плюс 3 дней 04.01.2010
-Плюс 4 дней 05.01.2010
-Плюс 5 дней 06.01.2010
-</td></tr>
-</table>
-</div>
-<div id='task8498' class='task_block'>
-<div class='task_id'>8498</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит две даты. Определить, совпадают ли дни недели у этих дат.
-</div>
-<table class='check_values_v2'>
-<tr><th rowspan='2'>Номер теста</th><th colspan='2'>Исходные данные</th><th rowspan='2'>Результат</th></tr><tr>
-<th>firstDate</th><th>secondDate</th></tr>
-<tr>
-<td>1</td><td>2023-07-03</td><td>2023-08-13</td><td class='preformatted'>Дни недели различаются.
-У первой даты понедельник
-У второй даты воскресенье
-</td></tr>
-<tr>
-<td>2</td><td>2023-08-14</td><td>2023-08-07</td><td class='preformatted'>Дни недели совпадают и равны понедельник
-</td></tr>
-<tr>
-<td>3</td><td>2023-01-01</td><td>2022-01-01</td><td class='preformatted'>Дни недели различаются.
-У первой даты воскресенье
-У второй даты суббота
-</td></tr>
-</table>
-</div>
-<div id='task8096' class='task_block'>
-<div class='task_id'>8096</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит дату. Эта дата находится в какой-то неделе. Нужно определить день, месяц и год каждого из дней недели рядом с этой датой. Для этого определите понедельник этой недели, а затем прибавьте к нему от 1 до 7 дней
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (input)</th><th>Результат</th></tr>
-<tr><td>1</td><td>2023-07-03</td><td class='preformatted'>Нужно отнять 0 дней чтобы получился понедельник
-понедельник это 2023-07-03
-вторник это 2023-07-04
-среда это 2023-07-05
-четверг это 2023-07-06
-пятница это 2023-07-07
-суббота это 2023-07-08
-воскресенье это 2023-07-09
-</td></tr>
-<tr><td>2</td><td>2023-07-02</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
-понедельник это 2023-06-26
-вторник это 2023-06-27
-среда это 2023-06-28
-четверг это 2023-06-29
-пятница это 2023-06-30
-суббота это 2023-07-01
-воскресенье это 2023-07-02
-</td></tr>
-<tr><td>3</td><td>2000-01-01</td><td class='preformatted'>Нужно отнять 5 дней чтобы получился понедельник
-понедельник это 1999-12-27
-вторник это 1999-12-28
-среда это 1999-12-29
-четверг это 1999-12-30
-пятница это 1999-12-31
-суббота это 2000-01-01
-воскресенье это 2000-01-02
-</td></tr>
-<tr><td>4</td><td>2010-01-03</td><td class='preformatted'>Нужно отнять 6 дней чтобы получился понедельник
-понедельник это 2009-12-28
-вторник это 2009-12-29
-среда это 2009-12-30
-четверг это 2009-12-31
-пятница это 2010-01-01
-суббота это 2010-01-02
-воскресенье это 2010-01-03
-</td></tr>
-</table>
-</div>
-<div id='task8519' class='task_block'>
-<div class='task_id'>8519</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Дана дата по Омску(UTC+06:00). Определить сколько времени будет в Москве(UTC+03:00), Новосибирске(UTC+07:00), Лондоне (UTC+01:00), на Кубе (UTC-05:00), в Непале (UTC+05:45)
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (date)</th><th>Результат</th></tr>
-<tr><td>1</td><td>18:16 07.08.2023</td><td class='preformatted'>Когда в Омске 18:16 07.08.2023
-в Новосибирске 19:16 07.08.2023
-в Москве 15:16 07.08.2023
-в Лондоне 13:16 07.08.2023
-на Кубе 07:16 07.08.2023
-в Непале 18:01 07.08.2023
-</td></tr>
-<tr><td>2</td><td>23:11 28.06.2023</td><td class='preformatted'>Когда в Омске 23:11 28.06.2023
-в Новосибирске 00:11 29.06.2023
-в Москве 20:11 28.06.2023
-в Лондоне 18:11 28.06.2023
-на Кубе 12:11 28.06.2023
-в Непале 22:56 28.06.2023
-</td></tr>
-<tr><td>3</td><td>04:35 02.09.2015</td><td class='preformatted'>Когда в Омске 04:35 02.09.2015
-в Новосибирске 05:35 02.09.2015
-в Москве 01:35 02.09.2015
-в Лондоне 23:35 01.09.2015
-на Кубе 17:35 01.09.2015
-в Непале 04:20 02.09.2015
-</td></tr>
-</table>
-</div>
-<div id='task2130' class='task_block'>
-<div class='task_id'>2130</div>
-<h3>Задача</h3>
-<div class='task_desc'>
-Пользователь вводит смещение по часовым поясам. Определить как изменится время 2023-06-28 18:27 по Гринвичу(UTC+00:00) при введенной пользователем таймзоне.
-</div>
-<table class='check_values_v2'>
-<tr><th>Номер теста</th><th>Исходные данные (timezone)</th><th>Результат</th></tr>
-<tr><td>1</td><td>UTC+01:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне UTC+01:00 время будет равно 2023-06-28 19:27
-</td></tr>
-<tr><td>2</td><td>UTC+10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне UTC+10:00 время будет равно 2023-06-29 04:27
-</td></tr>
-<tr><td>3</td><td>UTC</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне UTC время будет равно 2023-06-28 18:27
-</td></tr>
-<tr><td>4</td><td>UTC-10:00</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне UTC-10:00 время будет равно 2023-06-28 08:27
-</td></tr>
-<tr><td>5</td><td>Turkey</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне Turkey время будет равно 2023-06-28 21:27
-</td></tr>
-<tr><td>6</td><td>Africa/Lubumbashi</td><td class='preformatted'>Если время по Гринвичу равно 2023-06-28 18:27
-то при таймзоне Africa/Lubumbashi время будет равно 2023-06-28 20:27
+<tr><td>6</td><td><a href="files/task6646/test1" target="_blank">открыть в новой вкладке<br>files/task6646/test1</a></td><td class='preformatted'>Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1\data.txt
+Сумма в файле 90
+Сумма в папке 90 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter1
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2\data1.txt
+Сумма в файле 107
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2\data2.txt
+Сумма в файле 34000
+Сумма в папке 34107 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter2
+Это папка C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3
+Это файл C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3\data1.txt
+Сумма в файле 900000
+Сумма в папке 900000 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1\chapter3
+Сумма в папке 934197 C:\Users\akryukov\IdeaProjects\programming-basics\src\files\task6646\test1
 </td></tr>
 </table>
 </div>

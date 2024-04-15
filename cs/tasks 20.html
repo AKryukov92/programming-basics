@@ -165,21 +165,6 @@ numerator {
 denominator {
 	display:block;
 }
-spoiler {
-	color:darkgrey;
-}
-spoiler origin {
-	display:none;
-}
-spoiler:hover origin {
-	display:inline;
-}
-spoiler trans {
-	display:inline;
-}
-spoiler:hover trans {
-	display:none;
-}
 .comment{
 	color:darkgrey;
 }
@@ -225,14 +210,15 @@ spoiler:hover trans {
 <li>18 <a href='tasks 18.html'>Чтение файлов</a></li>
 <li>19 <a href='tasks 19.html'>Запись в файлы</a></li>
 <li>20 <a href='tasks 20.html'>Возврат значения</a></li>
-<li>21 <a href='tasks 21.html'>Исключения</a></li>
-<li>22 <a href='tasks 22.html'>Составные типы данных</a></li>
-<li>23 <a href='tasks 23.html'>Внутреннее состояние</a></li>
-<li>24 <a href='tasks 24.html'>Коллекции</a></li>
-<li>25 <a href='tasks 25.html'>Рекурсия</a></li>
-<li>26 <a href='tasks 26.html'>Даты</a></li>
-<li>27 <a href='tasks 27.html'>Комбинаторика</a></li>
-<li>28 <a href='tasks 28.html'>SQL СУБД</a></li>
+<li>21 <a href='tasks 21.html'>Перехват исключений</a></li>
+<li>22 <a href='tasks 22.html'>Выбрасывание исключений</a></li>
+<li>23 <a href='tasks 23.html'>Составные типы данных</a></li>
+<li>24 <a href='tasks 24.html'>Внутреннее состояние</a></li>
+<li>25 <a href='tasks 25.html'>Коллекции</a></li>
+<li>26 <a href='tasks 26.html'>Рекурсия</a></li>
+<li>27 <a href='tasks 27.html'>Даты</a></li>
+<li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
+<li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7611' class='example'>1*</a><li><a href='#task4776'>2</a><li><a href='#task4757' class='example'>3*</a><li><a href='#task3597'>4</a><li><a href='#task6573'>5</a><li><a href='#task3355' class='example'>6*</a><li><a href='#task3147'>7</a><li><a href='#task6948' class='example'>8*</a><li><a href='#task8920'>9</a></ul><ul><li><a href='#task1995' class='example'>10*</a><li><a href='#task7759'>11</a><li><a href='#task2936' class='example'>12*</a><li><a href='#task3539'>13</a><li><a href='#task2121' class='example'>14*</a><li><a href='#task6401'>15</a><li><a href='#task7581'>16</a></ul></div><div class="task_block" id="info01">
     <h4>Подготовка проекта</h4>
     <div class="task_desc">
@@ -469,9 +455,9 @@ Console.WriteLine(Library.task6573(35, 24));
 <div class='task_id'>3355</div>
 <h3>Задача</h3>
 <div class='task_desc'>
-Пользователь вводит число total. Выведите на экран в столбик все целые числа от 1 до total включительно. В начале программы должно появиться слово "Введение", а после всех чисел - слово "Заключение". Перед каждым числом нужно написать слово "Глава".
+Пользователь вводит число total. Сформируйте текст сообщения, который состоит из нескольких частей. Основная часть сообщения содержит все целые числа от 1 до total включительно. Перед каждым числом нужно написать слово "Глава". В начале сообщения должно находиться слово "Введение", а после всех чисел - слово "Заключение". Для оформления сообщения в несколько строк, добавьте спецсимвол "\n" в конце каждой строки.
 </div>
-<ol start='1'><li>В классе Library реализуйте публичный статический метод task3355.</li><li>Метод принимает одно целое число как аргумент и возвращает строку.</li></ol><table class='check_values_v2'>
+<ol start='1'><li>В классе Library реализуйте публичный статический метод task3355.</li><li>Метод принимает одно целое число как аргумент и возвращает строку.</li><li>В теле метода нельзя использовать команды вывода в консоль.</li></ol><table class='check_values_v2'>
 <tr><th>Номер теста</th><th>Исходные данные (total)</th><th>Результат</th></tr>
 <tr><td>1</td><td>0</td><td class='preformatted'>Введение
 Заключение
@@ -539,6 +525,14 @@ Console.WriteLine(Library.task6573(35, 24));
 Заключение
 </td></tr>
 </table>
+<div class='task_desc'>
+Чтобы сформировать сообщение из нескольких частей, можно использовать промежуточную переменную как в примере ниже:
+</div>
+<div class='check_single preformatted'>String temp = "Введение\n";
+temp = temp + "Глава 1\n";
+temp = temp + "Глава 2\n";
+temp = temp + "Заключение";
+return temp;</div>
 </div>
 <div id='task3147' class='task_block'>
 <div class='task_id'>3147</div>
@@ -560,9 +554,7 @@ Console.WriteLine(Library.task6573(35, 24));
 </td></tr>
 </table>
 </div>
-<div id="link_c2_p7.1" class="task_block">
-	<div class="check_single">В предыдущих заданиях на простых задачках вы тренировались в оформлении метода: передаче аргументов и возвращении значения значении. Когда же на практике нужно применять методы? Ответ на этот вопрос дан в главе 7.1 "Разумные причины создания методов" части II книги "Совершенный код". <a href="Stiv_Makkonnell_-_Sovershenny_kod_2-e_izdanie.pdf#page=182" target="_blank">(открыть в новой вкладке)</a></div>
-</div><div id='task6948' class='task_block'>
+<div id='task6948' class='task_block'>
 <div class='task_id'>6948</div>
 <h3>Задача</h3>
 <div class='task_desc'>
