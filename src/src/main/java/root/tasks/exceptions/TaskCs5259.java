@@ -7,29 +7,18 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendSubheading(implementMethodToSolve(1934));
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula>a<sqrt><val>-7b</val></sqrt></formula>");
         appendOrderedNonEscaped(
                 implementStatic("Library", "Task1934"),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
-                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException, содержащее текст ошибки из задачи.",
+                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение ArgumentException с сообщением \"Подкоренное выражение должно быть неотрицательно\".",
                 "Создайте проект Runner1934.",
                 "В проекте Runner1934 добавьте ссылку на проект CodeProject.",
                 "Добавьте команду using пространства имен из проекта CodeProject."
         );
-        appendSubheading("Реализуйте метод Main");
-        appendOrderedNonEscaped(
-                "Выведите сообщение \"Начало работы программы\".",
-                "Выведите в консоль сообщение \"Введите значения A и B\".",
-                "Объявите переменные a и b для хранения целых чисел.",
-                "Инициализируйте переменные a и b значениями, полученными из консоли.",
-                "Объявите переменную result для хранения действительных чисел.",
-                "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
-                "Результат вызова метода запишите в переменную result.",
-                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой.",
-                "Выведите сообщение \"Программа завершена успешно\".",
-                "В результате запуска проекта Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
-        );
-        appendSubheading("Проверьте, что метод выбрасывает необработанные исключения");
+        appendTaskDescNonEscaped("Исходный код метода Main в классе Runner1934");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescNonEscaped("Проверьте, что метод выбрасывает необработанные исключения");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRowNoLogic("5", "-11",
                 "Начало работы программы\n" +
@@ -72,7 +61,7 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "   at System.Int32.Parse(String s)\n" +
                 "   at Runner1934.Program.Main(String[] args) in E:\\Stage2\\Runner1934\\Program.cs:line 15");
         appendCheckValuesFooter();
-        appendSubheading("Обработайте исключения");
+        appendTaskDescNonEscaped("Обработайте исключения");
         appendOrderedNonEscaped(
                 "Обработайте ArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
                 "Обработайте FormatException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
@@ -80,7 +69,7 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
                 "Фраза \"Программа завершена успешно\" не должна выводиться на экран в случае ошибки",
                 "Фраза \"Результат равен\" не должна выводиться на экран в случае ошибки"
         );
-        appendSubheading("Проверьте, что результат работы совпадает с ожидаемым");
+        appendTaskDescNonEscaped("Проверьте, что результат работы совпадает с ожидаемым");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("5", "-11");
         appendCheckValuesRow("-3", "-7");
@@ -89,6 +78,19 @@ public class TaskCs5259 extends TwoInputValLayout implements MethodsDictationHel
         appendCheckValuesRow("11", "incorrect");
         appendCheckValuesFooter();
         appendFooter();
+    }
+
+    @Override
+    protected String methodExample() {
+        return  "Console.WriteLine(\"Начало работы программы\");\n" +
+                "Console.WriteLine(\"Введите значения A и B\");\n" +
+                "int a, b;\n" +
+                "a = Int32.Parse(Console.ReadLine());\n" +
+                "b = Int32.Parse(Console.ReadLine());\n" +
+                "double result;\n" +
+                "result = Library.task1934(a, b);\n" +
+                "Console.WriteLine(\"{0:F4}\", result);\n" +
+                "Console.WriteLine(\"Программа завершена успешно\");";
     }
 
     @Override

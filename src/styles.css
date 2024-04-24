@@ -165,21 +165,6 @@ numerator {
 denominator {
 	display:block;
 }
-spoiler {
-	color:darkgrey;
-}
-spoiler origin {
-	display:none;
-}
-spoiler:hover origin {
-	display:inline;
-}
-spoiler trans {
-	display:inline;
-}
-spoiler:hover trans {
-	display:none;
-}
 .comment{
 	color:darkgrey;
 }

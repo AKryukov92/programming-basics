@@ -1,33 +1,24 @@
 package root.tasks.exceptions;
 
+import root.tasks.MethodsDictationHelper;
 import root.tasks.TwoInputValLayout;
 
-public class TaskJava5259 extends TwoInputValLayout {
+public class TaskJava5259 extends TwoInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
         appendHeader();
+        appendTaskDescNonEscaped("Вычислить результат по формуле <formula>a<sqrt><val>-7b</val></sqrt></formula>.");
         appendOrderedNonEscaped(
-                "В классе Library реализуйте публичный статический метод Task1934 для решения задачи" + linkToTask(1934),
+                implementStatic("Library", "Task1934"),
                 "Метод Task1934 должен возвращать результат решения задачи для корректных значений исходных данных.",
-                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException, содержащее текст ошибки из задачи.",
+                "Если методу были переданы некорректные значения исходных данных, он должен выбросить исключение IllegalArgumentException с сообщением \"Подкоренное выражение должно быть неотрицательно\".",
                 "В папке с исходным кодом создайте класс Runner1934.",
                 "Создайте метод main в классе Runner1934 по аналогии с методами main из задач прошлых практических.",
                 "Создайте еще один метод в классе Runner1934. Назовите его step1934. Он ничего не возвращает и не принимает аргументов."
         );
-        appendSubheading("Реализуйте метод Main");
-        appendOrderedNonEscaped(
-                "Выведите сообщение \"Начало работы программы\".",
-                "Выведите в консоль сообщение \"Введите значения A и B\".",
-                "Объявите переменные a и b для хранения целых чисел.",
-                "Инициализируйте переменные a и b значениями, полученными из консоли.",
-                "Объявите переменную result для хранения действительных чисел.",
-                "Вызовите метод Task1934 класса Library и передайте ему a и b в качестве аргументов.",
-                "Результат вызова метода запишите в переменную result.",
-                "Выведите на экран сообщение \"Результат равен \" и значение переменной result с точностью 4 знака после запятой.",
-                "Выведите сообщение \"Программа завершена успешно\".",
-                "В результате запуска метода main класса Runner1934, в консоли должен выводиться текст из таблицы с тестовыми данными, из колонки \"Исходный результат\". Возможны отличия в номерах строк и расположении файлов."
-        );
-        appendSubheading("Проверьте, что метод выбрасывает необработанные исключения");
+        appendTaskDescNonEscaped("Исходный код метода main в классе Runner1934");
+        appendCheckSingleNonEscaped(methodExample());
+        appendTaskDescNonEscaped("Проверьте, что метод выбрасывает необработанные исключения");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRowNoLogic("5", "-11",
                 "Начало работы программы\n" +
@@ -71,7 +62,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "    at java.util.Scanner.nextInt(Scanner.java:2076)\n" +
                 "    at Runner1934.main(Runner1934.java:35)");
         appendCheckValuesFooter();
-        appendSubheading("Обработайте исключения");
+        appendTaskDescNonEscaped("Обработайте исключения");
         appendOrderedNonEscaped(
                 "Обработайте IllegalArgumentException так, чтобы на экран выводилось сообщение из исключения \"Подкоренное выражение должно быть неотрицательно\"",
                 "Обработайте InputMismatchException так, чтобы на экран выводилась фраза \"Не удалось преобразовать строку в число\"",
@@ -79,7 +70,7 @@ public class TaskJava5259 extends TwoInputValLayout {
                 "Фраза \"Программа завершена успешно\" не должна выводиться на экран в случае ошибки",
                 "Фраза \"Результат равен\" не должна выводиться на экран в случае ошибки"
         );
-        appendSubheading("Проверьте, что результат работы совпадает с ожидаемым");
+        appendTaskDescNonEscaped("Проверьте, что результат работы совпадает с ожидаемым");
         appendCheckValuesHeader("A", "B");
         appendCheckValuesRow("5", "-11");
         appendCheckValuesRow("-3", "-7");
@@ -91,13 +82,27 @@ public class TaskJava5259 extends TwoInputValLayout {
     }
 
     @Override
+    protected String methodExample() {
+        return  "Scanner s = new Scanner(System.in);\n" +
+                "System.out.println(\"Начало работы программы\");\n" +
+                "System.out.println(\"Введите значения A и B\");\n" +
+                "int a, b;\n" +
+                "a = s.nextInt();\n" +
+                "b = s.nextInt();\n" +
+                "double result;\n" +
+                "result = Library.task1934(a, b);\n" +
+                "System.out.printf(\"%.4f\",result);\n" +
+                "System.out.println(\"Программа завершена успешно\");";
+    }
+
+    @Override
     protected void logic(String firstValue, String secondValue) {
         try {
             System.out.println("Начало работы программы");
             System.out.println("Введите значения A и B");
             double a = Double.parseDouble(firstValue);
             double b = Double.parseDouble(secondValue);
-            double result = task1934(a, b);
+            double result = Library.task1934(a, b);
             System.out.printf("Результат равен %.4f\n", result);
             System.out.println("Программа завершена успешно");
         } catch (NumberFormatException ex) {
@@ -106,12 +111,13 @@ public class TaskJava5259 extends TwoInputValLayout {
             System.out.println(ex.getMessage());
         }
     }
-
-    protected double task1934(double a, double b) {
-        if (b > 0) {
-            throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательно");
+    static class Library {
+        protected static double task1934(double a, double b) {
+            if (b > 0) {
+                throw new IllegalArgumentException("Подкоренное выражение должно быть неотрицательно");
+            }
+            return a * Math.sqrt(-7 * b);
         }
-        return a * Math.sqrt(-7 * b);
     }
 
     public static void main(String[] args) {

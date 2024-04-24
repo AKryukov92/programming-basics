@@ -171,6 +171,9 @@ public abstract class LayoutMaker {
      * @return тело метода logic
      */
     public String getLogic(String taskName) {
+        return getCodeByMethodName(taskName, "logic");
+    }
+    public String getCodeByMethodName(String taskName, String methodName) {
         File basePath = new File("src\\main\\java\\root\\tasks\\");
         //System.err.println(basePath.getAbsolutePath());
         String[] elements = basePath.list();
@@ -181,7 +184,7 @@ public abstract class LayoutMaker {
                 try (Scanner s = new Scanner(file)) {
                     while (s.hasNext()) {
                         String line = s.nextLine();
-                        if (line.startsWith("    protected void logic")) {
+                        if (line.startsWith("    protected void " + methodName)) {
                             break;
                         }
                     }
