@@ -26,7 +26,7 @@ public class TaskCs2375 extends MultipleInputValLayout {
 
     @Override
     protected String methodExample() {
-        return "Console.WriteLine(\"Должно быть: Остаток на счету: 0 рублей -42 копеек\"); //здесь пишите текст из тестовых данных\n" +
+        return "Console.WriteLine(\"Должно быть: Остаток на счету: 0 рублей -58 копеек\"); //здесь пишите текст из тестовых данных\n" +
                 "Console.Write(\"Получилось :\");\n" +
                 "task2375(2,87,3,45);";
     }
@@ -51,10 +51,11 @@ public class TaskCs2375 extends MultipleInputValLayout {
         } else if (accountRoubles < priceRoubles) {
             if (accountKop < priceKop) {
                 remRoubles = accountRoubles - priceRoubles;
+                remKop = priceKop - accountKop;
             } else {
                 remRoubles = accountRoubles - priceRoubles + 1;
+                remKop = (100 + priceKop - accountKop) * -1;
             }
-            remKop = priceKop - accountKop;
         } else {
             remKop = accountKop - priceKop;
         }

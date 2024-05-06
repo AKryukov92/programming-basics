@@ -11,7 +11,6 @@ public class TaskCs8307 extends OneInputValLayout {
         appendOrderedNonEscaped(
                 "В классе Program реализуйте публичный статический метод task8307.",
                 "Метод принимает в качестве аргумента 1 строку.",
-                "Метод возвращает текст, который нужно напечатать на экран.",
                 "В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных."
         );
         appendTaskDescEscaped("Код метода будет выглядеть так:");
@@ -29,6 +28,7 @@ public class TaskCs8307 extends OneInputValLayout {
         appendTaskDescNonEscaped("Источник - <a href='https://learn.microsoft.com/ru-ru/dotnet/csharp/methods'>Статья на Microsoft Learn</a>, <a href='https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html'>Oracle java documentation</a>");
         appendTaskDescEscaped("В методе main класса Program добавьте следующий код:");
         appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
+        appendTaskDescEscaped("Поместите этот код так, чтобы сначала были вызваны методы с известными аргументами, а потом - с данными, которые ввел пользователь.");
         appendTaskDescEscaped("В результате запуска программы, в консоли должен появиться текст:");
         appendCheckSingleNonEscaped(wrapLogic(""));
         appendFooter();
@@ -51,24 +51,19 @@ public class TaskCs8307 extends OneInputValLayout {
 
     @Override
     protected void logic(String value) {
-        String result;
         //вызов метода task8307 из класса Library
-        result = Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
-        //результат вызова метода был записан в переменную result
-        Console.WriteLine(result);
+        Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
         String goal = "цели";
         //значение переменной goal передано в качестве аргумента
-        result = Library.task8307(goal);//внутри метода это значение будет доступно под именем value
-        Console.WriteLine(result);
-        String result1 = Library.task8307("результату");
-        Console.WriteLine(result1);
+        Library.task8307(goal);//внутри метода это значение будет доступно под именем value
+        Library.task8307("результату");
     }
 
     protected static class Library {
-        public static String task8307(String value) {
+        public static void task8307(String value) {
             String res;
             res = "Мы стремимся к " + value;
-            return res;
+            Console.WriteLine(res);
         }
     }
 
