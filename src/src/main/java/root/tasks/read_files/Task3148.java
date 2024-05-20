@@ -35,23 +35,31 @@ public class Task3148 extends OneInputValLayout {
     }
 
     @Override
-    protected void logic(String filename) {
+    protected void logic(String filename) throws FileNotFoundException {
         long total = 0;
         File index = new File(filename);
         System.out.println("Обработка списка " + filename);
-        try (Scanner indexScanner = new Scanner(index)) {
+        if (!index.exists()) {
+            System.out.println("ОШИБКА: Список не найден");
+        } else {
+            Scanner indexScanner = new Scanner(index);
             while (indexScanner.hasNext()) {
                 String line = indexScanner.nextLine();
                 String dataFilename = "files/task3148/" + line;
                 File dataFile = new File(dataFilename);
                 System.out.println("Обработка файла " + dataFilename);
                 long count = 0;
-                try (Scanner dataScanner = new Scanner(dataFile)) {
+                if (!dataFile.exists()) {
+                    System.out.println("ОШИБКА: Файл данных не найден " + dataFile.getAbsolutePath());
+                } else {
+                    Scanner dataScanner = new Scanner(dataFile);
                     while (dataScanner.hasNext()) {
                         String row = dataScanner.nextLine();
                         String[] arr = row.split(";");
                         if (arr.length != 2) {
-                            throw new IllegalArgumentException("Некорректный формат");
+                            System.out.println("ОШИБКА: В строке должно быть 2 числа. Найдено " + arr.length);
+                            count = 0;
+                            break;
                         }
                         int left = Integer.parseInt(arr[0]);
                         int right = Integer.parseInt(arr[1]);
@@ -61,15 +69,9 @@ public class Task3148 extends OneInputValLayout {
                     }
                     total += count;
                     System.out.println("Количество подходящих записей в файле: " + count);
-                } catch (FileNotFoundException e) {
-                    System.out.println("ОШИБКА: Файл данных не найден");
-                } catch (Exception e) {
-                    System.out.println("ОШИБКА: " + e.getMessage());
                 }
+                System.out.println("Общее количество подходящих записей: " + total);
             }
-            System.out.println("Общее количество подходящих записей: " + total);
-        } catch (FileNotFoundException e) {
-            System.out.println("ОШИБКА: Список не найден");
         }
     }
 

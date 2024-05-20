@@ -1,6 +1,7 @@
 package root.tasks;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
@@ -8,12 +9,12 @@ import java.sql.SQLException;
 public abstract class OneInputValLayout extends LayoutMaker {
     private int testCounter = 0;
 
-    protected abstract void logic(String value) throws SQLException;
+    protected abstract void logic(String value) throws SQLException, FileNotFoundException;
 
     protected void rethrowAsRuntime(String value) {
         try {
             logic(value);
-        } catch (SQLException ex) {
+        } catch (SQLException | FileNotFoundException ex) {
             throw new RuntimeException(ex);
         }
     }
