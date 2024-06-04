@@ -219,13 +219,14 @@ denominator {
 <li>27 <a href='tasks 27.html'>Даты</a></li>
 <li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
 <li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
+<li>30 <a href='tasks 30.html'>Псевдослучайные числа</a></li>
 </ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task8307' class='example'>1*</a><li><a href='#task8813'>2</a><li><a href='#task5823'>3</a><li><a href='#task2772'>4</a><li><a href='#task4343'>5</a><li><a href='#task6556'>6</a><li><a href='#task3878'>7</a></ul><ul><li><a href='#task2375' class='example'>8*</a><li><a href='#task6522'>9</a><li><a href='#task7619'>10</a><li><a href='#task4913'>11</a><li><a href='#task9130' class='example'>12*</a><li><a href='#task2361'>13</a><li><a href='#task7243'>14</a><li><a href='#task8135'>15</a><li><a href='#task6896'>16</a></ul></div><div id='task8307' class='task_block'>
 <div class='task_id'>8307</div>
 <h3>Задача</h3>
 <div class='task_desc'>
 Пользователь вводит слово (goal). Нужно напечатать на экран фразу "Мы стремимся к " и затем слово от пользователя.
 </div>
-<ol start='1'><li>В классе Program реализуйте публичный статический метод task8307.</li><li>Метод принимает в качестве аргумента 1 строку.</li><li>Метод возвращает текст, который нужно напечатать на экран.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
+<ol start='1'><li>В классе Program реализуйте публичный статический метод task8307.</li><li>Метод принимает в качестве аргумента 1 строку.</li><li>В теле метода task8307 напечатайте в консоль решение задачи, используя значение аргумента в качестве исходных данных.</li></ol><div class='task_desc'>
 Код метода будет выглядеть так:
 </div>
 <div class='check_single preformatted'>public class Program {
@@ -254,14 +255,14 @@ denominator {
 </div>
 <div class='check_single preformatted'>String result;
 //вызов метода task1860 из класса Library
-result = Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
-System.out.println(result);
+Library.task8307("знаниям");//литерал "знаниям" передан в качестве аргумента
 String goal = "цели";
 //значение переменной goal передано в качестве аргумента
-result = Library.task8307(goal);//внутри метода это значение будет доступно под именем value
-System.out.println(result);
-result = Library.task8307("результату");
-System.out.println(result);
+Library.task8307(goal);//внутри метода это значение будет доступно под именем value
+Library.task8307("результату");
+</div>
+<div class='task_desc'>
+Поместите этот код так, чтобы сначала были вызваны методы с известными аргументами, а потом - с данными, которые ввел пользователь.
 </div>
 <div class='task_desc'>
 В результате запуска программы, в консоли должен появиться текст:
@@ -438,7 +439,7 @@ Library.task2772(-3, 0, 2);
 </td></tr>
 <tr><td>3</td><td>10</td><td>87</td><td>3</td><td>89</td><td class='preformatted'>Остаток на счету: 6 рублей 98 копеек
 </td></tr>
-<tr><td>4</td><td>2</td><td>87</td><td>3</td><td>45</td><td class='preformatted'>Остаток на счету: 0 рублей -42 копеек
+<tr><td>4</td><td>2</td><td>87</td><td>3</td><td>45</td><td class='preformatted'>Остаток на счету: 0 рублей -58 копеек
 </td></tr>
 <tr><td>5</td><td>3</td><td>57</td><td>2</td><td>74</td><td class='preformatted'>Остаток на счету: 0 рублей 83 копеек
 </td></tr>

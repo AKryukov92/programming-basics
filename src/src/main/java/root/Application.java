@@ -97,6 +97,7 @@ public class Application {
             "Даты",
             "Комбинаторика",
             "SQL СУБД",
+            "Псевдослучайные числа"
             //объекты в html
             //"Web-сервер"
     };
@@ -135,6 +136,8 @@ public class Application {
         fillRecursion(taskBooksCs[25]);
         fillDateTime(taskBooksCs[26]);
         fillCombinations(taskBooksCs[27]);
+        fillSQLite(taskBooksCs[28]);
+        fillRandomNumbers(taskBooksCs[29]);
 
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
@@ -189,6 +192,7 @@ public class Application {
         fillDateTime(taskBooksJava[26]);
         fillCombinations(taskBooksJava[27]);
         fillSQLite(taskBooksJava[28]);
+        fillRandomNumbers(taskBooksJava[29]);
 
         //запросы на добавление данных в субд можно отложить до работы с веб-сервером, т.к. проверка там будет комплексная, а не просто табличка с данными
         ////добавление (с параметрами)
@@ -681,12 +685,27 @@ public class Application {
         ;
     }
 
+    private static void fillRandomNumbers(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab10")
+                .withGroup("Случайные числа")
+                .addExample(new Task2386())
+                .addTask(new Task2910())
+                .addTask(new Task2549())
+                .addTask(4342)
+                .addTask(9159)
+                .addTask(5309)
+                .addTask(3290)
+                .addTask(5345)
+                .addTask(6812)
+        ;
+    }
+
     private static void fillSQLite(TaskBook taskBook) {
         //запросы без параметров кажется не нужны. можно пропустить, чтобы не увеличивать количество сущностей
         //задачи по работе с SQLite субд chinook:
         taskBook.withSourceDirectory("sqlite")
                 .withGroup("запросы с параметром")
-                .addTask(new TaskJava7361())//select name from tracks where albumId=?
+                .addTask(new TaskCs7361(), new TaskJava7361())//select name from tracks where albumId=?
                 .addTask(new TaskJava8741())//select title from albums where artistId=?
                 .addTask(new TaskJava6275())//select name, composer, milliseconds, unitPrice from tracks where trackId=?
                 .addTask(new TaskJava1846())//select name, milliseconds, unitPrice from tracks where milliseconds < ? and unitPrice > ?
@@ -937,17 +956,6 @@ public class Application {
                 .addTask(7343)
                 .addTask(7060)
                 .addTask(6409)
-
-                .withGroup("Случайные числа")
-                .addExample(new Task2386())
-                .addTask(new Task2910())
-                .addTask(new Task2549())
-                .addTask(4342)
-                .addTask(9159)
-                .addTask(5309)
-                .addTask(3290)
-                .addTask(5345)
-                .addTask(6812)
         ;
     }
 
@@ -1054,6 +1062,7 @@ public class Application {
                 .addTask(5081)
         ;
     }
+
     private static void fillThrowingException(TaskBook taskBook) {
         taskBook.withSourceDirectory("lab13")
                 .withGroup("Выбрасывание исключения, проверка в консольной программе")
