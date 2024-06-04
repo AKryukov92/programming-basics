@@ -23,7 +23,7 @@ public class Task8920 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит фрагмент K и данные - символы, разделенные пробелами. Посчитать сколько раз встречается фрагмент K в массиве.");
+        appendTaskDescEscaped("Дан фрагмент текста K и массив текстовых фрагментов data. Посчитать сколько раз встречается фрагмент K в массиве.");
         appendOrderedEscaped(
                 "В классе Library реализуйте публичный статический метод task8920",
                 "Метод принимает два аргумента: строку и массив строк",

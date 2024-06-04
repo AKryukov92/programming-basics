@@ -8,7 +8,7 @@ public class Task3147 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит символ (needle), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно выводить все эти буквы в строчку, пока не будет выведена буква X.");
+        appendTaskDescEscaped("Дан символ (needle), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно выводить все эти буквы в строчку, пока не будет выведена буква X.");
         appendOrderedEscaped(
                 "В классе Library реализуйте публичный статический метод task1292.",
                 "Он принимает символ и возвращает строку."

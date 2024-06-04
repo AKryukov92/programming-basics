@@ -9,7 +9,7 @@ public class TaskCs3539 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Найти минимальное число и вычесть его из всех элементов массива.");
+        appendTaskDescEscaped("Дано несколько целых чисел. Найдите минимальное число и вычтите его из всех элементов массива.");
         appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task3539",
                 "Он принимает в качестве аргумента массив действительных чисел",

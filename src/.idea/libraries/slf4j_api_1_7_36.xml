@@ -2,6 +2,7 @@
   <library name="slf4j-api-1.7.36">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.36.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sqlite-jdbc-3.44.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1017,7 +1017,6 @@ public class Application {
     private static void fillMethodsReturningValue(TaskBook taskBook) {
         taskBook
                 .withSourceDirectory("lab12")
-                .addCitation("info01")
 
                 .addExample(new TaskCs7611(), new TaskJava7611())//метод с одним аргументом, возвращает число
                 .addTask(new TaskCs4776(), new TaskJava4776())//метод с одним аргументом, возвращает число

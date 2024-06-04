@@ -7,12 +7,12 @@ public class TaskCs4776 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescNonEscaped("Вычислить результат по формуле.<formula>\n" +
+        appendTaskDescNonEscaped("Дано действительное число xDeg, которое обозначает угол в градусах. Переведите угол из градусов в радианы с помощью метода Math.toRadian. Вычислите результат по формуле.<formula>\n" +
                 "\t\t<sqrt><val>\n" +
                 "\t\t\t1-sin<sup>2</sup>(xRad)\n" +
                 "\t\t</val></sqrt>\n" +
                 "\t</formula>");
-        appendTaskDescNonEscaped("Значение угла дано в градусах. Метод для вычисления синуса был рассмотрен в задаче " + linkToTask(7711));
+        appendTaskDescNonEscaped("Для вычисления корня воспользуйтесь методом Math.sqrt. Для вычисления синуса воспользуйтесь методом Math.sin. Для решения задачи также можете воспользоваться методом вычисления косинуса Math.cos.");
         appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task4776.",
                 "Он принимает в качестве аргумента 1 действительное число и возвращает действительное число.",
@@ -31,7 +31,7 @@ public class TaskCs4776 extends OneInputValLayout {
         result = Library.task4776(69.97);
         Console.WriteLine("{0:F4}", result);
         //для наглядности проверки можно писать дополнительные условия
-        if (0.9395 <= result && result <= 0.9396) {
+        if (0.3425 <= result && result <= 0.3426) {
             Console.WriteLine("Верно");
         } else {
             Console.WriteLine("Результат некорректный");
@@ -44,7 +44,12 @@ public class TaskCs4776 extends OneInputValLayout {
     protected static class Library {
         public static double task4776(double angleDegree) {
             double angleRadian = angleDegree * Math.PI / 180;
-            return Math.sin(angleRadian);
+            double sin = Math.sin(angleRadian);
+            return Math.sqrt(1 - sin * sin);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new TaskCs4776());
     }
 }

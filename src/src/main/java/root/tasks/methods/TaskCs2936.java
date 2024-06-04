@@ -9,7 +9,7 @@ public class TaskCs2936 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит число M и данные - целые числа, разделенные пробелами. Умножить все элементы массива на M.");
+        appendTaskDescEscaped("Дано действительное число M и массив действительных чисел. Умножить все элементы массива на M.");
         appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task2936.",
                 "Он принимает в качестве аргументов 1 действительное число и массив действительных чисел.",

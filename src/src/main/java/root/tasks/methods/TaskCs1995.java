@@ -8,7 +8,7 @@ public class TaskCs1995 extends OneInputValLayout implements MethodsDictationHel
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит два массива данных - фрагменты текста. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.");
+        appendTaskDescEscaped("Дано два массива целых чисел. Вывести на экран индекс элемента, на котором массивы начинают отличаться. Если длина массиов отличается сообщите тот индекс, который существует только в одном из массивов.");
         appendOrderedNonEscaped(
                 implementStatic("Library", "compareArrays"),
                 //целые числа, чтобы не парить мозги  сравнением double с учетом погрешности
@@ -25,12 +25,11 @@ public class TaskCs1995 extends OneInputValLayout implements MethodsDictationHel
 
     protected static class Library {
         public static String compareArrays(int[] standard, int[] array) {
-            int i = 0;
-            while (i < standard.length && i < array.length) {
+            int minLength = Math.min(standard.length, array.length);
+            for (int i = 0; i < minLength; i++) {
                 if (standard[i] != array[i]) {
                     return "Массивы начинают различаться на индексе " + i;
                 }
-                i = i + 1;
             }
             if (standard.length < array.length) {
                 return "Массивы начинают различаться на индексе " + standard.length;

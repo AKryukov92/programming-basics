@@ -9,7 +9,7 @@ public class TaskCs6401 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("A и B обозначают границы интервала. Нужно проверить, принадлежит ли значение X указанному интервалу.");
+        appendTaskDescEscaped("Даны два действительных числа A и B, которые обозначают границы интервала. Нужно проверить, принадлежит ли значение X указанному интервалу.");
         appendOrderedNonEscaped(
                 "В классе Library реализуйте публичный статический метод Task6401.",
                 "Он принимает три действительных числа: A, B, X и возвращает логическое значение.",

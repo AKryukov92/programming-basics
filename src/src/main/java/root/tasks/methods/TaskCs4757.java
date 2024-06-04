@@ -6,7 +6,7 @@ public class TaskCs4757 extends TwoInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Даны два числа, нужно вычесть из большего числа меньшее.");
+        appendTaskDescEscaped("Даны два целых числа, нужно вычесть из большего числа меньшее.");
         appendCheckValuesHeader("first", "second");
         appendCheckValuesRow("99", "17");
         appendCheckValuesRow("14", "5");

@@ -8,7 +8,7 @@ public class TaskCs6948 extends TaskJava6948 {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит данные - целые числа, разделенные пробелами. Найти среднее арифметическое введенных элементов. Вывести с точностью 6 знаков после запятой.");
+        appendTaskDescEscaped("Дано несколько целых чисел. Найдите среднее арифметическое этих чисел. Выведите результат с точностью 6 знаков после запятой.");
         appendOrderedEscaped(
                 "В классе Library реализуйте публичный статический метод task6948.",
                 "В качестве аргумента принимает массив целых чисел.",
@@ -27,17 +27,17 @@ public class TaskCs6948 extends TaskJava6948 {
         values = new int[]{9, 8, 9, 1, 1, 5, 1, 1};
         double result;
         result = Library.task6948(values);
-        Console.WriteLine("{0:F4}", result);
+        Console.WriteLine("{0:F6}", result);
         values = new int[]{1, 2, 3, 4, 1, 3, 4, 4, 4, 4};
         result = Library.task6948(values);
-        Console.WriteLine("{0:F4}", result);
+        Console.WriteLine("{0:F6}", result);
         result = Library.task6948(new int[]{5, 5, 5, 5, 5});
-        Console.WriteLine("{0:F4}", result);
+        Console.WriteLine("{0:F6}", result);
         result = Library.task6948(new int[]{});
-        Console.WriteLine("{0:F4}", result);
+        Console.WriteLine("{0:F6}", result);
         int[] array = new int[]{1, 9, 1, 30, 9, 1, 100};
-        Console.WriteLine("{0:F4}", Library.task6948(array));
-        Console.WriteLine("{0:F4}",
+        Console.WriteLine("{0:F6}", Library.task6948(array));
+        Console.WriteLine("{0:F6}",
                 Library.task6948(new int[]{
                         100000, 1, 1
                 })

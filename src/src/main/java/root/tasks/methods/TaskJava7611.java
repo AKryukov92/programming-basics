@@ -6,8 +6,10 @@ import root.tasks.OneInputValLayout;
 public class TaskJava7611 extends OneInputValLayout implements MethodsDictationHelper {
     @Override
     protected void makeLayout() {
+        appendTaskDescEscaped("Создайте класс Library. Он будет общий для всех заданий в этой практической. Создавайте в нём методы для решения задач.");
+        appendTaskDescEscaped("Создайте класс Task1. Он будет содержать метод main с кодом для проверки. Для каждой задачи создавайте свой класс TaskX, где вместо X - номер задачи.");
         appendHeader();
-        appendTaskDescEscaped("Вычислить результат по формуле x + 7.");
+        appendTaskDescEscaped("Дано действительное число x. Вычислить результат по формуле x + 7.");
         appendOrderedNonEscaped(
                 implementStatic("Library", "task7611"),
                 itAccepts("1 действительное число"),
