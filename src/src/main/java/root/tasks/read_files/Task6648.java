@@ -20,6 +20,7 @@ public class Task6648 extends OneInputValLayout {
         appendCheckValuesRowWithFile("files/task6648/test4.txt");
         appendCheckValuesRowWithFile("files/task6648/test5.txt");
         appendCheckValuesRowWithFile("files/task6648/test6.txt");
+        appendCheckValuesRowWithFile("files/task6648/test7.txt");
         appendCheckValuesFooter();
         appendFooter();
     }
@@ -56,7 +57,7 @@ public class Task6648 extends OneInputValLayout {
                 System.out.print(arr[i] + " ");
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл пуст " + target.getAbsolutePath());
+            System.out.println("Файл не найден " + target.getAbsolutePath());
         }
     }
 

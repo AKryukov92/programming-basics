@@ -45,6 +45,8 @@ import root.tasks.sqlite.*;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
 import root.tasks.use_std_lib.Task9279;
+import root.tasks.write_files.Task4275;
+import root.tasks.write_files.Task5992;
 import root.tasks.write_files.Task7940;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -956,6 +958,8 @@ public class Application {
                 .addTask(7343)
                 .addTask(7060)
                 .addTask(6409)
+                .addTask(new Task5992())
+                .addTask(new Task4275())
         ;
     }
 

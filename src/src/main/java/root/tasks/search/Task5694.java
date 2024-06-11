@@ -6,7 +6,7 @@ public class Task5694 extends OneInputValLayout {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Пользователь вводит символ (X), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно вывести все эти буквы в столбик и написать слово \"Найдено\" справа от введенной буквы X.");
+        appendTaskDescEscaped("Пользователь вводит символ (X), который может быть одной из букв: a,b,c,d,e,f,g,h. Нужно вывести все эти буквы в столбик и написать слово \"Найдено\" справа от введенной буквы X. Содержимое массива не должно измениться.");
         appendCheckValuesHeader("X");
         appendCheckValuesRow("a");
         appendCheckValuesRow("d");
