@@ -6,7 +6,7 @@ public class Task1068 extends LayoutMaker {
     @Override
     protected void makeLayout() {
         appendHeader();
-        appendTaskDescEscaped("Написать сокращенное решение.");
+        appendTaskDescEscaped("Написать сокращенное рекурсивное решение.");
         appendCheckSingleNonEscaped("private static void level1() {\n" +
                 "        System.out.println(\"Предисловие\");\n" +
                 "        System.out.println(\"Глава 1\");\n" +

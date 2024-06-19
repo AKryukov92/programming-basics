@@ -220,7 +220,7 @@ denominator {
 <li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
 <li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
 <li>30 <a href='tasks 30.html'>Псевдослучайные числа</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9300' class='example'>1*</a><li><a href='#task3951'>2</a><li><a href='#task7343'>3</a><li><a href='#task7060'>4</a><li><a href='#task6409'>5</a></ul></div><div class="task_block" id="info1">
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task9300' class='example'>1*</a><li><a href='#task3951'>2</a><li><a href='#task7343'>3</a><li><a href='#task7060'>4</a><li><a href='#task6409'>5</a><li><a href='#task5992'>6</a><li><a href='#task4275'>7</a></ul></div><div class="task_block" id="info1">
 	<div class="task_desc"><p>SVG (от англ. Scalable Vector Graphics — масштабируемая векторная графика) — язык разметки двумерной векторной графики в формате XML.</p>
 	<p>Особенности SVG:
 	<ul>
@@ -861,4 +861,219 @@ denominator {
 			<td>Фигура не помещается внутри рисунка</td>
 		</tr>
 	</table>
-</div>Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div><div id='task5992' class='task_block'>
+<div class='task_id'>5992</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл <a href="files/task5992/composers.csv" target="_blank">скачать composers.csv</a> содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой ";". Атрибуты записаны в следующем порядке:
+</div>
+<ol start='1'><li>composer_id - идентификатор композитора</li><li>first_name - имя</li><li>last_name - фамилия</li><li>birth_date - дата рождения</li><li>birth_place - место рождения</li><li>death_date - дата смерти</li><li>death_place - место смерти</li><li>wiki_page - ссылка на страницу Википедии</li></ol><div class='task_desc'>
+Сформируйте html файл, содержащий список композиторов. Текст в файле будет состоять из четырех частей. Первая часть - техническое оформление html.
+</div>
+<div class='check_single preformatted'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;</div>
+<div class='task_desc'>
+Вторая часть - заголовок
+</div>
+<div class='check_single preformatted'>&lt;h1&gt;Композиторы&lt;/h1&gt;</div>
+<div class='task_desc'>
+Третья часть - список с именами. Каждое имя оформляется как элемент списка по шаблону 
+</div>
+<div class='check_single preformatted'>&lt;li&gt;&lt;a href="composer?id=$composer_id"&gt;$first_name $last_name&lt;/a&gt;&lt;/li&gt;</div>
+<div class='task_desc'>
+где $composer_id - идентификатор композитора, $first_name - имя, $last_name - фамилия. Перед всеми элементами списка нужно поставить открывающий тэг &lt;ol&gt;, а после всех элементов - закрывающий тэг &lt;/ol&gt;. Четвертая часть - техническое оформление html.
+</div>
+<div class='check_single preformatted'>&lt;/body&gt;
+&lt;/html&gt;</div>
+<div class='check_single preformatted'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="composer80.html"&gt;'Johann Sebastian' 'Bach'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer81.html"&gt;'Ludwig' 'van Beethoven'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer82.html"&gt;'George' 'Handel'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer83.html"&gt;'Wolfgang Amadeus' 'Mozart'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer84.html"&gt;'Frédéric' 'Chopin'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer85.html"&gt;'Henry' 'Purcell'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer86.html"&gt;'Johann Christian' 'Bach'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer87.html"&gt;'Wilhelm Friedmann' 'Bach'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer88.html"&gt;'Mikhail' 'Glinka'&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="composer89.html"&gt;'Pyotr' 'Tchaikovsky'&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</div>
+<div id='task4275' class='task_block'>
+<div class='task_id'>4275</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Исходный файл <a href="files/task4275/composers.csv" target="_blank">скачать composers.csv</a> содержит записи о композиторах. Первая строка содержит заголовки столбцов. Каждая строка содержит атрибуты одного композитора, перечисленные через точку с запятой ";". Атрибуты записаны в следующем порядке:
+</div>
+<ol start='1'><li>composer_id - идентификатор композитора</li><li>first_name - имя</li><li>last_name - фамилия</li><li>birth_date - дата рождения</li><li>birth_place - место рождения</li><li>death_date - дата смерти</li><li>death_place - место смерти</li><li>wiki_page - ссылка на страницу Википедии</li></ol><div class='task_desc'>
+Нужно сформировать множество html файлов. Каждый файл должен содержать информацию по отдельному композитору. Название файла оформляется по шаблону "composer$composer_id.txt", где вместо $composer_id идентификатор композитора. Файл должен содержать технический текст по стандарту html, а текст по следующему шаблону:
+</div>
+<div class='check_single preformatted'>&lt;h1&gt;$first_name $last_name&lt;/h1&gt;
+Родился $birth_date в $birth_place
+Умер $death_date в $death_place
+Подробнее &lt;a href=$wiki_page&gt;Страница на Википедии&lt;/a&gt;</div>
+<div class='check_single preformatted'>Файл composer80.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Johann Sebastian' 'Bach'&lt;/h1&gt;
+Родился '1685-03-21' в 'Eisenach'
+Умер '1750-07-28' в 'Leipzig'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Johann_Sebastian_Bach'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer81.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Ludwig' 'van Beethoven'&lt;/h1&gt;
+Родился '1770-12-16' в 'Bonn'
+Умер '1827-03-26' в 'Vienna'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Ludwig_van_Beethoven'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer82.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'George' 'Handel'&lt;/h1&gt;
+Родился '1685-03-05' в 'Halle, Duchy of Magdeburg, Bradenburg-Prussia'
+Умер '1759-04-14' в 'London,England'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/George_Frideric_Handel'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer83.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Wolfgang Amadeus' 'Mozart'&lt;/h1&gt;
+Родился '1756-01-27' в 'Salzburg'
+Умер '1791-12-05' в 'Vienna,Austria'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer84.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Frédéric' 'Chopin'&lt;/h1&gt;
+Родился '1810-03-01' в 'Zelazowa Wola, Duchy of Warsaw'
+Умер '1849-10-17' в 'Paris,France'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer85.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Henry' 'Purcell'&lt;/h1&gt;
+Родился '1659-09-10' в 'Westminster, London, England'
+Умер '1695-11-21' в 'Marcham Street,London,England'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Henry_Purcell'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer86.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Johann Christian' 'Bach'&lt;/h1&gt;
+Родился '1735-09-05' в 'Leipzig, Germany'
+Умер '1782-01-01' в 'London,England'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Johann_Christian_Bach'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer87.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Wilhelm Friedmann' 'Bach'&lt;/h1&gt;
+Родился '1710-11-22' в 'Weimar'
+Умер '1784-07-01' в 'Berlin'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Wilhelm_Friedemann_Bach'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer88.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Mikhail' 'Glinka'&lt;/h1&gt;
+Родился '1804-06-01' в 'Novospasskoye, Smolensk Governorate'
+Умер '1857-02-15' в 'Berlin'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Mikhail_Glinka'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+Файл composer89.html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;h1&gt;'Pyotr' 'Tchaikovsky'&lt;/h1&gt;
+Родился '1840-05-07' в 'Votkinsk, Vyatka Governorate'
+Умер '1893-11-06' в 'Saint Petersburg'
+Подробнее &lt;a href='https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky'&gt;Страница на Википедии&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</div>
+</div>
+Версия 20240202. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2024. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

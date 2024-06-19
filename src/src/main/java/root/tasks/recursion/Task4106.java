@@ -18,6 +18,7 @@ public class Task4106 extends LayoutMaker {
                 "public static void main(String[] args) {\n" +
                 "    work(6);\n" +
                 "}");
+        appendTaskDescEscaped("Этот код возвращает числа: 02416130. Проверьте, что подробная версия программы возвращает те же числа.");
         appendFooter();
     }
 

@@ -14,8 +14,9 @@ public class TaskJava5087 extends StreamInputLayout {
         appendCheckValuesRow("one,two,three,three".split(","));
         appendCheckValuesRow("five,six,seven,six".split(","));
         appendCheckValuesFooter();
-        appendTaskDescEscaped("В начале файла добавьте команду:");
+        appendTaskDescEscaped("Чтобы пользоваться коллекцией, нужно импортировать её класс. Для этого в начале файла добавьте команду:");
         appendCheckSingleNonEscaped("import java.util.ArrayList;");
+        appendTaskDescEscaped("Если в начале файла у вас присутствует команда package, значит команду импортирования нужно написать строкой ниже.");
         appendTaskDescEscaped("Тело метода main:");
         appendCheckSingleNonEscaped(escapeHtmlSymbols(getLogic(getClass().getSimpleName())));
         appendFooter();

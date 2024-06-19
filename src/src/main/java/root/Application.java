@@ -35,6 +35,7 @@ import root.tasks.random.Task2910;
 import root.tasks.read_files.*;
 import root.tasks.recursion.Task1068;
 import root.tasks.recursion.Task4106;
+import root.tasks.recursion.Task4664;
 import root.tasks.recursion.Task6646;
 import root.tasks.remainder.Task3883;
 import root.tasks.search.*;
@@ -940,6 +941,7 @@ public class Application {
     private static void fillRecursion(TaskBook taskBook) {
         taskBook.withSourceDirectory("recursion")
                 .addTask(new Task4106())//написать подробное решение
+                .addTask(new Task4664())//подробное решение линейного поиска
                 .addTask(new Task1068())//написать сокращенное решение
                 //.addTask(new )//бинарный рекурсивный поиск корня. неинтересный
                 .addTask(new Task6646())//сумма чисел во всех файлах

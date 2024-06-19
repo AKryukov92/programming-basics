@@ -15,7 +15,7 @@ public class TaskJava8317 extends StreamInputLayout implements MethodsDictationH
         appendHeader();
         appendTaskDescEscaped("Дано положительное целое число X. Нужно найти все его делители.");
         appendOrderedNonEscaped(
-                importClasses("Library", "\"java.util.Arrays\"", "\"java.util.List\""),
+                importClasses("Library", "\"java.util.Arrays\"", "\"java.util.ArrayList\""),
                 implementStatic("Library", "task8317"),
                 "Он принимает в качестве аргумента 1 целое число и возвращает ArrayList целых чисел.",
                 "В теле метода task8317 в случае получения некорректных значений аргументов, нужно выбросить исключение IllegalArgumentException и указать при этом текст ошибки из задачи."
