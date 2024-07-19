@@ -1035,7 +1035,8 @@ public class Application {
 
                 .withGroup("Аргумент-массив")
                 .addExample(new TaskCs6948(), new TaskJava6948())//принимает массив, возвращает число
-                .addTask(new Task8920())
+                .addTask(new Task1991())//сбор большого текста из фрагментов
+                .addTask(new Task8920())//подсчет количества
                 .withGroup("Возврат массива в качестве результата")
                 .addExample(new TaskCs1995(), new TaskJava1995())//сравнение массивов
                 .addTask(new Task7759())//сначала среднее арифм. потом вычесть его из всех элементов

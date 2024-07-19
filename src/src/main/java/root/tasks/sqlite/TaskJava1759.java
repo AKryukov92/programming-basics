@@ -32,4 +32,8 @@ public class TaskJava1759 extends OneInputValLayout {
                     resTracks.getString("composer"));
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(new TaskJava1759());
+    }
 }
