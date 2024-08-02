@@ -14,6 +14,7 @@ public class TaskCs9631 extends OneInputValLayout {
         appendCheckValuesRow("abcd");
         appendCheckValuesRow("wxyz");
         appendCheckValuesRow("axby");
+        appendCheckValuesRow("abcdefwxyz000");
         appendCheckValuesFooter();
         appendFooter();
     }

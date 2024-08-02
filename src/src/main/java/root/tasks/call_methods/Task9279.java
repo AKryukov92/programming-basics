@@ -1,4 +1,4 @@
-package root.tasks.use_std_lib;
+package root.tasks.call_methods;
 
 public class Task9279 extends root.tasks.OneInputValLayout {
     @Override

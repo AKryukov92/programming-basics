@@ -21,6 +21,7 @@ import root.tasks.method_generalisation.Task8862;
 import root.tasks.method_generalisation.Task9309;
 import root.tasks.method_generalisation.Task9709;
 import root.tasks.nested_loops.*;
+import root.tasks.objects_to_html.Task4331;
 import root.tasks.ranges.*;
 import root.tasks.filltemplate.*;
 import root.tasks.internal_state.TaskJava3185;
@@ -45,7 +46,7 @@ import root.tasks.sorting.Task5541;
 import root.tasks.sqlite.*;
 import root.tasks.static_or_not.TaskJava1401;
 import root.tasks.stream_of_data.*;
-import root.tasks.use_std_lib.Task9279;
+import root.tasks.call_methods.Task9279;
 import root.tasks.write_files.Task4275;
 import root.tasks.write_files.Task5992;
 import root.tasks.write_files.Task7940;
@@ -100,8 +101,8 @@ public class Application {
             "Даты",
             "Комбинаторика",
             "SQL СУБД",
-            "Псевдослучайные числа"
-            //объекты в html
+            "Псевдослучайные числа",
+            //"Объекты в html" - fillObjectsToHtml
             //"Web-сервер"
     };
 
@@ -141,6 +142,7 @@ public class Application {
         fillCombinations(taskBooksCs[27]);
         fillSQLite(taskBooksCs[28]);
         fillRandomNumbers(taskBooksCs[29]);
+        //fillObjectsToHtml(taskBooksCs[30]);
 
         updateCrossTaskLinks(taskBooksCs);
         return taskBooksCs;
@@ -196,6 +198,7 @@ public class Application {
         fillCombinations(taskBooksJava[27]);
         fillSQLite(taskBooksJava[28]);
         fillRandomNumbers(taskBooksJava[29]);
+        //fillObjectsToHtml(taskBooksJava[30]);
 
         //запросы на добавление данных в субд можно отложить до работы с веб-сервером, т.к. проверка там будет комплексная, а не просто табличка с данными
         ////добавление (с параметрами)
@@ -850,6 +853,8 @@ public class Application {
                     .addTask(new Task9812())//indexOf + ветвление
                     .addTask(new Task9279())//знакомство с indexOf с двумя аргументами
                     .addExample(new TaskCs4845())//знакомство с substring
+                    .addTask(new Task3005())//получение числа из строки вида artistId=3
+                    .addTask(new Task4077())//split, indexof, substring
                     .addTask(new Task5728())//вырезание фрагмента ограниченного двумя другими фрагментам
             ;
         } else if (taskBook.isJava()) {
@@ -859,6 +864,8 @@ public class Application {
                     .addTask(new Task9812())//indexOf + ветвление
                     .addTask(new Task9279())//знакомство с indexOf с двумя аргументами
                     .addExample(new TaskJava4845())//знакомство с substring
+                    .addTask(new Task3005())//получение числа из строки вида artistId=3
+                    .addTask(new Task4077())//split, indexof, substring
                     .addTask(new Task5728())//вырезание фрагмента ограниченного двумя другими фрагментам
             ;
         }
@@ -1330,6 +1337,11 @@ public class Application {
 //                .addTask(2025)
 //                .addTask(7407)
         ;
+    }
+
+    private static void fillObjectsToHtml(TaskBook taskBook) {
+        taskBook.withSourceDirectory("lab15")
+                .addExample(new Task4331());
     }
 
     private static String loadCss(String path) throws IOException {

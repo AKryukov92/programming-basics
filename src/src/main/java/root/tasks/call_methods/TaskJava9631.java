@@ -14,6 +14,7 @@ public class TaskJava9631 extends OneInputValLayout {
         appendCheckValuesRow("abcd");
         appendCheckValuesRow("wxyz");
         appendCheckValuesRow("axby");
+        appendCheckValuesRow("abcdefwxyz000");
         appendCheckValuesFooter();
         appendFooter();
     }
@@ -34,5 +35,9 @@ public class TaskJava9631 extends OneInputValLayout {
             System.out.printf("Длина введенного фрагмента %d\n", needle.length());
             System.out.printf("После него есть еще %d символов\n", haystack.length() - haystack.indexOf(needle) - needle.length());
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new TaskJava9631());
     }
 }

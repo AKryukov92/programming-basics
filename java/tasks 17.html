@@ -220,7 +220,7 @@ denominator {
 <li>28 <a href='tasks 28.html'>Комбинаторика</a></li>
 <li>29 <a href='tasks 29.html'>SQL СУБД</a></li>
 <li>30 <a href='tasks 30.html'>Псевдослучайные числа</a></li>
-</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7491' class='example'>1*</a><li><a href='#task9631' class='example'>2*</a><li><a href='#task9812'>3</a><li><a href='#task9279'>4</a><li><a href='#task4845' class='example'>5*</a><li><a href='#task5728'>6</a><li><a href='#task7222'>7</a><li><a href='#task5923'>8</a><li><a href='#task8543'>9</a><li><a href='#task4265'>10</a><li><a href='#task2166'>11</a><li><a href='#task4996'>12</a><li><a href='#task9925' class='example'>13*</a><li><a href='#task3657' class='example'>14*</a><li><a href='#task6599'>15</a><li><a href='#task1618'>16</a><li><a href='#task1703'>17</a><li><a href='#task8887'>18</a><li><a href='#task9116'>19</a></ul></div><div id='task7491' class='task_block'>
+</ol></div><div class='nav'><ul><li><a href='#heading'>^</a></li><li><a href='#task7491' class='example'>1*</a><li><a href='#task9631' class='example'>2*</a><li><a href='#task9812'>3</a><li><a href='#task9279'>4</a><li><a href='#task4845' class='example'>5*</a><li><a href='#task3005'>6</a><li><a href='#task4077'>7</a><li><a href='#task5728'>8</a><li><a href='#task7222'>9</a><li><a href='#task5923'>10</a><li><a href='#task8543'>11</a><li><a href='#task4265'>12</a><li><a href='#task2166'>13</a><li><a href='#task4996'>14</a><li><a href='#task9925' class='example'>15*</a><li><a href='#task3657' class='example'>16*</a><li><a href='#task6599'>17</a><li><a href='#task1618'>18</a><li><a href='#task1703'>19</a><li><a href='#task8887'>20</a><li><a href='#task9116'>21</a></ul></div><div id='task7491' class='task_block'>
 <div class='task_id'>7491</div>
 <h3>Задача</h3>
 <div class='task_desc'>
@@ -323,6 +323,12 @@ int index = haystack.indexOf(needle);
 Вызов метода выглядит так:
 int index = haystack.indexOf(needle);
 Переменная index содержит -1, значит фрагмент 'axby' отсутствует в строке
+</td></tr>
+<tr><td>7</td><td>abcdefwxyz000</td><td class='preformatted'>Записываю значение 'abcdefwxyz000' в переменную needle
+Записываю значение 'abcdefwxyz' в переменную haystack
+Вызов метода выглядит так:
+int index = haystack.indexOf(needle);
+Переменная index содержит -1, значит фрагмент 'abcdefwxyz000' отсутствует в строке
 </td></tr>
 </table>
 </div>
@@ -493,6 +499,58 @@ String result = STR.substring(cb, ca);
 </td></tr>
 <tr>
 <td>9</td><td>7</td><td>17</td><td class='preformatted'>Значение CB должно быть в интервале [0,длина строки)
+</td></tr>
+</table>
+</div>
+<div id='task3005' class='task_block'>
+<div class='task_id'>3005</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит строку. В данной строке находится слово, символ "=" и несколько цифр. Нужно извлечь из строки только цифры.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (query)</th><th>Результат</th></tr>
+<tr><td>1</td><td>artistId=0</td><td class='preformatted'>0
+</td></tr>
+<tr><td>2</td><td>artistId=270</td><td class='preformatted'>270
+</td></tr>
+<tr><td>3</td><td>albumId=15</td><td class='preformatted'>15
+</td></tr>
+<tr><td>4</td><td>albumId=301</td><td class='preformatted'>301
+</td></tr>
+<tr><td>5</td><td>trackId=2875</td><td class='preformatted'>2875
+</td></tr>
+<tr><td>6</td><td>trackId=7</td><td class='preformatted'>7
+</td></tr>
+<tr><td>7</td><td>incorrect value</td><td class='preformatted'>В строке отсутствует символ =
+</td></tr>
+<tr><td>8</td><td>=09876</td><td class='preformatted'>09876
+</td></tr>
+</table>
+</div>
+<div id='task4077' class='task_block'>
+<div class='task_id'>4077</div>
+<h3>Задача</h3>
+<div class='task_desc'>
+Пользователь вводит строку, содержащую несколько пар слово=число. Эти пары разделены символом &. Нужно извлечь данные из строки и оформить по шаблону.
+</div>
+<table class='check_values_v2'>
+<tr><th>Номер теста</th><th>Исходные данные (query)</th><th>Результат</th></tr>
+<tr><td>1</td><td>lowerBound=0&upperBound=10</td><td class='preformatted'>Строка содержит 2 пар
+Значение 0 ключ lowerBound
+Значение 10 ключ upperBound
+</td></tr>
+<tr><td>2</td><td>albumId=73&genreId=6</td><td class='preformatted'>Строка содержит 2 пар
+Значение 73 ключ albumId
+Значение 6 ключ genreId
+</td></tr>
+<tr><td>3</td><td>albumId=227&genreId=18&mediaTypeId=3</td><td class='preformatted'>Строка содержит 3 пар
+Значение 227 ключ albumId
+Значение 18 ключ genreId
+Значение 3 ключ mediaTypeId
+</td></tr>
+<tr><td>4</td><td>trackId=7</td><td class='preformatted'>Строка содержит 1 пар
+Значение 7 ключ trackId
 </td></tr>
 </table>
 </div>
